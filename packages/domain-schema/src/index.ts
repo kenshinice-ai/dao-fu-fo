@@ -92,6 +92,53 @@ export const ReviewCheckRecordSchema = z.object({
 });
 export type ReviewCheckRecord = z.infer<typeof ReviewCheckRecordSchema>;
 
+export const PublicReleaseCandidateSchema = z.object({
+  schemaVersion: z.literal("1.0"),
+  id: z.string().regex(/^release:[a-z0-9]+(?:-[a-z0-9]+)*$/),
+  profile: z.literal("dao-ru-fo"),
+  contentVersion: z.string().regex(/^\d{4}\.\d{2}\.[a-z0-9.-]+$/),
+  targetReleaseStage: z.literal("lean-public-mvp"),
+  status: z.enum(["planning", "in_review", "ready", "promoting", "promoted", "withdrawn"]),
+  title: z.object({ "zh-CN": z.string().trim().min(1), en: z.string().trim().min(1) }),
+  scope: z.object({ "zh-CN": z.string().trim().min(1), en: z.string().trim().min(1) }),
+  coreEntities: z.array(z.string().regex(/^[a-z_]+:[a-z0-9]+(?:-[a-z0-9]+)*$/)).min(8).max(12),
+  dependencyEntities: z.array(z.string().regex(/^[a-z_]+:[a-z0-9]+(?:-[a-z0-9]+)*$/)),
+  relations: z.array(z.string().regex(/^relation:[a-z0-9]+(?:-[a-z0-9]+)*$/)),
+  excludedRelations: z.array(z.object({
+    id: z.string().regex(/^relation:[a-z0-9]+(?:-[a-z0-9]+)*$/),
+    reason: z.object({ "zh-CN": z.string().trim().min(1), en: z.string().trim().min(1) }),
+  })).default([]),
+  audio: z.array(z.string().regex(/^audio:[a-z0-9]+(?:-[a-z0-9]+)*$/)),
+  exitCriteria: z.array(z.string().trim().min(1)).min(1),
+  createdAt: z.string().datetime(),
+  updatedAt: z.string().datetime(),
+  promotion: z.object({
+    id: z.string().regex(/^promotion:[a-z0-9]+(?:-[a-z0-9]+)*$/),
+    promotedBy: z.string().trim().min(1),
+    promotedAt: z.string().datetime(),
+    sourceChecksumSha256: z.string().regex(/^[0-9a-f]{64}$/),
+    artifactChecksumSha256: z.string().regex(/^[0-9a-f]{64}$/),
+  }).optional(),
+}).superRefine((value, context) => {
+  const groups = [value.coreEntities, value.dependencyEntities, value.relations, value.audio];
+  for (const [index, group] of groups.entries()) {
+    if (new Set(group).size !== group.length) {
+      context.addIssue({ code: "custom", path: [["coreEntities", "dependencyEntities", "relations", "audio"][index]], message: "release selections cannot contain duplicates" });
+    }
+  }
+  const core = new Set(value.coreEntities);
+  for (const key of value.dependencyEntities) {
+    if (core.has(key)) context.addIssue({ code: "custom", path: ["dependencyEntities"], message: `${key} is already a core entity` });
+  }
+  if (value.status === "promoted" && !value.promotion) {
+    context.addIssue({ code: "custom", path: ["promotion"], message: "promoted candidates require immutable promotion evidence" });
+  }
+  if (value.status !== "promoted" && value.promotion) {
+    context.addIssue({ code: "custom", path: ["promotion"], message: "promotion evidence is only valid after promotion" });
+  }
+});
+export type PublicReleaseCandidate = z.infer<typeof PublicReleaseCandidateSchema>;
+
 export const EvidenceLayerSchema = z.enum([
   "historical_documented",
   "historical_inferred",
@@ -527,6 +574,21 @@ export const DatabaseImportBundleSchema = z.object({
   })),
   reviews: z.array(ReviewCheckRecordSchema),
   audio: z.array(AudioRecordSchema),
+  releaseCandidates: z.array(z.object({
+    id: z.string().uuid(), canonicalKey: z.string(), status: PublicReleaseCandidateSchema.shape.status,
+    targetReleaseStage: PublicReleaseCandidateSchema.shape.targetReleaseStage, contentVersion: z.string(),
+    titleZh: z.string(), titleEn: z.string(), scopeZh: z.string(), scopeEn: z.string(),
+    selectionChecksumSha256: z.string().regex(/^[0-9a-f]{64}$/),
+  })),
+  releaseCandidateSubjects: z.array(z.object({
+    releaseCandidateId: z.string().uuid(), subjectKind: z.enum(["entity", "relation", "audio"]),
+    subjectId: z.string().uuid(), role: z.enum(["core", "dependency", "supporting"]), sortOrder: z.number().int().nonnegative(),
+  })),
+  promotions: z.array(z.object({
+    id: z.string().uuid(), releaseCandidateId: z.string().uuid(), promotedBy: z.string().trim().min(1),
+    promotedAt: z.string().datetime(), sourceChecksumSha256: z.string().regex(/^[0-9a-f]{64}$/),
+    artifactChecksumSha256: z.string().regex(/^[0-9a-f]{64}$/), targetVisibility: z.literal("public"), note: z.string().optional(),
+  })),
 });
 export type DatabaseImportBundle = z.infer<typeof DatabaseImportBundleSchema>;
 

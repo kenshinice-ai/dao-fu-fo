@@ -22,10 +22,12 @@ npm run build:content              # Alpha preview read model
 npm run verify:content
 npm run verify:matrix              # 数量与 compiler 报告一致
 npm run verify:alpha-ready         # Lean Alpha 最低配额达标
-npm run verify:migrations          # 001–012 authoring schema 契约
+npm run verify:migrations          # 001–013 authoring schema 契约
 npm run verify:database-bundle     # 83 个 DB entities 与引用完整性
-npm run db:import:plan             # 生成并核验 775 条事务导入语句
+npm run db:import:plan             # 生成并核验 803 条事务导入语句
 npm run verify:database:integration # 临时 PostGIS fresh/repeat 集成验证
+npm run verify:public-rc           # 第一批 Public RC 选择、依赖和 blocker 报告
+npm run content:promote            # 默认只打印晋级计划；--apply 才会修改内容状态
 npm run verify:architecture        # 静态 production 与 authoring 边界
 npm run build:content:public       # 只输出 public + publishable 内容
 npm run verify:content:public
@@ -36,6 +38,8 @@ npm run check:release              # 完整 release gate
 当前 Alpha source 仍是 preview，Public artifact 预期为空；公开站点继续使用已经验收的 first-viewable prototype 静态数据。
 
 当前可测试检查点见 `docs/CHECKPOINT_2026-08-09.md`；完整进度、风险和后续优先级见 `docs/PROJECT_STATUS_AND_ROADMAP.md`。
+
+Public RC 的审核、依赖闭包和显式晋级流程见 `docs/PUBLIC_RC_WORKFLOW.md`。
 
 ## 构建
 

@@ -9,8 +9,10 @@ import {
   ContentVisibilitySchema,
   DatabaseImportBundleSchema,
   EntityContentSchema,
+  InstitutionProfileSchema,
   PassageProfileSchema,
   PlaceProfileSchema,
+  PublicReleaseCandidateSchema,
   ReadModelRelationIndexSchema,
   ReadModelRealMapSchema,
   ReadModelTimelineSchema,
@@ -34,6 +36,7 @@ import {
   type ContentVisibility,
   type EntityContent,
   type AudioRecord,
+  type PublicReleaseCandidate,
   type ReadModelEntityArtifact,
   type Locale,
   type RelationRecord,
@@ -131,6 +134,30 @@ function sourceIdsFor(entity: EntityContent): string[] {
   ])];
 }
 
+function entityKey(kind: string, slug: string): string {
+  return `${kind}:${slug}`;
+}
+
+function structuralDependencies(entity: EntityContent): string[] {
+  if (entity.kind === "text_version") {
+    const profile = TextVersionProfileSchema.parse(entity.profile);
+    return [entityKey("text", profile.textSlug)];
+  }
+  if (entity.kind === "passage") {
+    const profile = PassageProfileSchema.parse(entity.profile);
+    return [entityKey("text", profile.textSlug), entityKey("text_version", profile.textVersionSlug)];
+  }
+  if (entity.kind === "institution") {
+    const profile = InstitutionProfileSchema.parse(entity.profile);
+    return profile.physicalPlaceSlug ? [entityKey("place", profile.physicalPlaceSlug)] : [];
+  }
+  if (entity.kind === "route") {
+    const profile = RouteProfileSchema.parse(entity.profile);
+    return profile.waypointSlugs.map((slug) => entityKey("place", slug));
+  }
+  return [];
+}
+
 function toArtifact(entity: EntityContent, locale: Locale, sourceMap: Map<string, SourceRecord>, entityMap: Map<string, EntityContent>, namespace: string): EntityArtifact {
   const translation = entity.translations[locale];
   const sources = sourceIdsFor(entity).map((id) => {
@@ -145,15 +172,15 @@ function toArtifact(entity: EntityContent, locale: Locale, sourceMap: Map<string
     };
   });
 
-  const related = entity.related.map((item) => {
+  const related = entity.related.flatMap((item) => {
     const target = entityMap.get(`${item.kind}:${item.slug}`);
-    if (!target) throw new Error(`Missing relation target ${item.kind}/${item.slug} from ${entity.kind}/${entity.slug}`);
-    return {
+    if (!target) return [];
+    return [{
       kind: item.kind,
       slug: item.slug,
       title: item.title[locale],
       relation: item.relation[locale],
-    };
+    }];
   });
 
   return ReadModelEntityArtifactSchema.parse({
@@ -195,6 +222,7 @@ export async function compileContent(options: CompileOptions = {}) {
   const relationsPath = resolve(contentRoot, "dao-ru-fo/relations.json");
   const audioPath = resolve(contentRoot, "dao-ru-fo/audio.json");
   const reviewsPath = resolve(contentRoot, "dao-ru-fo/reviews.json");
+  const releaseCandidatePath = resolve(contentRoot, "dao-ru-fo/public-rc.json");
   const sourcesPath = resolve(contentRoot, "common/sources.json");
   const entitiesRoot = resolve(contentRoot, "dao-ru-fo/entities");
   const outputDirectory = resolve(options.outputDirectory ?? join(repoRoot, ".artifacts/content/v2"));
@@ -206,6 +234,14 @@ export async function compileContent(options: CompileOptions = {}) {
   const profileResult = ContentProfileSchema.safeParse(await readJson(profilePath));
   if (!profileResult.success) throw new Error(validationMessage(profilePath, profileResult.error.issues));
   const profile: ContentProfile = profileResult.data;
+
+  const releaseCandidateResult = PublicReleaseCandidateSchema.safeParse(await readJson(releaseCandidatePath));
+  if (!releaseCandidateResult.success) throw new Error(validationMessage(releaseCandidatePath, releaseCandidateResult.error.issues));
+  const releaseCandidate: PublicReleaseCandidate = releaseCandidateResult.data;
+  if (releaseCandidate.profile !== profile.id) throw new Error("Public release candidate profile must match content profile");
+  if (releaseCandidate.contentVersion !== profile.contentVersion) {
+    throw new Error(`Public release candidate ${releaseCandidate.id} targets ${releaseCandidate.contentVersion}, current content is ${profile.contentVersion}`);
+  }
 
   const sourceResult = SourceRecordSchema.array().safeParse(await readJson(sourcesPath));
   if (!sourceResult.success) throw new Error(validationMessage(sourcesPath, sourceResult.error.issues));
@@ -309,6 +345,52 @@ export async function compileContent(options: CompileOptions = {}) {
       }
     }
   }
+
+  const allEntityKeys = new Set(entities.map((entity) => entityKey(entity.kind, entity.slug)));
+  const selectedEntityKeys = new Set([...releaseCandidate.coreEntities, ...releaseCandidate.dependencyEntities]);
+  for (const key of selectedEntityKeys) {
+    if (!allEntityKeys.has(key)) errors.push(`${releaseCandidate.id}: selected entity ${key} is not in the content batch`);
+  }
+  const relationMap = new Map(relations.map((relation) => [relation.id, relation]));
+  const selectedRelationIds = new Set(releaseCandidate.relations);
+  const excludedRelationIds = new Set(releaseCandidate.excludedRelations.map((relation) => relation.id));
+  for (const relationId of [...selectedRelationIds, ...excludedRelationIds]) {
+    if (!relationMap.has(relationId)) errors.push(`${releaseCandidate.id}: selected relation ${relationId} is not in the content batch`);
+  }
+  for (const relationId of selectedRelationIds) {
+    const relation = relationMap.get(relationId);
+    if (!relation) continue;
+    for (const endpoint of [relation.source, relation.target]) {
+      if (!selectedEntityKeys.has(entityKey(endpoint.kind, endpoint.slug))) {
+        errors.push(`${releaseCandidate.id}: selected relation ${relationId} requires ${entityKey(endpoint.kind, endpoint.slug)}`);
+      }
+    }
+  }
+  for (const relation of relations) {
+    const source = entityKey(relation.source.kind, relation.source.slug);
+    const target = entityKey(relation.target.kind, relation.target.slug);
+    if (selectedEntityKeys.has(source) && selectedEntityKeys.has(target) && !selectedRelationIds.has(relation.id) && !excludedRelationIds.has(relation.id)) {
+      errors.push(`${releaseCandidate.id}: internal relation ${relation.id} must be selected or explicitly excluded with a reason`);
+    }
+  }
+  for (const key of selectedEntityKeys) {
+    const entity = entityMap.get(key);
+    if (!entity) continue;
+    for (const dependency of structuralDependencies(entity)) {
+      if (!selectedEntityKeys.has(dependency)) errors.push(`${releaseCandidate.id}: ${key} requires structural dependency ${dependency}`);
+    }
+  }
+  const coreTraditions = new Set(releaseCandidate.coreEntities.flatMap((key) => {
+    const entity = entityMap.get(key);
+    return entity ? [primaryTradition(entity)] : [];
+  }));
+  for (const tradition of ["daoism", "confucianism", "buddhism"] as const) {
+    if (!coreTraditions.has(tradition)) errors.push(`${releaseCandidate.id}: core selection must represent ${tradition}`);
+  }
+  const audioMap = new Map(audio.map((record) => [record.id, record]));
+  for (const audioId of releaseCandidate.audio) {
+    if (!audioMap.has(audioId)) errors.push(`${releaseCandidate.id}: selected audio ${audioId} is not in the content batch`);
+  }
   for (const tradition of traditions) {
     for (const sourceId of tradition.sourceIds) {
       if (!sourceMap.has(sourceId)) errors.push(`tradition ${tradition.slug}: unknown source ${sourceId}`);
@@ -372,6 +454,34 @@ export async function compileContent(options: CompileOptions = {}) {
   if (databaseBundlePath) {
     const sourceUuidMap = new Map(sources.map((source) => [source.id, uuidV5(namespace, `source:${source.id}`)]));
     const entityUuid = (kind: string, slug: string) => uuidV5(namespace, `${kind}:${slug}`);
+    const relationUuid = (id: string) => uuidV5(namespace, id);
+    const audioUuid = (id: string) => uuidV5(namespace, id);
+    const selectionChecksumSha256 = createHash("sha256").update(JSON.stringify({
+      coreEntities: releaseCandidate.coreEntities,
+      dependencyEntities: releaseCandidate.dependencyEntities,
+      relations: releaseCandidate.relations,
+      excludedRelations: releaseCandidate.excludedRelations,
+      audio: releaseCandidate.audio,
+    })).digest("hex");
+    const releaseCandidateId = uuidV5(namespace, releaseCandidate.id);
+    const parseEntityKey = (key: string) => {
+      const separator = key.indexOf(":");
+      return { kind: key.slice(0, separator), slug: key.slice(separator + 1) };
+    };
+    const releaseCandidateSubjects = [
+      ...releaseCandidate.coreEntities.map((key, index) => ({
+        releaseCandidateId, subjectKind: "entity" as const, subjectId: entityUuid(parseEntityKey(key).kind, parseEntityKey(key).slug), role: "core" as const, sortOrder: index,
+      })),
+      ...releaseCandidate.dependencyEntities.map((key, index) => ({
+        releaseCandidateId, subjectKind: "entity" as const, subjectId: entityUuid(parseEntityKey(key).kind, parseEntityKey(key).slug), role: "dependency" as const, sortOrder: index,
+      })),
+      ...releaseCandidate.relations.map((id, index) => ({
+        releaseCandidateId, subjectKind: "relation" as const, subjectId: relationUuid(id), role: "supporting" as const, sortOrder: index,
+      })),
+      ...releaseCandidate.audio.map((id, index) => ({
+        releaseCandidateId, subjectKind: "audio" as const, subjectId: audioUuid(id), role: "supporting" as const, sortOrder: index,
+      })),
+    ];
     const databaseEntities = [
       ...traditions.map((tradition) => ({
         id: entityUuid("tradition", tradition.slug), kind: "tradition" as const, slug: tradition.slug,
@@ -441,7 +551,7 @@ export async function compileContent(options: CompileOptions = {}) {
         confidence: assertion.confidence, evidenceLayer: assertion.evidenceLayer, sourceId: sourceUuidMap.get(assertion.sourceId)!,
       }))),
       relations: relations.map((relation) => ({
-        id: uuidV5(namespace, relation.id), canonicalKey: relation.id,
+        id: relationUuid(relation.id), canonicalKey: relation.id,
         sourceEntityId: entityUuid(relation.source.kind, relation.source.slug), targetEntityId: entityUuid(relation.target.kind, relation.target.slug),
         relationType: relation.relationType, label: relation.label, summary: relation.summary, confidence: relation.confidence,
         evidenceLayer: relation.evidenceLayer, publicationState: relation.publicationState, reviewStatus: relation.reviewStatus,
@@ -450,6 +560,21 @@ export async function compileContent(options: CompileOptions = {}) {
       })),
       reviews,
       audio,
+      releaseCandidates: [{
+        id: releaseCandidateId, canonicalKey: releaseCandidate.id, status: releaseCandidate.status,
+        targetReleaseStage: releaseCandidate.targetReleaseStage, contentVersion: releaseCandidate.contentVersion,
+        titleZh: releaseCandidate.title["zh-CN"], titleEn: releaseCandidate.title.en,
+        scopeZh: releaseCandidate.scope["zh-CN"], scopeEn: releaseCandidate.scope.en,
+        selectionChecksumSha256,
+      }],
+      releaseCandidateSubjects,
+      promotions: releaseCandidate.promotion ? [{
+        id: uuidV5(namespace, releaseCandidate.promotion.id), releaseCandidateId,
+        promotedBy: releaseCandidate.promotion.promotedBy, promotedAt: releaseCandidate.promotion.promotedAt,
+        sourceChecksumSha256: releaseCandidate.promotion.sourceChecksumSha256,
+        artifactChecksumSha256: releaseCandidate.promotion.artifactChecksumSha256,
+        targetVisibility: "public" as const,
+      }] : [],
     });
     await writeJson(databaseBundlePath, bundle);
   }
@@ -458,6 +583,16 @@ export async function compileContent(options: CompileOptions = {}) {
     ? entities.filter((entity) => entity.publicationState === "public" && entity.reviewStatus === "publishable")
     : entities;
   const visibleEntityMap = new Map(visibleEntities.map((entity) => [`${entity.kind}:${entity.slug}`, entity]));
+  if (visibility === "public") {
+    for (const entity of visibleEntities) {
+      for (const dependency of structuralDependencies(entity)) {
+        if (!visibleEntityMap.has(dependency)) {
+          errors.push(`${entityKey(entity.kind, entity.slug)}: public artifact requires public structural dependency ${dependency}`);
+        }
+      }
+    }
+    if (errors.length > 0) throw new Error(errors.join("\n"));
+  }
   const visibleRelations = visibility === "public"
     ? relations.filter((relation) => (
         relation.publicationState === "public" &&

@@ -16,6 +16,8 @@
 6. Web production 只读取静态 `data/v2`，不得连接 PostgreSQL、导入 authoring JSON 或读取 `.artifacts`；
 7. 当前 first-viewable prototype 和 Alpha contentVersion 保持不同，直到执行显式 promotion；
 8. database import bundle 使用冻结 UUID namespace，且只能从 Preview source content 生成。
+9. Public RC 以显式 selection manifest 表达，compiler 必须验证 structural dependency、relation closure 和三传统覆盖；未通过的候选不能晋级。
+10. promotion 工具负责生成 Public artifact 和不可变 checksum evidence，authoring database 通过 release candidate / promotion 表保存审计链。
 
 ## 结果
 
@@ -29,5 +31,5 @@
 
 - transaction importer 与真实 PostgreSQL/PostGIS fresh/repeat 测试；
 - review check 的签名、审计日志和 curator UI；
-- Alpha read model 到 Web Public data 的显式 promotion 工具；
+- 将 Public RC promotion tool 接入正式 curator review UI；
 - 发布候选的 E2E、a11y 与线上 smoke。

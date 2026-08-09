@@ -26,11 +26,14 @@
     "db:import": "node scripts/import-database-bundle.mjs --apply",
     "db:verify": "node scripts/verify-database-state.mjs",
     "verify:database:integration": "sh scripts/verify-database-integration.sh",
+    "verify:public-rc": "node scripts/verify-public-rc.mjs",
+    "verify:public-rc:ready": "node scripts/verify-public-rc.mjs --ready",
+    "content:promote": "node scripts/promote-public-rc.mjs",
     "typecheck": "npm run typecheck -w @drf-museum/domain-schema && npm run typecheck -w @drf-museum/core && npm run typecheck -w @drf-museum/content-compiler && npm run typecheck -w @drf-museum/web",
-    "test": "npm run test -w @drf-museum/core && npm run test -w @drf-museum/web",
+    "test": "npm run test -w @drf-museum/core && npm run test -w @drf-museum/content-compiler && npm run test -w @drf-museum/web",
     "test:e2e": "npm run test:e2e -w @drf-museum/web",
     "verify:static": "node scripts/verify-static.mjs",
-    "check": "npm run typecheck && npm run test && npm run verify:migrations && npm run db:migrate:plan && npm run verify:architecture && npm run build:content && npm run verify:database-bundle && npm run db:import:plan && npm run verify:content && npm run verify:matrix && npm run verify:alpha-ready && npm run build:content:public && npm run verify:content:public && npm run build && npm run verify:static",
+    "check": "npm run typecheck && npm run test && npm run verify:migrations && npm run db:migrate:plan && npm run verify:architecture && npm run build:content && npm run verify:public-rc && npm run verify:database-bundle && npm run db:import:plan && npm run verify:content && npm run verify:matrix && npm run verify:alpha-ready && npm run build:content:public && npm run verify:content:public && npm run build && npm run verify:static",
     "check:release": "npm run check && npm run test:e2e && npm run verify:database:integration"
   },
   "engines": {

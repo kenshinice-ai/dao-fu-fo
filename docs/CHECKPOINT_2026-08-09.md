@@ -11,6 +11,8 @@
 - Preview 内容管线：80 个内容实体、30 条关系、3 条音频脚本和 18 个来源；
 - authoring database：12 个迁移、83 个 canonical entities 和可重复的事务导入。
 
+后续工程分支已增加 Public RC foundation，但不会修改本检查点；可复盘的下一检查点会单独记录 013 migration、RC selection 和 promotion audit。
+
 ## 2. 最短启动方式
 
 ```bash

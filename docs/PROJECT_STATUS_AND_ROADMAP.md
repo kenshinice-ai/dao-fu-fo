@@ -33,12 +33,12 @@ Cloudflare Pages static dist          不含数据库连接
 | --- | --- | --- |
 | Web 原型 | 可运行、可构建、可自动回归 | 中英文、Museum/Explore/Research、桌面与 390px 验收已完成；19 个 Playwright 测试通过，含 14 条核心路由 axe WCAG A/AA 扫描；当前公开数据版本 `2026.08.prototype.1` |
 | Alpha 内容 | 最低数量完成 | 80 个实体、30 条关系、3 条音频脚本、18 个来源；双语实体 artifact 共 160 个 |
-| 数据库导入契约 | 已生成并验证 | 83 个 canonical entities（含 3 个顶级传统）、166 条翻译、164 条 entity-source、96 条 tradition assignment、80 条时间断言 |
+| 数据库导入契约 | 已生成并验证 | 83 个 canonical entities（含 3 个顶级传统）、166 条翻译、164 条 entity-source、96 条 tradition assignment、80 条时间断言；另有 1 个 Public RC、27 个候选 subject 和 0 个 promotion record |
 | Explore 派生模型 | 已生成并验证 | 每种语言 7 个现实地图点、62 个时间项、29 个图节点、30 条图边 |
 | 内容治理 | 机器可读 | quality report、review queue、source index、route manifest、SHA-256 manifest 均由 compiler 生成 |
-| 数据库 schema | 真实集成通过 | 001–012 migration、checksum-aware runner、事务 importer、state verifier、PostGIS/pg_trgm、领域 profile 和 Public 只读视图；fresh/repeat 结果一致 |
+| 数据库 schema | 真实集成通过 | 001–013 migration、checksum-aware runner、事务 importer、state verifier、PostGIS/pg_trgm、领域 profile、Public 只读视图和 release/promotion 留痕；fresh/repeat 结果一致 |
 | 发布隔离 | 已固化 | Public Alpha artifact 当前为 0 entities / 0 sources / 0 relations / 0 audio；`verify:architecture` 阻止 Web/部署连接数据库或直读 Alpha 源内容 |
-| 总门禁 | 通过 | typecheck、8 unit tests、19 E2E/a11y tests、migration/import integration、architecture、Preview/Public compiler、bundle、content、quota、Vite build、static release 全通过 |
+| 总门禁 | 通过 | typecheck、9 unit tests（含 Public 子集编译）、19 E2E/a11y tests、migration/import integration、architecture、Preview/Public compiler、RC blocker report、bundle、content、quota、Vite build、static release 全通过 |
 
 当前 Preview quality report 有 314 个 Public 阻塞项：
 
@@ -77,12 +77,12 @@ Cloudflare Pages static dist          不含数据库连接
 
 ### P0：完成第一批可公开内容
 
-1. 优先选择 8–12 个核心实体形成 release candidate，而不是一次性审核全部 80 个；
+1. 使用已冻结的 `release:alpha-public-rc-1`，先完成 10 个核心实体、3 个 text version 依赖和 14 条关系的审核，不一次性审核全部 80 个；
 2. 把事实来源深化到 edition/item/precise locator，补标准 citation；
 3. 完成 schema、fact、tradition、bilingual、rights、accessibility、editorial checks；
 4. 为 9 个 museum object 落实真实馆藏、编号、provenance、图像许可、裁切和色彩策略，无法落实的对象不进入 Public；
 5. 完成 3 条音频的录制、字幕/转录、响度、许可和无障碍复核；
-6. 只通过显式 promotion 将审核完成的对象改为 Public，不批量复制 Preview 目录。
+6. 将候选状态推进到 `ready` 后，只通过显式 promotion 将审核完成的对象改为 Public，不批量复制 Preview 目录。
 
 ### P1：把新 read model 接入产品
 

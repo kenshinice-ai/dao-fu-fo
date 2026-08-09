@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0",
+  "id": "release:alpha-public-rc-1",
+  "profile": "dao-ru-fo",
+  "contentVersion": "2026.08.alpha.1",
+  "targetReleaseStage": "lean-public-mvp",
+  "status": "planning",
+  "title": {
+    "zh-CN": "第一批公共候选：长安与三传统的文本入口",
+    "en": "Public RC 1: Textual gateways into Chang'an and three traditions"
+  },
+  "scope": {
+    "zh-CN": "以三位人物、三部文本、三段原典和长安为核心；文本版本作为 passage 的结构依赖随候选纳入。",
+    "en": "Three figures, three texts, three passages and Chang'an form the core; text versions are included as structural dependencies for the passages."
+  },
+  "coreEntities": [
+    "figure:xuanzang",
+    "figure:sima-chengzhen",
+    "figure:kong-yingda",
+    "text:heart-sutra",
+    "text:daodejing",
+    "text:analects",
+    "passage:form-is-emptiness",
+    "passage:humans-follow-earth",
+    "passage:return-to-ritual",
+    "place:changan"
+  ],
+  "dependencyEntities": [
+    "text_version:heart-sutra-chinese-received",
+    "text_version:daodejing-received",
+    "text_version:analects-received"
+  ],
+  "relations": [
+    "relation:xuanzang-active-changan",
+    "relation:sima-active-changan",
+    "relation:kong-active-changan",
+    "relation:form-passage-heart-sutra",
+    "relation:humans-passage-daodejing",
+    "relation:return-passage-analects",
+    "relation:daodejing-analects-comparative",
+    "relation:heart-sutra-daodejing-comparative",
+    "relation:heart-sutra-has-version",
+    "relation:daodejing-has-version",
+    "relation:analects-has-version",
+    "relation:form-quoted-heart-version",
+    "relation:humans-quoted-daodejing-version",
+    "relation:return-quoted-analects-version"
+  ],
+  "excludedRelations": [],
+  "audio": [],
+  "exitCriteria": [
+    "每个核心实体和结构依赖都完成双语、事实、权利与编辑审核。",
+    "每个事实实体至少有一个 edition、item 或 precise 且 citationStatus=verified 的外部来源。",
+    "所有选中 passage 的 text 与 text_version 依赖也在同一 Public 集合中。",
+    "选中关系的两端都在同一 Public 集合中，未选中的内部关系必须有明确排除理由。",
+    "Public artifact、数据库 build checksum 和 promotion 记录能够互相复核。"
+  ],
+  "createdAt": "2026-08-09T03:30:00.000Z",
+  "updatedAt": "2026-08-09T03:30:00.000Z"
+}

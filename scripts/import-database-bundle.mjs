@@ -1,6 +1,6 @@
 import { createHash } from "node:crypto";
 import { spawn } from "node:child_process";
-import { readFile } from "node:fs/promises";
+import { readFile, readdir } from "node:fs/promises";
 import { resolve } from "node:path";
 import { DatabaseImportBundleSchema } from "@drf-museum/domain-schema";
 
@@ -10,6 +10,7 @@ const bundlePath = resolve(".artifacts/database/import-v1.json");
 const bundleBytes = await readFile(bundlePath);
 const bundleChecksum = createHash("sha256").update(bundleBytes).digest("hex");
 const bundle = DatabaseImportBundleSchema.parse(JSON.parse(bundleBytes.toString("utf8")));
+const expectedMigrationCount = (await readdir(resolve("database/migrations"))).filter((file) => /^\d{3}_.+\.sql$/.test(file)).length;
 
 function uuidBytes(value) {
   return Buffer.from(value.replaceAll("-", ""), "hex");
@@ -262,6 +263,38 @@ for (const review of bundle.reviews) {
   }, ["id"]));
 }
 
+for (const candidate of bundle.releaseCandidates) statements.push(upsert("release_candidates", {
+  id: candidate.id,
+  canonical_key: candidate.canonicalKey,
+  content_version: candidate.contentVersion,
+  target_release_stage: candidate.targetReleaseStage,
+  status: candidate.status,
+  title_zh: candidate.titleZh,
+  title_en: candidate.titleEn,
+  scope_zh: candidate.scopeZh,
+  scope_en: candidate.scopeEn,
+  selection_checksum_sha256: candidate.selectionChecksumSha256,
+}, ["id"], ["created_at"]));
+
+for (const subject of bundle.releaseCandidateSubjects) statements.push(upsert("release_candidate_subjects", {
+  release_candidate_id: subject.releaseCandidateId,
+  subject_kind: subject.subjectKind,
+  subject_id: subject.subjectId,
+  role: subject.role,
+  sort_order: subject.sortOrder,
+}, ["release_candidate_id", "subject_kind", "subject_id"]));
+
+for (const promotion of bundle.promotions) statements.push(upsert("content_promotions", {
+  id: promotion.id,
+  release_candidate_id: promotion.releaseCandidateId,
+  promoted_by: promotion.promotedBy,
+  promoted_at: promotion.promotedAt,
+  source_checksum_sha256: promotion.sourceChecksumSha256,
+  artifact_checksum_sha256: promotion.artifactChecksumSha256,
+  target_visibility: promotion.targetVisibility,
+  notes: promotion.note,
+}, ["id"]));
+
 const buildId = uuidV5(bundle.idNamespace, `database-build:${bundle.contentVersion}:${bundleChecksum}`);
 statements.push(upsert("content_build_history", {
   id: buildId, content_version: bundle.contentVersion, visibility: "preview",
@@ -289,6 +322,9 @@ const summary = {
   relations: bundle.relations.length,
   reviews: bundle.reviews.length,
   audioScripts: bundle.audio.length,
+  releaseCandidates: bundle.releaseCandidates.length,
+  releaseCandidateSubjects: bundle.releaseCandidateSubjects.length,
+  promotions: bundle.promotions.length,
 };
 
 if (!apply) {
@@ -309,7 +345,7 @@ function psql(args, input) {
   });
 }
 
-const migrationCount = Number(await psql(["--tuples-only", "--no-align", "--command", "SELECT count(*) FROM museum.migration_history;"], ""));
-if (migrationCount < 12) throw new Error(`Database has ${migrationCount} migrations; apply all 12 before importing`);
+const appliedMigrationCount = Number(await psql(["--tuples-only", "--no-align", "--command", "SELECT count(*) FROM museum.migration_history;"], ""));
+if (appliedMigrationCount < expectedMigrationCount) throw new Error(`Database has ${appliedMigrationCount} migrations; apply all ${expectedMigrationCount} before importing`);
 await psql(["--file", "-"], sql);
 console.log(`Database import applied: ${JSON.stringify(summary)}`);

@@ -1,4 +1,4 @@
-import { useCallback, useMemo } from "react";
+import { useCallback, useMemo, useRef } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { Icon } from "../components/Icon";
 import { ErrorState, LoadingState } from "../components/LoadingState";
@@ -14,18 +14,26 @@ export function ExplorePage() {
   const { locale } = useMuseumContext();
   const [params, setParams] = useSearchParams();
   const routeState = parseRouteState(params);
+  const latestRouteState = useRef(routeState);
+  latestRouteState.current = routeState;
 
   const changeView = (next: ExploreView) => {
-    const mapLayer = next === "cosmos" ? "cosmos" : "real";
-    setParams(serializeRouteState({ ...routeState, view: next, mapLayer }));
+    const currentState = latestRouteState.current;
+    const mapLayer: RouteState["mapLayer"] = next === "cosmos" ? "cosmos" : "real";
+    const nextState = { ...currentState, view: next, mapLayer };
+    latestRouteState.current = nextState;
+    setParams(serializeRouteState(nextState));
   };
 
   const updateRouteState = (changes: Partial<RouteState>) => {
-    const nextView = changes.view ?? routeState.view;
-    const mapLayer = nextView === "cosmos"
+    const currentState = latestRouteState.current;
+    const nextView = changes.view ?? currentState.view;
+    const mapLayer: RouteState["mapLayer"] = nextView === "cosmos"
       ? "cosmos"
-      : changes.mapLayer ?? (routeState.view === "cosmos" ? "real" : routeState.mapLayer);
-    setParams(serializeRouteState({ ...routeState, ...changes, mapLayer }));
+      : changes.mapLayer ?? (currentState.view === "cosmos" ? "real" : currentState.mapLayer);
+    const nextState = { ...currentState, ...changes, mapLayer };
+    latestRouteState.current = nextState;
+    setParams(serializeRouteState(nextState));
   };
 
   return (

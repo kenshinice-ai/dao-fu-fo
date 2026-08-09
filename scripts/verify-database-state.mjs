@@ -49,6 +49,9 @@ const countTables = {
   audioScripts: "audio_scripts",
   audioScriptSources: "audio_script_sources",
   reviews: "review_checks",
+  releaseCandidates: "release_candidates",
+  releaseCandidateSubjects: "release_candidate_subjects",
+  promotions: "content_promotions",
   builds: "content_build_history",
   publicEntities: "public_entities",
   publicRelations: "public_relations",
@@ -83,6 +86,9 @@ const expected = {
   audioScripts: bundle.audio.length,
   audioScriptSources: bundle.audio.reduce((sum, audio) => sum + audio.sourceIds.length, 0),
   reviews: bundle.reviews.length,
+  releaseCandidates: bundle.releaseCandidates.length,
+  releaseCandidateSubjects: bundle.releaseCandidateSubjects.length,
+  promotions: bundle.promotions.length,
   builds: 1,
   publicEntities: bundle.entities.filter((entity) => entity.publicationState === "public" && entity.reviewStatus === "publishable").length,
   publicRelations: bundle.relations.filter((relation) => relation.publicationState === "public" && relation.reviewStatus === "publishable").length,
@@ -104,6 +110,10 @@ const expectedRelationIdentity = bundle.relations.map((relation) => `${relation.
 const actualRelationIdentity = JSON.parse(await psql("SELECT coalesce(json_agg(canonical_key || ':' || id ORDER BY canonical_key), '[]'::json)::text FROM museum.entity_relations;"));
 if (JSON.stringify(actualRelationIdentity) !== JSON.stringify(expectedRelationIdentity)) throw new Error("Database relation identities differ from import bundle");
 
+const expectedReleaseIdentity = bundle.releaseCandidates.map((candidate) => `${candidate.canonicalKey}:${candidate.id}`).sort();
+const actualReleaseIdentity = JSON.parse(await psql("SELECT coalesce(json_agg(canonical_key || ':' || id ORDER BY canonical_key), '[]'::json)::text FROM museum.release_candidates;"));
+if (JSON.stringify(actualReleaseIdentity) !== JSON.stringify(expectedReleaseIdentity)) throw new Error("Database release candidate identities differ from import bundle");
+
 const placeGeometryCount = Number(await psql("SELECT count(*) FROM museum.place_profiles WHERE geom IS NOT NULL;"));
 const expectedPlaceGeometryCount = bundle.profiles.filter((profile) => profile.kind === "place" && profile.value.coordinates).length;
 if (placeGeometryCount !== expectedPlaceGeometryCount) throw new Error(`Expected ${expectedPlaceGeometryCount} place geometries, found ${placeGeometryCount}`);
@@ -120,6 +130,7 @@ const fingerprintTables = [
   ["passage_profiles", ""], ["concept_profiles", ""], ["institution_profiles", ""], ["place_profiles", ""],
   ["event_profiles", ""], ["route_profiles", ""], ["route_waypoints", ""], ["museum_object_profiles", ""],
   ["audio_scripts", ""], ["audio_script_sources", ""], ["review_checks", ""],
+  ["release_candidates", " - 'created_at' - 'updated_at'"], ["release_candidate_subjects", ""], ["content_promotions", ""],
   ["content_build_history", " - 'started_at' - 'completed_at'"],
 ];
 const fingerprintUnion = fingerprintTables.map(([table, subtraction]) => `SELECT ${`'${table}:'`} || (to_jsonb(t)${subtraction})::text AS value FROM museum.${table} t`).join(" UNION ALL ");

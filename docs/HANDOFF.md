@@ -8,18 +8,24 @@
 
 ## 2026-08-09｜Alpha 内容管线、研究层与发布边界
 
-### 2026-08-09 工程检查点｜可测试基线
+### 2026-08-09 Public RC 基础建设｜进行中
+
+- 冻结 `release:alpha-public-rc-1` 选择清单：10 个 core entities、3 个 text-version dependencies、14 条 relations；
+- compiler 新增 structural dependency、relation closure 和三传统覆盖校验；Public 子集只保留可见 related links，并拒绝 dangling passage dependencies；
+- 新增 `verify:public-rc`、`verify:public-rc:ready` 和默认 dry-run 的 `content:promote`；当前报告为 53 blockers、27 warnings，候选仍为 planning；
+- 新增 migration 013、release candidate bundle rows 和 promotion audit rows；fresh/repeat PostgreSQL/PostGIS 通过，13 migrations、803 importer statements，指纹 `52cbaae271faf9f3f4978eb4f6fa6dd7`；
+- 新增 compiler regression test，确认单个已审核 entity 的 Public artifact 不会携带 preview related entity。
 
 - 新增 figure、concept、institution、event 专用 profile，并为 83/83 canonical entities 补齐结构化 profile；
-- 新增 012 migration，补齐音频脚本/来源和 pending review 约束；
+- 新增 012 migration，补齐音频脚本/来源和 pending review 约束；本轮另新增 013 release candidate / promotion 约束；
 - 实现确定性 transaction importer、database state verifier 和隔离的 PostgreSQL/PostGIS fresh/repeat 集成脚本；
-- 真实集成验证通过：12 migrations、775 importer statements、83 entities、166 translations、80 temporal assertions、30 relations；重复执行指纹保持 `ea9a339e0c1159582504ce9a13f65eca`；
+- 真实集成验证通过：13 migrations、803 importer statements、83 entities、166 translations、80 temporal assertions、30 relations；重复执行指纹保持 `52cbaae271faf9f3f4978eb4f6fa6dd7`；
 - 补齐 SPA 页面语言/标题/描述 metadata、路由后主内容焦点和无障碍细节；
 - 新增 Playwright + axe：19/19 tests 通过，覆盖语言、深链接、搜索、Explore URL、390px、reduced motion 和 14 条路由的 WCAG A/AA；
-- `npm run check` 全绿；新增 `npm run check:release` 串联静态、E2E 与真实数据库门禁；
+- `npm run check` 全绿；新增 `npm run check:release` 串联静态、E2E 与真实数据库门禁；Public RC blocker report 也纳入默认 check；
 - 新增 `CHECKPOINT_2026-08-09.md`，明确测试路线和 Public 内容未完成边界。
 
-下一阶段重点不再是补工程骨架，而是挑选 8–12 个核心实体完成来源定位、馆藏/权利、双语和审核，形成第一个 Public RC；随后把 compiler read model 接入 Web 并发布 Cloudflare preview。
+下一阶段重点是按已冻结候选逐项完成来源定位、权利、双语和审核，形成第一个 Public RC；随后把 compiler read model 接入 Web 并发布 Cloudflare preview。
 
 ### 2026-08-09 深化更新｜数据库契约、质量工作流与派生 read models
 

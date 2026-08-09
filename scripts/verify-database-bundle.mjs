@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { DatabaseImportBundleSchema } from "@drf-museum/domain-schema";
@@ -8,6 +9,14 @@ const unique = (values, label) => {
   if (set.size !== values.length) throw new Error(`Duplicate ${label}`);
   return set;
 };
+function uuidV5(namespace, name) {
+  const namespaceBytes = Buffer.from(namespace.replaceAll("-", ""), "hex");
+  const hash = createHash("sha1").update(Buffer.concat([namespaceBytes, Buffer.from(name, "utf8")])).digest();
+  hash[6] = (hash[6] & 0x0f) | 0x50;
+  hash[8] = (hash[8] & 0x3f) | 0x80;
+  const hex = hash.subarray(0, 16).toString("hex");
+  return `${hex.slice(0, 8)}-${hex.slice(8, 12)}-${hex.slice(12, 16)}-${hex.slice(16, 20)}-${hex.slice(20)}`;
+}
 
 const entityIds = unique(bundle.entities.map((row) => row.id), "database entity IDs");
 unique(bundle.entities.map((row) => `${row.kind}:${row.slug}`), "database entity keys");
@@ -18,6 +27,18 @@ for (const source of bundle.sources) {
 }
 unique(bundle.relations.map((row) => row.id), "database relation IDs");
 unique(bundle.relations.map((row) => row.canonicalKey), "database relation keys");
+const releaseCandidateIds = unique(bundle.releaseCandidates.map((row) => row.id), "release candidate IDs");
+unique(bundle.releaseCandidates.map((row) => row.canonicalKey), "release candidate keys");
+const relationIds = new Set(bundle.relations.map((row) => row.id));
+const audioIds = new Set(bundle.audio.map((row) => uuidV5(bundle.idNamespace, row.id)));
+for (const subject of bundle.releaseCandidateSubjects) {
+  if (!releaseCandidateIds.has(subject.releaseCandidateId)) throw new Error("Release candidate subject references a missing candidate");
+  const valid = subject.subjectKind === "entity" ? entityIds.has(subject.subjectId) : subject.subjectKind === "relation" ? relationIds.has(subject.subjectId) : audioIds.has(subject.subjectId);
+  if (!valid) throw new Error(`Release candidate subject references a missing ${subject.subjectKind}`);
+}
+for (const promotion of bundle.promotions) {
+  if (!releaseCandidateIds.has(promotion.releaseCandidateId)) throw new Error("Promotion references a missing release candidate");
+}
 
 for (const row of bundle.translations) if (!entityIds.has(row.entityId)) throw new Error(`Translation references missing entity ${row.entityId}`);
 for (const row of bundle.profiles) if (!entityIds.has(row.entityId)) throw new Error(`Profile references missing entity ${row.entityId}`);
@@ -52,4 +73,4 @@ for (const entity of bundle.entities) {
 const topTraditions = bundle.entities.filter((row) => row.kind === "tradition");
 if (topTraditions.length !== 3) throw new Error(`Expected three canonical top traditions, found ${topTraditions.length}`);
 
-console.log(`Database import bundle verified: ${bundle.entities.length} entities; ${bundle.sources.length} sources; ${bundle.relations.length} relations; ${bundle.temporalAssertions.length} temporal assertions`);
+console.log(`Database import bundle verified: ${bundle.entities.length} entities; ${bundle.sources.length} sources; ${bundle.relations.length} relations; ${bundle.temporalAssertions.length} temporal assertions; ${bundle.releaseCandidates.length} release candidate`);

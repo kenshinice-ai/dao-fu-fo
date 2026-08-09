@@ -16,12 +16,15 @@ npm run build:content:public
 npm run verify:content:public
 npm run verify:database-bundle
 npm run db:import:plan
+npm run verify:public-rc
 npm run test:e2e
 npm run verify:database:integration
 npm run verify:architecture
 npm run check
 npm run check:release
 ```
+
+`npm run verify:public-rc:ready` 和 `npm run content:promote -- --apply --promoted-by=<reviewer>` 只在内容审核完成后执行，不属于当前 Alpha 的默认绿色门禁。
 
 Lean Alpha 数量门槛已经达成。Public artifact 仍预期为空，因为内容处于 `preview`，对象馆藏与图像权利尚未落实，音频尚未录制，主题级来源 locator 仍待深化。这是安全边界，不是内容缺失被静默忽略。
 

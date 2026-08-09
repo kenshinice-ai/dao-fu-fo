@@ -18,4 +18,4 @@ Required lifecycle:
 
 `npm run verify:database:integration` creates an isolated temporary PostgreSQL/PostGIS cluster, runs fresh migrate/import, repeats both operations, verifies row counts and compares fingerprints, then removes the temporary cluster. It requires local PostgreSQL 18 and PostGIS 3.6 binaries.
 
-Verified 2026-08-09 baseline: 12 migrations, 775 importer statements, 83 entities, 166 translations, 18 sources, 30 relations, 80 temporal assertions, 83 profiles and 3 audio scripts. Fresh and repeat imports produced fingerprint `ea9a339e0c1159582504ce9a13f65eca` with PostGIS 3.6.
+Verified next Public RC foundation: 13 migrations, 803 importer statements, 83 entities, 166 translations, 18 sources, 30 relations, 80 temporal assertions, 83 profiles, 3 audio scripts, 1 release candidate and 27 candidate subjects. Fresh and repeat imports produced fingerprint `52cbaae271faf9f3f4978eb4f6fa6dd7` with PostGIS 3.6. Promotion records remain 0 until content review is complete.
