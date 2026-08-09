@@ -81,7 +81,7 @@
       "isPrimary": true,
       "confidence": "high",
       "evidenceLayer": "historical_documented",
-      "sourceId": "source:confucian-commentarial-record"
+      "sourceId": "source:kong-new-tang-biography"
     }
   ],
   "temporalAssertions": [
@@ -96,10 +96,11 @@
       },
       "confidence": "high",
       "evidenceLayer": "historical_documented",
-      "sourceId": "source:confucian-commentarial-record"
+      "sourceId": "source:kong-new-tang-biography"
     }
   ],
   "sourceIds": [
+    "source:kong-new-tang-biography",
     "source:confucian-commentarial-record",
     "source:editorial-method"
   ],

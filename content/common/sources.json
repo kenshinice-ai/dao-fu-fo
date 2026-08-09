@@ -24,14 +24,15 @@
       "zh-CN": "《大唐大慈恩寺三藏法师传》",
       "en": "Biography of the Tripiṭaka Master of the Great Ci'en Monastery"
     },
-    "locator": "卷一至卷十；人物行迹与译经活动",
+    "locator": "《大唐大慈恩寺三藏法师传》全书（卷一至卷十）；卷一开篇为玄奘本传，后续卷次记录求法与译经活动",
     "role": {
       "zh-CN": "玄奘生平、求法与译经活动的原始传记依据",
       "en": "Primary biographical basis for Xuanzang's travels and translation work"
     },
     "rightsStatus": "public_domain",
-    "locatorLevel": "collection",
-    "citationStatus": "draft"
+    "locatorLevel": "item",
+    "citationStatus": "verified",
+    "url": "https://ctext.org/library.pl?if=en&res=112971"
   },
   {
     "id": "source:daoist-historical-record",
@@ -49,6 +50,24 @@
     "rightsStatus": "quotation_only"
   },
   {
+    "id": "source:sima-old-tang-biography",
+    "sourceType": "primary_text",
+    "evidenceGrade": "A",
+    "title": {
+      "zh-CN": "《旧唐书·隐逸传》司马承祯条",
+      "en": "Sima Chengzhen entry in the Old Book of Tang biographies of recluses"
+    },
+    "locator": "《旧唐书》隐逸传：司马承祯条；召见、入朝活动与王屋山活动记载",
+    "role": {
+      "zh-CN": "司马承祯生平、入朝活动与唐代制度联系的一手史料定位",
+      "en": "Primary historical locator for Sima Chengzhen's biography, court encounters and institutional context"
+    },
+    "rightsStatus": "public_domain",
+    "locatorLevel": "edition",
+    "citationStatus": "verified",
+    "url": "https://ctext.org/wiki.pl?if=gb&remap=gb&res=456206"
+  },
+  {
     "id": "source:confucian-commentarial-record",
     "sourceType": "reference_work",
     "evidenceGrade": "B",
@@ -62,6 +81,24 @@
       "en": "Reference basis for Kong Yingda and Tang classical learning institutions"
     },
     "rightsStatus": "quotation_only"
+  },
+  {
+    "id": "source:kong-new-tang-biography",
+    "sourceType": "primary_text",
+    "evidenceGrade": "A",
+    "title": {
+      "zh-CN": "《新唐书·儒学上》孔颖达传",
+      "en": "Kong Yingda biography in the New Book of Tang, Classical Learning I"
+    },
+    "locator": "列传第一百二十三·儒学上：孔颖达传",
+    "role": {
+      "zh-CN": "孔颖达生平、经学活动与唐代国家教育语境的一手史料定位",
+      "en": "Primary historical locator for Kong Yingda's biography, classical scholarship and Tang state-learning context"
+    },
+    "rightsStatus": "public_domain",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://ctext.org/wiki.pl?chapter=451765&if=gb&remap=gb"
   },
   {
     "id": "source:historical-geography",
@@ -86,14 +123,15 @@
       "zh-CN": "《般若波罗蜜多心经》汉译本与经录资料",
       "en": "Chinese editions and catalogues of the Heart Sutra"
     },
-    "locator": "经文：色不异空，空不异色；版本与译者需在下一批核定",
+    "locator": "第2节：舍利子，色不异空，空不异色，色即是空，空即是色",
     "role": {
       "zh-CN": "passage 原文和版本定位的初始依据",
       "en": "Initial basis for the passage text and version locator"
     },
     "rightsStatus": "public_domain",
     "locatorLevel": "edition",
-    "citationStatus": "draft"
+    "citationStatus": "verified",
+    "url": "https://ctext.org/wiki.pl?chapter=412996&if=en"
   },
   {
     "id": "source:daodejing-edition",
@@ -103,14 +141,15 @@
       "zh-CN": "《道德经》通行本与章句资料",
       "en": "Received editions and chapter references for the Daodejing"
     },
-    "locator": "第二十五章：人法地，地法天，天法道，道法自然",
+    "locator": "第二十五章（“人法地，地法天，天法道，道法自然”）",
     "role": {
       "zh-CN": "道家 passage 原文和章次定位的初始依据",
       "en": "Initial basis for the Daoist passage and chapter locator"
     },
     "rightsStatus": "public_domain",
     "locatorLevel": "edition",
-    "citationStatus": "draft"
+    "citationStatus": "verified",
+    "url": "https://ctext.org/text.pl?if=en&node=11616&show=parallel"
   },
   {
     "id": "source:analects-edition",
@@ -120,14 +159,15 @@
       "zh-CN": "《论语》通行本与篇章资料",
       "en": "Received editions and chapter references for the Analects"
     },
-    "locator": "颜渊篇：克己复礼为仁",
+    "locator": "颜渊第十二，第1章（“克己复礼为仁”）",
     "role": {
       "zh-CN": "儒家 passage 原文和篇章定位的初始依据",
       "en": "Initial basis for the Confucian passage and chapter locator"
     },
     "rightsStatus": "public_domain",
     "locatorLevel": "edition",
-    "citationStatus": "draft"
+    "citationStatus": "verified",
+    "url": "https://ctext.org/wiki.pl?chapter=198285&if=en&remap=gb"
   },
   {
     "id": "source:buddhist-biographical-records",

@@ -41,7 +41,7 @@
     "summary": { "zh-CN": "司马承祯与唐代宫廷、道教制度和长安政治空间相连。", "en": "Sima Chengzhen is connected with Tang courtly, Daoist institutional and Chang'an political contexts." },
     "confidence": "medium",
     "evidenceLayer": "historical_documented",
-    "sourceIds": ["source:daoist-historical-record"]
+    "sourceIds": ["source:sima-old-tang-biography", "source:daoist-historical-record"]
   },
   {
     "id": "relation:kong-active-changan",
@@ -52,7 +52,7 @@
     "summary": { "zh-CN": "孔颖达的经学工作与唐代长安的教育、注疏和国家制度相连。", "en": "Kong Yingda's classical scholarship was tied to Tang educational, commentarial and state institutions in Chang'an." },
     "confidence": "high",
     "evidenceLayer": "historical_documented",
-    "sourceIds": ["source:confucian-commentarial-record"]
+    "sourceIds": ["source:kong-new-tang-biography", "source:confucian-commentarial-record"]
   },
   {
     "id": "relation:heart-sutra-has-version",

@@ -81,7 +81,7 @@
       "isPrimary": true,
       "confidence": "medium",
       "evidenceLayer": "historical_documented",
-      "sourceId": "source:daoist-historical-record"
+      "sourceId": "source:sima-old-tang-biography"
     }
   ],
   "temporalAssertions": [
@@ -96,10 +96,11 @@
       },
       "confidence": "medium",
       "evidenceLayer": "historical_documented",
-      "sourceId": "source:daoist-historical-record"
+      "sourceId": "source:sima-old-tang-biography"
     }
   ],
   "sourceIds": [
+    "source:sima-old-tang-biography",
     "source:daoist-historical-record",
     "source:editorial-method"
   ],
