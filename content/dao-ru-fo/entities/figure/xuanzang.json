@@ -1,0 +1,112 @@
+{
+  "kind": "figure",
+  "slug": "xuanzang",
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed",
+  "primaryEvidenceLayer": "historical_documented",
+  "importance": 5,
+  "isFeatured": true,
+  "translations": {
+    "zh-CN": {
+      "title": "玄奘",
+      "subtitle": "求法者、译经家与大慈恩寺三藏",
+      "shortSummary": "玄奘把求法旅行、文本翻译与长安的国家和寺院制度连接起来。",
+      "curatorialDescription": [
+        "玄奘的意义不只在于一次远行，而在于他如何把印度与中亚的求法经历转化为长安的翻译、讲学和制度实践。",
+        "博物馆将他的旅行、译经、师承和后世叙述分开呈现，避免把传记、传奇和历史事实压成单一故事。"
+      ],
+      "researchNote": "本条目是 Alpha 内容源，后续需要补充具体底本、译经项目和路线节点的逐项来源。",
+      "timeLabel": "约 602–664",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "核心地点",
+            "en": "Key place"
+          },
+          "value": {
+            "zh-CN": "长安·大慈恩寺",
+            "en": "Chang'an · Great Ci'en Monastery"
+          }
+        },
+        {
+          "label": {
+            "zh-CN": "主要身份",
+            "en": "Primary role"
+          },
+          "value": {
+            "zh-CN": "僧侣、求法者、译经家",
+            "en": "Monk, pilgrim and translator"
+          }
+        }
+      ]
+    },
+    "en": {
+      "title": "Xuanzang",
+      "subtitle": "Pilgrim, translator and Tripiṭaka master of Great Ci'en Monastery",
+      "shortSummary": "Xuanzang connects a pilgrimage for learning with translation and institutional life in Chang'an.",
+      "curatorialDescription": [
+        "Xuanzang matters not only because he travelled far, but because he transformed encounters in India and Central Asia into translation, teaching and institutional work in Chang'an.",
+        "The museum separates his journeys, translations, lineages and later narratives instead of compressing biography, legend and historical evidence into one story."
+      ],
+      "researchNote": "This Alpha content source still needs item-level references to editions, translation projects and route waypoints.",
+      "timeLabel": "c. 602–664",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "核心地点",
+            "en": "Key place"
+          },
+          "value": {
+            "zh-CN": "长安·大慈恩寺",
+            "en": "Chang'an · Great Ci'en Monastery"
+          }
+        },
+        {
+          "label": {
+            "zh-CN": "主要身份",
+            "en": "Primary role"
+          },
+          "value": {
+            "zh-CN": "僧侣、求法者、译经家",
+            "en": "Monk, pilgrim and translator"
+          }
+        }
+      ]
+    }
+  },
+  "traditions": [
+    {
+      "tradition": "buddhism",
+      "role": "primary",
+      "isPrimary": true,
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:xuanzang-records"
+    }
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "activity",
+      "timeType": "range",
+      "startYear": 602,
+      "endYear": 664,
+      "displayDate": {
+        "zh-CN": "约 602–664",
+        "en": "c. 602–664"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:xuanzang-records"
+    }
+  ],
+  "sourceIds": [
+    "source:xuanzang-records",
+    "source:editorial-method"
+  ],
+  "profile": {
+    "historicity": "documented",
+    "gender": "male",
+    "canonicalNameOriginal": "玄奘",
+    "nameLanguageCode": "lzh"
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "kind": "figure",
+  "slug": "yijing",
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed",
+  "primaryEvidenceLayer": "historical_documented",
+  "importance": 4,
+  "isFeatured": false,
+  "translations": {
+    "zh-CN": {
+      "title": "义净",
+      "subtitle": "求法者、译经家与海上交通的见证者",
+      "shortSummary": "义净把海上求法、印度学习和汉译佛典的生产联系起来，是理解跨区域知识流动的重要人物。",
+      "curatorialDescription": [
+        "与玄奘的陆路经历并置时，义净帮助观众看到隋唐佛教知识流动并不只有一条路线。",
+        "本馆把求法叙事、译经成果和后世传记分层呈现，避免把旅行故事直接等同于完整历史事实。"
+      ],
+      "researchNote": "Alpha 条目；需要补充《大唐西域求法高僧传》及相关译经目录的具体版本、卷页与路线节点。",
+      "timeLabel": "635–713",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "主要身份",
+            "en": "Primary role"
+          },
+          "value": {
+            "zh-CN": "僧侣、求法者、译经家",
+            "en": "Monk, pilgrim and translator"
+          }
+        },
+        {
+          "label": {
+            "zh-CN": "路线视角",
+            "en": "Route perspective"
+          },
+          "value": {
+            "zh-CN": "海上与南亚网络",
+            "en": "Maritime and South Asian networks"
+          }
+        }
+      ]
+    },
+    "en": {
+      "title": "Yijing",
+      "subtitle": "Pilgrim, translator and witness to maritime exchange",
+      "shortSummary": "Yijing connects maritime pilgrimage, learning in South Asia and the production of Chinese Buddhist translations.",
+      "curatorialDescription": [
+        "Placed beside Xuanzang's overland experience, Yijing shows that Sui–Tang Buddhist knowledge moved through more than one route.",
+        "The museum separates pilgrimage narratives, translation work and later biography instead of treating a travel story as complete history."
+      ],
+      "researchNote": "Alpha entry; specific editions, folio references and route nodes for the Record of Buddhist Pilgrims and translation catalogues remain to be verified.",
+      "timeLabel": "635–713",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "主要身份",
+            "en": "Primary role"
+          },
+          "value": {
+            "zh-CN": "僧侣、求法者、译经家",
+            "en": "Monk, pilgrim and translator"
+          }
+        },
+        {
+          "label": {
+            "zh-CN": "路线视角",
+            "en": "Route perspective"
+          },
+          "value": {
+            "zh-CN": "海上与南亚网络",
+            "en": "Maritime and South Asian networks"
+          }
+        }
+      ]
+    }
+  },
+  "traditions": [
+    {
+      "tradition": "buddhism",
+      "role": "primary",
+      "isPrimary": true,
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:buddhist-biographical-records"
+    }
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "life",
+      "timeType": "range",
+      "startYear": 635,
+      "endYear": 713,
+      "displayDate": {
+        "zh-CN": "635–713",
+        "en": "635–713"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:buddhist-biographical-records"
+    }
+  ],
+  "sourceIds": [
+    "source:buddhist-biographical-records",
+    "source:editorial-method"
+  ],
+  "profile": {
+    "historicity": "documented",
+    "gender": "male",
+    "canonicalNameOriginal": "义净",
+    "nameLanguageCode": "lzh"
+  }
+}

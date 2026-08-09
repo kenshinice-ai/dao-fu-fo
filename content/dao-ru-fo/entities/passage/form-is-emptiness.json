@@ -1,0 +1,39 @@
+{
+  "kind": "passage",
+  "slug": "form-is-emptiness",
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed",
+  "primaryEvidenceLayer": "historical_documented",
+  "importance": 5,
+  "isFeatured": true,
+  "translations": {
+    "zh-CN": {
+      "title": "色不异空，空不异色",
+      "subtitle": "《般若波罗蜜多心经》",
+      "shortSummary": "这句经文在汉传佛教中传播极广，但需要回到完整段落和具体版本理解。",
+      "curatorialDescription": ["‘色不异空，空不异色’不是脱离上下文的抽象口号。它出现在对色、空关系的连续论述中，展现般若思想如何通过汉译经典进入中国佛教语境。"],
+      "researchNote": "Alpha 条目已连接文本与版本实体；正式发布前需补充译者、底本、异文和更精确 locator。",
+      "timeLabel": "隋唐汉译与流通语境",
+      "keyFacts": [{ "label": { "zh-CN": "敏感等级", "en": "Sensitivity" }, "value": { "zh-CN": "公开文本", "en": "Public textual" } }],
+      "quote": { "original": "色不异空，空不异色。色即是空，空即是色。", "interpretation": { "zh-CN": "可见的形色与空性并非两个彼此隔绝的实体；经文随后继续从受、想、行、识展开说明。", "en": "Form and emptiness are not isolated realities; the passage continues by extending the discussion to feeling, perception, formations and consciousness." }, "locator": "《心经》：色不异空，空不异色" }
+    },
+    "en": {
+      "title": "Form is not different from emptiness",
+      "subtitle": "Heart Sutra",
+      "shortSummary": "This line circulated widely in Chinese Buddhism, but it must be read within its paragraph and textual version.",
+      "curatorialDescription": ["‘Form is not different from emptiness’ is not a context-free slogan. It belongs to a sustained discussion of the relation between form and emptiness and shows how Prajñāpāramitā thought entered Chinese Buddhist contexts through translated scripture."],
+      "researchNote": "The Alpha entry is linked to text and version entities; translator, base edition, variants and a more precise locator remain to be added.",
+      "timeLabel": "Sui–Tang Chinese translation and circulation context",
+      "keyFacts": [{ "label": { "zh-CN": "敏感等级", "en": "Sensitivity" }, "value": { "zh-CN": "公开文本", "en": "Public textual" } }],
+      "quote": { "original": "色不异空，空不异色。色即是空，空即是色。", "interpretation": { "zh-CN": "可见的形色与空性并非两个彼此隔绝的实体；经文随后继续从受、想、行、识展开说明。", "en": "Form and emptiness are not isolated realities; the passage continues by extending the discussion to feeling, perception, formations and consciousness." }, "locator": "Heart Sutra: form is not different from emptiness" }
+    }
+  },
+  "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:heart-sutra-edition" }],
+  "temporalAssertions": [{ "predicate": "textual_attestation", "timeType": "range", "startYear": 600, "endYear": 700, "displayDate": { "zh-CN": "隋唐汉译与流通语境", "en": "Sui–Tang Chinese translation and circulation context" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:heart-sutra-edition" }],
+  "sourceIds": ["source:heart-sutra-edition", "source:editorial-method"],
+  "related": [
+    { "kind": "figure", "slug": "xuanzang", "title": { "zh-CN": "玄奘", "en": "Xuanzang" }, "relation": { "zh-CN": "译经与传播语境", "en": "Translation and transmission context" } },
+    { "kind": "text", "slug": "heart-sutra", "title": { "zh-CN": "《心经》", "en": "Heart Sutra" }, "relation": { "zh-CN": "摘录自", "en": "Excerpt from" } }
+  ],
+  "profile": { "textSlug": "heart-sutra", "textVersionSlug": "heart-sutra-chinese-received", "passageKind": "scripture_excerpt", "locatorOriginal": "色不异空，空不异色", "locatorNormalised": "Heart Sutra: form and emptiness", "originalText": "色不异空，空不异色。色即是空，空即是色。", "punctuatedText": "色不异空，空不异色。色即是空，空即是色。", "modernZh": "形色与空性并非彼此分离。", "translationEn": "Form is not different from emptiness; emptiness is not different from form.", "ritualSensitivity": "public_textual" }
+}

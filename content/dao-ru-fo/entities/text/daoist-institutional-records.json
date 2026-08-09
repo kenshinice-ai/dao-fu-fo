@@ -1,0 +1,39 @@
+{
+  "kind": "text",
+  "slug": "daoist-institutional-records",
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed",
+  "primaryEvidenceLayer": "historical_inferred",
+  "importance": 3,
+  "isFeatured": false,
+  "translations": {
+    "zh-CN": {
+      "title": "隋唐道教人物与制度资料",
+      "subtitle": "人物、宫观与皇室关系的研究档案",
+      "shortSummary": "这组资料条目作为研究层文本，帮助观众区分道教人物传记、宫观制度和后世道教谱系叙述。",
+      "curatorialDescription": [
+        "它不是一部单一古典，而是待编目的研究档案集合；页面会明确显示其来源等级和待核状态。",
+        "通过司马承祯、楼观和长安地点，观众可以追问人物、制度和地域传统如何互相塑造。"
+      ],
+      "researchNote": "需要替换为具体古籍、碑刻、研究专著和版本定位；当前仅作为编目中的文本集合。",
+      "timeLabel": "隋唐道教制度研究范围",
+      "keyFacts": [{ "label": { "zh-CN": "文本类型", "en": "Text kind" }, "value": { "zh-CN": "研究资料集合", "en": "Research record collection" } }]
+    },
+    "en": {
+      "title": "Sui–Tang Daoist institutional records",
+      "subtitle": "A research archive of figures, institutions and court relations",
+      "shortSummary": "This research-layer text collection helps distinguish Daoist biographies, institutional history and later genealogical narratives.",
+      "curatorialDescription": [
+        "It is not one ancient classic but a pending research archive; the page will show its evidence grade and review state.",
+        "Through Sima Chengzhen, Louguan and Chang'an, visitors can ask how figures, institutions and regional traditions shaped one another."
+      ],
+      "researchNote": "Specific primary texts, inscriptions, studies and edition locators must replace this record before public scholarly release.",
+      "timeLabel": "Scope of Sui–Tang Daoist institutional research",
+      "keyFacts": [{ "label": { "zh-CN": "文本类型", "en": "Text kind" }, "value": { "zh-CN": "研究资料集合", "en": "Research record collection" } }]
+    }
+  },
+  "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:daoist-historical-record" }],
+  "temporalAssertions": [{ "predicate": "research_scope", "timeType": "range", "startYear": 581, "endYear": 907, "displayDate": { "zh-CN": "隋唐道教制度研究范围", "en": "Scope of Sui–Tang Daoist institutional research" }, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:daoist-historical-record" }],
+  "sourceIds": ["source:daoist-historical-record", "source:editorial-method"],
+  "profile": { "textKind": "historical_record", "originalLanguageCode": "zh", "canonicalStatus": "not_applicable", "attributionStatus": "composite" }
+}

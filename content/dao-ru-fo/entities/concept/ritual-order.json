@@ -1,0 +1,88 @@
+{
+  "kind": "concept",
+  "slug": "ritual-order",
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed",
+  "primaryEvidenceLayer": "scholarly_interpretation",
+  "importance": 4,
+  "isFeatured": false,
+  "translations": {
+    "zh-CN": {
+      "title": "礼与秩序",
+      "subtitle": "经典、仪式与制度化身份",
+      "shortSummary": "“礼”既可以指文本和规范，也可以指具体仪式、身份关系与国家教育制度中的秩序实践。",
+      "curatorialDescription": [
+        "《论语》段落提供了文本入口；唐代经学制度则显示经典解释如何进入教育和国家秩序。",
+        "本概念不把儒家等同于单一政治意识形态，而是保留文本、仪式和制度之间的张力。"
+      ],
+      "researchNote": "需要补充《五经正义》不同版本、经学制度和具体仪式语境的逐条出处。",
+      "timeLabel": "比较概念；隋唐重点",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "比较入口",
+            "en": "Comparison entry"
+          },
+          "value": {
+            "zh-CN": "经典、仪式、制度",
+            "en": "Classics, ritual and institutions"
+          }
+        }
+      ]
+    },
+    "en": {
+      "title": "Ritual and order",
+      "subtitle": "Classics, ritual and institutional identity",
+      "shortSummary": "Li can refer to texts and norms as well as concrete ritual, relational identity and order within state education.",
+      "curatorialDescription": [
+        "A passage from the Analects provides a textual entry point, while Tang classical learning shows how interpretation entered education and state order.",
+        "The concept does not reduce Confucianism to one political ideology; it keeps tensions among text, ritual and institution visible."
+      ],
+      "researchNote": "Different editions of the Corrected Meanings, classical-learning institutions and specific ritual contexts still need item-level citations.",
+      "timeLabel": "Comparative concept; Sui–Tang focus",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "比较入口",
+            "en": "Comparison entry"
+          },
+          "value": {
+            "zh-CN": "经典、仪式、制度",
+            "en": "Classics, ritual and institutions"
+          }
+        }
+      ]
+    }
+  },
+  "traditions": [
+    {
+      "tradition": "confucianism",
+      "role": "primary",
+      "isPrimary": true,
+      "confidence": "medium",
+      "evidenceLayer": "scholarly_interpretation",
+      "sourceId": "source:editorial-method"
+    }
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "analytic_scope",
+      "timeType": "atemporal",
+      "displayDate": {
+        "zh-CN": "比较概念；隋唐重点",
+        "en": "Comparative concept; Sui–Tang focus"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "scholarly_interpretation",
+      "sourceId": "source:editorial-method"
+    }
+  ],
+  "sourceIds": [
+    "source:editorial-method",
+    "source:confucian-commentarial-record",
+    "source:education-classics-records"
+  ],
+  "profile": {
+    "conceptKind": "ethical"
+  }
+}

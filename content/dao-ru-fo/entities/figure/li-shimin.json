@@ -1,0 +1,128 @@
+{
+  "kind": "figure",
+  "slug": "li-shimin",
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed",
+  "primaryEvidenceLayer": "historical_documented",
+  "importance": 4,
+  "isFeatured": false,
+  "translations": {
+    "zh-CN": {
+      "title": "李世民",
+      "subtitle": "唐太宗与都城制度的塑形者",
+      "shortSummary": "李世民所处的宫廷、教育和宗教制度语境，帮助解释长安为何成为多种知识与信仰网络的汇聚点。",
+      "curatorialDescription": [
+        "本馆不把皇帝当作三教故事的唯一主角，而是把他放在制度资源、城市空间和不同传统协商的背景中。",
+        "人物条目只承担历史语境功能，具体诏令、机构关系与后世形象需要分别引用。"
+      ],
+      "researchNote": "Alpha 条目；需要按具体事件补齐正史版本、诏令定位和寺院、道观、学校之间的关系证据。",
+      "timeLabel": "598–649",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "身份",
+            "en": "Role"
+          },
+          "value": {
+            "zh-CN": "唐太宗",
+            "en": "Emperor Taizong of Tang"
+          }
+        },
+        {
+          "label": {
+            "zh-CN": "策展用途",
+            "en": "Curatorial use"
+          },
+          "value": {
+            "zh-CN": "制度与城市语境",
+            "en": "Institutional and urban context"
+          }
+        }
+      ]
+    },
+    "en": {
+      "title": "Li Shimin",
+      "subtitle": "Taizong of Tang and a shaper of capital institutions",
+      "shortSummary": "Li Shimin's courtly, educational and religious institutional context helps explain why Chang'an became a meeting point for different networks of knowledge and belief.",
+      "curatorialDescription": [
+        "The museum does not make the emperor the sole protagonist of a three-tradition story; it places him within institutional resources, urban space and negotiation among traditions.",
+        "This figure record provides historical context. Specific edicts, institutional ties and later images require separate citations."
+      ],
+      "researchNote": "Alpha entry; official-history editions, edict locators and evidence for ties among monasteries, Daoist institutions and schools remain to be itemised.",
+      "timeLabel": "598–649",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "身份",
+            "en": "Role"
+          },
+          "value": {
+            "zh-CN": "唐太宗",
+            "en": "Emperor Taizong of Tang"
+          }
+        },
+        {
+          "label": {
+            "zh-CN": "策展用途",
+            "en": "Curatorial use"
+          },
+          "value": {
+            "zh-CN": "制度与城市语境",
+            "en": "Institutional and urban context"
+          }
+        }
+      ]
+    }
+  },
+  "traditions": [
+    {
+      "tradition": "confucianism",
+      "role": "primary",
+      "isPrimary": true,
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:tang-imperial-records"
+    },
+    {
+      "tradition": "buddhism",
+      "role": "comparative_only",
+      "isPrimary": false,
+      "confidence": "medium",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:editorial-method"
+    },
+    {
+      "tradition": "daoism",
+      "role": "comparative_only",
+      "isPrimary": false,
+      "confidence": "medium",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:editorial-method"
+    }
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "life",
+      "timeType": "range",
+      "startYear": 598,
+      "endYear": 649,
+      "displayDate": {
+        "zh-CN": "598–649",
+        "en": "598–649"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:tang-imperial-records"
+    }
+  ],
+  "sourceIds": [
+    "source:tang-imperial-records",
+    "source:editorial-method"
+  ],
+  "profile": {
+    "historicity": "documented",
+    "gender": "male",
+    "canonicalNameOriginal": "李世民",
+    "nameLanguageCode": "lzh"
+  }
+}

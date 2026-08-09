@@ -1,0 +1,41 @@
+{
+  "locale": "en",
+  "kind": "passage",
+  "slug": "form-is-emptiness",
+  "title": "Form is not different from emptiness",
+  "subtitle": "Heart Sutra",
+  "tradition": "buddhism",
+  "evidence": "Public primary text · version located",
+  "timeLabel": "Translation tradition associated with Xuanzang · Tang",
+  "shortSummary": "One of the most frequently cited lines of the Heart Sutra, using the inseparability of form and emptiness to challenge fixed self-existence.",
+  "curatorialDescription": [
+    "Form here is not merely colour; it points to material and perceptible phenomena. Emptiness is not nothingness. Their non-difference means that phenomena cannot be understood as isolated, fixed and eternally self-existing.",
+    "Removed from context, the line is easily paraphrased as “nothing exists.” The research layer therefore keeps version, locator and interpretive limits visible.",
+    "The first release provides a short source text and an original explanatory translation rather than copying a modern copyrighted commentary."
+  ],
+  "researchNote": "The formation and attribution of Heart Sutra versions are subjects of textual research. The first release displays the CBETA T0251 text and its traditional attribution while leaving room for fuller version analysis.",
+  "keyFacts": [
+    { "label": "Kind", "value": "scripture excerpt" },
+    { "label": "Version", "value": "CBETA T0251" },
+    { "label": "Sensitivity", "value": "public text" }
+  ],
+  "quote": {
+    "original": "色不異空，空不異色；色即是空，空即是色。",
+    "interpretation": "Phenomena and emptiness are not two opposing worlds. Things appear through conditions and therefore lack an unchanging, independent essence.",
+    "locator": "Heart Sutra, T0251, 001"
+  },
+  "related": [
+    { "kind": "text", "slug": "heart-sutra", "title": "Heart Sutra", "relation": "source text" },
+    { "kind": "concept", "slug": "emptiness", "title": "Emptiness", "relation": "central concept" },
+    { "kind": "figure", "slug": "xuanzang", "title": "Xuanzang", "relation": "translation tradition" }
+  ],
+  "sources": [
+    {
+      "title": "CBETA Online · T0251",
+      "locator": "T08, no. 251",
+      "grade": "A",
+      "role": "primary text and version locator",
+      "url": "https://cbetaonline.dila.edu.tw/zh/T0251"
+    }
+  ]
+}

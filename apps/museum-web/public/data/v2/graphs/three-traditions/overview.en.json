@@ -1,0 +1,28 @@
+{
+  "locale": "en",
+  "title": "A Chang'an question graph across three traditions",
+  "question": "How did figures, texts and concepts enter the same imperial city?",
+  "nodes": [
+    { "id": "changan", "label": "Chang'an", "kind": "place", "tradition": "convergence", "x": 490, "y": 290, "slug": "changan" },
+    { "id": "xuanzang", "label": "Xuanzang", "kind": "figure", "tradition": "buddhism", "x": 230, "y": 170, "slug": "xuanzang" },
+    { "id": "heart-sutra", "label": "Heart Sutra", "kind": "text", "tradition": "buddhism", "x": 140, "y": 330, "slug": "heart-sutra" },
+    { "id": "emptiness", "label": "Emptiness", "kind": "concept", "tradition": "buddhism", "x": 300, "y": 440, "slug": "emptiness" },
+    { "id": "sima", "label": "Sima Chengzhen", "kind": "figure", "tradition": "daoism", "x": 500, "y": 100, "slug": "sima-chengzhen" },
+    { "id": "daodejing", "label": "Daodejing", "kind": "text", "tradition": "daoism", "x": 680, "y": 160, "slug": "daodejing" },
+    { "id": "naturalness", "label": "Naturalness", "kind": "concept", "tradition": "daoism", "x": 750, "y": 330, "slug": "naturalness" },
+    { "id": "kong", "label": "Kong Yingda", "kind": "figure", "tradition": "confucianism", "x": 620, "y": 450, "slug": "kong-yingda" },
+    { "id": "five-classics", "label": "Correct Meaning", "kind": "text", "tradition": "confucianism", "x": 830, "y": 460, "slug": "correct-meaning-five-classics" },
+    { "id": "ritual", "label": "Ritual", "kind": "concept", "tradition": "confucianism", "x": 440, "y": 500, "slug": "ritual" }
+  ],
+  "edges": [
+    { "id": "e1", "source": "xuanzang", "target": "heart-sutra", "label": "connected to a translation tradition", "evidence": "traditional attribution and textual version must be distinguished" },
+    { "id": "e2", "source": "heart-sutra", "target": "emptiness", "label": "expresses a central concept", "evidence": "primary passage" },
+    { "id": "e3", "source": "xuanzang", "target": "changan", "label": "worked in after returning", "evidence": "historical record" },
+    { "id": "e4", "source": "sima", "target": "daodejing", "label": "part of a classical interpretive tradition", "evidence": "historical and traditional sources" },
+    { "id": "e5", "source": "daodejing", "target": "naturalness", "label": "expresses the concept", "evidence": "Daodejing chapter 25" },
+    { "id": "e6", "source": "sima", "target": "changan", "label": "connected with Tang court networks", "evidence": "historical record" },
+    { "id": "e7", "source": "kong", "target": "five-classics", "label": "led the commentarial project", "evidence": "history of classical learning" },
+    { "id": "e8", "source": "five-classics", "target": "ritual", "label": "entered ritual and educational interpretation", "evidence": "textual and institutional context" },
+    { "id": "e9", "source": "kong", "target": "changan", "label": "entered the state-learning network", "evidence": "historical record" }
+  ]
+}

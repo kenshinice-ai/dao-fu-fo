@@ -1,0 +1,31 @@
+{
+  "locale": "en",
+  "kind": "place",
+  "slug": "changan",
+  "title": "Chang'an",
+  "subtitle": "Imperial capital of the Tang",
+  "tradition": "convergence",
+  "evidence": "Real historical place · urban extent",
+  "timeLabel": "Sui–Tang focus, 581–907",
+  "shortSummary": "Chang'an compressed court, state learning, monasteries, Daoist institutions, markets and international travellers into one city, making it the core space for observing encounters among three traditions.",
+  "curatorialDescription": [
+    "The museum treats Chang'an not as a single map point but as a dense field of institutions and relations. Figures entered the city, texts were translated or taught in institutions, and religious sites received patronage or restriction.",
+    "Modern Xi'an has geographic continuity with Tang Chang'an, but modern administrative boundaries cannot simply stand in for the historical city. The first release uses an approximate centre and selected site nodes; later versions will add ward and historical-name layers.",
+    "Chang'an belongs to Buddhist, Daoist and Confucian historical networks. Its convergence label does not imply that their urban roles were identical."
+  ],
+  "researchNote": "The current map is a real-coordinate historical schematic, not an archaeological reconstruction of every ward. Specific temples, academies and palatial sites carry their own coordinate confidence.",
+  "keyFacts": [
+    { "label": "Place reality", "value": "real historical city" },
+    { "label": "Coordinate accuracy", "value": "approximate urban centre" },
+    { "label": "Tradition role", "value": "Buddhist · Daoist · Confucian convergence" }
+  ],
+  "related": [
+    { "kind": "place", "slug": "great-cien-monastery", "title": "Great Ci'en Monastery", "relation": "Buddhist institutional site" },
+    { "kind": "place", "slug": "imperial-academy-changan", "title": "Imperial Academy, Chang'an", "relation": "state educational site" },
+    { "kind": "figure", "slug": "xuanzang", "title": "Xuanzang", "relation": "active figure" }
+  ],
+  "sources": [
+    { "title": "Historical-geographical studies of Tang Chang'an", "locator": "urban plan and ward studies", "grade": "B", "role": "historical urban extent; full bibliography pending" },
+    { "title": "Modern geographic coordinate", "locator": "approximate centre of Xi'an", "grade": "C", "role": "map focus only; not proof of an exact Tang site" }
+  ]
+}

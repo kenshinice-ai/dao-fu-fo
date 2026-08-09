@@ -1,0 +1,795 @@
+[
+  {
+    "kind": "event",
+    "slug": "tang-dynasty-founded",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "唐朝建立",
+        "shortSummary": "618 年的王朝更替重组了长安及其政治、教育与宗教制度的资源环境。",
+        "curatorialDescription": [
+          "时间轴以制度环境变化为重点，不把王朝建立简化为单一人物瞬间。"
+        ],
+        "researchNote": "都城控制、制度承接和不同机构转型仍需拆成后续事件。",
+        "timeLabel": "618",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Foundation of the Tang dynasty",
+        "shortSummary": "The dynastic transition of 618 reorganized the political, educational and religious resource environment of Chang'an.",
+        "curatorialDescription": [
+          "The timeline emphasizes institutional change rather than reducing the foundation to one biographical instant."
+        ],
+        "researchNote": "Control of the capital, institutional continuity and transitions of individual institutions remain to be separated.",
+        "timeLabel": "618",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "comparative_only",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:tang-imperial-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "dynastic_transition",
+        "timeType": "exact",
+        "startYear": 618,
+        "endYear": 618,
+        "displayDate": {
+          "zh-CN": "618",
+          "en": "618"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:tang-imperial-records"
+      }
+    ],
+    "sourceIds": [
+      "source:tang-imperial-records",
+      "source:met-tang-overview"
+    ],
+    "profile": {
+      "eventKind": "dynastic_transition",
+      "historicity": "documented",
+      "sequenceOrder": 2,
+      "eventScope": "imperial"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "xuanzang-departs-changan",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "玄奘离开长安西行",
+        "shortSummary": "约 629 年，玄奘的西行把长安与河西、中亚及南亚的求法网络连接起来。",
+        "curatorialDescription": [
+          "出发是路线证据的起点，不意味着后世地图上的每个节点都已被同等证实。"
+        ],
+        "researchNote": "出发月份、许可叙事与初段路线在不同资料中的差异需继续核对。",
+        "timeLabel": "约 629",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Xuanzang departs Chang'an",
+        "shortSummary": "Around 629, Xuanzang's journey connected Chang'an with pilgrimage networks across the Hexi Corridor, Central Asia and South Asia.",
+        "curatorialDescription": [
+          "Departure begins the route evidence; it does not give every point on later maps equal certainty."
+        ],
+        "researchNote": "Month of departure, permission narratives and the first route segment require comparison across sources.",
+        "timeLabel": "c. 629",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:xuanzang-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "departure",
+        "timeType": "circa",
+        "startYear": 629,
+        "endYear": 629,
+        "displayDate": {
+          "zh-CN": "约 629",
+          "en": "c. 629"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:xuanzang-records"
+      }
+    ],
+    "sourceIds": [
+      "source:xuanzang-records",
+      "source:historical-geography"
+    ],
+    "profile": {
+      "eventKind": "journey",
+      "historicity": "documented",
+      "sequenceOrder": 3,
+      "eventScope": "transregional"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "five-classics-corrected-meanings-project",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "《五经正义》编纂工程",
+        "shortSummary": "唐初持续多年的经典整理，把不同注释传统汇入国家教育与考试知识体系。",
+        "curatorialDescription": [
+          "事件采用时间范围而非单一完成日，以呈现编纂、修订和颁行并非同一步骤。"
+        ],
+        "researchNote": "启动、修订、奏上与使用节点需按正史、目录和版本研究进一步拆分。",
+        "timeLabel": "约 630–653",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Compilation project of the Corrected Meanings of the Five Classics",
+        "shortSummary": "A multi-year early Tang editorial project brought commentarial traditions into state education and examination knowledge.",
+        "curatorialDescription": [
+          "A range is used because compilation, revision, presentation and institutional use were not one event."
+        ],
+        "researchNote": "Commission, revision, submission and use must be separated through histories, catalogues and edition studies.",
+        "timeLabel": "c. 630–653",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:confucian-commentarial-record"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "compilation",
+        "timeType": "range",
+        "startYear": 630,
+        "endYear": 653,
+        "displayDate": {
+          "zh-CN": "约 630–653",
+          "en": "c. 630–653"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:confucian-commentarial-record"
+      }
+    ],
+    "sourceIds": [
+      "source:confucian-commentarial-record",
+      "source:education-classics-records"
+    ],
+    "profile": {
+      "eventKind": "editorial_project",
+      "historicity": "inferred",
+      "sequenceOrder": 4,
+      "eventScope": "imperial"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "daci-en-monastery-established",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "大慈恩寺建立",
+        "shortSummary": "大慈恩寺的建立为长安佛教、译经和皇室支持提供了新的制度空间。",
+        "curatorialDescription": [
+          "寺院建立与后续译场、塔院和人物活动分开建模，避免把长期制度史压成一个日期。"
+        ],
+        "researchNote": "建立缘起、寺域、早期职事与项目关系需继续核定。",
+        "timeLabel": "约 648",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Establishment of the Great Ci'en Monastery",
+        "shortSummary": "The monastery created a new institutional setting for Buddhism, translation and imperial patronage in Chang'an.",
+        "curatorialDescription": [
+          "Foundation is separated from later translation bureaux, pagoda phases and biographies so a long institutional history is not compressed into one date."
+        ],
+        "researchNote": "Foundation account, precinct, early offices and project relationships require further verification.",
+        "timeLabel": "c. 648",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-institutional-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "foundation",
+        "timeType": "circa",
+        "startYear": 648,
+        "endYear": 648,
+        "displayDate": {
+          "zh-CN": "约 648",
+          "en": "c. 648"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-institutional-records"
+      }
+    ],
+    "sourceIds": [
+      "source:buddhist-institutional-records",
+      "source:xuanzang-records"
+    ],
+    "profile": {
+      "eventKind": "foundation",
+      "historicity": "documented",
+      "sequenceOrder": 6,
+      "eventScope": "local"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "great-wild-goose-pagoda-first-construction",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "大雁塔初建",
+        "shortSummary": "约 652 年的初建阶段把经像保存、译经事业与可见的城市建筑联系起来。",
+        "curatorialDescription": [
+          "“初建”不代表现存形制；后世修建和结构变化必须另行标注。"
+        ],
+        "researchNote": "初建形制、用途与后续改建节点需依据建筑史和保护资料核定。",
+        "timeLabel": "约 652",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "First construction of the Great Wild Goose Pagoda",
+        "shortSummary": "The initial phase around 652 linked the preservation of texts and images with translation and visible urban architecture.",
+        "curatorialDescription": [
+          "First construction does not describe the present form; later rebuilding and structural changes require separate records."
+        ],
+        "researchNote": "Initial design, uses and later phases need architectural and conservation sources.",
+        "timeLabel": "c. 652",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-institutional-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "construction",
+        "timeType": "circa",
+        "startYear": 652,
+        "endYear": 652,
+        "displayDate": {
+          "zh-CN": "约 652",
+          "en": "c. 652"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-institutional-records"
+      }
+    ],
+    "sourceIds": [
+      "source:buddhist-institutional-records",
+      "source:historical-geography"
+    ],
+    "profile": {
+      "eventKind": "construction",
+      "historicity": "documented",
+      "sequenceOrder": 7,
+      "eventScope": "local"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "yijing-departs-by-sea",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "义净由海路出发求法",
+        "shortSummary": "约 671 年，义净由海路南行，提示求法与知识传播并不只有长安以西的陆路模型。",
+        "curatorialDescription": [
+          "海路事件为路线比较提供入口，同时避免把不同旅行者的行程合并。"
+        ],
+        "researchNote": "出发港、停留点和年代应按义净著述与传记逐项建立路线节点。",
+        "timeLabel": "约 671",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Yijing departs by sea",
+        "shortSummary": "Around 671, Yijing travelled south by sea, showing that pilgrimage and transmission were not limited to an overland route west of Chang'an.",
+        "curatorialDescription": [
+          "The event opens a route comparison without merging different travellers' itineraries."
+        ],
+        "researchNote": "Port of departure, stops and dates should be modelled from Yijing's writings and biographies.",
+        "timeLabel": "c. 671",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-biographical-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "departure",
+        "timeType": "circa",
+        "startYear": 671,
+        "endYear": 671,
+        "displayDate": {
+          "zh-CN": "约 671",
+          "en": "c. 671"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-biographical-records"
+      }
+    ],
+    "sourceIds": [
+      "source:buddhist-biographical-records",
+      "source:historical-geography"
+    ],
+    "profile": {
+      "eventKind": "journey",
+      "historicity": "documented",
+      "sequenceOrder": 8,
+      "eventScope": "transregional"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "wu-zhou-established",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "武周建立",
+        "shortSummary": "690 年的政治转型改变了皇权表达、两京格局与宗教资源配置。",
+        "curatorialDescription": [
+          "事件不以单一‘崇佛’标签解释复杂政策，而为诏令、造像和机构关系提供时间锚点。"
+        ],
+        "researchNote": "政策、仪式、文本和造像项目应分别引用，不从身份推断统一动机。",
+        "timeLabel": "690",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Establishment of the Wu Zhou",
+        "shortSummary": "The political transition of 690 changed imperial representation, the two-capital system and the allocation of religious resources.",
+        "curatorialDescription": [
+          "The event avoids explaining complex policy with a single pro-Buddhist label and instead anchors edicts, images and institutions in time."
+        ],
+        "researchNote": "Policies, rituals, texts and image projects require separate citations; motives are not inferred from identity alone.",
+        "timeLabel": "690",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "influenced_by",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:tang-imperial-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "dynastic_transition",
+        "timeType": "exact",
+        "startYear": 690,
+        "endYear": 690,
+        "displayDate": {
+          "zh-CN": "690",
+          "en": "690"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:tang-imperial-records"
+      }
+    ],
+    "sourceIds": [
+      "source:tang-imperial-records",
+      "source:historical-geography"
+    ],
+    "profile": {
+      "eventKind": "dynastic_transition",
+      "historicity": "documented",
+      "sequenceOrder": 9,
+      "eventScope": "imperial"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "yijing-returns",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "义净携经回到唐境",
+        "shortSummary": "约 695 年，义净归来后，海路旅行经验进入翻译、著述与制度网络。",
+        "curatorialDescription": [
+          "归来节点用于连接路线与文本生产，具体抵达城市和后续行程仍需细分。"
+        ],
+        "researchNote": "抵达地点、入洛时间及译经项目应据传记和经录复核。",
+        "timeLabel": "约 695",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Yijing returns to Tang territory",
+        "shortSummary": "Around 695, Yijing's return brought maritime travel experience into translation, writing and institutional networks.",
+        "curatorialDescription": [
+          "The return links route and textual production; arrival city and subsequent itinerary remain to be separated."
+        ],
+        "researchNote": "Arrival place, entry into Luoyang and translation projects require biographical and catalogue verification.",
+        "timeLabel": "c. 695",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-biographical-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "return",
+        "timeType": "circa",
+        "startYear": 695,
+        "endYear": 695,
+        "displayDate": {
+          "zh-CN": "约 695",
+          "en": "c. 695"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-biographical-records"
+      }
+    ],
+    "sourceIds": [
+      "source:buddhist-biographical-records",
+      "source:buddhist-institutional-records"
+    ],
+    "profile": {
+      "eventKind": "journey",
+      "historicity": "documented",
+      "sequenceOrder": 10,
+      "eventScope": "transregional"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "kaiyuan-institutional-expansion",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "scholarly_interpretation",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "开元时期的制度扩展",
+        "shortSummary": "开元时期为观察宫廷、教育、寺观与跨区域交流的资源扩展提供时间范围。",
+        "curatorialDescription": [
+          "这是研究性阶段标签，不是一次单独事件；下游页面应显示为年代带。"
+        ],
+        "researchNote": "需由具体诏令、机构设置、人物召请和物质项目替换概括性阶段标签。",
+        "timeLabel": "713–741",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Institutional expansion in the Kaiyuan era",
+        "shortSummary": "The Kaiyuan era provides a range for studying expansion in court, education, religious institutions and transregional exchange.",
+        "curatorialDescription": [
+          "This is an analytical period label, not one event, and should appear as a band on the timeline."
+        ],
+        "researchNote": "Specific edicts, offices, summons and material projects should replace the general phase label over time.",
+        "timeLabel": "713–741",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "comparative_only",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "scholarly_interpretation",
+        "sourceId": "source:tang-imperial-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "analytic_period",
+        "timeType": "range",
+        "startYear": 713,
+        "endYear": 741,
+        "displayDate": {
+          "zh-CN": "713–741",
+          "en": "713–741"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:tang-imperial-records"
+      }
+    ],
+    "sourceIds": [
+      "source:tang-imperial-records",
+      "source:daoist-historical-record",
+      "source:met-tang-overview"
+    ],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "inferred",
+      "sequenceOrder": 11,
+      "eventScope": "imperial"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "an-lushan-rebellion-begins",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "安史之乱爆发",
+        "shortSummary": "755 年开始的战争打断了两京秩序，也改变了人口、财政和宗教机构的资源环境。",
+        "curatorialDescription": [
+          "事件作为结构性转折呈现，不用宗教兴衰的单线叙事替代区域差异。"
+        ],
+        "researchNote": "长安、洛阳与各地寺观和教育机构受到的影响需分区、分时段核定。",
+        "timeLabel": "755",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "An Lushan Rebellion begins",
+        "shortSummary": "War beginning in 755 disrupted the two capitals and changed the demographic, fiscal and institutional environment of religious life.",
+        "curatorialDescription": [
+          "The event is a structural turning point; a single rise-and-decline narrative cannot replace regional differences."
+        ],
+        "researchNote": "Effects on Chang'an, Luoyang and regional religious and educational institutions require place- and period-specific evidence.",
+        "timeLabel": "755",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "comparative_only",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:tang-imperial-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "conflict_begins",
+        "timeType": "exact",
+        "startYear": 755,
+        "endYear": 755,
+        "displayDate": {
+          "zh-CN": "755",
+          "en": "755"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:tang-imperial-records"
+      }
+    ],
+    "sourceIds": [
+      "source:tang-imperial-records",
+      "source:met-tang-overview"
+    ],
+    "profile": {
+      "eventKind": "conflict",
+      "historicity": "documented",
+      "sequenceOrder": 12,
+      "eventScope": "imperial"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "an-lushan-rebellion-ends",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "安史之乱结束",
+        "shortSummary": "763 年前后的战争结束没有恢复战前结构，而开启了财政、地方权力和机构网络重组的长期阶段。",
+        "curatorialDescription": [
+          "时间轴区分战争终点与制度后果，避免把“结束”误写为全面复原。"
+        ],
+        "researchNote": "各区域恢复节奏和机构后果需由地方史料与物质资料补充。",
+        "timeLabel": "约 763",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "End of the An Lushan Rebellion",
+        "shortSummary": "The end of warfare around 763 did not restore the pre-war order but opened a long restructuring of finance, regional power and institutions.",
+        "curatorialDescription": [
+          "The timeline separates the end of war from its institutional consequences rather than equating an end date with recovery."
+        ],
+        "researchNote": "Regional recovery and institutional effects require local histories and material evidence.",
+        "timeLabel": "c. 763",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "comparative_only",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:tang-imperial-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "conflict_ends",
+        "timeType": "circa",
+        "startYear": 763,
+        "endYear": 763,
+        "displayDate": {
+          "zh-CN": "约 763",
+          "en": "c. 763"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:tang-imperial-records"
+      }
+    ],
+    "sourceIds": [
+      "source:tang-imperial-records",
+      "source:met-tang-overview"
+    ],
+    "profile": {
+      "eventKind": "conflict",
+      "historicity": "documented",
+      "sequenceOrder": 13,
+      "eventScope": "imperial"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "huichang-religious-policies",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "会昌宗教政策",
+        "shortSummary": "845 年前后的政策集中改变了佛教等宗教机构的财产、人员与公共地位。",
+        "curatorialDescription": [
+          "条目以政策与执行后果为中心，不将复杂过程简化为一次同质化“灭佛”事件。"
+        ],
+        "researchNote": "诏令序列、地区执行差异、道教与其他宗教的政策位置需分别核定。",
+        "timeLabel": "约 845",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Huichang religious policies",
+        "shortSummary": "Policies around 845 sharply changed the property, personnel and public standing of Buddhist and other religious institutions.",
+        "curatorialDescription": [
+          "The record centres policy and implementation rather than reducing a complex process to one uniform persecution event."
+        ],
+        "researchNote": "Edict sequence, regional implementation and the position of Daoism and other religions require separate verification.",
+        "timeLabel": "c. 845",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "contested_by",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:tang-imperial-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "policy",
+        "timeType": "circa",
+        "startYear": 845,
+        "endYear": 845,
+        "displayDate": {
+          "zh-CN": "约 845",
+          "en": "c. 845"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:tang-imperial-records"
+      }
+    ],
+    "sourceIds": [
+      "source:tang-imperial-records",
+      "source:buddhist-institutional-records"
+    ],
+    "profile": {
+      "eventKind": "policy",
+      "historicity": "documented",
+      "sequenceOrder": 14,
+      "eventScope": "imperial"
+    }
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "kind": "museum_object",
+  "slug": "classics-commentary-manuscript",
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed",
+  "primaryEvidenceLayer": "historical_inferred",
+  "importance": 3,
+  "isFeatured": false,
+  "translations": {
+    "zh-CN": {
+      "title": "经学注疏写本记录（对象记录占位）",
+      "subtitle": "经典解释的物质化线索",
+      "shortSummary": "对象卡将《五经正义》和国子监的制度线索连接到写本、册页和阅读实践。",
+      "curatorialDescription": ["对象尚未落实到具体馆藏；本条只展示未来对象档案应包含的字段和权利边界。"],
+      "researchNote": "需要补充馆藏、编号、材质、年代、书写层、流传和图像授权信息。",
+      "timeLabel": "对象记录待核；唐代经学传播语境",
+      "keyFacts": [{ "label": { "zh-CN": "对象类型", "en": "Object type" }, "value": { "zh-CN": "经学写本（待核）", "en": "Classical commentary manuscript (pending verification)" } }]
+    },
+    "en": {
+      "title": "Classical commentary manuscript record (object placeholder)",
+      "subtitle": "Material clues to the interpretation of classics",
+      "shortSummary": "The object card connects the Corrected Meanings and Guozijian to manuscripts, folios and practices of reading.",
+      "curatorialDescription": ["No specific collection has yet been established; this record shows the fields and rights boundary a future object archive must contain."],
+      "researchNote": "Collection, accession number, material, date, writing layers, provenance and image licence still need to be added.",
+      "timeLabel": "Object record pending; Tang classical-learning context",
+      "keyFacts": [{ "label": { "zh-CN": "对象类型", "en": "Object type" }, "value": { "zh-CN": "经学写本（待核）", "en": "Classical commentary manuscript (pending verification)" } }]
+    }
+  },
+  "traditions": [{ "tradition": "confucianism", "role": "primary", "isPrimary": true, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:object-records" }],
+  "temporalAssertions": [{ "predicate": "object_date", "timeType": "century", "startYear": 600, "endYear": 899, "displayDate": { "zh-CN": "对象记录待核；唐代经学传播语境", "en": "Object record pending; Tang classical-learning context" }, "confidence": "unknown", "evidenceLayer": "historical_inferred", "sourceId": "source:object-records" }],
+  "sourceIds": ["source:object-records", "source:education-classics-records"],
+  "profile": { "objectType": "manuscript", "rightsStatus": "unknown", "collectionStatus": "placeholder" }
+}

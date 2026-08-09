@@ -1,0 +1,91 @@
+{
+  "kind": "institution",
+  "slug": "daci-en-monastery",
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed",
+  "primaryEvidenceLayer": "historical_documented",
+  "importance": 5,
+  "isFeatured": true,
+  "translations": {
+    "zh-CN": {
+      "title": "大慈恩寺",
+      "subtitle": "玄奘译经与长安佛教制度的关键场所",
+      "shortSummary": "大慈恩寺是理解玄奘、译经、寺院网络和长安城市空间之间关系的核心机构条目。",
+      "curatorialDescription": [
+        "寺院不是静态背景，而是人员、文本、物件、赞助和仪式活动交汇的制度节点。",
+        "本条暂以机构级别呈现，具体大雁塔、译经院和藏经设施将拆分为地点与对象条目。"
+      ],
+      "researchNote": "需要补充寺院沿革、译经场所、参与者和考古或图像记录的逐条来源与权利信息。",
+      "timeLabel": "唐代重点：约 648–907",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "机构类型",
+            "en": "Institution type"
+          },
+          "value": {
+            "zh-CN": "佛教寺院与译经场域",
+            "en": "Buddhist monastery and translation site"
+          }
+        }
+      ]
+    },
+    "en": {
+      "title": "Great Ci'en Monastery",
+      "subtitle": "A key site for Xuanzang's translation work and Chang'an Buddhist institutions",
+      "shortSummary": "Great Ci'en Monastery is a core institutional entry for connecting Xuanzang, translation, monastic networks and Chang'an's urban space.",
+      "curatorialDescription": [
+        "A monastery was not a static backdrop but an institutional node where people, texts, objects, patronage and ritual activity met.",
+        "This record stays at institution level; the Giant Wild Goose Pagoda, translation spaces and manuscript holdings will become separate place and object records."
+      ],
+      "researchNote": "Monastery history, translation sites, participants and archaeological or image records still require item-level sources and rights information.",
+      "timeLabel": "Tang focus: c. 648–907",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "机构类型",
+            "en": "Institution type"
+          },
+          "value": {
+            "zh-CN": "佛教寺院与译经场域",
+            "en": "Buddhist monastery and translation site"
+          }
+        }
+      ]
+    }
+  },
+  "traditions": [
+    {
+      "tradition": "buddhism",
+      "role": "primary",
+      "isPrimary": true,
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:buddhist-institutional-records"
+    }
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "institutional_activity",
+      "timeType": "range",
+      "startYear": 648,
+      "endYear": 907,
+      "displayDate": {
+        "zh-CN": "唐代重点：约 648–907",
+        "en": "Tang focus: c. 648–907"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:buddhist-institutional-records"
+    }
+  ],
+  "sourceIds": [
+    "source:buddhist-institutional-records",
+    "source:xuanzang-records",
+    "source:historical-geography"
+  ],
+  "profile": {
+    "institutionKind": "monastery",
+    "networkScope": false
+  }
+}

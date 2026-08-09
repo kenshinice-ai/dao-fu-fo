@@ -1,0 +1,31 @@
+{
+  "locale": "zh-CN",
+  "kind": "figure",
+  "slug": "sima-chengzhen",
+  "title": "司马承祯",
+  "subtitle": "647—735 · 唐代道教人物",
+  "tradition": "daoism",
+  "evidence": "历史有据 · 传统叙事并存",
+  "timeLabel": "647—735",
+  "shortSummary": "司马承祯连接山林修持、经典传统与唐代宫廷，是理解唐代道教多重空间的重要人物。",
+  "curatorialDescription": [
+    "司马承祯的意义不只在个人生平，而在他跨越了山岳、法脉与宫廷三个空间。道教在唐代既可以表现为山林修持，也可以进入国家礼仪和皇室网络。",
+    "把他放入关系图时，需要区分师承传统、历史活动和后世尊崇。它们可能指向同一人物，却属于不同证据层。",
+    "这一人物也提醒我们：道家哲学概念与组织化道教并非同一对象，但可以通过经典解释和实践发生联系。"
+  ],
+  "researchNote": "第一版只展示其与唐代宫廷、山岳修持和经典传统的基础关系；法脉细节将在来源和传统审核后扩展。",
+  "keyFacts": [
+    { "label": "传统", "value": "道教上清传统相关" },
+    { "label": "空间", "value": "山岳修持 · 宫廷网络" },
+    { "label": "视图", "value": "人物关系 · 时间轴" }
+  ],
+  "related": [
+    { "kind": "text", "slug": "daodejing", "title": "《道德经》", "relation": "经典解释背景" },
+    { "kind": "concept", "slug": "naturalness", "title": "自然", "relation": "相关概念" },
+    { "kind": "place", "slug": "louguantai", "title": "楼观台", "relation": "唐代道教地点网络" }
+  ],
+  "sources": [
+    { "title": "《旧唐书》", "locator": "道教人物相关列传与纪事", "grade": "A", "role": "历史人物与宫廷活动线索" },
+    { "title": "唐代道教史研究", "locator": "司马承祯与唐代宫廷章节", "grade": "B", "role": "宗派与制度背景；正式版需补完整书目信息" }
+  ]
+}

@@ -1,0 +1,8 @@
+BEGIN;
+
+CREATE TABLE museum.figure_profiles (entity_id uuid PRIMARY KEY REFERENCES museum.entities(id) ON DELETE CASCADE, historicity text NOT NULL, gender text NOT NULL CHECK (gender IN ('male','female','nonbinary','unknown','not_applicable')), birth_place_id uuid REFERENCES museum.entities(id), death_place_id uuid REFERENCES museum.entities(id), canonical_name_original text, name_language_code text);
+CREATE TABLE museum.text_profiles (entity_id uuid PRIMARY KEY REFERENCES museum.entities(id) ON DELETE CASCADE, text_kind text NOT NULL, original_language_code text NOT NULL, canonical_status text NOT NULL, attribution_status text NOT NULL);
+CREATE TABLE museum.text_version_profiles (entity_id uuid PRIMARY KEY REFERENCES museum.entities(id) ON DELETE CASCADE, text_id uuid NOT NULL REFERENCES museum.entities(id), version_kind text NOT NULL, language_code text NOT NULL, citation_label text NOT NULL, rights_status museum.rights_status NOT NULL);
+CREATE TABLE museum.passage_profiles (entity_id uuid PRIMARY KEY REFERENCES museum.entities(id) ON DELETE CASCADE, text_id uuid NOT NULL REFERENCES museum.entities(id), text_version_id uuid NOT NULL REFERENCES museum.entities(id), passage_kind text NOT NULL, locator_original text NOT NULL, locator_normalised text NOT NULL, original_text text NOT NULL, punctuated_text text NOT NULL, modern_zh text NOT NULL, translation_en text NOT NULL, ritual_sensitivity text NOT NULL CHECK (ritual_sensitivity IN ('public_textual','context_required','lineage_sensitive','restricted_or_uncertain')), rights_status museum.rights_status NOT NULL DEFAULT 'unknown', variant_readings jsonb NOT NULL DEFAULT '[]'::jsonb);
+
+COMMIT;

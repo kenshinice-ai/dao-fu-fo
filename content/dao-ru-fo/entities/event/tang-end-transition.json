@@ -1,0 +1,105 @@
+{
+  "kind": "event",
+  "slug": "tang-end-transition",
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed",
+  "primaryEvidenceLayer": "historical_documented",
+  "importance": 4,
+  "isFeatured": false,
+  "translations": {
+    "zh-CN": {
+      "title": "唐末政权转折",
+      "subtitle": "时间切片的边界事件",
+      "shortSummary": "907 年的政权转折为本展览的隋唐时间切片提供边界，也提醒观众制度和文本网络不会在同一年突然消失。",
+      "curatorialDescription": [
+        "展览把 907 作为时间边界而非文明断裂点；人物、文本、机构和地点的生命线需要各自延伸。"
+      ],
+      "researchNote": "需要将唐末政权变化、城市网络、寺院制度和文本流通分别建模，避免用单一事件概括复杂转型。",
+      "timeLabel": "907",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "事件类型",
+            "en": "Event type"
+          },
+          "value": {
+            "zh-CN": "政权转折与时代边界",
+            "en": "Political transition and period boundary"
+          }
+        }
+      ]
+    },
+    "en": {
+      "title": "The Tang-end political transition",
+      "subtitle": "A boundary event for the time slice",
+      "shortSummary": "The political transition around 907 marks the exhibition's Sui–Tang boundary while reminding us that institutions and textual networks do not disappear in one year.",
+      "curatorialDescription": [
+        "The exhibition uses 907 as a boundary rather than a civilisational rupture; figures, texts, institutions and places need their own continuities."
+      ],
+      "researchNote": "Late-Tang politics, urban networks, monasteries and textual circulation must be modelled separately instead of being compressed into one event.",
+      "timeLabel": "907",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "事件类型",
+            "en": "Event type"
+          },
+          "value": {
+            "zh-CN": "政权转折与时代边界",
+            "en": "Political transition and period boundary"
+          }
+        }
+      ]
+    }
+  },
+  "traditions": [
+    {
+      "tradition": "buddhism",
+      "role": "comparative_only",
+      "isPrimary": true,
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:tang-imperial-records"
+    },
+    {
+      "tradition": "daoism",
+      "role": "comparative_only",
+      "isPrimary": false,
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:tang-imperial-records"
+    },
+    {
+      "tradition": "confucianism",
+      "role": "comparative_only",
+      "isPrimary": false,
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:tang-imperial-records"
+    }
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "period_boundary",
+      "timeType": "exact",
+      "startYear": 907,
+      "displayDate": {
+        "zh-CN": "907",
+        "en": "907"
+      },
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:tang-imperial-records"
+    }
+  ],
+  "sourceIds": [
+    "source:tang-imperial-records",
+    "source:historical-geography"
+  ],
+  "profile": {
+    "eventKind": "dynastic_transition",
+    "historicity": "documented",
+    "sequenceOrder": 15,
+    "eventScope": "imperial"
+  }
+}

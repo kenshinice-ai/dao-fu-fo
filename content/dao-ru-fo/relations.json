@@ -1,0 +1,306 @@
+[
+  {
+    "id": "relation:xuanzang-active-changan",
+    "source": { "kind": "figure", "slug": "xuanzang" },
+    "target": { "kind": "place", "slug": "changan" },
+    "relationType": "active_in",
+    "label": { "zh-CN": "在长安活动", "en": "Active in Chang'an" },
+    "summary": { "zh-CN": "长安是玄奘译经、讲学与制度化工作的主要场所。", "en": "Chang'an was the main setting for Xuanzang's translation, teaching and institutional work." },
+    "confidence": "high",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": ["source:xuanzang-records"]
+  },
+  {
+    "id": "relation:xuanzang-travelled-dunhuang",
+    "source": { "kind": "figure", "slug": "xuanzang" },
+    "target": { "kind": "place", "slug": "dunhuang" },
+    "relationType": "travelled_through",
+    "label": { "zh-CN": "经过敦煌区域", "en": "Travelled through the Dunhuang region" },
+    "summary": { "zh-CN": "敦煌位于跨越河西走廊的求法路线语境中，具体停留节点仍需逐项核定。", "en": "Dunhuang belongs to the Hexi Corridor context of the pilgrimage route; individual stops still require item-level verification." },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": ["source:xuanzang-records", "source:historical-geography"]
+  },
+  {
+    "id": "relation:xuanzang-active-luoyang",
+    "source": { "kind": "figure", "slug": "xuanzang" },
+    "target": { "kind": "place", "slug": "luoyang" },
+    "relationType": "active_in",
+    "label": { "zh-CN": "与洛阳发生联系", "en": "Connected with Luoyang" },
+    "summary": { "zh-CN": "洛阳是隋唐政治与宗教网络中的重要节点；本条只表达区域联系，不等同于固定驻锡。", "en": "Luoyang was an important political and religious node; this records a regional connection, not a claim of permanent residence." },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": ["source:xuanzang-records", "source:historical-geography"]
+  },
+  {
+    "id": "relation:sima-active-changan",
+    "source": { "kind": "figure", "slug": "sima-chengzhen" },
+    "target": { "kind": "place", "slug": "changan" },
+    "relationType": "active_in",
+    "label": { "zh-CN": "进入长安制度语境", "en": "Entered Chang'an's institutional context" },
+    "summary": { "zh-CN": "司马承祯与唐代宫廷、道教制度和长安政治空间相连。", "en": "Sima Chengzhen is connected with Tang courtly, Daoist institutional and Chang'an political contexts." },
+    "confidence": "medium",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": ["source:daoist-historical-record"]
+  },
+  {
+    "id": "relation:kong-active-changan",
+    "source": { "kind": "figure", "slug": "kong-yingda" },
+    "target": { "kind": "place", "slug": "changan" },
+    "relationType": "active_in",
+    "label": { "zh-CN": "在长安经学制度中活动", "en": "Active in Chang'an's classical learning institutions" },
+    "summary": { "zh-CN": "孔颖达的经学工作与唐代长安的教育、注疏和国家制度相连。", "en": "Kong Yingda's classical scholarship was tied to Tang educational, commentarial and state institutions in Chang'an." },
+    "confidence": "high",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": ["source:confucian-commentarial-record"]
+  },
+  {
+    "id": "relation:heart-sutra-has-version",
+    "source": { "kind": "text", "slug": "heart-sutra" },
+    "target": { "kind": "text_version", "slug": "heart-sutra-chinese-received" },
+    "relationType": "has_version",
+    "label": { "zh-CN": "对应汉文版本", "en": "Has a Chinese received version" },
+    "summary": { "zh-CN": "文本条目与具体版本分开，便于段落引用回到版本层。", "en": "The text record is separated from a specific version so passages can cite the version layer." },
+    "confidence": "high",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": ["source:heart-sutra-edition"]
+  },
+  {
+    "id": "relation:daodejing-has-version",
+    "source": { "kind": "text", "slug": "daodejing" },
+    "target": { "kind": "text_version", "slug": "daodejing-received" },
+    "relationType": "has_version",
+    "label": { "zh-CN": "对应通行本版本", "en": "Has a received version" },
+    "summary": { "zh-CN": "《道德经》条目与通行本版本分开记录，避免版本差异被隐藏。", "en": "The Daodejing record is separated from its received version so textual variation remains visible." },
+    "confidence": "high",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": ["source:daodejing-edition"]
+  },
+  {
+    "id": "relation:analects-has-version",
+    "source": { "kind": "text", "slug": "analects" },
+    "target": { "kind": "text_version", "slug": "analects-received" },
+    "relationType": "has_version",
+    "label": { "zh-CN": "对应通行本版本", "en": "Has a received version" },
+    "summary": { "zh-CN": "《论语》条目与通行本版本分开记录，段落定位保持可追溯。", "en": "The Analects record is separated from its received version to keep passage locators traceable." },
+    "confidence": "high",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": ["source:analects-edition"]
+  },
+  {
+    "id": "relation:form-passage-heart-sutra",
+    "source": { "kind": "passage", "slug": "form-is-emptiness" },
+    "target": { "kind": "text", "slug": "heart-sutra" },
+    "relationType": "passage_of",
+    "label": { "zh-CN": "属于文本段落", "en": "Passage of the text" },
+    "summary": { "zh-CN": "段落条目回指《心经》文本层，并保留版本和定位信息。", "en": "The passage points back to the Heart Sutra text layer while retaining version and locator information." },
+    "confidence": "high",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": ["source:heart-sutra-edition"]
+  },
+  {
+    "id": "relation:humans-passage-daodejing",
+    "source": { "kind": "passage", "slug": "humans-follow-earth" },
+    "target": { "kind": "text", "slug": "daodejing" },
+    "relationType": "passage_of",
+    "label": { "zh-CN": "属于文本段落", "en": "Passage of the text" },
+    "summary": { "zh-CN": "段落条目回指《道德经》文本层，并保留章次定位。", "en": "The passage points back to the Daodejing text layer while retaining its chapter locator." },
+    "confidence": "high",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": ["source:daodejing-edition"]
+  },
+  {
+    "id": "relation:return-passage-analects",
+    "source": { "kind": "passage", "slug": "return-to-ritual" },
+    "target": { "kind": "text", "slug": "analects" },
+    "relationType": "passage_of",
+    "label": { "zh-CN": "属于文本段落", "en": "Passage of the text" },
+    "summary": { "zh-CN": "段落条目回指《论语》文本层，并保留篇章定位。", "en": "The passage points back to the Analects text layer while retaining its chapter locator." },
+    "confidence": "high",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": ["source:analects-edition"]
+  },
+  {
+    "id": "relation:form-quoted-heart-version",
+    "source": { "kind": "passage", "slug": "form-is-emptiness" },
+    "target": { "kind": "text_version", "slug": "heart-sutra-chinese-received" },
+    "relationType": "quoted_from_version",
+    "label": { "zh-CN": "引自具体版本", "en": "Quoted from a specific version" },
+    "summary": { "zh-CN": "段落的原文与英译必须从明确版本中读取和核对。", "en": "The passage's source text and translation must be read and checked against an explicit version." },
+    "confidence": "high",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": ["source:heart-sutra-edition"]
+  },
+  {
+    "id": "relation:humans-quoted-daodejing-version",
+    "source": { "kind": "passage", "slug": "humans-follow-earth" },
+    "target": { "kind": "text_version", "slug": "daodejing-received" },
+    "relationType": "quoted_from_version",
+    "label": { "zh-CN": "引自具体版本", "en": "Quoted from a specific version" },
+    "summary": { "zh-CN": "段落原文回指《道德经》通行本版本。", "en": "The passage's wording points back to the received Daodejing version." },
+    "confidence": "high",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": ["source:daodejing-edition"]
+  },
+  {
+    "id": "relation:return-quoted-analects-version",
+    "source": { "kind": "passage", "slug": "return-to-ritual" },
+    "target": { "kind": "text_version", "slug": "analects-received" },
+    "relationType": "quoted_from_version",
+    "label": { "zh-CN": "引自具体版本", "en": "Quoted from a specific version" },
+    "summary": { "zh-CN": "段落原文回指《论语》通行本版本。", "en": "The passage's wording points back to the received Analects version." },
+    "confidence": "high",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": ["source:analects-edition"]
+  },
+  {
+    "id": "relation:changan-luoyang-corridor",
+    "source": { "kind": "place", "slug": "changan" },
+    "target": { "kind": "place", "slug": "luoyang" },
+    "relationType": "route_connects",
+    "label": { "zh-CN": "城市走廊相连", "en": "Connected by an imperial corridor" },
+    "summary": { "zh-CN": "长安与洛阳是隋唐政治、交通和宗教传播网络中的核心城市。", "en": "Chang'an and Luoyang were core cities in Sui–Tang political, transport and religious networks." },
+    "confidence": "high",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": ["source:historical-geography"]
+  },
+  {
+    "id": "relation:daodejing-analects-comparative",
+    "source": { "kind": "text", "slug": "daodejing" },
+    "target": { "kind": "text", "slug": "analects" },
+    "relationType": "comparative_parallel",
+    "label": { "zh-CN": "比较阅读", "en": "Comparative reading" },
+    "summary": { "zh-CN": "本关系只建立策展比较入口，不声称两个文本具有同一作者、同一传统或直接影响关系。", "en": "This is a curatorial comparison, not a claim of common authorship, common tradition or direct influence." },
+    "confidence": "medium",
+    "evidenceLayer": "scholarly_interpretation",
+    "sourceIds": ["source:editorial-method"]
+  },
+  {
+    "id": "relation:heart-sutra-daodejing-comparative",
+    "source": { "kind": "text", "slug": "heart-sutra" },
+    "target": { "kind": "text", "slug": "daodejing" },
+    "relationType": "comparative_parallel",
+    "label": { "zh-CN": "概念比较入口", "en": "Conceptual comparison entry" },
+    "summary": { "zh-CN": "两部文本可以被并置阅读，但其术语、历史语境和宗教功能必须分别说明。", "en": "The texts can be placed side by side, while their terms, historical contexts and religious functions remain distinct." },
+    "confidence": "medium",
+    "evidenceLayer": "scholarly_interpretation",
+    "sourceIds": ["source:editorial-method"]
+  },
+  {
+    "id": "relation:cheng-commented-daodejing",
+    "source": { "kind": "figure", "slug": "cheng-xuanying" },
+    "target": { "kind": "text", "slug": "daodejing" },
+    "relationType": "commented_on",
+    "label": { "zh-CN": "进入《道德经》注释传统", "en": "Participated in Daodejing commentary" },
+    "summary": { "zh-CN": "成玄英提供唐初道家经典解释活动的案例，具体注本版本仍待目录核定。", "en": "Cheng Xuanying provides a case of early Tang Daoist interpretation; the specific commentary edition still requires catalogue verification." },
+    "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceIds": ["source:daoist-historical-record", "source:daodejing-edition"]
+  },
+  {
+    "id": "relation:yan-hongwen-context",
+    "source": { "kind": "figure", "slug": "yan-shigu" },
+    "target": { "kind": "institution", "slug": "hongwen-institute" },
+    "relationType": "institutional_context",
+    "label": { "zh-CN": "宫廷学术制度语境", "en": "Court scholarly institutional context" },
+    "summary": { "zh-CN": "颜师古的文本整理活动被置于唐初宫廷学术机构的背景中；具体职任需继续核定。", "en": "Yan Shigu's editorial work is placed in the setting of early Tang court scholarship; specific office holding remains to be verified." },
+    "confidence": "low", "evidenceLayer": "historical_inferred", "sourceIds": ["source:education-classics-records"]
+  },
+  {
+    "id": "relation:jizang-active-luoyang",
+    "source": { "kind": "figure", "slug": "jizang" },
+    "target": { "kind": "place", "slug": "luoyang" },
+    "relationType": "active_in",
+    "label": { "zh-CN": "与洛阳佛教网络相连", "en": "Connected with Luoyang Buddhist networks" },
+    "summary": { "zh-CN": "本关系记录隋唐之际人物与洛阳宗教网络的研究入口，不代替逐年行迹。", "en": "This records a research entry between the figure and Luoyang's religious networks, not a year-by-year itinerary." },
+    "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceIds": ["source:buddhist-biographical-records", "source:historical-geography"]
+  },
+  {
+    "id": "relation:translation-network-located-changan",
+    "source": { "kind": "institution", "slug": "changan-translation-bureau" },
+    "target": { "kind": "place", "slug": "changan" },
+    "relationType": "located_in",
+    "label": { "zh-CN": "以长安为城市范围", "en": "Located within Chang'an's urban scope" },
+    "summary": { "zh-CN": "该网络汇总长安不同时期的译场，具体寺院和建筑位置仍须项目级拆分。", "en": "The network groups translation bureaux in Chang'an across periods; monasteries and building locations remain project-specific." },
+    "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceIds": ["source:buddhist-institutional-records", "source:historical-geography"]
+  },
+  {
+    "id": "relation:daoist-network-located-changan",
+    "source": { "kind": "institution", "slug": "changan-daoist-monastic-network" },
+    "target": { "kind": "place", "slug": "changan" },
+    "relationType": "located_in",
+    "label": { "zh-CN": "以长安为城市范围", "en": "Located within Chang'an's urban scope" },
+    "summary": { "zh-CN": "网络条目表示城市尺度的宫观联系，不把全部节点归为同一机构。", "en": "The network records city-scale institutional links without treating all nodes as one institution." },
+    "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceIds": ["source:daoist-historical-record", "source:historical-geography"]
+  },
+  {
+    "id": "relation:pagoda-site-located-changan",
+    "source": { "kind": "place", "slug": "great-wild-goose-pagoda-site" },
+    "target": { "kind": "place", "slug": "changan" },
+    "relationType": "located_in",
+    "label": { "zh-CN": "位于历史长安范围", "en": "Located within historical Chang'an" },
+    "summary": { "zh-CN": "遗址属于长安城市空间；精确历史坊区与保护边界需由权威地理资料补充。", "en": "The site belongs to Chang'an's urban space; historical ward and conservation boundary need authoritative geographic records." },
+    "confidence": "high", "evidenceLayer": "historical_documented", "sourceIds": ["source:buddhist-institutional-records", "source:historical-geography"]
+  },
+  {
+    "id": "relation:longmen-located-luoyang",
+    "source": { "kind": "place", "slug": "longmen-grottoes" },
+    "target": { "kind": "place", "slug": "luoyang" },
+    "relationType": "located_in",
+    "label": { "zh-CN": "位于洛阳以南", "en": "Located south of Luoyang" },
+    "summary": { "zh-CN": "UNESCO 遗产资料将龙门石窟定位于古都洛阳以南的伊河两岸。", "en": "UNESCO heritage documentation locates Longmen on both banks of the Yi River south of ancient Luoyang." },
+    "confidence": "high", "evidenceLayer": "historical_documented", "sourceIds": ["source:unesco-longmen"]
+  },
+  {
+    "id": "relation:dao-spoken-passage-daodejing",
+    "source": { "kind": "passage", "slug": "dao-that-can-be-spoken" },
+    "target": { "kind": "text", "slug": "daodejing" },
+    "relationType": "passage_of",
+    "label": { "zh-CN": "属于文本段落", "en": "Passage of the text" },
+    "summary": { "zh-CN": "段落回指《道德经》文本和通行本章次。", "en": "The passage points back to the Daodejing text and received chapter locator." },
+    "confidence": "high", "evidenceLayer": "historical_documented", "sourceIds": ["source:daodejing-edition"]
+  },
+  {
+    "id": "relation:water-passage-daodejing",
+    "source": { "kind": "passage", "slug": "highest-good-like-water" },
+    "target": { "kind": "text", "slug": "daodejing" },
+    "relationType": "passage_of",
+    "label": { "zh-CN": "属于文本段落", "en": "Passage of the text" },
+    "summary": { "zh-CN": "完整句群回指《道德经》第八章。", "en": "The complete sentence group points back to chapter 8 of the Daodejing." },
+    "confidence": "high", "evidenceLayer": "historical_documented", "sourceIds": ["source:daodejing-edition"]
+  },
+  {
+    "id": "relation:decrease-passage-daodejing",
+    "source": { "kind": "passage", "slug": "learning-increases-dao-decreases" },
+    "target": { "kind": "text", "slug": "daodejing" },
+    "relationType": "passage_of",
+    "label": { "zh-CN": "属于文本段落", "en": "Passage of the text" },
+    "summary": { "zh-CN": "段落回指《道德经》第四十八章。", "en": "The passage points back to chapter 48 of the Daodejing." },
+    "confidence": "high", "evidenceLayer": "historical_documented", "sourceIds": ["source:daodejing-edition"]
+  },
+  {
+    "id": "relation:practice-passage-analects",
+    "source": { "kind": "passage", "slug": "learn-and-practice" },
+    "target": { "kind": "text", "slug": "analects" },
+    "relationType": "passage_of",
+    "label": { "zh-CN": "属于文本段落", "en": "Passage of the text" },
+    "summary": { "zh-CN": "段落回指《论语·学而》及通行本版本。", "en": "The passage points back to the Xue Er chapter and received Analects version." },
+    "confidence": "high", "evidenceLayer": "historical_documented", "sourceIds": ["source:analects-edition"]
+  },
+  {
+    "id": "relation:three-passage-analects",
+    "source": { "kind": "passage", "slug": "three-walk-together" },
+    "target": { "kind": "text", "slug": "analects" },
+    "relationType": "passage_of",
+    "label": { "zh-CN": "属于文本段落", "en": "Passage of the text" },
+    "summary": { "zh-CN": "段落回指《论语·述而》及通行本版本。", "en": "The passage points back to the Shu Er chapter and received Analects version." },
+    "confidence": "high", "evidenceLayer": "historical_documented", "sourceIds": ["source:analects-edition"]
+  },
+  {
+    "id": "relation:do-not-impose-passage-analects",
+    "source": { "kind": "passage", "slug": "do-not-impose" },
+    "target": { "kind": "text", "slug": "analects" },
+    "relationType": "passage_of",
+    "label": { "zh-CN": "属于文本段落", "en": "Passage of the text" },
+    "summary": { "zh-CN": "段落回指《论语·卫灵公》及通行本版本。", "en": "The passage points back to the Wei Ling Gong chapter and received Analects version." },
+    "confidence": "high", "evidenceLayer": "historical_documented", "sourceIds": ["source:analects-edition"]
+  }
+]

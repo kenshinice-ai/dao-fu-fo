@@ -1,0 +1,33 @@
+{
+  "kind": "passage",
+  "slug": "prajna-all-dharmas",
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed",
+  "primaryEvidenceLayer": "historical_documented",
+  "importance": 4,
+  "isFeatured": false,
+  "translations": {
+    "zh-CN": {
+      "title": "是诸法空相",
+      "subtitle": "《心经》关于诸法与空相的段落",
+      "shortSummary": "这句经文把“空”放在诸法的描述中，适合用于展示概念、段落和版本三层之间的关系。",
+      "curatorialDescription": ["本条不把“空”直接翻译成虚无；解释会随版本、注疏和研究传统展开。"],
+      "researchNote": "需要补充版本异文、注疏传统和英译措辞的比较。",
+      "timeLabel": "《心经》汉译与流通语境",
+      "keyFacts": [{ "label": { "zh-CN": "段落类型", "en": "Passage type" }, "value": { "zh-CN": "经文摘录", "en": "Scriptural excerpt" } }]
+    },
+    "en": {
+      "title": "These dharmas have the characteristic of emptiness",
+      "subtitle": "A Heart Sutra passage on dharmas and emptiness",
+      "shortSummary": "The line places emptiness within a description of dharmas and helps demonstrate the relation among concept, passage and version layers.",
+      "curatorialDescription": ["The record does not translate emptiness directly as nothingness; interpretation will be shown with editions, commentaries and scholarly traditions."],
+      "researchNote": "Variant readings, commentary traditions and English wording still need comparison.",
+      "timeLabel": "Heart Sutra Chinese translation and circulation context",
+      "keyFacts": [{ "label": { "zh-CN": "段落类型", "en": "Passage type" }, "value": { "zh-CN": "经文摘录", "en": "Scriptural excerpt" } }]
+    }
+  },
+  "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:heart-sutra-edition" }],
+  "temporalAssertions": [{ "predicate": "textual_circulation", "timeType": "range", "startYear": 600, "endYear": 700, "displayDate": { "zh-CN": "《心经》汉译与流通语境", "en": "Heart Sutra Chinese translation and circulation context" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:heart-sutra-edition" }],
+  "sourceIds": ["source:heart-sutra-edition"],
+  "profile": { "textSlug": "heart-sutra", "textVersionSlug": "heart-sutra-chinese-received", "passageKind": "scripture_excerpt", "locatorOriginal": "色空段落；具体行号待核", "locatorNormalised": "heart-sutra:dharmas-emptiness", "originalText": "是诸法空相。", "punctuatedText": "是诸法空相。", "modernZh": "一切法都以空为其所呈现的性质。", "translationEn": "All dharmas are marked by emptiness.", "ritualSensitivity": "public_textual" }
+}

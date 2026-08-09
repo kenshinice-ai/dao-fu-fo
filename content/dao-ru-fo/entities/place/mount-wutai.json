@@ -1,0 +1,39 @@
+{
+  "kind": "place",
+  "slug": "mount-wutai",
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed",
+  "primaryEvidenceLayer": "historical_documented",
+  "importance": 4,
+  "isFeatured": false,
+  "translations": {
+    "zh-CN": {
+      "title": "五台山",
+      "subtitle": "现实山地与佛教圣迹叙事的双重地点",
+      "shortSummary": "五台山同时具有现实山地、寺院网络和佛教圣迹叙事的层次，适合展示双层地理如何并存。",
+      "curatorialDescription": [
+        "现实地图只承载山地的真实地理指向；圣迹、感应和文殊信仰等内容进入神圣地理或传统叙事层。",
+        "地点条目不把后世朝圣网络直接倒推为隋唐时期的完整机构地图。"
+      ],
+      "researchNote": "需要按寺院、碑刻、朝圣路线和不同历史时期补齐地点级来源与时间范围。",
+      "timeLabel": "隋唐佛教地理与后世圣迹叙事",
+      "keyFacts": [{ "label": { "zh-CN": "地点层", "en": "Place layers" }, "value": { "zh-CN": "现实山地 + 神圣地理", "en": "Real mountain + sacred geography" } }]
+    },
+    "en": {
+      "title": "Mount Wutai",
+      "subtitle": "A real mountain and a site of Buddhist sacred narratives",
+      "shortSummary": "Mount Wutai combines a real mountain landscape, monastic networks and Buddhist sacred narratives, making the museum's two-layer geography visible.",
+      "curatorialDescription": [
+        "The real map carries only the mountain's geographic referent; relic narratives, visions and Manjusri devotion belong to the sacred or traditional layer.",
+        "The record does not project later pilgrimage networks backward into a complete Sui–Tang institutional map."
+      ],
+      "researchNote": "Monasteries, inscriptions, pilgrimage routes and period-specific sources still need to be added at place level.",
+      "timeLabel": "Sui–Tang Buddhist geography and later sacred narratives",
+      "keyFacts": [{ "label": { "zh-CN": "地点层", "en": "Place layers" }, "value": { "zh-CN": "现实山地 + 神圣地理", "en": "Real mountain + sacred geography" } }]
+    }
+  },
+  "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:historical-geography" }],
+  "temporalAssertions": [{ "predicate": "geographic_and_religious_scope", "timeType": "range", "startYear": 581, "endYear": 907, "displayDate": { "zh-CN": "隋唐佛教地理与后世圣迹叙事", "en": "Sui–Tang Buddhist geography and later sacred narratives" }, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:historical-geography" }],
+  "sourceIds": ["source:historical-geography", "source:unesco-mount-wutai", "source:editorial-method"],
+  "profile": { "placeReality": "real_historical", "geometryType": "point", "coordinates": [113.563, 39.031], "coordinateConfidence": "centroid", "geographicSourceId": "source:unesco-mount-wutai" }
+}

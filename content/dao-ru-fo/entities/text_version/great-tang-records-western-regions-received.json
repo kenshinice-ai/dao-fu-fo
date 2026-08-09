@@ -1,0 +1,33 @@
+{
+  "kind": "text_version",
+  "slug": "great-tang-records-western-regions-received",
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed",
+  "primaryEvidenceLayer": "historical_documented",
+  "importance": 3,
+  "isFeatured": false,
+  "translations": {
+    "zh-CN": {
+      "title": "《大唐西域记》通行整理本",
+      "subtitle": "旅行记录的研究版本入口",
+      "shortSummary": "该版本条目为《大唐西域记》的段落定位、翻译和异文比较提供入口。",
+      "curatorialDescription": ["版本层不等同于作者原稿；它记录所采用的整理本以及后续需要核对的底本信息。"],
+      "researchNote": "需要补充具体整理者、出版社、版次、页码或数字版本标识。",
+      "timeLabel": "现代整理本；对应唐代文本",
+      "keyFacts": [{ "label": { "zh-CN": "版本类型", "en": "Version type" }, "value": { "zh-CN": "整理本", "en": "Edited received edition" } }]
+    },
+    "en": {
+      "title": "Received edited version of the Record of the Western Regions",
+      "subtitle": "A research entry point for locating travel passages",
+      "shortSummary": "This version record supports passage locators, translation and variant comparison for the Record of the Western Regions.",
+      "curatorialDescription": ["A version record is not the author's manuscript; it records the edited text used and the base-text information still to be checked."],
+      "researchNote": "Editor, publisher, edition, page references or digital identifier still need to be added.",
+      "timeLabel": "Modern edited version; corresponding to a Tang text",
+      "keyFacts": [{ "label": { "zh-CN": "版本类型", "en": "Version type" }, "value": { "zh-CN": "整理本", "en": "Edited received edition" } }]
+    }
+  },
+  "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:buddhist-biographical-records" }],
+  "temporalAssertions": [{ "predicate": "version_scope", "timeType": "atemporal", "displayDate": { "zh-CN": "现代整理本；对应唐代文本", "en": "Modern edited version; corresponding to a Tang text" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:buddhist-biographical-records" }],
+  "sourceIds": ["source:buddhist-biographical-records"],
+  "profile": { "textSlug": "great-tang-records-western-regions", "versionKind": "edition", "languageCode": "zh", "citationLabel": "《大唐西域记》整理本（待补版本信息）", "rightsStatus": "external_reference_only" }
+}

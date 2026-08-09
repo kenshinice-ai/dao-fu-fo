@@ -1,0 +1,10 @@
+{
+  "id": "dao-ru-fo",
+  "locale": "zh-CN",
+  "title": "道·儒·佛文明数字博物馆",
+  "shortTitle": "道·儒·佛",
+  "tagline": "在一座城市里，看见三条文明道路",
+  "description": "一座以策展问题为入口，以时间、地理、人物、经典与原典为共同坐标的双语数字博物馆。",
+  "contentVersion": "2026.08.prototype.1",
+  "capabilities": ["museum", "map", "timeline", "graph", "passages", "research"]
+}

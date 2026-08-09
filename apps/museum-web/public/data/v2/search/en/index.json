@@ -1,0 +1,26 @@
+{
+  "locale": "en",
+  "items": [
+    { "kind": "figure", "slug": "xuanzang", "title": "Xuanzang", "context": "Tang Buddhist monk, pilgrim and central organiser of translation work.", "tradition": "buddhism" },
+    { "kind": "figure", "slug": "sima-chengzhen", "title": "Sima Chengzhen", "context": "A figure connecting mountain cultivation, Daoist traditions and Tang court networks.", "tradition": "daoism" },
+    { "kind": "figure", "slug": "kong-yingda", "title": "Kong Yingda", "context": "Early Tang classical scholar associated with the Correct Meaning of the Five Classics and state learning.", "tradition": "confucianism" },
+    { "kind": "text", "slug": "heart-sutra", "title": "Heart Sutra", "context": "A concise and influential Buddhist text expressing prajñā and emptiness.", "tradition": "buddhism" },
+    { "kind": "text", "slug": "daodejing", "title": "Daodejing", "context": "A foundational text on Dao, virtue, non-coercive action and naturalness.", "tradition": "daoism" },
+    { "kind": "text", "slug": "correct-meaning-five-classics", "title": "Correct Meaning of the Five Classics", "context": "A major Tang state project in classical commentary and education.", "tradition": "confucianism" },
+    { "kind": "text", "slug": "analects", "title": "Analects", "context": "Sayings and encounters associated with Confucius and his disciples, repeatedly reinterpreted by later Confucian traditions.", "tradition": "confucianism" },
+    { "kind": "passage", "slug": "form-is-emptiness", "title": "Form is not different from emptiness", "context": "A representative line on the relationship between form and emptiness in the Heart Sutra.", "tradition": "buddhism" },
+    { "kind": "passage", "slug": "humans-follow-earth", "title": "The Dao follows what is naturally so", "context": "Daodejing chapter 25 on humans, earth, heaven, Dao and naturalness.", "tradition": "daoism" },
+    { "kind": "passage", "slug": "return-to-ritual", "title": "Restrain oneself and return to ritual", "context": "Analects 12.1 connects self-regulation, ritual and benevolence.", "tradition": "confucianism" },
+    { "kind": "concept", "slug": "emptiness", "title": "Emptiness", "context": "A Buddhist discussion of dependent arising and the absence of fixed self-existence.", "tradition": "buddhism" },
+    { "kind": "concept", "slug": "naturalness", "title": "Naturalness", "context": "The Daoist sense of being-so-of-itself, not simply the modern natural world.", "tradition": "daoism" },
+    { "kind": "concept", "slug": "ritual", "title": "Ritual", "context": "A Confucian concept linking self-cultivation, social order, institutions and classical interpretation.", "tradition": "confucianism" },
+    { "kind": "place", "slug": "changan", "title": "Chang'an", "context": "Tang imperial capital and meeting point for politics, education, translation and religious institutions.", "tradition": "convergence" },
+    { "kind": "place", "slug": "great-cien-monastery", "title": "Great Ci'en Monastery", "context": "Buddhist site closely connected with Xuanzang's translation work and the Great Wild Goose Pagoda.", "tradition": "buddhism" },
+    { "kind": "place", "slug": "louguantai", "title": "Louguantai", "context": "An important historical Daoist site on the northern side of Mount Zhongnan.", "tradition": "daoism" },
+    { "kind": "place", "slug": "imperial-academy-changan", "title": "Imperial Academy, Chang'an", "context": "A historical gateway into the connection among classics, education and the state.", "tradition": "confucianism" },
+    { "kind": "place", "slug": "luoyang", "title": "Luoyang", "context": "A key city in Sui–Tang political, religious and transport networks.", "tradition": "convergence" },
+    { "kind": "place", "slug": "dunhuang", "title": "Dunhuang", "context": "A major node linking the Central Plains, Central Asian routes and Buddhist visual culture.", "tradition": "buddhism" },
+    { "kind": "place", "slug": "mount-wutai", "title": "Mount Wutai", "context": "A real mountain region connected with Buddhist pilgrimage and devotion to Mañjuśrī.", "tradition": "buddhism" },
+    { "kind": "museum_object", "slug": "great-wild-goose-pagoda", "title": "Great Wild Goose Pagoda", "context": "Architectural heritage connected with Xuanzang, textual preservation and Buddhist memory in Chang'an.", "tradition": "buddhism" }
+  ]
+}

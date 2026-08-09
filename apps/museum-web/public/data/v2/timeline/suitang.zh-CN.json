@@ -1,0 +1,78 @@
+{
+  "locale": "zh-CN",
+  "title": "隋唐三传统时间切片",
+  "startYear": 581,
+  "endYear": 907,
+  "events": [
+    {
+      "id": "event:tang-founded",
+      "year": 618,
+      "type": "exact",
+      "tradition": "convergence",
+      "title": "唐朝建立",
+      "summary": "新的帝国秩序为礼制、寺院、宫观和经典工程提供了共同政治背景。"
+    },
+    {
+      "id": "event:xuanzang-departs",
+      "year": 629,
+      "type": "circa",
+      "tradition": "buddhism",
+      "title": "玄奘西行求法",
+      "summary": "旅行路线连接印度、中亚和唐代中国，日期按常见历史叙述约记。",
+      "entity": { "kind": "figure", "slug": "xuanzang" }
+    },
+    {
+      "id": "event:five-classics-project",
+      "year": 642,
+      "type": "circa",
+      "tradition": "confucianism",
+      "title": "《五经正义》国家经学工程",
+      "summary": "孔颖达等参与的整理工作连接经典解释与国家教育。",
+      "entity": { "kind": "text", "slug": "correct-meaning-five-classics" }
+    },
+    {
+      "id": "event:xuanzang-returns",
+      "year": 645,
+      "type": "exact",
+      "tradition": "buddhism",
+      "title": "玄奘返回长安",
+      "summary": "带回的文本与后续译经活动进入长安的机构网络。",
+      "entity": { "kind": "figure", "slug": "xuanzang" }
+    },
+    {
+      "id": "event:sima-chengzhen-life",
+      "year": 647,
+      "endYear": 735,
+      "type": "range",
+      "tradition": "daoism",
+      "title": "司马承祯活动时期",
+      "summary": "其生平连接山林修持、道教传统与唐代宫廷。",
+      "entity": { "kind": "figure", "slug": "sima-chengzhen" }
+    },
+    {
+      "id": "event:great-wild-goose-pagoda",
+      "year": 652,
+      "type": "exact",
+      "tradition": "buddhism",
+      "title": "大雁塔初建",
+      "summary": "建筑、文本保存和玄奘记忆在后世被持续连接。",
+      "entity": { "kind": "museum_object", "slug": "great-wild-goose-pagoda" }
+    },
+    {
+      "id": "event:wuzhou",
+      "year": 690,
+      "type": "exact",
+      "tradition": "convergence",
+      "title": "武周建立",
+      "summary": "皇权、佛教政治表达与既有礼制关系发生新的组合。"
+    },
+    {
+      "id": "event:huichang",
+      "year": 845,
+      "type": "exact",
+      "tradition": "convergence",
+      "title": "会昌时期宗教政策转折",
+      "summary": "寺院经济、国家治理与宗教制度之间的张力集中显现。"
+    }
+  ]
+}

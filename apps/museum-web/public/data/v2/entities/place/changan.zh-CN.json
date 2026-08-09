@@ -1,0 +1,31 @@
+{
+  "locale": "zh-CN",
+  "kind": "place",
+  "slug": "changan",
+  "title": "长安",
+  "subtitle": "唐代帝国都城",
+  "tradition": "convergence",
+  "evidence": "真实历史地点 · 城市范围",
+  "timeLabel": "隋唐重点展示期 581—907",
+  "shortSummary": "长安把宫廷、官学、寺院、宫观、市场与国际旅人压缩在同一城市，是观察三传统相遇的核心空间。",
+  "curatorialDescription": [
+    "本馆不把长安当作地图上的一个点，而把它看成制度和关系的密集场。人物进入城市、经典在机构中被翻译或讲授、宗教地点获得国家支持，也可能受到政策限制。",
+    "现代西安与唐长安存在地理延续，但不能直接把现代行政边界当成唐代城市。第一版使用近似中心和地点节点呈现，后续将加入城坊与历史地名层。",
+    "长安同时属于佛、道、儒的历史网络，因此传统标记为“交汇”，不等于三者在城中没有差异。"
+  ],
+  "researchNote": "当前地图为基于真实经纬度的历史地理示意，不提供考古级精确城坊复原。涉及具体寺观、官学和宫城位置时分别标注坐标置信度。",
+  "keyFacts": [
+    { "label": "地点现实性", "value": "真实历史城市" },
+    { "label": "坐标精度", "value": "城市近似中心" },
+    { "label": "传统角色", "value": "道 · 儒 · 佛交汇" }
+  ],
+  "related": [
+    { "kind": "place", "slug": "great-cien-monastery", "title": "大慈恩寺", "relation": "佛教机构地点" },
+    { "kind": "place", "slug": "imperial-academy-changan", "title": "长安国子监", "relation": "国家教育地点" },
+    { "kind": "figure", "slug": "xuanzang", "title": "玄奘", "relation": "活动人物" }
+  ],
+  "sources": [
+    { "title": "唐长安城历史地理研究", "locator": "城市格局与城坊研究", "grade": "B", "role": "历史城市范围；正式版补完整书目" },
+    { "title": "现代地理坐标", "locator": "西安城市近似中心", "grade": "C", "role": "地图聚焦，不作为唐代城址精确证明" }
+  ]
+}

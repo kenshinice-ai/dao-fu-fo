@@ -1,0 +1,200 @@
+[
+  {
+    "kind": "figure",
+    "slug": "cheng-xuanying",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "成玄英",
+        "shortSummary": "成玄英提供了观察唐初《道德经》《庄子》解释活动与道教知识网络的入口。",
+        "curatorialDescription": [
+          "本条目把注疏活动放在文本版本、宫观与帝国知识制度之间，而不把后世归纳直接当作生平事实。"
+        ],
+        "researchNote": "生卒年、具体任职和注本传承仍需以版本目录及人物资料逐项核定。",
+        "timeLabel": "约 7 世纪",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Cheng Xuanying",
+        "shortSummary": "Cheng Xuanying offers an entry into early Tang interpretation of the Daodejing and Zhuangzi and its Daoist knowledge networks.",
+        "curatorialDescription": [
+          "The record places commentary among text versions, Daoist institutions and imperial knowledge systems without treating later summaries as direct biography."
+        ],
+        "researchNote": "Life dates, offices and commentary transmission still require item-level verification against catalogues and biographical records.",
+        "timeLabel": "c. seventh century",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-historical-record"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "century",
+        "startYear": 600,
+        "endYear": 699,
+        "displayDate": {
+          "zh-CN": "约 7 世纪",
+          "en": "c. seventh century"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-historical-record"
+      }
+    ],
+    "sourceIds": [
+      "source:daoist-historical-record",
+      "source:editorial-method"
+    ],
+    "profile": {
+      "historicity": "inferred",
+      "gender": "male",
+      "canonicalNameOriginal": "成玄英",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "yan-shigu",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "颜师古",
+        "shortSummary": "颜师古连接唐初经典校订、注释实践与国家知识工程。",
+        "curatorialDescription": [
+          "他的条目用于展示文本整理并非孤立书斋活动，而与官学、版本和政治制度相关。"
+        ],
+        "researchNote": "需要补充具体校勘项目、版本沿革与制度任职的卷页级来源。",
+        "timeLabel": "581–645",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Yan Shigu",
+        "shortSummary": "Yan Shigu connects early Tang textual editing and commentary with state knowledge projects.",
+        "curatorialDescription": [
+          "His record shows that textual scholarship was not isolated study but was connected to official learning, editions and institutions."
+        ],
+        "researchNote": "Specific editorial projects, edition histories and offices still require volume- and page-level sources.",
+        "timeLabel": "581–645",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:education-classics-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "exact",
+        "startYear": 581,
+        "endYear": 645,
+        "displayDate": {
+          "zh-CN": "581–645",
+          "en": "581–645"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:education-classics-records"
+      }
+    ],
+    "sourceIds": [
+      "source:education-classics-records",
+      "source:tang-imperial-records"
+    ],
+    "profile": {
+      "historicity": "documented",
+      "gender": "male",
+      "canonicalNameOriginal": "颜师古",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "jizang",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "吉藏",
+        "shortSummary": "吉藏的讲学与注疏活动为隋唐之际佛教思想、文本解释和城市网络提供案例。",
+        "curatorialDescription": [
+          "条目强调人物、著述与机构环境的连接，并保留宗派标签形成史中的复杂性。"
+        ],
+        "researchNote": "具体行迹、著作版本和宗派归属表述需继续核对佛教传记与目录资料。",
+        "timeLabel": "549–623",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Jizang",
+        "shortSummary": "Jizang's teaching and commentary provide a case for Buddhist thought, textual interpretation and urban networks across the Sui–Tang transition.",
+        "curatorialDescription": [
+          "The record links figure, writings and institutions while preserving the complexity of later school labels."
+        ],
+        "researchNote": "Itinerary, textual editions and school attribution still require verification in Buddhist biographies and catalogues.",
+        "timeLabel": "549–623",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-biographical-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "exact",
+        "startYear": 549,
+        "endYear": 623,
+        "displayDate": {
+          "zh-CN": "549–623",
+          "en": "549–623"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-biographical-records"
+      }
+    ],
+    "sourceIds": [
+      "source:buddhist-biographical-records",
+      "source:buddhist-institutional-records"
+    ],
+    "profile": {
+      "historicity": "documented",
+      "gender": "male",
+      "canonicalNameOriginal": "吉藏",
+      "nameLanguageCode": "lzh"
+    }
+  }
+]

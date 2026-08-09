@@ -1,0 +1,105 @@
+{
+  "kind": "event",
+  "slug": "sui-unification",
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed",
+  "primaryEvidenceLayer": "historical_documented",
+  "importance": 4,
+  "isFeatured": true,
+  "translations": {
+    "zh-CN": {
+      "title": "隋朝建立与统一进程",
+      "subtitle": "时间切片的起点之一",
+      "shortSummary": "隋朝建立和统一进程为隋唐制度、都城和知识网络的时间轴提供政治背景。",
+      "curatorialDescription": [
+        "事件条目只提供年代和制度背景，不把政治统一直接解释为三教融合或城市生活的单一原因。"
+      ],
+      "researchNote": "需要分拆建国、统一、都城变迁和制度改革等事件，并分别绑定正史与考古地理来源。",
+      "timeLabel": "581 起",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "事件类型",
+            "en": "Event type"
+          },
+          "value": {
+            "zh-CN": "政权建立与统一进程",
+            "en": "State formation and unification process"
+          }
+        }
+      ]
+    },
+    "en": {
+      "title": "The founding and unification of the Sui",
+      "subtitle": "One starting point for the time slice",
+      "shortSummary": "The founding and unification of the Sui provides political context for Sui–Tang institutions, capitals and networks of knowledge.",
+      "curatorialDescription": [
+        "The event record supplies dates and institutional context; it does not treat political unification as a single cause of religious convergence or urban life."
+      ],
+      "researchNote": "Founding, unification, capital changes and reforms need to be split into separate events with official-history and geographic sources.",
+      "timeLabel": "From 581",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "事件类型",
+            "en": "Event type"
+          },
+          "value": {
+            "zh-CN": "政权建立与统一进程",
+            "en": "State formation and unification process"
+          }
+        }
+      ]
+    }
+  },
+  "traditions": [
+    {
+      "tradition": "buddhism",
+      "role": "comparative_only",
+      "isPrimary": true,
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:tang-imperial-records"
+    },
+    {
+      "tradition": "daoism",
+      "role": "comparative_only",
+      "isPrimary": false,
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:tang-imperial-records"
+    },
+    {
+      "tradition": "confucianism",
+      "role": "comparative_only",
+      "isPrimary": false,
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:tang-imperial-records"
+    }
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "founding",
+      "timeType": "exact",
+      "startYear": 581,
+      "displayDate": {
+        "zh-CN": "581",
+        "en": "581"
+      },
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:tang-imperial-records"
+    }
+  ],
+  "sourceIds": [
+    "source:tang-imperial-records",
+    "source:historical-geography"
+  ],
+  "profile": {
+    "eventKind": "dynastic_transition",
+    "historicity": "documented",
+    "sequenceOrder": 1,
+    "eventScope": "imperial"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "text_version",
+  "slug": "daoist-institutional-records-research",
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed",
+  "primaryEvidenceLayer": "historical_inferred",
+  "importance": 2,
+  "isFeatured": false,
+  "translations": {
+    "zh-CN": {
+      "title": "隋唐道教制度研究资料集（待编目）",
+      "subtitle": "研究档案的版本占位",
+      "shortSummary": "该版本是研究资料集合的编目占位，提醒编辑团队未来必须替换成可引用的具体文本或档案。",
+      "curatorialDescription": ["它不会在正式发布中被当作古代原典；版本层的存在本身是为了让研究缺口可见。"],
+      "researchNote": "必须补充具体古籍、碑刻、研究专著、整理者和访问权限后，才能进入可发布状态。",
+      "timeLabel": "研究档案；不是古代单一版本",
+      "keyFacts": [{ "label": { "zh-CN": "版本类型", "en": "Version type" }, "value": { "zh-CN": "研究资料集", "en": "Research collection" } }]
+    },
+    "en": {
+      "title": "Sui–Tang Daoist institutional research collection",
+      "subtitle": "A version placeholder for a research archive",
+      "shortSummary": "This version is a catalogue placeholder that reminds the editorial team to replace the collection with citable texts or records.",
+      "curatorialDescription": ["It will not be presented as an ancient primary classic in a public release; the version layer makes the research gap visible."],
+      "researchNote": "Specific texts, inscriptions, studies, editors and access rights must be added before publishable status.",
+      "timeLabel": "Research archive; not one ancient version",
+      "keyFacts": [{ "label": { "zh-CN": "版本类型", "en": "Version type" }, "value": { "zh-CN": "研究资料集", "en": "Research collection" } }]
+    }
+  },
+  "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:daoist-historical-record" }],
+  "temporalAssertions": [{ "predicate": "research_scope", "timeType": "atemporal", "displayDate": { "zh-CN": "研究档案；不是古代单一版本", "en": "Research archive; not one ancient version" }, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:daoist-historical-record" }],
+  "sourceIds": ["source:daoist-historical-record"],
+  "profile": { "textSlug": "daoist-institutional-records", "versionKind": "digital_edition", "languageCode": "zh", "citationLabel": "隋唐道教制度研究资料集（待编目）", "rightsStatus": "external_reference_only" }
+}

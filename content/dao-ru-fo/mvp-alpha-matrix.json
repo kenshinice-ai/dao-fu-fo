@@ -1,0 +1,53 @@
+{
+  "id": "dao-ru-fo-lean-alpha",
+  "contentVersion": "2026.08.alpha.1",
+  "releaseStage": "lean-alpha",
+  "targetSemantics": "minimum",
+  "scope": {
+    "exhibition": "chang-an-three-traditions",
+    "timeStart": 581,
+    "timeEnd": 907,
+    "geographies": ["长安", "洛阳", "敦煌"]
+  },
+  "targets": {
+    "figure": 9,
+    "text": 6,
+    "concept": 6,
+    "schoolOrInstitution": 6,
+    "place": 9,
+    "event": 15,
+    "route": 2,
+    "museumObject": 9,
+    "passage": 12,
+    "audio": 3,
+    "relation": 30,
+    "exhibitionSection": 4
+  },
+  "current": {
+    "figure": 9,
+    "text": 6,
+    "concept": 6,
+    "schoolOrInstitution": 6,
+    "place": 9,
+    "event": 15,
+    "route": 2,
+    "museumObject": 9,
+    "passage": 12,
+    "audio": 3,
+    "relation": 30,
+    "exhibitionSection": 5
+  },
+  "completionRules": [
+    "All public entities must pass bilingual, source, temporal and review-state validation.",
+    "Every passage must point to a text and a specific text version.",
+    "Real places may carry coordinates only when the source record supports the geographic claim.",
+    "Sacred or symbolic geography belongs to the cosmos layer and must not be assigned false coordinates.",
+    "The first viewable prototype may ship preview content; Lean Public requires publishable content and rights clearance."
+  ],
+  "nextBatch": [
+    "Replace object placeholders with institution, accession, provenance and image-rights records.",
+    "Upgrade source locators from topic-level research entries to edition, volume, page or catalogue identifiers.",
+    "Record and clear the three audio assets, then promote reviewed content through public and publishable states.",
+    "Connect compiler artifacts to the production web data contract after Public gate review."
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "kind": "figure",
+  "slug": "sima-chengzhen",
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed",
+  "primaryEvidenceLayer": "historical_documented",
+  "importance": 4,
+  "isFeatured": true,
+  "translations": {
+    "zh-CN": {
+      "title": "司马承祯",
+      "subtitle": "道教上清传统的代表人物",
+      "shortSummary": "司马承祯连接山林修炼、道教法脉与唐代皇室对宗教人物的吸纳。",
+      "curatorialDescription": [
+        "司马承祯让我们看到，道教并不是抽象的哲学标签，也不是单一的宫廷制度，而是由人物、山岳、法脉、经典和皇室关系共同组成的历史网络。",
+        "他的条目需要同时呈现历史活动、传统身份和后世记忆，不能只用一条生平年份替代复杂的传统时间。"
+      ],
+      "researchNote": "本条目为 Alpha 结构化样本，后续需要补充法脉、宫观和具体诏见记录的版本化来源。",
+      "timeLabel": "647–735",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "传统关联",
+            "en": "Tradition"
+          },
+          "value": {
+            "zh-CN": "道教上清传统",
+            "en": "Shangqing Daoist tradition"
+          }
+        },
+        {
+          "label": {
+            "zh-CN": "空间线索",
+            "en": "Spatial thread"
+          },
+          "value": {
+            "zh-CN": "山岳与宫观网络",
+            "en": "Mountain and institutional networks"
+          }
+        }
+      ]
+    },
+    "en": {
+      "title": "Sima Chengzhen",
+      "subtitle": "A representative figure of the Shangqing Daoist tradition",
+      "shortSummary": "Sima Chengzhen connects mountain cultivation, Daoist lineages and Tang imperial patronage.",
+      "curatorialDescription": [
+        "Sima Chengzhen shows why Daoism cannot be reduced either to an abstract philosophy or to a single court institution. It was a historical network of people, mountains, lineages, texts and imperial relationships.",
+        "His entry must distinguish documented activity, traditional identity and later memory rather than replacing this complexity with one biographical date."
+      ],
+      "researchNote": "This Alpha structured sample still needs versioned references for lineage, institutions and court encounters.",
+      "timeLabel": "647–735",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "传统关联",
+            "en": "Tradition"
+          },
+          "value": {
+            "zh-CN": "道教上清传统",
+            "en": "Shangqing Daoist tradition"
+          }
+        },
+        {
+          "label": {
+            "zh-CN": "空间线索",
+            "en": "Spatial thread"
+          },
+          "value": {
+            "zh-CN": "山岳与宫观网络",
+            "en": "Mountain and institutional networks"
+          }
+        }
+      ]
+    }
+  },
+  "traditions": [
+    {
+      "tradition": "daoism",
+      "role": "primary",
+      "isPrimary": true,
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:daoist-historical-record"
+    }
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "activity",
+      "timeType": "exact",
+      "startYear": 647,
+      "endYear": 735,
+      "displayDate": {
+        "zh-CN": "647–735",
+        "en": "647–735"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:daoist-historical-record"
+    }
+  ],
+  "sourceIds": [
+    "source:daoist-historical-record",
+    "source:editorial-method"
+  ],
+  "profile": {
+    "historicity": "documented",
+    "gender": "male",
+    "canonicalNameOriginal": "司马承祯",
+    "nameLanguageCode": "lzh"
+  }
+}

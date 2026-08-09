@@ -1,0 +1,72 @@
+{
+  "locale": "en",
+  "eyebrow": "Digital exhibition · spatiotemporal knowledge",
+  "heroTitle": "Three paths, one civilisational museum",
+  "heroLead": "Begin in Sui–Tang Chang'an: follow Daoist mountains, institutions and court connections; Confucian ritual and education; and Buddhist translation and transmission—then return to texts, figures and evidence.",
+  "primaryAction": "Enter the Chang'an exhibition",
+  "secondaryAction": "Explore freely",
+  "todayLabel": "Passage of the day",
+  "todayPassage": {
+    "quote": "Form is not different from emptiness; emptiness is not different from form.",
+    "interpretation": "The line does not dismiss reality. It challenges the idea that things possess an isolated and unchanging essence.",
+    "source": "Heart Sutra · T0251",
+    "slug": "form-is-emptiness"
+  },
+  "exhibition": {
+    "slug": "changan-three-traditions",
+    "title": "Chang'an: Where the Three Traditions Met",
+    "subtitle": "长安：三教相遇的世界之都",
+    "question": "Why did one empire draw on Daoist institutions, Confucian ritual order and Buddhist teaching at the same time?",
+    "sections": 5,
+    "minutes": 12
+  },
+  "traditions": [
+    {
+      "slug": "daoism",
+      "label": "Dao",
+      "subtitle": "道",
+      "statement": "Follow texts, mountains, institutions and lineages to distinguish Daoist thought from organised Daoism.",
+      "counts": {
+        "figures": 1,
+        "texts": 1,
+        "passages": 1
+      },
+      "focusEntity": {
+        "kind": "figure",
+        "slug": "sima-chengzhen"
+      }
+    },
+    {
+      "slug": "confucianism",
+      "label": "Ru",
+      "subtitle": "儒",
+      "statement": "Follow ritual, classical learning and state education to see Confucian traditions embedded in imperial institutions.",
+      "counts": {
+        "figures": 1,
+        "texts": 2,
+        "passages": 1
+      },
+      "focusEntity": {
+        "kind": "figure",
+        "slug": "kong-yingda"
+      }
+    },
+    {
+      "slug": "buddhism",
+      "label": "Buddhism",
+      "subtitle": "佛",
+      "statement": "Follow pilgrimage, translation and monasteries to see how an imported tradition found new forms in China.",
+      "counts": {
+        "figures": 1,
+        "texts": 1,
+        "passages": 1
+      },
+      "focusEntity": {
+        "kind": "figure",
+        "slug": "xuanzang"
+      }
+    }
+  ],
+  "methodologyTitle": "History, tradition and myth do not share one label",
+  "methodologyText": "Key content separates documented evidence, traditional accounts and interpretation; real geography is separated from sacred geography; passages retain a version and locator."
+}

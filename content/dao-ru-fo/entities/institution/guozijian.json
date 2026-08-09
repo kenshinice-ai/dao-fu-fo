@@ -1,0 +1,91 @@
+{
+  "kind": "institution",
+  "slug": "guozijian",
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed",
+  "primaryEvidenceLayer": "historical_documented",
+  "importance": 4,
+  "isFeatured": false,
+  "translations": {
+    "zh-CN": {
+      "title": "国子监",
+      "subtitle": "经典教育与国家知识制度的机构入口",
+      "shortSummary": "国子监使《五经》、经学注疏、考试和国家教育制度进入同一条可追踪的机构线索。",
+      "curatorialDescription": [
+        "从国子监出发，观众可以把孔颖达和《五经正义》放回制度环境，而不是只看成个人学术成就。",
+        "机构条目保留教育与政治功能的双重性，具体校舍、官职和制度沿革需要按时期拆分。"
+      ],
+      "researchNote": "需要核对唐代国子监的制度沿革、具体地点、课程和《五经正义》的编纂与传播关系。",
+      "timeLabel": "隋唐教育制度重点：581–907",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "机构类型",
+            "en": "Institution type"
+          },
+          "value": {
+            "zh-CN": "国家教育机构",
+            "en": "State educational institution"
+          }
+        }
+      ]
+    },
+    "en": {
+      "title": "Guozijian",
+      "subtitle": "An institutional entry into classical education and state knowledge",
+      "shortSummary": "The Guozijian connects the Five Classics, commentary, examination and state education within a traceable institutional line.",
+      "curatorialDescription": [
+        "Starting from the Guozijian places Kong Yingda and the Corrected Meanings within an institutional setting rather than presenting them only as individual scholarship.",
+        "The record keeps the institution's educational and political functions visible; buildings, offices and reforms require period-specific records."
+      ],
+      "researchNote": "Tang institutional changes, exact location, curriculum and the compilation and circulation of the Corrected Meanings still need verification.",
+      "timeLabel": "Sui–Tang educational focus: 581–907",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "机构类型",
+            "en": "Institution type"
+          },
+          "value": {
+            "zh-CN": "国家教育机构",
+            "en": "State educational institution"
+          }
+        }
+      ]
+    }
+  },
+  "traditions": [
+    {
+      "tradition": "confucianism",
+      "role": "primary",
+      "isPrimary": true,
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:education-classics-records"
+    }
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "institutional_scope",
+      "timeType": "range",
+      "startYear": 581,
+      "endYear": 907,
+      "displayDate": {
+        "zh-CN": "隋唐教育制度重点：581–907",
+        "en": "Sui–Tang educational focus: 581–907"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:education-classics-records"
+    }
+  ],
+  "sourceIds": [
+    "source:education-classics-records",
+    "source:confucian-commentarial-record",
+    "source:historical-geography"
+  ],
+  "profile": {
+    "institutionKind": "state_academy",
+    "networkScope": false
+  }
+}

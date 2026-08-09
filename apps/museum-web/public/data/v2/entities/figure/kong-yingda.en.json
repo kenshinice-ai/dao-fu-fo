@@ -1,0 +1,31 @@
+{
+  "locale": "en",
+  "kind": "figure",
+  "slug": "kong-yingda",
+  "title": "Kong Yingda",
+  "subtitle": "574–648 · early Tang classical scholar",
+  "tradition": "confucianism",
+  "evidence": "Historically documented",
+  "timeLabel": "574–648",
+  "shortSummary": "Kong Yingda connects classical interpretation, collaborative compilation and state education, showing Confucian learning as both intellectual tradition and institutional project.",
+  "curatorialDescription": [
+    "The classical project associated with Kong Yingda brought interpretation into a state undertaking. It did not merely preserve older texts; it made choices among commentarial traditions, standardised readings and educational uses.",
+    "The museum models figure, text, commentary and institution separately. This allows visitors to ask who compiled, which versions were used and where the work entered education.",
+    "His case also shows why Confucian traditions cannot be reduced to private ethics. Ritual order, schools, officials and textual interpretation all shaped historical influence."
+  ],
+  "researchNote": "The compilation, revision and official circulation of the Correct Meaning involved multiple participants and stages. The first release uses approximate dates and does not present the project as a single-author book.",
+  "keyFacts": [
+    { "label": "Core field", "value": "classical learning · commentary · state education" },
+    { "label": "Related text", "value": "Correct Meaning of the Five Classics" },
+    { "label": "Evidence discipline", "value": "collaborative project, not sole authorship" }
+  ],
+  "related": [
+    { "kind": "text", "slug": "correct-meaning-five-classics", "title": "Correct Meaning of the Five Classics", "relation": "led and participated in compilation" },
+    { "kind": "concept", "slug": "ritual", "title": "Ritual", "relation": "classical and institutional theme" },
+    { "kind": "place", "slug": "imperial-academy-changan", "title": "Imperial Academy, Chang'an", "relation": "state educational context" }
+  ],
+  "sources": [
+    { "title": "Old Book of Tang", "locator": "biography of Kong Yingda", "grade": "A", "role": "biography and classical scholarship" },
+    { "title": "Prefaces to the Correct Meaning and studies of Tang classical learning", "locator": "compilation and circulation", "grade": "B", "role": "textual project and state education; full edition details pending" }
+  ]
+}

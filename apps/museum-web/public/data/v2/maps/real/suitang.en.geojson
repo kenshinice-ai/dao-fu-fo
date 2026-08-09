@@ -1,0 +1,96 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "place:changan",
+      "geometry": { "type": "Point", "coordinates": [108.942, 34.261] },
+      "properties": {
+        "slug": "changan",
+        "title": "Chang'an",
+        "placeType": "Imperial capital",
+        "confidence": "Approximate urban centre",
+        "tradition": "convergence",
+        "summary": "A major meeting point for Tang politics, education, translation and religious institutions."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "place:great-cien-monastery",
+      "geometry": { "type": "Point", "coordinates": [108.964, 34.218] },
+      "properties": {
+        "slug": "great-cien-monastery",
+        "title": "Great Ci'en Monastery",
+        "placeType": "Buddhist monastic site",
+        "confidence": "Historical location",
+        "tradition": "buddhism",
+        "summary": "Closely connected with Xuanzang's translation work and the history of the Great Wild Goose Pagoda."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "place:louguantai",
+      "geometry": { "type": "Point", "coordinates": [108.318, 34.056] },
+      "properties": {
+        "slug": "louguantai",
+        "title": "Louguantai",
+        "placeType": "Historical Daoist site",
+        "confidence": "Historical location",
+        "tradition": "daoism",
+        "summary": "An important Daoist site on the northern side of Mount Zhongnan, with both historical and traditional layers."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "place:imperial-academy-changan",
+      "geometry": { "type": "Point", "coordinates": [108.953, 34.274] },
+      "properties": {
+        "slug": "imperial-academy-changan",
+        "title": "Imperial Academy, Chang'an",
+        "placeType": "State educational site",
+        "confidence": "Approximate urban location",
+        "tradition": "confucianism",
+        "summary": "A gateway into the relationship between classical texts, education and state institutions."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "place:luoyang",
+      "geometry": { "type": "Point", "coordinates": [112.454, 34.62] },
+      "properties": {
+        "slug": "luoyang",
+        "title": "Luoyang",
+        "placeType": "Eastern capital",
+        "confidence": "Approximate urban centre",
+        "tradition": "convergence",
+        "summary": "Another key city in political, religious and transport networks."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "place:dunhuang",
+      "geometry": { "type": "Point", "coordinates": [94.662, 40.142] },
+      "properties": {
+        "slug": "dunhuang",
+        "title": "Dunhuang",
+        "placeType": "Route and cave-temple network",
+        "confidence": "Approximate urban centre",
+        "tradition": "buddhism",
+        "summary": "A major node linking the Central Plains, Central Asian routes and Buddhist visual culture."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "place:mount-wutai",
+      "geometry": { "type": "Point", "coordinates": [113.596, 39.007] },
+      "properties": {
+        "slug": "mount-wutai",
+        "title": "Mount Wutai",
+        "placeType": "Buddhist sacred mountain and pilgrimage place",
+        "confidence": "Mountain region",
+        "tradition": "buddhism",
+        "summary": "The museum separates its real mountain geography from the sacred meanings associated with Mañjuśrī."
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "audio:welcome-to-changan",
+    "title": { "zh-CN": "欢迎来到长安：三教相遇的城市", "en": "Welcome to Chang'an: a city of encounters" },
+    "description": { "zh-CN": "展览入口音频脚本，说明现实地图、传统层与研究层如何并置。", "en": "An entrance script explaining how real geography, traditional layers and research layers are placed together." },
+    "durationSeconds": 150,
+    "transcript": { "zh-CN": "欢迎来到长安。这里不寻找一个把道、儒、佛融成一体的答案，而是观察它们如何在城市、制度、文本和人的移动中相遇。", "en": "Welcome to Chang'an. We are not looking for an answer that fuses Dao, Ru and Fo into one. We are observing how they met through cities, institutions, texts and movement." },
+    "assetStatus": "not_recorded",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "rightsStatus": "unknown",
+    "sourceIds": ["source:editorial-method", "source:historical-geography"]
+  },
+  {
+    "id": "audio:reading-form-and-emptiness",
+    "title": { "zh-CN": "段落朗读：色与空", "en": "Passage reading: form and emptiness" },
+    "description": { "zh-CN": "《心经》段落的朗读脚本；正式录音前需完成版本、断句和语音审校。", "en": "A reading script for a Heart Sutra passage; version, punctuation and pronunciation review precede recording." },
+    "durationSeconds": 90,
+    "transcript": { "zh-CN": "本段朗读以明确版本为起点。请先看原文与定位，再听解释；声音不会替代文本证据。", "en": "This reading begins from an explicit version. See the wording and locator before listening to the interpretation; sound does not replace textual evidence." },
+    "assetStatus": "not_recorded",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "rightsStatus": "unknown",
+    "sourceIds": ["source:heart-sutra-edition", "source:editorial-method"]
+  },
+  {
+    "id": "audio:how-to-read-evidence",
+    "title": { "zh-CN": "如何阅读证据层", "en": "How to read evidence layers" },
+    "description": { "zh-CN": "研究层导览脚本，解释历史记录、传统叙事、象征层和学术解释的区别。", "en": "A research-layer guide distinguishing historical records, traditional narratives, symbolic layers and scholarly interpretation." },
+    "durationSeconds": 180,
+    "transcript": { "zh-CN": "当页面写着历史记录、传统叙事或象征层时，它们不是同一个证据等级。请打开来源面板，查看每个判断从哪里来、还缺什么。", "en": "Historical record, traditional narrative and symbolic layer are not the same evidence grade. Open the source panel to see where each claim comes from and what is still missing." },
+    "assetStatus": "not_recorded",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "rightsStatus": "unknown",
+    "sourceIds": ["source:editorial-method"]
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "kind": "passage", "slug": "dao-that-can-be-spoken", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_inferred", "importance": 5, "isFeatured": true,
+    "translations": {
+      "zh-CN": { "title": "道可道，非常道", "shortSummary": "《道德经》开篇以语言、命名与恒常之间的张力建立阅读问题。", "curatorialDescription": ["段落不被处理成拒绝语言的口号，而与版本、章次和后续注释一起展示。"], "researchNote": "Alpha 暂据通行本，需补出土本异文和唐代注本。", "timeLabel": "传世本第一章", "keyFacts": [], "quote": { "original": "道可道，非常道；名可名，非常名。", "interpretation": { "zh-CN": "可说、可名与恒常之间的张力是本章的起点。", "en": "The chapter opens with a tension between what can be spoken or named and what is constant." }, "locator": "《道德经》第一章" } },
+      "en": { "title": "A Dao that can be spoken", "shortSummary": "The opening of the Daodejing frames a problem among language, naming and constancy.", "curatorialDescription": ["The passage is not reduced to an anti-language slogan; it is shown with edition, chapter and commentarial context."], "researchNote": "The Alpha text follows a received edition; excavated variants and Tang commentaries remain to be added.", "timeLabel": "Received text, chapter 1", "keyFacts": [], "quote": { "original": "道可道，非常道；名可名，非常名。", "interpretation": { "zh-CN": "可说、可名与恒常之间的张力是本章的起点。", "en": "The chapter opens with a tension between what can be spoken or named and what is constant." }, "locator": "Daodejing 1" } }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:daodejing-edition" }],
+    "temporalAssertions": [{ "predicate": "textual_attestation", "timeType": "range", "startYear": -200, "endYear": 220, "displayDate": { "zh-CN": "传世本第一章", "en": "Received text, chapter 1" }, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:daodejing-edition" }],
+    "sourceIds": ["source:daodejing-edition", "source:editorial-method"], "related": [{ "kind": "text", "slug": "daodejing", "title": { "zh-CN": "《道德经》", "en": "Daodejing" }, "relation": { "zh-CN": "摘录自", "en": "Excerpt from" } }],
+    "profile": { "textSlug": "daodejing", "textVersionSlug": "daodejing-received", "passageKind": "classic_saying", "locatorOriginal": "第一章", "locatorNormalised": "Daodejing 1", "originalText": "道可道，非常道；名可名，非常名。", "punctuatedText": "道可道，非常道；名可名，非常名。", "modernZh": "能够说出的道，不是恒常的道；能够命名的名，不是恒常的名。", "translationEn": "A Dao that can be spoken is not the constant Dao; a name that can be named is not the constant name.", "ritualSensitivity": "public_textual" }
+  },
+  {
+    "kind": "passage", "slug": "highest-good-like-water", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_inferred", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "上善若水", "shortSummary": "水的比喻把利物、不争与处下联系起来，是一组关系性描述。", "curatorialDescription": ["页面保留完整句群，避免只截取四字格言。"], "researchNote": "需补版本异文与主要注本对“善”“不争”“处下”的解释。", "timeLabel": "传世本第八章", "keyFacts": [] },
+      "en": { "title": "Highest goodness is like water", "shortSummary": "The water metaphor connects benefiting things, non-contention and dwelling in low places as relational qualities.", "curatorialDescription": ["The full sentence group is retained instead of extracting a four-character maxim."], "researchNote": "Variants and major commentaries on goodness, non-contention and low position remain to be added.", "timeLabel": "Received text, chapter 8", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:daodejing-edition" }],
+    "temporalAssertions": [{ "predicate": "textual_attestation", "timeType": "range", "startYear": -200, "endYear": 220, "displayDate": { "zh-CN": "传世本第八章", "en": "Received text, chapter 8" }, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:daodejing-edition" }],
+    "sourceIds": ["source:daodejing-edition"], "related": [{ "kind": "text", "slug": "daodejing", "title": { "zh-CN": "《道德经》", "en": "Daodejing" }, "relation": { "zh-CN": "摘录自", "en": "Excerpt from" } }],
+    "profile": { "textSlug": "daodejing", "textVersionSlug": "daodejing-received", "passageKind": "classic_saying", "locatorOriginal": "第八章", "locatorNormalised": "Daodejing 8", "originalText": "上善若水。水善利万物而不争，处众人之所恶，故几于道。", "punctuatedText": "上善若水。水善利万物而不争，处众人之所恶，故几于道。", "modernZh": "最高的善像水：滋养万物而不争，处在众人不愿处的位置，所以接近于道。", "translationEn": "Highest goodness is like water. Water benefits all things without contention and dwells where people dislike; thus it is close to the Dao.", "ritualSensitivity": "public_textual" }
+  },
+  {
+    "kind": "passage", "slug": "learning-increases-dao-decreases", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_inferred", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "为学日益，为道日损", "shortSummary": "章句以“益”与“损”对照学习积累和趋向无为的实践方向。", "curatorialDescription": ["“损”不被简单译成反知识，而需在整章和注释传统中理解。"], "researchNote": "需补通行本异文、注本和英译比较。", "timeLabel": "传世本第四十八章", "keyFacts": [] },
+      "en": { "title": "In learning one increases; in the Dao one decreases", "shortSummary": "The passage contrasts accumulation in learning with a practice of decreasing toward non-forcing.", "curatorialDescription": ["Decrease is not rendered simply as opposition to knowledge; it must be read within the chapter and commentarial traditions."], "researchNote": "Received variants, commentaries and translation comparison remain to be added.", "timeLabel": "Received text, chapter 48", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:daodejing-edition" }],
+    "temporalAssertions": [{ "predicate": "textual_attestation", "timeType": "range", "startYear": -200, "endYear": 220, "displayDate": { "zh-CN": "传世本第四十八章", "en": "Received text, chapter 48" }, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:daodejing-edition" }],
+    "sourceIds": ["source:daodejing-edition"], "related": [{ "kind": "text", "slug": "daodejing", "title": { "zh-CN": "《道德经》", "en": "Daodejing" }, "relation": { "zh-CN": "摘录自", "en": "Excerpt from" } }],
+    "profile": { "textSlug": "daodejing", "textVersionSlug": "daodejing-received", "passageKind": "classic_saying", "locatorOriginal": "第四十八章", "locatorNormalised": "Daodejing 48", "originalText": "为学日益，为道日损。损之又损，以至于无为。无为而无不为。", "punctuatedText": "为学日益，为道日损。损之又损，以至于无为。无为而无不为。", "modernZh": "求学每日增加，行道每日减损；减损又减损，直到无为，而无为并非无所成就。", "translationEn": "In learning one increases daily; in the Dao one decreases daily, decreasing until non-forcing, through which nothing is left undone.", "ritualSensitivity": "public_textual" }
+  },
+  {
+    "kind": "passage", "slug": "learn-and-practice", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_inferred", "importance": 5, "isFeatured": true,
+    "translations": {
+      "zh-CN": { "title": "学而时习之", "shortSummary": "《论语》开篇把学习、按时践习与愉悦联系起来。", "curatorialDescription": ["“习”同时保留复习、实践与养成的解释空间，不固定为单一现代学习法。"], "researchNote": "需补古注、唐代经学注疏和英译差异。", "timeLabel": "传世本《学而》篇", "keyFacts": [] },
+      "en": { "title": "To learn and practise at due times", "shortSummary": "The Analects opens by connecting learning, repeated practice and pleasure.", "curatorialDescription": ["Xi retains space for review, enactment and habituation rather than becoming one modern study technique."], "researchNote": "Early commentary, Tang classical exegesis and translation variants remain to be added.", "timeLabel": "Received text, Xue Er", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "confucianism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_inferred", "sourceId": "source:analects-edition" }],
+    "temporalAssertions": [{ "predicate": "textual_attestation", "timeType": "range", "startYear": -200, "endYear": 220, "displayDate": { "zh-CN": "传世本《学而》篇", "en": "Received text, Xue Er" }, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:analects-edition" }],
+    "sourceIds": ["source:analects-edition"], "related": [{ "kind": "text", "slug": "analects", "title": { "zh-CN": "《论语》", "en": "Analects" }, "relation": { "zh-CN": "摘录自", "en": "Excerpt from" } }],
+    "profile": { "textSlug": "analects", "textVersionSlug": "analects-received", "passageKind": "classic_saying", "locatorOriginal": "学而篇", "locatorNormalised": "Analects 1.1", "originalText": "学而时习之，不亦说乎？", "punctuatedText": "学而时习之，不亦说乎？", "modernZh": "学习并按时温习和践行，不也是令人愉悦的吗？", "translationEn": "To learn and practise at due times—is this not a pleasure?", "ritualSensitivity": "public_textual" }
+  },
+  {
+    "kind": "passage", "slug": "three-walk-together", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_inferred", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "三人行，必有我师焉", "shortSummary": "章句把学习置于与他人同行、辨别优点并反省自身的关系中。", "curatorialDescription": ["完整句群同时包含效法与自我修正，不只是一句赞美谦逊的格言。"], "researchNote": "篇章编号、古注和唐代解释需进一步核对。", "timeLabel": "传世本《述而》篇", "keyFacts": [] },
+      "en": { "title": "When three walk together, there is surely a teacher for me", "shortSummary": "The saying places learning in companionship, discernment of strengths and self-correction.", "curatorialDescription": ["The full passage includes both emulation and correction, not only a maxim about humility."], "researchNote": "Chapter numbering, early commentary and Tang interpretation require further verification.", "timeLabel": "Received text, Shu Er", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "confucianism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_inferred", "sourceId": "source:analects-edition" }],
+    "temporalAssertions": [{ "predicate": "textual_attestation", "timeType": "range", "startYear": -200, "endYear": 220, "displayDate": { "zh-CN": "传世本《述而》篇", "en": "Received text, Shu Er" }, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:analects-edition" }],
+    "sourceIds": ["source:analects-edition"], "related": [{ "kind": "text", "slug": "analects", "title": { "zh-CN": "《论语》", "en": "Analects" }, "relation": { "zh-CN": "摘录自", "en": "Excerpt from" } }],
+    "profile": { "textSlug": "analects", "textVersionSlug": "analects-received", "passageKind": "classic_saying", "locatorOriginal": "述而篇", "locatorNormalised": "Analects 7.22", "originalText": "三人行，必有我师焉。择其善者而从之，其不善者而改之。", "punctuatedText": "三人行，必有我师焉。择其善者而从之，其不善者而改之。", "modernZh": "多人同行，其中一定有可作为我老师的人；选择其优点学习，见到不足则反省并改正自己。", "translationEn": "When three walk together, there is surely a teacher for me: I follow what is good in them and correct in myself what is not.", "ritualSensitivity": "public_textual" }
+  },
+  {
+    "kind": "passage", "slug": "do-not-impose", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_inferred", "importance": 5, "isFeatured": true,
+    "translations": {
+      "zh-CN": { "title": "己所不欲，勿施于人", "shortSummary": "这句回答把“恕”表达为从自身不愿承受之事出发约束对待他人的方式。", "curatorialDescription": ["段落保留问答和德目语境，不把它脱离关系伦理改写为孤立口号。"], "researchNote": "需补《卫灵公》篇语境、古注和唐代注疏。", "timeLabel": "传世本《卫灵公》篇", "keyFacts": [] },
+      "en": { "title": "Do not impose on others what you do not desire", "shortSummary": "The answer expresses shu as restraint in treating others, beginning from what one would not wish to bear oneself.", "curatorialDescription": ["The passage remains in its question-and-virtue context rather than becoming an isolated slogan detached from relational ethics."], "researchNote": "The Wei Ling Gong context, early commentary and Tang exegesis remain to be added.", "timeLabel": "Received text, Wei Ling Gong", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "confucianism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_inferred", "sourceId": "source:analects-edition" }],
+    "temporalAssertions": [{ "predicate": "textual_attestation", "timeType": "range", "startYear": -200, "endYear": 220, "displayDate": { "zh-CN": "传世本《卫灵公》篇", "en": "Received text, Wei Ling Gong" }, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:analects-edition" }],
+    "sourceIds": ["source:analects-edition"], "related": [{ "kind": "text", "slug": "analects", "title": { "zh-CN": "《论语》", "en": "Analects" }, "relation": { "zh-CN": "摘录自", "en": "Excerpt from" } }],
+    "profile": { "textSlug": "analects", "textVersionSlug": "analects-received", "passageKind": "classic_saying", "locatorOriginal": "卫灵公篇", "locatorNormalised": "Analects 15.24", "originalText": "己所不欲，勿施于人。", "punctuatedText": "己所不欲，勿施于人。", "modernZh": "自己不愿承受的事情，不要加在别人身上。", "translationEn": "Do not impose on others what you do not desire for yourself.", "ritualSensitivity": "public_textual" }
+  }
+]

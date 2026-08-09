@@ -1,0 +1,78 @@
+{
+  "locale": "en",
+  "title": "A Sui–Tang timeline across three traditions",
+  "startYear": 581,
+  "endYear": 907,
+  "events": [
+    {
+      "id": "event:tang-founded",
+      "year": 618,
+      "type": "exact",
+      "tradition": "convergence",
+      "title": "Foundation of the Tang dynasty",
+      "summary": "A new imperial order formed the shared political setting for ritual, monasteries, Daoist institutions and textual projects."
+    },
+    {
+      "id": "event:xuanzang-departs",
+      "year": 629,
+      "type": "circa",
+      "tradition": "buddhism",
+      "title": "Xuanzang leaves in search of Buddhist learning",
+      "summary": "His journey linked India, Central Asia and Tang China; the date follows the commonly used historical account.",
+      "entity": { "kind": "figure", "slug": "xuanzang" }
+    },
+    {
+      "id": "event:five-classics-project",
+      "year": 642,
+      "type": "circa",
+      "tradition": "confucianism",
+      "title": "State commentarial project on the Five Classics",
+      "summary": "The work associated with Kong Yingda connected classical interpretation with state education.",
+      "entity": { "kind": "text", "slug": "correct-meaning-five-classics" }
+    },
+    {
+      "id": "event:xuanzang-returns",
+      "year": 645,
+      "type": "exact",
+      "tradition": "buddhism",
+      "title": "Xuanzang returns to Chang'an",
+      "summary": "The texts he brought and the translations that followed entered Chang'an's institutional networks.",
+      "entity": { "kind": "figure", "slug": "xuanzang" }
+    },
+    {
+      "id": "event:sima-chengzhen-life",
+      "year": 647,
+      "endYear": 735,
+      "type": "range",
+      "tradition": "daoism",
+      "title": "Lifetime of Sima Chengzhen",
+      "summary": "His life connects mountain cultivation, Daoist traditions and the Tang court.",
+      "entity": { "kind": "figure", "slug": "sima-chengzhen" }
+    },
+    {
+      "id": "event:great-wild-goose-pagoda",
+      "year": 652,
+      "type": "exact",
+      "tradition": "buddhism",
+      "title": "First construction of the Great Wild Goose Pagoda",
+      "summary": "Architecture, textual preservation and the memory of Xuanzang remained connected in later reception.",
+      "entity": { "kind": "museum_object", "slug": "great-wild-goose-pagoda" }
+    },
+    {
+      "id": "event:wuzhou",
+      "year": 690,
+      "type": "exact",
+      "tradition": "convergence",
+      "title": "Foundation of the Wu Zhou dynasty",
+      "summary": "Imperial authority, Buddhist political language and established ritual order entered a new configuration."
+    },
+    {
+      "id": "event:huichang",
+      "year": 845,
+      "type": "exact",
+      "tradition": "convergence",
+      "title": "Huichang-era religious policy turn",
+      "summary": "Tensions among monastic economies, state governance and religious institutions became especially visible."
+    }
+  ]
+}

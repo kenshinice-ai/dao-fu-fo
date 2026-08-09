@@ -1,0 +1,7 @@
+{
+  "schemaVersion": "2.0",
+  "contentVersion": "2026.08.prototype.1",
+  "profile": "dao-ru-fo",
+  "locales": ["zh-CN", "en"],
+  "releaseStage": "first-viewable-prototype"
+}

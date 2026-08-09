@@ -1,0 +1,33 @@
+{
+  "kind": "museum_object",
+  "slug": "translation-bureau-tablet",
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed",
+  "primaryEvidenceLayer": "historical_inferred",
+  "importance": 3,
+  "isFeatured": false,
+  "translations": {
+    "zh-CN": {
+      "title": "译经机构碑刻记录（对象记录占位）",
+      "subtitle": "制度空间的物质证据入口",
+      "shortSummary": "对象卡尝试把译经制度从人物传记中拆出来，寻找建筑、碑刻和机构记忆的物质载体。",
+      "curatorialDescription": ["当前是对象记录占位；页面不会展示未经授权或未经确认的碑刻图像。"],
+      "researchNote": "需要绑定具体碑刻、拓片或馆藏记录，并补充年代、地点、文字释读和图像权利。",
+      "timeLabel": "对象记录待核；唐代译经制度语境",
+      "keyFacts": [{ "label": { "zh-CN": "对象类型", "en": "Object type" }, "value": { "zh-CN": "碑刻或拓片记录（待核）", "en": "Inscription or rubbing record (pending verification)" } }]
+    },
+    "en": {
+      "title": "Inscription record for a translation institution (object placeholder)",
+      "subtitle": "A material-evidence entry for institutional space",
+      "shortSummary": "The object card separates translation institutions from biography and looks for material carriers in buildings, inscriptions and institutional memory.",
+      "curatorialDescription": ["This is an object-record placeholder; no unlicensed or unconfirmed inscription image will be shown."],
+      "researchNote": "A specific inscription, rubbing or collection record, date, place, reading and image rights still need to be attached.",
+      "timeLabel": "Object record pending; Tang translation-institution context",
+      "keyFacts": [{ "label": { "zh-CN": "对象类型", "en": "Object type" }, "value": { "zh-CN": "碑刻或拓片记录（待核）", "en": "Inscription or rubbing record (pending verification)" } }]
+    }
+  },
+  "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:object-records" }],
+  "temporalAssertions": [{ "predicate": "object_date", "timeType": "century", "startYear": 600, "endYear": 899, "displayDate": { "zh-CN": "对象记录待核；唐代译经制度语境", "en": "Object record pending; Tang translation-institution context" }, "confidence": "unknown", "evidenceLayer": "historical_inferred", "sourceId": "source:object-records" }],
+  "sourceIds": ["source:object-records", "source:buddhist-institutional-records"],
+  "profile": { "objectType": "inscription_record", "rightsStatus": "unknown", "collectionStatus": "placeholder" }
+}

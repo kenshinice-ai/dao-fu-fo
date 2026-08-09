@@ -1,0 +1,33 @@
+{
+  "kind": "text",
+  "slug": "analects",
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed",
+  "primaryEvidenceLayer": "historical_inferred",
+  "importance": 5,
+  "isFeatured": true,
+  "translations": {
+    "zh-CN": {
+      "title": "《论语》",
+      "subtitle": "孔门言行与儒家经典文本",
+      "shortSummary": "《论语》通过孔子及其弟子言行保存早期儒家伦理、教育和政治讨论。",
+      "curatorialDescription": ["《论语》不是一个脱离编纂历史的单一作者文本；它在传播、注释和国家教育中不断获得新的制度语境。"],
+      "researchNote": "篇章形成、传本和注疏关系将在 text-version 与 commentary 数据中继续细化。",
+      "timeLabel": "编纂与流传：战国至汉代区间",
+      "keyFacts": [{ "label": { "zh-CN": "文本类型", "en": "Text kind" }, "value": { "zh-CN": "儒家经典", "en": "Confucian classic" } }]
+    },
+    "en": {
+      "title": "Analects",
+      "subtitle": "Sayings and actions associated with Confucius and his disciples",
+      "shortSummary": "The Analects preserves early Confucian discussions of ethics, education and politics through sayings and encounters associated with Confucius and his disciples.",
+      "curatorialDescription": ["The Analects is not a text outside compilation history. Its transmission, commentaries and use in state education gave it new institutional contexts over time."],
+      "researchNote": "Formation, editions and commentary relationships will be refined through the text-version and commentary data model.",
+      "timeLabel": "Compilation and circulation: Warring States to Han ranges",
+      "keyFacts": [{ "label": { "zh-CN": "文本类型", "en": "Text kind" }, "value": { "zh-CN": "儒家经典", "en": "Confucian classic" } }]
+    }
+  },
+  "traditions": [{ "tradition": "confucianism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:analects-edition" }],
+  "temporalAssertions": [{ "predicate": "compilation", "timeType": "range", "startYear": -475, "endYear": 220, "displayDate": { "zh-CN": "编纂与流传：战国至汉代区间", "en": "Compilation and circulation: Warring States to Han ranges" }, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:analects-edition" }],
+  "sourceIds": ["source:analects-edition", "source:editorial-method"],
+  "profile": { "textKind": "classic", "originalLanguageCode": "lzh", "canonicalStatus": "canonical", "attributionStatus": "composite" }
+}

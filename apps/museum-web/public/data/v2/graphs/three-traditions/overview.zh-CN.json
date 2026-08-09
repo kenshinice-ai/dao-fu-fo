@@ -1,0 +1,28 @@
+{
+  "locale": "zh-CN",
+  "title": "长安三传统问题图谱",
+  "question": "人物、经典与理念如何进入同一座帝国城市？",
+  "nodes": [
+    { "id": "changan", "label": "长安", "kind": "place", "tradition": "convergence", "x": 490, "y": 290, "slug": "changan" },
+    { "id": "xuanzang", "label": "玄奘", "kind": "figure", "tradition": "buddhism", "x": 230, "y": 170, "slug": "xuanzang" },
+    { "id": "heart-sutra", "label": "心经", "kind": "text", "tradition": "buddhism", "x": 140, "y": 330, "slug": "heart-sutra" },
+    { "id": "emptiness", "label": "空", "kind": "concept", "tradition": "buddhism", "x": 300, "y": 440, "slug": "emptiness" },
+    { "id": "sima", "label": "司马承祯", "kind": "figure", "tradition": "daoism", "x": 500, "y": 100, "slug": "sima-chengzhen" },
+    { "id": "daodejing", "label": "道德经", "kind": "text", "tradition": "daoism", "x": 680, "y": 160, "slug": "daodejing" },
+    { "id": "naturalness", "label": "自然", "kind": "concept", "tradition": "daoism", "x": 750, "y": 330, "slug": "naturalness" },
+    { "id": "kong", "label": "孔颖达", "kind": "figure", "tradition": "confucianism", "x": 620, "y": 450, "slug": "kong-yingda" },
+    { "id": "five-classics", "label": "五经正义", "kind": "text", "tradition": "confucianism", "x": 830, "y": 460, "slug": "correct-meaning-five-classics" },
+    { "id": "ritual", "label": "礼", "kind": "concept", "tradition": "confucianism", "x": 440, "y": 500, "slug": "ritual" }
+  ],
+  "edges": [
+    { "id": "e1", "source": "xuanzang", "target": "heart-sutra", "label": "译本传统关联", "evidence": "传统归属与文本版本需分别说明" },
+    { "id": "e2", "source": "heart-sutra", "target": "emptiness", "label": "表达核心概念", "evidence": "原典 passage" },
+    { "id": "e3", "source": "xuanzang", "target": "changan", "label": "归国后活动于", "evidence": "历史记载" },
+    { "id": "e4", "source": "sima", "target": "daodejing", "label": "属于经典解释传统", "evidence": "历史与传统资料" },
+    { "id": "e5", "source": "daodejing", "target": "naturalness", "label": "表达概念", "evidence": "《道德经》第二十五章" },
+    { "id": "e6", "source": "sima", "target": "changan", "label": "与唐代宫廷网络相连", "evidence": "历史记载" },
+    { "id": "e7", "source": "kong", "target": "five-classics", "label": "主持编纂工程", "evidence": "经学史资料" },
+    { "id": "e8", "source": "five-classics", "target": "ritual", "label": "进入礼制与教育解释", "evidence": "文本与制度语境" },
+    { "id": "e9", "source": "kong", "target": "changan", "label": "进入国家教育网络", "evidence": "历史记载" }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "kind": "text_version",
+  "slug": "heart-sutra-chinese-received",
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed",
+  "primaryEvidenceLayer": "historical_documented",
+  "importance": 4,
+  "isFeatured": false,
+  "translations": {
+    "zh-CN": { "title": "《心经》汉译通行版本", "shortSummary": "用于首批 passage 展示的汉译版本占位，具体底本仍需审校。", "curatorialDescription": ["该版本实体把作品级文本与具体可引用版本分开，避免 passage 直接悬空。"], "researchNote": "Alpha 占位；正式发布前必须补充译者、底本、卷页/行号和权利记录。", "timeLabel": "隋唐流通语境", "keyFacts": [] },
+    "en": { "title": "Received Chinese version of the Heart Sutra", "shortSummary": "A version placeholder for the first passage display; the precise edition remains under review.", "curatorialDescription": ["This version entity separates a work-level text from a citable version so that a passage is never left without a textual anchor."], "researchNote": "Alpha placeholder; translator, edition, locator and rights records are required before publication.", "timeLabel": "Sui–Tang circulation context", "keyFacts": [] }
+  },
+  "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:heart-sutra-edition" }],
+  "temporalAssertions": [{ "predicate": "textual_attestation", "timeType": "range", "startYear": 600, "endYear": 700, "displayDate": { "zh-CN": "隋唐流通语境", "en": "Sui–Tang circulation context" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:heart-sutra-edition" }],
+  "sourceIds": ["source:heart-sutra-edition"],
+  "profile": { "textSlug": "heart-sutra", "versionKind": "translation", "languageCode": "lzh", "citationLabel": "Heart Sutra Chinese received version", "rightsStatus": "public_domain" }
+}

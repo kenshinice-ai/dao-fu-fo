@@ -1,0 +1,33 @@
+{
+  "kind": "museum_object",
+  "slug": "heart-sutra-manuscript-leaf",
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed",
+  "primaryEvidenceLayer": "historical_inferred",
+  "importance": 4,
+  "isFeatured": true,
+  "translations": {
+    "zh-CN": {
+      "title": "《心经》写本残叶（对象记录占位）",
+      "subtitle": "从段落到物质载体",
+      "shortSummary": "对象卡把《心经》段落放回纸墨、书写、保存和流通的物质层，但当前尚未绑定具体馆藏。",
+      "curatorialDescription": ["这是对象记录的 Alpha 占位，不代表某一家馆藏机构已经确认该对象或授权图像。"],
+      "researchNote": "需要补充馆藏机构、编号、年代、材质、尺寸、图像权利和与具体版本的对应关系。",
+      "timeLabel": "对象记录待核；对应隋唐传播语境",
+      "keyFacts": [{ "label": { "zh-CN": "对象类型", "en": "Object type" }, "value": { "zh-CN": "写本残叶（待核）", "en": "Manuscript leaf (pending verification)" } }]
+    },
+    "en": {
+      "title": "Heart Sutra manuscript leaf (object placeholder)",
+      "subtitle": "From passage to material carrier",
+      "shortSummary": "The object card places a Heart Sutra passage within paper, ink, writing, preservation and circulation, but is not yet tied to a specific collection.",
+      "curatorialDescription": ["This is an Alpha object-record placeholder; it does not claim that a collecting institution has confirmed the object or licensed an image."],
+      "researchNote": "Institution, accession number, date, material, dimensions, image rights and version relationship still need to be added.",
+      "timeLabel": "Object record pending; Sui–Tang circulation context",
+      "keyFacts": [{ "label": { "zh-CN": "对象类型", "en": "Object type" }, "value": { "zh-CN": "写本残叶（待核）", "en": "Manuscript leaf (pending verification)" } }]
+    }
+  },
+  "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:object-records" }],
+  "temporalAssertions": [{ "predicate": "object_date", "timeType": "century", "startYear": 600, "endYear": 799, "displayDate": { "zh-CN": "对象记录待核；对应隋唐传播语境", "en": "Object record pending; Sui–Tang circulation context" }, "confidence": "unknown", "evidenceLayer": "historical_inferred", "sourceId": "source:object-records" }],
+  "sourceIds": ["source:object-records", "source:heart-sutra-edition"],
+  "profile": { "objectType": "manuscript", "rightsStatus": "unknown", "collectionStatus": "placeholder" }
+}

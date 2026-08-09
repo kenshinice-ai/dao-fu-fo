@@ -1,0 +1,43 @@
+{
+  "locale": "en",
+  "kind": "figure",
+  "slug": "xuanzang",
+  "title": "Xuanzang",
+  "subtitle": "c. 602–664 · monk, traveller and organiser of translation",
+  "tradition": "buddhism",
+  "evidence": "Historically documented",
+  "timeLabel": "c. 602–664",
+  "shortSummary": "Xuanzang connects pilgrimage, textual versions, court support and Chang'an translation institutions in one traceable chain.",
+  "curatorialDescription": [
+    "Xuanzang is often remembered primarily as a pilgrim, but the museum asks how the journey changed the movement of texts. Leaving Tang territory, travelling through Central Asia, studying in South Asia, returning to Chang'an and organising translation each involved places, companions, patrons, versions and terminological choices.",
+    "Translation was not the work of an isolated hero. The Chang'an projects depended on collaborative recitation, checking, recording and institutional support. These relations reveal how a text entered a new language and political setting.",
+    "Traditional accounts and historical research do not always describe every detail of the journey in the same way. The museum separates supportable routes, traditional narration and later literary images."
+  ],
+  "researchNote": "Sources differ on some dates and route details. The first release uses a commonly cited chronology while retaining approximation and uncertainty in the timeline and map.",
+  "keyFacts": [
+    { "label": "Primary places", "value": "Chang'an · routes through India and Central Asia" },
+    { "label": "Core roles", "value": "pilgrimage, translation, textual organisation" },
+    { "label": "Related institution", "value": "translation network at Great Ci'en Monastery" }
+  ],
+  "related": [
+    { "kind": "text", "slug": "heart-sutra", "title": "Heart Sutra", "relation": "translation tradition" },
+    { "kind": "place", "slug": "great-cien-monastery", "title": "Great Ci'en Monastery", "relation": "translation setting" },
+    { "kind": "concept", "slug": "emptiness", "title": "Emptiness", "relation": "related concept" }
+  ],
+  "sources": [
+    {
+      "title": "Encyclopaedia Britannica · Xuanzang",
+      "locator": "biographical overview",
+      "grade": "B",
+      "role": "chronology and historical overview",
+      "url": "https://www.britannica.com/biography/Xuanzang"
+    },
+    {
+      "title": "The Metropolitan Museum of Art · Buddhism in the Tang",
+      "locator": "Heilbrunn Timeline of Art History",
+      "grade": "C",
+      "role": "Tang Buddhist and visual-cultural context",
+      "url": "https://www.metmuseum.org/toah/hd/chbu/hd_chbu.htm"
+    }
+  ]
+}

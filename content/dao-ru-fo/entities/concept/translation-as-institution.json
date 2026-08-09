@@ -1,0 +1,87 @@
+{
+  "kind": "concept",
+  "slug": "translation-as-institution",
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed",
+  "primaryEvidenceLayer": "scholarly_interpretation",
+  "importance": 5,
+  "isFeatured": true,
+  "translations": {
+    "zh-CN": {
+      "title": "翻译作为制度",
+      "subtitle": "从个人语言能力到城市中的知识生产",
+      "shortSummary": "翻译不只是把词语换成另一种语言，也需要场所、人员、版本、审校和权力关系共同支撑。",
+      "curatorialDescription": [
+        "玄奘与义净的条目可以让观众看到，译经旅行如何进入长安的寺院、宫廷和知识制度。",
+        "这个概念是策展分析工具，不把所有翻译实践都压成同一种制度模型。"
+      ],
+      "researchNote": "需要将译场、参与者、底本、译经目录和具体段落逐项连到可核查来源。",
+      "timeLabel": "比较概念；隋唐重点",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "概念层",
+            "en": "Concept layer"
+          },
+          "value": {
+            "zh-CN": "知识生产与制度",
+            "en": "Knowledge production and institutions"
+          }
+        }
+      ]
+    },
+    "en": {
+      "title": "Translation as institution",
+      "subtitle": "From individual language ability to urban knowledge production",
+      "shortSummary": "Translation is not only the exchange of words; it depends on sites, people, versions, review and relations of power.",
+      "curatorialDescription": [
+        "The Xuanzang and Yijing records show how pilgrimage and translation entered the monasteries, court and knowledge institutions of Chang'an.",
+        "This is a curatorial analytic tool, not a claim that every translation practice followed one institutional model."
+      ],
+      "researchNote": "Translation bureaux, participants, base texts, catalogues and passages still need item-level links to verifiable sources.",
+      "timeLabel": "Comparative concept; Sui–Tang focus",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "概念层",
+            "en": "Concept layer"
+          },
+          "value": {
+            "zh-CN": "知识生产与制度",
+            "en": "Knowledge production and institutions"
+          }
+        }
+      ]
+    }
+  },
+  "traditions": [
+    {
+      "tradition": "buddhism",
+      "role": "primary",
+      "isPrimary": true,
+      "confidence": "medium",
+      "evidenceLayer": "scholarly_interpretation",
+      "sourceId": "source:editorial-method"
+    }
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "analytic_scope",
+      "timeType": "atemporal",
+      "displayDate": {
+        "zh-CN": "比较概念；隋唐重点",
+        "en": "Comparative concept; Sui–Tang focus"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "scholarly_interpretation",
+      "sourceId": "source:editorial-method"
+    }
+  ],
+  "sourceIds": [
+    "source:editorial-method",
+    "source:buddhist-institutional-records"
+  ],
+  "profile": {
+    "conceptKind": "institutional_process"
+  }
+}

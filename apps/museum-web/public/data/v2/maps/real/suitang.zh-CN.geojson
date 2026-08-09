@@ -1,0 +1,96 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "place:changan",
+      "geometry": { "type": "Point", "coordinates": [108.942, 34.261] },
+      "properties": {
+        "slug": "changan",
+        "title": "长安",
+        "placeType": "帝国都城",
+        "confidence": "城市范围 · 近似中心",
+        "tradition": "convergence",
+        "summary": "唐代政治、教育、翻译与宗教机构的核心交汇城市。"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "place:great-cien-monastery",
+      "geometry": { "type": "Point", "coordinates": [108.964, 34.218] },
+      "properties": {
+        "slug": "great-cien-monastery",
+        "title": "大慈恩寺",
+        "placeType": "佛教寺院地点",
+        "confidence": "历史地点",
+        "tradition": "buddhism",
+        "summary": "与玄奘译经事业和大雁塔历史密切相关。"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "place:louguantai",
+      "geometry": { "type": "Point", "coordinates": [108.318, 34.056] },
+      "properties": {
+        "slug": "louguantai",
+        "title": "楼观台",
+        "placeType": "道教历史地点",
+        "confidence": "历史地点",
+        "tradition": "daoism",
+        "summary": "终南山北麓的重要道教地点，兼具历史与传统叙事。"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "place:imperial-academy-changan",
+      "geometry": { "type": "Point", "coordinates": [108.953, 34.274] },
+      "properties": {
+        "slug": "imperial-academy-changan",
+        "title": "长安国子监",
+        "placeType": "国家教育地点",
+        "confidence": "城市内约略位置",
+        "tradition": "confucianism",
+        "summary": "用于呈现经典、教育与国家制度之间的联系。"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "place:luoyang",
+      "geometry": { "type": "Point", "coordinates": [112.454, 34.62] },
+      "properties": {
+        "slug": "luoyang",
+        "title": "洛阳",
+        "placeType": "帝国东都",
+        "confidence": "城市范围 · 近似中心",
+        "tradition": "convergence",
+        "summary": "政治、宗教与交通网络中的另一座关键城市。"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "place:dunhuang",
+      "geometry": { "type": "Point", "coordinates": [94.662, 40.142] },
+      "properties": {
+        "slug": "dunhuang",
+        "title": "敦煌",
+        "placeType": "交通与石窟网络",
+        "confidence": "城市范围 · 近似中心",
+        "tradition": "buddhism",
+        "summary": "连接中原、中亚交通和佛教视觉文化的重要节点。"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "place:mount-wutai",
+      "geometry": { "type": "Point", "coordinates": [113.596, 39.007] },
+      "properties": {
+        "slug": "mount-wutai",
+        "title": "五台山",
+        "placeType": "佛教圣山与朝圣地",
+        "confidence": "山地区域",
+        "tradition": "buddhism",
+        "summary": "现实山岳地点与文殊信仰的神圣意义在本馆中分层表达。"
+      }
+    }
+  ]
+}

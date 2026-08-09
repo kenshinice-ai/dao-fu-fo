@@ -1,0 +1,39 @@
+{
+  "kind": "passage",
+  "slug": "return-to-ritual",
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed",
+  "primaryEvidenceLayer": "historical_inferred",
+  "importance": 5,
+  "isFeatured": true,
+  "translations": {
+    "zh-CN": {
+      "title": "克己复礼为仁",
+      "subtitle": "《论语》颜渊篇",
+      "shortSummary": "这句经文把仁与自我约束、礼制实践连接起来，后来在政治和教育语境中不断被重新解释。",
+      "curatorialDescription": ["‘克己复礼’不能只被读成个人道德训诫；它还连接身体、礼仪、教育和政治秩序，是儒家概念进入制度生活的一个入口。"],
+      "researchNote": "Alpha 条目以篇章定位为起点，后续补充注疏、异文和唐代经学使用语境。",
+      "timeLabel": "《论语》篇章与唐代经学语境",
+      "keyFacts": [{ "label": { "zh-CN": "敏感等级", "en": "Sensitivity" }, "value": { "zh-CN": "公开文本", "en": "Public textual" } }],
+      "quote": { "original": "克己复礼为仁。", "interpretation": { "zh-CN": "在颜渊篇的语境中，仁与约束自我、实践礼相连；它不是脱离关系和制度的抽象善意。", "en": "In the context of the Yan Yuan chapter, humaneness is connected with self-restraint and the practice of ritual; it is not an abstract goodwill outside relationships and institutions." }, "locator": "《论语·颜渊》" }
+    },
+    "en": {
+      "title": "Conquer the self and return to ritual",
+      "subtitle": "Analects, Yan Yuan chapter",
+      "shortSummary": "The line connects humaneness with self-restraint and ritual practice, and was repeatedly reinterpreted in political and educational settings.",
+      "curatorialDescription": ["‘Conquer the self and return to ritual’ is more than private moral advice. It connects body, ritual, education and political order and opens onto the institutional life of Confucian concepts."],
+      "researchNote": "The Alpha entry begins with a chapter locator; commentaries, variants and Tang classical-learning contexts remain to be added.",
+      "timeLabel": "Analects chapter and Tang classical-learning context",
+      "keyFacts": [{ "label": { "zh-CN": "敏感等级", "en": "Sensitivity" }, "value": { "zh-CN": "公开文本", "en": "Public textual" } }],
+      "quote": { "original": "克己复礼为仁。", "interpretation": { "zh-CN": "在颜渊篇的语境中，仁与约束自我、实践礼相连；它不是脱离关系和制度的抽象善意。", "en": "In the context of the Yan Yuan chapter, humaneness is connected with self-restraint and the practice of ritual; it is not an abstract goodwill outside relationships and institutions." }, "locator": "Analects, Yan Yuan chapter" }
+    }
+  },
+  "traditions": [{ "tradition": "confucianism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_inferred", "sourceId": "source:analects-edition" }],
+  "temporalAssertions": [{ "predicate": "textual_attestation", "timeType": "range", "startYear": -200, "endYear": 220, "displayDate": { "zh-CN": "《论语》篇章与唐代经学语境", "en": "Analects chapter and Tang classical-learning context" }, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:analects-edition" }],
+  "sourceIds": ["source:analects-edition", "source:editorial-method"],
+  "related": [
+    { "kind": "figure", "slug": "kong-yingda", "title": { "zh-CN": "孔颖达", "en": "Kong Yingda" }, "relation": { "zh-CN": "唐代经学解释语境", "en": "Tang classical-learning context" } },
+    { "kind": "text", "slug": "analects", "title": { "zh-CN": "《论语》", "en": "Analects" }, "relation": { "zh-CN": "摘录自", "en": "Excerpt from" } }
+  ],
+  "profile": { "textSlug": "analects", "textVersionSlug": "analects-received", "passageKind": "classic_saying", "locatorOriginal": "颜渊篇", "locatorNormalised": "Analects Yan Yuan", "originalText": "克己复礼为仁。", "punctuatedText": "克己复礼为仁。", "modernZh": "约束自己，使行为回到礼的规范，就是仁。", "translationEn": "To restrain the self and return to ritual is humaneness.", "ritualSensitivity": "public_textual" }
+}

@@ -1,0 +1,41 @@
+{
+  "locale": "zh-CN",
+  "kind": "passage",
+  "slug": "humans-follow-earth",
+  "title": "人法地，地法天，天法道，道法自然",
+  "subtitle": "《道德经》第二十五章",
+  "tradition": "daoism",
+  "evidence": "公开原典 · 篇章定位",
+  "timeLabel": "先秦文本 · 唐代持续注释与重释",
+  "shortSummary": "这段话把人、地、天、道与自然排列成层层效法的关系，也是理解“自然”古典含义的重要入口。",
+  "curatorialDescription": [
+    "“自然”在这里更接近“自然而然、自己如此”，不能直接替换成现代学科中的“自然界”。",
+    "唐代读者面对的《道德经》已经处在长期注释传统中。数字博物馆将原典、注释人物和后世制度语境分开，而不是假设一句话在两千年间只有一个含义。",
+    "这段原典可以与山岳、修持和政治无为等不同主题发生联系，但每条关系都需要具体语境。"
+  ],
+  "researchNote": "本条采用通行本第二十五章的篇章定位。未来版本将增加帛书、传世本和重要注本的异文入口。",
+  "keyFacts": [
+    { "label": "类型", "value": "经典名句" },
+    { "label": "定位", "value": "第二十五章" },
+    { "label": "关键词", "value": "法 · 道 · 自然" }
+  ],
+  "quote": {
+    "original": "人法地，地法天，天法道，道法自然。",
+    "interpretation": "人的秩序取法于地，地取法于天，天取法于道；道不靠外在命令，而以其自然而然的方式展开。",
+    "locator": "《道德经》第二十五章"
+  },
+  "related": [
+    { "kind": "text", "slug": "daodejing", "title": "《道德经》", "relation": "所属经典" },
+    { "kind": "concept", "slug": "naturalness", "title": "自然", "relation": "核心概念" },
+    { "kind": "figure", "slug": "sima-chengzhen", "title": "司马承祯", "relation": "唐代道教解释语境" }
+  ],
+  "sources": [
+    {
+      "title": "Chinese Text Project · 道德经",
+      "locator": "第二十五章",
+      "grade": "A",
+      "role": "原文篇章定位",
+      "url": "https://ctext.org/dao-de-jing"
+    }
+  ]
+}

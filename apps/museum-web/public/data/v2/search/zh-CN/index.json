@@ -1,0 +1,26 @@
+{
+  "locale": "zh-CN",
+  "items": [
+    { "kind": "figure", "slug": "xuanzang", "title": "玄奘", "context": "唐代佛教僧侣、求法旅行者与译经组织核心人物。", "tradition": "buddhism" },
+    { "kind": "figure", "slug": "sima-chengzhen", "title": "司马承祯", "context": "连接山林修持、道教传统与唐代宫廷网络的人物。", "tradition": "daoism" },
+    { "kind": "figure", "slug": "kong-yingda", "title": "孔颖达", "context": "唐初经学家，与《五经正义》编纂和国家教育相关。", "tradition": "confucianism" },
+    { "kind": "text", "slug": "heart-sutra", "title": "《般若波罗蜜多心经》", "context": "以极简篇幅表达般若与空义的重要佛教文本。", "tradition": "buddhism" },
+    { "kind": "text", "slug": "daodejing", "title": "《道德经》", "context": "围绕道、德、无为与自然展开的基础经典。", "tradition": "daoism" },
+    { "kind": "text", "slug": "correct-meaning-five-classics", "title": "《五经正义》", "context": "唐代国家经学与经典注疏工程的重要成果。", "tradition": "confucianism" },
+    { "kind": "text", "slug": "analects", "title": "《论语》", "context": "记录孔子及弟子言行、后世儒家不断重释的经典。", "tradition": "confucianism" },
+    { "kind": "passage", "slug": "form-is-emptiness", "title": "色不异空，空不异色", "context": "《心经》中关于色与空关系的代表性句子。", "tradition": "buddhism" },
+    { "kind": "passage", "slug": "humans-follow-earth", "title": "道法自然", "context": "《道德经》第二十五章关于人、地、天、道与自然的层级表达。", "tradition": "daoism" },
+    { "kind": "passage", "slug": "return-to-ritual", "title": "克己复礼为仁", "context": "《论语·颜渊》中将自我约束、礼与仁联系起来的语句。", "tradition": "confucianism" },
+    { "kind": "concept", "slug": "emptiness", "title": "空", "context": "佛教语境中对固定自性与缘起关系的关键讨论。", "tradition": "buddhism" },
+    { "kind": "concept", "slug": "naturalness", "title": "自然", "context": "道家语境中的“自然而然、自己如此”，不等同现代自然界。", "tradition": "daoism" },
+    { "kind": "concept", "slug": "ritual", "title": "礼", "context": "连接人格修养、社会秩序、制度和经典解释的儒家核心概念。", "tradition": "confucianism" },
+    { "kind": "place", "slug": "changan", "title": "长安", "context": "唐代帝国都城，政治、教育、翻译与宗教机构的交汇地。", "tradition": "convergence" },
+    { "kind": "place", "slug": "great-cien-monastery", "title": "大慈恩寺", "context": "与玄奘译经事业和大雁塔历史密切相关的佛教地点。", "tradition": "buddhism" },
+    { "kind": "place", "slug": "louguantai", "title": "楼观台", "context": "终南山北麓的重要道教历史地点。", "tradition": "daoism" },
+    { "kind": "place", "slug": "imperial-academy-changan", "title": "长安国子监", "context": "呈现经典、教育与国家制度关系的历史地点。", "tradition": "confucianism" },
+    { "kind": "place", "slug": "luoyang", "title": "洛阳", "context": "隋唐政治、宗教与交通网络中的关键城市。", "tradition": "convergence" },
+    { "kind": "place", "slug": "dunhuang", "title": "敦煌", "context": "连接中原、中亚交通和佛教视觉文化的重要节点。", "tradition": "buddhism" },
+    { "kind": "place", "slug": "mount-wutai", "title": "五台山", "context": "现实山岳、佛教朝圣与文殊信仰交汇的地点。", "tradition": "buddhism" },
+    { "kind": "museum_object", "slug": "great-wild-goose-pagoda", "title": "大雁塔", "context": "与玄奘、文本保存和长安佛教记忆相连的建筑遗产。", "tradition": "buddhism" }
+  ]
+}

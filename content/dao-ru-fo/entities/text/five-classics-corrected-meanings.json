@@ -1,0 +1,39 @@
+{
+  "kind": "text",
+  "slug": "five-classics-corrected-meanings",
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed",
+  "primaryEvidenceLayer": "historical_documented",
+  "importance": 4,
+  "isFeatured": false,
+  "translations": {
+    "zh-CN": {
+      "title": "《五经正义》",
+      "subtitle": "经学注疏、国家教育与知识标准化",
+      "shortSummary": "《五经正义》是观察唐代经学注疏如何进入国家教育和经典解释秩序的重要文本入口。",
+      "curatorialDescription": [
+        "本馆不把它当作“儒家思想”的单一代表，而是展示编纂、注疏、教育和制度之间的具体关系。",
+        "它与孔颖达、国子监和《论语》段落形成一个可追踪的经学制度小网络。"
+      ],
+      "researchNote": "需要补充编纂过程、各经分卷、版本谱系、官学使用场景和孔颖达个人贡献的精确界面。",
+      "timeLabel": "唐代经学制度重点",
+      "keyFacts": [{ "label": { "zh-CN": "文本类型", "en": "Text kind" }, "value": { "zh-CN": "经学注疏与制度文本", "en": "Classical commentary and institutional text" } }]
+    },
+    "en": {
+      "title": "Corrected Meanings of the Five Classics",
+      "subtitle": "Classical commentary, state education and standardised knowledge",
+      "shortSummary": "The Corrected Meanings provides an entry into how Tang classical commentary entered state education and regimes of interpretation.",
+      "curatorialDescription": [
+        "The museum does not treat it as a single embodiment of Confucian thought; it shows the relationships among compilation, commentary, education and institution.",
+        "Together with Kong Yingda, the Guozijian and an Analects passage, it forms a traceable micro-network of classical learning."
+      ],
+      "researchNote": "Compilation, fascicles, textual genealogy, official-school use and Kong Yingda's individual contribution still need precise mapping.",
+      "timeLabel": "Tang classical-learning focus",
+      "keyFacts": [{ "label": { "zh-CN": "文本类型", "en": "Text kind" }, "value": { "zh-CN": "经学注疏与制度文本", "en": "Classical commentary and institutional text" } }]
+    }
+  },
+  "traditions": [{ "tradition": "confucianism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:education-classics-records" }],
+  "temporalAssertions": [{ "predicate": "institutional_circulation", "timeType": "range", "startYear": 600, "endYear": 800, "displayDate": { "zh-CN": "唐代经学制度重点", "en": "Tang classical-learning focus" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:education-classics-records" }],
+  "sourceIds": ["source:education-classics-records", "source:confucian-commentarial-record"],
+  "profile": { "textKind": "commentary", "originalLanguageCode": "zh", "canonicalStatus": "influential", "attributionStatus": "composite" }
+}

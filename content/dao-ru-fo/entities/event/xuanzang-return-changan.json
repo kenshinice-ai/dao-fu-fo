@@ -1,0 +1,90 @@
+{
+  "kind": "event",
+  "slug": "xuanzang-return-changan",
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed",
+  "primaryEvidenceLayer": "historical_documented",
+  "importance": 5,
+  "isFeatured": true,
+  "translations": {
+    "zh-CN": {
+      "title": "玄奘回到长安",
+      "subtitle": "旅行经验进入译经制度的转折点",
+      "shortSummary": "玄奘回到长安后，求法旅行被转化为译经、讲学和寺院制度中的长期工作。",
+      "curatorialDescription": [
+        "时间轴把“回到长安”作为路线与城市制度相接的节点，而不是把它当作传奇旅程的终点。"
+      ],
+      "researchNote": "需要核对具体年份、入城路线、译经项目起止和不同传记版本之间的差异。",
+      "timeLabel": "约 645",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "事件类型",
+            "en": "Event type"
+          },
+          "value": {
+            "zh-CN": "求法归来与制度转化",
+            "en": "Return from pilgrimage and institutional transition"
+          }
+        }
+      ]
+    },
+    "en": {
+      "title": "Xuanzang returns to Chang'an",
+      "subtitle": "A turning point from travel to translation institutions",
+      "shortSummary": "After Xuanzang returned to Chang'an, pilgrimage experience became long-term work in translation, teaching and monastic institutions.",
+      "curatorialDescription": [
+        "The timeline treats the return as the point where route and urban institutions meet, rather than the endpoint of a legend."
+      ],
+      "researchNote": "Exact year, arrival route, translation projects and differences among biographical versions still need verification.",
+      "timeLabel": "c. 645",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "事件类型",
+            "en": "Event type"
+          },
+          "value": {
+            "zh-CN": "求法归来与制度转化",
+            "en": "Return from pilgrimage and institutional transition"
+          }
+        }
+      ]
+    }
+  },
+  "traditions": [
+    {
+      "tradition": "buddhism",
+      "role": "primary",
+      "isPrimary": true,
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:xuanzang-records"
+    }
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "return",
+      "timeType": "circa",
+      "startYear": 645,
+      "endYear": 645,
+      "displayDate": {
+        "zh-CN": "约 645",
+        "en": "c. 645"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:xuanzang-records"
+    }
+  ],
+  "sourceIds": [
+    "source:xuanzang-records",
+    "source:buddhist-institutional-records"
+  ],
+  "profile": {
+    "eventKind": "journey",
+    "historicity": "documented",
+    "sequenceOrder": 5,
+    "eventScope": "transregional"
+  }
+}

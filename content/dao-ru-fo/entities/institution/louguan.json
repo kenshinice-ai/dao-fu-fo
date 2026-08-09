@@ -1,0 +1,91 @@
+{
+  "kind": "institution",
+  "slug": "louguan",
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed",
+  "primaryEvidenceLayer": "historical_documented",
+  "importance": 4,
+  "isFeatured": false,
+  "translations": {
+    "zh-CN": {
+      "title": "楼观道院",
+      "subtitle": "关中道教传统与宫观网络的研究入口",
+      "shortSummary": "楼观道院作为机构条目，帮助把老子传说、道教人物、宫观空间和后世圣迹叙述区分开来。",
+      "curatorialDescription": [
+        "本馆将现实地点、道教制度和神圣地理分成不同数据层，避免把传说性地点当作未经说明的历史事实。",
+        "条目暂不把楼观概括为整个道教的代表，而是把它作为关中区域的一个研究节点。"
+      ],
+      "researchNote": "需要补充楼观沿革、道教碑刻、人物活动与后世圣迹叙事的年代和证据层。",
+      "timeLabel": "隋唐至后世叙述；关中重点",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "机构类型",
+            "en": "Institution type"
+          },
+          "value": {
+            "zh-CN": "道教宫观与传统记忆节点",
+            "en": "Daoist institution and memory site"
+          }
+        }
+      ]
+    },
+    "en": {
+      "title": "Louguan Daoist institution",
+      "subtitle": "An entry into Guanzhong Daoist traditions and institutional networks",
+      "shortSummary": "As an institutional record, Louguan helps separate Laozi legend, Daoist figures, monastic space and later sacred-site narratives.",
+      "curatorialDescription": [
+        "The museum separates real places, Daoist institutions and sacred geography so legendary sites are not presented as unexplained historical facts.",
+        "This record does not treat Louguan as a stand-in for all Daoism; it is a regional research node in Guanzhong."
+      ],
+      "researchNote": "Louguan's institutional history, inscriptions, figure associations and later sacred narratives still require dating and evidence-layer review.",
+      "timeLabel": "Sui–Tang and later narratives; Guanzhong focus",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "机构类型",
+            "en": "Institution type"
+          },
+          "value": {
+            "zh-CN": "道教宫观与传统记忆节点",
+            "en": "Daoist institution and memory site"
+          }
+        }
+      ]
+    }
+  },
+  "traditions": [
+    {
+      "tradition": "daoism",
+      "role": "primary",
+      "isPrimary": true,
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:daoist-historical-record"
+    }
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "institutional_and_memory_scope",
+      "timeType": "range",
+      "startYear": 581,
+      "endYear": 907,
+      "displayDate": {
+        "zh-CN": "隋唐至后世叙述；关中重点",
+        "en": "Sui–Tang and later narratives; Guanzhong focus"
+      },
+      "confidence": "low",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:daoist-historical-record"
+    }
+  ],
+  "sourceIds": [
+    "source:daoist-historical-record",
+    "source:historical-geography",
+    "source:editorial-method"
+  ],
+  "profile": {
+    "institutionKind": "daoist_monastery",
+    "networkScope": false
+  }
+}

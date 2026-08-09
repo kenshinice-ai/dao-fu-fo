@@ -1,0 +1,33 @@
+{
+  "kind": "passage",
+  "slug": "prajna-five-skandhas",
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed",
+  "primaryEvidenceLayer": "historical_documented",
+  "importance": 4,
+  "isFeatured": false,
+  "translations": {
+    "zh-CN": {
+      "title": "照见五蕴皆空",
+      "subtitle": "《心经》段落卡",
+      "shortSummary": "这句经文将观照、五蕴和空的关系压缩在一个短句中，必须回到具体版本和上下文阅读。",
+      "curatorialDescription": ["段落卡先展示原文、版本和定位，再提供现代汉语与英文解释；解释不代替经文。"],
+      "researchNote": "需要核定版本、断句、异文和不同英译传统；当前为 Alpha 译文。",
+      "timeLabel": "《心经》汉译与流通语境",
+      "keyFacts": [{ "label": { "zh-CN": "段落类型", "en": "Passage type" }, "value": { "zh-CN": "经文摘录", "en": "Scriptural excerpt" } }]
+    },
+    "en": {
+      "title": "Seeing the five aggregates as empty",
+      "subtitle": "Heart Sutra passage card",
+      "shortSummary": "The line compresses seeing, the five aggregates and emptiness into a short phrase that must be read in a specific version and context.",
+      "curatorialDescription": ["The passage card shows wording, version and locator before offering modern Chinese and English interpretation; interpretation does not replace the text."],
+      "researchNote": "Version, punctuation, variants and English translation traditions still need verification; this is an Alpha translation.",
+      "timeLabel": "Heart Sutra Chinese translation and circulation context",
+      "keyFacts": [{ "label": { "zh-CN": "段落类型", "en": "Passage type" }, "value": { "zh-CN": "经文摘录", "en": "Scriptural excerpt" } }]
+    }
+  },
+  "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:heart-sutra-edition" }],
+  "temporalAssertions": [{ "predicate": "textual_circulation", "timeType": "range", "startYear": 600, "endYear": 700, "displayDate": { "zh-CN": "《心经》汉译与流通语境", "en": "Heart Sutra Chinese translation and circulation context" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:heart-sutra-edition" }],
+  "sourceIds": ["source:heart-sutra-edition"],
+  "profile": { "textSlug": "heart-sutra", "textVersionSlug": "heart-sutra-chinese-received", "passageKind": "scripture_excerpt", "locatorOriginal": "观自在菩萨章；具体行号待核", "locatorNormalised": "heart-sutra:five-aggregates", "originalText": "照见五蕴皆空。", "punctuatedText": "照见五蕴皆空。", "modernZh": "照见五种身心经验都不是固定不变、独立自存的实体。", "translationEn": "Seeing that the five aggregates are empty.", "ritualSensitivity": "public_textual" }
+}

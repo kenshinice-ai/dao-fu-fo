@@ -1,0 +1,39 @@
+{
+  "name": "dao-ru-fo-digital-museum",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @drf-museum/web",
+    "build": "npm run build -w @drf-museum/web",
+    "build:packages": "npm run build -w @drf-museum/domain-schema && npm run build -w @drf-museum/core && npm run build -w @drf-museum/content-compiler",
+    "build:content": "npm run build:packages && node packages/content-compiler/dist/cli.js --database-bundle .artifacts/database/import-v1.json",
+    "build:content:public": "npm run build:packages && node packages/content-compiler/dist/cli.js --public --output .artifacts/content/public-v2",
+    "verify:content": "node scripts/verify-content.mjs",
+    "verify:content:public": "DRF_CONTENT_ARTIFACT_ROOT=.artifacts/content/public-v2 node scripts/verify-content.mjs",
+    "verify:matrix": "node scripts/verify-alpha-matrix.mjs",
+    "verify:alpha-ready": "node scripts/verify-alpha-ready.mjs",
+    "verify:migrations": "node scripts/verify-migrations.mjs",
+    "verify:database-bundle": "node scripts/verify-database-bundle.mjs",
+    "verify:architecture": "node scripts/verify-architecture.mjs",
+    "db:migrate:plan": "node scripts/run-migrations.mjs",
+    "db:migrate": "node scripts/run-migrations.mjs --apply",
+    "db:import:plan": "node scripts/import-database-bundle.mjs",
+    "db:import": "node scripts/import-database-bundle.mjs --apply",
+    "db:verify": "node scripts/verify-database-state.mjs",
+    "verify:database:integration": "sh scripts/verify-database-integration.sh",
+    "typecheck": "npm run typecheck -w @drf-museum/domain-schema && npm run typecheck -w @drf-museum/core && npm run typecheck -w @drf-museum/content-compiler && npm run typecheck -w @drf-museum/web",
+    "test": "npm run test -w @drf-museum/core && npm run test -w @drf-museum/web",
+    "test:e2e": "npm run test:e2e -w @drf-museum/web",
+    "verify:static": "node scripts/verify-static.mjs",
+    "check": "npm run typecheck && npm run test && npm run verify:migrations && npm run db:migrate:plan && npm run verify:architecture && npm run build:content && npm run verify:database-bundle && npm run db:import:plan && npm run verify:content && npm run verify:matrix && npm run verify:alpha-ready && npm run build:content:public && npm run verify:content:public && npm run build && npm run verify:static",
+    "check:release": "npm run check && npm run test:e2e && npm run verify:database:integration"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

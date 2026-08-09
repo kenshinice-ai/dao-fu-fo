@@ -1,0 +1,46 @@
+{
+  "kind": "place",
+  "slug": "dunhuang",
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed",
+  "primaryEvidenceLayer": "historical_documented",
+  "importance": 4,
+  "isFeatured": false,
+  "translations": {
+    "zh-CN": {
+      "title": "敦煌",
+      "subtitle": "丝绸之路上的宗教与文本交汇地",
+      "shortSummary": "敦煌把佛教艺术、文本保存、交通路线和多语文化连接起来。",
+      "curatorialDescription": [
+        "敦煌提醒我们，长安展厅不能只讲帝国中心。文本、图像和旅行者在边地保存、翻译和重新组织知识，形成另一种文明交汇的空间。"
+      ],
+      "researchNote": "当前为城市与区域级 Alpha 地点，后续补充石窟、藏经洞、路线和跨语言来源。",
+      "timeLabel": "隋唐重点：581–907",
+      "keyFacts": [
+        { "label": { "zh-CN": "地点类型", "en": "Place type" }, "value": { "zh-CN": "丝路节点与石窟区域", "en": "Silk Road node and cave-temple region" } }
+      ]
+    },
+    "en": {
+      "title": "Dunhuang",
+      "subtitle": "A religious and textual crossroads on the Silk Road",
+      "shortSummary": "Dunhuang connects Buddhist art, textual preservation, travel routes and multilingual culture.",
+      "curatorialDescription": [
+        "Dunhuang keeps the Chang'an exhibition from becoming a story of an imperial centre alone. Texts, images and travellers preserved, translated and reorganised knowledge at a frontier crossroads."
+      ],
+      "researchNote": "This is an Alpha city-and-region place. Caves, the Library Cave, routes and multilingual sources will be added in the next content batch.",
+      "timeLabel": "Sui–Tang focus: 581–907",
+      "keyFacts": [
+        { "label": { "zh-CN": "地点类型", "en": "Place type" }, "value": { "zh-CN": "丝路节点与石窟区域", "en": "Silk Road node and cave-temple region" } }
+      ]
+    }
+  },
+  "traditions": [
+    { "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:historical-geography" },
+    { "tradition": "daoism", "role": "secondary", "isPrimary": false, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:historical-geography" }
+  ],
+  "temporalAssertions": [
+    { "predicate": "activity", "timeType": "range", "startYear": 581, "endYear": 907, "displayDate": { "zh-CN": "隋唐重点：581–907", "en": "Sui–Tang focus: 581–907" }, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:historical-geography" }
+  ],
+  "sourceIds": ["source:historical-geography", "source:unesco-silk-roads-corridor", "source:editorial-method"],
+  "profile": { "placeReality": "approximate_region", "geometryType": "point", "coordinates": [94.662, 40.142], "coordinateConfidence": "centroid", "geographicSourceId": "source:historical-geography" }
+}

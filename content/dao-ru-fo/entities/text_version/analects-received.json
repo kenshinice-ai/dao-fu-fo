@@ -1,0 +1,17 @@
+{
+  "kind": "text_version",
+  "slug": "analects-received",
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed",
+  "primaryEvidenceLayer": "historical_inferred",
+  "importance": 4,
+  "isFeatured": false,
+  "translations": {
+    "zh-CN": { "title": "《论语》通行本", "shortSummary": "《论语》通行篇章的 Alpha 版本记录。", "curatorialDescription": ["版本实体将文本作品、篇章定位和后世注疏连接起来。"], "researchNote": "正式发布前补充底本、篇章和注疏定位。", "timeLabel": "传世本流通", "keyFacts": [] },
+    "en": { "title": "Received text of the Analects", "shortSummary": "An Alpha version record for the received chapters of the Analects.", "curatorialDescription": ["The version entity connects the work, chapter locators and later commentaries."], "researchNote": "Edition, chapter and commentary locators are required before publication.", "timeLabel": "Circulation of the received text", "keyFacts": [] }
+  },
+  "traditions": [{ "tradition": "confucianism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:analects-edition" }],
+  "temporalAssertions": [{ "predicate": "textual_attestation", "timeType": "range", "startYear": -200, "endYear": 220, "displayDate": { "zh-CN": "传世本流通", "en": "Circulation of the received text" }, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:analects-edition" }],
+  "sourceIds": ["source:analects-edition"],
+  "profile": { "textSlug": "analects", "versionKind": "recension", "languageCode": "lzh", "citationLabel": "Analects received text", "rightsStatus": "public_domain" }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "dao-ru-fo",
+  "locale": "en",
+  "title": "Daoism, Confucianism & Buddhism Digital Museum",
+  "shortTitle": "Dao · Ru · Buddha",
+  "tagline": "Three civilisational paths in one city",
+  "description": "A bilingual digital museum organised by curatorial questions and connected through time, place, figures, texts and primary passages.",
+  "contentVersion": "2026.08.prototype.1",
+  "capabilities": ["museum", "map", "timeline", "graph", "passages", "research"]
+}

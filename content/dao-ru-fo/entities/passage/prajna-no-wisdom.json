@@ -1,0 +1,33 @@
+{
+  "kind": "passage",
+  "slug": "prajna-no-wisdom",
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed",
+  "primaryEvidenceLayer": "historical_documented",
+  "importance": 4,
+  "isFeatured": false,
+  "translations": {
+    "zh-CN": {
+      "title": "无智亦无得",
+      "subtitle": "《心经》关于知识与所得的段落",
+      "shortSummary": "这句经文适合引导观众区分“无所得”的经文语境与现代语境中的知识否定。",
+      "curatorialDescription": ["本馆将这句放在《心经》整体结构中，不把它剪裁成脱离经文的励志格言。"],
+      "researchNote": "需要补充版本定位、句读和不同注疏对“智”“得”的解释。",
+      "timeLabel": "《心经》汉译与流通语境",
+      "keyFacts": [{ "label": { "zh-CN": "段落类型", "en": "Passage type" }, "value": { "zh-CN": "经文摘录", "en": "Scriptural excerpt" } }]
+    },
+    "en": {
+      "title": "No wisdom and no attainment",
+      "subtitle": "A Heart Sutra passage on knowing and attaining",
+      "shortSummary": "The line invites a distinction between the sutra's context of non-attainment and a modern denial of knowledge.",
+      "curatorialDescription": ["The museum keeps the line within the Heart Sutra's structure instead of turning it into a context-free motivational maxim."],
+      "researchNote": "Version locator, punctuation and commentarial interpretations of wisdom and attainment still need to be added.",
+      "timeLabel": "Heart Sutra Chinese translation and circulation context",
+      "keyFacts": [{ "label": { "zh-CN": "段落类型", "en": "Passage type" }, "value": { "zh-CN": "经文摘录", "en": "Scriptural excerpt" } }]
+    }
+  },
+  "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:heart-sutra-edition" }],
+  "temporalAssertions": [{ "predicate": "textual_circulation", "timeType": "range", "startYear": 600, "endYear": 700, "displayDate": { "zh-CN": "《心经》汉译与流通语境", "en": "Heart Sutra Chinese translation and circulation context" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:heart-sutra-edition" }],
+  "sourceIds": ["source:heart-sutra-edition"],
+  "profile": { "textSlug": "heart-sutra", "textVersionSlug": "heart-sutra-chinese-received", "passageKind": "scripture_excerpt", "locatorOriginal": "无所得段落；具体行号待核", "locatorNormalised": "heart-sutra:no-wisdom-no-attainment", "originalText": "无智亦无得。", "punctuatedText": "无智亦无得。", "modernZh": "在这里，智慧和获得都不被当作可以执取的固定对象。", "translationEn": "There is no wisdom and no attainment.", "ritualSensitivity": "public_textual" }
+}

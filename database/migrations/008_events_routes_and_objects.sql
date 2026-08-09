@@ -1,0 +1,10 @@
+BEGIN;
+
+CREATE TABLE museum.event_profiles (entity_id uuid PRIMARY KEY REFERENCES museum.entities(id) ON DELETE CASCADE, event_kind text NOT NULL, parent_event_id uuid REFERENCES museum.entities(id), historicity text NOT NULL CHECK (historicity IN ('documented','inferred','traditional','mythic','contested')), sequence_order integer NOT NULL, event_scope text NOT NULL CHECK (event_scope IN ('personal','local','regional','imperial','transregional','cosmological')));
+CREATE TABLE museum.route_profiles (entity_id uuid PRIMARY KEY REFERENCES museum.entities(id) ON DELETE CASCADE, route_kind text NOT NULL CHECK (route_kind IN ('pilgrimage','transmission','translation','study','official_travel','exile','institutional_expansion')), certainty text NOT NULL CHECK (certainty IN ('documented','reconstructed','inferred')), geometry geometry(LineString,4326), corridor_note text, animation_allowed boolean NOT NULL DEFAULT false);
+CREATE TABLE museum.route_waypoints (route_id uuid NOT NULL REFERENCES museum.entities(id) ON DELETE CASCADE, position integer NOT NULL CHECK (position >= 0), place_id uuid NOT NULL REFERENCES museum.entities(id), event_id uuid REFERENCES museum.entities(id), arrival_note text, certainty museum.confidence NOT NULL, PRIMARY KEY (route_id, position));
+CREATE TABLE museum.museum_object_profiles (entity_id uuid PRIMARY KEY REFERENCES museum.entities(id) ON DELETE CASCADE, object_kind text NOT NULL, material_or_medium text, dimensions text, creator_or_attribution text, attribution_status text NOT NULL CHECK (attribution_status IN ('confirmed','attributed','workshop','traditional','unknown')), current_repository text, repository_object_id text, original_place_id uuid REFERENCES museum.entities(id), current_place_id uuid REFERENCES museum.entities(id), rights_status museum.rights_status NOT NULL, crop_policy text NOT NULL CHECK (crop_policy IN ('allowed','restricted','not_allowed','unknown')), colour_edit_policy text NOT NULL CHECK (colour_edit_policy IN ('allowed','restricted','not_allowed','unknown')));
+
+CREATE INDEX route_profiles_geometry_gix ON museum.route_profiles USING gist (geometry);
+
+COMMIT;

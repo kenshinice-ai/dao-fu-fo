@@ -1,0 +1,72 @@
+{
+  "locale": "zh-CN",
+  "eyebrow": "数字展览 · 时空知识图谱",
+  "heroTitle": "三条道路，一座文明博物馆",
+  "heroLead": "从隋唐长安出发，看道教如何连接山岳、宫观与皇室，儒家如何塑造礼制与教育，佛教如何翻译与传播；再回到经典、人物和证据。",
+  "primaryAction": "进入长安展览",
+  "secondaryAction": "自由探索",
+  "todayLabel": "今日原典",
+  "todayPassage": {
+    "quote": "色不异空，空不异色。",
+    "interpretation": "这句话并非否定现实，而是在提醒我们：事物没有孤立、固定不变的自性。",
+    "source": "《般若波罗蜜多心经》· T0251",
+    "slug": "form-is-emptiness"
+  },
+  "exhibition": {
+    "slug": "changan-three-traditions",
+    "title": "长安：三教相遇的世界之都",
+    "subtitle": "Chang'an: Where the Three Traditions Met",
+    "question": "一个帝国为何同时需要道教、儒家礼制与佛法？",
+    "sections": 5,
+    "minutes": 12
+  },
+  "traditions": [
+    {
+      "slug": "daoism",
+      "label": "道",
+      "subtitle": "Daoist traditions",
+      "statement": "从经典、宫观、山岳和法脉，看道家思想与组织化道教如何并行发展。",
+      "counts": {
+        "figures": 1,
+        "texts": 1,
+        "passages": 1
+      },
+      "focusEntity": {
+        "kind": "figure",
+        "slug": "sima-chengzhen"
+      }
+    },
+    {
+      "slug": "confucianism",
+      "label": "儒",
+      "subtitle": "Confucian traditions",
+      "statement": "从礼、经学和国家教育，看儒家如何成为帝国制度与社会伦理的一部分。",
+      "counts": {
+        "figures": 1,
+        "texts": 2,
+        "passages": 1
+      },
+      "focusEntity": {
+        "kind": "figure",
+        "slug": "kong-yingda"
+      }
+    },
+    {
+      "slug": "buddhism",
+      "label": "佛",
+      "subtitle": "Buddhism",
+      "statement": "从求法、译经和寺院网络，看一种外来传统如何在中国重新表达自己。",
+      "counts": {
+        "figures": 1,
+        "texts": 1,
+        "passages": 1
+      },
+      "focusEntity": {
+        "kind": "figure",
+        "slug": "xuanzang"
+      }
+    }
+  ],
+  "methodologyTitle": "历史、传统与神话，不放在同一个标签里",
+  "methodologyText": "每条重点内容区分史料层、传统层和解释层；真实地点与神圣地理分开；原典摘录保留版本和定位。"
+}

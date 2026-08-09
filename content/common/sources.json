@@ -1,0 +1,299 @@
+[
+  {
+    "id": "source:editorial-method",
+    "sourceType": "reference_work",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "道·儒·佛文明数字博物馆策展与方法说明",
+      "en": "Curatorial and methodological notes of the Dao–Ru–Fo Digital Museum"
+    },
+    "locator": "methodology:content-v2",
+    "role": {
+      "zh-CN": "项目的策展框架与术语规则",
+      "en": "Curatorial framework and terminology rules"
+    },
+    "rightsStatus": "quotation_only",
+    "locatorLevel": "precise",
+    "citationStatus": "verified"
+  },
+  {
+    "id": "source:xuanzang-records",
+    "sourceType": "primary_text",
+    "evidenceGrade": "A",
+    "title": {
+      "zh-CN": "《大唐大慈恩寺三藏法师传》",
+      "en": "Biography of the Tripiṭaka Master of the Great Ci'en Monastery"
+    },
+    "locator": "卷一至卷十；人物行迹与译经活动",
+    "role": {
+      "zh-CN": "玄奘生平、求法与译经活动的原始传记依据",
+      "en": "Primary biographical basis for Xuanzang's travels and translation work"
+    },
+    "rightsStatus": "public_domain",
+    "locatorLevel": "collection",
+    "citationStatus": "draft"
+  },
+  {
+    "id": "source:daoist-historical-record",
+    "sourceType": "scholarly_book",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "隋唐道教人物与制度研究资料",
+      "en": "Studies on Daoist figures and institutions in the Sui–Tang period"
+    },
+    "locator": "人物、宫观与皇室关系专题",
+    "role": {
+      "zh-CN": "司马承祯及隋唐道教制度语境的学术参考",
+      "en": "Scholarly context for Sima Chengzhen and Sui–Tang Daoist institutions"
+    },
+    "rightsStatus": "quotation_only"
+  },
+  {
+    "id": "source:confucian-commentarial-record",
+    "sourceType": "reference_work",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "《五经正义》与唐代经学制度资料",
+      "en": "The Five Classics Corrected Meanings and Tang classical learning"
+    },
+    "locator": "孔颖达与经学注疏制度",
+    "role": {
+      "zh-CN": "孔颖达及唐代经学、教育制度的参考依据",
+      "en": "Reference basis for Kong Yingda and Tang classical learning institutions"
+    },
+    "rightsStatus": "quotation_only"
+  },
+  {
+    "id": "source:historical-geography",
+    "sourceType": "map_or_gazetteer",
+    "evidenceGrade": "A",
+    "title": {
+      "zh-CN": "隋唐历史地理与城市沿革资料",
+      "en": "Historical geography and urban gazetteers of the Sui–Tang period"
+    },
+    "locator": "长安、洛阳、敦煌历史名称与地理范围",
+    "role": {
+      "zh-CN": "真实地点、历史名称和坐标示意的地理依据",
+      "en": "Geographic basis for real places, historical names and coordinate approximations"
+    },
+    "rightsStatus": "quotation_only"
+  },
+  {
+    "id": "source:heart-sutra-edition",
+    "sourceType": "text_edition",
+    "evidenceGrade": "A",
+    "title": {
+      "zh-CN": "《般若波罗蜜多心经》汉译本与经录资料",
+      "en": "Chinese editions and catalogues of the Heart Sutra"
+    },
+    "locator": "经文：色不异空，空不异色；版本与译者需在下一批核定",
+    "role": {
+      "zh-CN": "passage 原文和版本定位的初始依据",
+      "en": "Initial basis for the passage text and version locator"
+    },
+    "rightsStatus": "public_domain",
+    "locatorLevel": "edition",
+    "citationStatus": "draft"
+  },
+  {
+    "id": "source:daodejing-edition",
+    "sourceType": "text_edition",
+    "evidenceGrade": "A",
+    "title": {
+      "zh-CN": "《道德经》通行本与章句资料",
+      "en": "Received editions and chapter references for the Daodejing"
+    },
+    "locator": "第二十五章：人法地，地法天，天法道，道法自然",
+    "role": {
+      "zh-CN": "道家 passage 原文和章次定位的初始依据",
+      "en": "Initial basis for the Daoist passage and chapter locator"
+    },
+    "rightsStatus": "public_domain",
+    "locatorLevel": "edition",
+    "citationStatus": "draft"
+  },
+  {
+    "id": "source:analects-edition",
+    "sourceType": "text_edition",
+    "evidenceGrade": "A",
+    "title": {
+      "zh-CN": "《论语》通行本与篇章资料",
+      "en": "Received editions and chapter references for the Analects"
+    },
+    "locator": "颜渊篇：克己复礼为仁",
+    "role": {
+      "zh-CN": "儒家 passage 原文和篇章定位的初始依据",
+      "en": "Initial basis for the Confucian passage and chapter locator"
+    },
+    "rightsStatus": "public_domain",
+    "locatorLevel": "edition",
+    "citationStatus": "draft"
+  },
+  {
+    "id": "source:buddhist-biographical-records",
+    "sourceType": "primary_text",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "隋唐高僧传记与求法记录资料",
+      "en": "Biographical and pilgrimage records of Sui–Tang Buddhist monks"
+    },
+    "locator": "义净、玄奘及求法僧侣条目；底本与卷页待核",
+    "role": {
+      "zh-CN": "佛教人物、求法路线与译经活动的研究入口",
+      "en": "Research entry point for Buddhist figures, pilgrimage routes and translation activity"
+    },
+    "rightsStatus": "external_reference_only"
+  },
+  {
+    "id": "source:tang-imperial-records",
+    "sourceType": "institutional_record",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "隋唐正史人物与制度记录",
+      "en": "Official histories and institutional records of the Sui–Tang period"
+    },
+    "locator": "帝王、制度与年代条目；具体版本和卷页待核",
+    "role": {
+      "zh-CN": "隋唐人物、都城、制度和事件时间的研究参考",
+      "en": "Research reference for Sui–Tang figures, capitals, institutions and event dates"
+    },
+    "rightsStatus": "external_reference_only"
+  },
+  {
+    "id": "source:buddhist-institutional-records",
+    "sourceType": "reference_work",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "隋唐寺院、译场与僧团制度资料",
+      "en": "Studies of Sui–Tang monasteries, translation bureaux and monastic institutions"
+    },
+    "locator": "大慈恩寺、译经场与寺院网络专题；底本待核",
+    "role": {
+      "zh-CN": "寺院、译经机构和佛教城市网络的制度语境",
+      "en": "Institutional context for monasteries, translation sites and Buddhist urban networks"
+    },
+    "rightsStatus": "external_reference_only"
+  },
+  {
+    "id": "source:education-classics-records",
+    "sourceType": "institutional_record",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "唐代国子监与经学制度资料",
+      "en": "Records on the Tang Guozijian and classical learning institutions"
+    },
+    "locator": "国子监、经学与《五经正义》制度语境；底本待核",
+    "role": {
+      "zh-CN": "国家教育、经学注疏和知识制度的研究参考",
+      "en": "Research reference for state education, classical commentary and knowledge institutions"
+    },
+    "rightsStatus": "external_reference_only"
+  },
+  {
+    "id": "source:object-records",
+    "sourceType": "image_record",
+    "evidenceGrade": "C",
+    "title": {
+      "zh-CN": "博物馆藏品与图像记录待建档清单",
+      "en": "Pending catalogue of museum objects and image records"
+    },
+    "locator": "对象类型、馆藏机构、图像权利和编号待补",
+    "role": {
+      "zh-CN": "Alpha 对象卡片的占位来源；不是可直接发布的藏品断言",
+      "en": "Placeholder source for Alpha object cards, not a publishable collection claim"
+    },
+    "rightsStatus": "unknown",
+    "locatorLevel": "collection",
+    "citationStatus": "draft"
+  },
+  {
+    "id": "source:unesco-longmen",
+    "sourceType": "institutional_record",
+    "evidenceGrade": "A",
+    "title": {
+      "zh-CN": "UNESCO 世界遗产中心：龙门石窟",
+      "en": "UNESCO World Heritage Centre: Longmen Grottoes"
+    },
+    "locator": "World Heritage List no. 1003; site history, location and significance",
+    "role": {
+      "zh-CN": "龙门石窟遗产地范围、年代与唐代造像语境的权威入口",
+      "en": "Authoritative entry for the site's extent, chronology and Tang sculptural context"
+    },
+    "rightsStatus": "open_licensed",
+    "locatorLevel": "item",
+    "citationStatus": "verified",
+    "url": "https://whc.unesco.org/en/list/1003/"
+  },
+  {
+    "id": "source:met-tang-overview",
+    "sourceType": "reference_work",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "大都会艺术博物馆：唐朝（618–907）",
+      "en": "The Metropolitan Museum of Art: Tang Dynasty (618–907)"
+    },
+    "locator": "Heilbrunn Timeline of Art History; Sui reunification, Tang chronology, Chang'an and the An Lushan rebellion",
+    "role": {
+      "zh-CN": "隋唐年代、长安国际性与中唐转折的公开概览来源",
+      "en": "Public overview source for Sui–Tang chronology, cosmopolitan Chang'an and the mid-Tang transition"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "item",
+    "citationStatus": "verified",
+    "url": "https://www.metmuseum.org/essays/tang-dynasty-618-906"
+  },
+  {
+    "id": "source:unesco-silk-roads-corridor",
+    "sourceType": "map_or_gazetteer",
+    "evidenceGrade": "A",
+    "title": {
+      "zh-CN": "UNESCO 世界遗产中心：丝绸之路长安—天山廊道路网",
+      "en": "UNESCO World Heritage Centre: Silk Roads, Chang'an–Tianshan Corridor"
+    },
+    "locator": "World Heritage List no. 1442; component coordinates and corridor description",
+    "role": {
+      "zh-CN": "长安、洛阳、大雁塔、龟兹区域遗址及跨区域廊道的地理依据",
+      "en": "Geographic basis for Chang'an, Luoyang, the Great Wild Goose Pagoda, Kucha-region sites and the transregional corridor"
+    },
+    "rightsStatus": "open_licensed",
+    "locatorLevel": "item",
+    "citationStatus": "verified",
+    "url": "https://whc.unesco.org/en/list/1442/maps/"
+  },
+  {
+    "id": "source:unesco-nalanda",
+    "sourceType": "institutional_record",
+    "evidenceGrade": "A",
+    "title": {
+      "zh-CN": "UNESCO 世界遗产中心：那烂陀寺考古遗址",
+      "en": "UNESCO World Heritage Centre: Archaeological Site of Nalanda Mahavihara"
+    },
+    "locator": "World Heritage List no. 1502; N25 8 12 E85 26 38",
+    "role": {
+      "zh-CN": "那烂陀考古遗址位置、年代范围与寺院教育性质的权威入口",
+      "en": "Authoritative entry for Nalanda's location, chronology and monastic-scholastic character"
+    },
+    "rightsStatus": "open_licensed",
+    "locatorLevel": "item",
+    "citationStatus": "verified",
+    "url": "https://whc.unesco.org/en/list/1502/"
+  },
+  {
+    "id": "source:unesco-mount-wutai",
+    "sourceType": "institutional_record",
+    "evidenceGrade": "A",
+    "title": {
+      "zh-CN": "UNESCO 世界遗产中心：五台山",
+      "en": "UNESCO World Heritage Centre: Mount Wutai"
+    },
+    "locator": "World Heritage property no. 1279; Taihuai component centroid 39.031 / 113.563",
+    "role": {
+      "zh-CN": "五台山遗产地现实地理范围与中心点的权威入口",
+      "en": "Authoritative entry for the real geographic extent and component centroid of Mount Wutai"
+    },
+    "rightsStatus": "open_licensed",
+    "locatorLevel": "item",
+    "citationStatus": "verified",
+    "url": "https://whc.unesco.org/en/list/1279/"
+  }
+]

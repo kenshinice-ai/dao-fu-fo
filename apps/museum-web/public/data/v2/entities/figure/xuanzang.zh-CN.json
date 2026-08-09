@@ -1,0 +1,43 @@
+{
+  "locale": "zh-CN",
+  "kind": "figure",
+  "slug": "xuanzang",
+  "title": "玄奘",
+  "subtitle": "602—664 · 僧侣、旅行者、译经组织者",
+  "tradition": "buddhism",
+  "evidence": "历史有据",
+  "timeLabel": "约 602—664",
+  "shortSummary": "玄奘把求法旅行、文本版本、宫廷支持与长安译经机构连接成一条可追踪的知识链。",
+  "curatorialDescription": [
+    "玄奘通常以“取经者”的形象被记住，但数字博物馆更关心这段旅程如何改变文本的流动。离开唐境、经过中亚、在南亚学习、返回长安，再组织翻译，每一个阶段都涉及地点、同行者、赞助者、版本和术语选择。",
+    "他不是孤立完成译经的个人英雄。长安的译经工作依赖僧团协作、校勘、口述、记录和国家资源。把这些关系展开，才能看见一部经典如何进入新的语言和制度。",
+    "传统叙事与历史研究对部分旅程细节可能有不同表达。本馆将可考路线、传统记载和后世文学形象分开标示。"
+  ],
+  "researchNote": "出生年份、出行日期和路线细节在不同资料中可能存在差异。第一版采用常见历史年表，并把约数和路线不确定性保留在时间与地图说明中。",
+  "keyFacts": [
+    { "label": "主要地点", "value": "长安 · 印度与中亚求法路线" },
+    { "label": "核心角色", "value": "求法、翻译、文本组织" },
+    { "label": "相关机构", "value": "大慈恩寺译经网络" }
+  ],
+  "related": [
+    { "kind": "text", "slug": "heart-sutra", "title": "《般若波罗蜜多心经》", "relation": "译本传统关联" },
+    { "kind": "place", "slug": "great-cien-monastery", "title": "大慈恩寺", "relation": "译经活动地点" },
+    { "kind": "concept", "slug": "emptiness", "title": "空", "relation": "相关概念" }
+  ],
+  "sources": [
+    {
+      "title": "Encyclopaedia Britannica · Xuanzang",
+      "locator": "biographical overview",
+      "grade": "B",
+      "role": "生平年表和历史概述",
+      "url": "https://www.britannica.com/biography/Xuanzang"
+    },
+    {
+      "title": "The Metropolitan Museum of Art · Buddhism in the Tang",
+      "locator": "Heilbrunn Timeline of Art History",
+      "grade": "C",
+      "role": "唐代佛教与视觉文化背景",
+      "url": "https://www.metmuseum.org/toah/hd/chbu/hd_chbu.htm"
+    }
+  ]
+}

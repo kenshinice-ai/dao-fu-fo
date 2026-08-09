@@ -1,0 +1,41 @@
+{
+  "locale": "en",
+  "kind": "passage",
+  "slug": "return-to-ritual",
+  "title": "To restrain oneself and return to ritual is benevolence",
+  "subtitle": "Analects 12.1",
+  "tradition": "confucianism",
+  "evidence": "Public primary text · section located",
+  "timeLabel": "Pre-Qin sayings tradition · interpreted through Sui–Tang classical learning",
+  "shortSummary": "The line connects self-regulation, ritual and benevolence, opening a path into the relationship between Confucian cultivation and social order.",
+  "curatorialDescription": [
+    "Ritual is not only ceremonial surface; it also concerns relationship, role, measure and shared order. Restraining oneself should not be reduced to suppressing individuality, but read within the problem of benevolence.",
+    "Ritual can enter education and politics as an institution while also shaping everyday conduct and self-cultivation. These dimensions are connected but not interchangeable.",
+    "Sui–Tang classical learning brought earlier texts into new commentarial and educational systems. The passage therefore links the Analects with a Tang institutional context."
+  ],
+  "researchNote": "The first release uses the received section locator Analects 12.1. The modern Chinese explanation and English translation are original museum summaries.",
+  "keyFacts": [
+    { "label": "Kind", "value": "classic saying" },
+    { "label": "Locator", "value": "Analects 12.1" },
+    { "label": "Keywords", "value": "self-restraint · ritual · benevolence" }
+  ],
+  "quote": {
+    "original": "克己復禮為仁。一日克己復禮，天下歸仁焉。",
+    "interpretation": "Restraining the tendency to centre only one's own desires and returning to ritual relations is one way benevolence is practised.",
+    "locator": "Analects 12.1"
+  },
+  "related": [
+    { "kind": "text", "slug": "analects", "title": "Analects", "relation": "source text" },
+    { "kind": "concept", "slug": "ritual", "title": "Ritual", "relation": "central concept" },
+    { "kind": "figure", "slug": "kong-yingda", "title": "Kong Yingda", "relation": "Tang classical-learning context" }
+  ],
+  "sources": [
+    {
+      "title": "Chinese Text Project · Analects",
+      "locator": "Yan Yuan 12.1",
+      "grade": "A",
+      "role": "primary text locator",
+      "url": "https://ctext.org/analects/yan-yuan"
+    }
+  ]
+}

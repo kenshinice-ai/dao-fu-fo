@@ -1,0 +1,194 @@
+[
+  {
+    "kind": "institution",
+    "slug": "changan-translation-bureau",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "长安译经场网络",
+        "shortSummary": "译经并非单人写作，而是依托寺院空间、语言分工、校勘和帝国支持的协作网络。",
+        "curatorialDescription": [
+          "这里以“网络”建模，避免把不同时期、不同寺院中的译场误合并为一个固定机构。"
+        ],
+        "researchNote": "需按译经项目拆分地点、参与者、职能和起止时间。",
+        "timeLabel": "唐代；项目级年代待拆",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Chang'an translation-bureau network",
+        "shortSummary": "Translation was collaborative work supported by monastic space, language roles, textual checking and imperial patronage.",
+        "curatorialDescription": [
+          "It is modelled as a network so that bureaux in different monasteries and periods are not falsely merged into one permanent institution."
+        ],
+        "researchNote": "Locations, participants, functions and dates must be separated by translation project.",
+        "timeLabel": "Tang period; project dates pending",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:buddhist-institutional-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_scope",
+        "timeType": "range",
+        "startYear": 618,
+        "endYear": 907,
+        "displayDate": {
+          "zh-CN": "唐代；项目级年代待拆",
+          "en": "Tang period; project dates pending"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:buddhist-institutional-records"
+      }
+    ],
+    "sourceIds": [
+      "source:buddhist-institutional-records",
+      "source:xuanzang-records"
+    ],
+    "profile": {
+      "institutionKind": "translation_network",
+      "networkScope": true
+    }
+  },
+  {
+    "kind": "institution",
+    "slug": "hongwen-institute",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "弘文馆",
+        "shortSummary": "弘文馆为理解唐代宫廷藏书、学术咨询与教育活动提供机构入口。",
+        "curatorialDescription": [
+          "条目与国子监区分，提示唐代知识制度由多种机构、职官和项目共同构成。"
+        ],
+        "researchNote": "机构沿革、职掌、位置和人员名录需按时期核定。",
+        "timeLabel": "唐代机构语境",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Hongwen Institute",
+        "shortSummary": "The Hongwen Institute offers an institutional entry into Tang court collections, scholarly consultation and education.",
+        "curatorialDescription": [
+          "It remains distinct from the Guozijian, showing that Tang knowledge systems comprised multiple institutions, offices and projects."
+        ],
+        "researchNote": "Institutional changes, functions, location and personnel require period-specific verification.",
+        "timeLabel": "Tang institutional context",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:education-classics-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_scope",
+        "timeType": "range",
+        "startYear": 618,
+        "endYear": 907,
+        "displayDate": {
+          "zh-CN": "唐代机构语境",
+          "en": "Tang institutional context"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:education-classics-records"
+      }
+    ],
+    "sourceIds": [
+      "source:education-classics-records",
+      "source:tang-imperial-records"
+    ],
+    "profile": {
+      "institutionKind": "court_institute",
+      "networkScope": false
+    }
+  },
+  {
+    "kind": "institution",
+    "slug": "changan-daoist-monastic-network",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "长安道观网络",
+        "shortSummary": "长安的道教活动依托多处宫观、斋醮、度牒与宫廷联系，不能压缩成单一建筑。",
+        "curatorialDescription": [
+          "网络条目承接人物与城市，但每一处宫观仍须建立独立的地点和机构记录。"
+        ],
+        "researchNote": "需补充宫观名录、存续年代、城市坊区和仪式功能来源。",
+        "timeLabel": "隋唐；节点待拆",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Chang'an Daoist monastic network",
+        "shortSummary": "Daoist activity in Chang'an relied on multiple institutions, ritual services, ordination records and court connections rather than one building.",
+        "curatorialDescription": [
+          "The network connects figures and city while reserving separate place and institution records for each identified site."
+        ],
+        "researchNote": "Institution names, dates, urban wards and ritual functions still need sourced records.",
+        "timeLabel": "Sui–Tang; nodes pending",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-historical-record"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_scope",
+        "timeType": "range",
+        "startYear": 581,
+        "endYear": 907,
+        "displayDate": {
+          "zh-CN": "隋唐；节点待拆",
+          "en": "Sui–Tang; nodes pending"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-historical-record"
+      }
+    ],
+    "sourceIds": [
+      "source:daoist-historical-record",
+      "source:historical-geography"
+    ],
+    "profile": {
+      "institutionKind": "monastic_network",
+      "networkScope": true
+    }
+  }
+]

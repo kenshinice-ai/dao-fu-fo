@@ -1,0 +1,17 @@
+[
+  {
+    "kind": "route", "slug": "changan-luoyang-imperial-corridor", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_inferred", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "长安—洛阳帝国走廊", "shortSummary": "这条路线把两京之间的政治、教育、宗教与人员流动组织为可研究的空间骨架。", "curatorialDescription": ["路线不是一条精确复原道路，而是由城市、关隘、河谷和制度联系组成的研究模型。"], "researchNote": "需补充各时期道路分支、驿站、里程和 GIS 来源。", "timeLabel": "隋唐：581–907", "keyFacts": [] },
+      "en": { "title": "Chang'an–Luoyang imperial corridor", "shortSummary": "The route organizes political, educational, religious and human movement between the two capitals as a spatial research frame.", "curatorialDescription": ["It is not a claim of one precisely reconstructed road, but a model built from cities, passes, valleys and institutional links."], "researchNote": "Period-specific branches, postal stations, distances and GIS sources remain to be added.", "timeLabel": "Sui–Tang: 581–907", "keyFacts": [] }
+    },
+    "traditions": [
+      { "tradition": "confucianism", "role": "syncretic", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:historical-geography" },
+      { "tradition": "daoism", "role": "syncretic", "isPrimary": false, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:historical-geography" },
+      { "tradition": "buddhism", "role": "syncretic", "isPrimary": false, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:historical-geography" }
+    ],
+    "temporalAssertions": [{ "predicate": "route_activity", "timeType": "range", "startYear": 581, "endYear": 907, "displayDate": { "zh-CN": "隋唐：581–907", "en": "Sui–Tang: 581–907" }, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:historical-geography" }],
+    "sourceIds": ["source:historical-geography", "source:unesco-silk-roads-corridor", "source:tang-imperial-records"],
+    "profile": { "routeKind": "official_travel", "certainty": "reconstructed", "waypointSlugs": ["changan", "luoyang"], "corridorNote": { "zh-CN": "这是两京之间的历史廊道模型，不表示单一路线或精确线位。", "en": "This is a historical corridor model between the capitals, not one road or a precise alignment." }, "animationAllowed": false }
+  }
+]

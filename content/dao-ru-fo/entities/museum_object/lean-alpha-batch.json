@@ -1,0 +1,62 @@
+[
+  {
+    "kind": "museum_object", "slug": "daodejing-commentary-manuscript-record", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_inferred", "importance": 3, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "《道德经》注本写本记录（对象占位）", "shortSummary": "对象卡为唐代《道德经》注释的写本形态、书写层和流传史预留档案入口。", "curatorialDescription": ["尚未绑定具体馆藏，不展示图像，也不把占位类型当作已确认对象。"], "researchNote": "需补馆藏机构、编号、材质、年代、注家归属、流传与图像权利。", "timeLabel": "对象记录待核；唐代注释语境", "keyFacts": [] },
+      "en": { "title": "Daodejing commentary manuscript record (object placeholder)", "shortSummary": "The object record reserves an archive entry for manuscript form, writing layers and provenance of Tang Daodejing commentaries.", "curatorialDescription": ["No collection object is attached; no image is shown and the placeholder type is not treated as a confirmed object."], "researchNote": "Collection, accession, material, date, attribution, provenance and image rights are required.", "timeLabel": "Object pending; Tang commentary context", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:object-records" }],
+    "temporalAssertions": [{ "predicate": "object_date", "timeType": "century", "startYear": 600, "endYear": 899, "displayDate": { "zh-CN": "对象记录待核；唐代注释语境", "en": "Object pending; Tang commentary context" }, "confidence": "unknown", "evidenceLayer": "historical_inferred", "sourceId": "source:object-records" }],
+    "sourceIds": ["source:object-records", "source:daodejing-edition"], "profile": { "objectType": "manuscript", "rightsStatus": "unknown", "collectionStatus": "placeholder" }
+  },
+  {
+    "kind": "museum_object", "slug": "daoist-inscription-rubbing-record", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_inferred", "importance": 3, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "道教宫观碑刻拓片记录（对象占位）", "shortSummary": "碑刻与拓片可把宫观、人物、时间和赞助关系落到可校验的文字对象。", "curatorialDescription": ["当前只定义对象需求，不声称某一拓片已经入藏或获授权。"], "researchNote": "需落实原碑、拓片馆藏、释文、年代、地点、编号及使用许可。", "timeLabel": "对象记录待核；隋唐宫观语境", "keyFacts": [] },
+      "en": { "title": "Daoist institutional inscription rubbing (object placeholder)", "shortSummary": "Inscriptions and rubbings can anchor institutions, figures, dates and patronage in verifiable textual objects.", "curatorialDescription": ["The record defines an object need; it does not claim that a rubbing is held or licensed."], "researchNote": "Original stele, rubbing collection, transcription, date, place, accession and licence are required.", "timeLabel": "Object pending; Sui–Tang institutional context", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:object-records" }],
+    "temporalAssertions": [{ "predicate": "object_date", "timeType": "range", "startYear": 581, "endYear": 907, "displayDate": { "zh-CN": "对象记录待核；隋唐宫观语境", "en": "Object pending; Sui–Tang institutional context" }, "confidence": "unknown", "evidenceLayer": "historical_inferred", "sourceId": "source:object-records" }],
+    "sourceIds": ["source:object-records", "source:daoist-historical-record"], "profile": { "objectType": "rubbing", "rightsStatus": "unknown", "collectionStatus": "placeholder" }
+  },
+  {
+    "kind": "museum_object", "slug": "imperial-classics-scroll-record", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_inferred", "importance": 3, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "官学经典卷子记录（对象占位）", "shortSummary": "卷子对象可呈现经典文本如何通过抄写、校勘和教学进入官学实践。", "curatorialDescription": ["对象类型与具体《五经正义》写本必须分开，当前不作馆藏归属。"], "researchNote": "需补具体经典、书写年代、材质、文本版本、馆藏编号与图像许可。", "timeLabel": "对象记录待核；唐代官学语境", "keyFacts": [] },
+      "en": { "title": "State-school classics scroll (object placeholder)", "shortSummary": "A scroll object can show how classics entered official learning through copying, collation and teaching.", "curatorialDescription": ["The object type remains separate from any particular manuscript of the Corrected Meanings; no collection is assigned."], "researchNote": "Classic, date, material, text version, accession and image licence are required.", "timeLabel": "Object pending; Tang official-learning context", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "confucianism", "role": "primary", "isPrimary": true, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:object-records" }],
+    "temporalAssertions": [{ "predicate": "object_date", "timeType": "century", "startYear": 600, "endYear": 899, "displayDate": { "zh-CN": "对象记录待核；唐代官学语境", "en": "Object pending; Tang official-learning context" }, "confidence": "unknown", "evidenceLayer": "historical_inferred", "sourceId": "source:object-records" }],
+    "sourceIds": ["source:object-records", "source:education-classics-records"], "profile": { "objectType": "manuscript_scroll", "rightsStatus": "unknown", "collectionStatus": "placeholder" }
+  },
+  {
+    "kind": "museum_object", "slug": "guozijian-ritual-vessel-record", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_inferred", "importance": 2, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "国学礼仪器物记录（对象占位）", "shortSummary": "礼仪器物能把“礼”的概念与学校空间、参与者和具体行动联系起来。", "curatorialDescription": ["现阶段不指定器类或年代，以免把一般制度描述冒充具体藏品。"], "researchNote": "需以考古报告或馆藏目录确定器类、出土地、年代、用途与权利。", "timeLabel": "对象记录待核；隋唐教育礼仪语境", "keyFacts": [] },
+      "en": { "title": "Official-learning ritual object record (object placeholder)", "shortSummary": "A ritual object can connect the concept of li with school space, participants and concrete action.", "curatorialDescription": ["No object class or date is assigned yet, avoiding presentation of a general institution as a specific artefact."], "researchNote": "Object class, findspot, date, use and rights require an excavation report or museum catalogue.", "timeLabel": "Object pending; Sui–Tang educational ritual context", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "confucianism", "role": "primary", "isPrimary": true, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:object-records" }],
+    "temporalAssertions": [{ "predicate": "object_date", "timeType": "range", "startYear": 581, "endYear": 907, "displayDate": { "zh-CN": "对象记录待核；隋唐教育礼仪语境", "en": "Object pending; Sui–Tang educational ritual context" }, "confidence": "unknown", "evidenceLayer": "historical_inferred", "sourceId": "source:object-records" }],
+    "sourceIds": ["source:object-records", "source:education-classics-records"], "profile": { "objectType": "ritual_object", "rightsStatus": "unknown", "collectionStatus": "placeholder" }
+  },
+  {
+    "kind": "museum_object", "slug": "translation-catalogue-manuscript-record", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_inferred", "importance": 3, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "译经目录写本记录（对象占位）", "shortSummary": "经录与目录对象可记录译名、版本、译者归属和经典流通的制度化整理。", "curatorialDescription": ["目录文本和承载它的具体写本是不同层级，当前条目只预留对象档案。"], "researchNote": "需确定具体经录、版本、写本馆藏、编号、年代和图像权利。", "timeLabel": "对象记录待核；唐代译经语境", "keyFacts": [] },
+      "en": { "title": "Translation catalogue manuscript (object placeholder)", "shortSummary": "Catalogue objects can record translated titles, versions, attribution and institutional organization of textual circulation.", "curatorialDescription": ["A catalogue text and a particular manuscript carrying it are separate layers; this record reserves the object layer only."], "researchNote": "Catalogue title, edition, manuscript collection, accession, date and image rights are required.", "timeLabel": "Object pending; Tang translation context", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:object-records" }],
+    "temporalAssertions": [{ "predicate": "object_date", "timeType": "century", "startYear": 600, "endYear": 899, "displayDate": { "zh-CN": "对象记录待核；唐代译经语境", "en": "Object pending; Tang translation context" }, "confidence": "unknown", "evidenceLayer": "historical_inferred", "sourceId": "source:object-records" }],
+    "sourceIds": ["source:object-records", "source:buddhist-institutional-records"], "profile": { "objectType": "catalogue_manuscript", "rightsStatus": "unknown", "collectionStatus": "placeholder" }
+  },
+  {
+    "kind": "museum_object", "slug": "longmen-dedication-inscription-record", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_inferred", "importance": 3, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "龙门造像题记记录（对象占位）", "shortSummary": "造像题记可把图像、供养人、愿文、年代与洞窟位置连接为可追溯对象。", "curatorialDescription": ["遗产地存在大量题记，但本条尚未指向其中任何一件，不使用未经许可图像。"], "researchNote": "需从权威目录选择具体题记，补编号、释文、位置、年代与授权。", "timeLabel": "对象记录待核；北魏晚期至唐代", "keyFacts": [] },
+      "en": { "title": "Longmen dedicatory inscription record (object placeholder)", "shortSummary": "A dedicatory inscription can connect image, donor, vow, date and cave location as a traceable object.", "curatorialDescription": ["Many inscriptions exist at the heritage site, but this record points to none of them yet and uses no unlicensed image."], "researchNote": "A specific inscription needs authoritative catalogue number, transcription, location, date and permission.", "timeLabel": "Object pending; late Northern Wei through Tang", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:object-records" }],
+    "temporalAssertions": [{ "predicate": "object_date", "timeType": "range", "startYear": 493, "endYear": 907, "displayDate": { "zh-CN": "对象记录待核；北魏晚期至唐代", "en": "Object pending; late Northern Wei through Tang" }, "confidence": "unknown", "evidenceLayer": "historical_inferred", "sourceId": "source:object-records" }],
+    "sourceIds": ["source:object-records", "source:unesco-longmen"], "profile": { "objectType": "inscription", "rightsStatus": "unknown", "collectionStatus": "placeholder" }
+  }
+]

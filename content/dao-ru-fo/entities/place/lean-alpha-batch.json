@@ -1,0 +1,38 @@
+[
+  {
+    "kind": "place", "slug": "great-wild-goose-pagoda-site", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "大雁塔遗址", "shortSummary": "大雁塔遗址把玄奘、译经、经典保存和长安城市空间连接起来。", "curatorialDescription": ["地点记录只表达可定位遗址；建筑阶段、功能变化与现代保护范围需要分层说明。"], "researchNote": "正式坐标、遗产边界及各次修建年代需绑定权威地理与保护资料。", "timeLabel": "唐代始建；沿革待分期", "keyFacts": [] },
+      "en": { "title": "Great Wild Goose Pagoda site", "shortSummary": "The site connects Xuanzang, translation, textual preservation and the urban space of Chang'an.", "curatorialDescription": ["The place record identifies a locatable site; building phases, changing functions and modern protection boundaries require separate layers."], "researchNote": "Coordinates, heritage boundary and construction phases must be attached to authoritative geographic and conservation records.", "timeLabel": "Founded in the Tang; phases pending", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:buddhist-institutional-records" }],
+    "temporalAssertions": [{ "predicate": "site_activity", "timeType": "range", "startYear": 652, "endYear": 907, "displayDate": { "zh-CN": "唐代始建；沿革待分期", "en": "Founded in the Tang; phases pending" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:buddhist-institutional-records" }],
+    "sourceIds": ["source:buddhist-institutional-records", "source:unesco-silk-roads-corridor", "source:historical-geography"],
+    "profile": { "placeReality": "real_historical", "geometryType": "point", "coordinates": [108.959444, 34.219722], "coordinateConfidence": "exact", "geographicSourceId": "source:unesco-silk-roads-corridor" }
+  },
+  {
+    "kind": "place", "slug": "zhongnan-mountains", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "终南山", "shortSummary": "终南山是长安近郊的真实山地，也是修行、隐逸与宗教叙事叠加的文化空间。", "curatorialDescription": ["真实地理和圣地叙事在此并存，但地图层与象征宇宙层必须分别呈现。"], "researchNote": "范围、历史地名、宫观寺院节点及圣地叙事需逐条绑定来源。", "timeLabel": "隋唐重点；长期文化地景", "keyFacts": [] },
+      "en": { "title": "Zhongnan Mountains", "shortSummary": "The Zhongnan Mountains are a real landscape near Chang'an and a layered setting for cultivation, reclusion and religious narrative.", "curatorialDescription": ["Real geography and sacred narratives coexist here, but the map and symbolic cosmos must remain separate views."], "researchNote": "Extent, historical names, institutional sites and sacred accounts require item-level sources.", "timeLabel": "Sui–Tang focus; long cultural landscape", "keyFacts": [] }
+    },
+    "traditions": [
+      { "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:historical-geography" },
+      { "tradition": "buddhism", "role": "secondary", "isPrimary": false, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:historical-geography" }
+    ],
+    "temporalAssertions": [{ "predicate": "cultural_landscape", "timeType": "range", "startYear": 581, "endYear": 907, "displayDate": { "zh-CN": "隋唐重点；长期文化地景", "en": "Sui–Tang focus; long cultural landscape" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:historical-geography" }],
+    "sourceIds": ["source:historical-geography", "source:daoist-historical-record"],
+    "profile": { "placeReality": "approximate_region", "geometryType": "point", "coordinateConfidence": "not_applicable", "geographicSourceId": "source:historical-geography" }
+  },
+  {
+    "kind": "place", "slug": "longmen-grottoes", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "龙门石窟", "shortSummary": "龙门石窟把洛阳、皇室赞助、佛教造像与石刻题记置于同一物质场域。", "curatorialDescription": ["条目依据遗产地层级建模；洞窟、造像、题记和营造阶段仍需拆成可引用对象。"], "researchNote": "下一批应接入 UNESCO 遗产资料与具体洞窟、造像和题记目录。", "timeLabel": "北魏晚期至唐代重点", "keyFacts": [] },
+      "en": { "title": "Longmen Grottoes", "shortSummary": "Longmen brings Luoyang, imperial patronage, Buddhist images and inscriptions into one material landscape.", "curatorialDescription": ["The record is modelled at heritage-site level; caves, sculptures, inscriptions and building phases remain to be separated into citable objects."], "researchNote": "The next batch should attach UNESCO documentation and catalogues for specific caves, sculptures and inscriptions.", "timeLabel": "Late Northern Wei through Tang focus", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:unesco-longmen" }],
+    "temporalAssertions": [{ "predicate": "site_activity", "timeType": "range", "startYear": 493, "endYear": 907, "displayDate": { "zh-CN": "北魏晚期至唐代重点", "en": "Late Northern Wei through Tang focus" }, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:unesco-longmen" }],
+    "sourceIds": ["source:unesco-longmen", "source:historical-geography"],
+    "profile": { "placeReality": "real_historical", "geometryType": "point", "coordinates": [112.466667, 34.466667], "coordinateConfidence": "exact", "geographicSourceId": "source:unesco-longmen" }
+  }
+]

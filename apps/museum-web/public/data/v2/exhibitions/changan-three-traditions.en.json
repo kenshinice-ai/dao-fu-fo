@@ -1,0 +1,146 @@
+{
+  "locale": "en",
+  "slug": "changan-three-traditions",
+  "title": "Chang'an: Where the Three Traditions Met",
+  "subtitle": "长安：三教相遇的世界之都",
+  "curatorialQuestion": "Why did one empire draw on Daoist institutions, Confucian ritual order and Buddhist teaching at the same time?",
+  "opening": "Seventh-century Chang'an was a political capital and a meeting point for translation, education, ritual and religious networks. The exhibition does not collapse three traditions into one answer; it follows how each entered the same city.",
+  "quickMinutes": 5,
+  "fullMinutes": 12,
+  "sections": [
+    {
+      "slug": "world-city",
+      "sequence": 1,
+      "tradition": "convergence",
+      "kicker": "Prologue · city",
+      "title": "The world enters Chang'an",
+      "question": "Why could Chang'an make different traditions visible at once?",
+      "body": [
+        "The imperial capital compressed court, state learning, monasteries, Daoist institutions, markets and international travellers into one space. Their encounters were not always harmonious: they also competed for resources, authority and state support.",
+        "Chang'an is therefore not a simple emblem of “three teachings as one,” but a historical setting for coexistence, argument, adaptation and restriction."
+      ],
+      "object": {
+        "label": "Opening object · the city as an exhibit",
+        "title": "Institutional and religious sites in seventh-century Chang'an",
+        "meta": "Digital reconstruction · historical geography",
+        "description": "The first release uses real coordinates and historical names without projecting modern city boundaries directly onto Tang space."
+      },
+      "explore": {
+        "label": "Open the historical map",
+        "mode": "map",
+        "focus": "changan"
+      }
+    },
+    {
+      "slug": "daoism",
+      "sequence": 2,
+      "tradition": "daoism",
+      "kicker": "Dao · institutions and mountains",
+      "title": "From the Dao of naturalness to imperial institutions",
+      "question": "How are Daoist thought and organised Daoism related without being identical?",
+      "body": [
+        "Tang imperial interest in a lineage associated with Laozi connected textual interpretation, institutional patronage and political legitimacy. Yet Daoist thought is not identical with every Daoist organisation or ritual.",
+        "Figures such as Sima Chengzhen connected mountain cultivation, textual traditions and court summons. Their place becomes clearer when concepts, lineages, institutions and sacred mountains remain distinct."
+      ],
+      "object": {
+        "label": "Digital object 03",
+        "title": "Louguantai: real place and sacred meaning",
+        "meta": "Mount Zhongnan · historical place",
+        "description": "The real map records a geographic referent. Sacred meaning is expressed through traditional accounts and relations, not through invented coordinates."
+      },
+      "passage": {
+        "quote": "Humans follow earth; earth follows heaven; heaven follows the Dao; the Dao follows what is naturally so.",
+        "interpretation": "Here “naturalness” is not simply the modern natural world; it points toward being-so-of-itself.",
+        "source": "Daodejing, chapter 25",
+        "slug": "humans-follow-earth"
+      },
+      "explore": {
+        "label": "Locate Tang Daoism on the timeline",
+        "mode": "timeline",
+        "focus": "sima-chengzhen"
+      }
+    },
+    {
+      "slug": "confucianism",
+      "sequence": 3,
+      "tradition": "confucianism",
+      "kicker": "Ru · ritual and education",
+      "title": "How classics became state learning",
+      "question": "Why can Confucian traditions not be reduced to private philosophy?",
+      "body": [
+        "In the Sui–Tang state, interpretation of the classics, schools, ritual norms and official selection were connected. The commentarial project led by Kong Yingda shows that interpreting texts could also become a state undertaking.",
+        "Institutional influence did not eliminate internal disagreement. Commentarial traditions, political contexts and responses to Buddhism and Daoism continued to reshape Confucian learning."
+      ],
+      "object": {
+        "label": "Digital object 04",
+        "title": "Knowledge label for the Correct Meaning of the Five Classics",
+        "meta": "Tang classical learning · state education",
+        "description": "Text, commentary, compilers and institutional use are recorded separately so that a classic is not reduced to a title."
+      },
+      "passage": {
+        "quote": "To restrain oneself and return to ritual is benevolence.",
+        "interpretation": "Ritual is not merely external conformity; it is tied to self-regulation and the ordering of human relations.",
+        "source": "Analects 12.1",
+        "slug": "return-to-ritual"
+      },
+      "explore": {
+        "label": "See ritual, texts and state education",
+        "mode": "graph",
+        "focus": "ritual"
+      }
+    },
+    {
+      "slug": "buddhism",
+      "sequence": 4,
+      "tradition": "buddhism",
+      "kicker": "Buddhism · translation and transmission",
+      "title": "Translating distant texts into Chinese worlds",
+      "question": "Is translation a change of language, or a recreation of thought?",
+      "body": [
+        "Xuanzang's pilgrimage, return and translation work connected travel, textual versions, court support and monastic collaboration. Translation was not an isolated achievement; it relied on institutions able to compare, discuss and circulate texts.",
+        "As Buddhist terminology entered Chinese, it also met existing conceptual vocabularies. The process is best read through routes, versions and conceptual relations together."
+      ],
+      "object": {
+        "label": "Digital object 02",
+        "title": "Translation bureau label: Great Ci'en Monastery",
+        "meta": "Chang'an · seventh century · institution and place",
+        "description": "The museum separates the monastery as an organisation from the monastery as a physical location, then connects both to figures, events and texts."
+      },
+      "passage": {
+        "quote": "Form is not different from emptiness; emptiness is not different from form.",
+        "interpretation": "Emptiness is not nihilism. It refuses to treat things as isolated, fixed and eternally self-existing.",
+        "source": "Heart Sutra · T0251",
+        "slug": "form-is-emptiness"
+      },
+      "explore": {
+        "label": "See Xuanzang and his textual relations",
+        "mode": "graph",
+        "focus": "xuanzang"
+      }
+    },
+    {
+      "slug": "convergence",
+      "sequence": 5,
+      "tradition": "convergence",
+      "kicker": "Convergence · debate and coexistence",
+      "title": "Meeting does not mean becoming the same",
+      "question": "Why did the three traditions argue while repeatedly borrowing one another's questions?",
+      "body": [
+        "Buddhist, Daoist and Confucian traditions competed over state support, social roles and conceptual language, while also comparing, absorbing and reframing one another. Convergence means studying how differences operated in the same city and institutions.",
+        "The first release shows one-hop relations only. Every edge should return to a readable explanation and source."
+      ],
+      "object": {
+        "label": "Exit object · question graph",
+        "title": "A Chang'an slice of three traditions",
+        "meta": "Figures · texts · concepts · place",
+        "description": "The graph selects nodes and edges by question. Colour marks tradition; evidence is carried through text and line treatment."
+      },
+      "explore": {
+        "label": "Open the three-traditions graph",
+        "mode": "graph",
+        "focus": "changan"
+      }
+    }
+  ],
+  "closingReflection": "If one city needed three different civilisational languages, did they cancel one another out—or enlarge the ways people could understand order, life and the world?"
+}

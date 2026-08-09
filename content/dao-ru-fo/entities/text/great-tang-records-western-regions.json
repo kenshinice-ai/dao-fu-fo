@@ -1,0 +1,39 @@
+{
+  "kind": "text",
+  "slug": "great-tang-records-western-regions",
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed",
+  "primaryEvidenceLayer": "historical_documented",
+  "importance": 4,
+  "isFeatured": false,
+  "translations": {
+    "zh-CN": {
+      "title": "《大唐西域记》",
+      "subtitle": "旅行见闻、地理叙述与知识转译",
+      "shortSummary": "《大唐西域记》把求法者的旅行经验转化为关于地理、制度、城市和宗教场所的文本记录。",
+      "curatorialDescription": [
+        "这部文本既是旅行记录，也是经过选择和组织的知识叙述；博物馆会把观察、传闻和后世解释分开。",
+        "它与玄奘人物条目、龟兹和那烂陀地点条目共同构成路线的研究入口。"
+      ],
+      "researchNote": "需要补充具体版本、卷次、译注、异文和不同研究传统对“见闻”与“转述”的区分。",
+      "timeLabel": "唐代成书语境；跨区域地理记录",
+      "keyFacts": [{ "label": { "zh-CN": "文本类型", "en": "Text kind" }, "value": { "zh-CN": "历史地理与旅行记录", "en": "Historical geography and travel record" } }]
+    },
+    "en": {
+      "title": "Record of the Western Regions of the Great Tang",
+      "subtitle": "Travel observation, geography and the translation of knowledge",
+      "shortSummary": "The Record turns a pilgrim's travel experience into an account of geography, institutions, cities and religious sites.",
+      "curatorialDescription": [
+        "It is both a travel record and an organised knowledge narrative; the museum separates observation, report and later interpretation.",
+        "Together with the Xuanzang, Kucha and Nalanda entries, it provides a research entry into the route."
+      ],
+      "researchNote": "Specific editions, fascicles, translations, variants and distinctions among observation and report still need to be documented.",
+      "timeLabel": "Tang composition context; transregional geographic record",
+      "keyFacts": [{ "label": { "zh-CN": "文本类型", "en": "Text kind" }, "value": { "zh-CN": "历史地理与旅行记录", "en": "Historical geography and travel record" } }]
+    }
+  },
+  "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:buddhist-biographical-records" }],
+  "temporalAssertions": [{ "predicate": "composition_context", "timeType": "century", "startYear": 600, "endYear": 699, "displayDate": { "zh-CN": "唐代成书语境", "en": "Tang composition context" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:buddhist-biographical-records" }],
+  "sourceIds": ["source:buddhist-biographical-records", "source:historical-geography"],
+  "profile": { "textKind": "historical_record", "originalLanguageCode": "zh", "canonicalStatus": "influential", "attributionStatus": "known" }
+}

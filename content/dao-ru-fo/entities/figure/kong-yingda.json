@@ -1,0 +1,112 @@
+{
+  "kind": "figure",
+  "slug": "kong-yingda",
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed",
+  "primaryEvidenceLayer": "historical_documented",
+  "importance": 4,
+  "isFeatured": true,
+  "translations": {
+    "zh-CN": {
+      "title": "孔颖达",
+      "subtitle": "经学家与《五经正义》编纂者",
+      "shortSummary": "孔颖达代表唐代经学如何进入国家教育、注疏和制度化知识生产。",
+      "curatorialDescription": [
+        "孔颖达的故事不是简单的‘经典解释者’传记，而是文本、注疏者、编纂工程和国家教育制度共同作用的案例。",
+        "通过他可以看到，儒家传统如何从经典解释进入官学与政治秩序，同时保留内部注释差异和历史语境。"
+      ],
+      "researchNote": "本条目为 Alpha 结构化样本，后续需要补充编纂参与者、版本流传和国子监使用语境的来源。",
+      "timeLabel": "574–648",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "代表工程",
+            "en": "Representative project"
+          },
+          "value": {
+            "zh-CN": "《五经正义》",
+            "en": "The Five Classics Corrected Meanings"
+          }
+        },
+        {
+          "label": {
+            "zh-CN": "制度语境",
+            "en": "Institutional context"
+          },
+          "value": {
+            "zh-CN": "经学与国家教育",
+            "en": "Classical learning and state education"
+          }
+        }
+      ]
+    },
+    "en": {
+      "title": "Kong Yingda",
+      "subtitle": "Classical scholar and compiler associated with the Corrected Meanings of the Five Classics",
+      "shortSummary": "Kong Yingda represents how Tang classical learning entered state education, commentary and institutional knowledge production.",
+      "curatorialDescription": [
+        "Kong Yingda is not simply a biographical ‘interpreter of classics’. His case brings texts, commentators, editorial projects and state education into the same frame.",
+        "Through him we can see how Confucian traditions moved from textual interpretation into official learning and political order while retaining internal differences and historical context."
+      ],
+      "researchNote": "This Alpha structured sample still needs sources for contributors, textual transmission and the Guozijian context.",
+      "timeLabel": "574–648",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "代表工程",
+            "en": "Representative project"
+          },
+          "value": {
+            "zh-CN": "《五经正义》",
+            "en": "The Five Classics Corrected Meanings"
+          }
+        },
+        {
+          "label": {
+            "zh-CN": "制度语境",
+            "en": "Institutional context"
+          },
+          "value": {
+            "zh-CN": "经学与国家教育",
+            "en": "Classical learning and state education"
+          }
+        }
+      ]
+    }
+  },
+  "traditions": [
+    {
+      "tradition": "confucianism",
+      "role": "primary",
+      "isPrimary": true,
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:confucian-commentarial-record"
+    }
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "activity",
+      "timeType": "exact",
+      "startYear": 574,
+      "endYear": 648,
+      "displayDate": {
+        "zh-CN": "574–648",
+        "en": "574–648"
+      },
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:confucian-commentarial-record"
+    }
+  ],
+  "sourceIds": [
+    "source:confucian-commentarial-record",
+    "source:editorial-method"
+  ],
+  "profile": {
+    "historicity": "documented",
+    "gender": "male",
+    "canonicalNameOriginal": "孔颖达",
+    "nameLanguageCode": "lzh"
+  }
+}

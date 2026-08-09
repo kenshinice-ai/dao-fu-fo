@@ -1,0 +1,29 @@
+[
+  {
+    "slug": "daoism",
+    "translations": {
+      "zh-CN": "道家与道教传统",
+      "en": "Daoist Traditions"
+    },
+    "sortOrder": 1,
+    "sourceIds": ["source:editorial-method"]
+  },
+  {
+    "slug": "confucianism",
+    "translations": {
+      "zh-CN": "儒家传统",
+      "en": "Confucian Traditions"
+    },
+    "sortOrder": 2,
+    "sourceIds": ["source:editorial-method"]
+  },
+  {
+    "slug": "buddhism",
+    "translations": {
+      "zh-CN": "佛教",
+      "en": "Buddhism"
+    },
+    "sortOrder": 3,
+    "sourceIds": ["source:editorial-method"]
+  }
+]

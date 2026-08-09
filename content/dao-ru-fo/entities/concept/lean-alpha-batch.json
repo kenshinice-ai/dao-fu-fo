@@ -1,0 +1,189 @@
+[
+  {
+    "kind": "concept",
+    "slug": "naturalness-and-self-so",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "scholarly_interpretation",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "自然与自然而然",
+        "shortSummary": "“自然”在道家文本中首先指事物自身如此，不宜直接等同于现代的自然环境概念。",
+        "curatorialDescription": [
+          "概念页将章句、注本和现代解释分层，避免以单一译词覆盖历史语义。"
+        ],
+        "researchNote": "需要补充《道德经》版本异文及唐代注本对“自然”的具体解释。",
+        "timeLabel": "比较概念；隋唐注释重点",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Naturalness and self-so",
+        "shortSummary": "In early Daoist texts, ziran first concerns being so of itself and should not be equated directly with the modern category of nature.",
+        "curatorialDescription": [
+          "The concept layer separates passages, commentaries and modern interpretations so that one translation does not erase historical meanings."
+        ],
+        "researchNote": "Variants of the Daodejing and Tang commentaries on ziran still need to be added.",
+        "timeLabel": "Comparative concept; Tang commentary focus",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "scholarly_interpretation",
+        "sourceId": "source:daodejing-edition"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "analytic_scope",
+        "timeType": "atemporal",
+        "displayDate": {
+          "zh-CN": "比较概念；隋唐注释重点",
+          "en": "Comparative concept; Tang commentary focus"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "scholarly_interpretation",
+        "sourceId": "source:editorial-method"
+      }
+    ],
+    "sourceIds": [
+      "source:daodejing-edition",
+      "source:editorial-method"
+    ],
+    "profile": {
+      "conceptKind": "doctrinal"
+    }
+  },
+  {
+    "kind": "concept",
+    "slug": "classical-commentary",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "scholarly_interpretation",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "经典注疏",
+        "shortSummary": "注疏把经典、历代解释、校勘与教育实践组织成可传递的知识结构。",
+        "curatorialDescription": [
+          "概念不把“儒家经典”看作静态书目，而关注文本如何经由编纂和教学获得制度效力。"
+        ],
+        "researchNote": "后续需按具体经典、版本、注家与官学使用场景拆分。",
+        "timeLabel": "隋唐知识制度重点",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Classical commentary",
+        "shortSummary": "Commentary organizes classics, inherited interpretation, textual criticism and teaching into transmissible knowledge structures.",
+        "curatorialDescription": [
+          "The concept treats classical learning as an editorial and educational practice rather than a static list of books."
+        ],
+        "researchNote": "Future records must separate individual classics, editions, commentators and institutional uses.",
+        "timeLabel": "Sui–Tang knowledge-system focus",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "scholarly_interpretation",
+        "sourceId": "source:confucian-commentarial-record"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "analytic_scope",
+        "timeType": "range",
+        "startYear": 581,
+        "endYear": 907,
+        "displayDate": {
+          "zh-CN": "隋唐知识制度重点",
+          "en": "Sui–Tang knowledge-system focus"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "scholarly_interpretation",
+        "sourceId": "source:education-classics-records"
+      }
+    ],
+    "sourceIds": [
+      "source:confucian-commentarial-record",
+      "source:education-classics-records"
+    ],
+    "profile": {
+      "conceptKind": "interpretive_method"
+    }
+  },
+  {
+    "kind": "concept",
+    "slug": "pilgrimage-and-transmission",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "scholarly_interpretation",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "求法与传译",
+        "shortSummary": "求法旅程只有进入译经、目录、讲学与机构协作后，才成为持续的知识传播。",
+        "curatorialDescription": [
+          "该概念把传奇旅行拆成路线证据、文本版本、语言劳动和城市制度四个层面。"
+        ],
+        "researchNote": "不同人物路线、停留点和译经项目需分别核定，不以一条标准丝路替代。",
+        "timeLabel": "隋唐跨区域传播重点",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Pilgrimage and transmission",
+        "shortSummary": "Pilgrimage became durable knowledge transmission through translation, cataloguing, teaching and institutional collaboration.",
+        "curatorialDescription": [
+          "The concept separates legendary travel into route evidence, text versions, language labour and urban institutions."
+        ],
+        "researchNote": "Itineraries, stops and translation projects must be verified per figure rather than collapsed into one standard Silk Road.",
+        "timeLabel": "Sui–Tang transregional focus",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "scholarly_interpretation",
+        "sourceId": "source:buddhist-biographical-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "analytic_scope",
+        "timeType": "range",
+        "startYear": 581,
+        "endYear": 907,
+        "displayDate": {
+          "zh-CN": "隋唐跨区域传播重点",
+          "en": "Sui–Tang transregional focus"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "scholarly_interpretation",
+        "sourceId": "source:editorial-method"
+      }
+    ],
+    "sourceIds": [
+      "source:buddhist-biographical-records",
+      "source:editorial-method"
+    ],
+    "profile": {
+      "conceptKind": "institutional_process"
+    }
+  }
+]

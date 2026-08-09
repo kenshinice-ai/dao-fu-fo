@@ -1,0 +1,37 @@
+{
+  "kind": "text",
+  "slug": "heart-sutra",
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed",
+  "primaryEvidenceLayer": "historical_documented",
+  "importance": 5,
+  "isFeatured": true,
+  "translations": {
+    "zh-CN": {
+      "title": "《般若波罗蜜多心经》",
+      "subtitle": "般若类佛教经典",
+      "shortSummary": "《心经》以高度凝练的形式呈现般若思想，是汉传佛教中传播最广的经典之一。",
+      "curatorialDescription": ["本馆把《心经》的原文、译本、传播和后世诵读分开记录，避免把流行名句当成脱离文本版本的格言。"],
+      "researchNote": "文本的具体译者、版本和异文将在 passage 审校批次中逐项补齐。",
+      "timeLabel": "汉译与流通：隋唐重点",
+      "keyFacts": [
+        { "label": { "zh-CN": "文本类型", "en": "Text kind" }, "value": { "zh-CN": "佛教经文", "en": "Buddhist scripture" } }
+      ]
+    },
+    "en": {
+      "title": "Heart Sutra",
+      "subtitle": "A Buddhist Prajñāpāramitā scripture",
+      "shortSummary": "The Heart Sutra presents Prajñāpāramitā thought in a highly condensed form and became one of the most widely circulated texts in Chinese Buddhism.",
+      "curatorialDescription": ["The museum records the Heart Sutra's text, versions, transmission and later recitation separately instead of treating a popular line as a context-free maxim."],
+      "researchNote": "Specific translators, editions and variant readings will be verified passage by passage in the next editorial batch.",
+      "timeLabel": "Chinese translation and circulation: Sui–Tang focus",
+      "keyFacts": [
+        { "label": { "zh-CN": "文本类型", "en": "Text kind" }, "value": { "zh-CN": "佛教经文", "en": "Buddhist scripture" } }
+      ]
+    }
+  },
+  "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:heart-sutra-edition" }],
+  "temporalAssertions": [{ "predicate": "textual_attestation", "timeType": "range", "startYear": 600, "endYear": 700, "displayDate": { "zh-CN": "汉译与流通：隋唐重点", "en": "Chinese translation and circulation: Sui–Tang focus" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:heart-sutra-edition" }],
+  "sourceIds": ["source:heart-sutra-edition", "source:editorial-method"],
+  "profile": { "textKind": "sutra", "originalLanguageCode": "sa", "canonicalStatus": "influential", "attributionStatus": "contested" }
+}

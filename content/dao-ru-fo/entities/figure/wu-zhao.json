@@ -1,0 +1,128 @@
+{
+  "kind": "figure",
+  "slug": "wu-zhao",
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed",
+  "primaryEvidenceLayer": "historical_documented",
+  "importance": 4,
+  "isFeatured": false,
+  "translations": {
+    "zh-CN": {
+      "title": "武曌（武则天）",
+      "subtitle": "权力、宗教赞助与制度记忆中的女性统治者",
+      "shortSummary": "武曌的政治实践与宗教赞助，使长安和洛阳的制度、仪式与后世记忆成为可以并置研究的场域。",
+      "curatorialDescription": [
+        "本馆将政治权力、宗教赞助和后世神圣化叙事拆开，不把某一种传统的宣传材料直接当作统治事实。",
+        "她的条目用于展示同一人物如何在历史记录、仪式语境和后世记忆中被不同方式书写。"
+      ],
+      "researchNote": "Alpha 条目；需要逐项核对碑刻、正史、仪式文本与后世佛教和道教叙事的证据层。",
+      "timeLabel": "624–705",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "身份",
+            "en": "Role"
+          },
+          "value": {
+            "zh-CN": "武周统治者",
+            "en": "Ruler of Zhou"
+          }
+        },
+        {
+          "label": {
+            "zh-CN": "策展用途",
+            "en": "Curatorial use"
+          },
+          "value": {
+            "zh-CN": "制度、仪式与记忆",
+            "en": "Institutions, ritual and memory"
+          }
+        }
+      ]
+    },
+    "en": {
+      "title": "Wu Zhao (Wu Zetian)",
+      "subtitle": "A female ruler in power, religious patronage and institutional memory",
+      "shortSummary": "Wu Zhao's political practice and religious patronage make the institutions, rituals and later memories of Chang'an and Luoyang available for comparison.",
+      "curatorialDescription": [
+        "The museum separates political power, religious patronage and later sacralising narratives instead of treating a tradition's promotional material as a transparent record of rule.",
+        "Her entry shows how one person can be written differently across historical records, ritual contexts and later Buddhist or Daoist memories."
+      ],
+      "researchNote": "Alpha entry; inscriptions, official histories, ritual texts and later Buddhist and Daoist narratives require item-level evidence-layer review.",
+      "timeLabel": "624–705",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "身份",
+            "en": "Role"
+          },
+          "value": {
+            "zh-CN": "武周统治者",
+            "en": "Ruler of Zhou"
+          }
+        },
+        {
+          "label": {
+            "zh-CN": "策展用途",
+            "en": "Curatorial use"
+          },
+          "value": {
+            "zh-CN": "制度、仪式与记忆",
+            "en": "Institutions, ritual and memory"
+          }
+        }
+      ]
+    }
+  },
+  "traditions": [
+    {
+      "tradition": "buddhism",
+      "role": "secondary",
+      "isPrimary": true,
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:tang-imperial-records"
+    },
+    {
+      "tradition": "daoism",
+      "role": "secondary",
+      "isPrimary": false,
+      "confidence": "medium",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:tang-imperial-records"
+    },
+    {
+      "tradition": "confucianism",
+      "role": "comparative_only",
+      "isPrimary": false,
+      "confidence": "medium",
+      "evidenceLayer": "scholarly_interpretation",
+      "sourceId": "source:editorial-method"
+    }
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "life",
+      "timeType": "range",
+      "startYear": 624,
+      "endYear": 705,
+      "displayDate": {
+        "zh-CN": "624–705",
+        "en": "624–705"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:tang-imperial-records"
+    }
+  ],
+  "sourceIds": [
+    "source:tang-imperial-records",
+    "source:editorial-method"
+  ],
+  "profile": {
+    "historicity": "documented",
+    "gender": "female",
+    "canonicalNameOriginal": "武曌",
+    "nameLanguageCode": "lzh"
+  }
+}

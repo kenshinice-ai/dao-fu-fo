@@ -1,0 +1,31 @@
+{
+  "locale": "en",
+  "kind": "figure",
+  "slug": "sima-chengzhen",
+  "title": "Sima Chengzhen",
+  "subtitle": "647–735 · Tang Daoist figure",
+  "tradition": "daoism",
+  "evidence": "Historically documented · traditional layers also present",
+  "timeLabel": "647–735",
+  "shortSummary": "Sima Chengzhen connects mountain cultivation, textual traditions and Tang court networks.",
+  "curatorialDescription": [
+    "Sima Chengzhen matters not only as an individual biography but as a figure crossing three spaces: mountains, lineage and court. Tang Daoism could appear as mountain cultivation while also entering imperial ritual and patronage.",
+    "A relation graph must distinguish lineage tradition, documented activity and later veneration. They may concern one figure but belong to different evidence layers.",
+    "His case also shows why Daoist philosophical concepts and organised Daoism are not identical, even when textual interpretation and practice connect them."
+  ],
+  "researchNote": "The first release shows only foundational relations among court, mountain cultivation and textual tradition. Lineage detail will expand after source and tradition review.",
+  "keyFacts": [
+    { "label": "Tradition", "value": "associated with Shangqing Daoism" },
+    { "label": "Spaces", "value": "mountain cultivation · court networks" },
+    { "label": "Views", "value": "figure relations · timeline" }
+  ],
+  "related": [
+    { "kind": "text", "slug": "daodejing", "title": "Daodejing", "relation": "classical interpretive background" },
+    { "kind": "concept", "slug": "naturalness", "title": "Naturalness", "relation": "related concept" },
+    { "kind": "place", "slug": "louguantai", "title": "Louguantai", "relation": "Tang Daoist site network" }
+  ],
+  "sources": [
+    { "title": "Old Book of Tang", "locator": "biographical and court records concerning Daoist figures", "grade": "A", "role": "historical figure and court activity" },
+    { "title": "Studies of Daoism in the Tang", "locator": "Sima Chengzhen and the court", "grade": "B", "role": "lineage and institutional background; full bibliography pending" }
+  ]
+}
