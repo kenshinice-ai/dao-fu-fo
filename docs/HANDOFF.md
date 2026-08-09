@@ -2,7 +2,21 @@
 
 > 维护纪律：每个可独立说明的实现、修复、验证或发布阶段完成后立即更新。
 > 最后更新：2026-08-09
-> 当前阶段：Alpha content pipeline / First Viewable Prototype
+> 当前阶段：Alpha content pipeline / First Viewable Prototype / Cloudflare Pages Preview
+
+---
+
+## 2026-08-09｜Cloudflare Pages Preview 已上线
+
+- Cloudflare Pages 项目：`dao-ru-fo-digital-museum`；production branch 已设为 `main`；本次仅部署 Preview，不执行 production 发布；
+- Preview branch：`first-public-rc`；稳定 alias：<https://first-public-rc.dao-ru-fo-digital-museum.pages.dev>；本次 unique URL：<https://b73334f3.dao-ru-fo-digital-museum.pages.dev>；
+- deployment ID：`b73334f3-8a8c-44a4-96db-724f923da486`；Wrangler `4.120.0`；git commit：`cafc52fdbc89bffb21f5c250fd022134d80cb093`；部署时 tree clean；
+- 发布内容明确是 `2026.08.prototype.1` / `first-viewable-prototype`，仍读取已验收的 `apps/museum-web/public/data/v2`，不包含未完成的 Public RC 内容；
+- `./deploy/smoke-pages.sh`：23/23 通过，覆盖首页、CSP/nosniff/Permissions-Policy、SPA exhibition/entity/passage deep links、JSON split、地图 split 和 immutable asset cache；
+- Chrome 浏览器线上复验：首页加载完成、`/figures/xuanzang` 显示玄奘条目、无 console error/warn；
+- 当前 Public RC `release:alpha-public-rc-1` 仍为 `planning`，最新 blocker report 为 29 blockers / 27 warnings；Preview 上线不等于 Public RC 发布。
+
+生产上线仍需另行完成：Preview 评审、production release commit、production smoke、浏览器复验和本页证据回写。不要把 Preview URL 当作正式 production URL。
 
 ---
 
@@ -12,7 +26,7 @@
 
 - 冻结 `release:alpha-public-rc-1` 选择清单：10 个 core entities、3 个 text-version dependencies、14 条 relations；
 - compiler 新增 structural dependency、relation closure 和三传统覆盖校验；Public 子集只保留可见 related links，并拒绝 dangling passage dependencies；
-- 新增 `verify:public-rc`、`verify:public-rc:ready` 和默认 dry-run 的 `content:promote`；当前报告为 53 blockers、27 warnings，候选仍为 planning；
+- 新增 `verify:public-rc`、`verify:public-rc:ready` 和默认 dry-run 的 `content:promote`；当前报告为 29 blockers、27 warnings，候选仍为 planning；
 - 新增 migration 013、release candidate bundle rows 和 promotion audit rows；fresh/repeat PostgreSQL/PostGIS 通过，13 migrations、803 importer statements，指纹 `52cbaae271faf9f3f4978eb4f6fa6dd7`；
 - 新增 compiler regression test，确认单个已审核 entity 的 Public artifact 不会携带 preview related entity。
 
@@ -25,7 +39,7 @@
 - `npm run check` 全绿；新增 `npm run check:release` 串联静态、E2E 与真实数据库门禁；Public RC blocker report 也纳入默认 check；
 - 新增 `CHECKPOINT_2026-08-09.md`，明确测试路线和 Public 内容未完成边界。
 
-下一阶段重点是按已冻结候选逐项完成来源定位、权利、双语和审核，形成第一个 Public RC；随后把 compiler read model 接入 Web 并发布 Cloudflare preview。
+下一阶段重点是按已冻结候选逐项完成来源定位、权利、双语和审核，形成第一个 Public RC；Cloudflare Preview 已作为 prototype 测试环境上线，随后继续接入 compiler read model 与 Public 内容发布边界。
 
 ### 2026-08-09 深化更新｜数据库契约、质量工作流与派生 read models
 
@@ -35,7 +49,7 @@
 - 新增 `verify:database-bundle`，检查 UUID/key 唯一性、引用完整性、双语覆盖和三个顶级传统；
 - source 增加 locator level 与 citation status；Public factual claim 必须有 verified edition/item/precise 外部来源，项目 editorial method 不算事实来源；
 - 新增 `reviews.json` 与 review-check schema；compiler 生成 review queue 并对 Public entity/relation/audio 强制完整审核；
-- 新增 quality report、source index、route manifest 和全 artifact SHA-256/bytes manifest；当前 Preview 有 314 个 Public blockers、21 个 warnings、113 个 blocking review subjects；
+- 新增 quality report、source index、route manifest 和全 artifact SHA-256/bytes manifest；当前 Preview 有 284 个 Public blockers、21 个 warnings、113 个 blocking review subjects；
 - Public compiler 改为 fail-closed，当前输出为 0 entities / 0 sources / 0 relations / 0 audio，不泄漏 Preview 来源或 review queue；
 - compiler 新增现实地图、隋唐时间轴和三传统关系图 read models：每种语言 7 个地图点、62 个时间项、29 个图节点、30 条图边；没有坐标的近似区域不会被伪定位；
 - `MuseumDataSource` / `StaticMuseumDataSource` 已建立 static/API 同构契约并在适配器边界进行 Zod 校验；

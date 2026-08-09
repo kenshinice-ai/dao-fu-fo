@@ -1,6 +1,6 @@
 # 道·儒·佛文明数字博物馆｜Cloudflare Pages 上线手册
 
-> 状态：上线准备完成，尚未执行部署
+> 状态：Cloudflare Pages Preview 已部署；production 尚未执行
 > 核对日期：2026-08-09
 > 适用工程：`digital-museum` 第一版可看静态原型
 
@@ -69,7 +69,7 @@ apps/museum-web/dist/
 2026-08-09 检查到：
 
 - `dist/` 已存在；
-- 当前构建共 63 个文件，总体积约 628 KiB；该数字会随 hashed bundle 改变，应以 preflight 实测为准；
+- 当前 Preview 构建共 35 个文件，总体积约 544 KiB；该数字会随 hashed bundle 改变，应以 preflight 实测为准；
 - 没有单文件超过 Cloudflare Pages 的 25 MiB 上限；
 - 文件数远低于 Free plan 的 20,000 文件上限；
 - hashed JS/CSS 位于 `dist/assets/`；
