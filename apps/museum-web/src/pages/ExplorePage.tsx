@@ -831,8 +831,8 @@ function TimelinePlate({ data, locale, traditions, from, to, focus, relations, s
     <div className="explore-golden page-shell">
       <div className="timeline-canvas">
         <div className="canvas-title"><span>{data.title}</span><strong>{formatTimelineYear(startYear, locale)}—{formatTimelineYear(endYear, locale)}</strong></div>
-        <svg viewBox="0 0 980 520" role="img">
-          <title>{data.title}</title>
+        <svg viewBox="0 0 980 520" role="group" aria-labelledby="timeline-title">
+          <title id="timeline-title">{data.title}</title>
           {Object.entries(lanes).map(([tradition, y]) => (
             <g key={tradition}>
               <line x1="55" x2="925" y1={y} y2={y} className="timeline-line" />
