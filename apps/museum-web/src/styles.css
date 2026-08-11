@@ -2048,7 +2048,7 @@ h3 {
 .civilisation-map-node-index-item button {
   padding: 0;
   border: 0;
-  color: var(--gold);
+  color: var(--ink-soft);
   background: transparent;
   font-size: 0.72rem;
   cursor: pointer;

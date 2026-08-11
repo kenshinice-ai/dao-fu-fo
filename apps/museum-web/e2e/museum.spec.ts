@@ -77,7 +77,7 @@ test("shared context focus connects a figure to events and updates the URL", asy
   await waitForMuseum(page);
 
   await expect(page.getByRole("heading", { name: "Focused on: Xuanzang" })).toBeVisible();
-  await expect(page.getByText("Participated in the departure west", { exact: true })).toBeVisible();
+  await expect(page.locator(".context-relation-list").getByText("Participated in the departure west", { exact: true })).toBeVisible();
   expect(await page.locator(".timeline-event.is-focused").count()).toBeGreaterThan(2);
 
   const departureRelation = page.locator(".context-relation-list li").filter({ hasText: "Participated in the departure west" });
@@ -92,14 +92,14 @@ test("shared context offers the second and third featured figure dossiers", asyn
   await waitForMuseum(page);
 
   await expect(page.getByRole("heading", { name: "正在聚焦：司马承祯" })).toBeVisible();
-  await expect(page.getByRole("region", { name: "正在聚焦：司马承祯" }).getByText("处于开元制度扩展语境", { exact: true })).toBeVisible();
+  await expect(page.getByRole("region", { name: "正在聚焦：司马承祯" }).locator(".context-relation-list").getByText("处于开元制度扩展语境", { exact: true })).toBeVisible();
   await expect(page.locator(".graph-node.is-focused").filter({ hasText: "司马承祯" })).toHaveCount(1);
   await expect(page.getByRole("button", { name: "孔颖达", exact: true })).toBeVisible();
 
   await page.getByRole("button", { name: "孔颖达", exact: true }).click();
   await expect(page).toHaveURL(/focus=figure%3Akong-yingda/);
   await expect(page.getByRole("heading", { name: "正在聚焦：孔颖达" })).toBeVisible();
-  await expect(page.getByRole("region", { name: "正在聚焦：孔颖达" }).getByText("参与《五经正义》编纂工程", { exact: true })).toBeVisible();
+  await expect(page.getByRole("region", { name: "正在聚焦：孔颖达" }).locator(".context-relation-list").getByText("参与《五经正义》编纂工程", { exact: true })).toBeVisible();
 });
 
 test("shared context picker follows all indexed figures", async ({ page }) => {
@@ -145,14 +145,14 @@ test("cross-era figure entries keep traditional, speech and reception layers vis
 
   await expect(page.getByRole("heading", { name: "Focused on: Laozi (Li Er)" })).toBeVisible();
   const laoziContext = page.getByRole("region", { name: "Focused on: Laozi (Li Er)" });
-  await expect(laoziContext.getByText("Traditionally attributed to Laozi", { exact: true })).toBeVisible();
-  await expect(laoziContext.getByText("Remembered through Tang Daoist institutions", { exact: true })).toBeVisible();
+  await expect(laoziContext.locator(".context-relation-list").getByText("Traditionally attributed to Laozi", { exact: true })).toBeVisible();
+  await expect(laoziContext.locator(".context-relation-list").getByText("Remembered through Tang Daoist institutions", { exact: true })).toBeVisible();
   await expect(page.locator(".graph-node.is-focused").filter({ hasText: "Laozi (Li Er)" })).toHaveCount(1);
 
   await page.getByRole("button", { name: "Śākyamuni Buddha (Gautama)", exact: true }).click();
   await expect(page).toHaveURL(/focus=figure%3Asakyamuni/);
   await expect(page.getByRole("heading", { name: "Focused on: Śākyamuni Buddha" })).toBeVisible();
-  await expect(page.getByRole("region", { name: "Focused on: Śākyamuni Buddha" }).getByText("Preserved as Śākyamuni's teaching through transmission", { exact: true })).toBeVisible();
+  await expect(page.getByRole("region", { name: "Focused on: Śākyamuni Buddha" }).locator(".context-relation-list").getByText("Preserved as Śākyamuni's teaching through transmission", { exact: true })).toBeVisible();
 });
 
 test("real map supports zoom, pan and place-node navigation", async ({ page }) => {
@@ -165,12 +165,13 @@ test("real map supports zoom, pan and place-node navigation", async ({ page }) =
   await expect(page.getByRole("heading", { name: "Spatial links derived from route entities" })).toBeVisible();
   await expect(page.getByRole("link", { name: "Xuanzang's western pilgrimage route", exact: true })).toBeVisible();
 
+  const leaflet = map.locator(".civilisation-map-leaflet");
   const beforeZoom = await map.getAttribute("data-map-zoom");
   await page.getByRole("button", { name: "Zoom in" }).click();
   await expect.poll(() => map.getAttribute("data-map-zoom")).not.toBe(beforeZoom);
   const beforePan = await map.getAttribute("data-map-center");
-  await map.scrollIntoViewIfNeeded();
-  const mapBox = await map.boundingBox();
+  await leaflet.scrollIntoViewIfNeeded();
+  const mapBox = await leaflet.boundingBox();
   if (!mapBox) throw new Error("Historical map did not have a layout box");
   await page.mouse.move(mapBox.x + mapBox.width / 2, mapBox.y + mapBox.height / 2);
   await page.mouse.down();
