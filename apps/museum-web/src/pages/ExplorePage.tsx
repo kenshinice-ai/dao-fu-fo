@@ -435,6 +435,7 @@ function ContextFocus({
             relations={data.relations}
             searchItems={data.search.items}
             onFocus={onFocus}
+            peopleOnly
           />
         ) : null}
       </div>
@@ -969,7 +970,7 @@ function GraphPlate({ data, locale, traditions, focus, relations, searchItems, o
           ))}
         </ul>
         {focus?.startsWith("figure:") ? (
-          <RelationNetwork locale={locale} focus={focus} relations={relations} searchItems={searchItems} onFocus={onFocus} compact />
+          <RelationNetwork locale={locale} focus={focus} relations={relations} searchItems={searchItems} onFocus={onFocus} compact peopleOnly />
         ) : null}
       </aside>
     </div>

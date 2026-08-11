@@ -38,7 +38,15 @@
             "en": "Early teaching traditions are not treated as verbatim transcripts"
           }
         }
-      ]
+      ],
+      "quote": {
+        "original": "Idaṃ dukkhaṃ ariyasaccaṃ.",
+        "interpretation": {
+          "zh-CN": "《相应部》56.11 的传述层以佛陀宣说四圣谛呈现此句；本馆把它作为教法传述入口，不声称可恢复现场逐字记录。",
+          "en": "SN 56.11 presents this through a transmitted layer of the Buddha's first teaching; the museum uses it as a teaching-context entry, not as a recoverable verbatim transcript."
+        },
+        "locator": "SN 56.11 / Saṃyutta Nikāya 56.11"
+      }
     },
     "en": {
       "title": "Śākyamuni Buddha (Gautama)",
@@ -71,7 +79,15 @@
             "en": "Early teaching traditions are not treated as verbatim transcripts"
           }
         }
-      ]
+      ],
+      "quote": {
+        "original": "Idaṃ dukkhaṃ ariyasaccaṃ.",
+        "interpretation": {
+          "zh-CN": "《相应部》56.11 的传述层以佛陀宣说四圣谛呈现此句；本馆把它作为教法传述入口，不声称可恢复现场逐字记录。",
+          "en": "SN 56.11 presents this through a transmitted layer of the Buddha's first teaching; the museum uses it as a teaching-context entry, not as a recoverable verbatim transcript."
+        },
+        "locator": "Saṃyutta Nikāya 56.11 / SN 56.11"
+      }
     }
   },
   "traditions": [
@@ -102,6 +118,7 @@
   "sourceIds": [
     "source:buddha-early-texts",
     "source:sarnath-site-record",
+    "source:unesco-lumbini",
     "source:editorial-method"
   ],
   "related": [
@@ -115,6 +132,18 @@
       "relation": {
         "zh-CN": "初转法轮与后世朝圣记忆",
         "en": "First-teaching tradition and later pilgrimage memory"
+      }
+    },
+    {
+      "kind": "place",
+      "slug": "lumbini",
+      "title": {
+        "zh-CN": "蓝毗尼",
+        "en": "Lumbini"
+      },
+      "relation": {
+        "zh-CN": "诞生传统与佛教遗产地",
+        "en": "Birth tradition and Buddhist heritage site"
       }
     },
     {

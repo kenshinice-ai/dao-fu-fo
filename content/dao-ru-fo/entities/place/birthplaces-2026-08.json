@@ -1,0 +1,180 @@
+[
+  {
+    "kind": "place",
+    "slug": "qufu",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "曲阜",
+        "subtitle": "孔子出生地与儒家记忆的城市入口",
+        "shortSummary": "曲阜把孔子的出生地、鲁国历史空间与后世孔氏遗产景观连接起来，是进入儒家人物—地点关系的关键城市。",
+        "curatorialDescription": [
+          "地图上的曲阜使用城市尺度坐标，表达孔子出生地与后世遗产景观的对应关系；孔庙、孔林和孔府的现存建筑年代不被倒写成孔子时代的现场。",
+          "曲阜与孔子的关系属于出生地语境，和他后来的教学、周游及儒家经典接受保持不同层次。"
+        ],
+        "researchNote": "UNESCO 世界遗产条目将曲阜作为孔子出生地及孔氏遗产景观登记；本馆以城市级近似坐标呈现，具体出生地、遗产建筑分期与史传文本仍需分别核对。",
+        "timeLabel": "孔子生平出生地语境（约公元前 551–479 年）；后世遗产景观延续",
+        "keyFacts": [
+          {
+            "label": { "zh-CN": "地点类型", "en": "Place type" },
+            "value": { "zh-CN": "真实历史地点／城市级遗产景观", "en": "Real historical place / city-scale heritage landscape" }
+          },
+          {
+            "label": { "zh-CN": "空间角色", "en": "Spatial role" },
+            "value": { "zh-CN": "出生地与后世记忆地点", "en": "Birthplace and later memory site" }
+          }
+        ]
+      },
+      "en": {
+        "title": "Qufu",
+        "subtitle": "The city entry for Confucius's birthplace and Confucian memory",
+        "shortSummary": "Qufu connects Confucius's birthplace, the historical space of Lu and the later Kong-family heritage landscape as a key city in the person–place model.",
+        "curatorialDescription": [
+          "The map uses a city-scale coordinate for Qufu's correspondence with Confucius's birthplace and later heritage landscape; the surviving Temple, Cemetery and Mansion are not projected back as a literal scene from his lifetime.",
+          "Qufu's link to Confucius is a birthplace context, distinct from his later teaching, travels and the reception of Confucian classics."
+        ],
+        "researchNote": "The UNESCO World Heritage entry registers Qufu as the birthplace of Confucius and the later Kong-family heritage landscape. This museum uses an approximate city-scale point while keeping the precise birthplace, architectural phases and historiographical passages separate.",
+        "timeLabel": "Birthplace context for Confucius (c. 551–479 BCE); later heritage landscape continues",
+        "keyFacts": [
+          {
+            "label": { "zh-CN": "地点类型", "en": "Place type" },
+            "value": { "zh-CN": "真实历史地点／城市级遗产景观", "en": "Real historical place / city-scale heritage landscape" }
+          },
+          {
+            "label": { "zh-CN": "空间角色", "en": "Spatial role" },
+            "value": { "zh-CN": "出生地与后世记忆地点", "en": "Birthplace and later memory site" }
+          }
+        ]
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:unesco-qufu-confucius"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "cultural_landscape",
+        "timeType": "range",
+        "startYear": -551,
+        "endYear": -479,
+        "displayDate": {
+          "zh-CN": "孔子生平的出生地语境；后世遗产建筑另计",
+          "en": "Birthplace context in Confucius's lifetime; later heritage architecture is separate"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:unesco-qufu-confucius"
+      }
+    ],
+    "sourceIds": [
+      "source:unesco-qufu-confucius",
+      "source:shiji-confucius-biography",
+      "source:editorial-method"
+    ],
+    "profile": {
+      "placeReality": "real_historical",
+      "geometryType": "point",
+      "coordinates": [116.99, 35.6],
+      "coordinateConfidence": "approximate",
+      "geographicSourceId": "source:unesco-qufu-confucius"
+    }
+  },
+  {
+    "kind": "place",
+    "slug": "lumbini",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "traditional_account",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "蓝毗尼",
+        "subtitle": "佛陀诞生传统与佛教遗产地理的入口",
+        "shortSummary": "蓝毗尼把释迦牟尼的出生传统、考古遗产与后世朝圣地理连接起来，补足佛教人物地图的起点。",
+        "curatorialDescription": [
+          "蓝毗尼的现实坐标指向遗产地点；释迦牟尼诞生于此属于佛教传统与遗产记忆共同保存的层次，不被写成可以逐字复原的同时代出生记录。",
+          "从蓝毗尼到鹿野苑，地图让人物、教法与朝圣空间形成可切换的路线入口；传统叙事与考古遗存仍保持分层。"
+        ],
+        "researchNote": "UNESCO 将蓝毗尼登记为佛陀诞生地，并记录考古遗产层。本馆使用遗产地点的近似坐标，传统年代、出生叙事与建筑分期不互相替代。",
+        "timeLabel": "佛陀诞生传统与蓝毗尼遗产层；传统年代有争议",
+        "keyFacts": [
+          {
+            "label": { "zh-CN": "地点类型", "en": "Place type" },
+            "value": { "zh-CN": "真实历史地点／佛教遗产地", "en": "Real historical place / Buddhist heritage site" }
+          },
+          {
+            "label": { "zh-CN": "空间角色", "en": "Spatial role" },
+            "value": { "zh-CN": "诞生传统与朝圣记忆地点", "en": "Birth tradition and pilgrimage-memory site" }
+          }
+        ]
+      },
+      "en": {
+        "title": "Lumbini",
+        "subtitle": "An entry into Buddha-birth tradition and Buddhist heritage geography",
+        "shortSummary": "Lumbini connects the birth tradition of Śākyamuni, archaeological heritage and later pilgrimage geography, adding a point of origin to the Buddhist figure map.",
+        "curatorialDescription": [
+          "The real coordinate points to the heritage site. The tradition that Śākyamuni was born here is preserved through Buddhist memory and heritage records, not presented as a recoverable verbatim birth record from the same period.",
+          "From Lumbini to Sarnath, the map makes person, teaching and pilgrimage space switchable while keeping traditional narrative and archaeological remains distinct."
+        ],
+        "researchNote": "UNESCO registers Lumbini as the birthplace of the Buddha and records its archaeological heritage layer. This museum uses an approximate heritage-site coordinate while keeping traditional dating, birth narrative and architectural phases separate.",
+        "timeLabel": "Buddha-birth tradition and Lumbini heritage layer; traditional dates contested",
+        "keyFacts": [
+          {
+            "label": { "zh-CN": "地点类型", "en": "Place type" },
+            "value": { "zh-CN": "真实历史地点／佛教遗产地", "en": "Real historical place / Buddhist heritage site" }
+          },
+          {
+            "label": { "zh-CN": "空间角色", "en": "Spatial role" },
+            "value": { "zh-CN": "诞生传统与朝圣记忆地点", "en": "Birth tradition and pilgrimage-memory site" }
+          }
+        ]
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "traditional_account",
+        "sourceId": "source:unesco-lumbini"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "traditional_occurrence",
+        "timeType": "traditional_date",
+        "displayDate": {
+          "zh-CN": "释迦牟尼出生传统与蓝毗尼遗产层",
+          "en": "Śākyamuni's birth tradition and the Lumbini heritage layer"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "traditional_account",
+        "sourceId": "source:unesco-lumbini"
+      }
+    ],
+    "sourceIds": [
+      "source:unesco-lumbini",
+      "source:buddha-early-texts",
+      "source:editorial-method"
+    ],
+    "profile": {
+      "placeReality": "real_historical",
+      "geometryType": "point",
+      "coordinates": [83.276, 27.469],
+      "coordinateConfidence": "approximate",
+      "geographicSourceId": "source:unesco-lumbini"
+    }
+  }
+]

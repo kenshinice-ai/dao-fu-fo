@@ -1091,5 +1091,41 @@
     "locatorLevel": "topic",
     "citationStatus": "draft",
     "url": "https://www.openstreetmap.org/"
+  },
+  {
+    "id": "source:unesco-qufu-confucius",
+    "sourceType": "institutional_record",
+    "evidenceGrade": "A",
+    "title": {
+      "zh-CN": "UNESCO：曲阜孔庙、孔林和孔府",
+      "en": "UNESCO: Temple and Cemetery of Confucius and the Kong Family Mansion in Qufu"
+    },
+    "locator": "World Heritage List no. 704；曲阜作为孔子出生地与孔氏遗产景观的城市级参照；约 35.60°N, 116.99°E",
+    "role": {
+      "zh-CN": "孔子出生地曲阜及其后世遗产景观的权威地点与遗产入口；不把现存建筑年代回写为孔子生年",
+      "en": "Authoritative place and heritage entry for Qufu as Confucius's birthplace and later landscape; surviving buildings are not projected back into Confucius's lifetime"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "item",
+    "citationStatus": "verified",
+    "url": "https://whc.unesco.org/en/list/704"
+  },
+  {
+    "id": "source:unesco-lumbini",
+    "sourceType": "institutional_record",
+    "evidenceGrade": "A",
+    "title": {
+      "zh-CN": "UNESCO：蓝毗尼，佛陀诞生地",
+      "en": "UNESCO: Lumbini, the Birthplace of the Lord Buddha"
+    },
+    "locator": "World Heritage List no. 666；蓝毗尼作为佛陀诞生传统与考古遗产地点；约 27.47°N, 83.28°E",
+    "role": {
+      "zh-CN": "蓝毗尼现实地点、佛陀诞生传统与考古遗产层的权威入口；传统生平与遗址证据保持分层",
+      "en": "Authoritative entry for Lumbini's real place, Buddha-birth tradition and archaeological heritage layer; traditional biography and site evidence remain layered"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "item",
+    "citationStatus": "verified",
+    "url": "https://whc.unesco.org/en/list/666/"
   }
 ]

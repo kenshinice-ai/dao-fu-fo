@@ -8,13 +8,13 @@ const expected = [
   "007_concepts_schools_institutions_practices.sql", "008_events_routes_and_objects.sql",
   "009_exhibitions_media_and_audio.sql", "010_read_model_indexes.sql", "011_source_quality_and_import_contract.sql",
   "012_audio_scripts_and_pending_reviews.sql", "013_public_release_candidates.sql", "014_contextual_relations_and_attribution.sql",
-  "015_pre_review_status.sql",
+  "015_pre_review_status.sql", "016_birthplace_relations.sql",
 ];
 const files = (await readdir(directory)).filter((file) => file.endsWith(".sql")).sort();
 if (JSON.stringify(files) !== JSON.stringify(expected)) throw new Error(`Migration order mismatch: ${files.join(", ")}`);
 
 const joined = (await Promise.all(files.map((file) => readFile(path.join(directory, file), "utf8")))).join("\n");
-for (const token of ["CREATE EXTENSION IF NOT EXISTS postgis", "CREATE TABLE museum.entities", "CREATE TABLE museum.sources", "CREATE TABLE museum.temporal_assertions", "CREATE TABLE museum.entity_relations", "CREATE TABLE museum.place_profiles", "CREATE TABLE museum.passage_profiles", "CREATE TABLE museum.museum_object_profiles", "CREATE TABLE museum.media_assets", "CREATE TABLE museum.audio_scripts", "CREATE TABLE museum.release_candidates", "CREATE TABLE museum.content_promotions", "CREATE VIEW museum.public_entities", "ADD COLUMN locator_level", "ADD COLUMN citation_status", "ADD COLUMN collection_status", "ADD COLUMN figure_class", "ADD COLUMN attribution_status", "pre_reviewed", "('participated_in'", "('occurred_at'", "('attributed_to'", "('received_by'", "('remembered_in'", "('deified_as"]) {
+for (const token of ["CREATE EXTENSION IF NOT EXISTS postgis", "CREATE TABLE museum.entities", "CREATE TABLE museum.sources", "CREATE TABLE museum.temporal_assertions", "CREATE TABLE museum.entity_relations", "CREATE TABLE museum.place_profiles", "CREATE TABLE museum.passage_profiles", "CREATE TABLE museum.museum_object_profiles", "CREATE TABLE museum.media_assets", "CREATE TABLE museum.audio_scripts", "CREATE TABLE museum.release_candidates", "CREATE TABLE museum.content_promotions", "CREATE VIEW museum.public_entities", "ADD COLUMN locator_level", "ADD COLUMN citation_status", "ADD COLUMN collection_status", "ADD COLUMN figure_class", "ADD COLUMN attribution_status", "pre_reviewed", "('participated_in'", "('occurred_at'", "('attributed_to'", "('received_by'", "('remembered_in'", "('deified_as", "('born_in"]) {
   if (!joined.includes(token)) throw new Error(`Missing migration contract token: ${token}`);
 }
 if (/\b(?:DROP\s+(?:TABLE|SCHEMA|TYPE)|TRUNCATE)\b/i.test(joined)) throw new Error("Forward-only migrations may not drop tables, schemas or types, or truncate data");

@@ -38,7 +38,15 @@
             "en": "Li Er, Laozi, the Daodejing and Taishang Laojun remain distinct"
           }
         }
-      ]
+      ],
+      "quote": {
+        "original": "道可道，非常道；名可名，非常名。",
+        "interpretation": {
+          "zh-CN": "《道德经》第一章的传世开篇常被归入老子名下；本馆把它作为经典传统中的言说入口，不把文本传承层误写成可直接录音的个人现场发言。",
+          "en": "The opening of Daodejing 1 is traditionally associated with Laozi; the museum presents it as a saying within a transmitted classic, not as a recoverable recording of an individual's direct speech."
+        },
+        "locator": "《道德经》第一章 / Daodejing 1"
+      }
     },
     "en": {
       "title": "Laozi (Li Er)",
@@ -71,7 +79,15 @@
             "en": "Li Er, Laozi, the Daodejing and Taishang Laojun remain distinct"
           }
         }
-      ]
+      ],
+      "quote": {
+        "original": "道可道，非常道；名可名，非常名。",
+        "interpretation": {
+          "zh-CN": "《道德经》第一章的传世开篇常被归入老子名下；本馆把它作为经典传统中的言说入口，不把文本传承层误写成可直接录音的个人现场发言。",
+          "en": "The opening of Daodejing 1 is traditionally associated with Laozi; the museum presents it as a saying within a transmitted classic, not as a recoverable recording of an individual's speech."
+        },
+        "locator": "Daodejing 1 / 《道德经》第一章"
+      }
     }
   },
   "traditions": [

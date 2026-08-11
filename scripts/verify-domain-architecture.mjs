@@ -100,6 +100,15 @@ for (const relation of relations) {
   if (relation.relationType === "occurred_at" && !relation.qualifiers.spatialRole) {
     errors.push(`${relation.id}: occurred_at requires a spatialRole qualifier`);
   }
+  if (relation.relationType === "born_in" && relation.source.kind !== "figure") {
+    errors.push(`${relation.id}: born_in source must be a figure`);
+  }
+  if (relation.relationType === "born_in" && relation.target.kind !== "place") {
+    errors.push(`${relation.id}: born_in target must be a place`);
+  }
+  if (relation.relationType === "born_in" && relation.qualifiers.spatialRole !== "birth_place") {
+    errors.push(`${relation.id}: born_in requires the birth_place spatialRole`);
+  }
 }
 
 for (const dossierKey of dossierKeys) {
@@ -109,7 +118,7 @@ for (const dossierKey of dossierKeys) {
     const connected = relations.filter((relation) => relationTouches(relation, dossierKey));
     const hasTime = dossier.temporalAssertions.length > 0;
     const hasSpatial = connected.some((relation) =>
-      ["active_in", "travelled_through", "institutional_context", "located_in", "remembered_in"].includes(relation.relationType) &&
+      ["active_in", "travelled_through", "institutional_context", "located_in", "remembered_in", "born_in"].includes(relation.relationType) &&
       [relation.source, relation.target].some((endpoint) => ["place", "institution", "route"].includes(endpoint.kind)),
     );
     const hasEvent = connected.some((relation) => relation.relationType === "participated_in" && relation.target.kind === "event");

@@ -52,6 +52,17 @@ function relationTouches(relation: ReadModelRelation, key: string): boolean {
   return contextEndpointKey(relation.source) === key || contextEndpointKey(relation.target) === key;
 }
 
+/**
+ * Keep person-to-person language narrower than the full figure graph. Later
+ * reception, deification and comparative parallels remain available as context
+ * edges, but are not presented as real-world personal relations.
+ */
+export function isPersonToPersonRelation(relation: ReadModelRelation): boolean {
+  return relation.source.kind === "figure"
+    && relation.target.kind === "figure"
+    && ["influenced", "contemporary_with"].includes(relation.relationType);
+}
+
 function isFigurePlaceRelation(relation: ReadModelRelation, figureKey: string, placeKey: string): boolean {
   return (contextEndpointKey(relation.source) === figureKey && contextEndpointKey(relation.target) === placeKey)
     || (contextEndpointKey(relation.source) === placeKey && contextEndpointKey(relation.target) === figureKey);
@@ -203,7 +214,7 @@ export function relationClass(relation: ReadModelRelation): "direct" | "receptio
   if (["received_by", "influenced", "translated_or_transmitted", "commented_on", "deified_as"].includes(relation.relationType)) {
     return "reception";
   }
-  if (["active_in", "travelled_through", "located_in", "participated_in", "occurred_at", "route_connects"].includes(relation.relationType)) {
+  if (["active_in", "travelled_through", "located_in", "participated_in", "occurred_at", "route_connects", "born_in"].includes(relation.relationType)) {
     return "spatial";
   }
   if (["comparative_parallel", "remembered_in", "represented_by"].includes(relation.relationType)) {

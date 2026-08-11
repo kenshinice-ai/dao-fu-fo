@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import type { ReadModelRelationIndex } from "@drf-museum/domain-schema";
-import { contextEndpointKey, relationClass, relationNeighbors } from "../data/contextProjection";
+import { contextEndpointKey, isPersonToPersonRelation, relationClass, relationNeighbors } from "../data/contextProjection";
 import type { Locale, SearchItem } from "../types";
 
 interface RelationNetworkProps {
@@ -10,6 +10,7 @@ interface RelationNetworkProps {
   searchItems: SearchItem[];
   onFocus: (key: string) => void;
   compact?: boolean;
+  peopleOnly?: boolean;
 }
 
 function titleFor(key: string, searchItems: SearchItem[], locale: Locale): string {
@@ -22,10 +23,11 @@ function shortLabel(value: string): string {
   return value.length > 11 ? value.slice(0, 10) + "…" : value;
 }
 
-export function RelationNetwork({ locale, focus, relations, searchItems, onFocus, compact = false }: RelationNetworkProps) {
+export function RelationNetwork({ locale, focus, relations, searchItems, onFocus, compact = false, peopleOnly = false }: RelationNetworkProps) {
   const neighbours = useMemo(() => {
     const seen = new Set<string>();
     return relationNeighbors(relations, focus).filter((relation) => {
+      if (peopleOnly && !isPersonToPersonRelation(relation)) return false;
       const other = contextEndpointKey(relation.source) === focus
         ? contextEndpointKey(relation.target)
         : contextEndpointKey(relation.source);
@@ -33,7 +35,7 @@ export function RelationNetwork({ locale, focus, relations, searchItems, onFocus
       seen.add(other);
       return true;
     }).slice(0, compact ? 8 : 16);
-  }, [compact, focus, relations]);
+  }, [compact, focus, peopleOnly, relations]);
   const title = titleFor(focus, searchItems, locale);
   const networkTitleId = "relation-network-title-" + focus.replace(/[^a-z0-9]+/gi, "-");
   const center = { x: 360, y: compact ? 135 : 190 };
@@ -47,18 +49,27 @@ export function RelationNetwork({ locale, focus, relations, searchItems, onFocus
   })), [center.x, center.y, focus, neighbours, radius]);
 
   if (neighbours.length === 0) {
-    return <p className="relation-network-empty">{locale === "zh-CN" ? "当前对象暂时没有可展开的一跳关系。" : "No one-hop relations are available for this object yet."}</p>;
+    return (
+      <div className="relation-network relation-network-empty-state" data-person-relations={peopleOnly ? "true" : undefined}>
+        <p className="relation-network-empty">
+          {peopleOnly
+            ? (locale === "zh-CN" ? "当前没有可核实的现实人物之间关系；地点、事件、文本与后世接受另列。" : "No verified person-to-person relation is available here yet; places, events, texts and later reception remain separate context layers.")
+            : (locale === "zh-CN" ? "当前对象暂时没有可展开的一跳关系。" : "No one-hop relations are available for this object yet.")}
+        </p>
+      </div>
+    );
   }
 
   return (
-    <div className={"relation-network " + (compact ? "is-compact" : "")}>
+    <div className={"relation-network " + (compact ? "is-compact" : "")} data-person-relations={peopleOnly ? "true" : undefined}>
       <div className="relation-network-heading">
         <div>
-          <p className="eyebrow">{locale === "zh-CN" ? "一层关系网" : "One-hop network"}</p>
-          <h3>{locale === "zh-CN" ? title + " 的关系" : title + " · relationships"}</h3>
+          <p className="eyebrow">{peopleOnly ? (locale === "zh-CN" ? "人物关系" : "Person-to-person") : (locale === "zh-CN" ? "一层关系网" : "One-hop network")}</p>
+          <h3>{peopleOnly ? (locale === "zh-CN" ? title + " 的现实人物关系" : title + " · real person-to-person relations") : (locale === "zh-CN" ? title + " 的关系" : title + " · relationships")}</h3>
         </div>
         <span>{neighbours.length} {locale === "zh-CN" ? "个邻接对象" : "neighbours"}</span>
       </div>
+      {peopleOnly ? <p className="relation-network-note">{locale === "zh-CN" ? "只显示现实人物之间的师承、同时代往来或影响；地点、事件、文本与后世接受另列。" : "Only teacher–student, contemporary-exchange or influence relations between real figures are shown here; places, events, texts and later reception stay separate."}</p> : null}
       <svg className="relation-network-canvas" viewBox={"0 0 720 " + (compact ? 280 : 390)} role="group" aria-labelledby={networkTitleId}>
         <title id={networkTitleId}>{locale === "zh-CN" ? title + " 一层关系图" : title + " one-hop relationship network"}</title>
         {neighbours.map((relation) => {

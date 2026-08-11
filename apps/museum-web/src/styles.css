@@ -1821,6 +1821,77 @@ h3 {
   background: linear-gradient(135deg, rgba(247, 241, 225, 0.78), rgba(255, 252, 244, 0.94));
 }
 
+.figure-context-card {
+  margin-top: var(--s-4);
+  padding: var(--s-4) var(--s-5);
+  border: 1px solid var(--line-strong);
+  border-left: 3px solid var(--gold);
+  background: rgba(255, 252, 244, 0.76);
+}
+
+.figure-context-card-heading,
+.figure-context-card-footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--s-4);
+}
+
+.figure-context-card-heading h3 {
+  margin: var(--s-1) 0 0;
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+}
+
+.figure-context-card-heading > span,
+.figure-context-card-footer > span,
+.figure-context-card figcaption {
+  color: var(--ink-muted);
+  font-size: var(--text-xs);
+  line-height: 1.5;
+}
+
+.figure-context-card figure {
+  margin: var(--s-4) 0 0;
+}
+
+.figure-context-card blockquote {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  line-height: 1.45;
+}
+
+.figure-context-card figure p,
+.figure-context-card-theory {
+  margin: var(--s-3) 0 0;
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+  line-height: 1.65;
+}
+
+.figure-context-card figcaption {
+  margin-top: var(--s-2);
+}
+
+.figure-context-card-footer {
+  align-items: center;
+  margin-top: var(--s-4);
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--line);
+}
+
+.figure-context-card-footer a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--focus);
+  font-size: var(--text-xs);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .map-context-heading,
 .relation-network-heading {
   display: flex;
@@ -1979,6 +2050,18 @@ h3 {
 .relation-network.is-compact {
   margin-top: var(--s-3);
   padding-top: var(--s-3);
+}
+
+.relation-network-note {
+  max-width: 68ch;
+  margin: var(--s-2) 0 0;
+  color: var(--ink-soft);
+  font-size: var(--text-xs);
+  line-height: 1.55;
+}
+
+.relation-network-empty-state {
+  padding-bottom: var(--s-2);
 }
 
 .relation-network-canvas {
@@ -2863,6 +2946,14 @@ h3 {
   padding: var(--s-5);
   border: 1px solid var(--line-strong);
   background: rgba(247, 241, 225, 0.54);
+}
+
+.entity-person-network {
+  border-left: 3px solid var(--gold);
+}
+
+.entity-person-network .entity-network-heading > p:last-child {
+  max-width: 68ch;
 }
 
 .entity-network-heading h2 {

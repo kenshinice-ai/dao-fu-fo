@@ -53,7 +53,7 @@ export const RelationTypeSchema = z.enum([
   "located_in", "active_in", "travelled_through", "translated_or_transmitted", "has_version", "passage_of",
   "quoted_from_version", "commented_on", "institutional_context", "influenced", "contemporary_with", "represented_by",
   "route_connects", "comparative_parallel", "participated_in", "occurred_at", "attributed_to", "received_by",
-  "remembered_in", "deified_as",
+  "remembered_in", "deified_as", "born_in",
 ]);
 export type RelationType = z.infer<typeof RelationTypeSchema>;
 

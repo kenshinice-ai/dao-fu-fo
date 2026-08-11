@@ -28,13 +28,13 @@
     "text": 16,
     "concept": 6,
     "schoolOrInstitution": 6,
-    "place": 26,
+    "place": 28,
     "event": 37,
     "route": 3,
     "museumObject": 9,
     "passage": 14,
     "audio": 3,
-    "relation": 188,
+    "relation": 191,
     "exhibitionSection": 5
   },
   "completionRules": [

@@ -4616,5 +4616,50 @@
     "confidence": "high", "evidenceLayer": "scholarly_interpretation", "sourceIds": ["source:zhuxi-ctext", "source:mengzi-ctext"],
     "temporalAssertions": [{ "predicate": "institutional_and_memory_scope", "timeType": "range", "startYear": 1130, "endYear": 1200, "displayDate": { "zh-CN": "1130–1200 年的后世经典接受层", "en": "Later classical reception layer, 1130–1200 CE" }, "confidence": "medium", "evidenceLayer": "scholarly_interpretation", "sourceId": "source:zhuxi-ctext" }],
     "qualifiers": { "historicity": "inferred", "receptionMode": "reinterpreted" }, "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:confucius-born-qufu",
+    "source": { "kind": "figure", "slug": "confucius" },
+    "target": { "kind": "place", "slug": "qufu" },
+    "relationType": "born_in",
+    "label": { "zh-CN": "出生于曲阜", "en": "Born in Qufu" },
+    "summary": { "zh-CN": "现有史传与遗产语境把曲阜作为孔子出生地；本条使用城市尺度出生地锚点，不把后世孔庙建筑年代回写为孔子生年。", "en": "Historiographical and heritage contexts identify Qufu with Confucius's birthplace; this uses a city-scale birthplace anchor without projecting the dates of later temple buildings into his lifetime." },
+    "confidence": "high",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": ["source:unesco-qufu-confucius", "source:shiji-confucius-biography"],
+    "temporalAssertions": [{ "predicate": "birth", "timeType": "circa", "startYear": -551, "endYear": -551, "displayDate": { "zh-CN": "约公元前 551 年的出生地语境", "en": "Birthplace context, c. 551 BCE" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:shiji-confucius-biography" }],
+    "qualifiers": { "spatialRole": "birth_place", "historicity": "documented" },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:sakyamuni-born-lumbini",
+    "source": { "kind": "figure", "slug": "sakyamuni" },
+    "target": { "kind": "place", "slug": "lumbini" },
+    "relationType": "born_in",
+    "label": { "zh-CN": "出生于蓝毗尼", "en": "Born in Lumbini" },
+    "summary": { "zh-CN": "蓝毗尼保存释迦牟尼诞生的佛教传统与遗产地点层；本条明确保留传统生平、遗址考古与后世朝圣之间的证据边界。", "en": "Lumbini preserves the Buddhist birth tradition of Śākyamuni and a heritage-site layer; this relation keeps traditional biography, archaeology and later pilgrimage within their evidence boundaries." },
+    "confidence": "medium",
+    "evidenceLayer": "traditional_account",
+    "sourceIds": ["source:unesco-lumbini"],
+    "temporalAssertions": [{ "predicate": "traditional_occurrence", "timeType": "traditional_date", "displayDate": { "zh-CN": "释迦牟尼诞生传统与蓝毗尼遗产层", "en": "Śākyamuni's birth tradition and the Lumbini heritage layer" }, "confidence": "medium", "evidenceLayer": "traditional_account", "sourceId": "source:unesco-lumbini" }],
+    "qualifiers": { "spatialRole": "birth_place", "historicity": "traditional" },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:kumarajiva-born-qiuci",
+    "source": { "kind": "figure", "slug": "kumarajiva" },
+    "target": { "kind": "place", "slug": "qiuci" },
+    "relationType": "born_in",
+    "label": { "zh-CN": "出生于龟兹", "en": "Born in Kucha" },
+    "summary": { "zh-CN": "鸠摩罗什的传记资料把龟兹作为出生与早期学习空间；地图使用历史区域节点，不把龟兹压缩成一个精确出生门址。", "en": "Biographical materials place Kumarajiva's birth and early learning in Kucha; the map uses a historical regional node rather than inventing a precise birth address." },
+    "confidence": "medium",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": ["source:kumarajiva-biography"],
+    "temporalAssertions": [{ "predicate": "birth", "timeType": "circa", "startYear": 344, "endYear": 344, "displayDate": { "zh-CN": "约 344 年的出生地语境", "en": "Birthplace context, c. 344 CE" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:kumarajiva-biography" }],
+    "qualifiers": { "spatialRole": "birth_place", "historicity": "documented" },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
   }
 ]

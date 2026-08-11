@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   CircleMarker,
@@ -25,6 +25,8 @@ import {
 } from "../data/contextProjection";
 import { RelationNetwork } from "./RelationNetwork";
 import { entityPath } from "../routing";
+import { staticData } from "../data/staticData";
+import { useStaticData } from "../data/useStaticData";
 import type { EntityData, Locale, MuseumMapData, SearchItem, Tradition } from "../types";
 
 interface CivilisationMapProps {
@@ -189,6 +191,12 @@ export function CivilisationMap({
   onFocus,
   className = "",
 }: CivilisationMapProps) {
+  const focusedFigureSlug = focus?.startsWith("figure:") ? focus.slice("figure:".length) : undefined;
+  const loadFocusedFigure = useCallback(
+    (signal: AbortSignal) => focusedFigureSlug ? staticData.entity("figure", focusedFigureSlug, locale, signal) : Promise.resolve(null),
+    [focusedFigureSlug, locale],
+  );
+  const { data: focusedFigure } = useStaticData(loadFocusedFigure);
   const connectedKeys = useMemo(() => connectedContextKeys(relations, focus), [focus, relations]);
   const figurePlaces = useMemo(
     () => focus?.startsWith("figure:") ? figurePlaceContexts(relations, focus).sort((a, b) => (relationStartYear(a.relation) ?? Number.MAX_SAFE_INTEGER) - (relationStartYear(b.relation) ?? Number.MAX_SAFE_INTEGER)) : [],
@@ -489,6 +497,30 @@ export function CivilisationMap({
             </div>
             <span>{trajectoryStops.length} {locale === "zh-CN" ? "个空间节点" : "spatial stops"}</span>
           </div>
+          {focusedFigure ? (
+            <section className="figure-context-card" data-figure-context data-figure-context-kind={focusedFigure.quote ? "quote" : "theory"} aria-labelledby="figure-context-card-title">
+              <div className="figure-context-card-heading">
+                <div>
+                  <p className="eyebrow">{focusedFigure.quote ? (locale === "zh-CN" ? "名言入口" : "Saying entry") : (locale === "zh-CN" ? "思想入口" : "Theory lens")}</p>
+                  <h3 id="figure-context-card-title">{focusedFigure.quote ? (locale === "zh-CN" ? "在传述中听见一句话" : "A voice carried through transmission") : focusedFigure.subtitle}</h3>
+                </div>
+                <span>{focusedFigure.timeLabel}</span>
+              </div>
+              {focusedFigure.quote ? (
+                <figure>
+                  <blockquote lang={locale === "zh-CN" ? "zh-Hans" : undefined}>{focusedFigure.quote.original}</blockquote>
+                  <p>{focusedFigure.quote.interpretation}</p>
+                  <figcaption>{focusedFigure.quote.locator}</figcaption>
+                </figure>
+              ) : (
+                <p className="figure-context-card-theory">{focusedFigure.shortSummary}</p>
+              )}
+              <div className="figure-context-card-footer">
+                <span>{locale === "zh-CN" ? "人物、言说与时代语境保持分层" : "Person, speech and period remain layered"}</span>
+                <Link to={entityPath("figure", focusedFigure.slug, locale)}>{locale === "zh-CN" ? "打开人物档案" : "Open figure dossier"}</Link>
+              </div>
+            </section>
+          ) : null}
           <ol className="map-trajectory-list">
             {trajectoryStops.map((feature, index) => (
               <li key={feature.id}>
@@ -497,7 +529,7 @@ export function CivilisationMap({
               </li>
             ))}
           </ol>
-          <RelationNetwork locale={locale} focus={focus} relations={relations} searchItems={searchItems} onFocus={(key) => onFocus?.(key)} compact />
+          <RelationNetwork locale={locale} focus={focus} relations={relations} searchItems={searchItems} onFocus={(key) => onFocus?.(key)} compact peopleOnly />
         </section>
       ) : (
         <p className="map-context-hint">

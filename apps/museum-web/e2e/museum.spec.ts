@@ -208,10 +208,26 @@ test("map city selection opens figures, trajectories and a restorable relation n
   await expect(trajectoryPanel.getByText("3 spatial stops", { exact: true })).toBeVisible();
   await expect(trajectoryPanel.locator(".relation-network")).toBeVisible();
 
-  await trajectoryPanel.getByRole("button", { name: "Focus Chang'an", exact: true }).click();
+  await trajectoryPanel.locator(".map-trajectory-list button").first().click();
   await expect(page).toHaveURL(/focus=place%3Achangan/);
   await page.reload();
   await expect(page.locator("[data-city-people]")).toBeVisible();
+});
+
+test("figure focus presents an elegant saying card and only real person relations", async ({ page }) => {
+  await page.goto("/explore?lang=en&view=map&focus=figure%3Aconfucius");
+  await waitForMuseum(page);
+
+  const figureContext = page.locator("[data-figure-context]");
+  await expect(figureContext).toHaveAttribute("data-figure-context-kind", "quote");
+  await expect(figureContext).toContainText("Analects 1.1");
+  await expect(figureContext).toContainText("preserves");
+
+  await page.goto("/explore?lang=en&view=map&focus=figure%3Adao-an");
+  await waitForMuseum(page);
+  const peopleRelations = page.locator("[data-person-relations]").last();
+  await expect(peopleRelations).toContainText("Huiyuan");
+  await expect(peopleRelations).not.toContainText("Mount Lu");
 });
 
 test("map keeps city switching and event context available after a selection", async ({ page }) => {
@@ -337,12 +353,22 @@ test("entity dossiers expose historicity, relation qualifiers and source jumps",
 
   await expect(page.getByText("Historicity", { exact: true })).toBeVisible();
   await expect(page.locator(".entity-facts").getByText("contested", { exact: true })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "Figures, events, places and later reception" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Places, events, texts and later reception" })).toBeVisible();
   await expect(page.getByText("Remembered through Tang Daoist institutions", { exact: true })).toBeVisible();
 
   await page.getByRole("link", { name: "source:shiji-laozi-biography", exact: true }).first().click();
   await expect(page).toHaveURL(/\/research\?source=source%3Ashiji-laozi-biography&lang=en/);
   await expect(page.getByRole("heading", { name: /Focused source: Records of the Historian/ })).toBeVisible();
+});
+
+test("figure dossiers expose verified birthplace links", async ({ page }) => {
+  await page.goto("/figures/confucius?lang=en");
+  await waitForMuseum(page);
+
+  await expect(page.locator(".entity-facts").getByText("Birthplace", { exact: true })).toBeVisible();
+  await expect(page.locator(".entity-facts").getByRole("link", { name: "Qufu", exact: true })).toBeVisible();
+  await expect(page.locator("[data-person-relations]")).toBeVisible();
+  await expect(page.getByText("No verified person-to-person relation is available for this figure yet.", { exact: true })).toBeVisible();
 });
 
 test("cross-era comparison keeps multi-dimensional evidence and shared bridges visible", async ({ page }) => {
@@ -416,17 +442,17 @@ test("Research exposes the quality audit and review queue filters", async ({ pag
   await waitForMuseum(page);
 
   await expect(page.getByRole("heading", { name: "See what still blocks publication" })).toBeVisible();
-  await expect(page.locator(".research-governance-status strong")).toHaveText("404");
+  await expect(page.locator(".research-governance-status strong")).toHaveText("410");
   await expect(page.getByRole("heading", { name: "Review queue" })).toBeVisible();
-  await expect(page.getByText("273 subjects shown; all statuses are read-only.", { exact: true })).toBeVisible();
-  await expect(page.locator(".research-review-queue li")).toHaveCount(273);
+  await expect(page.getByText("278 subjects shown; all statuses are read-only.", { exact: true })).toBeVisible();
+  await expect(page.locator(".research-review-queue li")).toHaveCount(278);
   await expect(page.getByRole("link", { name: "Historical reviewer (0)", exact: true })).toBeVisible();
   await expect(page.getByRole("link", { name: "Accessibility editor (0)", exact: true })).toBeVisible();
 
   await page.getByRole("link", { name: "Show all", exact: true }).click();
   await expect(page).toHaveURL(/audit=all/);
-  await expect(page.getByText("348 subjects shown; all statuses are read-only.", { exact: true })).toBeVisible();
-  await expect(page.locator(".research-review-queue li")).toHaveCount(348);
+  await expect(page.getByText("353 subjects shown; all statuses are read-only.", { exact: true })).toBeVisible();
+  await expect(page.locator(".research-review-queue li")).toHaveCount(353);
   await expect(page.getByText("figure:xuanzang", { exact: true })).toBeVisible();
 });
 

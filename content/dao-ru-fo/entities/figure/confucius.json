@@ -38,7 +38,15 @@
             "en": "Confucius's sayings survive through disciples and compilation traditions"
           }
         }
-      ]
+      ],
+      "quote": {
+        "original": "学而时习之，不亦说乎？",
+        "interpretation": {
+          "zh-CN": "《论语·学而》1.1 以孔子为传统说话者保存此句；本馆将它作为弟子记录与编纂传统中的言说入口，不声称可以恢复现场逐字记录。",
+          "en": "Analects 1.1 preserves this as a saying traditionally spoken by Confucius; the museum presents it within disciple recording and compilation traditions, not as a recoverable verbatim field recording."
+        },
+        "locator": "《论语·学而》1.1 / Analects 1.1"
+      }
     },
     "en": {
       "title": "Confucius (Kong Qiu)",
@@ -71,7 +79,15 @@
             "en": "Confucius's sayings survive through disciples and compilation traditions"
           }
         }
-      ]
+      ],
+      "quote": {
+        "original": "学而时习之，不亦说乎？",
+        "interpretation": {
+          "zh-CN": "《论语·学而》1.1 以孔子为传统说话者保存此句；本馆将它作为弟子记录与编纂传统中的言说入口，不声称可以恢复现场逐字记录。",
+          "en": "Analects 1.1 preserves this as a saying traditionally spoken by Confucius; the museum presents it within disciple recording and compilation traditions, not as a recoverable verbatim field recording."
+        },
+        "locator": "Analects 1.1 / 《论语·学而》1.1"
+      }
     }
   },
   "traditions": [
@@ -102,6 +118,7 @@
   "sourceIds": [
     "source:shiji-confucius-biography",
     "source:analects-edition",
+    "source:unesco-qufu-confucius",
     "source:editorial-method"
   ],
   "related": [
@@ -127,6 +144,18 @@
       "relation": {
         "zh-CN": "后世经学接受与编纂",
         "en": "Later classical reception and compilation"
+      }
+    },
+    {
+      "kind": "place",
+      "slug": "qufu",
+      "title": {
+        "zh-CN": "曲阜",
+        "en": "Qufu"
+      },
+      "relation": {
+        "zh-CN": "出生地与孔氏遗产景观",
+        "en": "Birthplace and Kong-family heritage landscape"
       }
     }
   ],
