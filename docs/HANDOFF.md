@@ -4,6 +4,16 @@
 > 最后更新：2026-08-11
 > 当前阶段：关系与地点投影审计修复已完成并直发 Full Alpha production / production 作为唯一线上复盘基准 / Public RC 边界保持独立
 
+## 2026-08-11｜地图→人物→关系语境对齐修复 production handoff（当前）
+
+- 本轮修复地图地点 → 人物 → 关系面板的完整状态链路：地点/事件 dossier 内选人物时保留显式 `scope`，切换新地点时清除旧 scope；人物聚焦的 Relations tab 只显示触及当前人物的现实人物关系；地点/事件 scope 下进一步限制为该语境内的现实人物关系；返回入口同时恢复正确 tab 并清理 scope；地图从地点切到人物/事件时关闭旧 Leaflet popup，避免 URL、面板和地图弹窗指向不同对象；`influenced` 与 `contemporary_with` 分别显示方向箭头和双向连接符；
+- 本轮新增 place-to-person scope、空关系结果、返回地点、关系方向和旧 popup 清理回归覆盖；应用 release commit：`a0fa639 fix: keep atlas focus scope and relation context aligned`（`a0fa639158200f430440075f97ac416ee27d5396`）；
+- 本地门禁：production 脚本完整 `npm run check` 通过；Web unit 9/9；完整 Full Alpha Playwright 为 **57 passed / 1 skipped**（唯一 skipped 为 Public RC 专用用例）；typecheck、Full Alpha build、`verify:content`、`verify:alignment` 和静态发布验证通过；Vite >500 kB bundle 提示仍为非阻断既有提示；
+- Cloudflare production：默认地址 <https://dao-ru-fo-digital-museum.pages.dev>；本次 unique deployment <https://8d0b6109.dao-ru-fo-digital-museum.pages.dev>；deployment ID `8d0b6109-401d-4edb-b9f4-fb33b11260dc`；Environment `Production`；branch `main`；source marker `a0fa639`；Wrangler `4.120.1`；manifest `2026.08.alpha.1 / alpha / preview`；上传使用 `--commit-dirty=false`；
+- post-deploy HTTP smoke：默认地址与 unique 地址均 **25/25**；首页 HTML/CSP/安全响应头、SPA deep links、manifest、英文 profile、地图 GeoJSON、时间轴 JSON 和 immutable hashed asset 均通过；上一成功 production deployment `f9d4861e-d366-48b4-999a-3d3604a3140c` 保留为回滚定位；
+- 线上浏览器关键路径：Qufu 页面点击 Confucius 后 URL 保持 `focus=figure:confucius&scope=place:qufu`，Figures scope 为 1；切换 Relations 后显示 `Qufu · Person relations in this place · 0`、无关系卡；返回后恢复 `focus=place:qufu`，清除 `scope` 与 `tab`，Qufu 人物入口恢复；线上控制台 error/warn 为 0；
+- Full Alpha 的 `preview` visibility 与 410 个 public blockers 仍代表内容审核状态，不等于 Public RC 或正式学术发布；本 handoff 文档为 docs-only follow-up，不重新上传应用、不改变已部署应用 source marker。
+
 ## 2026-08-11｜人物关系、地点对应与数据库对齐修复 production handoff（当前）
 
 - 本轮针对人物关系和地点对应的逻辑错配完成全量审计：地图人物地点只接受 `active_in`、`travelled_through`、`born_in`、`located_in`；人物—事件—地点只通过 `participated_in → occurred_at` 投影；`remembered_in`、`influenced` 等记忆/接受/影响关系继续保留在关系网络，但不再伪装成现实到访或地图停靠点；出生地详情兼容关系端点双向表达；路线由完整 search/read model 动态加载，不再写死两条；
