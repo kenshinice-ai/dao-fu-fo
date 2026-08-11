@@ -2,7 +2,18 @@
 
 > 维护纪律：每个可独立说明的实现、修复、验证或发布阶段完成后立即更新。
 > 最后更新：2026-08-11
-> 当前阶段：P0/P1/P2 atlas 交互优化已完成并直发 Full Alpha production / production 作为唯一线上复盘基准 / Public RC 边界保持独立
+> 当前阶段：关系与地点投影审计修复已完成并直发 Full Alpha production / production 作为唯一线上复盘基准 / Public RC 边界保持独立
+
+## 2026-08-11｜人物关系、地点对应与数据库对齐修复 production handoff（当前）
+
+- 本轮针对人物关系和地点对应的逻辑错配完成全量审计：地图人物地点只接受 `active_in`、`travelled_through`、`born_in`、`located_in`；人物—事件—地点只通过 `participated_in → occurred_at` 投影；`remembered_in`、`influenced` 等记忆/接受/影响关系继续保留在关系网络，但不再伪装成现实到访或地图停靠点；出生地详情兼容关系端点双向表达；路线由完整 search/read model 动态加载，不再写死两条；
+- 新增 [verify-content-alignment.mjs](../scripts/verify-content-alignment.mjs)，逐项核对 source entities、双语 read model、search index、relations、database import bundle、稳定 UUID、时间断言、路线 manifest 和地图坐标；源实体 159 / read-model 159 / relations 191 均对齐，数据库 162 个实体中额外 3 个为三传统字典实体，数据库关系端点无悬空；
+- 当前 Full Alpha 内容边界：159 个实体（人物 32、事件 37、地点 28、路线 3、文本 16、文本版本 8、概念 6、机构 6、博物馆对象 9、段落 14）、191 条关系、64 个来源、3 条音频；21 个现实地图地点；410 个 public blockers 仍是内容审核状态；
+- 本地门禁：`npm run check`、Full Alpha Vite build、`DRF_WEB_DEPLOYMENT_MODE=full-alpha npm run verify:static` 均通过；Full Alpha Playwright 为 **56 passed / 1 skipped**（57 tests，唯一 skipped 为 Public RC 专用用例）；新增坐标待核用例、人物关系、路线数量和 axe 回归均通过；Vite >500 kB bundle 提示仍为非阻断既有提示；
+- Cloudflare production：默认地址 <https://dao-ru-fo-digital-museum.pages.dev>；本次 unique deployment <https://f9d4861e.dao-ru-fo-digital-museum.pages.dev>；deployment ID `f9d4861e-d366-48b4-999a-3d3604a3140c`；Environment `Production`；branch `main`；source marker `9ab2297`（`9ab2297e3fe0043729fe45427e5b271d995d55f4`）；Wrangler `4.120.1`；manifest `2026.08.alpha.1 / alpha / preview`；上传使用 `--commit-dirty=false`；
+- post-deploy HTTP smoke：默认地址与 unique 地址均 **25/25**；检查首页 HTML/CSP/安全响应头、SPA deep links、manifest、英文 profile、地图 GeoJSON、时间轴 JSON 和 immutable hashed asset 均通过；线上 deployment list 已确认 `9ab2297` 为当前 production，上一成功 deployment `dcc5936e-f2c7-4855-9348-6e73a23b19c8` 保留为回滚定位；
+- 已知数据提醒：龟兹实体存在，但当前没有可绘制现实坐标；玄奘路线包含该待核节点。UI 保留关系并明确标记 pending，不生成伪坐标；这不是运行时失败；
+- 本 handoff 文档为 docs-only follow-up，不重新上传应用、不改变已部署应用 source marker；当前 production 进入线上复盘节点，下一轮只处理用户复盘反馈或经授权的坐标/内容审核。
 
 ## 2026-08-11｜P0/P1/P2 atlas 探索体验优化 production handoff（当前）
 
