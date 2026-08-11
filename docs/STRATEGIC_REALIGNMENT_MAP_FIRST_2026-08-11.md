@@ -1,14 +1,23 @@
 # 道·儒·佛文明数字博物馆｜全历史时空人物地图战略
 
 日期：2026-08-11
-状态：Direction confirmed / P0–P3 map-first interaction slice implemented / homepage full-bleed atlas production handoff complete；内容扩充仍按审核闸门执行
-线上基线：Cloudflare Pages production `2026.08.alpha.1 / alpha / preview`；最新 deployment `aad40b40-a015-49fe-90a7-35e88812ac5d`（<https://aad40b40.dao-ru-fo-digital-museum.pages.dev>）
+状态：Direction confirmed / P0–P3 map-first interaction slice implemented / timeline-city-person-relation interaction slice production complete；内容扩充仍按审核闸门执行
+线上基线：Cloudflare Pages production `2026.08.alpha.1 / alpha / preview`；最新 deployment `ebbd7c00-7613-49cf-b0c2-9e0c8089d091`（<https://ebbd7c00.dao-ru-fo-digital-museum.pages.dev>）
 参考体验：
 
 - <https://european-classical-music-history-atlas.pages.dev/>
 - <https://bible-atlas-6h7.pages.dev/>
 
-## 0.1｜首页视觉对齐与 production 交付（2026-08-11）
+## 0.1｜时间轴—城市人物—人物关系联动 production 交付（2026-08-11）
+
+- 结合 `previous project` 的 `TimelineRibbon`、`RelationGraph`、`EntityDrawer` 和 URL 状态恢复经验，首页/Explore 的共享 `AtlasWorkspace` 现在同时提供可点击横向时间轴与原事件卡片表；时间轴使用当前范围的全段采样节点，点击后回写 `focus`、切换对象标签并让地图、对象面板和语境区同步；
+- 点击城市后，右侧人物和事件列表进入该地点的 scoped 语境，但地点标签仍保留全地点索引，允许继续切换其他城市；点击城市人物后，地图下方显示空间轨迹、名言/思想卡和现实人物一跳关系；
+- 城市 scoped relation graph 只显示当前城市关联人物之间的 `influenced` / `contemporary_with`，并同步提供关系列表和可点击节点；地点、事件、著作、言论和后世接受继续作为独立语境层；
+- Full Alpha 当前工作台 read model 为 32 位人物、37 个事件、28 个地点、3 条路线、16 部著作、14 条言论、4 条现实人物关系；全历史时间轴页面实际显示 `-600—1200`、131 个投影事件，现实地图当前显示 21 个地点与 3 条路线；
+- 本地 `npm run check` 全量通过，Playwright + axe 为 55 passed / 1 skipped；production/unique smoke 均 25/25；线上默认 production 已确认时间轴、长安人物/事件、城市关系图、人物轨迹和长安→洛阳切换；
+- 应用 release commit：`0b5ac13 feat: sync atlas timeline city and relations`；当前 production unique deployment 为 `ebbd7c00-7613-49cf-b0c2-9e0c8089d091`（<https://ebbd7c00.dao-ru-fo-digital-museum.pages.dev>），source marker `0b5ac13`；默认域名仍是唯一线上复盘基准。
+
+## 0.1｜首页视觉对齐与 production 交付（上一阶段，2026-08-11）
 
 - 首页左侧宣传 hero 已按标注移除，地图工作台从导航下方直接开始，横向铺满可用画布；“先从地图进入”替换为“交错的历史时空”；
 - 默认 production 与 unique deployment smoke 均为 25/25；完整 Playwright + axe 为 54 passed / 1 skipped；地点详情、人物关系标签与地图主画布线上点验通过；
@@ -22,7 +31,7 @@
 - **P1：联动工作台**：`AtlasWorkspace` 同时承载人物、事件、地点、路线、著作、言论、关系七类对象；城市/人物/事件可连续切换；人物详情显示空间、事件、文本、言论、关系和来源；时代预设、历史/传统时间模式、年份范围和 `focus` / `detail` / `tab` / `timeline` URL 状态可恢复。
 - **P2：证据与关系**：关系标签严格只显示现实人物—现实人物的 `influenced` / `contemporary_with`；接受史、神格化、比较关系保留在关联语境；人物详情显示名言原文、解释、出处定位和来源层，不把传统归属写成可核实的逐字发言。
 - **P3：体验与可访问性**：对象面板列表限制首批 80 项并使用 `content-visibility`；面板标签栏固定不被列表压缩；地图保留 Leaflet 缩放/拖动/键盘；详情 drawer 支持 Escape、焦点回收与 Tab 循环；移动端工作台从导航下方直接开始；44px 触控目标、无横向溢出、reduced-motion、空/错/加载状态与 axe WCAG 回归已覆盖。
-- 当前工作台 read model 为 32 位人物、37 个事件、28 个地点、3 条路线、16 部著作、14 条言论、4 条现实人物关系；`npm run check`、54 条 Playwright + axe（另 1 条 Public RC 专用 skip）和 fresh/repeat 数据库集成门禁均已通过。Vite 仍有既有的单 JS bundle >500 kB 非阻断提示，后续内容扩充前按性能预算继续拆分。
+- 当前工作台 read model 为 32 位人物、37 个事件、28 个地点、3 条路线、16 部著作、14 条言论、4 条现实人物关系；上一阶段 `npm run check`、54 条 Playwright + axe（另 1 条 Public RC 专用 skip）和 fresh/repeat 数据库集成门禁均已通过。Vite 仍有既有的单 JS bundle >500 kB 非阻断提示，后续内容扩充前按性能预算继续拆分。
 - 本检查点只交付交互骨架与现有 Full Alpha 内容的统一入口，不扩大未审核事实；Full Alpha 的 `preview` visibility、410 个 public blockers 与 Public RC2 的独立边界继续如实保留。
 
 ## 0. 已确认的新方向
@@ -37,12 +46,12 @@
 
 ### 当前已落地、当前不扩大
 
-- 首页与 `/explore?view=map` 共用 Leaflet 现实地图；当前 8 个现实坐标点、2 条路线、12 位人物入口均可交互；
-- `overview` 是全历史地图/时间轴的 canonical read model：时间轴范围 `-600—1200`、84 条事件；`suitang` 只作为旧链接兼容切片，范围 `581—907`、63 条事件；
+- 首页与 `/explore?view=map` 共用 Leaflet 现实地图；当前全历史地图可见 21 个现实地点、2 条地图路线（路线索引 3 条），人物索引为 32 位，均可从地图工作台继续探索；
+- `overview` 是全历史地图/时间轴的 canonical read model：时间轴范围 `-600—1200`、当前页面投影 131 个事件；`suitang` 只作为旧链接兼容切片，范围 `581—907`；
 - 既有地图地点从现有时间断言派生 `temporalRange`，共享 URL 时间窗口可过滤地图；未核位置仍保持 `position_pending`，不写入伪坐标；
-- 现有 12 位人物的地图入口已明确区分 `mapped` 与 `position-pending`，没有可落坐标的人物会得到显式待核说明，而不是静默回退为已定位；
+- 全部人物的地图入口明确区分 `mapped` 与 `position-pending`，没有可落坐标的人物会得到显式待核说明，而不是静默回退为已定位；
 - 共享语境选择器已动态读取 search read model 的全部人物，人物增加后关系/地图/时间入口不再需要硬编码扩展；
-- 最新 production 已完成 CSP 底图瓦片修复；default/unique smoke 各 25/25，线上浏览器确认底图瓦片、首页人物入口、全历史时间轴和时间过滤正常；
+- 最新 production 已完成 CSP 底图瓦片修复，并完成时间轴—城市人物—人物关系联动；default/unique smoke 各 25/25，线上浏览器确认底图瓦片、首页人物入口、全历史时间轴、城市切换和关系节点跳转正常；
 - 当前暂停在内容判断门槛：下一批人物、神话身份、现实记忆地点、路线走廊和接受史必须先确定身份/空间/时间分层与来源要求，再进入 authoring。
 
 ## 1. 产品重新定义

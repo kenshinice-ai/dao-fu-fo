@@ -2,9 +2,21 @@
 
 > 维护纪律：每个可独立说明的实现、修复、验证或发布阶段完成后立即更新。
 > 最后更新：2026-08-11
-> 当前阶段：首页 map-first 全屏主画布已完成并已直发最终 production / production 作为唯一线上复盘基准 / Public RC 边界保持独立
+> 当前阶段：全历史地图的时间轴—城市人物—现实人物关系联动已完成并直发最终 production / production 作为唯一线上复盘基准 / Public RC 边界保持独立
 
-## 2026-08-11｜首页全屏地图主画布 release handoff（当前）
+## 2026-08-11｜时间轴—城市人物—人物关系联动 release handoff（当前）
+
+- 深度对照 `previous project` 的 `TimelineRibbon`、`RelationGraph`、`EntityDrawer` 和共享 URL 状态实现，落实本轮三个交互要求：地图工作台保留原事件表格，并在其上增加可点击的横向历史时间轴；时间轴节点覆盖当前筛选范围的前后段，不再只取最早 24 项；点击节点会回写 `focus`、切换对象标签并让地图/面板同步进入当前语境；
+- 城市焦点现在会精确同步右侧人物与事件列表：例如长安线上显示 13 位关联人物、8 个事件，并在面板中明确显示“Chang'an · Connected figures · 13”；地图仍保留全地点索引，事件焦点后切回“地点”不会丢失城市切换能力，符合 previous project 的“选中是 dossier，不是永久过滤器”经验；
+- 地图下方新增城市 scoped 人物关系图：只从当前地点关联人物中投影 `influenced` / `contemporary_with` 两类现实人物关系，长安当前显示一行（张遂）—司马承祯 1 条关系；节点、关系表项均可点击并进入人物轨迹、名言/思想卡和一跳现实人物关系，不把地点、事件、著作或后世接受混入人物—人物关系；
+- 本轮应用改动集中在 `AtlasWorkspace.tsx`、`CivilisationMap.tsx`、`RelationNetwork.tsx`、`styles.css`，并新增对应 Playwright 回归；内容 read model 未被改写，Full Alpha 仍为 159 个实体（人物 32、事件 37、地点 28、路线 3、文本 16、文本版本 8、概念 6、机构 6、对象 9、段落 14）、191 条关系、64 个来源、3 条音频；
+- 本地门禁：`npm run check` 全量通过；workspace unit tests 为 core 8/8、compiler 5/5、web 7/7；完整 Playwright + axe 为 **55 passed / 1 skipped**（56 tests，唯一 skipped 为 Public RC 专用用例）；`git diff --check`、diff-check、Web typecheck 均通过；production Full Alpha preflight、静态验证、迁移和架构门禁通过；Vite bundle >500 kB 仍是既有非阻断提示；
+- Cloudflare production：默认地址 <https://dao-ru-fo-digital-museum.pages.dev>；当前 unique deployment <https://ebbd7c00.dao-ru-fo-digital-museum.pages.dev>；deployment ID `ebbd7c00-7613-49cf-b0c2-9e0c8089d091`；Environment `Production`；branch `main`；source marker `0b5ac13`（`0b5ac1302add49bb922bcb589fc36334ef6e3e5d`）；Wrangler `4.120.1`；manifest `2026.08.alpha.1 / alpha / preview`；上传使用 `--commit-dirty=false`；
+- post-deploy HTTP smoke：默认地址与 unique 地址均 **25/25**；线上浏览器验收确认时间轴 24 个覆盖采样节点、事件卡片保留、长安人物/事件同步、城市 scoped 关系图、关系节点进入人物轨迹与名言卡、长安→洛阳连续切换均正常；默认地址作为当前唯一线上复盘基准，unique 地址只作为发布证据与回滚定位；
+- Public RC2 继续独立保持 34 entities / 41 relations / 0 audio / 0 blocker；Full Alpha 的 `preview` visibility、410 个 public blockers 仍是内容审核状态，不是运行时错误，也不等于 Public RC 或正式学术发布；
+- release commit：`0b5ac13 feat: sync atlas timeline city and relations`；本 handoff 文档随后以 docs-only commit 补录，不重新上传应用、不改变已部署应用 source marker；本轮停在“可线上复盘的交互闭环”，不扩大下一批内容范围。
+
+## 2026-08-11｜首页全屏地图主画布 release handoff（上一阶段）
 
 - 按线上标注完成首页构图修正：移除左侧整块大标题/宣传 hero，只保留无障碍的隐藏 `h1`；首页从导航下方直接进入共享 `AtlasWorkspace`，地图工作台横向铺满可用画布并接近首屏高度；
 - 工作台标题由“先从地图进入”统一改为“交错的历史时空”（English: `Interwoven historical space-time`）；地图、人物/事件/地点/路线/著作/言论/关系标签、时间轴、详情 drawer 和深链接逻辑不变；
