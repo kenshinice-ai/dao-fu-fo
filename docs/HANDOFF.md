@@ -2,9 +2,22 @@
 
 > 维护纪律：每个可独立说明的实现、修复、验证或发布阶段完成后立即更新。
 > 最后更新：2026-08-11
-> 当前阶段：A1+A2 全历史人物与 symbolic cosmos 批次已上线 production / production 作为唯一线上复盘基准 / Public RC 边界保持独立
+> 当前阶段：城市—人物—轨迹—时间轴—关系网互动闭环已上线 production / production 作为唯一线上复盘基准 / Public RC 边界保持独立
 
-## 2026-08-11｜A1+A2 全历史人物与 symbolic cosmos 批次 production handoff（当前）
+## 2026-08-11｜城市—人物—轨迹—时间轴—关系网互动闭环 production handoff（当前）
+
+- 本轮按用户明确授权把当前完整工作树创建 release commit 并 fast-forward 合并到 `main`：主 release 为 `95cd75b`（`release: interactive historical atlas production`），随后补入 `80dbf2d`（地图回归/对比度修复）和 `aaa450b`（timeline SVG 无障碍语义修复）；当前 `main` 工作树在 handoff 前保持干净；
+- 目标闭环已实际验证：点击长安展开 11 位人物，点击洛阳展开 5 位人物；从长安人物列表点击玄奘进入 `focus=figure:xuanzang`，地图与面板显示 3 个空间节点；点击时间轴节点“玄奘出发长安”进入 `focus=event:xuanzang-departs-changan` 并反向显示地图；点击人物关系网节点可回到城市或其他关系对象；刷新 figure focus URL 后轨迹场景恢复；
+- 互动实现集中在 `CivilisationMap.tsx`、`RelationNetwork.tsx`、`contextProjection.ts`、`ExplorePage.tsx`、`HomePage.tsx` 和共享 `staticData` map/search loader；关系投影区分 direct place relation 与 event bridge，不把共享城市误写成未经证实的直接人物地点关系；玄奘路线按已有 route waypoint 数据高亮，不新增未审核史实；
+- 当前 Full Alpha read model 为 140 个实体（人物 26、事件 31、地点 21、路线 3、文本 16、文本版本 8、概念 6、机构 6、对象 9、段落 14）、159 条关系、54 个来源、3 条音频；真实地图为 14 个地点索引 / 2 条路线；Alpha quality report 仍为 352 个 public blockers，Public RC2 独立保持 34 entities / 41 relations / 0 audio / 0 blocker；
+- 本地门禁：production preflight 的 `npm run check` 通过；unit tests 19/19；最终 Playwright + axe 为 51 tests、50 passed / 1 skipped（唯一 skipped 为 Public RC 专用测试）；地图缩放、拖动回归、城市人物展开、时间轴反向定位、关系网和 390px/axe 均通过；Full Alpha Vite build 与 `verify:static` 通过；bundle >500 kB 仅为既有非阻断警告；
+- 本轮修复并纳入最终 production：关系网加入后旧 E2E 文本断言收紧到关系列表；地图拖动测试改为命中 Leaflet 实际 viewport；地图地点索引按钮改用满足 WCAG AA 的深色文本；timeline SVG 从 `role=img` 调整为可包含交互节点的 `role=group`，保留键盘 Enter/Space 和点击反向定位；
+- Cloudflare production：默认地址 <https://dao-ru-fo-digital-museum.pages.dev>；最终 unique 地址 <https://f6692404.dao-ru-fo-digital-museum.pages.dev>；deployment ID `f6692404-283d-4497-8354-52978cb6f2a1`；Environment `Production`；branch `main`；source marker `aaa450b`；Wrangler `4.120.0`；manifest `2026.08.alpha.1 / alpha / preview`；按 production-only 纪律使用 `CF_PAGES_PRODUCTION_VISIBILITY=preview`，本次为 clean main 上传，未使用 dirty deploy；上一版 `b06e7ff7-8d13-4895-85bb-2176394f94eb` 保留为回滚证据；
+- post-deploy：最终 unique/default HTTP/JSON smoke 均 25/25；线上浏览器确认长安 11 人、洛阳 5 人、玄奘 3 spatial stops、关系网聚焦、刷新 URL 恢复和时间轴节点反向地图均正常；最终线上默认地址作为当前唯一复盘基准；
+- handoff 后暂停扩大内容范围。下一步只处理线上复盘反馈、事实/来源/权利/可访问性审核，或经用户再次授权进入下一批人物/地点/事件；不把 Full Alpha 的 preview visibility 误称为 Public RC 或正式学术发布；
+- 工作树纪律：本次产品改动已提交并合并到 `main`；本段 handoff 文档属于发布证据补录，后续 commit 不改变已上传的应用产物 source marker `aaa450b`；没有 reset/checkout，也没有把 iCloud 生成的同内容 ` 2` 副本纳入提交；
+
+## 2026-08-11｜A1+A2 全历史人物与 symbolic cosmos 批次 production handoff（上一阶段）
 
 - 本轮按用户授权执行 A1 + A2：A1 加入庄子、孟子、张道陵、葛洪、阿育王、龙树、鸠摩罗什、法显 8 位可审计历史/传统人物；A2 加入盘古、女娲、伏羲、黄帝、西王母、太上老君 6 位神话/神圣人物。每位新增人物均连接时间、地点或 symbolic cosmos、事件、文本/传承、关系与来源；没有只增加孤立人物卡；
 - 人物身份严格分层：`historical_person`、`traditional_sage`、`sacred_figure`、`mythic_persona` 不合并；老子与太上老君通过 `deified_as` 保持层级关系；神话/神圣人物不写入现实经纬度，现实地图与 symbolic cosmos 分开；历史时间、传统时间和接受史时间不互相覆盖；
