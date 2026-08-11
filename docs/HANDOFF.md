@@ -2,9 +2,20 @@
 
 > 维护纪律：每个可独立说明的实现、修复、验证或发布阶段完成后立即更新。
 > 最后更新：2026-08-11
-> 当前阶段：人物关系审计、出生地核实与语境卡已完成并已直发最终 production / production 作为唯一线上复盘基准 / Public RC 边界保持独立
+> 当前阶段：首页 map-first 全屏主画布已完成并已直发最终 production / production 作为唯一线上复盘基准 / Public RC 边界保持独立
 
-## 2026-08-11｜人物关系审计、出生地核实与语境卡 release handoff（当前）
+## 2026-08-11｜首页全屏地图主画布 release handoff（当前）
+
+- 按线上标注完成首页构图修正：移除左侧整块大标题/宣传 hero，只保留无障碍的隐藏 `h1`；首页从导航下方直接进入共享 `AtlasWorkspace`，地图工作台横向铺满可用画布并接近首屏高度；
+- 工作台标题由“先从地图进入”统一改为“交错的历史时空”（English: `Interwoven historical space-time`）；地图、人物/事件/地点/路线/著作/言论/关系标签、时间轴、详情 drawer 和深链接逻辑不变；
+- 首页与 `/explore?view=map` 仍共用同一 `AtlasWorkspace` / `CivilisationMap`；线上实点：地点详情抽屉可打开并关闭，关系标签显示 4 条现实人物关系，旧 `.home-atlas-hero .hero-copy` 节点为 0；
+- 本地门禁：`npm run check` 全量通过；本轮完整 Playwright + axe 为 **54 passed / 1 skipped**（55 tests，唯一 skipped 为 Public RC 专用用例）；首页布局针对性回归 2/2；`git diff --check` 通过；Full Alpha production preflight 静态验证为 `2026.08.alpha.1`；Vite bundle >500 kB 仍是既有非阻断提示；
+- Cloudflare production：默认地址 <https://dao-ru-fo-digital-museum.pages.dev>；当前 unique deployment <https://aad40b40.dao-ru-fo-digital-museum.pages.dev>；deployment ID `aad40b40-a015-49fe-90a7-35e88812ac5d`；Environment `Production`；branch `main`；source marker `409c16c`（`409c16cd25ceac60c518f491f7ce61de1e7a56af`）；Wrangler `4.120.1`；manifest `2026.08.alpha.1 / alpha / preview`；上传使用 `--commit-dirty=false`；
+- post-deploy HTTP smoke：默认地址与 unique 地址均 **25/25**；线上浏览器确认首页标题、全宽地图、地点详情与现实人物关系入口正常；默认地址作为当前唯一线上复盘基准，unique 地址只作为发布证据与回滚定位；
+- Full Alpha 当前仍为 159 个实体（人物 32、事件 37、地点 28、路线 3、文本 16、文本版本 8、概念 6、机构 6、对象 9、段落 14）、191 条关系、64 个来源、3 条音频；Public RC2 保持 34 entities / 41 relations / 0 audio / 0 blocker；410 public blockers 仍是内容审核状态，不是运行时错误；
+- release commit：`409c16c feat: make homepage atlas full-bleed`；本 handoff 文档随后以 docs-only commit 补录，不重新上传应用、不改变已部署 source marker；本轮到此暂停，不扩大人物/地点/事件内容范围。
+
+## 2026-08-11｜人物关系审计、出生地核实与语境卡 release handoff（上一阶段）
 
 - 本轮按“人物关系只指现实人物与现实人物”的语义重新审计：人物关系工作台只展示两个 `figure` 之间的 `influenced` 与 `contemporary_with`；`received_by`、`deified_as`、`comparative_parallel` 等接受史、神格化或比较关系保留在独立的关联语境层，不再混入人物—人物关系列表；地图人物聚焦、Explore 人物聚焦与人物 dossier 均使用同一投影规则；
 - 新增 `born_in` 关系类型与 migration 016，并将出生地作为可追溯的地点事实单独呈现：孔子 → 曲阜、释迦牟尼 → 蓝毗尼、鸠摩罗什 → 龟兹；曲阜与蓝毗尼加入现实地图坐标锚点，地点关系保留 approximate / historical 语义，不把传统叙事或神圣空间伪装成精确现代坐标；曲阜与蓝毗尼的地点核实分别关联 UNESCO 世界遗产条目；
