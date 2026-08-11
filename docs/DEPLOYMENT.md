@@ -31,7 +31,7 @@ Cloudflare Pages 当前只承担在线测试和阶段复盘，未来站点会迁
 CONFIRM_PRODUCTION=dao-ru-fo-digital-museum \
 ALLOW_DIRTY_DEPLOY=1 \
 CF_PAGES_PRODUCTION_VISIBILITY=preview \
-WRANGLER_VERSION=4.120.0 \
+WRANGLER_VERSION=4.120.1 \
 ./deploy/cloudflare-pages.sh production
 ```
 
@@ -176,7 +176,7 @@ apps/museum-web/dist/_headers
 - `Referrer-Policy`；
 - `Permissions-Policy`；
 - hashed assets 一年 immutable browser cache；
-- `data/v2` 一小时 browser cache，并允许 stale-while-revalidate。
+- `data/v2` 强制重新验证（`max-age=0, must-revalidate`）；Web read-model fetch 同时使用 `cache: no-store`。
 
 Cloudflare 会从最终静态资产目录读取 `_headers` 和 `_redirects`。上线后必须实际检查这些规则，而不能只以仓库文件存在作为验收证据。
 
@@ -383,7 +383,7 @@ npx wrangler pages deploy apps/museum-web/dist \
 7. content manifest 可读取且身份为 `dao-ru-fo` / schema `2.0`；
 8. English profile 数据拆包可读取；
 9. 隋唐 GeoJSON 可读取；
-10. `data/v2` cache policy 生效；
+10. `data/v2` 强制重新验证策略生效；
 11. hashed asset 使用 immutable cache policy。
 
 任意一项失败，脚本以非零状态退出，production 不得签收。

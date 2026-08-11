@@ -11,10 +11,11 @@
 - 新增优雅的 figure context card：在地图人物聚焦时展示“名言入口 / 思想入口”、原文、解释、出处定位与 dossier 入口；老子、孔子、释迦牟尼已补入带谨慎 provenance 的名言/理论上下文；人物页新增出生地事实，并把“现实人物—人物关系”和“地点、事件、经典及后世接受”等语境分成两个区块；
 - Full Alpha compiler read model 当前为 159 个实体（人物 32、事件 37、地点 28、路线 3、文本 16、文本版本 8、概念 6、机构 6、对象 9、段落 14）、191 条关系、64 个来源、3 条音频；本轮新增 2 个出生地实体、3 条出生地关系，并同步更新首页/地图/人物 dossier 的 read model；
 - 本地门禁：`npm run check` 全量通过；workspace unit tests 分组为 core 8/8、compiler 5/5、web 7/7；`DRF_WEB_DEPLOYMENT_MODE=full-alpha npm run test:e2e` 为 53 passed / 1 skipped（唯一 skipped 为 Public RC 专用用例）；`git diff --check` 与 diff-check skill 均无问题；Full Alpha Vite build、静态验证、迁移与架构验证通过；bundle >500 kB 仍只是既有非阻断提示；
-- Cloudflare production：默认地址 <https://dao-ru-fo-digital-museum.pages.dev>；本轮 unique deployment <https://5ff72060.dao-ru-fo-digital-museum.pages.dev>；deployment ID `5ff72060-4c75-4ff4-b376-5e8736ac1c54`；Environment `Production`；branch `main`；source marker `85ab927`（`85ab9278fef09265a8529fcb7da54e69be04be9d`）；Wrangler `4.120.1`；manifest `2026.08.alpha.1 / alpha / preview`；上传时为 clean `main`，并使用 `--commit-dirty=false`；上一版 `c6330738-b9e9-451b-abc9-99f0f5a99b58` 保留为回滚证据；
-- post-deploy HTTP/JSON smoke：unique 与默认地址均 25/25；两者均确认 HTTP 200、CSP/安全响应头、SPA 深链、manifest identity、map/timeline/profile 与 immutable asset；浏览器线上回归继续以默认地址为唯一复盘基准，重点确认人物上下文卡、出生地 dossier、人物关系边界与不同城市之间的连续切换；
+- Cloudflare production：默认地址 <https://dao-ru-fo-digital-museum.pages.dev>；缓存修复后的 unique deployment <https://2dd03422.dao-ru-fo-digital-museum.pages.dev>；deployment ID `2dd03422-f035-4b59-a5ec-9e69b14a55d4`；Environment `Production`；branch `main`；source marker `2ad5b2e`（`2ad5b2eb129383ad4f39decad53252561f4b7d86`）；Wrangler `4.120.1`；manifest `2026.08.alpha.1 / alpha / preview`；上传时为 clean `main`，并使用 `--commit-dirty=false`；上一版 `5ff72060-4c75-4ff4-b376-5e8736ac1c54` 保留为回滚证据；
+- 本轮缓存修复：`/data/v2/*` 响应改为 `max-age=0, must-revalidate`，Web read-model fetch 使用 `cache: no-store`；这解决了旧浏览器在发布后继续显示 19 个地点而不是最新 21 个地点的问题；
+- post-deploy HTTP/JSON smoke：unique 与默认地址均 25/25；两者均确认 HTTP 200、CSP/安全响应头、SPA 深链、manifest identity、map/timeline/profile、强制重新验证响应头与 immutable asset；默认地址 fresh-tab 浏览器验收确认首页 32 位人物、21 个现实地点/2 条路线、曲阜与蓝毗尼可见，孔子名言卡、孔子出生地 dossier、道安—慧远现实人物关系、曲阜 → 蓝毗尼城市连续切换均正常；线上浏览器日志为 0；
 - Public RC2 继续独立保持 34 entities / 41 relations / 0 audio / 0 blocker；本轮新增内容全部属于 Full Alpha `preview`，不会因为直发 production 而被误称为 Public RC 或正式学术发布；Research 中的 410 public blockers / 353 review subjects 是内容审核状态，不是运行时错误；
-- release commit：`85ab927 feat: refine person relations and birthplace context`；本 handoff 文档将在浏览器线上回归完成后单独补录提交，不改变已上传应用产物的 source marker；
+- release commits：`85ab927 feat: refine person relations and birthplace context` + `2ad5b2e fix: prevent stale production read models`；本 handoff 文档将在本次线上回归完成后单独补录提交，不改变已上传应用产物的 source marker；
 
 ## 2026-08-11｜人物—城市—事件关系扩展与连续切换 release handoff（上一阶段）
 
