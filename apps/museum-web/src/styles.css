@@ -425,19 +425,14 @@ h3 {
 }
 
 .home-atlas-hero {
-  grid-template-columns: minmax(280px, 1fr) minmax(0, 1.618fr);
-  gap: var(--s-5);
-  align-items: start;
-}
-
-.home-atlas-hero .hero-copy {
-  min-height: 620px;
-  padding-right: var(--s-3);
-}
-
-.home-atlas-hero .hero-copy h1 {
-  max-width: 12ch;
-  font-size: clamp(3.25rem, 5.3vw, 5.2rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: stretch;
+  width: 100%;
+  max-width: none;
+  min-height: 0;
+  padding: 0;
 }
 
 .home-atlas-hero .hero-lead {
@@ -4476,11 +4471,6 @@ h3 {
     min-height: 500px;
   }
 
-  .home-atlas-hero .hero-copy {
-    min-height: auto;
-    padding-right: 0;
-  }
-
   .home-atlas-map .civilisation-map-leaflet {
     height: 520px;
   }
@@ -5009,10 +4999,6 @@ h3 {
   transform: translateY(-3px);
 }
 
-.home-atlas-panel.atlas-workspace {
-  padding: var(--s-3);
-}
-
 .atlas-workspace {
   width: min(var(--content-max), calc(100% - 2 * var(--gutter)));
   margin: 0 auto;
@@ -5063,6 +5049,22 @@ h3 {
 .atlas-workspace.is-compact .atlas-map-stage .civilisation-map-leaflet {
   height: min(38vw, 440px);
   min-height: 360px;
+}
+
+.home-atlas-panel.atlas-workspace {
+  width: 100%;
+  max-width: none;
+  min-height: calc(100svh - 78px);
+  margin: 0;
+  padding: var(--s-5) max(var(--gutter), calc((100% - var(--content-max)) / 2)) var(--s-6);
+  border-inline: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.home-atlas-panel.atlas-workspace .atlas-map-stage .civilisation-map-leaflet {
+  height: clamp(460px, calc(100svh - 300px), 760px);
+  min-height: 460px;
 }
 
 .atlas-workspace-heading {
@@ -5692,26 +5694,19 @@ h3 {
     bottom: 92px;
   }
 
-  .home-atlas-panel.atlas-workspace {
-    padding: var(--s-2);
-  }
-
   .home-atlas-hero .home-atlas-panel {
-    order: 1;
-  }
-
-  .home-atlas-hero .hero-copy {
     order: 2;
+    min-height: 0;
+    padding: var(--s-3) var(--gutter) var(--s-6);
+    border-inline: 0;
+    border-radius: 0;
   }
 
-  .home-atlas-hero .hero-copy h1 {
-    max-width: 10ch;
-    font-size: clamp(2.7rem, 12vw, 4.2rem);
+  .home-atlas-panel.atlas-workspace .atlas-map-stage .civilisation-map-leaflet {
+    height: 58vh;
+    min-height: 420px;
   }
 
-  .hero-guide small {
-    grid-column: auto;
-  }
 }
 
 @media (max-width: 430px) {

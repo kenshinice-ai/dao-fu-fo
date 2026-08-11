@@ -27,7 +27,7 @@ function HomeAtlasPreview({ locale }: { locale: Locale }) {
       onChange={updateState}
       className="home-atlas-panel"
       compact
-      heading={locale === "zh-CN" ? "先从地图进入" : "Begin with the map"}
+      heading={locale === "zh-CN" ? "交错的历史时空" : "Interwoven historical space-time"}
       description={locale === "zh-CN" ? "点击城市查看人物与事件；点击人物，沿着地点、著作、言论、关系和时间继续探索。" : "Select a city for figures and events; select a figure to follow places, works, sayings, relationships and time."}
     />
   );
@@ -45,28 +45,7 @@ export function HomePage() {
   return (
     <>
       <section className="home-hero home-atlas-hero">
-        <div className="hero-copy">
-          <p className="eyebrow">{data.eyebrow}</p>
-          <h1>{data.heroTitle}</h1>
-          <p className="hero-lead">{data.heroLead}</p>
-          <div className="hero-actions">
-            <Link className="button button-primary" to={withLang(`/museum/${data.exhibition.slug}`, locale)}>
-              {data.primaryAction}
-              <Icon name="arrow" />
-            </Link>
-            <Link className="button button-secondary" to={withLang("/explore", locale)}>
-              {data.secondaryAction}
-            </Link>
-          </div>
-          <div className="hero-index hero-guide" aria-label={locale === "zh-CN" ? "导览入口" : "Guided entry"}>
-            <span>01</span>
-            <div>
-              <small>{locale === "zh-CN" ? "从一座城市开始" : "Begin with one city"}</small>
-              <strong>{data.exhibition.title}</strong>
-            </div>
-            <Link className="text-link" to={withLang(`/museum/${data.exhibition.slug}`, locale)}>{locale === "zh-CN" ? "进入展览" : "Enter"} <Icon name="arrow" /></Link>
-          </div>
-        </div>
+        <h1 className="sr-only">{data.heroTitle}</h1>
         <HomeAtlasPreview locale={locale} />
       </section>
 

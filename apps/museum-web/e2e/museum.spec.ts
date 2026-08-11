@@ -305,6 +305,7 @@ test("homepage exposes the expanded figure gateways", async ({ page }) => {
 
   await waitForAtlas(page);
   await expect(page.locator(".home-atlas-panel.atlas-workspace")).toBeVisible();
+  await expect(page.locator(".atlas-workspace").getByRole("heading", { name: "交错的历史时空" })).toBeVisible();
   await expect(page.getByRole("button", { name: "放大地图", exact: true })).toBeVisible();
   await expect(page.getByRole("link", { name: "打开完整地图", exact: true })).toBeVisible();
   await expect(page.getByRole("heading", { name: "人物、空间与时间" })).toBeVisible();
@@ -463,20 +464,20 @@ test("390px layout has no horizontal overflow and keeps navigation at the bottom
     const nav = document.querySelector<HTMLElement>(".primary-nav");
     const rect = nav?.getBoundingClientRect();
     const mapPanel = document.querySelector<HTMLElement>(".home-atlas-panel");
-    const heroCopy = document.querySelector<HTMLElement>(".home-atlas-hero .hero-copy");
+    const atlasRect = mapPanel?.getBoundingClientRect();
     return {
       overflow: document.documentElement.scrollWidth > window.innerWidth,
       position: nav ? getComputedStyle(nav).position : null,
       navBottom: rect?.bottom ?? 0,
       viewportHeight: window.innerHeight,
-      mapBeforeHero: (mapPanel?.getBoundingClientRect().top ?? Number.POSITIVE_INFINITY) < (heroCopy?.getBoundingClientRect().top ?? 0),
+      mapStartsNearTop: (atlasRect?.top ?? Number.POSITIVE_INFINITY) < 140,
     };
   });
   expect(metrics.overflow).toBe(false);
   expect(metrics.position).toBe("fixed");
   expect(metrics.navBottom).toBeLessThanOrEqual(metrics.viewportHeight);
   expect(metrics.navBottom).toBeGreaterThan(metrics.viewportHeight - 24);
-  expect(metrics.mapBeforeHero).toBe(true);
+  expect(metrics.mapStartsNearTop).toBe(true);
 
   await page.evaluate(() => window.scrollTo({ top: document.body.scrollHeight, behavior: "auto" }));
   await expect(page.getByRole("button", { name: "回到顶部", exact: true })).toBeVisible();
