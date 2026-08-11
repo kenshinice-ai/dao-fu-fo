@@ -2,9 +2,19 @@
 
 > 维护纪律：每个可独立说明的实现、修复、验证或发布阶段完成后立即更新。
 > 最后更新：2026-08-11
-> 当前阶段：城市语境保持与时代语境卡已完成并直发最终 production / production 作为唯一线上复盘基准 / Public RC 边界保持独立
+> 当前阶段：P0/P1/P2 atlas 交互优化已完成并直发 Full Alpha production / production 作为唯一线上复盘基准 / Public RC 边界保持独立
 
-## 2026-08-11｜城市语境保持与时代语境卡 release handoff（当前）
+## 2026-08-11｜P0/P1/P2 atlas 探索体验优化 production handoff（当前）
+
+- 本轮执行参考站与 `previous project` 清单中的全部 P0/P1/P2：统一 URL 状态（搜索、地图图层、LOD、焦点、详情）、渐进式对象/关系列表、地图—时间轴—关系图共用四级 LOD、地图图层/图例/不确定性表达、时间轴密度与范围控制、关系图文本兜底、全局搜索、详情相邻浏览与意义摘要、证据 formatter、现场数据说明、时间轴播放、人物轨迹步进、移动端单视图和 read-model 请求缓存；实现集中在 `AtlasWorkspace.tsx`、`CivilisationMap.tsx`、`RelationNetwork.tsx`、`GlobalSearch.tsx`、`labels.ts`、`route-state.ts` 与 `styles.css`；release commit：`bd4d247 feat: add atlas exploration controls and progressive context`；
+- 本地门禁：`npm run check` 全量通过；core 8/8、compiler 5/5、web 7/7；完整 Playwright + axe 为 **55 passed / 1 skipped**（唯一 skipped 为 Public RC 专用用例）；`git diff --check` 与静态发布校验通过；Vite 的 >500 kB bundle 提示仍为非阻断既有提示；
+- 内容边界：Full Alpha 为 159 个实体（人物 32、事件 37、地点 28、路线 3、文本 16、文本版本 8、概念 6、机构 6、博物馆对象 9、段落 14）、191 条关系、64 个来源、3 条音频；410 个 public blockers 仍是内容审核状态；Public RC2 独立保持 34 entities / 41 relations / 0 audio / 0 blocker；
+- Cloudflare production：默认地址 <https://dao-ru-fo-digital-museum.pages.dev>；本次 unique deployment <https://dcc5936e.dao-ru-fo-digital-museum.pages.dev>；deployment ID `dcc5936e-f2c7-4855-9348-6e73a23b19c8`；Environment `Production`；branch `main`；source marker `bd4d247`（`bd4d247e4ba583bbfb0cf5ec1c17a86c680b71ce`）；Wrangler `4.120.1`；manifest `2026.08.alpha.1 / alpha / preview`；上传使用 `--commit-dirty=false`；
+- post-deploy HTTP smoke：默认地址与 unique 地址均 **25/25**；检查首页 HTML/CSP/安全响应头、SPA deep links、manifest、英文 profile、地图 GeoJSON、时间轴 JSON 和 immutable hashed asset 均通过；上一成功 production deployment `472d4e52-c135-4c13-aa46-a7bfebe6cab1` 作为回滚定位；
+- 线上浏览器复核：中文首页显示 21 个地点、2 条路线、131 个时间事件和 32 位人物；英文全局搜索“玄奘”进入 `focus=figure:xuanzang&detail=figure:xuanzang` 并打开详情抽屉，意义摘要与“有文献依据”可见；390px 英文 Explore 页面 `body.scrollWidth=390`，切换 Objects 后地图与时间轴隐藏、对象面板保留；console error/warn 为空；
+- 本 handoff 文档为 docs-only follow-up，不重新上传应用、不改变已部署 source marker；当前 production 进入可线上复盘节点，下一轮只处理用户复盘反馈或经授权的内容扩充。
+
+## 2026-08-11｜城市语境保持与时代语境卡 release handoff（上一阶段）
 
 - 修复“长安 → 人物”后回到全部人物清单的状态边界：路由状态新增可分享的 `scope`，人物 `focus` 与城市 `scope` 分开保存；从长安人物或城市关系节点进入人物时使用 `focus=figure:*&scope=place:changan`，右侧继续显示 13 位长安关联人物；面板提供“回到长安”恢复入口；清除焦点会同时清除 scope；地图 marker、事件和轨迹节点会显式清除旧城市 scope，避免把旧语境带到新对象；
 - 城市关系图继续严格只投影现实人物—现实人物的 `influenced` / `contemporary_with`，并在城市 scope 下联动；线上已验证长安人物列表、城市关系节点、人物轨迹和人物面板均保持同一城市语境；
