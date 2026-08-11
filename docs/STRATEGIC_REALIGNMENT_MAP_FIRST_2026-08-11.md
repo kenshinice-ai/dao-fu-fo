@@ -1,12 +1,19 @@
 # 道·儒·佛文明数字博物馆｜全历史时空人物地图战略
 
 日期：2026-08-11
-状态：Direction confirmed / P0–P3 map-first interaction slice implemented / timeline-city-person-relation interaction slice production complete；内容扩充仍按审核闸门执行
-线上基线：Cloudflare Pages production `2026.08.alpha.1 / alpha / preview`；最新 deployment `ebbd7c00-7613-49cf-b0c2-9e0c8089d091`（<https://ebbd7c00.dao-ru-fo-digital-museum.pages.dev>）
+状态：Direction confirmed / P0–P3 map-first interaction slice implemented / timeline-city-person-relation interaction slice production complete / city-scope preservation + era-resonance card production complete；内容扩充仍按审核闸门执行
+线上基线：Cloudflare Pages production `2026.08.alpha.1 / alpha / preview`；最新 deployment `472d4e52-c135-4c13-aa46-a7bfebe6cab1`（<https://472d4e52.dao-ru-fo-digital-museum.pages.dev>）
 参考体验：
 
 - <https://european-classical-music-history-atlas.pages.dev/>
 - <https://bible-atlas-6h7.pages.dev/>
+
+## 0.2｜城市语境保持与时代语境卡 production 修复（2026-08-11）
+
+- 路由状态现在把人物 `focus` 与地点 `scope` 分离保存：长安 → 任意人物会回到 `focus=figure:*&scope=place:changan`，右侧仍显示长安关联人物；“回到长安”可恢复地点 dossier；新地点、事件或轨迹点击会清除旧 scope，避免上下文残留；城市关系网沿用同一 scope，因此人物列表、关系图、轨迹和详情面板保持一致；
+- 时代预设新增 9 个“时代语境 / Era resonance”卡，显示中英文标题、引文、归属、阅读说明与既有段落档案链接；语境卡明确这是文本共鸣，不把后世阅读误写为精确年代事实；
+- `npm run check`、unit tests（core 8/8、compiler 5/5、web 7/7）、Playwright + axe（55 passed / 1 skipped）、typecheck、diff-check 与 UI/UX UX 检查均通过；默认 production 与本次 unique deployment smoke 均 25/25；
+- 应用 release commit：`5a73e77 fix: preserve atlas city context and add era resonance`；本次 production source marker 为 `5a73e77`，默认域名仍是唯一线上复盘基准；本节的 handoff 补录不再触发应用部署。
 
 ## 0.1｜时间轴—城市人物—人物关系联动 production 交付（2026-08-11）
 

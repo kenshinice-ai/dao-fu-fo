@@ -2,7 +2,19 @@
 
 > 维护纪律：每个可独立说明的实现、修复、验证或发布阶段完成后立即更新。
 > 最后更新：2026-08-11
-> 当前阶段：全历史地图的时间轴—城市人物—现实人物关系联动已完成并直发最终 production / production 作为唯一线上复盘基准 / Public RC 边界保持独立
+> 当前阶段：城市语境保持与时代语境卡已完成并直发最终 production / production 作为唯一线上复盘基准 / Public RC 边界保持独立
+
+## 2026-08-11｜城市语境保持与时代语境卡 release handoff（当前）
+
+- 修复“长安 → 人物”后回到全部人物清单的状态边界：路由状态新增可分享的 `scope`，人物 `focus` 与城市 `scope` 分开保存；从长安人物或城市关系节点进入人物时使用 `focus=figure:*&scope=place:changan`，右侧继续显示 13 位长安关联人物；面板提供“回到长安”恢复入口；清除焦点会同时清除 scope；地图 marker、事件和轨迹节点会显式清除旧城市 scope，避免把旧语境带到新对象；
+- 城市关系图继续严格只投影现实人物—现实人物的 `influenced` / `contemporary_with`，并在城市 scope 下联动；线上已验证长安人物列表、城市关系节点、人物轨迹和人物面板均保持同一城市语境；
+- 点击时代预设后新增“时代语境 / Era resonance”卡：9 个时代入口均有中英文标题、引文、归属、时代说明和通往既有段落档案的入口；这些引文是文本共鸣与阅读入口，不宣称段落一定在该时代窗口内写成，卡片保留来源/传承层提示；
+- 应用改动集中在 `route-state.ts`、`AtlasWorkspace.tsx`、`CivilisationMap.tsx`、`eraContexts.ts`、`styles.css` 与 Playwright 回归；release commit：`5a73e77 fix: preserve atlas city context and add era resonance`；
+- 本地门禁：`npm run check` 全量通过；workspace unit tests 为 core 8/8、compiler 5/5、web 7/7；完整 Playwright + axe 为 **55 passed / 1 skipped**（56 tests，唯一 skipped 为 Public RC 专用用例）；typecheck、`git diff --check`、diff-check 与 UI/UX Pro Max UX 检查均通过；
+- 内容边界：Full Alpha 仍为 159 个实体（人物 32、事件 37、地点 28、路线 3、文本 16、文本版本 8、概念 6、机构 6、博物馆对象 9、段落 14）、191 条关系、64 个来源、3 条音频；410 个 public blockers 仍是内容审核状态；Public RC2 独立保持 34 entities / 41 relations / 0 audio / 0 blocker；
+- Cloudflare production：默认地址 <https://dao-ru-fo-digital-museum.pages.dev>；本次 unique deployment <https://472d4e52.dao-ru-fo-digital-museum.pages.dev>；deployment ID `472d4e52-c135-4c13-aa46-a7bfebe6cab1`；Environment `Production`；branch `main`；source marker `5a73e77`（`5a73e77b2df52c4c25a8e69af33d5d4bb8e01657`）；Wrangler `4.120.1`；manifest `2026.08.alpha.1 / alpha / preview`；上传使用 `--commit-dirty=false`；
+- post-deploy HTTP smoke：默认地址与 unique 地址均 **25/25**；线上浏览器复核确认长安人物保持 13 项、人物回退保持城市 scope、城市关系节点保持城市 scope、隋唐时代卡显示《心经》共鸣并链接 `/passages/form-is-emptiness?lang=en`；
+- 本次 handoff 文档以 docs-only follow-up commit 补录，不重新上传应用、不改变已部署应用 source marker；当前停在可线上复盘节点，下一轮只处理用户复盘反馈或经授权的内容扩充。
 
 ## 2026-08-11｜时间轴—城市人物—人物关系联动 release handoff（当前）
 
