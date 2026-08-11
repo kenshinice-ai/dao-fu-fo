@@ -27,6 +27,8 @@ import { RelationNetwork } from "./RelationNetwork";
 import { entityPath } from "../routing";
 import { staticData } from "../data/staticData";
 import { useStaticData } from "../data/useStaticData";
+import { formatEvidenceLine } from "../data/labels";
+import type { MapContentLayer, ZoomLevel } from "../routing";
 import type { EntityData, Locale, MuseumMapData, SearchItem, Tradition } from "../types";
 
 interface CivilisationMapProps {
@@ -40,6 +42,9 @@ interface CivilisationMapProps {
   relations?: ReadModelRelationIndex;
   searchItems?: SearchItem[];
   onFocus?: (focus: string, scope?: string | null) => void;
+  mapLayers?: MapContentLayer[];
+  zoomLevel?: ZoomLevel;
+  onMapLayersChange?: (layers: MapContentLayer[]) => void;
   className?: string;
   showContext?: boolean;
   showIndex?: boolean;
@@ -55,6 +60,7 @@ const TRADITION_COLORS: Record<Tradition | "convergence", string> = {
 
 const INITIAL_CENTER: LatLngExpression = [32.2, 99.8];
 const INITIAL_ZOOM = 3.8;
+const DEFAULT_MAP_LAYERS: MapContentLayer[] = ["places", "routes", "trajectories"];
 
 function featureKey(feature: MuseumMapData["features"][number]): string {
   return `place:${feature.properties.slug}`;
@@ -102,6 +108,16 @@ function matchesTimeRange(feature: MuseumMapData["features"][number], from?: num
   if (from !== undefined && rangeEnd < from) return false;
   if (to !== undefined && range.startYear > to) return false;
   return true;
+}
+
+function isUncertainCoordinate(value: string): boolean {
+  return /pending|approx|uncertain|unknown|待核|推定|传统|symbolic/i.test(value);
+}
+
+function mapLayerLabel(layer: MapContentLayer, locale: Locale): string {
+  if (layer === "places") return locale === "zh-CN" ? "地点" : "Places";
+  if (layer === "routes") return locale === "zh-CN" ? "路线" : "Routes";
+  return locale === "zh-CN" ? "人物轨迹" : "Figure trajectories";
 }
 
 function MapViewport({
@@ -181,6 +197,28 @@ function MapStatus({ locale }: { locale: Locale }) {
   return <strong className="civilisation-map-zoom" aria-live="polite">{locale === "zh-CN" ? `缩放 ${zoom || "—"}` : `Zoom ${zoom || "—"}`}</strong>;
 }
 
+function MapLayerControl({ locale, layers, onChange }: { locale: Locale; layers: MapContentLayer[]; onChange?: (layers: MapContentLayer[]) => void }) {
+  const available: MapContentLayer[] = ["places", "routes", "trajectories"];
+  return (
+    <fieldset className="civilisation-map-layers">
+      <legend>{locale === "zh-CN" ? "地图图层" : "Map layers"}</legend>
+      {available.map((layer) => {
+        const checked = layers.includes(layer);
+        return (
+          <label key={layer}>
+            <input
+              type="checkbox"
+              checked={checked}
+              onChange={() => onChange?.(checked ? layers.filter((item) => item !== layer) : [...layers, layer])}
+            />
+            <span>{mapLayerLabel(layer, locale)}</span>
+          </label>
+        );
+      })}
+    </fieldset>
+  );
+}
+
 export function CivilisationMap({
   data,
   routes,
@@ -192,6 +230,9 @@ export function CivilisationMap({
   relations,
   searchItems = [],
   onFocus,
+  mapLayers = DEFAULT_MAP_LAYERS,
+  zoomLevel = "region",
+  onMapLayersChange,
   className = "",
   showContext = true,
   showIndex = true,
@@ -203,6 +244,7 @@ export function CivilisationMap({
     [focusedFigureSlug, locale, showContext],
   );
   const { data: focusedFigure } = useStaticData(loadFocusedFigure);
+  const [trajectoryIndex, setTrajectoryIndex] = useState(0);
   const connectedKeys = useMemo(() => connectedContextKeys(relations, focus), [focus, relations]);
   const figurePlaces = useMemo(
     () => focus?.startsWith("figure:") ? figurePlaceContexts(relations, focus).sort((a, b) => (relationStartYear(a.relation) ?? Number.MAX_SAFE_INTEGER) - (relationStartYear(b.relation) ?? Number.MAX_SAFE_INTEGER)) : [],
@@ -251,7 +293,15 @@ export function CivilisationMap({
   }, [connectedKeys, figurePlaces, focusEventPlaces, routeEntries, selectedRouteKeys]);
   // Keep the full real-place index visible after a selection. This makes a focused
   // city a dossier state, not a filter that hides the next city the visitor may choose.
-  const visibleFeatures = traditionFeatures;
+  // At the era level, retain the curated anchor cities as an intentional density
+  // layer; the region/figure/all levels progressively reveal the full index.
+  const visiblePlaceFeatures = useMemo(() => {
+    if (zoomLevel !== "era") return traditionFeatures;
+    const anchorSlugs = new Set(["changan", "luoyang", "dunhuang", "sarnath", "mount-wutai", "kongtong"]);
+    const anchors = traditionFeatures.filter((feature) => anchorSlugs.has(feature.properties.slug));
+    return anchors.length > 0 ? anchors : traditionFeatures.slice(0, Math.max(1, Math.ceil(traditionFeatures.length / 3)));
+  }, [traditionFeatures, zoomLevel]);
+  const visibleFeatures = mapLayers.includes("places") ? visiblePlaceFeatures : [];
   const relatedPlaceSlugs = useMemo(
     () => [...mapContextKeys].filter((key) => key.startsWith("place:")).map((key) => key.slice("place:".length)),
     [mapContextKeys],
@@ -259,18 +309,22 @@ export function CivilisationMap({
   const focusMapState = focus?.startsWith("figure:")
     ? relatedPlaceSlugs.some((slug) => featuresBySlug.has(slug)) ? "mapped" : "position-pending"
     : undefined;
-  const visibleRoutes = useMemo(() => routeEntries
+  const visibleRoutes = useMemo(() => mapLayers.includes("routes") ? routeEntries
     .filter(({ points }) => points.length > 1 && points.some((point) => {
       const [latitude, longitude] = point as [number, number];
       return visibleFeatures.some((feature) => feature.geometry.coordinates[0] === longitude && feature.geometry.coordinates[1] === latitude);
-    })), [routeEntries, visibleFeatures]);
+    })) : [], [mapLayers, routeEntries, visibleFeatures]);
   const trajectoryStops = useMemo(() => {
+    if (!mapLayers.includes("trajectories")) return [];
     const selectedRoute = visibleRoutes.find(({ route }) => selectedRouteKeys.has("route:" + route.slug));
     if (selectedRoute) return selectedRoute.waypointFeatures;
     return figurePlaces
       .map((place) => featuresBySlug.get(place.placeKey.slice("place:".length)))
       .filter((feature): feature is MuseumMapData["features"][number] => Boolean(feature));
-  }, [featuresBySlug, figurePlaces, selectedRouteKeys, visibleRoutes]);
+  }, [featuresBySlug, figurePlaces, mapLayers, selectedRouteKeys, visibleRoutes]);
+  useEffect(() => {
+    setTrajectoryIndex((index) => Math.min(index, Math.max(0, trajectoryStops.length - 1)));
+  }, [trajectoryStops.length]);
   const focusPlace = focus?.startsWith("place:")
     ? featuresBySlug.get(focus.slice("place:".length))
     : undefined;
@@ -304,6 +358,7 @@ export function CivilisationMap({
       id="historical-map"
       className={`civilisation-map ${className}`.trim()}
       data-map-focus-state={focusMapState}
+      data-map-zoom-level={zoomLevel}
       data-map-visible-places={visibleFeatures.length}
       data-map-visible-routes={visibleRoutes.length}
     >
@@ -370,6 +425,7 @@ export function CivilisationMap({
           const connected = Boolean(focus && matchesContextFocus([key], focus, mapContextKeys));
           const color = TRADITION_COLORS[feature.properties.tradition];
           const radius = feature.properties.slug === "changan" || feature.properties.slug === "luoyang" ? 11 : 8;
+          const uncertain = isUncertainCoordinate(feature.properties.coordinateConfidence);
           return (
             <CircleMarker
               key={feature.id}
@@ -380,6 +436,7 @@ export function CivilisationMap({
                 fillColor: color,
                 fillOpacity: selected ? 0.95 : connected || !focus ? 0.78 : 0.26,
                 weight: selected ? 4 : 2,
+                dashArray: uncertain ? "4 4" : undefined,
                 className: selected ? "is-selected" : undefined,
               }}
               eventHandlers={{ click: () => onFocus?.(key, null) }}
@@ -401,6 +458,17 @@ export function CivilisationMap({
           );
         })}
       </MapContainer>
+      <MapLayerControl locale={locale} layers={mapLayers} onChange={onMapLayersChange} />
+      <details className="civilisation-map-legend" open>
+        <summary>{locale === "zh-CN" ? "图例与不确定性" : "Legend and uncertainty"}</summary>
+        <ul>
+          <li><span className="map-legend-swatch map-legend-place" aria-hidden="true" />{locale === "zh-CN" ? "现实地点" : "Real place"}</li>
+          <li><span className="map-legend-swatch map-legend-route" aria-hidden="true" />{locale === "zh-CN" ? "路线或空间连接" : "Route or spatial connection"}</li>
+          <li><span className="map-legend-swatch map-legend-trajectory" aria-hidden="true" />{locale === "zh-CN" ? "人物轨迹节点" : "Figure trajectory stop"}</li>
+          <li><span className="map-legend-swatch map-legend-uncertain" aria-hidden="true" />{locale === "zh-CN" ? "虚线／半透明：位置或路线待核" : "Dashed or translucent: unresolved position or route"}</li>
+        </ul>
+      </details>
+      {mapLayers.length === 0 ? <p className="civilisation-map-layer-empty">{locale === "zh-CN" ? "已隐藏全部地图图层；请从图层控制中重新打开。" : "All map layers are hidden; reopen one in the layer control."}</p> : null}
       {showContext ? (focusPlace ? (
         <section className="map-context-panel" data-city-people aria-labelledby="map-context-title">
           <div className="map-context-heading">
@@ -424,7 +492,7 @@ export function CivilisationMap({
                       {person.connection === "direct"
                         ? (locale === "zh-CN" ? "直接地点关系" : "Direct place relation")
                         : (locale === "zh-CN" ? "通过事件关联" : "Connected through an event")}
-                      {" · "}{person.relation.evidenceLayer}{" · "}{person.relation.confidence}
+                      {" · "}{formatEvidenceLine(person.relation.evidenceLayer, person.relation.confidence, locale)}
                     </small>
                   </div>
                   <Link to={entityPath("figure", person.figureKey.slice("figure:".length), locale)}>
@@ -447,7 +515,7 @@ export function CivilisationMap({
                   <li key={event.eventKey}>
                     <button type="button" onClick={() => onFocus?.(event.eventKey, null)}>{contextTitle(event.eventKey)}</button>
                     <span>{event.relation.label}</span>
-                    <small>{event.relation.evidenceLayer} · {event.relation.confidence}</small>
+                    <small>{formatEvidenceLine(event.relation.evidenceLayer, event.relation.confidence, locale)}</small>
                   </li>
                 ))}
               </ul>
@@ -462,6 +530,7 @@ export function CivilisationMap({
             compact
             peopleOnly
             scopeKeys={placeFigureKeys}
+            zoomLevel={zoomLevel}
           />
         </section>
       ) : focus?.startsWith("event:") ? (
@@ -483,7 +552,7 @@ export function CivilisationMap({
                     <li key={place.placeKey}>
                       <button type="button" onClick={() => onFocus?.(place.placeKey, null)}>{contextTitle(place.placeKey)}</button>
                       <span>{place.relation.label}</span>
-                      <small>{place.relation.evidenceLayer} · {place.relation.confidence}</small>
+                      <small>{formatEvidenceLine(place.relation.evidenceLayer, place.relation.confidence, locale)}</small>
                     </li>
                   ))}
                 </ul>
@@ -498,14 +567,14 @@ export function CivilisationMap({
                     <li key={person.figureKey}>
                       <button type="button" onClick={() => onFocus?.(person.figureKey)}>{contextTitle(person.figureKey)}</button>
                       <span>{person.relation.label}</span>
-                      <small>{person.relation.evidenceLayer} · {person.relation.confidence}</small>
+                      <small>{formatEvidenceLine(person.relation.evidenceLayer, person.relation.confidence, locale)}</small>
                     </li>
                   ))}
                 </ul>
               ) : <p className="map-context-empty">{locale === "zh-CN" ? "当前事件还没有人物关系。" : "No figure relations are available for this event yet."}</p>}
             </section>
           </div>
-          <RelationNetwork locale={locale} focus={focus} relations={relations} searchItems={searchItems} onFocus={(key) => onFocus?.(key)} compact />
+          <RelationNetwork locale={locale} focus={focus} relations={relations} searchItems={searchItems} onFocus={(key) => onFocus?.(key)} compact zoomLevel={zoomLevel} />
         </section>
       ) : focus?.startsWith("figure:") ? (
         <section className="map-context-panel" data-figure-trajectory aria-labelledby="figure-map-context-title">
@@ -540,6 +609,15 @@ export function CivilisationMap({
               </div>
             </section>
           ) : null}
+          {trajectoryStops.length > 0 ? (
+            <div className="map-trajectory-controls" aria-label={locale === "zh-CN" ? "按顺序查看人物轨迹" : "Step through figure trajectory"}>
+              <span>{locale === "zh-CN" ? `第 ${trajectoryIndex + 1} / ${trajectoryStops.length} 个节点` : `Stop ${trajectoryIndex + 1} of ${trajectoryStops.length}`}</span>
+              <div>
+                <button type="button" disabled={trajectoryIndex <= 0} onClick={() => { const next = Math.max(0, trajectoryIndex - 1); setTrajectoryIndex(next); onFocus?.(featureKey(trajectoryStops[next]), null); }}>{locale === "zh-CN" ? "上一步" : "Previous stop"}</button>
+                <button type="button" disabled={trajectoryIndex >= trajectoryStops.length - 1} onClick={() => { const next = Math.min(trajectoryStops.length - 1, trajectoryIndex + 1); setTrajectoryIndex(next); onFocus?.(featureKey(trajectoryStops[next]), null); }}>{locale === "zh-CN" ? "下一步" : "Next stop"}</button>
+              </div>
+            </div>
+          ) : null}
           <ol className="map-trajectory-list">
             {trajectoryStops.map((feature, index) => (
               <li key={feature.id}>
@@ -548,7 +626,7 @@ export function CivilisationMap({
               </li>
             ))}
           </ol>
-          <RelationNetwork locale={locale} focus={focus} relations={relations} searchItems={searchItems} onFocus={(key) => onFocus?.(key)} compact peopleOnly />
+          <RelationNetwork locale={locale} focus={focus} relations={relations} searchItems={searchItems} onFocus={(key) => onFocus?.(key)} compact peopleOnly zoomLevel={zoomLevel} />
         </section>
       ) : (
         <p className="map-context-hint">

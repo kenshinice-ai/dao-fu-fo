@@ -3,13 +3,16 @@ import { parseRouteState, serializeRouteState } from "./route-state";
 
 describe("route state", () => {
   it("round-trips shareable exploration state", () => {
-    const state = parseRouteState("?lang=en&view=graph&tab=relations&timeline=tradition&mode=research&from=581&to=907&traditions=daoism,buddhism&focus=figure:xuanzang&scope=place:changan&detail=figure:xuanzang&compare=figure:xuanzang,place:changan&graphType=figure-influence&depth=2");
+    const state = parseRouteState("?lang=en&view=graph&tab=relations&timeline=tradition&mode=research&from=581&to=907&traditions=daoism,buddhism&focus=figure:xuanzang&scope=place:changan&detail=figure:xuanzang&compare=figure:xuanzang,place:changan&graphType=figure-influence&depth=2&q=xuanzang&layers=places,trajectories&zoom=figure");
     const roundTrip = parseRouteState(serializeRouteState(state));
     expect(roundTrip).toEqual(state);
     expect(roundTrip.atlasTab).toBe("relations");
     expect(roundTrip.timelineMode).toBe("tradition");
     expect(roundTrip.detail).toBe("figure:xuanzang");
     expect(roundTrip.scope).toBe("place:changan");
+    expect(roundTrip.query).toBe("xuanzang");
+    expect(roundTrip.mapLayers).toEqual(["places", "trajectories"]);
+    expect(roundTrip.zoomLevel).toBe("figure");
   });
 
   it("normalises invalid values without inventing historical year zero", () => {

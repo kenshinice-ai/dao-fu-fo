@@ -9,9 +9,10 @@ import { TraditionMark } from "../components/TraditionMark";
 import { useMuseumContext } from "../context";
 import { staticData } from "../data/staticData";
 import { connectedContextKeys, matchesContextFocus, projectTimelineEvents } from "../data/contextProjection";
+import { formatEvidence } from "../data/labels";
 import { useStaticData } from "../data/useStaticData";
 import { entityPath, parseRouteState, serializeRouteState } from "../routing";
-import type { ExploreView, RouteState, ViewMode } from "../routing";
+import type { ExploreView, RouteState, ViewMode, ZoomLevel } from "../routing";
 import type { ReadModelRelationIndex, ReadModelSacredCosmos } from "@drf-museum/domain-schema";
 import type { EntityData, GraphData, Locale, MuseumMapData, SearchItem, TimelineData, TimelineEvent, Tradition } from "../types";
 
@@ -130,8 +131,8 @@ export function ExplorePage() {
       {routeState.view !== "map" ? <ExploreControls locale={locale} state={routeState} onChange={updateRouteState} /> : null}
       {routeState.view === "map" ? <AtlasWorkspace locale={locale} state={routeState} onChange={updateRouteState} /> : <ContextFocus locale={locale} focus={routeState.focus} data={contextState.data} error={contextState.error} onFocus={(focus) => updateRouteState({ focus })} />}
       {routeState.view === "cosmos" ? <CosmosView locale={locale} traditions={routeState.traditions} focus={routeState.focus} relations={contextState.data?.relations} /> : null}
-      {routeState.view === "timeline" ? <TimelineView locale={locale} traditions={routeState.traditions} from={routeState.from} to={routeState.to} focus={routeState.focus} relations={contextState.data?.relations} searchItems={contextState.data?.search.items ?? []} onFocus={(nextFocus) => updateRouteState({ focus: nextFocus, view: "map", mapLayer: "real" })} /> : null}
-      {routeState.view === "graph" ? <GraphView locale={locale} traditions={routeState.traditions} focus={routeState.focus} relations={contextState.data?.relations} searchItems={contextState.data?.search.items ?? []} onFocus={(nextFocus) => updateRouteState({ focus: nextFocus })} /> : null}
+      {routeState.view === "timeline" ? <TimelineView locale={locale} traditions={routeState.traditions} from={routeState.from} to={routeState.to} focus={routeState.focus} relations={contextState.data?.relations} searchItems={contextState.data?.search.items ?? []} zoomLevel={routeState.zoomLevel} onFocus={(nextFocus) => updateRouteState({ focus: nextFocus, view: "map", mapLayer: "real" })} /> : null}
+      {routeState.view === "graph" ? <GraphView locale={locale} traditions={routeState.traditions} focus={routeState.focus} relations={contextState.data?.relations} searchItems={contextState.data?.search.items ?? []} zoomLevel={routeState.zoomLevel} onFocus={(nextFocus) => updateRouteState({ focus: nextFocus })} /> : null}
     </section>
   );
 }
@@ -189,6 +190,16 @@ function ExploreControls({
         </select>
       </label>
       <TimeRangeControl locale={locale} state={state} onChange={onChange} />
+      <fieldset className="explore-detail-level">
+        <legend className="control-label">{locale === "zh-CN" ? "展开层级" : "Detail level"}</legend>
+        <div className="atlas-zoom-levels" role="group">
+          {(["era", "region", "figure", "all"] as ZoomLevel[]).map((level) => (
+            <button key={level} type="button" className={state.zoomLevel === level ? "active" : ""} aria-pressed={state.zoomLevel === level} onClick={() => onChange({ zoomLevel: level })}>
+              {level === "era" ? (locale === "zh-CN" ? "时代" : "Era") : level === "region" ? (locale === "zh-CN" ? "区域" : "Region") : level === "figure" ? (locale === "zh-CN" ? "人物" : "Figure") : (locale === "zh-CN" ? "全部" : "All")}
+            </button>
+          ))}
+        </div>
+      </fieldset>
       <p className="explore-state-note">
         {locale === "zh-CN"
           ? `可分享状态：${state.mode === "research" ? "研究模式" : "当前筛选"} · ${state.traditions.length} 条传统${state.view === "timeline" ? ` · ${state.from ?? HISTORICAL_TIMELINE_START}—${state.to ?? HISTORICAL_TIMELINE_END}` : ""}`
@@ -410,7 +421,7 @@ function ContextFocus({
                     <div>
                       <strong>{sourceKey === focus ? activeTitle : contextTitle(otherKey, locale, searchMap)} → {sourceKey === focus ? contextTitle(otherKey, locale, searchMap) : activeTitle}</strong>
                       <span>{relation.label}</span>
-                      {relationTime ? <small>{relationTime}</small> : <small>{relation.evidenceLayer}</small>}
+                      {relationTime ? <small>{relationTime}</small> : <small>{formatEvidence(relation.evidenceLayer, locale)}</small>}
                     </div>
                     <div className="context-relation-actions">
                       <button type="button" onClick={() => onFocus(otherKey)}>
@@ -769,12 +780,12 @@ function MapPlate({ data, routes, locale, traditions, focus, relations }: { data
   );
 }
 
-function TimelineView({ locale, traditions, from, to, focus, relations, searchItems, onFocus }: { locale: Locale; traditions: Tradition[]; from?: number; to?: number; focus?: string; relations?: ReadModelRelationIndex; searchItems: SearchItem[]; onFocus: (focus: string) => void }) {
+function TimelineView({ locale, traditions, from, to, focus, relations, searchItems, zoomLevel, onFocus }: { locale: Locale; traditions: Tradition[]; from?: number; to?: number; focus?: string; relations?: ReadModelRelationIndex; searchItems: SearchItem[]; zoomLevel: ZoomLevel; onFocus: (focus: string) => void }) {
   const loader = useCallback((signal: AbortSignal) => staticData.timeline(locale, signal), [locale]);
   const { data, error } = useStaticData(loader);
   if (error) return <ErrorState locale={locale} error={error} />;
   if (!data) return <LoadingState locale={locale} />;
-  return <TimelinePlate data={data} locale={locale} traditions={traditions} from={from} to={to} focus={focus} relations={relations} searchItems={searchItems} onFocus={onFocus} />;
+  return <TimelinePlate data={data} locale={locale} traditions={traditions} from={from} to={to} focus={focus} relations={relations} searchItems={searchItems} zoomLevel={zoomLevel} onFocus={onFocus} />;
 }
 
 function formatTimelineYear(year: number, locale: Locale): string {
@@ -804,7 +815,7 @@ function timelineEventFocus(event: TimelineEvent): string {
       : event.entity ? event.entity.kind + ":" + event.entity.slug : event.kind + ":" + event.slug);
 }
 
-function TimelinePlate({ data, locale, traditions, from, to, focus, relations, searchItems, onFocus }: { data: TimelineData; locale: Locale; traditions: Tradition[]; from?: number; to?: number; focus?: string; relations?: ReadModelRelationIndex; searchItems: SearchItem[]; onFocus: (focus: string) => void }) {
+function TimelinePlate({ data, locale, traditions, from, to, focus, relations, searchItems, zoomLevel, onFocus }: { data: TimelineData; locale: Locale; traditions: Tradition[]; from?: number; to?: number; focus?: string; relations?: ReadModelRelationIndex; searchItems: SearchItem[]; zoomLevel: ZoomLevel; onFocus: (focus: string) => void }) {
   const startYear = from ?? data.startYear;
   const endYear = to ?? data.endYear;
   const projectedEvents = useMemo(() => projectTimelineEvents(data, relations, searchItems, focus), [data, focus, relations, searchItems]);
@@ -812,6 +823,7 @@ function TimelinePlate({ data, locale, traditions, from, to, focus, relations, s
     const eventEnd = event.endYear ?? event.year;
     return eventEnd >= startYear && event.year <= endYear && (event.tradition === "convergence" || traditions.includes(event.tradition));
   });
+  const renderedEvents = zoomLevel === "era" ? visibleEvents.filter((event, index) => index % 3 === 0) : zoomLevel === "region" ? visibleEvents.slice(0, 160) : visibleEvents;
   const connectedKeys = useMemo(() => connectedContextKeys(relations, focus), [focus, relations]);
   const xFor = (year: number) => 55 + ((year - startYear) / Math.max(1, endYear - startYear)) * 870;
   const lanes: Record<Tradition | "convergence", number> = { buddhism: 120, daoism: 220, confucianism: 320, convergence: 420 };
@@ -842,7 +854,7 @@ function TimelinePlate({ data, locale, traditions, from, to, focus, relations, s
               </text>
             </g>
           ))}
-          {visibleEvents.map((event) => {
+            {renderedEvents.map((event) => {
             const position = eventPositions.get(event.id);
             const x = position?.x ?? xFor(Math.max(startYear, event.year));
             const y = position?.y ?? lanes[event.tradition];
@@ -885,7 +897,7 @@ function TimelinePlate({ data, locale, traditions, from, to, focus, relations, s
         <p className="eyebrow">{locale === "zh-CN" ? "事件列表" : "Event list"}</p>
         <h2>{locale === "zh-CN" ? "同一时空，不同节奏" : "One space-time, different rhythms"}</h2>
         <ul className="timeline-list">
-          {visibleEvents.map((event) => (
+          {renderedEvents.map((event) => (
             <li key={event.id}>
               <span className={`timeline-year tradition-border-${event.tradition}`}>{event.displayDate ?? event.year}</span>
               <div>
@@ -901,18 +913,19 @@ function TimelinePlate({ data, locale, traditions, from, to, focus, relations, s
   );
 }
 
-function GraphView({ locale, traditions, focus, relations, searchItems, onFocus }: { locale: Locale; traditions: Tradition[]; focus?: string; relations?: ReadModelRelationIndex; searchItems: SearchItem[]; onFocus: (focus: string) => void }) {
+function GraphView({ locale, traditions, focus, relations, searchItems, zoomLevel, onFocus }: { locale: Locale; traditions: Tradition[]; focus?: string; relations?: ReadModelRelationIndex; searchItems: SearchItem[]; zoomLevel: ZoomLevel; onFocus: (focus: string) => void }) {
   const loader = useCallback((signal: AbortSignal) => staticData.graph(locale, signal), [locale]);
   const { data, error } = useStaticData(loader);
   if (error) return <ErrorState locale={locale} error={error} />;
   if (!data) return <LoadingState locale={locale} />;
-  return <GraphPlate data={data} locale={locale} traditions={traditions} focus={focus} relations={relations} searchItems={searchItems} onFocus={onFocus} />;
+  return <GraphPlate data={data} locale={locale} traditions={traditions} focus={focus} relations={relations} searchItems={searchItems} zoomLevel={zoomLevel} onFocus={onFocus} />;
 }
 
-function GraphPlate({ data, locale, traditions, focus, relations, searchItems, onFocus }: { data: GraphData; locale: Locale; traditions: Tradition[]; focus?: string; relations?: ReadModelRelationIndex; searchItems: SearchItem[]; onFocus: (focus: string) => void }) {
+function GraphPlate({ data, locale, traditions, focus, relations, searchItems, zoomLevel, onFocus }: { data: GraphData; locale: Locale; traditions: Tradition[]; focus?: string; relations?: ReadModelRelationIndex; searchItems: SearchItem[]; zoomLevel: ZoomLevel; onFocus: (focus: string) => void }) {
   const connectedKeys = useMemo(() => connectedContextKeys(relations, focus), [focus, relations]);
   const visibleNodes = data.nodes.filter((node) => {
     if (node.tradition !== "convergence" && !traditions.includes(node.tradition)) return false;
+    if (zoomLevel === "era" && !["tradition", "concept", "school"].includes(node.kind)) return false;
     if (!focus) return true;
     return matchesContextFocus([node.id, `${node.kind}:${node.slug}`], focus, connectedKeys);
   });
@@ -922,7 +935,7 @@ function GraphPlate({ data, locale, traditions, focus, relations, searchItems, o
   return (
     <div className="explore-golden page-shell">
       <div className="graph-canvas">
-        <div className="canvas-title"><span>{data.title}</span><strong>depth 1</strong></div>
+        <div className="canvas-title"><span>{data.title}</span><strong>{locale === "zh-CN" ? `展开层级：${zoomLevel}` : `detail: ${zoomLevel}`}</strong></div>
         <svg viewBox="0 0 980 580" role="group" aria-labelledby="graph-title graph-desc">
           <title id="graph-title">{data.title}</title>
           <desc id="graph-desc">
@@ -959,18 +972,18 @@ function GraphPlate({ data, locale, traditions, focus, relations, searchItems, o
       >
         <p className="eyebrow">{locale === "zh-CN" ? "问题图谱" : "Question graph"}</p>
         <h2>{data.question}</h2>
-        <p>{locale === "zh-CN" ? "图中只显示与当前问题有关的一跳关系；边的颜色不表示真假，证据说明在列表中展开。" : "The graph shows only one-hop relations relevant to this question. Edge colour does not represent truth; evidence is listed below."}</p>
+          <p>{locale === "zh-CN" ? "图中只显示与当前问题有关的一跳关系；边的颜色不表示真假，证据说明在列表中展开。切换展开层级会同步影响地图、时间轴和此处的节点密度。" : "The graph shows only one-hop relations relevant to this question. Edge colour does not represent truth; evidence is listed below. The detail level is shared with the map and timeline."}</p>
         <ul className="relation-list">
           {visibleEdges.map((edge) => (
             <li key={edge.id}>
               <strong>{nodes.get(edge.source)?.label} → {nodes.get(edge.target)?.label}</strong>
               <span>{edge.label}</span>
-              <small>{edge.evidence}</small>
+              <small>{formatEvidence(edge.evidence, locale)}</small>
             </li>
           ))}
         </ul>
         {focus?.startsWith("figure:") ? (
-          <RelationNetwork locale={locale} focus={focus} relations={relations} searchItems={searchItems} onFocus={onFocus} compact peopleOnly />
+          <RelationNetwork locale={locale} focus={focus} relations={relations} searchItems={searchItems} onFocus={onFocus} compact peopleOnly zoomLevel={zoomLevel} />
         ) : null}
       </aside>
     </div>

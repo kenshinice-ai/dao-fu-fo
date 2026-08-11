@@ -4,6 +4,7 @@ import { ErrorState, LoadingState } from "../components/LoadingState";
 import { useMuseumContext } from "../context";
 import { staticData } from "../data/staticData";
 import { useStaticData } from "../data/useStaticData";
+import { formatConfidence, formatEvidence, formatRelationType } from "../data/labels";
 import { entityPath, withLang } from "../routing";
 
 const DEFAULT_READING = "three-traditions-passage-reading";
@@ -58,7 +59,7 @@ export function TextReadingPage() {
             <article className="text-reading-card" key={reading.key}>
               <div className="text-reading-card-topline">
                 <span>{reading.tradition}</span>
-                <span>{reading.evidence.replaceAll("_", " ")}</span>
+                <span>{formatEvidence(reading.evidence, locale)}</span>
               </div>
               <h3><Link to={entityPath("passage", reading.slug, locale)}>{reading.title}</Link></h3>
               {reading.subtitle ? <p className="text-reading-subtitle">{reading.subtitle}</p> : null}
@@ -138,8 +139,8 @@ export function TextReadingPage() {
                       <strong>{cell.value}</strong>
                       {cell.details.length > 0 ? <ul>{cell.details.map((detail) => <li key={detail}>{detail}</li>)}</ul> : null}
                       <div className="text-reading-cell-meta">
-                        <span>{cell.status === "not_recorded" ? (locale === "zh-CN" ? "当前模型未记录" : "Not recorded in this model") : cell.evidenceLayer?.replaceAll("_", " ")}</span>
-                        {cell.confidence ? <span>{cell.confidence}</span> : null}
+                        <span>{cell.status === "not_recorded" ? (locale === "zh-CN" ? "当前模型未记录" : "Not recorded in this model") : formatEvidence(cell.evidenceLayer, locale)}</span>
+                        {cell.confidence ? <span>{formatConfidence(cell.confidence, locale)}</span> : null}
                         <span>{reviewCopy}: {cell.reviewEvidence.filter((item) => !item.blocking).length}/{cell.reviewEvidence.length} {completeCopy}</span>
                       </div>
                       {cell.sourceIds.length > 0 ? <div className="text-reading-cell-sources">{cell.sourceIds.map((sourceId) => <Link key={sourceId} to={`/research?source=${encodeURIComponent(sourceId)}&lang=${encodeURIComponent(locale)}`}>{sourceId}</Link>)}</div> : null}
@@ -172,7 +173,7 @@ export function TextReadingPage() {
         </div>
         {data.contextRelations.length > 0 ? (
           <ul className="text-reading-context-list">
-            {data.contextRelations.map((relation) => <li key={relation.id}><strong>{relation.label}</strong><span>{relation.summary}</span><small>{relation.relationType.replaceAll("_", " ")} · {relation.confidence} · {relation.evidenceLayer.replaceAll("_", " ")}</small><div>{relation.sourceIds.map((sourceId) => <Link key={sourceId} to={`/research?source=${encodeURIComponent(sourceId)}&lang=${encodeURIComponent(locale)}`}>{sourceId}</Link>)}</div></li>)}
+            {data.contextRelations.map((relation) => <li key={relation.id}><strong>{relation.label}</strong><span>{relation.summary}</span><small>{formatRelationType(relation.relationType, locale)} · {formatConfidence(relation.confidence, locale)} · {formatEvidence(relation.evidenceLayer, locale)}</small><div>{relation.sourceIds.map((sourceId) => <Link key={sourceId} to={`/research?source=${encodeURIComponent(sourceId)}&lang=${encodeURIComponent(locale)}`}>{sourceId}</Link>)}</div></li>)}
           </ul>
         ) : <p className="text-reading-empty">{locale === "zh-CN" ? "当前对读集没有额外关系记录。" : "No additional structured relations are recorded for this reading set."}</p>}
       </section>

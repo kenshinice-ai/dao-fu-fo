@@ -4,7 +4,7 @@ import { staticData } from "../data/staticData";
 import { useStaticData } from "../data/useStaticData";
 import { t } from "../i18n";
 import type { Locale } from "../types";
-import { Icon } from "../components/Icon";
+import { GlobalSearch } from "../components/GlobalSearch";
 import { BackToTopButton } from "../components/BackToTopButton";
 import { ErrorState, LoadingState } from "../components/LoadingState";
 import { withLang } from "../routing";
@@ -65,9 +65,7 @@ export function MuseumLayout() {
         </nav>
 
         <div className="header-actions">
-          <Link className="icon-button" to={withLang("/search", locale)} aria-label={t("search", locale)}>
-            <Icon name="search" />
-          </Link>
+          <GlobalSearch locale={locale} />
           <button
             className="language-switch"
             type="button"

@@ -9,9 +9,11 @@ export type {
   ExploreView,
   GraphType,
   MapLayer,
+  MapContentLayer,
   RouteState,
   TimelineMode,
   ViewMode,
+  ZoomLevel,
 } from "@drf-museum/core";
 
 export function withLang(path: string, locale: Locale): string {

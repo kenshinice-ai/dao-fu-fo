@@ -3,6 +3,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import { ErrorState, LoadingState } from "../components/LoadingState";
 import { TraditionMark } from "../components/TraditionMark";
 import { useMuseumContext } from "../context";
+import { formatEntityKind } from "../data/labels";
 import { staticData } from "../data/staticData";
 import { useStaticData } from "../data/useStaticData";
 import { entityPath } from "../routing";
@@ -99,7 +100,7 @@ export function ResearchPage() {
                     <li key={`${item.kind}:${item.slug}`}>
                       <TraditionMark tradition={item.tradition} size="sm" />
                       <div>
-                        <span>{item.kind.replace("_", " ")}</span>
+                        <span>{formatEntityKind(item.kind, locale)}</span>
                         <Link to={entityPath(item.kind as EntityKind, item.slug, locale)}>{item.title}</Link>
                         <p>{item.context}</p>
                       </div>

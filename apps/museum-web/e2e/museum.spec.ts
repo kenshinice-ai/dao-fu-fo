@@ -383,7 +383,7 @@ test("entity dossiers expose historicity, relation qualifiers and source jumps",
   await waitForMuseum(page);
 
   await expect(page.getByText("Historicity", { exact: true })).toBeVisible();
-  await expect(page.locator(".entity-facts").getByText("contested", { exact: true })).toBeVisible();
+  await expect(page.locator(".entity-facts").getByText("Contested", { exact: true })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Places, events, texts and later reception" })).toBeVisible();
   await expect(page.getByText("Remembered through Tang Daoist institutions", { exact: true })).toBeVisible();
 

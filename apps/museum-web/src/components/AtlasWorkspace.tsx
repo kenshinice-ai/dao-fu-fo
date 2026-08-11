@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { Link } from "react-router-dom";
 import type { ReadModelRelation, ReadModelRelationIndex } from "@drf-museum/domain-schema";
-import type { AtlasTab, RouteState, TimelineMode } from "../routing";
+import type { AtlasTab, MapContentLayer, RouteState, TimelineMode, ZoomLevel } from "../routing";
 import { entityPath, withLang } from "../routing";
 import { staticData } from "../data/staticData";
 import { useStaticData } from "../data/useStaticData";
@@ -11,6 +11,7 @@ import { ErrorState, LoadingState } from "./LoadingState";
 import { Icon } from "./Icon";
 import { RelationNetwork } from "./RelationNetwork";
 import { ERA_CONTEXTS } from "../data/eraContexts";
+import { formatConfidence, formatEntityKind, formatEvidence, formatEvidenceLine, formatRelationType } from "../data/labels";
 import type { EntityData, EntityKind, Locale, MapContextData, SearchItem, TimelineData, TimelineEvent, Tradition } from "../types";
 
 interface AtlasData extends MapContextData {
@@ -45,6 +46,15 @@ const TAB_DEFINITIONS: Record<AtlasTab, TabDefinition> = {
 };
 
 const TAB_ORDER: AtlasTab[] = ["figures", "events", "places", "routes", "texts", "sayings", "relations"];
+
+const ZOOM_LEVELS: { id: ZoomLevel; zh: string; en: string; noteZh: string; noteEn: string }[] = [
+  { id: "era", zh: "时代", en: "Era", noteZh: "聚合密度", noteEn: "Density" },
+  { id: "region", zh: "区域", en: "Region", noteZh: "区域节点", noteEn: "Regions" },
+  { id: "figure", zh: "人物", en: "Figure", noteZh: "焦点关系", noteEn: "Focus" },
+  { id: "all", zh: "全部", en: "All", noteZh: "展开对象", noteEn: "Expanded" },
+];
+
+type MobileAtlasPanel = "map" | "timeline" | "objects";
 
 const TRADITIONS: { slug: Tradition; zh: string; en: string }[] = [
   { slug: "daoism", zh: "道", en: "Dao" },
@@ -141,6 +151,34 @@ function sampleTimelineEvents(events: TimelineEvent[], limit = 24): TimelineEven
   return Array.from({ length: limit }, (_, index) => events[Math.round((index * (events.length - 1)) / (limit - 1))]);
 }
 
+interface TimelineDensityBin {
+  start: number;
+  end: number;
+  count: number;
+  events: TimelineEvent[];
+}
+
+function timelineDensityBins(events: TimelineEvent[], start: number, end: number, count = 12): TimelineDensityBin[] {
+  if (end <= start) return [{ start, end, count: events.length, events }];
+  const span = end - start;
+  const bins = Array.from({ length: count }, (_, index) => {
+    const binStart = start + (span * index) / count;
+    const binEnd = index === count - 1 ? end : start + (span * (index + 1)) / count;
+    return { start: binStart, end: binEnd, count: 0, events: [] as TimelineEvent[] };
+  });
+  for (const event of events) {
+    const index = Math.min(count - 1, Math.max(0, Math.floor(((event.year - start) / span) * count)));
+    bins[index].count += 1;
+    bins[index].events.push(event);
+  }
+  return bins;
+}
+
+function timelinePercent(year: number, start: number, end: number): number {
+  if (end <= start) return 50;
+  return Math.max(0, Math.min(100, ((year - start) / (end - start)) * 100));
+}
+
 function useAtlasData(locale: Locale) {
   const loader = useCallback(async (signal: AbortSignal): Promise<AtlasData> => {
     const [mapContext, relations, timeline] = await Promise.all([
@@ -155,13 +193,54 @@ function useAtlasData(locale: Locale) {
 
 export function AtlasWorkspace({ locale, state, onChange, className = "", heading, description, compact = false }: AtlasWorkspaceProps) {
   const { data, error } = useAtlasData(locale);
-  const [query, setQuery] = useState("");
   const [shareStatus, setShareStatus] = useState<"idle" | "copied" | "failed">("idle");
+  const [mobilePanel, setMobilePanel] = useState<MobileAtlasPanel>("map");
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [playbackYear, setPlaybackYear] = useState<number | undefined>(undefined);
+  const onChangeRef = useRef(onChange);
+  onChangeRef.current = onChange;
+  const query = state.query ?? "";
+
+  const stopPlayback = useCallback(() => {
+    setIsPlaying(false);
+    setPlaybackYear(undefined);
+  }, []);
+
+  const updateState = useCallback((changes: Partial<RouteState>) => {
+    stopPlayback();
+    onChange(changes);
+  }, [onChange, stopPlayback]);
+
+  useEffect(() => {
+    if (!isPlaying || !data) return;
+    const start = state.from ?? data.timeline.startYear;
+    const end = state.to ?? data.timeline.endYear;
+    const step = Math.max(1, Math.ceil((end - start) / 28));
+    setPlaybackYear(start);
+    const timer = window.setInterval(() => {
+      setPlaybackYear((current) => {
+        const next = Math.min(end, (current ?? start) + step);
+        if (next >= end) {
+          window.setTimeout(() => {
+            setIsPlaying(false);
+            setPlaybackYear(undefined);
+            onChangeRef.current({ to: end });
+          }, 0);
+        }
+        return next;
+      });
+    }, 420);
+    return () => window.clearInterval(timer);
+  }, [data, isPlaying, state.from, state.to]);
 
   const searchMap = useMemo(() => new Map((data?.searchItems ?? []).map((item) => [keyFor(item.kind, item.slug), item.title])), [data?.searchItems]);
   const focusTitle = titleFor(state.focus, data?.searchItems ?? [], locale);
   const scopeKey = scopeKeyForState(state);
   const eraContext = ERA_CONTEXTS[eraIdForState(state)] ?? ERA_CONTEXTS.all;
+  const effectiveState = useMemo(() => {
+    if (playbackYear === undefined || !data) return state;
+    return { ...state, from: state.from ?? data.timeline.startYear, to: playbackYear };
+  }, [data, playbackYear, state]);
 
   const scopedFigureKeys = useMemo(() => {
     if (!data || !scopeKey?.startsWith("place:")) return undefined;
@@ -228,10 +307,17 @@ export function AtlasWorkspace({ locale, state, onChange, className = "", headin
     return counts;
   }, [data]);
 
-  const setFocus = (focus: string) => onChange({ focus, detail: undefined, view: "map", mapLayer: "real" });
-  const setMapFocus = (focus: string, scope?: string | null) => onChange({ focus, scope: scope === null ? undefined : scope ?? state.scope, detail: undefined, atlasTab: tabForFocus(focus, state.atlasTab), view: "map", mapLayer: "real" });
-  const openDetail = (detail: string) => onChange({ focus: detail.startsWith("relation:") ? state.focus : detail, detail, view: "map", mapLayer: "real" });
-  const clearFocus = () => onChange({ focus: undefined, scope: undefined, detail: undefined });
+  const setFocus = (focus: string) => updateState({ focus, detail: undefined, view: "map", mapLayer: "real" });
+  const setMapFocus = (focus: string, scope?: string | null) => updateState({ focus, scope: scope === null ? undefined : scope ?? state.scope, detail: undefined, atlasTab: tabForFocus(focus, state.atlasTab), view: "map", mapLayer: "real" });
+  const openDetail = (detail: string) => updateState({ focus: detail.startsWith("relation:") ? state.focus : detail, detail, view: "map", mapLayer: "real" });
+  const clearFocus = () => updateState({ focus: undefined, scope: undefined, detail: undefined });
+
+  const detailCandidates = useMemo(
+    () => state.atlasTab === "relations"
+      ? relationItems.map((relation) => relationDetailKey(relation.id))
+      : filteredItems.map((item) => keyFor(item.kind, item.slug)),
+    [filteredItems, relationItems, state.atlasTab],
+  );
 
   const shareState = async () => {
     try {
@@ -247,7 +333,7 @@ export function AtlasWorkspace({ locale, state, onChange, className = "", headin
   if (!data) return <LoadingState locale={locale} />;
 
   return (
-    <section className={`atlas-workspace ${compact ? "is-compact" : ""} ${className}`.trim()} aria-labelledby="atlas-workspace-title">
+    <section className={`atlas-workspace ${compact ? "is-compact" : ""} ${className}`.trim()} aria-labelledby="atlas-workspace-title" data-mobile-panel={mobilePanel} data-atlas-zoom={state.zoomLevel}>
       <header className="atlas-workspace-heading">
         <div>
           <p className="eyebrow">Atlas / {locale === "zh-CN" ? "全历史时空" : "Full historical space-time"}</p>
@@ -287,7 +373,7 @@ export function AtlasWorkspace({ locale, state, onChange, className = "", headin
               aria-pressed={active}
               onClick={() => {
                 const next = active ? state.traditions.filter((item) => item !== tradition.slug) : [...state.traditions, tradition.slug];
-                if (next.length > 0) onChange({ traditions: next });
+                if (next.length > 0) updateState({ traditions: next });
               }}
             >
               {locale === "zh-CN" ? tradition.zh : tradition.en}
@@ -301,12 +387,36 @@ export function AtlasWorkspace({ locale, state, onChange, className = "", headin
         {ERA_PRESETS.map((era) => {
           const active = (state.from ?? undefined) === era.from && (state.to ?? undefined) === era.to;
           return (
-            <button className={`atlas-era-chip ${active ? "active" : ""}`} key={era.id} type="button" aria-pressed={active} onClick={() => onChange({ from: era.from, to: era.to })}>
+            <button className={`atlas-era-chip ${active ? "active" : ""}`} key={era.id} type="button" aria-pressed={active} onClick={() => updateState({ from: era.from, to: era.to })}>
               {locale === "zh-CN" ? era.zh : era.en}
             </button>
           );
         })}
       </div>
+
+      <div className="atlas-zoom-bar" aria-label={locale === "zh-CN" ? "可视化展开层级" : "Visualization detail level"}>
+        <span className="control-label">{locale === "zh-CN" ? "展开层级" : "Detail level"}</span>
+        <div className="atlas-zoom-levels" role="group">
+          {ZOOM_LEVELS.map((level) => (
+            <button
+              type="button"
+              key={level.id}
+              className={state.zoomLevel === level.id ? "active" : ""}
+              aria-pressed={state.zoomLevel === level.id}
+              onClick={() => updateState({ zoomLevel: level.id })}
+            >
+              <span>{locale === "zh-CN" ? level.zh : level.en}</span>
+              <small>{locale === "zh-CN" ? level.noteZh : level.noteEn}</small>
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <nav className="atlas-mobile-view-controls" aria-label={locale === "zh-CN" ? "移动端探索面板" : "Mobile atlas panels"}>
+        <button type="button" className={mobilePanel === "map" ? "active" : ""} aria-pressed={mobilePanel === "map"} onClick={() => setMobilePanel("map")}>{locale === "zh-CN" ? "地图" : "Map"}</button>
+        <button type="button" className={mobilePanel === "timeline" ? "active" : ""} aria-pressed={mobilePanel === "timeline"} onClick={() => setMobilePanel("timeline")}>{locale === "zh-CN" ? "时间" : "Time"}</button>
+        <button type="button" className={mobilePanel === "objects" ? "active" : ""} aria-pressed={mobilePanel === "objects"} onClick={() => setMobilePanel("objects")}>{locale === "zh-CN" ? "对象" : "Objects"}</button>
+      </nav>
 
       <section className={`atlas-era-context atlas-era-context-${eraContext.tone}`} data-era-context data-era-context-id={eraIdForState(state)} aria-live="polite">
         <div className="atlas-era-context-heading">
@@ -330,10 +440,13 @@ export function AtlasWorkspace({ locale, state, onChange, className = "", headin
             data={data.map}
             routes={data.routes}
             locale={locale}
-            traditions={state.traditions}
-            from={state.from}
-            to={state.to}
-            focus={state.focus}
+            traditions={effectiveState.traditions}
+            from={effectiveState.from}
+            to={effectiveState.to}
+            focus={effectiveState.focus}
+            mapLayers={state.mapLayers}
+            zoomLevel={state.zoomLevel}
+            onMapLayersChange={(mapLayers) => updateState({ mapLayers })}
             relations={data.relations}
             searchItems={data.searchItems}
             onFocus={setMapFocus}
@@ -341,22 +454,24 @@ export function AtlasWorkspace({ locale, state, onChange, className = "", headin
             showIndex={false}
             showRouteLedger={false}
           />
-          <AtlasTimelineRail locale={locale} data={data.timeline} relations={data.relations} searchItems={data.searchItems} state={state} onChange={onChange} />
+          <AtlasTimelineRail locale={locale} data={data.timeline} relations={data.relations} searchItems={data.searchItems} state={effectiveState} onChange={updateState} isPlaying={isPlaying} playbackYear={playbackYear} onTogglePlayback={() => setIsPlaying((playing) => !playing)} />
         </div>
         <AtlasObjectPanel
           locale={locale}
           state={state}
           data={data}
           query={query}
-          onQuery={setQuery}
+          onQuery={(value) => updateState({ query: value.trim() || undefined })}
           items={filteredItems}
           relationItems={relationItems}
           tabCounts={tabCounts}
-          onChange={onChange}
+          onChange={updateState}
           onFocus={setFocus}
           onOpenDetail={openDetail}
         />
       </div>
+
+      <AtlasDataNotes locale={locale} data={data} state={state} />
 
       {state.detail ? (
         <AtlasDetailDrawer
@@ -364,8 +479,11 @@ export function AtlasWorkspace({ locale, state, onChange, className = "", headin
           detailKey={state.detail}
           relations={data.relations}
           searchItems={data.searchItems}
-          onClose={() => onChange({ detail: undefined })}
+          onClose={() => updateState({ detail: undefined })}
           onFocus={setFocus}
+          onOpenDetail={openDetail}
+          adjacentKeys={detailCandidates}
+          zoomLevel={state.zoomLevel}
         />
       ) : null}
     </section>
@@ -398,7 +516,14 @@ function AtlasObjectPanel({
   onOpenDetail: (key: string) => void;
 }) {
   const titleMap = new Map(data.searchItems.map((item) => [keyFor(item.kind, item.slug), item.title]));
-  const visibleItems = items.slice(0, 80);
+  const [visibleCount, setVisibleCount] = useState(80);
+  useEffect(() => {
+    setVisibleCount(80);
+  }, [query, state.atlasTab, state.scope, state.traditions.join(",")]);
+  const visibleItems = items.slice(0, visibleCount);
+  const visibleRelations = relationItems.slice(0, visibleCount);
+  const totalResults = state.atlasTab === "relations" ? relationItems.length : items.length;
+  const shownResults = state.atlasTab === "relations" ? visibleRelations.length : visibleItems.length;
   const scopeKey = scopeKeyForState(state);
   const scopeTitle = scopeKey ? titleMap.get(scopeKey) : undefined;
   const scopeLabel = scopeLabelFor(state, locale);
@@ -415,7 +540,7 @@ function AtlasObjectPanel({
       <div className="atlas-panel-toolbar">
         <label className="sr-only" htmlFor="atlas-object-search">{locale === "zh-CN" ? "搜索地图对象" : "Search atlas entities"}</label>
         <input id="atlas-object-search" type="search" value={query} onChange={(event) => onQuery(event.target.value)} placeholder={locale === "zh-CN" ? "搜索人物、事件、地点……" : "Search figures, events, places…"} />
-        <span>{state.atlasTab === "relations" ? relationItems.length : items.length} {locale === "zh-CN" ? "项" : "items"}</span>
+        <span>{shownResults === totalResults ? totalResults : `${shownResults} / ${totalResults}`} {locale === "zh-CN" ? "项" : "items"}</span>
       </div>
       {scopeLabel && scopeTitle ? (
         <div className="atlas-panel-scope-note" data-atlas-scope-note>
@@ -426,7 +551,7 @@ function AtlasObjectPanel({
         </div>
       ) : null}
       <div className="atlas-object-list" aria-live="polite">
-        {state.atlasTab === "relations" ? relationItems.slice(0, 80).map((relation) => {
+        {state.atlasTab === "relations" ? visibleRelations.map((relation) => {
           const sourceKey = contextEndpointKey(relation.source);
           const targetKey = contextEndpointKey(relation.target);
           const detailKey = relationDetailKey(relation.id);
@@ -435,7 +560,7 @@ function AtlasObjectPanel({
               <button type="button" className="atlas-object-card-main" onClick={() => onFocus(sourceKey)} aria-pressed={state.focus === sourceKey}>
                 <strong>{titleMap.get(sourceKey) ?? sourceKey} <span aria-hidden="true">↔</span> {titleMap.get(targetKey) ?? targetKey}</strong>
                 <span>{relation.label}</span>
-                <small>{relation.temporalAssertions.map((assertion) => assertion.displayDate).join(" · ") || relation.evidenceLayer} · {relation.confidence}</small>
+                <small>{relation.temporalAssertions.map((assertion) => assertion.displayDate).join(" · ") || formatEvidence(relation.evidenceLayer, locale)} · {formatConfidence(relation.confidence, locale)}</small>
               </button>
               <button className="atlas-object-card-detail" type="button" onClick={() => onOpenDetail(detailKey)}>{locale === "zh-CN" ? "查看关系" : "Inspect relation"}</button>
             </article>
@@ -447,20 +572,48 @@ function AtlasObjectPanel({
               <button type="button" className="atlas-object-card-main" onClick={() => onFocus(key)} aria-pressed={state.focus === key}>
                 <strong>{item.title}</strong>
                 <span>{item.context}</span>
-                <small>{kindLabel(item.kind, locale)} · {item.tradition === "convergence" ? (locale === "zh-CN" ? "交汇" : "Convergence") : item.tradition}</small>
+                <small>{formatEntityKind(item.kind, locale)} · {item.tradition === "convergence" ? (locale === "zh-CN" ? "交汇" : "Convergence") : item.tradition}</small>
               </button>
               <button className="atlas-object-card-detail" type="button" onClick={() => onOpenDetail(key)}>{locale === "zh-CN" ? "详情" : "Inspect"}</button>
             </article>
           );
         })}
         {((state.atlasTab === "relations" && relationItems.length === 0) || (state.atlasTab !== "relations" && items.length === 0)) ? <p className="atlas-empty-state">{locale === "zh-CN" ? "当前筛选下没有可展开对象。" : "No entities match the current filters."}</p> : null}
-        {((state.atlasTab === "relations" ? relationItems.length : items.length) > 80) ? <p className="atlas-list-note">{locale === "zh-CN" ? "列表已先显示 80 项，请使用搜索继续缩小范围。" : "Showing the first 80 items; use search to narrow the list."}</p> : null}
+        {shownResults < totalResults ? (
+          <div className="atlas-list-more">
+            <p className="atlas-list-note">{locale === "zh-CN" ? `已显示 ${shownResults} / ${totalResults} 项；继续展开或使用搜索缩小范围。` : `Showing ${shownResults} of ${totalResults}; expand or narrow the search.`}</p>
+            <button type="button" className="button button-secondary" onClick={() => setVisibleCount((count) => Math.min(totalResults, count + 80))}>
+              {locale === "zh-CN" ? (shownResults + 80 >= totalResults ? "显示全部" : "显示更多") : (shownResults + 80 >= totalResults ? "Show all" : "Show more")}
+            </button>
+          </div>
+        ) : null}
       </div>
     </aside>
   );
 }
 
-function AtlasTimelineRail({ locale, data, relations, searchItems, state, onChange }: { locale: Locale; data: TimelineData; relations: ReadModelRelationIndex; searchItems: SearchItem[]; state: RouteState; onChange: (changes: Partial<RouteState>) => void }) {
+function AtlasTimelineRail({
+  locale,
+  data,
+  relations,
+  searchItems,
+  state,
+  onChange,
+  isPlaying,
+  playbackYear,
+  onTogglePlayback,
+}: {
+  locale: Locale;
+  data: TimelineData;
+  relations: ReadModelRelationIndex;
+  searchItems: SearchItem[];
+  state: RouteState;
+  onChange: (changes: Partial<RouteState>) => void;
+  isPlaying: boolean;
+  playbackYear?: number;
+  onTogglePlayback: () => void;
+}) {
+  const [eventLimit, setEventLimit] = useState(12);
   const projected = useMemo(() => projectTimelineEvents(data, relations, searchItems, state.focus), [data, relations, searchItems, state.focus]);
   const modeEvents = state.timelineMode === "tradition"
     ? projected.filter((event) => event.evidenceLayer === "traditional_account" || event.evidenceLayer === "mythic_symbolic" || event.type.toLowerCase().includes("traditional"))
@@ -470,21 +623,31 @@ function AtlasTimelineRail({ locale, data, relations, searchItems, state, onChan
     return end >= (state.from ?? data.startYear) && event.year <= (state.to ?? data.endYear)
       && (event.tradition === "convergence" || state.traditions.includes(event.tradition));
   });
-  const shown = events.slice(0, 12);
   const start = state.from ?? data.startYear;
   const end = state.to ?? data.endYear;
-  const trackEvents = sampleTimelineEvents(events);
+  const shown = events.slice(0, eventLimit);
+  const undated = projected.filter((event) => !Number.isSafeInteger(event.year));
+  const densityBins = useMemo(() => timelineDensityBins(events, start, end), [end, events, start]);
+  const trackEvents = state.zoomLevel === "era" ? [] : sampleTimelineEvents(events, state.zoomLevel === "all" ? 36 : state.zoomLevel === "figure" ? 28 : 20);
   const trackTicks = Array.from({ length: 5 }, (_, index) => start + ((end - start) * index) / 4);
+  useEffect(() => setEventLimit(12), [state.atlasTab, state.focus, state.from, state.to, state.timelineMode, state.traditions.join(","), state.zoomLevel]);
   const focusTimelineEvent = (event: TimelineEvent) => {
     const focus = eventFocus(event);
     onChange({ focus, scope: undefined, atlasTab: tabForFocus(focus, state.atlasTab), detail: undefined, view: "map", mapLayer: "real" });
+  };
+  const rangeBoundary = (year: number): number => year === 0 ? (year < start ? -1 : 1) : Math.round(year);
+  const selectDensityBin = (bin: TimelineDensityBin) => {
+    const nextStart = rangeBoundary(bin.start);
+    const nextEnd = rangeBoundary(bin.end);
+    if (nextStart === nextEnd) return;
+    onChange({ from: nextStart, to: nextEnd });
   };
   return (
     <section className="atlas-timeline-rail" aria-labelledby="atlas-timeline-title" data-atlas-timeline>
       <div className="atlas-timeline-heading">
         <div>
           <p className="eyebrow">{locale === "zh-CN" ? "时间轴" : "Timeline"}</p>
-          <h3 id="atlas-timeline-title">{formatYear(start, locale)} — {formatYear(end, locale)}</h3>
+          <h3 id="atlas-timeline-title">{formatYear(start, locale)} — {formatYear(end, locale)}{playbackYear !== undefined ? ` · ${locale === "zh-CN" ? "播放至" : "playing to"} ${formatYear(playbackYear, locale)}` : ""}</h3>
         </div>
         <span>{events.length} / {projected.length} {locale === "zh-CN" ? "事件" : "events"}</span>
       </div>
@@ -497,15 +660,44 @@ function AtlasTimelineRail({ locale, data, relations, searchItems, state, onChan
           ))}
         </div>
         <div className="atlas-time-inputs">
-          <label><span className="sr-only">{locale === "zh-CN" ? "起始年份" : "Start year"}</span><input type="number" value={start} aria-label={locale === "zh-CN" ? "时间轴起始年份" : "Timeline start year"} onChange={(event) => { const next = Number(event.target.value); if (Number.isSafeInteger(next) && next !== 0) onChange({ from: next, to: Math.max(next, end) }); }} /></label>
+          <label><span className="sr-only">{locale === "zh-CN" ? "起始年份" : "Start year"}</span><input type="number" value={start} min={data.startYear} max={data.endYear} aria-label={locale === "zh-CN" ? "时间轴起始年份" : "Timeline start year"} onChange={(event) => { const next = Number(event.target.value); if (Number.isSafeInteger(next) && next !== 0) onChange({ from: next, to: Math.max(next, end) }); }} /></label>
           <span aria-hidden="true">—</span>
-          <label><span className="sr-only">{locale === "zh-CN" ? "结束年份" : "End year"}</span><input type="number" value={end} aria-label={locale === "zh-CN" ? "时间轴结束年份" : "Timeline end year"} onChange={(event) => { const next = Number(event.target.value); if (Number.isSafeInteger(next) && next !== 0) onChange({ from: Math.min(start, next), to: next }); }} /></label>
+          <label><span className="sr-only">{locale === "zh-CN" ? "结束年份" : "End year"}</span><input type="number" value={end} min={data.startYear} max={data.endYear} aria-label={locale === "zh-CN" ? "时间轴结束年份" : "Timeline end year"} onChange={(event) => { const next = Number(event.target.value); if (Number.isSafeInteger(next) && next !== 0) onChange({ from: Math.min(start, next), to: next }); }} /></label>
           {(state.from !== undefined || state.to !== undefined) ? <button type="button" onClick={() => onChange({ from: undefined, to: undefined })}>{locale === "zh-CN" ? "全段" : "Full"}</button> : null}
+          <button type="button" className={isPlaying ? "is-playing" : ""} onClick={onTogglePlayback} aria-pressed={isPlaying}>
+            {isPlaying ? (locale === "zh-CN" ? "暂停" : "Pause") : (locale === "zh-CN" ? "播放" : "Play")}
+          </button>
         </div>
+      </div>
+      <div className="atlas-timeline-range" aria-label={locale === "zh-CN" ? "拖动选择时间范围" : "Drag to select a time range"}>
+        <label>
+          <span>{locale === "zh-CN" ? "范围起点" : "Range start"}</span>
+          <input type="range" min={data.startYear} max={data.endYear} value={start} onChange={(event) => { const next = Number(event.target.value); if (next !== 0) onChange({ from: next, to: Math.max(next, end) }); }} />
+        </label>
+        <label>
+          <span>{locale === "zh-CN" ? "范围终点" : "Range end"}</span>
+          <input type="range" min={data.startYear} max={data.endYear} value={end} onChange={(event) => { const next = Number(event.target.value); if (next !== 0) onChange({ from: Math.min(start, next), to: next }); }} />
+        </label>
       </div>
       <div className="atlas-timeline-track-wrap" aria-label={locale === "zh-CN" ? "可点击时间轴" : "Interactive chronology"}>
         <div className="atlas-timeline-track" data-timeline-track role="group" aria-label={locale === "zh-CN" ? "时间轴事件节点" : "Timeline event nodes"}>
           <span className="atlas-timeline-track-line" aria-hidden="true" />
+          {ERA_PRESETS.filter((era) => era.id !== "all" && era.from !== undefined || era.to !== undefined).map((era) => {
+            const bandStart = Math.max(start, era.from ?? start);
+            const bandEnd = Math.min(end, era.to ?? end);
+            if (bandEnd <= bandStart) return null;
+            return <span className={`atlas-timeline-era-band atlas-era-band-${era.id}`} key={era.id} style={{ left: `${timelinePercent(bandStart, start, end)}%`, width: `${Math.max(1, timelinePercent(bandEnd, start, end) - timelinePercent(bandStart, start, end))}%` }} aria-hidden="true" />;
+          })}
+          {densityBins.map((bin, index) => (
+            <button
+              type="button"
+              className={`atlas-timeline-density-bin ${bin.count > 0 ? "has-events" : ""}`}
+              key={`${bin.start}-${index}`}
+              style={{ left: `${timelinePercent(bin.start, start, end)}%`, width: `${Math.max(1, timelinePercent(bin.end, start, end) - timelinePercent(bin.start, start, end))}%`, height: `${Math.min(88, 18 + bin.count * 8)}%` }}
+              aria-label={locale === "zh-CN" ? `${formatYear(Math.round(bin.start), locale)} 至 ${formatYear(Math.round(bin.end), locale)}：${bin.count} 个事件` : `${formatYear(Math.round(bin.start), locale)} to ${formatYear(Math.round(bin.end), locale)}: ${bin.count} events`}
+              onClick={() => bin.count > 0 && selectDensityBin(bin)}
+            />
+          ))}
           {trackTicks.map((tick, index) => (
             <span className="atlas-timeline-tick" style={{ left: `${(index / 4) * 100}%` }} key={index}>
               <i aria-hidden="true" />
@@ -541,12 +733,38 @@ function AtlasTimelineRail({ locale, data, relations, searchItems, state, onChan
         })}
         {shown.length === 0 ? <p className="atlas-empty-state">{locale === "zh-CN" ? "此时间范围暂无事件。" : "No events in this time range."}</p> : null}
       </div>
-      {events.length > shown.length ? <p className="atlas-list-note">{locale === "zh-CN" ? `显示前 ${shown.length} 项；点击对象或缩小时间范围继续探索。` : `Showing the first ${shown.length}; select an entity or narrow the time range to continue.`}</p> : null}
+      {events.length > shown.length ? <div className="atlas-list-more"><p className="atlas-list-note">{locale === "zh-CN" ? `显示 ${shown.length} / ${events.length} 项；密度柱可快速缩小范围。` : `Showing ${shown.length} of ${events.length}; density bins narrow the range.`}</p><button type="button" className="button button-secondary" onClick={() => setEventLimit(events.length)}>{locale === "zh-CN" ? "显示全部事件" : "Show all events"}</button></div> : null}
+      {undated.length > 0 ? <details className="atlas-undated-events"><summary>{locale === "zh-CN" ? `未定年 · ${undated.length}` : `Undated · ${undated.length}`}</summary><ul>{undated.map((event) => <li key={event.id}><button type="button" onClick={() => focusTimelineEvent(event)}>{event.title}</button></li>)}</ul></details> : null}
     </section>
   );
 }
 
-function AtlasDetailDrawer({ locale, detailKey, relations, searchItems, onClose, onFocus }: { locale: Locale; detailKey: string; relations: ReadModelRelationIndex; searchItems: SearchItem[]; onClose: () => void; onFocus: (key: string) => void }) {
+function AtlasDataNotes({ locale, data, state }: { locale: Locale; data: AtlasData; state: RouteState }) {
+  const visibleLayers = state.mapLayers.length > 0 ? state.mapLayers.join(locale === "zh-CN" ? "、" : ", ") : (locale === "zh-CN" ? "已隐藏全部地图图层" : "All map layers hidden");
+  return (
+    <section className="atlas-data-notes" aria-labelledby="atlas-data-notes-title">
+      <div>
+        <p className="eyebrow">{locale === "zh-CN" ? "当前视图的数据说明" : "Data notes for this view"}</p>
+        <h3 id="atlas-data-notes-title">{locale === "zh-CN" ? "地图、时间与关系使用同一份可追溯读模型" : "Map, time and relations share one traceable read model"}</h3>
+      </div>
+      <p>{locale === "zh-CN"
+        ? `当前显示 ${data.map.features.length} 个现实地点、${data.routes.length} 条路线和 ${data.timeline.events.length} 个时间事件；图层：${visibleLayers}。年代、坐标和关系置信度会在对象详情中保留，不确定位置不会被绘制成确定事实。`
+        : `${data.map.features.length} real places, ${data.routes.length} routes and ${data.timeline.events.length} timeline events are available; layers: ${visibleLayers}. Date, coordinate and relation confidence remain visible in each dossier, and pending positions are not drawn as facts.`}</p>
+      <details>
+        <summary>{locale === "zh-CN" ? "查看证据图例" : "Open evidence legend"}</summary>
+        <ul>
+          <li><strong>{locale === "zh-CN" ? "有文献依据" : "Documented history"}</strong><span>{locale === "zh-CN" ? "可以回到来源或明确记录。" : "Can be traced to a source or explicit record."}</span></li>
+          <li><strong>{locale === "zh-CN" ? "历史推定" : "Historical inference"}</strong><span>{locale === "zh-CN" ? "由多个线索或空间关系推得。" : "Inferred from multiple clues or spatial relations."}</span></li>
+          <li><strong>{locale === "zh-CN" ? "传统／象征" : "Traditional or symbolic"}</strong><span>{locale === "zh-CN" ? "保留为传统叙事，不等同现实坐标。" : "Kept as tradition, not equated with a real coordinate."}</span></li>
+          <li><strong>{locale === "zh-CN" ? "虚线与半透明" : "Dashed and translucent"}</strong><span>{locale === "zh-CN" ? "表示路线或位置仍待核，不是视觉装饰。" : "Mark routes or positions that remain unresolved."}</span></li>
+        </ul>
+      </details>
+      <Link className="text-link" to={withLang("/research", locale)}>{locale === "zh-CN" ? "进入完整来源与审核" : "Open full sources and review"} <Icon name="arrow" /></Link>
+    </section>
+  );
+}
+
+function AtlasDetailDrawer({ locale, detailKey, relations, searchItems, onClose, onFocus, onOpenDetail, adjacentKeys, zoomLevel }: { locale: Locale; detailKey: string; relations: ReadModelRelationIndex; searchItems: SearchItem[]; onClose: () => void; onFocus: (key: string) => void; onOpenDetail: (key: string) => void; adjacentKeys: string[]; zoomLevel: ZoomLevel }) {
   const closeRef = useRef<HTMLButtonElement>(null);
   const drawerRef = useRef<HTMLElement>(null);
   const previousFocus = useRef<Element | null>(null);
@@ -557,6 +775,7 @@ function AtlasDetailDrawer({ locale, detailKey, relations, searchItems, onClose,
   const loadEntity = useCallback((signal: AbortSignal) => kind && slug ? staticData.entity(kind as EntityKind, slug, locale, signal) : Promise.resolve(null), [kind, locale, slug]);
   const { data, error } = useStaticData(loadEntity);
   const searchMap = useMemo(() => new Map(searchItems.map((item) => [keyFor(item.kind, item.slug), item.title])), [searchItems]);
+  const adjacentIndex = adjacentKeys.indexOf(detailKey);
 
   useEffect(() => {
     onCloseRef.current = onClose;
@@ -601,10 +820,19 @@ function AtlasDetailDrawer({ locale, detailKey, relations, searchItems, onClose,
           <p className="eyebrow">{relation ? (locale === "zh-CN" ? "人物关系" : "Person relation") : (locale === "zh-CN" ? "对象档案" : "Entity dossier")}</p>
           <button ref={closeRef} className="icon-button" type="button" onClick={onClose} aria-label={locale === "zh-CN" ? "关闭详情" : "Close detail"}><Icon name="close" /></button>
         </div>
+        {adjacentKeys.length > 1 ? (
+          <nav className="atlas-drawer-traversal" aria-label={locale === "zh-CN" ? "在当前结果中浏览" : "Browse current results"}>
+            <span>{locale === "zh-CN" ? `${adjacentIndex + 1} / ${adjacentKeys.length}` : `${adjacentIndex + 1} / ${adjacentKeys.length}`}</span>
+            <div>
+              <button type="button" disabled={adjacentIndex <= 0} onClick={() => adjacentIndex > 0 && onOpenDetail(adjacentKeys[adjacentIndex - 1])}>{locale === "zh-CN" ? "上一个" : "Previous"}</button>
+              <button type="button" disabled={adjacentIndex < 0 || adjacentIndex >= adjacentKeys.length - 1} onClick={() => adjacentIndex >= 0 && adjacentIndex < adjacentKeys.length - 1 && onOpenDetail(adjacentKeys[adjacentIndex + 1])}>{locale === "zh-CN" ? "下一个" : "Next"}</button>
+            </div>
+          </nav>
+        ) : null}
         {relation ? (
           <RelationDrawerContent locale={locale} relation={relation} searchMap={searchMap} onFocus={onFocus} />
         ) : error ? <ErrorState locale={locale} error={error} /> : !data ? <LoadingState locale={locale} /> : (
-          <EntityDrawerContent locale={locale} entity={data} relations={relations} searchItems={searchItems} onFocus={onFocus} />
+          <EntityDrawerContent locale={locale} entity={data} relations={relations} searchItems={searchItems} onFocus={onFocus} onOpenDetail={onOpenDetail} zoomLevel={zoomLevel} />
         )}
       </aside>
     </div>
@@ -619,9 +847,9 @@ function RelationDrawerContent({ locale, relation, searchMap, onFocus }: { local
       <h2 id="atlas-detail-title">{searchMap.get(sourceKey) ?? sourceKey} <span aria-hidden="true">↔</span> {searchMap.get(targetKey) ?? targetKey}</h2>
       <p className="atlas-detail-lede">{relation.label}</p>
       <dl className="atlas-detail-facts">
-        <div><dt>{locale === "zh-CN" ? "关系类型" : "Relation"}</dt><dd>{relation.relationType}</dd></div>
+        <div><dt>{locale === "zh-CN" ? "关系类型" : "Relation"}</dt><dd>{formatRelationType(relation.relationType, locale)}</dd></div>
         <div><dt>{locale === "zh-CN" ? "时间" : "Time"}</dt><dd>{relation.temporalAssertions.map((assertion) => assertion.displayDate).join(" · ") || (locale === "zh-CN" ? "未标明" : "Not specified")}</dd></div>
-        <div><dt>{locale === "zh-CN" ? "证据" : "Evidence"}</dt><dd>{relation.evidenceLayer} · {relation.confidence}</dd></div>
+        <div><dt>{locale === "zh-CN" ? "证据" : "Evidence"}</dt><dd>{formatEvidenceLine(relation.evidenceLayer, relation.confidence, locale)}</dd></div>
       </dl>
       <p className="atlas-detail-note">{locale === "zh-CN" ? "此处只显示现实人物与现实人物之间的关系；地点、事件、著作与后世接受保持在独立语境层。" : "This layer is limited to relations between real figures; places, events, works and later reception remain separate context layers."}</p>
       <div className="atlas-drawer-actions">
@@ -632,14 +860,21 @@ function RelationDrawerContent({ locale, relation, searchMap, onFocus }: { local
   );
 }
 
-function EntityDrawerContent({ locale, entity, relations, searchItems, onFocus }: { locale: Locale; entity: EntityData; relations: ReadModelRelationIndex; searchItems: SearchItem[]; onFocus: (key: string) => void }) {
+function EntityDrawerContent({ locale, entity, relations, searchItems, onFocus, onOpenDetail, zoomLevel }: { locale: Locale; entity: EntityData; relations: ReadModelRelationIndex; searchItems: SearchItem[]; onFocus: (key: string) => void; onOpenDetail: (key: string) => void; zoomLevel: ZoomLevel }) {
   const entityKey = keyFor(entity.kind, entity.slug);
   return (
     <div className="atlas-drawer-content">
-      <p className="eyebrow">{kindLabel(entity.kind, locale)} · {entity.evidence}</p>
+      <p className="eyebrow">{formatEntityKind(entity.kind, locale)} · {formatEvidence(entity.evidence, locale)}</p>
       <h2 id="atlas-detail-title">{entity.title}</h2>
       {entity.subtitle ? <p className="atlas-detail-subtitle">{entity.subtitle}</p> : null}
       <p className="atlas-detail-lede">{entity.shortSummary}</p>
+      {entity.curatorialDescription.length > 0 ? (
+        <section className="atlas-significance" aria-labelledby="atlas-significance-title">
+          <p className="eyebrow">{locale === "zh-CN" ? "语境意义" : "Significance in context"}</p>
+          <h3 id="atlas-significance-title">{locale === "zh-CN" ? "为什么这个对象值得被看见" : "Why this object matters"}</h3>
+          <p>{entity.curatorialDescription[0]}</p>
+        </section>
+      ) : null}
       {entity.quote ? (
         <figure className="atlas-quote-card">
           <blockquote lang={locale === "zh-CN" ? "zh-Hans" : undefined}>{entity.quote.original}</blockquote>
@@ -651,19 +886,19 @@ function EntityDrawerContent({ locale, entity, relations, searchItems, onFocus }
         <div><dt>{locale === "zh-CN" ? "时间" : "Time"}</dt><dd>{entity.timeLabel}</dd></div>
         {entity.keyFacts.map((fact) => <div key={fact.label}><dt>{fact.label}</dt><dd>{fact.value}</dd></div>)}
       </dl>
-      {entity.curatorialDescription.length > 0 ? <div className="atlas-detail-prose">{entity.curatorialDescription.slice(0, 2).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div> : null}
+      {entity.curatorialDescription.length > 1 ? <div className="atlas-detail-prose">{entity.curatorialDescription.slice(1, 3).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div> : null}
       {entity.related.length > 0 ? (
         <section className="atlas-drawer-section" aria-labelledby="atlas-related-title">
           <h3 id="atlas-related-title">{locale === "zh-CN" ? "关联语境" : "Related context"}</h3>
           <ul className="atlas-related-list">
             {entity.related.slice(0, 12).map((related) => {
               const key = keyFor(related.kind, related.slug);
-              return <li key={key}><button type="button" onClick={() => onFocus(key)}>{related.title}</button><span>{related.relation}</span></li>;
+              return <li key={key}><button type="button" onClick={() => onOpenDetail(key)}>{related.title}</button><span>{related.relation}</span></li>;
             })}
           </ul>
         </section>
       ) : null}
-      {entity.kind === "figure" ? <RelationNetwork locale={locale} focus={entityKey} relations={relations} searchItems={searchItems} onFocus={onFocus} compact peopleOnly /> : null}
+      {entity.kind === "figure" ? <RelationNetwork locale={locale} focus={entityKey} relations={relations} searchItems={searchItems} onFocus={onFocus} compact peopleOnly zoomLevel={zoomLevel} /> : null}
       <div className="atlas-drawer-actions">
         <button className="button button-primary" type="button" onClick={() => onFocus(entityKey)}>{locale === "zh-CN" ? "在地图中定位" : "Locate in atlas"}</button>
         <Link className="button button-secondary" to={entityPath(entity.kind, entity.slug, locale)}>{locale === "zh-CN" ? "打开完整档案" : "Open full dossier"}</Link>

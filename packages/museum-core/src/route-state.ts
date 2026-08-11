@@ -31,6 +31,12 @@ export type GraphType = z.infer<typeof GraphTypeSchema>;
 export const MapLayerSchema = z.enum(["real", "cosmos"]);
 export type MapLayer = z.infer<typeof MapLayerSchema>;
 
+export const MapContentLayerSchema = z.enum(["places", "routes", "trajectories"]);
+export type MapContentLayer = z.infer<typeof MapContentLayerSchema>;
+
+export const ZoomLevelSchema = z.enum(["era", "region", "figure", "all"]);
+export type ZoomLevel = z.infer<typeof ZoomLevelSchema>;
+
 export const RouteStateSchema = z.object({
   lang: LocaleSchema,
   view: ExploreViewSchema,
@@ -49,6 +55,9 @@ export const RouteStateSchema = z.object({
   compare: z.array(z.string().trim().min(1)).max(3),
   graphType: GraphTypeSchema,
   depth: z.number().int().min(1).max(2),
+  query: z.string().trim().max(120).optional(),
+  mapLayers: z.array(MapContentLayerSchema).max(3),
+  zoomLevel: ZoomLevelSchema,
   hall: z.string().trim().min(1).optional(),
   section: z.string().trim().min(1).optional(),
   mapLayer: MapLayerSchema,
@@ -79,6 +88,8 @@ export const DEFAULT_ROUTE_STATE: RouteState = {
   compare: [],
   graphType: "three-traditions",
   depth: 1,
+  mapLayers: ["places", "routes", "trajectories"],
+  zoomLevel: "region",
   mapLayer: "real",
 };
 
@@ -96,6 +107,10 @@ function parseList<T extends string>(value: string | null, schema: z.ZodType<T>)
     .filter((item): item is T => schema.safeParse(item).success);
 }
 
+function parseMapLayers(value: string | null): MapContentLayer[] {
+  return parseList(value, MapContentLayerSchema);
+}
+
 function firstEnum<T extends string>(value: string | null, schema: z.ZodType<T>, fallback: T): T {
   return value && schema.safeParse(value).success ? value as T : fallback;
 }
@@ -106,6 +121,9 @@ export function parseRouteState(search: string | URLSearchParams): RouteState {
   const requestedMapLayer = firstEnum(params.get("mapLayer"), MapLayerSchema, DEFAULT_ROUTE_STATE.mapLayer);
   const mapLayer = view === "cosmos" ? "cosmos" : requestedMapLayer === "cosmos" ? "real" : requestedMapLayer;
   const requestedTraditions = parseList(params.get("traditions"), TraditionSlugSchema);
+  const requestedMapLayers = parseMapLayers(params.get("layers"));
+  const hasExplicitMapLayers = params.has("layers");
+  const requestedQuery = params.get("q")?.trim().slice(0, 120) || undefined;
   const candidate = {
     ...DEFAULT_ROUTE_STATE,
     lang: firstEnum(params.get("lang"), LocaleSchema, DEFAULT_ROUTE_STATE.lang),
@@ -125,6 +143,9 @@ export function parseRouteState(search: string | URLSearchParams): RouteState {
     compare: params.get("compare") ? params.get("compare")!.split(",").map((item) => item.trim()).filter(Boolean).slice(0, 3) : [],
     graphType: firstEnum(params.get("graphType"), GraphTypeSchema, DEFAULT_ROUTE_STATE.graphType),
     depth: Math.min(2, Math.max(1, Number(params.get("depth")) || DEFAULT_ROUTE_STATE.depth)),
+    query: requestedQuery,
+    mapLayers: hasExplicitMapLayers ? requestedMapLayers : DEFAULT_ROUTE_STATE.mapLayers,
+    zoomLevel: firstEnum(params.get("zoom"), ZoomLevelSchema, DEFAULT_ROUTE_STATE.zoomLevel),
     hall: params.get("hall")?.trim() || undefined,
     section: params.get("section")?.trim() || undefined,
     mapLayer,
@@ -154,6 +175,9 @@ export function serializeRouteState(state: RouteState): string {
   if (parsed.compare.length > 0) params.set("compare", parsed.compare.join(","));
   if (parsed.graphType !== DEFAULT_ROUTE_STATE.graphType) params.set("graphType", parsed.graphType);
   if (parsed.depth !== DEFAULT_ROUTE_STATE.depth) params.set("depth", String(parsed.depth));
+  if (parsed.query) params.set("q", parsed.query);
+  if (parsed.mapLayers.join(",") !== DEFAULT_ROUTE_STATE.mapLayers.join(",")) params.set("layers", parsed.mapLayers.join(","));
+  if (parsed.zoomLevel !== DEFAULT_ROUTE_STATE.zoomLevel) params.set("zoom", parsed.zoomLevel);
   if (parsed.hall) params.set("hall", parsed.hall);
   if (parsed.section) params.set("section", parsed.section);
   if (parsed.mapLayer !== DEFAULT_ROUTE_STATE.mapLayer) params.set("mapLayer", parsed.mapLayer);

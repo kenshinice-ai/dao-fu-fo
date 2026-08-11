@@ -6,6 +6,7 @@ import { TraditionMark } from "../components/TraditionMark";
 import { useMuseumContext } from "../context";
 import { staticData } from "../data/staticData";
 import { useStaticData } from "../data/useStaticData";
+import { formatEntityKind } from "../data/labels";
 import { entityPath } from "../routing";
 
 export function SearchPage() {
@@ -53,7 +54,7 @@ export function SearchPage() {
             <li key={`${item.kind}:${item.slug}`}>
               <TraditionMark tradition={item.tradition} size="sm" />
               <div>
-                <span>{item.kind.replace("_", " ")}</span>
+                <span>{formatEntityKind(item.kind, locale)}</span>
                 <Link to={entityPath(item.kind, item.slug, locale)}>{item.title}</Link>
                 <p>{item.context}</p>
               </div>

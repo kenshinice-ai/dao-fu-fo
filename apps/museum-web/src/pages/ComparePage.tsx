@@ -4,6 +4,7 @@ import { ErrorState, LoadingState } from "../components/LoadingState";
 import { useMuseumContext } from "../context";
 import { staticData } from "../data/staticData";
 import { useStaticData } from "../data/useStaticData";
+import { formatConfidence, formatEntityKind, formatEvidence, formatRelationType } from "../data/labels";
 import { entityPath, withLang } from "../routing";
 
 const DEFAULT_COMPARISON = "cross-era-figures";
@@ -54,7 +55,7 @@ export function ComparePage() {
               onClick={() => toggleEntity(entity.key)}
             >
               <span>{entity.title}</span>
-              <small>{entity.kind.replaceAll("_", " ")}</small>
+              <small>{formatEntityKind(entity.kind, locale)}</small>
             </button>
           ))}
           <small className="comparison-selector-note">
@@ -73,7 +74,7 @@ export function ComparePage() {
             <article className="comparison-entity-card" key={entity.key}>
               <div className="comparison-entity-card-topline">
                 <span>{entity.tradition}</span>
-                <span>{entity.evidence.replaceAll("_", " ")}</span>
+                <span>{formatEvidence(entity.evidence, locale)}</span>
               </div>
               <h3><Link to={entityPath(entity.kind, entity.slug, locale)}>{entity.title}</Link></h3>
               <p>{entity.summary}</p>
@@ -114,8 +115,8 @@ export function ComparePage() {
                         <strong>{cell.value}</strong>
                         {cell.details.length > 0 ? <ul>{cell.details.map((detail) => <li key={detail}>{detail}</li>)}</ul> : null}
                         <div className="comparison-cell-meta">
-                          <span>{cell.status === "not_recorded" ? (locale === "zh-CN" ? "未在当前模型记录" : "Not recorded in this model") : cell.evidenceLayer?.replaceAll("_", " ")}</span>
-                          {cell.confidence ? <span>{cell.confidence}</span> : null}
+                          <span>{cell.status === "not_recorded" ? (locale === "zh-CN" ? "未在当前模型记录" : "Not recorded in this model") : formatEvidence(cell.evidenceLayer, locale)}</span>
+                          {cell.confidence ? <span>{formatConfidence(cell.confidence, locale)}</span> : null}
                         </div>
                         {cell.sourceIds.length > 0 ? (
                           <div className="comparison-cell-sources">
@@ -140,12 +141,12 @@ export function ComparePage() {
         </div>
         {data.directRelations.length > 0 ? (
           <ul className="comparison-connection-list">
-            {data.directRelations.map((relation) => <li key={relation.id}><strong>{relation.label}</strong><span>{relation.summary}</span><small>{relation.relationType.replaceAll("_", " ")} · {relation.confidence} · {relation.evidenceLayer.replaceAll("_", " ")}</small></li>)}
+            {data.directRelations.map((relation) => <li key={relation.id}><strong>{relation.label}</strong><span>{relation.summary}</span><small>{formatRelationType(relation.relationType, locale)} · {formatConfidence(relation.confidence, locale)} · {formatEvidence(relation.evidenceLayer, locale)}</small></li>)}
           </ul>
         ) : <p className="comparison-empty">{locale === "zh-CN" ? "当前比较集没有人物之间的直接关系；这保留了历史人物之间的差异，而不是强行制造联系。" : "This comparison set has no direct figure-to-figure relation; the difference is preserved rather than filled with a forced connection."}</p>}
         {data.bridges.length > 0 ? (
           <ul className="comparison-bridge-list">
-            {data.bridges.map((bridge) => <li key={bridge.key}><strong>{bridge.title}</strong><span>{bridge.entityKeys.map((key) => data.entities.find((entity) => entity.key === key)?.title ?? key).join(" · ")}</span><small>{bridge.relationTypes.map((type) => type.replaceAll("_", " ")).join(" · ")}</small></li>)}
+            {data.bridges.map((bridge) => <li key={bridge.key}><strong>{bridge.title}</strong><span>{bridge.entityKeys.map((key) => data.entities.find((entity) => entity.key === key)?.title ?? key).join(" · ")}</span><small>{bridge.relationTypes.map((type) => formatRelationType(type, locale)).join(" · ")}</small></li>)}
           </ul>
         ) : <p className="comparison-empty">{locale === "zh-CN" ? "当前关系集还没有一个同时连接两位以上人物的共同外部节点；后续补充新事件、地点、文本版本后会在这里显现。" : "The current relation set has no external node shared by more than one figure; new events, places and text versions will appear here as they are added."}</p>}
       </section>

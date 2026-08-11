@@ -7,6 +7,7 @@ import { useMuseumContext } from "../context";
 import { staticData } from "../data/staticData";
 import { useStaticData } from "../data/useStaticData";
 import { isPersonToPersonRelation } from "../data/contextProjection";
+import { formatConfidence, formatEntityKind, formatEvidence, formatEvidenceLine, formatFigureClass, formatHistoricity, formatRelationType } from "../data/labels";
 import { entityPath, withLang } from "../routing";
 import type { EntityKind } from "../types";
 
@@ -43,15 +44,15 @@ export function EntityPage({ kind }: { kind: EntityKind }) {
       <header className="entity-hero page-shell">
         <div className="entity-heading">
           <TraditionMark tradition={data.tradition} size="lg" />
-          <p className="eyebrow">{data.kind.replace("_", " ")} / {data.evidence}</p>
+          <p className="eyebrow">{formatEntityKind(data.kind, locale)} / {formatEvidence(data.evidence, locale)}</p>
           <h1>{data.title}</h1>
           {data.subtitle ? <p className="entity-subtitle">{data.subtitle}</p> : null}
           <p className="entity-summary">{data.shortSummary}</p>
         </div>
         <dl className="entity-facts">
           <div><dt>{locale === "zh-CN" ? "年代" : "Period"}</dt><dd>{data.timeLabel}</dd></div>
-          {data.kind === "figure" && profileText(data.profile, "historicity") ? <div><dt>{locale === "zh-CN" ? "历史地位" : "Historicity"}</dt><dd>{profileText(data.profile, "historicity")}</dd></div> : null}
-          {data.kind === "figure" && profileText(data.profile, "figureClass") ? <div><dt>{locale === "zh-CN" ? "人物类别" : "Figure class"}</dt><dd>{profileText(data.profile, "figureClass")}</dd></div> : null}
+          {data.kind === "figure" && profileText(data.profile, "historicity") ? <div><dt>{locale === "zh-CN" ? "历史地位" : "Historicity"}</dt><dd>{formatHistoricity(profileText(data.profile, "historicity"), locale)}</dd></div> : null}
+          {data.kind === "figure" && profileText(data.profile, "figureClass") ? <div><dt>{locale === "zh-CN" ? "人物类别" : "Figure class"}</dt><dd>{formatFigureClass(profileText(data.profile, "figureClass"), locale)}</dd></div> : null}
           {birthplaceRelations.length > 0 ? (
             <div>
               <dt>{locale === "zh-CN" ? "出生地" : "Birthplace"}</dt>
@@ -216,7 +217,7 @@ function RelationList({
             <div className="entity-network-card-heading">
               <span className="relation-type-label">{relation.label}</span>
               <strong>{sourceKey === currentKey ? entity.title : otherTitle} → {sourceKey === currentKey ? otherTitle : entity.title}</strong>
-              <span className="relation-confidence">{relation.relationType.replaceAll("_", " ")} · {relation.confidence} · {relation.evidenceLayer.replaceAll("_", " ")}</span>
+              <span className="relation-confidence">{formatRelationType(relation.relationType, locale)} · {formatEvidenceLine(relation.evidenceLayer, relation.confidence, locale)}</span>
             </div>
             <p>{relation.summary}</p>
             {time ? <small className="relation-time">{time}</small> : null}

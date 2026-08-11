@@ -25,6 +25,7 @@ import type {
 
 const root = `${import.meta.env.BASE_URL}data/v2`;
 const readModelPaths = createReadModelPaths(root);
+const readModelCache = new Map<string, Promise<unknown>>();
 
 function isJsonResponse(response: Response): boolean {
   return (response.headers.get("content-type") ?? "").toLowerCase().includes("json");
@@ -32,9 +33,23 @@ function isJsonResponse(response: Response): boolean {
 
 async function request<T>(path: string, signal?: AbortSignal): Promise<T> {
   const url = path.startsWith(root) ? path : `${root}/${path}`;
-  const response = await fetch(url, { signal, cache: "no-store" });
-  if (!response.ok || !isJsonResponse(response)) throw new Error(`Static data ${response.status}: ${url}`);
-  return (await response.json()) as T;
+  const cached = readModelCache.get(url);
+  if (cached) return cached as Promise<T>;
+  const promise = (async () => {
+    // Shared read-model requests outlive any one component's loader. Passing a
+    // component AbortSignal here would let an unmount cancel the cached
+    // promise for every other consumer of the same locale/path.
+    const response = await fetch(url, { cache: "no-store" });
+    if (!response.ok || !isJsonResponse(response)) throw new Error(`Static data ${response.status}: ${url}`);
+    return (await response.json()) as T;
+  })();
+  readModelCache.set(url, promise);
+  try {
+    return await promise;
+  } catch (error) {
+    if (readModelCache.get(url) === promise) readModelCache.delete(url);
+    throw error;
+  }
 }
 
 async function requestWithFallback<T>(primaryPath: string, fallbackPath: string, signal?: AbortSignal): Promise<T> {

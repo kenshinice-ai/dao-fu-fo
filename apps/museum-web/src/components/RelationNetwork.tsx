@@ -1,6 +1,8 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import type { ReadModelRelationIndex } from "@drf-museum/domain-schema";
 import { contextEndpointKey, isPersonToPersonRelation, relationClass, relationNeighbors } from "../data/contextProjection";
+import { formatConfidence, formatEvidence, formatRelationType } from "../data/labels";
+import type { ZoomLevel } from "../routing";
 import type { Locale, SearchItem } from "../types";
 
 interface RelationNetworkProps {
@@ -12,6 +14,7 @@ interface RelationNetworkProps {
   compact?: boolean;
   peopleOnly?: boolean;
   scopeKeys?: string[];
+  zoomLevel?: ZoomLevel;
 }
 
 function titleFor(key: string, searchItems: SearchItem[], locale: Locale): string {
@@ -24,7 +27,9 @@ function shortLabel(value: string): string {
   return value.length > 11 ? value.slice(0, 10) + "…" : value;
 }
 
-export function RelationNetwork({ locale, focus, relations, searchItems, onFocus, compact = false, peopleOnly = false, scopeKeys }: RelationNetworkProps) {
+export function RelationNetwork({ locale, focus, relations, searchItems, onFocus, compact = false, peopleOnly = false, scopeKeys, zoomLevel = "figure" }: RelationNetworkProps) {
+  const [presentation, setPresentation] = useState<"map" | "list">("map");
+  const neighbourLimit = zoomLevel === "era" ? 4 : zoomLevel === "region" ? 8 : zoomLevel === "figure" ? (compact ? 8 : 16) : 32;
   const neighbours = useMemo(() => {
     const seen = new Set<string>();
     return relationNeighbors(relations, focus).filter((relation) => {
@@ -35,8 +40,8 @@ export function RelationNetwork({ locale, focus, relations, searchItems, onFocus
       if (seen.has(other)) return false;
       seen.add(other);
       return true;
-    }).slice(0, compact ? 8 : 16);
-  }, [compact, focus, peopleOnly, relations]);
+    }).slice(0, neighbourLimit);
+  }, [focus, neighbourLimit, peopleOnly, relations]);
   const title = titleFor(focus, searchItems, locale);
   const networkTitleId = "relation-network-title-" + focus.replace(/[^a-z0-9]+/gi, "-");
   const scopeRelationItems = useMemo(() => {
@@ -58,6 +63,7 @@ export function RelationNetwork({ locale, focus, relations, searchItems, onFocus
     }
     return [...nodes];
   }, [scopeKeys, scopeRelationItems]);
+  const visibleScopeRelations = useMemo(() => scopeRelationItems.slice(0, neighbourLimit), [neighbourLimit, scopeRelationItems]);
   const scopePositions = useMemo(() => {
     const center = { x: 360, y: compact ? 140 : 190 };
     const radius = compact ? 104 : 145;
@@ -103,10 +109,15 @@ export function RelationNetwork({ locale, focus, relations, searchItems, onFocus
           </div>
           <span>{scopeNodeKeys.length} {locale === "zh-CN" ? "位人物" : "figures"} · {scopeRelationItems.length} {locale === "zh-CN" ? "条关系" : "relations"}</span>
         </div>
+        <div className="relation-network-controls" role="group" aria-label={locale === "zh-CN" ? "关系图呈现方式" : "Relationship presentation"}>
+          <span>{locale === "zh-CN" ? "展开层级" : "Detail"}: {zoomLevel}</span>
+          <button type="button" className={presentation === "map" ? "active" : ""} aria-pressed={presentation === "map"} onClick={() => setPresentation("map")}>{locale === "zh-CN" ? "图" : "Graph"}</button>
+          <button type="button" className={presentation === "list" ? "active" : ""} aria-pressed={presentation === "list"} onClick={() => setPresentation("list")}>{locale === "zh-CN" ? "列表" : "List"}</button>
+        </div>
         <p className="relation-network-note">{locale === "zh-CN" ? "只显示当前地点人物之间可核实的师承、同时代往来或影响；地点、事件、文本与后世接受另列。点击节点或下方关系，可继续进入人物语境。" : "Only verified teacher–student, contemporary-exchange or influence relations among this place's figures are shown. Click a node or relation to continue into a figure context."}</p>
-        <svg className="relation-network-canvas" viewBox={"0 0 720 " + (compact ? 300 : 390)} role="group" aria-labelledby={networkTitleId}>
+        {presentation === "map" ? <svg className="relation-network-canvas" viewBox={"0 0 720 " + (compact ? 300 : 390)} role="group" aria-labelledby={networkTitleId}>
           <title id={networkTitleId}>{title + (locale === "zh-CN" ? " 人物关系图" : " person relation network")}</title>
-          {scopeRelationItems.map((relation) => {
+          {visibleScopeRelations.map((relation) => {
             const source = scopePositions.get(contextEndpointKey(relation.source));
             const target = scopePositions.get(contextEndpointKey(relation.target));
             if (!source || !target) return null;
@@ -136,7 +147,7 @@ export function RelationNetwork({ locale, focus, relations, searchItems, onFocus
               </g>
             );
           })}
-        </svg>
+        </svg> : null}
         <ul className="relation-network-list">
           {scopeRelationItems.map((relation) => {
             const source = contextEndpointKey(relation.source);
@@ -146,7 +157,7 @@ export function RelationNetwork({ locale, focus, relations, searchItems, onFocus
               <li key={relation.id}>
                 <button type="button" onClick={() => onFocus(source)}>{titleFor(source, searchItems, locale)} <span aria-hidden="true">↔</span> {titleFor(target, searchItems, locale)}</button>
                 <span>{relation.label}</span>
-                <small>{date || relation.evidenceLayer} · {relation.confidence}</small>
+                <small>{date || formatEvidence(relation.evidenceLayer, locale)} · {formatConfidence(relation.confidence, locale)} · {formatRelationType(relation.relationType, locale)}</small>
               </li>
             );
           })}
@@ -176,8 +187,13 @@ export function RelationNetwork({ locale, focus, relations, searchItems, onFocus
         </div>
         <span>{neighbours.length} {locale === "zh-CN" ? "个邻接对象" : "neighbours"}</span>
       </div>
+      <div className="relation-network-controls" role="group" aria-label={locale === "zh-CN" ? "关系图呈现方式" : "Relationship presentation"}>
+        <span>{locale === "zh-CN" ? "展开层级" : "Detail"}: {zoomLevel}</span>
+        <button type="button" className={presentation === "map" ? "active" : ""} aria-pressed={presentation === "map"} onClick={() => setPresentation("map")}>{locale === "zh-CN" ? "图" : "Graph"}</button>
+        <button type="button" className={presentation === "list" ? "active" : ""} aria-pressed={presentation === "list"} onClick={() => setPresentation("list")}>{locale === "zh-CN" ? "列表" : "List"}</button>
+      </div>
       {peopleOnly ? <p className="relation-network-note">{locale === "zh-CN" ? "只显示现实人物之间的师承、同时代往来或影响；地点、事件、文本与后世接受另列。" : "Only teacher–student, contemporary-exchange or influence relations between real figures are shown here; places, events, texts and later reception stay separate."}</p> : null}
-      <svg className="relation-network-canvas" viewBox={"0 0 720 " + (compact ? 280 : 390)} role="group" aria-labelledby={networkTitleId}>
+      {presentation === "map" ? <svg className="relation-network-canvas" viewBox={"0 0 720 " + (compact ? 280 : 390)} role="group" aria-labelledby={networkTitleId}>
         <title id={networkTitleId}>{locale === "zh-CN" ? title + " 一层关系图" : title + " one-hop relationship network"}</title>
         {neighbours.map((relation) => {
           const other = contextEndpointKey(relation.source) === focus
@@ -219,7 +235,7 @@ export function RelationNetwork({ locale, focus, relations, searchItems, onFocus
             </g>
           );
         })}
-      </svg>
+      </svg> : null}
       <ul className="relation-network-list">
         {neighbours.map((relation) => {
           const other = contextEndpointKey(relation.source) === focus
@@ -230,7 +246,7 @@ export function RelationNetwork({ locale, focus, relations, searchItems, onFocus
             <li key={relation.id}>
               <button type="button" onClick={() => onFocus(other)}>{titleFor(other, searchItems, locale)}</button>
               <span>{relation.label}</span>
-              <small>{date || relation.evidenceLayer} · {relation.confidence}</small>
+            <small>{date || formatEvidence(relation.evidenceLayer, locale)} · {formatConfidence(relation.confidence, locale)} · {formatRelationType(relation.relationType, locale)}</small>
             </li>
           );
         })}
