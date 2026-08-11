@@ -5,7 +5,7 @@ import type { AtlasTab, RouteState, TimelineMode } from "../routing";
 import { entityPath, withLang } from "../routing";
 import { staticData } from "../data/staticData";
 import { useStaticData } from "../data/useStaticData";
-import { contextEndpointKey, isPersonToPersonRelation, projectTimelineEvents } from "../data/contextProjection";
+import { contextEndpointKey, eventFigureContexts, isPersonToPersonRelation, placeEventContexts, placeFigureContexts, projectTimelineEvents } from "../data/contextProjection";
 import { CivilisationMap } from "./CivilisationMap";
 import { ErrorState, LoadingState } from "./LoadingState";
 import { Icon } from "./Icon";
@@ -100,6 +100,35 @@ function eventFocus(event: TimelineEvent): string {
       : keyFor(event.kind, event.slug);
 }
 
+function tabForFocus(focus: string, fallback: AtlasTab): AtlasTab {
+  const kind = focus.split(":")[0];
+  if (kind === "place" || kind === "figure") return "figures";
+  if (kind === "event") return "events";
+  if (kind === "route") return "routes";
+  if (kind === "text") return "texts";
+  if (kind === "passage") return "sayings";
+  return fallback;
+}
+
+function scopeLabelFor(state: RouteState, locale: Locale): string | undefined {
+  if (state.focus?.startsWith("place:") && state.atlasTab === "figures") return locale === "zh-CN" ? "关联人物" : "Connected figures";
+  if (state.focus?.startsWith("place:") && state.atlasTab === "events") return locale === "zh-CN" ? "城市事件" : "Events in this place";
+  if (state.focus?.startsWith("place:") && state.atlasTab === "relations") return locale === "zh-CN" ? "城市人物关系" : "Person relations in this place";
+  if (state.focus?.startsWith("event:") && state.atlasTab === "figures") return locale === "zh-CN" ? "事件人物" : "Figures in this event";
+  return undefined;
+}
+
+function timelinePosition(year: number, start: number, end: number, index: number, count: number, traditionMode: boolean): number {
+  if (traditionMode) return count <= 1 ? 50 : (index / (count - 1)) * 100;
+  if (end === start) return 50;
+  return Math.max(0, Math.min(100, ((year - start) / (end - start)) * 100));
+}
+
+function sampleTimelineEvents(events: TimelineEvent[], limit = 24): TimelineEvent[] {
+  if (events.length <= limit) return events;
+  return Array.from({ length: limit }, (_, index) => events[Math.round((index * (events.length - 1)) / (limit - 1))]);
+}
+
 function useAtlasData(locale: Locale) {
   const loader = useCallback(async (signal: AbortSignal): Promise<AtlasData> => {
     const [mapContext, relations, timeline] = await Promise.all([
@@ -118,8 +147,20 @@ export function AtlasWorkspace({ locale, state, onChange, className = "", headin
   const [shareStatus, setShareStatus] = useState<"idle" | "copied" | "failed">("idle");
 
   const searchMap = useMemo(() => new Map((data?.searchItems ?? []).map((item) => [keyFor(item.kind, item.slug), item.title])), [data?.searchItems]);
-  const relationFocus = relationFromDetail(state.detail, data?.relations);
   const focusTitle = titleFor(state.focus, data?.searchItems ?? [], locale);
+
+  const scopedFigureKeys = useMemo(() => {
+    if (!data || !state.focus?.startsWith("place:")) return undefined;
+    return new Set(placeFigureContexts(data.relations, state.focus).map((context) => context.figureKey));
+  }, [data, state.focus]);
+  const scopedEventKeys = useMemo(() => {
+    if (!data || !state.focus?.startsWith("place:")) return undefined;
+    return new Set(placeEventContexts(data.relations, state.focus).map((context) => context.eventKey));
+  }, [data, state.focus]);
+  const scopedRelationKeys = useMemo(() => {
+    if (!data || !state.focus?.startsWith("place:")) return undefined;
+    return new Set([...scopedFigureKeys ?? []]);
+  }, [data, scopedFigureKeys, state.focus]);
 
   const filteredItems = useMemo(() => {
     if (!data || state.atlasTab === "relations") return [];
@@ -128,9 +169,15 @@ export function AtlasWorkspace({ locale, state, onChange, className = "", headin
     return data.searchItems
       .filter((item) => item.kind === definition.kind)
       .filter((item) => item.tradition === "convergence" || state.traditions.includes(item.tradition))
+      .filter((item) => {
+        if (state.focus?.startsWith("place:") && state.atlasTab === "figures") return scopedFigureKeys?.has(keyFor(item.kind, item.slug)) ?? false;
+        if (state.focus?.startsWith("place:") && state.atlasTab === "events") return scopedEventKeys?.has(keyFor(item.kind, item.slug)) ?? false;
+        if (state.focus?.startsWith("event:") && state.atlasTab === "figures") return eventFigureContexts(data.relations, state.focus).some((context) => context.figureKey === keyFor(item.kind, item.slug));
+        return true;
+      })
       .filter((item) => !normalisedQuery || `${item.title} ${item.context}`.toLocaleLowerCase().includes(normalisedQuery))
       .sort((a, b) => a.title.localeCompare(b.title, locale === "zh-CN" ? "zh-Hans" : "en"));
-  }, [data, locale, query, state.atlasTab, state.traditions]);
+  }, [data, locale, query, scopedEventKeys, scopedFigureKeys, state.atlasTab, state.focus, state.traditions]);
 
   const relationItems = useMemo(() => {
     if (!data || state.atlasTab !== "relations") return [];
@@ -145,12 +192,18 @@ export function AtlasWorkspace({ locale, state, onChange, className = "", headin
         return !normalisedQuery || `${sourceTitle} ${targetTitle} ${relation.label}`.toLocaleLowerCase().includes(normalisedQuery);
       })
       .filter((relation) => {
+        if (!scopedRelationKeys) return true;
+        const sourceKey = keyFor(relation.source.kind, relation.source.slug);
+        const targetKey = keyFor(relation.target.kind, relation.target.slug);
+        return scopedRelationKeys.has(sourceKey) && scopedRelationKeys.has(targetKey);
+      })
+      .filter((relation) => {
         const sourceItem = data.searchItems.find((item) => keyFor(item.kind, item.slug) === keyFor(relation.source.kind, relation.source.slug));
         const targetItem = data.searchItems.find((item) => keyFor(item.kind, item.slug) === keyFor(relation.target.kind, relation.target.slug));
         return Boolean((sourceItem?.tradition === "convergence" || !sourceItem?.tradition || state.traditions.includes(sourceItem.tradition))
           && (targetItem?.tradition === "convergence" || !targetItem?.tradition || state.traditions.includes(targetItem.tradition)));
       });
-  }, [data, query, searchMap, state.atlasTab, state.traditions]);
+  }, [data, query, scopedRelationKeys, searchMap, state.atlasTab, state.traditions]);
 
   const tabCounts = useMemo(() => {
     const counts = {} as Record<AtlasTab, number>;
@@ -162,6 +215,7 @@ export function AtlasWorkspace({ locale, state, onChange, className = "", headin
   }, [data]);
 
   const setFocus = (focus: string) => onChange({ focus, detail: undefined, view: "map", mapLayer: "real" });
+  const setMapFocus = (focus: string) => onChange({ focus, detail: undefined, atlasTab: tabForFocus(focus, state.atlasTab), view: "map", mapLayer: "real" });
   const openDetail = (detail: string) => onChange({ focus: detail.startsWith("relation:") ? state.focus : detail, detail, view: "map", mapLayer: "real" });
   const clearFocus = () => onChange({ focus: undefined, detail: undefined });
 
@@ -253,8 +307,8 @@ export function AtlasWorkspace({ locale, state, onChange, className = "", headin
             focus={state.focus}
             relations={data.relations}
             searchItems={data.searchItems}
-            onFocus={setFocus}
-            showContext={false}
+            onFocus={setMapFocus}
+            showContext
             showIndex={false}
             showRouteLedger={false}
           />
@@ -316,6 +370,8 @@ function AtlasObjectPanel({
 }) {
   const titleMap = new Map(data.searchItems.map((item) => [keyFor(item.kind, item.slug), item.title]));
   const visibleItems = items.slice(0, 80);
+  const scopeTitle = state.focus ? titleMap.get(state.focus) : undefined;
+  const scopeLabel = scopeLabelFor(state, locale);
   return (
     <aside className="atlas-object-panel" aria-label={locale === "zh-CN" ? "地图对象面板" : "Atlas entity panel"}>
       <nav className="atlas-tab-nav" aria-label={locale === "zh-CN" ? "对象类型" : "Entity types"}>
@@ -331,6 +387,7 @@ function AtlasObjectPanel({
         <input id="atlas-object-search" type="search" value={query} onChange={(event) => onQuery(event.target.value)} placeholder={locale === "zh-CN" ? "搜索人物、事件、地点……" : "Search figures, events, places…"} />
         <span>{state.atlasTab === "relations" ? relationItems.length : items.length} {locale === "zh-CN" ? "项" : "items"}</span>
       </div>
+      {scopeLabel && scopeTitle ? <p className="atlas-panel-scope-note" data-atlas-scope-note>{scopeTitle} · {scopeLabel} · {items.length}</p> : null}
       <div className="atlas-object-list" aria-live="polite">
         {state.atlasTab === "relations" ? relationItems.slice(0, 80).map((relation) => {
           const sourceKey = contextEndpointKey(relation.source);
@@ -379,6 +436,12 @@ function AtlasTimelineRail({ locale, data, relations, searchItems, state, onChan
   const shown = events.slice(0, 12);
   const start = state.from ?? data.startYear;
   const end = state.to ?? data.endYear;
+  const trackEvents = sampleTimelineEvents(events);
+  const trackTicks = Array.from({ length: 5 }, (_, index) => start + ((end - start) * index) / 4);
+  const focusTimelineEvent = (event: TimelineEvent) => {
+    const focus = eventFocus(event);
+    onChange({ focus, atlasTab: tabForFocus(focus, state.atlasTab), detail: undefined, view: "map", mapLayer: "real" });
+  };
   return (
     <section className="atlas-timeline-rail" aria-labelledby="atlas-timeline-title" data-atlas-timeline>
       <div className="atlas-timeline-heading">
@@ -403,10 +466,38 @@ function AtlasTimelineRail({ locale, data, relations, searchItems, state, onChan
           {(state.from !== undefined || state.to !== undefined) ? <button type="button" onClick={() => onChange({ from: undefined, to: undefined })}>{locale === "zh-CN" ? "全段" : "Full"}</button> : null}
         </div>
       </div>
+      <div className="atlas-timeline-track-wrap" aria-label={locale === "zh-CN" ? "可点击时间轴" : "Interactive chronology"}>
+        <div className="atlas-timeline-track" data-timeline-track role="group" aria-label={locale === "zh-CN" ? "时间轴事件节点" : "Timeline event nodes"}>
+          <span className="atlas-timeline-track-line" aria-hidden="true" />
+          {trackTicks.map((tick, index) => (
+            <span className="atlas-timeline-tick" style={{ left: `${(index / 4) * 100}%` }} key={index}>
+              <i aria-hidden="true" />
+              <small>{formatYear(Math.round(tick), locale)}</small>
+            </span>
+          ))}
+          {trackEvents.map((event, index) => {
+            const focus = eventFocus(event);
+            return (
+              <button
+                className={`atlas-timeline-track-event ${state.focus === focus ? "is-selected" : ""}`}
+                data-timeline-track-focus={focus}
+                style={{ left: `${timelinePosition(event.year, start, end, index, trackEvents.length, state.timelineMode === "tradition")}%` }}
+                type="button"
+                key={`${event.id}-track`}
+                aria-label={`${event.displayDate ?? formatYear(event.year, locale)} · ${event.title}`}
+                onClick={() => focusTimelineEvent(event)}
+              >
+                <span aria-hidden="true" />
+                <strong>{event.title}</strong>
+              </button>
+            );
+          })}
+        </div>
+      </div>
       <div className="atlas-timeline-events">
         {shown.map((event) => {
           const focus = eventFocus(event);
-          return <button className={state.focus === focus ? "is-selected" : ""} type="button" key={event.id} onClick={() => onChange({ focus, detail: undefined, view: "map", mapLayer: "real" })}>
+          return <button className={state.focus === focus ? "is-selected" : ""} type="button" key={event.id} onClick={() => focusTimelineEvent(event)}>
             <span>{event.displayDate ?? formatYear(event.year, locale)}</span>
             <strong>{event.title}</strong>
           </button>;

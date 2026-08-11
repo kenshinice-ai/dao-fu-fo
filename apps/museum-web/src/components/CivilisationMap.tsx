@@ -282,6 +282,7 @@ export function CivilisationMap({
     () => focusPlace ? placeEventContexts(relations, featureKey(focusPlace)) : [],
     [focusPlace, relations],
   );
+  const placeFigureKeys = useMemo(() => placePeople.map((person) => person.figureKey), [placePeople]);
   const focusEventFigures = useMemo(
     () => focus?.startsWith("event:") ? eventFigureContexts(relations, focus) : [],
     [focus, relations],
@@ -452,6 +453,16 @@ export function CivilisationMap({
               </ul>
             </section>
           ) : null}
+          <RelationNetwork
+            locale={locale}
+            focus={featureKey(focusPlace)}
+            relations={relations}
+            searchItems={searchItems}
+            onFocus={(key) => onFocus?.(key)}
+            compact
+            peopleOnly
+            scopeKeys={placeFigureKeys}
+          />
         </section>
       ) : focus?.startsWith("event:") ? (
         <section className="map-context-panel" data-event-context aria-labelledby="event-map-context-title">

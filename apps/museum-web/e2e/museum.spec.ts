@@ -196,6 +196,35 @@ test("map city selection opens the object dossier and figure relation network", 
   await expect(page.getByRole("dialog").locator(".relation-network")).toBeVisible();
 });
 
+test("map timeline rail, city people and scoped relations stay linked", async ({ page }) => {
+  await page.goto("/explore?lang=en&view=map");
+  await waitForMuseum(page);
+  await waitForAtlas(page);
+
+  const rail = page.locator("[data-atlas-timeline]");
+  await expect(rail.locator("[data-timeline-track]")).toBeVisible();
+  await expect(rail.locator(".atlas-timeline-events > button").first()).toBeVisible();
+  expect(await rail.locator("[data-timeline-track-focus]").count()).toBeGreaterThan(10);
+
+  await rail.locator("[data-timeline-track-focus]").first().click();
+  await expect(page).toHaveURL(/focus=place%3A/);
+  await expect(page.locator(".atlas-object-panel .atlas-tab-nav button.active")).toContainText("Figures");
+  await expect(page.locator("[data-atlas-scope-note]")).toContainText("Connected figures");
+
+  await page.goto("/explore?lang=en&view=map&focus=place%3Achangan");
+  await waitForAtlas(page);
+  await expect(page.locator("[data-city-people] .map-context-figure-list li")).toHaveCount(13);
+  const cityRelations = page.locator('[data-relation-scope="true"]');
+  await expect(cityRelations).toBeVisible();
+  await expect(cityRelations.locator(".relation-network-edge")).toHaveCount(1);
+  await expect(cityRelations).toContainText("Yixing");
+  await expect(cityRelations).toContainText("Sima Chengzhen");
+
+  await cityRelations.locator(".relation-network-node").first().click();
+  await expect(page).toHaveURL(/focus=figure%3A/);
+  await expect(page.locator("[data-figure-trajectory]")).toBeVisible();
+});
+
 test("figure focus presents an elegant saying card and only real person relations", async ({ page }) => {
   await page.goto("/explore?lang=en&view=map&focus=figure%3Aconfucius");
   await waitForMuseum(page);
