@@ -1,0 +1,56 @@
+{
+  "id": "b587cd4f-49d2-585b-84bb-93b8bc6aa59e",
+  "locale": "en",
+  "kind": "route",
+  "slug": "changan-luoyang-imperial-corridor",
+  "title": "Chang'an–Luoyang imperial corridor",
+  "tradition": "convergence",
+  "evidence": "historical_inferred",
+  "timeLabel": "Sui–Tang: 581–907",
+  "shortSummary": "The route organizes political, educational, religious and human movement between the two capitals as a spatial research frame.",
+  "curatorialDescription": [
+    "It is not a claim of one precisely reconstructed road, but a model built from cities, passes, valleys and institutional links."
+  ],
+  "researchNote": "Period-specific branches, postal stations, distances and GIS sources remain to be added.",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:historical-geography",
+      "title": "Historical geography and urban gazetteers of the Sui–Tang period",
+      "locator": "长安、洛阳、敦煌历史名称与地理范围",
+      "grade": "A",
+      "role": "Geographic basis for real places, historical names and coordinate approximations"
+    },
+    {
+      "id": "source:unesco-silk-roads-corridor",
+      "title": "UNESCO World Heritage Centre: Silk Roads, Chang'an–Tianshan Corridor",
+      "locator": "World Heritage List no. 1442; component coordinates and corridor description",
+      "grade": "A",
+      "role": "Geographic basis for Chang'an, Luoyang, the Great Wild Goose Pagoda, Kucha-region sites and the transregional corridor",
+      "url": "https://whc.unesco.org/en/list/1442/maps/"
+    },
+    {
+      "id": "source:tang-imperial-records",
+      "title": "Official histories and institutional records of the Sui–Tang period",
+      "locator": "帝王、制度与年代条目；具体版本和卷页待核",
+      "grade": "B",
+      "role": "Research reference for Sui–Tang figures, capitals, institutions and event dates"
+    }
+  ],
+  "profile": {
+    "routeKind": "official_travel",
+    "certainty": "reconstructed",
+    "waypointSlugs": [
+      "changan",
+      "luoyang"
+    ],
+    "corridorNote": {
+      "zh-CN": "这是两京之间的历史廊道模型，不表示单一路线或精确线位。",
+      "en": "This is a historical corridor model between the capitals, not one road or a precise alignment."
+    },
+    "animationAllowed": false
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

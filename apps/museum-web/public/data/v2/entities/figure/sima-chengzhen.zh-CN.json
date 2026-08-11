@@ -1,31 +1,69 @@
 {
+  "id": "5bf99d90-4c5a-575b-8a79-7957a33ef9eb",
   "locale": "zh-CN",
   "kind": "figure",
   "slug": "sima-chengzhen",
   "title": "司马承祯",
-  "subtitle": "647—735 · 唐代道教人物",
+  "subtitle": "道教上清传统的代表人物",
   "tradition": "daoism",
-  "evidence": "历史有据 · 传统叙事并存",
-  "timeLabel": "647—735",
-  "shortSummary": "司马承祯连接山林修持、经典传统与唐代宫廷，是理解唐代道教多重空间的重要人物。",
+  "evidence": "historical_documented",
+  "timeLabel": "647–735",
+  "shortSummary": "司马承祯连接山林修炼、道教法脉与唐代皇室对宗教人物的吸纳。",
   "curatorialDescription": [
-    "司马承祯的意义不只在个人生平，而在他跨越了山岳、法脉与宫廷三个空间。道教在唐代既可以表现为山林修持，也可以进入国家礼仪和皇室网络。",
-    "把他放入关系图时，需要区分师承传统、历史活动和后世尊崇。它们可能指向同一人物，却属于不同证据层。",
-    "这一人物也提醒我们：道家哲学概念与组织化道教并非同一对象，但可以通过经典解释和实践发生联系。"
+    "司马承祯让我们看到，道教并不是抽象的哲学标签，也不是单一的宫廷制度，而是由人物、山岳、法脉、经典和皇室关系共同组成的历史网络。",
+    "他的条目需要同时呈现历史活动、传统身份和后世记忆，不能只用一条生平年份替代复杂的传统时间。"
   ],
-  "researchNote": "第一版只展示其与唐代宫廷、山岳修持和经典传统的基础关系；法脉细节将在来源和传统审核后扩展。",
+  "researchNote": "本条目为 Alpha 结构化样本，后续需要补充法脉、宫观和具体诏见记录的版本化来源。",
   "keyFacts": [
-    { "label": "传统", "value": "道教上清传统相关" },
-    { "label": "空间", "value": "山岳修持 · 宫廷网络" },
-    { "label": "视图", "value": "人物关系 · 时间轴" }
+    {
+      "label": "传统关联",
+      "value": "道教上清传统"
+    },
+    {
+      "label": "空间线索",
+      "value": "山岳与宫观网络"
+    }
   ],
-  "related": [
-    { "kind": "text", "slug": "daodejing", "title": "《道德经》", "relation": "经典解释背景" },
-    { "kind": "concept", "slug": "naturalness", "title": "自然", "relation": "相关概念" },
-    { "kind": "place", "slug": "louguantai", "title": "楼观台", "relation": "唐代道教地点网络" }
-  ],
+  "related": [],
   "sources": [
-    { "title": "《旧唐书》", "locator": "道教人物相关列传与纪事", "grade": "A", "role": "历史人物与宫廷活动线索" },
-    { "title": "唐代道教史研究", "locator": "司马承祯与唐代宫廷章节", "grade": "B", "role": "宗派与制度背景；正式版需补完整书目信息" }
-  ]
+    {
+      "id": "source:sima-old-tang-biography",
+      "title": "《旧唐书·隐逸传》司马承祯条",
+      "locator": "《旧唐书》隐逸传：司马承祯条；召见、入朝活动与王屋山活动记载",
+      "grade": "A",
+      "role": "司马承祯生平、入朝活动与唐代制度联系的一手史料定位",
+      "url": "https://ctext.org/wiki.pl?if=gb&remap=gb&res=456206"
+    },
+    {
+      "id": "source:sima-chengzhen-full-tang-text",
+      "title": "《全唐文·司马承祯》",
+      "locator": "卷九百二十四：司马承祯条；道士身份、召至都与王屋山建观记载",
+      "grade": "A",
+      "role": "补充司马承祯道士身份、入朝召见和制度关系的唐代文献定位",
+      "url": "https://ctext.org/wiki.pl?chapter=226793&if=gb"
+    },
+    {
+      "id": "source:daoist-historical-record",
+      "title": "隋唐道教人物与制度研究资料",
+      "locator": "人物、宫观与皇室关系专题",
+      "grade": "B",
+      "role": "司马承祯及隋唐道教制度语境的学术参考"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "道·儒·佛文明数字博物馆策展与方法说明",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "项目的策展框架与术语规则"
+    }
+  ],
+  "profile": {
+    "historicity": "documented",
+    "figureClass": "historical_person",
+    "gender": "male",
+    "canonicalNameOriginal": "司马承祯",
+    "nameLanguageCode": "lzh"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
 }

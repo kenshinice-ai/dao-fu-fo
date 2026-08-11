@@ -1,0 +1,83 @@
+{
+  "id": "00d53b72-86d2-5115-99eb-ba9ffceca80f",
+  "locale": "zh-CN",
+  "kind": "passage",
+  "slug": "turning-of-dharma-wheel",
+  "title": "这是苦圣谛",
+  "subtitle": "《转法轮经》中的四圣谛言说",
+  "tradition": "buddhism",
+  "evidence": "historical_inferred",
+  "timeLabel": "SN 56.11；鹿野苑初转法轮传述",
+  "shortSummary": "这一短句把佛教教法放回鹿野苑初转法轮的经文语境，而不是抽离成一条现代格言。",
+  "curatorialDescription": [
+    "原文、版本、说话者归属和鹿野苑事件分别建模；佛陀的言说关系标记为经由传述者保存。"
+  ],
+  "researchNote": "原典使用巴利语数字版本作为研究入口；汉译、异本和更完整段落将在后续校勘批次补齐。",
+  "keyFacts": [],
+  "quote": {
+    "original": "Idaṃ dukkhaṃ ariyasaccaṃ.",
+    "interpretation": "这是苦圣谛。",
+    "locator": "SN 56.11"
+  },
+  "related": [
+    {
+      "kind": "text",
+      "slug": "dhammacakkappavattana-sutta",
+      "title": "《转法轮经》",
+      "relation": "摘录自"
+    }
+  ],
+  "sources": [
+    {
+      "id": "source:buddha-early-texts",
+      "title": "巴利经藏早期佛教文本：MN 26 与 SN 56.11",
+      "locator": "MN 26 Ariyapariyesanā：求法与到达鹿野苑；SN 56.11 Dhammacakkappavattana：鹿野苑初转法轮文本",
+      "grade": "A",
+      "role": "释迦牟尼生平叙事、早期教法传述与鹿野苑空间关联的原典入口；不把经文传述等同于逐字现场记录",
+      "url": "https://suttacentral.net/sn56.11/en/sujato"
+    },
+    {
+      "id": "source:sn56-11-thanissaro",
+      "title": "Access to Insight：SN 56.11 Thanissaro 英译",
+      "locator": "SN 56.11，四圣谛段落；“This is the noble truth of stress.”",
+      "grade": "A",
+      "role": "同一经文的英译版本入口，用于把译者措辞与巴利语段落分层比较；英文摘录受原站许可约束",
+      "url": "https://www.accesstoinsight.org/tipitaka/sn/sn56/sn56.011.than.html"
+    }
+  ],
+  "profile": {
+    "textSlug": "dhammacakkappavattana-sutta",
+    "textVersionSlug": "dhammacakkappavattana-sutta-pali",
+    "passageKind": "scripture_excerpt",
+    "locatorOriginal": "相应部 56.11",
+    "locatorNormalised": "Saṃyutta Nikāya 56.11",
+    "originalText": "Idaṃ dukkhaṃ ariyasaccaṃ.",
+    "punctuatedText": "Idaṃ dukkhaṃ ariyasaccaṃ.",
+    "modernZh": "这是苦圣谛。",
+    "translationEn": "This is the noble truth of suffering.",
+    "ritualSensitivity": "public_textual",
+    "attributionStatus": "recorded_by_others",
+    "variantReadings": [
+      {
+        "id": "variant:turning-dukkha-english-renderings",
+        "kind": "translation",
+        "status": "attested",
+        "label": {
+          "zh-CN": "dukkha 的英译措辞",
+          "en": "English renderings of dukkha"
+        },
+        "form": "suffering / stress",
+        "note": {
+          "zh-CN": "当前巴利语段落的英译字段使用 suffering；同一经文的 Thanissaro 英译版本使用 stress。本条只记录译者措辞差异，不把它当作巴利语底本异文或唯一释义。",
+          "en": "The current Pāli passage uses suffering in its English field; the Thanissaro English witness uses stress. This records a translator-wording difference, not a manuscript variant or a single authorised interpretation of the Pāli."
+        },
+        "sourceIds": [
+          "source:buddha-early-texts",
+          "source:sn56-11-thanissaro"
+        ]
+      }
+    ]
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

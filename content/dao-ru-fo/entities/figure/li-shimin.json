@@ -117,10 +117,12 @@
   ],
   "sourceIds": [
     "source:tang-imperial-records",
-    "source:editorial-method"
+    "source:editorial-method",
+    "source:tang-taizong-ctext"
   ],
   "profile": {
     "historicity": "documented",
+    "figureClass": "historical_person",
     "gender": "male",
     "canonicalNameOriginal": "李世民",
     "nameLanguageCode": "lzh"

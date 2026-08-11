@@ -1,0 +1,308 @@
+[
+  {
+    "kind": "text",
+    "slug": "zhuangzi",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "《庄子》",
+        "subtitle": "庄周传统与复合篇章层",
+        "shortSummary": "《庄子》是道家寓言、哲学论辩与后世编纂传承的复合文本入口。",
+        "curatorialDescription": ["人物庄周、篇章层和后世注疏分开建模，不把全书当作单一作者的逐字记录。"],
+        "researchNote": "篇章归属、成书区间和注疏传承仍需逐篇核对。",
+        "timeLabel": "约公元前 4–3 世纪；成书层次有争议",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Zhuangzi",
+        "subtitle": "The Zhuang Zhou tradition and layered chapters",
+        "shortSummary": "The Zhuangzi is a composite entry into Daoist parable, philosophical debate and later textual transmission.",
+        "curatorialDescription": ["The figure Zhuang Zhou, chapter layers and later commentary remain separate rather than treating the whole text as a single verbatim authorial record."],
+        "researchNote": "Chapter attribution, composition ranges and commentary transmission require item-level review.",
+        "timeLabel": "c. fourth–third centuries BCE; layers contested",
+        "keyFacts": []
+      }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:zhuangzi-ctext" }],
+    "temporalAssertions": [{ "predicate": "composition", "timeType": "range", "startYear": -350, "endYear": -250, "displayDate": { "zh-CN": "约公元前 4–3 世纪；成书层次有争议", "en": "c. fourth–third centuries BCE; layers contested" }, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:zhuangzi-ctext" }],
+    "sourceIds": ["source:zhuangzi-ctext", "source:editorial-method"],
+    "related": [] ,
+    "profile": { "textKind": "classic", "originalLanguageCode": "lzh", "canonicalStatus": "influential", "attributionStatus": "composite" }
+  },
+  {
+    "kind": "text",
+    "slug": "mengzi",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "《孟子》",
+        "subtitle": "游说、政治伦理与经典化",
+        "shortSummary": "《孟子》保存孟轲及其学派关于性善、政治责任和教育的言说与编纂层。",
+        "curatorialDescription": ["文本中的对话、传述和后世经典地位保持分层，避免把后世经学地位写回战国现场。"],
+        "researchNote": "篇章形成、人物言说的记录层与汉唐以来经典化仍需继续拆分。",
+        "timeLabel": "约公元前 4 世纪；传述与编纂层",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Mengzi",
+        "subtitle": "Itinerant counsel, political ethics and canonisation",
+        "shortSummary": "The Mengzi preserves sayings and compiled layers associated with Meng Ke and his school on human nature, political responsibility and education.",
+        "curatorialDescription": ["Dialogue, transmission and later canonical status remain distinct rather than projecting later scholastic authority back into the Warring States setting."],
+        "researchNote": "Chapter formation, recorded speech and later canonisation require further separation.",
+        "timeLabel": "c. fourth century BCE; transmitted and compiled layers",
+        "keyFacts": []
+      }
+    },
+    "traditions": [{ "tradition": "confucianism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_inferred", "sourceId": "source:mengzi-ctext" }],
+    "temporalAssertions": [{ "predicate": "composition", "timeType": "range", "startYear": -400, "endYear": -300, "displayDate": { "zh-CN": "约公元前 4 世纪；传述与编纂层", "en": "c. fourth century BCE; transmitted and compiled layers" }, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:mengzi-ctext" }],
+    "sourceIds": ["source:mengzi-ctext", "source:editorial-method"],
+    "related": [],
+    "profile": { "textKind": "classic", "originalLanguageCode": "lzh", "canonicalStatus": "canonical", "attributionStatus": "composite" }
+  },
+  {
+    "kind": "text",
+    "slug": "zhengyi-mengwei-dao",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "traditional_account",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "《正一盟威道》传统",
+        "subtitle": "天师道组织与授受叙事的文本入口",
+        "shortSummary": "该入口用于追踪正一道/天师道的组织、授受与后世传记传统，不把不同成书层压成一卷书。",
+        "curatorialDescription": ["人物祖师、经箓传统与后世神圣化分别进入关系和证据层。"],
+        "researchNote": "具体经名、版本和成书年代需继续绑定道藏目录与传记资料。",
+        "timeLabel": "东汉至六朝形成层；年代不确",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Zhengyi Mengwei Dao tradition",
+        "subtitle": "A textual entry into Celestial Masters organisation and transmission",
+        "shortSummary": "This entry traces Zhengyi/Celestial Masters organisation, transmission and hagiographic layers without collapsing different textual formations into one book.",
+        "curatorialDescription": ["Founder identity, registers and later sacralisation are kept in separate relation and evidence layers."],
+        "researchNote": "Specific titles, editions and formation dates require Daoist-catalogue and biographical review.",
+        "timeLabel": "Eastern Han to Six Dynasties formation layers; date uncertain",
+        "keyFacts": []
+      }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "traditional_account", "sourceId": "source:zhang-daoling-ctext" }],
+    "temporalAssertions": [{ "predicate": "textual_circulation", "timeType": "range", "startYear": 100, "endYear": 300, "displayDate": { "zh-CN": "东汉至六朝形成层；年代不确", "en": "Eastern Han to Six Dynasties formation layers; date uncertain" }, "confidence": "low", "evidenceLayer": "traditional_account", "sourceId": "source:zhang-daoling-ctext" }],
+    "sourceIds": ["source:zhang-daoling-ctext", "source:editorial-method"],
+    "related": [],
+    "profile": { "textKind": "ritual_text", "originalLanguageCode": "lzh", "canonicalStatus": "contested", "attributionStatus": "traditional" }
+  },
+  {
+    "kind": "text",
+    "slug": "baopuzi",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "《抱朴子》",
+        "subtitle": "葛洪的内外篇与道教知识论述",
+        "shortSummary": "《抱朴子》连接炼养、神仙论、政治伦理与东晋知识生产，是葛洪人物入口的核心文本。",
+        "curatorialDescription": ["内篇、外篇、作者自述和后世道教接受保持不同证据层，不把术数叙述直接写成现代实验事实。"],
+        "researchNote": "篇章版本、内外篇关系和后世注本仍需继续建立版本索引。",
+        "timeLabel": "约 317–330；东晋文本活动",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Baopuzi",
+        "subtitle": "Ge Hong's inner and outer chapters and Daoist knowledge",
+        "shortSummary": "The Baopuzi connects cultivation, immortality discourse, political ethics and Eastern Jin knowledge production as Ge Hong's core textual entry.",
+        "curatorialDescription": ["Inner and outer chapters, authorial self-presentation and later Daoist reception remain distinct; technical narratives are not rewritten as modern experimental fact."],
+        "researchNote": "Chapter versions, inner/outer relationships and later commentaries require a fuller version index.",
+        "timeLabel": "c. 317–330; Eastern Jin textual activity",
+        "keyFacts": []
+      }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:baopuzi-ctext" }],
+    "temporalAssertions": [{ "predicate": "composition", "timeType": "range", "startYear": 317, "endYear": 330, "displayDate": { "zh-CN": "约 317–330；东晋文本活动", "en": "c. 317–330; Eastern Jin textual activity" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:baopuzi-ctext" }],
+    "sourceIds": ["source:baopuzi-ctext", "source:editorial-method"],
+    "related": [],
+    "profile": { "textKind": "treatise", "originalLanguageCode": "lzh", "canonicalStatus": "influential", "attributionStatus": "known" }
+  },
+  {
+    "kind": "text",
+    "slug": "ashoka-edicts",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "阿育王敕诏",
+        "subtitle": "铭刻、治理与法的传播",
+        "shortSummary": "阿育王敕诏提供跨区域治理、伦理政策与铭刻传播的物证入口。",
+        "curatorialDescription": ["敕诏文字、遗址分布与后世佛教传记分别建模；铭刻证据不自动证明所有传记叙事。"],
+        "researchNote": "不同语种敕诏、年代与遗址序列需要逐条连接考古目录。",
+        "timeLabel": "约公元前 268–232 年；铭刻与统治语境",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Ashokan Edicts",
+        "subtitle": "Inscriptions, governance and the circulation of dhamma",
+        "shortSummary": "The Ashokan Edicts provide material evidence for transregional governance, ethical policy and inscriptional circulation.",
+        "curatorialDescription": ["Edict wording, site distribution and later Buddhist biography remain separate; inscriptional evidence does not automatically verify every biographical narrative."],
+        "researchNote": "Edicts in different languages, dates and site sequences require item-level archaeological cataloguing.",
+        "timeLabel": "c. 268–232 BCE; inscriptional and imperial context",
+        "keyFacts": []
+      }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:ashoka-edicts-unesco" }],
+    "temporalAssertions": [{ "predicate": "textual_attestation", "timeType": "range", "startYear": -268, "endYear": -232, "displayDate": { "zh-CN": "约公元前 268–232 年；铭刻与统治语境", "en": "c. 268–232 BCE; inscriptional and imperial context" }, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:ashoka-edicts-unesco" }],
+    "sourceIds": ["source:ashoka-edicts-unesco", "source:editorial-method"],
+    "related": [],
+    "profile": { "textKind": "historical_record", "originalLanguageCode": "pra", "canonicalStatus": "influential", "attributionStatus": "known" }
+  },
+  {
+    "kind": "text",
+    "slug": "mulamadhyamakakarika",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "《中论》",
+        "subtitle": "中观论辩与龙树传统",
+        "shortSummary": "《中论》是龙树与中观哲学传统的核心论辩文本，影响后来的汉译佛教解释。",
+        "curatorialDescription": ["文本归属、年代和汉译传播分开标注；后世宗派影响不直接写回龙树生平。"],
+        "researchNote": "梵本、藏译、汉译与注疏链条需要进一步绑定版本和翻译记录。",
+        "timeLabel": "约公元 2–3 世纪；年代与归属有争议",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Mūlamadhyamakakārikā",
+        "subtitle": "Madhyamaka argument and the Nāgārjuna tradition",
+        "shortSummary": "The Mūlamadhyamakakārikā is a central argumentative text for Nāgārjuna and Madhyamaka traditions, with later influence on Chinese Buddhist interpretation.",
+        "curatorialDescription": ["Textual attribution, dating and Chinese transmission remain separate; later sectarian impact is not written back into Nāgārjuna's biography."],
+        "researchNote": "Sanskrit, Tibetan, Chinese and commentary chains require edition- and translation-level links.",
+        "timeLabel": "c. second–third centuries CE; date and attribution contested",
+        "keyFacts": []
+      }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:nagarjuna-sep" }],
+    "temporalAssertions": [{ "predicate": "composition", "timeType": "range", "startYear": 150, "endYear": 250, "displayDate": { "zh-CN": "约公元 2–3 世纪；年代与归属有争议", "en": "c. second–third centuries CE; date and attribution contested" }, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:nagarjuna-sep" }],
+    "sourceIds": ["source:nagarjuna-sep", "source:editorial-method"],
+    "related": [],
+    "profile": { "textKind": "treatise", "originalLanguageCode": "sa", "canonicalStatus": "influential", "attributionStatus": "contested" }
+  },
+  {
+    "kind": "text",
+    "slug": "lotus-sutra",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "《法华经》汉译传统",
+        "subtitle": "鸠摩罗什译经与经典流通",
+        "shortSummary": "此条以鸠摩罗什时期的汉译与流通层为入口，不把汉译节点等同于经文全部成书历史。",
+        "curatorialDescription": ["经文的印度形成、汉译文本和后世接受分开建模；当前入口聚焦翻译与制度化传播。"],
+        "researchNote": "具体译本、译者归属和版本谱系需继续接入佛典目录。",
+        "timeLabel": "约 401–413；汉译与流通层",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Lotus Sutra: Chinese translation tradition",
+        "subtitle": "Kumarajiva's translation context and textual circulation",
+        "shortSummary": "This entry focuses on the Chinese translation and circulation layer associated with Kumarajiva without equating it with the whole composition history of the scripture.",
+        "curatorialDescription": ["Indian formation, Chinese translation and later reception remain separate; the current entry foregrounds translation and institutional circulation."],
+        "researchNote": "Specific translations, attribution and version genealogy require Buddhist-catalogue links.",
+        "timeLabel": "c. 401–413; Chinese translation and circulation layer",
+        "keyFacts": []
+      }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:kumarajiva-biography" }],
+    "temporalAssertions": [{ "predicate": "translation", "timeType": "range", "startYear": 401, "endYear": 413, "displayDate": { "zh-CN": "约 401–413；汉译与流通层", "en": "c. 401–413; Chinese translation and circulation layer" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:kumarajiva-biography" }],
+    "sourceIds": ["source:kumarajiva-biography", "source:editorial-method"],
+    "related": [],
+    "profile": { "textKind": "scripture", "originalLanguageCode": "sa", "canonicalStatus": "canonical", "attributionStatus": "traditional" }
+  },
+  {
+    "kind": "text",
+    "slug": "foguoji",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "《佛国记》／《法显传》",
+        "subtitle": "求法旅行与南亚见闻记录",
+        "shortSummary": "《佛国记》把法显的求法路线、僧团见闻和回国后的文字记录连接起来。",
+        "curatorialDescription": ["旅行记录、后世路线图与具体遗址分别保留证据层，不把区域锚点画成逐日路线。"],
+        "researchNote": "文本版本、译注与路线节点需继续按地点和段落拆分。",
+        "timeLabel": "约 400–420；归国后记录层",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Foguoji / Record of Faxian",
+        "subtitle": "Pilgrimage travel and observations across South Asia",
+        "shortSummary": "The Foguoji connects Faxian's pilgrimage route, observations of monastic communities and the written record produced after his return.",
+        "curatorialDescription": ["Travel record, later route maps and specific sites retain separate evidence layers; regional anchors are not drawn as a day-by-day itinerary."],
+        "researchNote": "Text versions, translations and route nodes require place- and passage-level separation.",
+        "timeLabel": "c. 400–420; post-return recording layer",
+        "keyFacts": []
+      }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:faxian-foguoji" }],
+    "temporalAssertions": [{ "predicate": "composition", "timeType": "range", "startYear": 400, "endYear": 420, "displayDate": { "zh-CN": "约 400–420；归国后记录层", "en": "c. 400–420; post-return recording layer" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:faxian-foguoji" }],
+    "sourceIds": ["source:faxian-foguoji", "source:editorial-method"],
+    "related": [],
+    "profile": { "textKind": "historical_record", "originalLanguageCode": "lzh", "canonicalStatus": "influential", "attributionStatus": "known" }
+  },
+  {
+    "kind": "text",
+    "slug": "mythic-cosmologies",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "mythic_symbolic",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "上古神话与道教宇宙叙事",
+        "subtitle": "开辟、造人、秩序与神圣谱系的文本见证",
+        "shortSummary": "该文本入口汇集盘古、女娲、伏羲、黄帝、西王母和太上老君相关的神话/神圣叙事层。",
+        "curatorialDescription": ["这里展示的是文本记忆与宇宙叙事，不是可按历史地图验证的地理或人物生平。"],
+        "researchNote": "不同文本、时代和地域的神话版本需要分别建档；当前只提供比较入口。",
+        "timeLabel": "神话与神圣传统时间：无单一历史纪年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Mythic and Daoist cosmological narratives",
+        "subtitle": "Textual witnesses for creation, order and sacred genealogies",
+        "shortSummary": "This text entry gathers mythic and sacred narrative layers associated with Pangu, Nuwa, Fu Xi, Huangdi, Xi Wangmu and Taishang Laojun.",
+        "curatorialDescription": ["It represents textual memory and cosmological narrative, not geography or biography that can be verified on a historical map."],
+        "researchNote": "Versions across texts, periods and regions require separate records; this is currently a comparative gateway.",
+        "timeLabel": "Mythic and sacred traditional time: no single historical date",
+        "keyFacts": []
+      }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "mythic_symbolic", "sourceId": "source:mythic-figures-ctext" }],
+    "temporalAssertions": [{ "predicate": "analytic_scope", "timeType": "atemporal", "displayDate": { "zh-CN": "神话与神圣传统时间：无单一历史纪年", "en": "Mythic and sacred traditional time: no single historical date" }, "confidence": "unknown", "evidenceLayer": "mythic_symbolic", "sourceId": "source:mythic-figures-ctext" }],
+    "sourceIds": ["source:mythic-figures-ctext", "source:taishang-laojun-ctext", "source:editorial-method"],
+    "related": [],
+    "profile": { "textKind": "other", "originalLanguageCode": "lzh", "canonicalStatus": "contested", "attributionStatus": "composite" }
+  }
+]

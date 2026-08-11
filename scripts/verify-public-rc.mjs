@@ -64,7 +64,7 @@ function structuralDependencies(entity) {
 }
 
 function requiredChecks(entity) {
-  const checks = ["schema", "fact", "bilingual", "rights", "editorial"];
+  const checks = ["schema", "fact", "bilingual", "rights", "accessibility", "editorial"];
   return entity.isFeatured || ["figure", "concept", "institution", "practice"].includes(entity.kind)
     ? [...checks, "tradition"]
     : checks;
@@ -105,6 +105,15 @@ const relationMap = new Map(relations.map((relation) => [relation.id, relation])
 const audio = AudioRecordSchema.array().parse(await readJson(resolve(contentRoot, "dao-ru-fo/audio.json")));
 const audioMap = new Map(audio.map((record) => [record.id, record]));
 const reviews = JSON.parse(await readFile(resolve(contentRoot, "dao-ru-fo/reviews.json"), "utf8"));
+for (const review of reviews) {
+  if (!["passed", "waived"].includes(review.status)) continue;
+  if (review.reviewer.startsWith("agent:") || review.reviewer.startsWith("role:")) {
+    throw new Error(`Completed Public RC checks require an identified reviewer: ${review.id}`);
+  }
+  if (review.reviewer.startsWith("automated:") && (review.checkKind !== "schema" || review.status !== "passed")) {
+    throw new Error(`Automated reviewers may only pass schema checks: ${review.id}`);
+  }
+}
 const reviewsFor = (subjectKind, subjectKey) => reviews.filter((review) => review.subjectKind === subjectKind && review.subjectKey === subjectKey);
 
 const selectedEntityKeys = [...candidate.coreEntities, ...candidate.dependencyEntities];
@@ -113,9 +122,20 @@ const selectedRelationSet = new Set(candidate.relations);
 const excludedRelationSet = new Set(candidate.excludedRelations.map((relation) => relation.id));
 const blockers = [];
 const warnings = [];
+const spatialRelationTypes = new Set(["active_in", "travelled_through", "institutional_context", "located_in"]);
 
 function addBlocker(subject, code, detail) {
   blockers.push({ subject, code, detail });
+}
+
+function hasSelectedSpatialAnchor(key) {
+  return relations.some((relation) => {
+    if (!selectedRelationSet.has(relation.id) || !spatialRelationTypes.has(relation.relationType)) return false;
+    const source = `${relation.source.kind}:${relation.source.slug}`;
+    const target = `${relation.target.kind}:${relation.target.slug}`;
+    const other = source === key ? relation.target : target === key ? relation.source : null;
+    return Boolean(other && ["place", "institution", "route"].includes(other.kind));
+  });
 }
 
 for (const key of selectedEntityKeys) {
@@ -137,6 +157,8 @@ for (const key of selectedEntityKeys) {
   if (linkedSources.length !== sourceIds.length) addBlocker(key, "MISSING_SOURCE", "One or more source IDs are not present");
   if (!linkedSources.some(verifiedClaimSource)) addBlocker(key, "NO_VERIFIED_LOCATOR", "Requires an edition, item or precise verified external source");
   if (linkedSources.some((source) => ["unknown", "restricted"].includes(source.rightsStatus))) addBlocker(key, "SOURCE_RIGHTS_BLOCKED", "A linked source has unknown or restricted rights");
+  if (entity.kind === "figure" && !entity.temporalAssertions.length) addBlocker(key, "MISSING_TIME_ANCHOR", "Featured figures require at least one temporal assertion");
+  if (entity.kind === "figure" && !hasSelectedSpatialAnchor(key)) addBlocker(key, "MISSING_SPATIAL_ANCHOR", "Featured figures require a selected relation to a place, institution or route");
   if (entity.profile.collectionStatus === "placeholder") addBlocker(key, "OBJECT_PLACEHOLDER", "Museum object collection record is still a placeholder");
   if (entity.reviewStatus !== "publishable") warnings.push({ subject: key, code: "PUBLISHABLE_STATE_PENDING", detail: `reviewStatus=${entity.reviewStatus}; promotion will set it only after all checks pass` });
 }

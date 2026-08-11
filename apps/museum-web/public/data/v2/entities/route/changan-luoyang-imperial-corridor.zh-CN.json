@@ -1,0 +1,56 @@
+{
+  "id": "b587cd4f-49d2-585b-84bb-93b8bc6aa59e",
+  "locale": "zh-CN",
+  "kind": "route",
+  "slug": "changan-luoyang-imperial-corridor",
+  "title": "长安—洛阳帝国走廊",
+  "tradition": "convergence",
+  "evidence": "historical_inferred",
+  "timeLabel": "隋唐：581–907",
+  "shortSummary": "这条路线把两京之间的政治、教育、宗教与人员流动组织为可研究的空间骨架。",
+  "curatorialDescription": [
+    "路线不是一条精确复原道路，而是由城市、关隘、河谷和制度联系组成的研究模型。"
+  ],
+  "researchNote": "需补充各时期道路分支、驿站、里程和 GIS 来源。",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:historical-geography",
+      "title": "隋唐历史地理与城市沿革资料",
+      "locator": "长安、洛阳、敦煌历史名称与地理范围",
+      "grade": "A",
+      "role": "真实地点、历史名称和坐标示意的地理依据"
+    },
+    {
+      "id": "source:unesco-silk-roads-corridor",
+      "title": "UNESCO 世界遗产中心：丝绸之路长安—天山廊道路网",
+      "locator": "World Heritage List no. 1442; component coordinates and corridor description",
+      "grade": "A",
+      "role": "长安、洛阳、大雁塔、龟兹区域遗址及跨区域廊道的地理依据",
+      "url": "https://whc.unesco.org/en/list/1442/maps/"
+    },
+    {
+      "id": "source:tang-imperial-records",
+      "title": "隋唐正史人物与制度记录",
+      "locator": "帝王、制度与年代条目；具体版本和卷页待核",
+      "grade": "B",
+      "role": "隋唐人物、都城、制度和事件时间的研究参考"
+    }
+  ],
+  "profile": {
+    "routeKind": "official_travel",
+    "certainty": "reconstructed",
+    "waypointSlugs": [
+      "changan",
+      "luoyang"
+    ],
+    "corridorNote": {
+      "zh-CN": "这是两京之间的历史廊道模型，不表示单一路线或精确线位。",
+      "en": "This is a historical corridor model between the capitals, not one road or a precise alignment."
+    },
+    "animationAllowed": false
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

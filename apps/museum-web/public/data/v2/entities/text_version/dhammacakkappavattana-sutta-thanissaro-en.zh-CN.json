@@ -1,0 +1,37 @@
+{
+  "id": "d1fab361-2d92-5c25-a277-2a59e087fd64",
+  "locale": "zh-CN",
+  "kind": "text_version",
+  "slug": "dhammacakkappavattana-sutta-thanissaro-en",
+  "title": "《转法轮经》Thanissaro 英译",
+  "subtitle": "SN 56.11 的英文翻译见证",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "现代英译；对应 SN 56.11 传述层",
+  "shortSummary": "这一版本把同一经文的英译措辞与巴利语版本分开保存，便于比较译者选择而不把译文当作原典。",
+  "curatorialDescription": [
+    "英译版本用于观察 dukkha 在不同译者语境中的措辞选择；它不是另一部独立经典，也不替代巴利语文本。"
+  ],
+  "researchNote": "当前只收录短引文作为版本对读切片；完整译文、版权和更多英译将按原站许可逐项审核。",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:sn56-11-thanissaro",
+      "title": "Access to Insight：SN 56.11 Thanissaro 英译",
+      "locator": "SN 56.11，四圣谛段落；“This is the noble truth of stress.”",
+      "grade": "A",
+      "role": "同一经文的英译版本入口，用于把译者措辞与巴利语段落分层比较；英文摘录受原站许可约束",
+      "url": "https://www.accesstoinsight.org/tipitaka/sn/sn56/sn56.011.than.html"
+    }
+  ],
+  "profile": {
+    "textSlug": "dhammacakkappavattana-sutta",
+    "versionKind": "translation",
+    "languageCode": "en",
+    "citationLabel": "Access to Insight, SN 56.11, translated by Thanissaro Bhikkhu",
+    "rightsStatus": "quotation_only"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

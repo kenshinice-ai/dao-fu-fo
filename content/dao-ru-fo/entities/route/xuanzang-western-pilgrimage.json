@@ -1,8 +1,8 @@
 {
   "kind": "route",
   "slug": "xuanzang-western-pilgrimage",
-  "publicationState": "preview",
-  "reviewStatus": "bilingual_reviewed",
+  "publicationState": "public",
+  "reviewStatus": "publishable",
   "primaryEvidenceLayer": "historical_inferred",
   "importance": 5,
   "isFeatured": true,
@@ -17,7 +17,18 @@
       ],
       "researchNote": "需要补齐出发、返回、停留节点、路线版本和地图数据来源；当前只作为 Alpha 路线骨架。",
       "timeLabel": "约 629–645",
-      "keyFacts": [{ "label": { "zh-CN": "路线类型", "en": "Route type" }, "value": { "zh-CN": "求法与知识传播路线", "en": "Pilgrimage and knowledge-transmission route" } }]
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "路线类型",
+            "en": "Route type"
+          },
+          "value": {
+            "zh-CN": "求法与知识传播路线",
+            "en": "Pilgrimage and knowledge-transmission route"
+          }
+        }
+      ]
     },
     "en": {
       "title": "Xuanzang's western pilgrimage route",
@@ -29,11 +40,64 @@
       ],
       "researchNote": "Departure, return, stop nodes, route variants and map sources still need to be added; this is an Alpha route skeleton.",
       "timeLabel": "c. 629–645",
-      "keyFacts": [{ "label": { "zh-CN": "路线类型", "en": "Route type" }, "value": { "zh-CN": "求法与知识传播路线", "en": "Pilgrimage and knowledge-transmission route" } }]
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "路线类型",
+            "en": "Route type"
+          },
+          "value": {
+            "zh-CN": "求法与知识传播路线",
+            "en": "Pilgrimage and knowledge-transmission route"
+          }
+        }
+      ]
     }
   },
-  "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:xuanzang-records" }],
-  "temporalAssertions": [{ "predicate": "route_activity", "timeType": "range", "startYear": 629, "endYear": 645, "displayDate": { "zh-CN": "约 629–645", "en": "c. 629–645" }, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:xuanzang-records" }],
-  "sourceIds": ["source:xuanzang-records", "source:historical-geography", "source:unesco-silk-roads-corridor", "source:unesco-nalanda"],
-  "profile": { "routeKind": "pilgrimage", "certainty": "reconstructed", "waypointSlugs": ["changan", "dunhuang", "qiuci", "nalanda"], "corridorNote": { "zh-CN": "仅列有据可考或可作为区域锚点的节点，不绘制伪精确逐日路径。", "en": "Only evidenced stops or regional anchors are listed; no falsely precise day-by-day line is drawn." }, "animationAllowed": false }
+  "traditions": [
+    {
+      "tradition": "buddhism",
+      "role": "primary",
+      "isPrimary": true,
+      "confidence": "medium",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:xuanzang-records"
+    }
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "route_activity",
+      "timeType": "range",
+      "startYear": 629,
+      "endYear": 645,
+      "displayDate": {
+        "zh-CN": "约 629–645",
+        "en": "c. 629–645"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:xuanzang-records"
+    }
+  ],
+  "sourceIds": [
+    "source:xuanzang-records",
+    "source:historical-geography",
+    "source:unesco-silk-roads-corridor",
+    "source:unesco-nalanda"
+  ],
+  "profile": {
+    "routeKind": "pilgrimage",
+    "certainty": "reconstructed",
+    "waypointSlugs": [
+      "changan",
+      "dunhuang",
+      "qiuci",
+      "nalanda"
+    ],
+    "corridorNote": {
+      "zh-CN": "仅列有据可考或可作为区域锚点的节点，不绘制伪精确逐日路径。",
+      "en": "Only evidenced stops or regional anchors are listed; no falsely precise day-by-day line is drawn."
+    },
+    "animationAllowed": false
+  }
 }

@@ -1,0 +1,36 @@
+{
+  "id": "d4b76e84-7163-5031-aa34-1f1c5580f4df",
+  "locale": "en",
+  "kind": "text_version",
+  "slug": "heart-sutra-chinese-received",
+  "title": "Received Chinese version of the Heart Sutra",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "Sui–Tang circulation context",
+  "shortSummary": "A version placeholder for the first passage display; the precise edition remains under review.",
+  "curatorialDescription": [
+    "This version entity separates a work-level text from a citable version so that a passage is never left without a textual anchor."
+  ],
+  "researchNote": "Alpha placeholder; translator, edition, locator and rights records are required before publication.",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:heart-sutra-edition",
+      "title": "Chinese editions and catalogues of the Heart Sutra",
+      "locator": "第2节：舍利子，色不异空，空不异色，色即是空，空即是色",
+      "grade": "A",
+      "role": "Initial basis for the passage text and version locator",
+      "url": "https://ctext.org/wiki.pl?chapter=412996&if=en"
+    }
+  ],
+  "profile": {
+    "textSlug": "heart-sutra",
+    "versionKind": "translation",
+    "languageCode": "lzh",
+    "citationLabel": "Heart Sutra Chinese received version",
+    "rightsStatus": "public_domain"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

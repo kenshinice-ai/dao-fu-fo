@@ -1,0 +1,40 @@
+{
+  "id": "79e8a237-c2d3-5d9a-91be-0b776fbf448b",
+  "locale": "zh-CN",
+  "kind": "institution",
+  "slug": "changan-translation-bureau",
+  "title": "长安译经场网络",
+  "tradition": "buddhism",
+  "evidence": "historical_inferred",
+  "timeLabel": "唐代；项目级年代待拆",
+  "shortSummary": "译经并非单人写作，而是依托寺院空间、语言分工、校勘和帝国支持的协作网络。",
+  "curatorialDescription": [
+    "这里以“网络”建模，避免把不同时期、不同寺院中的译场误合并为一个固定机构。"
+  ],
+  "researchNote": "需按译经项目拆分地点、参与者、职能和起止时间。",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:buddhist-institutional-records",
+      "title": "隋唐寺院、译场与僧团制度资料",
+      "locator": "大慈恩寺、译经场与寺院网络专题；底本待核",
+      "grade": "B",
+      "role": "寺院、译经机构和佛教城市网络的制度语境"
+    },
+    {
+      "id": "source:xuanzang-records",
+      "title": "《大唐大慈恩寺三藏法师传》",
+      "locator": "《大唐大慈恩寺三藏法师传》全书（卷一至卷十）；卷一开篇为玄奘本传，后续卷次记录求法与译经活动",
+      "grade": "A",
+      "role": "玄奘生平、求法与译经活动的原始传记依据",
+      "url": "https://ctext.org/library.pl?if=en&res=112971"
+    }
+  ],
+  "profile": {
+    "institutionKind": "translation_network",
+    "networkScope": true
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

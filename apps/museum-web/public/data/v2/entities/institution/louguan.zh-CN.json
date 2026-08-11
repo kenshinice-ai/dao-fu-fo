@@ -1,0 +1,53 @@
+{
+  "id": "e64798e8-36e1-5385-8469-38922b87584c",
+  "locale": "zh-CN",
+  "kind": "institution",
+  "slug": "louguan",
+  "title": "楼观道院",
+  "subtitle": "关中道教传统与宫观网络的研究入口",
+  "tradition": "daoism",
+  "evidence": "historical_documented",
+  "timeLabel": "隋唐至后世叙述；关中重点",
+  "shortSummary": "楼观道院作为机构条目，帮助把老子传说、道教人物、宫观空间和后世圣迹叙述区分开来。",
+  "curatorialDescription": [
+    "本馆将现实地点、道教制度和神圣地理分成不同数据层，避免把传说性地点当作未经说明的历史事实。",
+    "条目暂不把楼观概括为整个道教的代表，而是把它作为关中区域的一个研究节点。"
+  ],
+  "researchNote": "需要补充楼观沿革、道教碑刻、人物活动与后世圣迹叙事的年代和证据层。",
+  "keyFacts": [
+    {
+      "label": "机构类型",
+      "value": "道教宫观与传统记忆节点"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:daoist-historical-record",
+      "title": "隋唐道教人物与制度研究资料",
+      "locator": "人物、宫观与皇室关系专题",
+      "grade": "B",
+      "role": "司马承祯及隋唐道教制度语境的学术参考"
+    },
+    {
+      "id": "source:historical-geography",
+      "title": "隋唐历史地理与城市沿革资料",
+      "locator": "长安、洛阳、敦煌历史名称与地理范围",
+      "grade": "A",
+      "role": "真实地点、历史名称和坐标示意的地理依据"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "道·儒·佛文明数字博物馆策展与方法说明",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "项目的策展框架与术语规则"
+    }
+  ],
+  "profile": {
+    "institutionKind": "daoist_monastery",
+    "networkScope": false
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

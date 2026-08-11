@@ -1,0 +1,53 @@
+{
+  "id": "8f021f4b-2fec-5986-95b5-4a7a802c77aa",
+  "locale": "en",
+  "kind": "figure",
+  "slug": "wu-zhao",
+  "title": "Wu Zhao (Wu Zetian)",
+  "subtitle": "A female ruler in power, religious patronage and institutional memory",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "624–705",
+  "shortSummary": "Wu Zhao's political practice and religious patronage make the institutions, rituals and later memories of Chang'an and Luoyang available for comparison.",
+  "curatorialDescription": [
+    "The museum separates political power, religious patronage and later sacralising narratives instead of treating a tradition's promotional material as a transparent record of rule.",
+    "Her entry shows how one person can be written differently across historical records, ritual contexts and later Buddhist or Daoist memories."
+  ],
+  "researchNote": "Alpha entry; inscriptions, official histories, ritual texts and later Buddhist and Daoist narratives require item-level evidence-layer review.",
+  "keyFacts": [
+    {
+      "label": "Role",
+      "value": "Ruler of Zhou"
+    },
+    {
+      "label": "Curatorial use",
+      "value": "Institutions, ritual and memory"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:tang-imperial-records",
+      "title": "Official histories and institutional records of the Sui–Tang period",
+      "locator": "帝王、制度与年代条目；具体版本和卷页待核",
+      "grade": "B",
+      "role": "Research reference for Sui–Tang figures, capitals, institutions and event dates"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "Curatorial and methodological notes of the Dao–Ru–Fo Digital Museum",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "Curatorial framework and terminology rules"
+    }
+  ],
+  "profile": {
+    "historicity": "documented",
+    "figureClass": "historical_person",
+    "gender": "female",
+    "canonicalNameOriginal": "武曌",
+    "nameLanguageCode": "lzh"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

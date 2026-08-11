@@ -1,0 +1,50 @@
+{
+  "id": "6870c0fd-b027-54de-912c-cd1b805beddc",
+  "locale": "en",
+  "kind": "passage",
+  "slug": "learn-and-practice",
+  "title": "To learn and practise at due times",
+  "tradition": "confucianism",
+  "evidence": "historical_inferred",
+  "timeLabel": "Received text, Xue Er",
+  "shortSummary": "The Analects opens by connecting learning, repeated practice and pleasure.",
+  "curatorialDescription": [
+    "Xi retains space for review, enactment and habituation rather than becoming one modern study technique."
+  ],
+  "researchNote": "Early commentary, Tang classical exegesis and translation variants remain to be added.",
+  "keyFacts": [],
+  "related": [
+    {
+      "kind": "text",
+      "slug": "analects",
+      "title": "Analects",
+      "relation": "Excerpt from"
+    }
+  ],
+  "sources": [
+    {
+      "id": "source:analects-edition",
+      "title": "Received editions and chapter references for the Analects",
+      "locator": "颜渊第十二，第1章（“克己复礼为仁”）",
+      "grade": "A",
+      "role": "Initial basis for the Confucian passage and chapter locator",
+      "url": "https://ctext.org/wiki.pl?chapter=198285&if=en&remap=gb"
+    }
+  ],
+  "profile": {
+    "textSlug": "analects",
+    "textVersionSlug": "analects-received",
+    "passageKind": "classic_saying",
+    "locatorOriginal": "学而篇",
+    "locatorNormalised": "Analects 1.1",
+    "originalText": "学而时习之，不亦说乎？",
+    "punctuatedText": "学而时习之，不亦说乎？",
+    "modernZh": "学习并按时温习和践行，不也是令人愉悦的吗？",
+    "translationEn": "To learn and practise at due times—is this not a pleasure?",
+    "ritualSensitivity": "public_textual",
+    "attributionStatus": "anonymous_or_composite",
+    "variantReadings": []
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

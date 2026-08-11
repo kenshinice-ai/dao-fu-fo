@@ -1,0 +1,48 @@
+{
+  "id": "4626d893-15ef-5eb3-9d10-b5806a8128a4",
+  "locale": "en",
+  "kind": "text",
+  "slug": "great-tang-records-western-regions",
+  "title": "Record of the Western Regions of the Great Tang",
+  "subtitle": "Travel observation, geography and the translation of knowledge",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "Tang composition context; transregional geographic record",
+  "shortSummary": "The Record turns a pilgrim's travel experience into an account of geography, institutions, cities and religious sites.",
+  "curatorialDescription": [
+    "It is both a travel record and an organised knowledge narrative; the museum separates observation, report and later interpretation.",
+    "Together with the Xuanzang, Kucha and Nalanda entries, it provides a research entry into the route."
+  ],
+  "researchNote": "Specific editions, fascicles, translations, variants and distinctions among observation and report still need to be documented.",
+  "keyFacts": [
+    {
+      "label": "Text kind",
+      "value": "Historical geography and travel record"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:buddhist-biographical-records",
+      "title": "Biographical and pilgrimage records of Sui–Tang Buddhist monks",
+      "locator": "义净、玄奘及求法僧侣条目；底本与卷页待核",
+      "grade": "B",
+      "role": "Research entry point for Buddhist figures, pilgrimage routes and translation activity"
+    },
+    {
+      "id": "source:historical-geography",
+      "title": "Historical geography and urban gazetteers of the Sui–Tang period",
+      "locator": "长安、洛阳、敦煌历史名称与地理范围",
+      "grade": "A",
+      "role": "Geographic basis for real places, historical names and coordinate approximations"
+    }
+  ],
+  "profile": {
+    "textKind": "historical_record",
+    "originalLanguageCode": "zh",
+    "canonicalStatus": "influential",
+    "attributionStatus": "known"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

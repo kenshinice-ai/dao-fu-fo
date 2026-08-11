@@ -1,0 +1,284 @@
+[
+  {
+    "kind": "place",
+    "slug": "mengcheng",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "孟城",
+        "shortSummary": "孟城是庄子人物传统常用的地域入口，本条以现代城市尺度显示，不把传统一地名等同于确证活动地址。",
+        "curatorialDescription": ["现实地图显示现代地理锚点；庄周关联属于传统/研究层，坐标不证明具体生平事件。"],
+        "researchNote": "历史地名对应、地方文献和庄周活动证据需继续拆分；当前坐标来自策展区域登记。",
+        "timeLabel": "现代地理锚点；庄子传统关联",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Mengcheng",
+        "shortSummary": "Mengcheng is a commonly used regional gateway for traditions around Zhuangzi; it is shown at city scale and not as a confirmed activity address.",
+        "curatorialDescription": ["The real map shows a modern geographic anchor; the Zhuang Zhou association remains a traditional/research layer and the coordinate does not prove a specific life event."],
+        "researchNote": "Historical place-name mapping, local records and evidence for Zhuang Zhou's activity require separation; the coordinate comes from the curatorial regional register.",
+        "timeLabel": "Modern geographic anchor; Zhuangzi tradition",
+        "keyFacts": []
+      }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:a1-map-anchors" }],
+    "temporalAssertions": [{ "predicate": "geographic_and_religious_scope", "timeType": "atemporal", "displayDate": { "zh-CN": "现代地理锚点；庄子传统关联", "en": "Modern geographic anchor; Zhuangzi tradition" }, "confidence": "unknown", "evidenceLayer": "historical_inferred", "sourceId": "source:a1-map-anchors" }],
+    "sourceIds": ["source:a1-map-anchors", "source:zhuangzi-ctext"],
+    "related": [{ "kind": "figure", "slug": "zhuangzi", "title": { "zh-CN": "庄子（庄周）", "en": "Zhuangzi (Zhuang Zhou)" }, "relation": { "zh-CN": "传统地域关联", "en": "Traditional regional association" } }],
+    "profile": { "placeReality": "real_current", "geometryType": "point", "coordinates": [116.566, 33.266], "coordinateConfidence": "centroid", "geographicSourceId": "source:a1-map-anchors" }
+  },
+  {
+    "kind": "place",
+    "slug": "zoucheng",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "邹城",
+        "shortSummary": "邹城是孟子地域传统的现代城市尺度入口；地图点位表达区域，不替代战国诸侯游历的逐点证据。",
+        "curatorialDescription": ["邹地传统与现代行政城市需要分开；本点用于把孟子人物入口放回山东南部的地理范围。"],
+        "researchNote": "孟子生地、邹地历史范围和后世纪念地点需逐项核对；坐标暂属策展区域锚点。",
+        "timeLabel": "现代地理锚点；孟子地域传统",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Zoucheng",
+        "shortSummary": "Zoucheng is a city-scale gateway into regional traditions around Mencius; the point marks a region rather than the Warring States itinerary.",
+        "curatorialDescription": ["The Zou tradition and the modern administrative city remain distinct; this point returns the Mencius entry to a geographic range in southern Shandong."],
+        "researchNote": "Birth traditions, the historical extent of Zou and later memorial sites require item-level review; the coordinate is currently a curatorial regional anchor.",
+        "timeLabel": "Modern geographic anchor; Mencius regional tradition",
+        "keyFacts": []
+      }
+    },
+    "traditions": [{ "tradition": "confucianism", "role": "primary", "isPrimary": true, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:a1-map-anchors" }],
+    "temporalAssertions": [{ "predicate": "geographic_and_religious_scope", "timeType": "atemporal", "displayDate": { "zh-CN": "现代地理锚点；孟子地域传统", "en": "Modern geographic anchor; Mencius regional tradition" }, "confidence": "unknown", "evidenceLayer": "historical_inferred", "sourceId": "source:a1-map-anchors" }],
+    "sourceIds": ["source:a1-map-anchors", "source:mengzi-ctext"],
+    "related": [{ "kind": "figure", "slug": "mengzi", "title": { "zh-CN": "孟子（孟轲）", "en": "Mencius (Meng Ke)" }, "relation": { "zh-CN": "地域传统入口", "en": "Regional tradition gateway" } }],
+    "profile": { "placeReality": "real_current", "geometryType": "point", "coordinates": [116.966, 35.4], "coordinateConfidence": "centroid", "geographicSourceId": "source:a1-map-anchors" }
+  },
+  {
+    "kind": "place",
+    "slug": "mount-heming",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "traditional_account",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "鹤鸣山",
+        "shortSummary": "鹤鸣山是张道陵与天师道传承叙事中的传统山岳节点，现实坐标与神圣叙事保持分层。",
+        "curatorialDescription": ["现实地图只显示山地锚点；授道、修炼和天师传承属于传统/后世层，不由坐标证明。"],
+        "researchNote": "山名对应、道教遗迹和传记版本需继续核验；当前使用低置信区域坐标。",
+        "timeLabel": "东汉传统与后世道教记忆",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Mount Heming",
+        "shortSummary": "Mount Heming is a traditional mountain node in narratives of Zhang Daoling and the Celestial Masters; real coordinates and sacred narratives remain layered.",
+        "curatorialDescription": ["The real map shows a mountain anchor; revelations, cultivation and lineage belong to traditional/later layers and are not proved by a coordinate."],
+        "researchNote": "Mountain-name mapping, Daoist remains and biographical versions require further verification; a low-confidence regional coordinate is used for now.",
+        "timeLabel": "Eastern Han tradition and later Daoist memory",
+        "keyFacts": []
+      }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "traditional_account", "sourceId": "source:zhang-daoling-ctext" }],
+    "temporalAssertions": [{ "predicate": "geographic_and_religious_scope", "timeType": "atemporal", "displayDate": { "zh-CN": "东汉传统与后世道教记忆", "en": "Eastern Han tradition and later Daoist memory" }, "confidence": "low", "evidenceLayer": "traditional_account", "sourceId": "source:zhang-daoling-ctext" }],
+    "sourceIds": ["source:zhang-daoling-ctext", "source:a1-map-anchors"],
+    "related": [{ "kind": "figure", "slug": "zhang-daoling", "title": { "zh-CN": "张道陵", "en": "Zhang Daoling" }, "relation": { "zh-CN": "传统山岳关联", "en": "Traditional mountain association" } }],
+    "profile": { "placeReality": "real_current", "geometryType": "point", "coordinates": [103.8, 30.6], "coordinateConfidence": "approximate", "geographicSourceId": "source:a1-map-anchors" }
+  },
+  {
+    "kind": "place",
+    "slug": "mount-luofu",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "罗浮山",
+        "shortSummary": "罗浮山是葛洪传记、道教修炼和后世仙真记忆叠加的现实山地空间。",
+        "curatorialDescription": ["地点条目把现实山地与仙传、炼丹叙事分开；地图坐标只表达山域参照。"],
+        "researchNote": "葛洪具体居止、宫观沿革与地方记忆需按史料、碑刻和遗产资料拆分。",
+        "timeLabel": "东晋人物语境与长期道教山岳记忆",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Mount Luofu",
+        "shortSummary": "Mount Luofu is a real mountain landscape layered with Ge Hong biography, Daoist cultivation and later immortal memory.",
+        "curatorialDescription": ["The place record separates real terrain from immortal biographies and alchemical narratives; the map coordinate is a mountain-region reference only."],
+        "researchNote": "Ge Hong's residence, institutional history and local memory require separate histories, inscriptions and heritage records.",
+        "timeLabel": "Eastern Jin figure context and long Daoist mountain memory",
+        "keyFacts": []
+      }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:baopuzi-ctext" }],
+    "temporalAssertions": [{ "predicate": "cultural_landscape", "timeType": "atemporal", "displayDate": { "zh-CN": "东晋人物语境与长期道教山岳记忆", "en": "Eastern Jin figure context and long Daoist mountain memory" }, "confidence": "unknown", "evidenceLayer": "historical_inferred", "sourceId": "source:a1-map-anchors" }],
+    "sourceIds": ["source:baopuzi-ctext", "source:a1-map-anchors"],
+    "related": [{ "kind": "figure", "slug": "ge-hong", "title": { "zh-CN": "葛洪", "en": "Ge Hong" }, "relation": { "zh-CN": "山地与记忆空间", "en": "Landscape and memory space" } }],
+    "profile": { "placeReality": "real_current", "geometryType": "point", "coordinates": [114.0, 23.3], "coordinateConfidence": "approximate", "geographicSourceId": "source:a1-map-anchors" }
+  },
+  {
+    "kind": "place",
+    "slug": "sanchi",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "桑奇",
+        "shortSummary": "桑奇佛教遗址把阿育王、佛教纪念性建筑与后世遗产记忆放在同一现实地点层。",
+        "curatorialDescription": ["桑奇以遗产地层级进入地图；阿育王柱、佛塔、造像和后世保护史仍需拆成物质对象与事件。"],
+        "researchNote": "当前使用 UNESCO 遗产入口和近似遗址坐标；具体敕诏、营造和年代需要按遗址资料细化。",
+        "timeLabel": "阿育王时期至后世遗产空间",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Sanchi",
+        "shortSummary": "Sanchi brings Ashoka, Buddhist commemorative architecture and later heritage memory into one real place layer.",
+        "curatorialDescription": ["Sanchi enters at heritage-site level; pillars, stupas, images and conservation history still need separate object and event records."],
+        "researchNote": "The current entry uses the UNESCO heritage gateway and an approximate site coordinate; edicts, building phases and dates require finer records.",
+        "timeLabel": "From the Ashokan period through later heritage memory",
+        "keyFacts": []
+      }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:unesco-sanchi" }],
+    "temporalAssertions": [{ "predicate": "site_activity", "timeType": "range", "startYear": -268, "endYear": 1200, "displayDate": { "zh-CN": "阿育王时期至中世纪遗产记忆空间", "en": "From the Ashokan period through a medieval heritage-memory horizon" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:unesco-sanchi" }],
+    "sourceIds": ["source:unesco-sanchi", "source:ashoka-edicts-unesco"],
+    "related": [{ "kind": "figure", "slug": "ashoka", "title": { "zh-CN": "阿育王", "en": "Ashoka" }, "relation": { "zh-CN": "遗址与敕诏记忆", "en": "Heritage and edict memory" } }],
+    "profile": { "placeReality": "real_historical", "geometryType": "point", "coordinates": [77.7397, 23.4793], "coordinateConfidence": "approximate", "geographicSourceId": "source:unesco-sanchi" }
+  },
+  {
+    "kind": "place",
+    "slug": "nagarjunakonda",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "那伽朱那康达",
+        "shortSummary": "那伽朱那康达是南印度佛教遗址与龙树记忆之间的低精度区域锚点，不是龙树确证居所。",
+        "curatorialDescription": ["地图以 approximate region 显示，明确区分遗址历史、人物命名传统和龙树生平证据。"],
+        "researchNote": "遗址、地方命名和龙树传记关联需要考古报告与佛教史研究逐项核验；当前只作研究入口。",
+        "timeLabel": "南印度佛教遗址与龙树后世记忆",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Nagarjunakonda",
+        "shortSummary": "Nagarjunakonda is a low-precision regional anchor between a South Indian Buddhist site and memories associated with Nāgārjuna, not a confirmed residence.",
+        "curatorialDescription": ["The map uses an approximate region and explicitly separates site history, naming traditions and evidence for Nāgārjuna's life."],
+        "researchNote": "Archaeology, local naming and biographical association require item-level Buddhist-history review; this is currently a research gateway.",
+        "timeLabel": "South Indian Buddhist site and later Nāgārjuna memory",
+        "keyFacts": []
+      }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:a1-map-anchors" }],
+    "temporalAssertions": [{ "predicate": "institutional_and_memory_scope", "timeType": "atemporal", "displayDate": { "zh-CN": "南印度佛教遗址与龙树后世记忆", "en": "South Indian Buddhist site and later Nāgārjuna memory" }, "confidence": "unknown", "evidenceLayer": "historical_inferred", "sourceId": "source:a1-map-anchors" }],
+    "sourceIds": ["source:a1-map-anchors", "source:nagarjuna-sep"],
+    "related": [{ "kind": "figure", "slug": "nagarjuna", "title": { "zh-CN": "龙树", "en": "Nāgārjuna" }, "relation": { "zh-CN": "低精度记忆关联", "en": "Low-precision memory association" } }],
+    "profile": { "placeReality": "approximate_region", "geometryType": "point", "coordinates": [79.25, 16.53], "coordinateConfidence": "approximate", "geographicSourceId": "source:a1-map-anchors" }
+  },
+  {
+    "kind": "place",
+    "slug": "primordial-cosmos",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "mythic_symbolic",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "混沌与开辟", "shortSummary": "盘古开辟叙事的象征空间，不是现实地点。", "curatorialDescription": ["该节点只进入神圣/神话画布，不参与现实距离、路线或历史地图计算。"], "researchNote": "不同开辟文本的层次和时代需继续区分。", "timeLabel": "神话象征空间" , "keyFacts": [] },
+      "en": { "title": "Primordial cosmos", "shortSummary": "A symbolic space for Pangu cosmogenesis, not a real-world place.", "curatorialDescription": ["This node belongs only to the sacred/mythic canvas and is excluded from real distance, route and historical-map calculations."], "researchNote": "Different cosmogenesis texts and their periods require further separation.", "timeLabel": "Mythic symbolic space", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "later_associated", "isPrimary": true, "confidence": "low", "evidenceLayer": "mythic_symbolic", "sourceId": "source:mythic-figures-ctext" }],
+    "temporalAssertions": [{ "predicate": "traditional_occurrence", "timeType": "atemporal", "displayDate": { "zh-CN": "神话象征空间", "en": "Mythic symbolic space" }, "confidence": "unknown", "evidenceLayer": "mythic_symbolic", "sourceId": "source:mythic-figures-ctext" }],
+    "sourceIds": ["source:mythic-figures-ctext", "source:editorial-method"],
+    "related": [],
+    "profile": { "placeReality": "sacred_symbolic", "geometryType": "symbolic_node", "coordinateConfidence": "not_applicable", "cosmosZone": "cosmogenesis", "canvasX": 510, "canvasY": 72 }
+  },
+  {
+    "kind": "place",
+    "slug": "nuwa-cosmos",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "mythic_symbolic",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "补天与造人", "shortSummary": "女娲造人、补天与秩序修复叙事的象征空间。", "curatorialDescription": ["该节点不对应某一座现实山或遗址；后世女娲庙与图像可另建 memory/cult site。"], "researchNote": "文本版本、地方祭祀与图像记忆尚未在本节点合并。", "timeLabel": "神话象征空间", "keyFacts": [] },
+      "en": { "title": "Nüwa cosmology", "shortSummary": "A symbolic space for Nüwa creation, sky-repair and restored-order narratives.", "curatorialDescription": ["This node is not a real mountain or archaeological site; later temples and images can be modelled as separate memory/cult sites."], "researchNote": "Textual versions, local cults and visual memory are not merged in this node.", "timeLabel": "Mythic symbolic space", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "later_associated", "isPrimary": true, "confidence": "low", "evidenceLayer": "mythic_symbolic", "sourceId": "source:nuwa-british-museum" }],
+    "temporalAssertions": [{ "predicate": "traditional_occurrence", "timeType": "atemporal", "displayDate": { "zh-CN": "神话象征空间", "en": "Mythic symbolic space" }, "confidence": "unknown", "evidenceLayer": "mythic_symbolic", "sourceId": "source:nuwa-british-museum" }],
+    "sourceIds": ["source:nuwa-british-museum", "source:editorial-method"],
+    "related": [],
+    "profile": { "placeReality": "sacred_symbolic", "geometryType": "symbolic_node", "coordinateConfidence": "not_applicable", "cosmosZone": "creation_and_repair", "canvasX": 300, "canvasY": 100 }
+  },
+  {
+    "kind": "place",
+    "slug": "trigram-cosmos",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "mythic_symbolic",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "八卦与方位", "shortSummary": "伏羲八卦、方位和文明秩序叙事的象征空间。", "curatorialDescription": ["八卦的神话起源和后世解释不生成现实坐标，也不代表单一历史发明时刻。"], "researchNote": "后续可接入图像、文本版本和器物证据。", "timeLabel": "神话象征空间", "keyFacts": [] },
+      "en": { "title": "Trigram cosmos", "shortSummary": "A symbolic space for Fu Xi, trigrams, orientation and civilisational order.", "curatorialDescription": ["Mythic origins and later interpretations of the trigrams do not generate real coordinates or one historical invention date."], "researchNote": "Images, textual versions and material objects can be connected in a later batch.", "timeLabel": "Mythic symbolic space", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "later_associated", "isPrimary": true, "confidence": "low", "evidenceLayer": "mythic_symbolic", "sourceId": "source:fuxi-british-museum" }],
+    "temporalAssertions": [{ "predicate": "traditional_occurrence", "timeType": "atemporal", "displayDate": { "zh-CN": "神话象征空间", "en": "Mythic symbolic space" }, "confidence": "unknown", "evidenceLayer": "mythic_symbolic", "sourceId": "source:fuxi-british-museum" }],
+    "sourceIds": ["source:fuxi-british-museum", "source:editorial-method"],
+    "related": [],
+    "profile": { "placeReality": "sacred_symbolic", "geometryType": "symbolic_node", "coordinateConfidence": "not_applicable", "cosmosZone": "trigrams_and_order", "canvasX": 160, "canvasY": 300 }
+  },
+  {
+    "kind": "place",
+    "slug": "kunlun-mythic-space",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "mythic_symbolic",
+    "importance": 5,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "昆仑与传说山岳", "shortSummary": "西王母、黄帝与仙真叙事叠加的神圣山岳象征空间。", "curatorialDescription": ["昆仑在不同文本和宗教传统中具有不同层次；本节点不对应现实地图的昆仑山坐标。"], "researchNote": "后续应区分文本宇宙、地方山岳记忆和现实遗产地点。", "timeLabel": "神话与神圣象征空间", "keyFacts": [] },
+      "en": { "title": "Kunlun and legendary mountains", "shortSummary": "A sacred mountain symbol layered with Xi Wangmu, Huangdi and immortal traditions.", "curatorialDescription": ["Kunlun has different layers across texts and religious traditions; this node is not a real-world coordinate for Kunlun Mountain."], "researchNote": "Textual cosmos, local mountain memory and real heritage sites should be separated in later work.", "timeLabel": "Mythic and sacred symbolic space", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "mythic_symbolic", "sourceId": "source:xi-wangmu-british-museum" }],
+    "temporalAssertions": [{ "predicate": "traditional_occurrence", "timeType": "atemporal", "displayDate": { "zh-CN": "神话与神圣象征空间", "en": "Mythic and sacred symbolic space" }, "confidence": "unknown", "evidenceLayer": "mythic_symbolic", "sourceId": "source:xi-wangmu-british-museum" }],
+    "sourceIds": ["source:xi-wangmu-british-museum", "source:huangdi-ctext", "source:editorial-method"],
+    "related": [],
+    "profile": { "placeReality": "sacred_symbolic", "geometryType": "symbolic_node", "coordinateConfidence": "not_applicable", "cosmosZone": "kunlun_and_immortals", "canvasX": 820, "canvasY": 100 }
+  },
+  {
+    "kind": "place",
+    "slug": "daoist-celestial-realm",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "later_deification",
+    "importance": 5,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "道教天界", "shortSummary": "太上老君与三清谱系的神圣宇宙象征空间。", "curatorialDescription": ["天界节点只用于展示道教神圣谱系，不生成现实经纬度，也不与老子历史活动地点合并。"], "researchNote": "具体经典、宫观祭祀和天界层次需要独立文本与仪式记录。", "timeLabel": "后世道教神格化空间", "keyFacts": [] },
+      "en": { "title": "Daoist celestial realm", "shortSummary": "A sacred-cosmos node for Taishang Laojun and Three Pure Ones genealogies.", "curatorialDescription": ["The celestial node shows Daoist sacred genealogy without real coordinates and without merging it with Laozi's historical activity places."], "researchNote": "Specific scriptures, temple rituals and celestial layers require separate textual and ritual records.", "timeLabel": "Later Daoist sacralisation space", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "later_deification", "sourceId": "source:taishang-laojun-ctext" }],
+    "temporalAssertions": [{ "predicate": "cult_emergence", "timeType": "range", "startYear": 200, "endYear": 700, "displayDate": { "zh-CN": "后世道教神格化空间", "en": "Later Daoist sacralisation space" }, "confidence": "low", "evidenceLayer": "later_deification", "sourceId": "source:taishang-laojun-ctext" }],
+    "sourceIds": ["source:taishang-laojun-ctext", "source:editorial-method"],
+    "related": [],
+    "profile": { "placeReality": "sacred_symbolic", "geometryType": "symbolic_node", "coordinateConfidence": "not_applicable", "cosmosZone": "daoist_celestial", "canvasX": 820, "canvasY": 390 }
+  }
+]

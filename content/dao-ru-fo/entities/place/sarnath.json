@@ -1,0 +1,117 @@
+{
+  "kind": "place",
+  "slug": "sarnath",
+  "publicationState": "public",
+  "reviewStatus": "publishable",
+  "primaryEvidenceLayer": "historical_documented",
+  "importance": 5,
+  "isFeatured": true,
+  "translations": {
+    "zh-CN": {
+      "title": "鹿野苑（Sarnath）",
+      "subtitle": "初转法轮传统与后世佛教朝圣遗址",
+      "shortSummary": "鹿野苑把释迦牟尼、初转法轮、早期僧团记忆和后世朝圣连接到一个真实的考古地点。",
+      "curatorialDescription": [
+        "现实地图显示的是鹿野苑考古遗址的地理参照；‘佛陀在此初转法轮’属于经文、传统与遗产记忆共同构成的历史层。",
+        "地点条目不把遗址的现存建筑直接当作公元前现场原貌，而把教法传述、遗址遗存和现代保护分开呈现。"
+      ],
+      "researchNote": "坐标为遗址级示意点；初转法轮的叙事来自早期佛教文本与后世遗产记忆，遗址建筑和朝圣史仍需继续分期。",
+      "timeLabel": "早期佛教传统至公元 12 世纪遗址发展；现代保护延续",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "地点类型",
+            "en": "Place type"
+          },
+          "value": {
+            "zh-CN": "真实历史地点／考古遗址",
+            "en": "Real historical place / archaeological site"
+          }
+        },
+        {
+          "label": {
+            "zh-CN": "空间角色",
+            "en": "Spatial role"
+          },
+          "value": {
+            "zh-CN": "教法、僧团与朝圣记忆地点",
+            "en": "Teaching, monastic and pilgrimage-memory site"
+          }
+        }
+      ]
+    },
+    "en": {
+      "title": "Sarnath",
+      "subtitle": "A first-teaching tradition and later Buddhist pilgrimage site",
+      "shortSummary": "Sarnath connects Śākyamuni, the first-turning-of-the-Dharma tradition, early monastic memory and later Buddhist pilgrimage to a real archaeological place.",
+      "curatorialDescription": [
+        "The real map shows a geographic reference for the archaeological site; the claim that the Buddha first taught here belongs to a layered history of texts, tradition and heritage memory.",
+        "The place record does not treat surviving monuments as a literal scene from the fifth century BCE. Teaching tradition, archaeological remains and modern conservation remain separate layers."
+      ],
+      "researchNote": "The coordinate is a site-level schematic point. The first-teaching narrative comes from early Buddhist texts and later heritage memory; architectural phases and pilgrimage history still require periodisation.",
+      "timeLabel": "Early Buddhist tradition through the site's first-millennium development; modern conservation continues",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "地点类型",
+            "en": "Place type"
+          },
+          "value": {
+            "zh-CN": "真实历史地点／考古遗址",
+            "en": "Real historical place / archaeological site"
+          }
+        },
+        {
+          "label": {
+            "zh-CN": "空间角色",
+            "en": "Spatial role"
+          },
+          "value": {
+            "zh-CN": "教法、僧团与朝圣记忆地点",
+            "en": "Teaching, monastic and pilgrimage-memory site"
+          }
+        }
+      ]
+    }
+  },
+  "traditions": [
+    {
+      "tradition": "buddhism",
+      "role": "primary",
+      "isPrimary": true,
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:sarnath-site-record"
+    }
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "site_activity",
+      "timeType": "range",
+      "startYear": -600,
+      "endYear": 1200,
+      "displayDate": {
+        "zh-CN": "早期佛教传统至公元 12 世纪遗址发展",
+        "en": "Early Buddhist tradition through the site's development to the 12th century CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:sarnath-site-record"
+    }
+  ],
+  "sourceIds": [
+    "source:sarnath-site-record",
+    "source:buddha-early-texts",
+    "source:editorial-method"
+  ],
+  "profile": {
+    "placeReality": "real_historical",
+    "geometryType": "point",
+    "coordinates": [
+      83.0227,
+      25.3811
+    ],
+    "coordinateConfidence": "centroid",
+    "geographicSourceId": "source:sarnath-site-record"
+  }
+}

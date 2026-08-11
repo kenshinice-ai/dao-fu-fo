@@ -17,9 +17,11 @@ export interface ReadModelPaths {
   overview: (locale: Locale) => string;
   exhibition: (slug: string, locale: Locale) => string;
   realMap: (name: string, locale: Locale) => string;
-  sacredCosmos: (tradition: string, locale: Locale) => string;
+  sacredCosmos: (name: string, locale: Locale) => string;
   timeline: (name: string, locale: Locale) => string;
   graph: (graphType: string, name: string, locale: Locale) => string;
+  comparison: (name: string, locale: Locale) => string;
+  textReading: (name: string, locale: Locale) => string;
 }
 
 export function createReadModelPaths(root = "data/v2"): ReadModelPaths {
@@ -36,9 +38,11 @@ export function createReadModelPaths(root = "data/v2"): ReadModelPaths {
     overview: (locale) => `${base}/overview/${locale}.json`,
     exhibition: (slug, locale) => `${base}/exhibitions/${encodeURIComponent(slug)}.${locale}.json`,
     realMap: (name, locale) => `${base}/maps/real/${encodeURIComponent(name)}.${locale}.geojson`,
-    sacredCosmos: (tradition, locale) => `${base}/maps/cosmos/${encodeURIComponent(tradition)}.${locale}.json`,
+    sacredCosmos: (name, locale) => `${base}/maps/cosmos/${encodeURIComponent(name)}.${locale}.json`,
     timeline: (name, locale) => `${base}/timeline/${encodeURIComponent(name)}.${locale}.json`,
     graph: (graphType, name, locale) => `${base}/graphs/${encodeURIComponent(graphType)}/${encodeURIComponent(name)}.${locale}.json`,
+    comparison: (name, locale) => `${base}/comparisons/${encodeURIComponent(name)}.${locale}.json`,
+    textReading: (name, locale) => `${base}/text-readings/${encodeURIComponent(name)}.${locale}.json`,
   };
 }
 

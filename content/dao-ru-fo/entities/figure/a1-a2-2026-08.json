@@ -1,0 +1,640 @@
+[
+  {
+    "kind": "figure",
+    "slug": "zhuangzi",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "庄子（庄周）",
+        "subtitle": "战国思想家与复合文本传统的入口",
+        "shortSummary": "庄子是道家思想与寓言式哲学的重要入口；人物传记、内外篇层次和后世注疏必须保持区分。",
+        "curatorialDescription": [
+          "本馆把庄周作为历史与传统交界的人物入口，把《庄子》作为包含不同篇章层和传承层的文本，而不把全书压缩为单一作者的逐字记录。",
+          "孟城在本批次中只作为人物传统与现代地理之间的区域锚点；地图点位不证明庄周在该点的每一次活动。"
+        ],
+        "researchNote": "生平细节和《庄子》篇章归属仍有争议；当前只发布保守的年代导航、文本入口和区域关联。",
+        "timeLabel": "约公元前 4 世纪；文本层有争议",
+        "keyFacts": [
+          { "label": { "zh-CN": "人物类别", "en": "Figure class" }, "value": { "zh-CN": "历史人物／传统思想家", "en": "Historical person / traditional thinker" } },
+          { "label": { "zh-CN": "空间边界", "en": "Spatial boundary" }, "value": { "zh-CN": "孟城为区域关联，不是精确活动点", "en": "Mengcheng is a regional association, not an exact activity point" } }
+        ]
+      },
+      "en": {
+        "title": "Zhuangzi (Zhuang Zhou)",
+        "subtitle": "A gateway into Warring States thought and a composite textual tradition",
+        "shortSummary": "Zhuangzi is a major entry into Daoist thought and parabolic philosophy; biography, chapter layers and later commentary must remain distinct.",
+        "curatorialDescription": [
+          "The museum treats Zhuang Zhou as a figure at the boundary of history and tradition, and the Zhuangzi as a text with different chapter and transmission layers rather than a single verbatim authorial record.",
+          "Mengcheng is used here as a regional anchor between figure tradition and modern geography; its map point does not prove every activity took place there."
+        ],
+        "researchNote": "Biographical detail and chapter attribution remain contested; this release uses a conservative date range, text entry and regional association.",
+        "timeLabel": "c. fourth century BCE; textual layers contested",
+        "keyFacts": [
+          { "label": { "zh-CN": "人物类别", "en": "Figure class" }, "value": { "zh-CN": "历史人物／传统思想家", "en": "Historical person / traditional thinker" } },
+          { "label": { "zh-CN": "空间边界", "en": "Spatial boundary" }, "value": { "zh-CN": "孟城为区域关联，不是精确活动点", "en": "Mengcheng is a regional association, not an exact activity point" } }
+        ]
+      }
+    },
+    "traditions": [
+      { "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:zhuangzi-ctext" }
+    ],
+    "temporalAssertions": [
+      { "predicate": "life", "timeType": "century", "startYear": -350, "endYear": -250, "displayDate": { "zh-CN": "约公元前 4 世纪", "en": "c. fourth century BCE" }, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:zhuangzi-ctext" }
+    ],
+    "sourceIds": ["source:zhuangzi-ctext", "source:editorial-method"],
+    "related": [
+      { "kind": "text", "slug": "zhuangzi", "title": { "zh-CN": "《庄子》", "en": "Zhuangzi" }, "relation": { "zh-CN": "复合文本传统", "en": "Composite textual tradition" } },
+      { "kind": "place", "slug": "mengcheng", "title": { "zh-CN": "孟城", "en": "Mengcheng" }, "relation": { "zh-CN": "传统区域关联", "en": "Traditional regional association" } }
+    ],
+    "profile": { "historicity": "inferred", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "庄周", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure",
+    "slug": "mengzi",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "孟子（孟轲）",
+        "subtitle": "游说诸侯、性善论与儒家经典化的桥梁",
+        "shortSummary": "孟子把先秦游说、政治伦理与后世儒家经典化连接起来；《孟子》文本和传记层不应互相替代。",
+        "curatorialDescription": [
+          "人物入口以《史记》与《孟子》传述为边界，重点呈现游历诸侯与言说传统，而不把后世理学地位倒写为先秦现场事实。",
+          "邹城在地图中作为现代城市尺度锚点，代表人物传统的地域入口；具体行迹仍需按国家和地点分别核对。"
+        ],
+        "researchNote": "孟子生年、游历路线和文本形成区间均需保留不确定性；当前不提供逐年旅行线。",
+        "timeLabel": "约公元前 4 世纪；年代导航区间",
+        "keyFacts": [
+          { "label": { "zh-CN": "人物类别", "en": "Figure class" }, "value": { "zh-CN": "历史人物", "en": "Historical person" } },
+          { "label": { "zh-CN": "文本边界", "en": "Textual boundary" }, "value": { "zh-CN": "《孟子》为传述与编纂层", "en": "The Mengzi retains transmitted and compiled layers" } }
+        ]
+      },
+      "en": {
+        "title": "Mencius (Meng Ke)",
+        "subtitle": "A bridge among itinerant counsel, political ethics and Confucian canonisation",
+        "shortSummary": "Mencius connects Warring States itinerancy, political ethics and later Confucian canonisation; the Mengzi text and biographical layer must not replace one another.",
+        "curatorialDescription": [
+          "The entry uses the Shiji and transmitted Mengzi as boundaries, foregrounding counsel to rulers and traditions of speech without projecting later Neo-Confucian status into the Warring States scene.",
+          "Zoucheng is a city-scale map anchor for the regional tradition around the figure; specific itineraries require separate state- and place-level evidence."
+        ],
+        "researchNote": "Birth dates, itinerary and textual formation remain ranges; no year-by-year travel line is asserted.",
+        "timeLabel": "c. fourth century BCE; navigational range",
+        "keyFacts": [
+          { "label": { "zh-CN": "人物类别", "en": "Figure class" }, "value": { "zh-CN": "历史人物", "en": "Historical person" } },
+          { "label": { "zh-CN": "文本边界", "en": "Textual boundary" }, "value": { "zh-CN": "《孟子》为传述与编纂层", "en": "The Mengzi retains transmitted and compiled layers" } }
+        ]
+      }
+    },
+    "traditions": [
+      { "tradition": "confucianism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_inferred", "sourceId": "source:mengzi-ctext" }
+    ],
+    "temporalAssertions": [
+      { "predicate": "life", "timeType": "century", "startYear": -400, "endYear": -300, "displayDate": { "zh-CN": "约公元前 4 世纪", "en": "c. fourth century BCE" }, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:mengzi-ctext" }
+    ],
+    "sourceIds": ["source:mengzi-ctext", "source:editorial-method"],
+    "related": [
+      { "kind": "text", "slug": "mengzi", "title": { "zh-CN": "《孟子》", "en": "Mengzi" }, "relation": { "zh-CN": "言说与编纂文本", "en": "Sayings and compiled text" } },
+      { "kind": "place", "slug": "zoucheng", "title": { "zh-CN": "邹城", "en": "Zoucheng" }, "relation": { "zh-CN": "地域传统入口", "en": "Regional tradition gateway" } }
+    ],
+    "profile": { "historicity": "inferred", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "孟轲", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure",
+    "slug": "zhang-daoling",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "traditional_account",
+    "importance": 4,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "张道陵",
+        "subtitle": "天师道源流中的历史人物与神圣化祖师",
+        "shortSummary": "张道陵是道教组织化源流的重要入口；历史人物、天师谱系和后世神圣化必须分层。",
+        "curatorialDescription": [
+          "条目把东汉人物线索与约后世形成的天师授受叙事分开，鹤鸣山只表示传统空间与后世记忆的交汇。",
+          "人物节点不把‘祖天师’的神圣称号写回为没有限定的东汉现场事实。"
+        ],
+        "researchNote": "现存生平细节大量依赖后世传记和道教经书；当前采用低置信传统年代，并把神圣化留在接受关系中。",
+        "timeLabel": "传统置于东汉；约 34–156 年的导航区间",
+        "keyFacts": [
+          { "label": { "zh-CN": "身份层", "en": "Identity layer" }, "value": { "zh-CN": "历史人物与后世祖师分层", "en": "Historical person separated from later ancestral sacralisation" } },
+          { "label": { "zh-CN": "空间层", "en": "Spatial layer" }, "value": { "zh-CN": "鹤鸣山为传统关联锚点", "en": "Mount Heming is a traditional-association anchor" } }
+        ]
+      },
+      "en": {
+        "title": "Zhang Daoling",
+        "subtitle": "A historical figure and later sacralised founder in the Celestial Masters tradition",
+        "shortSummary": "Zhang Daoling is a major gateway into organised Daoist origins; the historical person, Celestial Masters genealogy and later sacralisation must remain layered.",
+        "curatorialDescription": [
+          "The record separates Eastern Han biographical traces from later revelation and lineage narratives; Mount Heming marks a meeting of traditional geography and later memory.",
+          "The title ‘Ancestral Celestial Master’ is not projected back as an unqualified Eastern Han field fact."
+        ],
+        "researchNote": "Much surviving biography depends on later hagiography and Daoist scripture; this release uses a low-confidence traditional range and models sacralisation as reception.",
+        "timeLabel": "Placed traditionally in the Eastern Han; c. 34–156 navigational range",
+        "keyFacts": [
+          { "label": { "zh-CN": "身份层", "en": "Identity layer" }, "value": { "zh-CN": "历史人物与后世祖师分层", "en": "Historical person separated from later ancestral sacralisation" } },
+          { "label": { "zh-CN": "空间层", "en": "Spatial layer" }, "value": { "zh-CN": "鹤鸣山为传统关联锚点", "en": "Mount Heming is a traditional-association anchor" } }
+        ]
+      }
+    },
+    "traditions": [
+      { "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "traditional_account", "sourceId": "source:zhang-daoling-ctext" }
+    ],
+    "temporalAssertions": [
+      { "predicate": "life", "timeType": "circa", "startYear": 34, "endYear": 156, "displayDate": { "zh-CN": "传统置于东汉；约 34–156 年", "en": "Traditionally placed in the Eastern Han; c. 34–156" }, "confidence": "low", "evidenceLayer": "traditional_account", "sourceId": "source:zhang-daoling-ctext" }
+    ],
+    "sourceIds": ["source:zhang-daoling-ctext", "source:editorial-method"],
+    "related": [
+      { "kind": "text", "slug": "zhengyi-mengwei-dao", "title": { "zh-CN": "《正一盟威道》传统", "en": "Zhengyi Mengwei Dao tradition" }, "relation": { "zh-CN": "后世经书与传承", "en": "Later scripture and lineage" } },
+      { "kind": "place", "slug": "mount-heming", "title": { "zh-CN": "鹤鸣山", "en": "Mount Heming" }, "relation": { "zh-CN": "传统关联空间", "en": "Traditional-associated space" } }
+    ],
+    "profile": { "historicity": "contested", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "张道陵", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure",
+    "slug": "ge-hong",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "葛洪",
+        "subtitle": "《抱朴子》、神仙论述与道家—儒家交涉",
+        "shortSummary": "葛洪把道教修炼、方术、政治伦理和文本写作连接起来，是理解东晋道教知识生产的重要人物。",
+        "curatorialDescription": [
+          "《抱朴子》自叙和内外篇为人物与文本之间的主要入口；本馆把文本中的神仙叙述与历史事实分层。",
+          "罗浮山作为现实山地和后世道教记忆地点显示，但不把所有传说活动都投影为精确坐标。"
+        ],
+        "researchNote": "葛洪年代和文本活动有较充分的传记与作品入口，但具体居止、炼丹实践和后世仙传仍需逐条核对。",
+        "timeLabel": "约 283–343 年",
+        "keyFacts": [
+          { "label": { "zh-CN": "核心文本", "en": "Core text" }, "value": { "zh-CN": "《抱朴子》内外篇", "en": "Inner and Outer Chapters of the Baopuzi" } },
+          { "label": { "zh-CN": "地点边界", "en": "Place boundary" }, "value": { "zh-CN": "罗浮山为山地与记忆层锚点", "en": "Mount Luofu is a landscape and memory anchor" } }
+        ]
+      },
+      "en": {
+        "title": "Ge Hong",
+        "subtitle": "The Baopuzi, transcendence discourse and Daoist–Confucian negotiation",
+        "shortSummary": "Ge Hong connects Daoist cultivation, techniques, political ethics and textual production, offering a key entry into Eastern Jin religious knowledge.",
+        "curatorialDescription": [
+          "The Baopuzi's autobiographical and inner/outer chapter layers form the main person–text gateway; its transcendence narratives are kept separate from historical claims.",
+          "Mount Luofu is shown as a real landscape and later Daoist memory site without turning every legend into a precise coordinate."
+        ],
+        "researchNote": "Ge Hong's dates and works have strong textual entry points, while residence, technical practice and later immortal biographies require item-level review.",
+        "timeLabel": "c. 283–343 CE",
+        "keyFacts": [
+          { "label": { "zh-CN": "核心文本", "en": "Core text" }, "value": { "zh-CN": "《抱朴子》内外篇", "en": "Inner and Outer Chapters of the Baopuzi" } },
+          { "label": { "zh-CN": "地点边界", "en": "Place boundary" }, "value": { "zh-CN": "罗浮山为山地与记忆层锚点", "en": "Mount Luofu is a landscape and memory anchor" } }
+        ]
+      }
+    },
+    "traditions": [
+      { "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:baopuzi-ctext" }
+    ],
+    "temporalAssertions": [
+      { "predicate": "life", "timeType": "circa", "startYear": 283, "endYear": 343, "displayDate": { "zh-CN": "约 283–343 年", "en": "c. 283–343 CE" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:baopuzi-ctext" }
+    ],
+    "sourceIds": ["source:baopuzi-ctext", "source:editorial-method"],
+    "related": [
+      { "kind": "text", "slug": "baopuzi", "title": { "zh-CN": "《抱朴子》", "en": "Baopuzi" }, "relation": { "zh-CN": "作者与自叙文本", "en": "Author and autobiographical text" } },
+      { "kind": "place", "slug": "mount-luofu", "title": { "zh-CN": "罗浮山", "en": "Mount Luofu" }, "relation": { "zh-CN": "山地与记忆空间", "en": "Landscape and memory space" } }
+    ],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "葛洪", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure",
+    "slug": "ashoka",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "阿育王",
+        "subtitle": "敕诏、王权与佛教传播的早期节点",
+        "shortSummary": "阿育王通过岩刻和石柱敕诏留下了可见的政治与宗教物证，是连接印度历史、佛教传播和遗产地图的重要人物。",
+        "curatorialDescription": [
+          "本条优先显示敕诏与遗址层，而不把后世佛教传记中复杂的阿育王故事直接当作同一时期的政治事实。",
+          "桑奇是物质遗产与后世记忆节点；阿育王并不因此被定位为在所有佛教遗址都亲自活动。"
+        ],
+        "researchNote": "统治年代和敕诏遗址有考古/遗产资料支撑；佛教皈依、传法和舍利叙事仍需分层审核。",
+        "timeLabel": "约公元前 268–232 年",
+        "keyFacts": [
+          { "label": { "zh-CN": "物证入口", "en": "Material evidence" }, "value": { "zh-CN": "岩刻与石柱敕诏", "en": "Rock and pillar edicts" } },
+          { "label": { "zh-CN": "空间入口", "en": "Spatial gateway" }, "value": { "zh-CN": "桑奇遗产地与敕诏网络", "en": "Sanchi heritage site and edict network" } }
+        ]
+      },
+      "en": {
+        "title": "Ashoka",
+        "subtitle": "Edicts, kingship and an early node in Buddhist transmission",
+        "shortSummary": "Ashoka left visible political and religious evidence in rock and pillar edicts, making him a key figure for linking Indian history, Buddhist transmission and heritage geography.",
+        "curatorialDescription": [
+          "The entry foregrounds edict and site layers rather than treating complex later Buddhist biographies of Ashoka as political facts from the same period.",
+          "Sanchi is a material-heritage and later-memory node; it does not place Ashoka personally at every Buddhist site."
+        ],
+        "researchNote": "Reign dates and edict sites are supported by archaeological and heritage records; conversion, missions and relic narratives require separate layers.",
+        "timeLabel": "c. 268–232 BCE",
+        "keyFacts": [
+          { "label": { "zh-CN": "物证入口", "en": "Material evidence" }, "value": { "zh-CN": "岩刻与石柱敕诏", "en": "Rock and pillar edicts" } },
+          { "label": { "zh-CN": "空间入口", "en": "Spatial gateway" }, "value": { "zh-CN": "桑奇遗产地与敕诏网络", "en": "Sanchi heritage site and edict network" } }
+        ]
+      }
+    },
+    "traditions": [
+      { "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:ashoka-edicts-unesco" }
+    ],
+    "temporalAssertions": [
+      { "predicate": "life", "timeType": "circa", "startYear": -268, "endYear": -232, "displayDate": { "zh-CN": "约公元前 268–232 年", "en": "c. 268–232 BCE" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:ashoka-edicts-unesco" }
+    ],
+    "sourceIds": ["source:ashoka-edicts-unesco", "source:unesco-sanchi", "source:editorial-method"],
+    "related": [
+      { "kind": "text", "slug": "ashoka-edicts", "title": { "zh-CN": "阿育王敕诏", "en": "Ashokan Edicts" }, "relation": { "zh-CN": "王权与法的物证文本", "en": "Material texts of kingship and dhamma" } },
+      { "kind": "place", "slug": "sanchi", "title": { "zh-CN": "桑奇", "en": "Sanchi" }, "relation": { "zh-CN": "敕诏与遗产记忆", "en": "Edict and heritage memory" } }
+    ],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "Aśoka", "nameLanguageCode": "sa" }
+  },
+  {
+    "kind": "figure",
+    "slug": "nagarjuna",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "龙树",
+        "subtitle": "中观论述、空性哲学与跨区域接受",
+        "shortSummary": "龙树是佛教哲学史中连接中观论书写、印度思想论辩和东亚接受史的高识别度人物。",
+        "curatorialDescription": [
+          "《中论》作为作品和龙树作为人物分别建模；年代、作品归属和传记地点不被压成一个确定的生平点。",
+          "那伽朱那康达在本批次中仅作为南印度记忆/区域锚点，坐标精度低，不等同于龙树确定的居住地。"
+        ],
+        "researchNote": "龙树年代通常置于公元 2–3 世纪之间，传记与地点存在争议；当前通过低置信时间和记忆空间进入地图网络。",
+        "timeLabel": "约公元 2–3 世纪；年代与地点有争议",
+        "keyFacts": [
+          { "label": { "zh-CN": "核心作品", "en": "Core work" }, "value": { "zh-CN": "《中论》及中观论书", "en": "Mūlamadhyamakakārikā and Madhyamaka treatises" } },
+          { "label": { "zh-CN": "地点边界", "en": "Place boundary" }, "value": { "zh-CN": "那伽朱那康达为低精度记忆锚点", "en": "Nagarjunakonda is a low-precision memory anchor" } }
+        ]
+      },
+      "en": {
+        "title": "Nāgārjuna",
+        "subtitle": "Madhyamaka argument, emptiness and transregional reception",
+        "shortSummary": "Nāgārjuna is a recognisable figure linking Madhyamaka writing, Indian philosophical debate and later East Asian reception.",
+        "curatorialDescription": [
+          "The Mūlamadhyamakakārikā is modelled as a work distinct from Nāgārjuna as a person; dates, attribution and biographical places are not compressed into one certain life point.",
+          "Nagarjunakonda is used only as a southern Indian memory/regional anchor with low coordinate precision, not as a confirmed residence."
+        ],
+        "researchNote": "Nāgārjuna is commonly placed in the second to third centuries CE, while biography and place traditions remain contested; this entry uses low-confidence time and memory geography.",
+        "timeLabel": "c. second–third centuries CE; date and place contested",
+        "keyFacts": [
+          { "label": { "zh-CN": "核心作品", "en": "Core work" }, "value": { "zh-CN": "《中论》及中观论书", "en": "Mūlamadhyamakakārikā and Madhyamaka treatises" } },
+          { "label": { "zh-CN": "地点边界", "en": "Place boundary" }, "value": { "zh-CN": "那伽朱那康达为低精度记忆锚点", "en": "Nagarjunakonda is a low-precision memory anchor" } }
+        ]
+      }
+    },
+    "traditions": [
+      { "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:nagarjuna-sep" }
+    ],
+    "temporalAssertions": [
+      { "predicate": "life", "timeType": "circa", "startYear": 150, "endYear": 250, "displayDate": { "zh-CN": "约公元 2–3 世纪", "en": "c. second–third centuries CE" }, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:nagarjuna-sep" }
+    ],
+    "sourceIds": ["source:nagarjuna-sep", "source:editorial-method"],
+    "related": [
+      { "kind": "text", "slug": "mulamadhyamakakarika", "title": { "zh-CN": "《中论》", "en": "Mūlamadhyamakakārikā" }, "relation": { "zh-CN": "传统归属的核心论书", "en": "Core treatise traditionally attributed to him" } },
+      { "kind": "place", "slug": "nagarjunakonda", "title": { "zh-CN": "那伽朱那康达", "en": "Nagarjunakonda" }, "relation": { "zh-CN": "低精度记忆锚点", "en": "Low-precision memory anchor" } }
+    ],
+    "profile": { "historicity": "contested", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "Nāgārjuna", "nameLanguageCode": "sa" }
+  },
+  {
+    "kind": "figure",
+    "slug": "kumarajiva",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "鸠摩罗什",
+        "subtitle": "龟兹—长安译经网络与佛教汉译",
+        "shortSummary": "鸠摩罗什把龟兹、长安和佛教经典翻译连接起来，是跨语言知识生产与东亚佛教传播的关键人物。",
+        "curatorialDescription": [
+          "人物条目强调译场的协作性：译主、助手、校勘和制度支持不能被压成一个人的孤立写作。",
+          "龟兹与长安是两个具有不同证据层的空间节点，路线线条不表示已复原的逐日旅行。"
+        ],
+        "researchNote": "344–413 年和约 401 年入长安有机构/传记参考；具体译经清单、团队分工和版本差异仍需逐项核对。",
+        "timeLabel": "344–413 年；约 401 年进入长安译经场",
+        "keyFacts": [
+          { "label": { "zh-CN": "主要身份", "en": "Primary role" }, "value": { "zh-CN": "僧侣、学者、译经家", "en": "Monk, scholar and translator" } },
+          { "label": { "zh-CN": "空间网络", "en": "Spatial network" }, "value": { "zh-CN": "龟兹—长安", "en": "Kucha–Chang'an" } }
+        ]
+      },
+      "en": {
+        "title": "Kumārajīva",
+        "subtitle": "The Kucha–Chang'an translation network and Buddhist Chinese",
+        "shortSummary": "Kumārajīva connects Kucha, Chang'an and the translation of Buddhist scriptures, making him a key figure in multilingual knowledge production and East Asian transmission.",
+        "curatorialDescription": [
+          "The entry foregrounds the collaborative translation field: lead translator, assistants, revision and institutional support are not collapsed into solitary authorship.",
+          "Kucha and Chang'an are spatial nodes with different evidence layers; the line does not claim a reconstructed day-by-day journey."
+        ],
+        "researchNote": "344–413 and arrival in Chang'an around 401 have institutional and biographical references; translation lists, team roles and version differences require item-level review.",
+        "timeLabel": "344–413 CE; translation work in Chang'an from c. 401",
+        "keyFacts": [
+          { "label": { "zh-CN": "主要身份", "en": "Primary role" }, "value": { "zh-CN": "僧侣、学者、译经家", "en": "Monk, scholar and translator" } },
+          { "label": { "zh-CN": "空间网络", "en": "Spatial network" }, "value": { "zh-CN": "龟兹—长安", "en": "Kucha–Chang'an" } }
+        ]
+      }
+    },
+    "traditions": [
+      { "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:kumarajiva-biography" }
+    ],
+    "temporalAssertions": [
+      { "predicate": "life", "timeType": "exact", "startYear": 344, "endYear": 413, "displayDate": { "zh-CN": "344–413 年", "en": "344–413 CE" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:kumarajiva-biography" }
+    ],
+    "sourceIds": ["source:kumarajiva-biography", "source:editorial-method"],
+    "related": [
+      { "kind": "text", "slug": "lotus-sutra", "title": { "zh-CN": "《法华经》鸠摩罗什译本传统", "en": "Kumarajiva's Lotus Sutra translation tradition" }, "relation": { "zh-CN": "汉译与传布", "en": "Chinese translation and transmission" } },
+      { "kind": "place", "slug": "qiuci", "title": { "zh-CN": "龟兹", "en": "Kucha" }, "relation": { "zh-CN": "出生与学习语境", "en": "Birth and learning context" } },
+      { "kind": "place", "slug": "changan", "title": { "zh-CN": "长安", "en": "Chang'an" }, "relation": { "zh-CN": "译经与讲学", "en": "Translation and teaching" } }
+    ],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "鳩摩羅什", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure",
+    "slug": "faxian",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "法显",
+        "subtitle": "求法旅行、《佛国记》与海陆交通",
+        "shortSummary": "法显把东亚僧侣的求法旅行、印度与斯里兰卡的见闻和汉文佛教旅行记连接起来。",
+        "curatorialDescription": [
+          "《佛国记》既是旅行文本，也是观察早期佛教地点、制度和物质环境的窗口；记述视角不等同于完整实地地图。",
+          "路线采用区域锚点，不把海上回程和每个国家的停留时长伪装为同等精度。"
+        ],
+        "researchNote": "约 399–414 年的旅行范围和文本活动可作为入口；生卒、具体路线与地点对应仍需旅行记版本和历史地理互证。",
+        "timeLabel": "求法活动约 399–414 年",
+        "keyFacts": [
+          { "label": { "zh-CN": "核心文本", "en": "Core text" }, "value": { "zh-CN": "《佛国记》", "en": "Foguoji / Record of Buddhist Kingdoms" } },
+          { "label": { "zh-CN": "路线视角", "en": "Route perspective" }, "value": { "zh-CN": "长安—南亚—海上回程", "en": "Chang'an–South Asia–maritime return" } }
+        ]
+      },
+      "en": {
+        "title": "Faxian",
+        "subtitle": "Pilgrimage, the Foguoji and maritime–overland movement",
+        "shortSummary": "Faxian connects a monastic pilgrimage from East Asia with observations of India and Sri Lanka and a Chinese Buddhist travel record.",
+        "curatorialDescription": [
+          "The Foguoji is both a travel text and a window onto early Buddhist places, institutions and material settings; its viewpoint is not a complete field map.",
+          "The route uses regional anchors without pretending that maritime return legs or every stay have equal precision."
+        ],
+        "researchNote": "The c. 399–414 travel and textual horizon is a usable entry; life dates, route detail and place identifications require edition and historical-geography comparison.",
+        "timeLabel": "Pilgrimage activity c. 399–414 CE",
+        "keyFacts": [
+          { "label": { "zh-CN": "核心文本", "en": "Core text" }, "value": { "zh-CN": "《佛国记》", "en": "Foguoji / Record of Buddhist Kingdoms" } },
+          { "label": { "zh-CN": "路线视角", "en": "Route perspective" }, "value": { "zh-CN": "长安—南亚—海上回程", "en": "Chang'an–South Asia–maritime return" } }
+        ]
+      }
+    },
+    "traditions": [
+      { "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:faxian-foguoji" }
+    ],
+    "temporalAssertions": [
+      { "predicate": "activity", "timeType": "range", "startYear": 399, "endYear": 414, "displayDate": { "zh-CN": "求法活动约 399–414 年", "en": "Pilgrimage activity c. 399–414 CE" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:faxian-foguoji" }
+    ],
+    "sourceIds": ["source:faxian-foguoji", "source:editorial-method"],
+    "related": [
+      { "kind": "text", "slug": "foguoji", "title": { "zh-CN": "《佛国记》", "en": "Foguoji" }, "relation": { "zh-CN": "旅行与见闻文本", "en": "Travel and observation text" } },
+      { "kind": "route", "slug": "faxian-pilgrimage-route", "title": { "zh-CN": "法显求法路线", "en": "Faxian pilgrimage route" }, "relation": { "zh-CN": "海陆交通廊道", "en": "Overland and maritime corridor" } }
+    ],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "法顯", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure",
+    "slug": "pangu",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "mythic_symbolic",
+    "importance": 4,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "盘古",
+        "subtitle": "天地开辟叙事中的神话人格",
+        "shortSummary": "盘古进入本馆的神话宇宙入口，表示开辟与天地生成叙事，不占用历史人物的生卒年和现实坐标。",
+        "curatorialDescription": ["盘古只进入神话/象征层；不同文本中的开辟叙事、身体化宇宙和后世编排不合并为一条历史事件。"],
+        "researchNote": "当前以传统文本见证和 symbolic cosmos 呈现；没有把神话顺序换算成伪历史年代。",
+        "timeLabel": "神话传统时间：无历史纪年",
+        "keyFacts": [{ "label": { "zh-CN": "空间层", "en": "Spatial layer" }, "value": { "zh-CN": "混沌与开辟象征空间", "en": "Symbolic space of chaos and cosmogenesis" } }]
+      },
+      "en": {
+        "title": "Pangu",
+        "subtitle": "A mythic persona in cosmogenesis narratives",
+        "shortSummary": "Pangu is a mythic-cosmos gateway for creation and the ordering of heaven and earth; he receives no historical lifespan or real-world coordinate.",
+        "curatorialDescription": ["Pangu belongs only to the mythic and symbolic layer; different cosmogenesis texts and later arrangements are not merged into one historical event."],
+        "researchNote": "The entry uses textual witnesses and symbolic cosmos without converting mythic sequence into pseudo-historical dates.",
+        "timeLabel": "Mythic traditional time: no historical dating",
+        "keyFacts": [{ "label": { "zh-CN": "空间层", "en": "Spatial layer" }, "value": { "zh-CN": "混沌与开辟象征空间", "en": "Symbolic space of chaos and cosmogenesis" } }]
+      }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "later_associated", "isPrimary": true, "confidence": "low", "evidenceLayer": "mythic_symbolic", "sourceId": "source:mythic-figures-ctext" }],
+    "temporalAssertions": [{ "predicate": "traditional_occurrence", "timeType": "atemporal", "displayDate": { "zh-CN": "神话传统时间：无历史纪年", "en": "Mythic traditional time: no historical dating" }, "confidence": "unknown", "evidenceLayer": "mythic_symbolic", "sourceId": "source:mythic-figures-ctext" }],
+    "sourceIds": ["source:mythic-figures-ctext", "source:editorial-method"],
+    "related": [{ "kind": "place", "slug": "primordial-cosmos", "title": { "zh-CN": "混沌与开辟", "en": "Primordial cosmos" }, "relation": { "zh-CN": "象征空间", "en": "Symbolic space" } }],
+    "profile": { "historicity": "mythic", "figureClass": "mythic_persona", "gender": "male", "canonicalNameOriginal": "盤古", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure",
+    "slug": "nuwa",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "mythic_symbolic",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "女娲",
+        "subtitle": "造人、补天与秩序修复的神话人格",
+        "shortSummary": "女娲连接造人、补天、婚姻与秩序修复的多重叙事，是神话时代空间入口而非历史人物卡。",
+        "curatorialDescription": ["本条区分早期文献片段、后世神话编排和地方祭祀/图像记忆；不把女娲故事的所有版本合并。"],
+        "researchNote": "现实世界中的女娲庙、图像和地方传说可在后续 memory/cult site 批次单独加入；当前只进入象征空间。",
+        "timeLabel": "神话传统时间：无历史纪年",
+        "keyFacts": [{ "label": { "zh-CN": "核心主题", "en": "Core theme" }, "value": { "zh-CN": "造人与补天", "en": "Creation of humans and repair of the sky" } }]
+      },
+      "en": {
+        "title": "Nüwa",
+        "subtitle": "A mythic persona of creation, repair and restored order",
+        "shortSummary": "Nüwa brings together stories of creating humans, repairing the sky, marriage and restoring order; she is a mythic-space entry, not a historical dossier.",
+        "curatorialDescription": ["The record separates early textual fragments, later mythic arrangements and local ritual/image memory rather than merging every version of the Nüwa story."],
+        "researchNote": "Temples, images and local traditions can enter a later memory/cult-site batch; this release keeps Nüwa in symbolic space only.",
+        "timeLabel": "Mythic traditional time: no historical dating",
+        "keyFacts": [{ "label": { "zh-CN": "核心主题", "en": "Core theme" }, "value": { "zh-CN": "造人与补天", "en": "Creation of humans and repair of the sky" } }]
+      }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "later_associated", "isPrimary": true, "confidence": "low", "evidenceLayer": "mythic_symbolic", "sourceId": "source:nuwa-british-museum" }],
+    "temporalAssertions": [{ "predicate": "traditional_occurrence", "timeType": "atemporal", "displayDate": { "zh-CN": "神话传统时间：无历史纪年", "en": "Mythic traditional time: no historical dating" }, "confidence": "unknown", "evidenceLayer": "mythic_symbolic", "sourceId": "source:nuwa-british-museum" }],
+    "sourceIds": ["source:nuwa-british-museum", "source:mythic-figures-ctext", "source:editorial-method"],
+    "related": [{ "kind": "place", "slug": "nuwa-cosmos", "title": { "zh-CN": "补天与造人", "en": "Nüwa cosmology" }, "relation": { "zh-CN": "象征空间", "en": "Symbolic space" } }],
+    "profile": { "historicity": "mythic", "figureClass": "mythic_persona", "gender": "female", "canonicalNameOriginal": "女媧", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure",
+    "slug": "fuxi",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "mythic_symbolic",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "伏羲",
+        "subtitle": "八卦、秩序与文明起源的神话圣王",
+        "shortSummary": "伏羲连接八卦、文字/制度起源与三皇谱系，是神话时代文明原型的象征节点。",
+        "curatorialDescription": ["伏羲的图像和文明发明叙事属于传统与后世象征层；八卦起源不作为可验证的单一历史事件发布。"],
+        "researchNote": "后续可加入伏羲女娲图像、地方祭祀与出土图像对象；当前不添加现实活动坐标。",
+        "timeLabel": "神话传统时间：无历史纪年",
+        "keyFacts": [{ "label": { "zh-CN": "核心主题", "en": "Core theme" }, "value": { "zh-CN": "八卦与文明秩序", "en": "Trigrams and civilisational order" } }]
+      },
+      "en": {
+        "title": "Fu Xi",
+        "subtitle": "A mythic sage-king of trigrams, order and civilisational origins",
+        "shortSummary": "Fu Xi connects trigrams, the origins of writing or institutions and the Three Sovereigns genealogy as a symbolic node of mythic civilisation.",
+        "curatorialDescription": ["Fu Xi's images and invention narratives belong to traditional and later symbolic layers; the origin of the trigrams is not published as one verifiable historical event."],
+        "researchNote": "Later batches may add Fu Xi–Nüwa imagery, local cults and excavated objects; this release adds no real-world activity coordinate.",
+        "timeLabel": "Mythic traditional time: no historical dating",
+        "keyFacts": [{ "label": { "zh-CN": "核心主题", "en": "Core theme" }, "value": { "zh-CN": "八卦与文明秩序", "en": "Trigrams and civilisational order" } }]
+      }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "later_associated", "isPrimary": true, "confidence": "low", "evidenceLayer": "mythic_symbolic", "sourceId": "source:fuxi-british-museum" }],
+    "temporalAssertions": [{ "predicate": "traditional_occurrence", "timeType": "atemporal", "displayDate": { "zh-CN": "神话传统时间：无历史纪年", "en": "Mythic traditional time: no historical dating" }, "confidence": "unknown", "evidenceLayer": "mythic_symbolic", "sourceId": "source:fuxi-british-museum" }],
+    "sourceIds": ["source:fuxi-british-museum", "source:mythic-figures-ctext", "source:editorial-method"],
+    "related": [{ "kind": "place", "slug": "trigram-cosmos", "title": { "zh-CN": "八卦与方位", "en": "Trigram cosmos" }, "relation": { "zh-CN": "象征空间", "en": "Symbolic space" } }],
+    "profile": { "historicity": "mythic", "figureClass": "mythic_persona", "gender": "male", "canonicalNameOriginal": "伏羲", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure",
+    "slug": "huangdi",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "mythic_symbolic",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "黄帝（轩辕）",
+        "subtitle": "五帝谱系、政治祖源与后世象征",
+        "shortSummary": "黄帝同时存在于传说时代帝王谱系、医学/道术传说和近现代祖源叙事中，必须把这些接受层拆开。",
+        "curatorialDescription": ["黄帝在本馆首先作为传说人物进入 symbolic cosmos；《史记》谱系、崆峒问道、祭陵和现代民族祖源叙事不合并。"],
+        "researchNote": "黄帝的现实祭祀和遗址可在后续 memory/cult site 批次进入现实地图；当前不提供历史生年。",
+        "timeLabel": "传说时代：无可考历史纪年",
+        "keyFacts": [{ "label": { "zh-CN": "关键区分", "en": "Key distinction" }, "value": { "zh-CN": "传说帝王、祭祀记忆与现代祖源叙事分层", "en": "Legendary ruler, cult memory and modern ancestry narratives are layered" } }]
+      },
+      "en": {
+        "title": "Huangdi (Yellow Emperor)",
+        "subtitle": "Five Emperors genealogy, political ancestry and later symbolism",
+        "shortSummary": "Huangdi appears in legendary ruler genealogies, medical or Daoist lore and modern ancestry narratives; these reception layers must remain separate.",
+        "curatorialDescription": ["The museum first places Huangdi in symbolic cosmos: the Shiji genealogy, asking Guangchengzi about the Dao, imperial tomb memory and modern ancestry narratives are not merged."],
+        "researchNote": "Real cult sites and heritage locations can enter a later memory/cult-site batch; no historical birth date is supplied here.",
+        "timeLabel": "Legendary era: no recoverable historical dating",
+        "keyFacts": [{ "label": { "zh-CN": "关键区分", "en": "Key distinction" }, "value": { "zh-CN": "传说帝王、祭祀记忆与现代祖源叙事分层", "en": "Legendary ruler, cult memory and modern ancestry narratives are layered" } }]
+      }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "later_associated", "isPrimary": true, "confidence": "low", "evidenceLayer": "mythic_symbolic", "sourceId": "source:huangdi-ctext" }],
+    "temporalAssertions": [{ "predicate": "traditional_occurrence", "timeType": "atemporal", "displayDate": { "zh-CN": "传说时代：无可考历史纪年", "en": "Legendary era: no recoverable historical dating" }, "confidence": "unknown", "evidenceLayer": "mythic_symbolic", "sourceId": "source:huangdi-ctext" }],
+    "sourceIds": ["source:huangdi-ctext", "source:mythic-figures-ctext", "source:editorial-method"],
+    "related": [{ "kind": "place", "slug": "kunlun-mythic-space", "title": { "zh-CN": "昆仑与传说山岳", "en": "Kunlun and legendary mountains" }, "relation": { "zh-CN": "传统空间", "en": "Traditional space" } }],
+    "profile": { "historicity": "mythic", "figureClass": "mythic_persona", "gender": "male", "canonicalNameOriginal": "黃帝／軒轅", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure",
+    "slug": "xi-wangmu",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "mythic_symbolic",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "西王母",
+        "subtitle": "昆仑、仙真与道教神话中的神圣女性",
+        "shortSummary": "西王母把昆仑、仙境、长生和后世艺术记忆连接起来，是理解神圣地理如何形成的核心入口。",
+        "curatorialDescription": ["西王母的身份随着文本和图像传统变化；本条显示神话与后世艺术层，不把昆仑神话当作现实地图坐标。"],
+        "researchNote": "大英博物馆目录为神话身份与艺术记忆入口；具体信仰谱系、年代和地域祭祀需进一步拆分。",
+        "timeLabel": "神话与神圣传统时间：无单一历史纪年",
+        "keyFacts": [{ "label": { "zh-CN": "象征空间", "en": "Symbolic space" }, "value": { "zh-CN": "昆仑", "en": "Kunlun" } }]
+      },
+      "en": {
+        "title": "Xi Wangmu (Queen Mother of the West)",
+        "subtitle": "Kunlun, immortality and a sacred female figure in Daoist mythology",
+        "shortSummary": "Xi Wangmu connects Kunlun, immortality and later artistic memory, providing a central entry into the formation of sacred geography.",
+        "curatorialDescription": ["Xi Wangmu changes across textual and visual traditions; this entry shows mythic and later-art layers without turning Kunlun mythology into real map coordinates."],
+        "researchNote": "The British Museum catalogue provides an entry into mythic identity and visual memory; lineages, dates and local cults require further separation.",
+        "timeLabel": "Mythic and sacred traditional time: no single historical date",
+        "keyFacts": [{ "label": { "zh-CN": "象征空间", "en": "Symbolic space" }, "value": { "zh-CN": "昆仑", "en": "Kunlun" } }]
+      }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "mythic_symbolic", "sourceId": "source:xi-wangmu-british-museum" }],
+    "temporalAssertions": [{ "predicate": "traditional_occurrence", "timeType": "atemporal", "displayDate": { "zh-CN": "神话与神圣传统时间：无单一历史纪年", "en": "Mythic and sacred traditional time: no single historical date" }, "confidence": "unknown", "evidenceLayer": "mythic_symbolic", "sourceId": "source:xi-wangmu-british-museum" }],
+    "sourceIds": ["source:xi-wangmu-british-museum", "source:editorial-method"],
+    "related": [{ "kind": "place", "slug": "kunlun-mythic-space", "title": { "zh-CN": "昆仑神圣空间", "en": "Sacred Kunlun space" }, "relation": { "zh-CN": "神话地理", "en": "Mythic geography" } }],
+    "profile": { "historicity": "mythic", "figureClass": "sacred_figure", "gender": "female", "canonicalNameOriginal": "西王母", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure",
+    "slug": "taishang-laojun",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "later_deification",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "太上老君",
+        "subtitle": "老子神格化后的道教神圣身份",
+        "shortSummary": "太上老君不是老子的别名卡，而是与老子分开的神圣身份节点，用来呈现道教神格化、经典谱系与宇宙秩序。",
+        "curatorialDescription": ["本条与老子通过 deified_as 关系连接；太上老君的天界身份、三清谱系和后世经典叙事不会写回老子的历史/传统生平。"],
+        "researchNote": "当前使用道教经典与术语资料展示神格化层；具体出现年代、经典成书和宫观祭祀需要逐条建立来源。",
+        "timeLabel": "后世神格化层：约汉末至唐代的宽范围",
+        "keyFacts": [
+          { "label": { "zh-CN": "身份区分", "en": "Identity distinction" }, "value": { "zh-CN": "与老子独立建节点，通过神格化关系连接", "en": "A separate node connected to Laozi through deification" } },
+          { "label": { "zh-CN": "空间层", "en": "Spatial layer" }, "value": { "zh-CN": "道教天界象征空间", "en": "Daoist celestial symbolic space" } }
+        ]
+      },
+      "en": {
+        "title": "Taishang Laojun",
+        "subtitle": "The sacred Daoist identity formed through Laozi's later deification",
+        "shortSummary": "Taishang Laojun is not an alias card for Laozi but a separate sacred identity for modelling Daoist sacralisation, scriptural genealogy and cosmic order.",
+        "curatorialDescription": ["This node connects to Laozi through a deified_as relation; celestial identity, the Three Pure Ones genealogy and later scriptures are not written back into Laozi's historical or traditional biography."],
+        "researchNote": "The entry uses Daoist scripture and terminology as a sacralisation layer; emergence dates, textual formation and temple practice require item-level records.",
+        "timeLabel": "Later deification layer: broad late Han–Tang range",
+        "keyFacts": [
+          { "label": { "zh-CN": "身份区分", "en": "Identity distinction" }, "value": { "zh-CN": "与老子独立建节点，通过神格化关系连接", "en": "A separate node connected to Laozi through deification" } },
+          { "label": { "zh-CN": "空间层", "en": "Spatial layer" }, "value": { "zh-CN": "道教天界象征空间", "en": "Daoist celestial symbolic space" } }
+        ]
+      }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "later_deification", "sourceId": "source:taishang-laojun-ctext" }],
+    "temporalAssertions": [{ "predicate": "cult_emergence", "timeType": "range", "startYear": 200, "endYear": 700, "displayDate": { "zh-CN": "后世神格化层：约汉末至唐代的宽范围", "en": "Later deification layer: broad late Han–Tang range" }, "confidence": "low", "evidenceLayer": "later_deification", "sourceId": "source:taishang-laojun-ctext" }],
+    "sourceIds": ["source:taishang-laojun-ctext", "source:editorial-method"],
+    "related": [
+      { "kind": "figure", "slug": "laozi", "title": { "zh-CN": "老子（李耳）", "en": "Laozi (Li Er)" }, "relation": { "zh-CN": "后世神格化关系", "en": "Later deification relation" } },
+      { "kind": "place", "slug": "daoist-celestial-realm", "title": { "zh-CN": "道教天界", "en": "Daoist celestial realm" }, "relation": { "zh-CN": "神圣象征空间", "en": "Sacred symbolic space" } }
+    ],
+    "profile": { "historicity": "traditional", "figureClass": "sacred_figure", "gender": "male", "canonicalNameOriginal": "太上老君", "nameLanguageCode": "lzh" }
+  }
+]

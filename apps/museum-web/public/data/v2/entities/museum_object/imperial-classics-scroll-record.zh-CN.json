@@ -1,0 +1,40 @@
+{
+  "id": "ff77ea03-e426-57ba-94da-8fbd0e88bc65",
+  "locale": "zh-CN",
+  "kind": "museum_object",
+  "slug": "imperial-classics-scroll-record",
+  "title": "官学经典卷子记录（对象占位）",
+  "tradition": "confucianism",
+  "evidence": "historical_inferred",
+  "timeLabel": "对象记录待核；唐代官学语境",
+  "shortSummary": "卷子对象可呈现经典文本如何通过抄写、校勘和教学进入官学实践。",
+  "curatorialDescription": [
+    "对象类型与具体《五经正义》写本必须分开，当前不作馆藏归属。"
+  ],
+  "researchNote": "需补具体经典、书写年代、材质、文本版本、馆藏编号与图像许可。",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:object-records",
+      "title": "博物馆藏品与图像记录待建档清单",
+      "locator": "对象类型、馆藏机构、图像权利和编号待补",
+      "grade": "C",
+      "role": "Alpha 对象卡片的占位来源；不是可直接发布的藏品断言"
+    },
+    {
+      "id": "source:education-classics-records",
+      "title": "唐代国子监与经学制度资料",
+      "locator": "国子监、经学与《五经正义》制度语境；底本待核",
+      "grade": "B",
+      "role": "国家教育、经学注疏和知识制度的研究参考"
+    }
+  ],
+  "profile": {
+    "objectType": "manuscript_scroll",
+    "rightsStatus": "unknown",
+    "collectionStatus": "placeholder"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

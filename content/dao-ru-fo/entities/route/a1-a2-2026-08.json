@@ -1,0 +1,36 @@
+[
+  {
+    "kind": "route",
+    "slug": "faxian-pilgrimage-route",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "法显求法路线",
+        "subtitle": "长安—南亚—归返的跨区域知识流动",
+        "shortSummary": "这条路线把法显的求法记录与长安、敦煌、鹿野苑、那烂陀等现实地点放入同一研究视野。",
+        "curatorialDescription": ["路线只连接有地理参照的区域节点，不绘制伪精确的逐日轨迹。"],
+        "researchNote": "航海段、具体停留时长与文本段落定位需继续补充。",
+        "timeLabel": "约 399–414",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Faxian's pilgrimage route",
+        "subtitle": "Transregional knowledge movement from Chang'an through South Asia and back",
+        "shortSummary": "The route places Faxian's pilgrimage record alongside real places such as Chang'an, Dunhuang, Sarnath and Nalanda.",
+        "curatorialDescription": ["It connects regional geographic anchors without drawing a falsely precise day-by-day track."],
+        "researchNote": "Maritime segments, stop durations and passage-level locations remain to be added.",
+        "timeLabel": "c. 399–414",
+        "keyFacts": []
+      }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:faxian-foguoji" }],
+    "temporalAssertions": [{ "predicate": "route_activity", "timeType": "range", "startYear": 399, "endYear": 414, "displayDate": { "zh-CN": "约 399–414", "en": "c. 399–414" }, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:faxian-foguoji" }],
+    "sourceIds": ["source:faxian-foguoji", "source:historical-geography", "source:editorial-method"],
+    "related": [],
+    "profile": { "routeKind": "pilgrimage", "certainty": "reconstructed", "waypointSlugs": ["changan", "dunhuang", "sarnath", "nalanda"], "corridorNote": { "zh-CN": "只列现实地理锚点，不把区域路线重建伪装成逐日行程。", "en": "Only real geographic anchors are shown; a regional reconstruction is not presented as a day-by-day itinerary." }, "animationAllowed": false }
+  }
+]

@@ -1,0 +1,74 @@
+{
+  "id": "a8b3ffa4-3ad8-5cf8-a8d4-18bf4ab53530",
+  "locale": "zh-CN",
+  "kind": "route",
+  "slug": "xuanzang-western-pilgrimage",
+  "title": "玄奘西行求法路线",
+  "subtitle": "从长安出发的跨区域知识流动示意",
+  "tradition": "buddhism",
+  "evidence": "historical_inferred",
+  "timeLabel": "约 629–645",
+  "shortSummary": "这条路线把长安、河西走廊、中亚和南亚放入同一研究视野，但不把所有节点都当作已证实的逐日行程。",
+  "curatorialDescription": [
+    "路线是对人物记录、历史地理和后世地图的综合 read model；每个节点都需要保留自己的证据层和置信度。",
+    "地图只画有现实地理指向的节点，传统叙事和圣迹内容会进入另一层。"
+  ],
+  "researchNote": "需要补齐出发、返回、停留节点、路线版本和地图数据来源；当前只作为 Alpha 路线骨架。",
+  "keyFacts": [
+    {
+      "label": "路线类型",
+      "value": "求法与知识传播路线"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:xuanzang-records",
+      "title": "《大唐大慈恩寺三藏法师传》",
+      "locator": "《大唐大慈恩寺三藏法师传》全书（卷一至卷十）；卷一开篇为玄奘本传，后续卷次记录求法与译经活动",
+      "grade": "A",
+      "role": "玄奘生平、求法与译经活动的原始传记依据",
+      "url": "https://ctext.org/library.pl?if=en&res=112971"
+    },
+    {
+      "id": "source:historical-geography",
+      "title": "隋唐历史地理与城市沿革资料",
+      "locator": "长安、洛阳、敦煌历史名称与地理范围",
+      "grade": "A",
+      "role": "真实地点、历史名称和坐标示意的地理依据"
+    },
+    {
+      "id": "source:unesco-silk-roads-corridor",
+      "title": "UNESCO 世界遗产中心：丝绸之路长安—天山廊道路网",
+      "locator": "World Heritage List no. 1442; component coordinates and corridor description",
+      "grade": "A",
+      "role": "长安、洛阳、大雁塔、龟兹区域遗址及跨区域廊道的地理依据",
+      "url": "https://whc.unesco.org/en/list/1442/maps/"
+    },
+    {
+      "id": "source:unesco-nalanda",
+      "title": "UNESCO 世界遗产中心：那烂陀寺考古遗址",
+      "locator": "World Heritage List no. 1502; N25 8 12 E85 26 38",
+      "grade": "A",
+      "role": "那烂陀考古遗址位置、年代范围与寺院教育性质的权威入口",
+      "url": "https://whc.unesco.org/en/list/1502/"
+    }
+  ],
+  "profile": {
+    "routeKind": "pilgrimage",
+    "certainty": "reconstructed",
+    "waypointSlugs": [
+      "changan",
+      "dunhuang",
+      "qiuci",
+      "nalanda"
+    ],
+    "corridorNote": {
+      "zh-CN": "仅列有据可考或可作为区域锚点的节点，不绘制伪精确逐日路径。",
+      "en": "Only evidenced stops or regional anchors are listed; no falsely precise day-by-day line is drawn."
+    },
+    "animationAllowed": false
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

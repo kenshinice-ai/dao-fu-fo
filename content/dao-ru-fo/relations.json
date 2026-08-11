@@ -1,306 +1,4301 @@
 [
   {
     "id": "relation:xuanzang-active-changan",
-    "source": { "kind": "figure", "slug": "xuanzang" },
-    "target": { "kind": "place", "slug": "changan" },
+    "source": {
+      "kind": "figure",
+      "slug": "xuanzang"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "changan"
+    },
     "relationType": "active_in",
-    "label": { "zh-CN": "在长安活动", "en": "Active in Chang'an" },
-    "summary": { "zh-CN": "长安是玄奘译经、讲学与制度化工作的主要场所。", "en": "Chang'an was the main setting for Xuanzang's translation, teaching and institutional work." },
+    "label": {
+      "zh-CN": "在长安活动",
+      "en": "Active in Chang'an"
+    },
+    "summary": {
+      "zh-CN": "长安是玄奘译经、讲学与制度化工作的主要场所。",
+      "en": "Chang'an was the main setting for Xuanzang's translation, teaching and institutional work."
+    },
     "confidence": "high",
     "evidenceLayer": "historical_documented",
-    "sourceIds": ["source:xuanzang-records"]
+    "sourceIds": [
+      "source:xuanzang-records"
+    ],
+    "publicationState": "public",
+    "reviewStatus": "publishable"
   },
   {
     "id": "relation:xuanzang-travelled-dunhuang",
-    "source": { "kind": "figure", "slug": "xuanzang" },
-    "target": { "kind": "place", "slug": "dunhuang" },
+    "source": {
+      "kind": "figure",
+      "slug": "xuanzang"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "dunhuang"
+    },
     "relationType": "travelled_through",
-    "label": { "zh-CN": "经过敦煌区域", "en": "Travelled through the Dunhuang region" },
-    "summary": { "zh-CN": "敦煌位于跨越河西走廊的求法路线语境中，具体停留节点仍需逐项核定。", "en": "Dunhuang belongs to the Hexi Corridor context of the pilgrimage route; individual stops still require item-level verification." },
+    "label": {
+      "zh-CN": "经过敦煌区域",
+      "en": "Travelled through the Dunhuang region"
+    },
+    "summary": {
+      "zh-CN": "敦煌位于跨越河西走廊的求法路线语境中，具体停留节点仍需逐项核定。",
+      "en": "Dunhuang belongs to the Hexi Corridor context of the pilgrimage route; individual stops still require item-level verification."
+    },
     "confidence": "medium",
     "evidenceLayer": "historical_inferred",
-    "sourceIds": ["source:xuanzang-records", "source:historical-geography"]
+    "sourceIds": [
+      "source:xuanzang-records",
+      "source:historical-geography"
+    ]
   },
   {
     "id": "relation:xuanzang-active-luoyang",
-    "source": { "kind": "figure", "slug": "xuanzang" },
-    "target": { "kind": "place", "slug": "luoyang" },
+    "source": {
+      "kind": "figure",
+      "slug": "xuanzang"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "luoyang"
+    },
     "relationType": "active_in",
-    "label": { "zh-CN": "与洛阳发生联系", "en": "Connected with Luoyang" },
-    "summary": { "zh-CN": "洛阳是隋唐政治与宗教网络中的重要节点；本条只表达区域联系，不等同于固定驻锡。", "en": "Luoyang was an important political and religious node; this records a regional connection, not a claim of permanent residence." },
+    "label": {
+      "zh-CN": "与洛阳发生联系",
+      "en": "Connected with Luoyang"
+    },
+    "summary": {
+      "zh-CN": "洛阳是隋唐政治与宗教网络中的重要节点；本条只表达区域联系，不等同于固定驻锡。",
+      "en": "Luoyang was an important political and religious node; this records a regional connection, not a claim of permanent residence."
+    },
     "confidence": "medium",
     "evidenceLayer": "historical_inferred",
-    "sourceIds": ["source:xuanzang-records", "source:historical-geography"]
+    "sourceIds": [
+      "source:xuanzang-records",
+      "source:historical-geography"
+    ]
   },
   {
     "id": "relation:sima-active-changan",
-    "source": { "kind": "figure", "slug": "sima-chengzhen" },
-    "target": { "kind": "place", "slug": "changan" },
+    "source": {
+      "kind": "figure",
+      "slug": "sima-chengzhen"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "changan"
+    },
     "relationType": "active_in",
-    "label": { "zh-CN": "进入长安制度语境", "en": "Entered Chang'an's institutional context" },
-    "summary": { "zh-CN": "司马承祯与唐代宫廷、道教制度和长安政治空间相连。", "en": "Sima Chengzhen is connected with Tang courtly, Daoist institutional and Chang'an political contexts." },
+    "label": {
+      "zh-CN": "景云二年入京（长安锚点）",
+      "en": "Summoned to the capital in 711 (Chang'an anchor)"
+    },
+    "summary": {
+      "zh-CN": "《旧唐书》记载景云二年睿宗召司马承祯入京；本条只把当时京师的长安作为城市尺度锚点。开元年间涉及东都洛阳、王屋山的召见与建观另行处理，不由本条推成 713–735 年持续在长安活动。",
+      "en": "The Old Book of Tang records that Ruizong summoned Sima Chengzhen to the capital in 711; this relation uses Chang'an as a city-scale anchor for that episode only. Later Kaiyuan summons involving the eastern capital Luoyang and Mount Wangwu are kept separate and are not turned into continuous activity in Chang'an from 713 to 735."
+    },
     "confidence": "medium",
     "evidenceLayer": "historical_documented",
-    "sourceIds": ["source:sima-old-tang-biography", "source:daoist-historical-record"]
+    "sourceIds": [
+      "source:sima-old-tang-biography",
+      "source:sui-tang-changan-urban-study"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "circa",
+        "startYear": 711,
+        "endYear": 711,
+        "displayDate": {
+          "zh-CN": "景云二年（约 711）",
+          "en": "Jingyun 2 (c. 711)"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:sima-old-tang-biography"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "activity_site",
+      "historicity": "documented",
+      "note": {
+        "zh-CN": "仅标记景云二年入京的城市尺度锚点；开元九年至十五年的东都、王屋山等活动不纳入本条。",
+        "en": "Marks only the city-scale anchor for the 711 summons; Kaiyuan-era activity at the eastern capital and Mount Wangwu is excluded from this relation."
+      }
+    },
+    "publicationState": "public",
+    "reviewStatus": "publishable"
   },
   {
     "id": "relation:kong-active-changan",
-    "source": { "kind": "figure", "slug": "kong-yingda" },
-    "target": { "kind": "place", "slug": "changan" },
+    "source": {
+      "kind": "figure",
+      "slug": "kong-yingda"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "changan"
+    },
     "relationType": "active_in",
-    "label": { "zh-CN": "在长安经学制度中活动", "en": "Active in Chang'an's classical learning institutions" },
-    "summary": { "zh-CN": "孔颖达的经学工作与唐代长安的教育、注疏和国家制度相连。", "en": "Kong Yingda's classical scholarship was tied to Tang educational, commentarial and state institutions in Chang'an." },
+    "label": {
+      "zh-CN": "贞观十四年在长安国子学讲学",
+      "en": "Taught at Chang'an Guozijian in 640"
+    },
+    "summary": {
+      "zh-CN": "《碑林区志》记载，贞观十四年（640）唐太宗到长安务本坊国子学，命国子祭酒孔颖达讲《孝经》，并撰定《五经正义》为教材；本条只表达这一有具体机构和年份的长安活动。",
+      "en": "The Beilin District Gazetteer records that in 640, at the Guozijian in Wuben Ward, Chang'an, Emperor Taizong ordered Guozijian libationer Kong Yingda to lecture on the Classic of Filial Piety and help establish the Corrected Meanings as a textbook; this relation records only that institution- and year-specific activity in Chang'an."
+    },
     "confidence": "high",
     "evidenceLayer": "historical_documented",
-    "sourceIds": ["source:kong-new-tang-biography", "source:confucian-commentarial-record"]
+    "sourceIds": [
+      "source:kong-new-tang-biography",
+      "source:kong-wujing-zhengyi-record",
+      "source:changan-guozijian-gazetteer"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "exact",
+        "startYear": 640,
+        "endYear": 640,
+        "displayDate": {
+          "zh-CN": "贞观十四年（640）",
+          "en": "Zhenguan 14 (640)"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:changan-guozijian-gazetteer"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "activity_site",
+      "historicity": "documented",
+      "note": {
+        "zh-CN": "以务本坊国子学这一机构定位为关系边界，不把孔颖达全部 574–648 年生平活动都归入长安。",
+        "en": "The relation is bounded by the Wuben Ward Guozijian locator and does not assign Kong Yingda's entire 574–648 life and activity to Chang'an."
+      }
+    },
+    "publicationState": "public",
+    "reviewStatus": "publishable"
   },
   {
     "id": "relation:heart-sutra-has-version",
-    "source": { "kind": "text", "slug": "heart-sutra" },
-    "target": { "kind": "text_version", "slug": "heart-sutra-chinese-received" },
+    "source": {
+      "kind": "text",
+      "slug": "heart-sutra"
+    },
+    "target": {
+      "kind": "text_version",
+      "slug": "heart-sutra-chinese-received"
+    },
     "relationType": "has_version",
-    "label": { "zh-CN": "对应汉文版本", "en": "Has a Chinese received version" },
-    "summary": { "zh-CN": "文本条目与具体版本分开，便于段落引用回到版本层。", "en": "The text record is separated from a specific version so passages can cite the version layer." },
+    "label": {
+      "zh-CN": "对应汉文版本",
+      "en": "Has a Chinese received version"
+    },
+    "summary": {
+      "zh-CN": "文本条目与具体版本分开，便于段落引用回到版本层。",
+      "en": "The text record is separated from a specific version so passages can cite the version layer."
+    },
     "confidence": "high",
     "evidenceLayer": "historical_documented",
-    "sourceIds": ["source:heart-sutra-edition"]
+    "sourceIds": [
+      "source:heart-sutra-edition"
+    ],
+    "publicationState": "public",
+    "reviewStatus": "publishable"
   },
   {
     "id": "relation:daodejing-has-version",
-    "source": { "kind": "text", "slug": "daodejing" },
-    "target": { "kind": "text_version", "slug": "daodejing-received" },
+    "source": {
+      "kind": "text",
+      "slug": "daodejing"
+    },
+    "target": {
+      "kind": "text_version",
+      "slug": "daodejing-received"
+    },
     "relationType": "has_version",
-    "label": { "zh-CN": "对应通行本版本", "en": "Has a received version" },
-    "summary": { "zh-CN": "《道德经》条目与通行本版本分开记录，避免版本差异被隐藏。", "en": "The Daodejing record is separated from its received version so textual variation remains visible." },
+    "label": {
+      "zh-CN": "对应通行本版本",
+      "en": "Has a received version"
+    },
+    "summary": {
+      "zh-CN": "《道德经》条目与通行本版本分开记录，避免版本差异被隐藏。",
+      "en": "The Daodejing record is separated from its received version so textual variation remains visible."
+    },
     "confidence": "high",
     "evidenceLayer": "historical_documented",
-    "sourceIds": ["source:daodejing-edition"]
+    "sourceIds": [
+      "source:daodejing-edition"
+    ],
+    "publicationState": "public",
+    "reviewStatus": "publishable"
   },
   {
     "id": "relation:analects-has-version",
-    "source": { "kind": "text", "slug": "analects" },
-    "target": { "kind": "text_version", "slug": "analects-received" },
+    "source": {
+      "kind": "text",
+      "slug": "analects"
+    },
+    "target": {
+      "kind": "text_version",
+      "slug": "analects-received"
+    },
     "relationType": "has_version",
-    "label": { "zh-CN": "对应通行本版本", "en": "Has a received version" },
-    "summary": { "zh-CN": "《论语》条目与通行本版本分开记录，段落定位保持可追溯。", "en": "The Analects record is separated from its received version to keep passage locators traceable." },
+    "label": {
+      "zh-CN": "对应通行本版本",
+      "en": "Has a received version"
+    },
+    "summary": {
+      "zh-CN": "《论语》条目与通行本版本分开记录，段落定位保持可追溯。",
+      "en": "The Analects record is separated from its received version to keep passage locators traceable."
+    },
     "confidence": "high",
     "evidenceLayer": "historical_documented",
-    "sourceIds": ["source:analects-edition"]
+    "sourceIds": [
+      "source:analects-edition"
+    ],
+    "publicationState": "public",
+    "reviewStatus": "publishable"
   },
   {
     "id": "relation:form-passage-heart-sutra",
-    "source": { "kind": "passage", "slug": "form-is-emptiness" },
-    "target": { "kind": "text", "slug": "heart-sutra" },
+    "source": {
+      "kind": "passage",
+      "slug": "form-is-emptiness"
+    },
+    "target": {
+      "kind": "text",
+      "slug": "heart-sutra"
+    },
     "relationType": "passage_of",
-    "label": { "zh-CN": "属于文本段落", "en": "Passage of the text" },
-    "summary": { "zh-CN": "段落条目回指《心经》文本层，并保留版本和定位信息。", "en": "The passage points back to the Heart Sutra text layer while retaining version and locator information." },
+    "label": {
+      "zh-CN": "属于文本段落",
+      "en": "Passage of the text"
+    },
+    "summary": {
+      "zh-CN": "段落条目回指《心经》文本层，并保留版本和定位信息。",
+      "en": "The passage points back to the Heart Sutra text layer while retaining version and locator information."
+    },
     "confidence": "high",
     "evidenceLayer": "historical_documented",
-    "sourceIds": ["source:heart-sutra-edition"]
+    "sourceIds": [
+      "source:heart-sutra-edition"
+    ],
+    "publicationState": "public",
+    "reviewStatus": "publishable"
   },
   {
     "id": "relation:humans-passage-daodejing",
-    "source": { "kind": "passage", "slug": "humans-follow-earth" },
-    "target": { "kind": "text", "slug": "daodejing" },
+    "source": {
+      "kind": "passage",
+      "slug": "humans-follow-earth"
+    },
+    "target": {
+      "kind": "text",
+      "slug": "daodejing"
+    },
     "relationType": "passage_of",
-    "label": { "zh-CN": "属于文本段落", "en": "Passage of the text" },
-    "summary": { "zh-CN": "段落条目回指《道德经》文本层，并保留章次定位。", "en": "The passage points back to the Daodejing text layer while retaining its chapter locator." },
+    "label": {
+      "zh-CN": "属于文本段落",
+      "en": "Passage of the text"
+    },
+    "summary": {
+      "zh-CN": "段落条目回指《道德经》文本层，并保留章次定位。",
+      "en": "The passage points back to the Daodejing text layer while retaining its chapter locator."
+    },
     "confidence": "high",
     "evidenceLayer": "historical_documented",
-    "sourceIds": ["source:daodejing-edition"]
+    "sourceIds": [
+      "source:daodejing-edition"
+    ],
+    "publicationState": "public",
+    "reviewStatus": "publishable"
   },
   {
     "id": "relation:return-passage-analects",
-    "source": { "kind": "passage", "slug": "return-to-ritual" },
-    "target": { "kind": "text", "slug": "analects" },
+    "source": {
+      "kind": "passage",
+      "slug": "return-to-ritual"
+    },
+    "target": {
+      "kind": "text",
+      "slug": "analects"
+    },
     "relationType": "passage_of",
-    "label": { "zh-CN": "属于文本段落", "en": "Passage of the text" },
-    "summary": { "zh-CN": "段落条目回指《论语》文本层，并保留篇章定位。", "en": "The passage points back to the Analects text layer while retaining its chapter locator." },
+    "label": {
+      "zh-CN": "属于文本段落",
+      "en": "Passage of the text"
+    },
+    "summary": {
+      "zh-CN": "段落条目回指《论语》文本层，并保留篇章定位。",
+      "en": "The passage points back to the Analects text layer while retaining its chapter locator."
+    },
     "confidence": "high",
     "evidenceLayer": "historical_documented",
-    "sourceIds": ["source:analects-edition"]
+    "sourceIds": [
+      "source:analects-edition"
+    ],
+    "publicationState": "public",
+    "reviewStatus": "publishable"
   },
   {
     "id": "relation:form-quoted-heart-version",
-    "source": { "kind": "passage", "slug": "form-is-emptiness" },
-    "target": { "kind": "text_version", "slug": "heart-sutra-chinese-received" },
+    "source": {
+      "kind": "passage",
+      "slug": "form-is-emptiness"
+    },
+    "target": {
+      "kind": "text_version",
+      "slug": "heart-sutra-chinese-received"
+    },
     "relationType": "quoted_from_version",
-    "label": { "zh-CN": "引自具体版本", "en": "Quoted from a specific version" },
-    "summary": { "zh-CN": "段落的原文与英译必须从明确版本中读取和核对。", "en": "The passage's source text and translation must be read and checked against an explicit version." },
+    "label": {
+      "zh-CN": "引自具体版本",
+      "en": "Quoted from a specific version"
+    },
+    "summary": {
+      "zh-CN": "段落的原文与英译必须从明确版本中读取和核对。",
+      "en": "The passage's source text and translation must be read and checked against an explicit version."
+    },
     "confidence": "high",
     "evidenceLayer": "historical_documented",
-    "sourceIds": ["source:heart-sutra-edition"]
+    "sourceIds": [
+      "source:heart-sutra-edition"
+    ],
+    "publicationState": "public",
+    "reviewStatus": "publishable"
   },
   {
     "id": "relation:humans-quoted-daodejing-version",
-    "source": { "kind": "passage", "slug": "humans-follow-earth" },
-    "target": { "kind": "text_version", "slug": "daodejing-received" },
+    "source": {
+      "kind": "passage",
+      "slug": "humans-follow-earth"
+    },
+    "target": {
+      "kind": "text_version",
+      "slug": "daodejing-received"
+    },
     "relationType": "quoted_from_version",
-    "label": { "zh-CN": "引自具体版本", "en": "Quoted from a specific version" },
-    "summary": { "zh-CN": "段落原文回指《道德经》通行本版本。", "en": "The passage's wording points back to the received Daodejing version." },
+    "label": {
+      "zh-CN": "引自具体版本",
+      "en": "Quoted from a specific version"
+    },
+    "summary": {
+      "zh-CN": "段落原文回指《道德经》通行本版本。",
+      "en": "The passage's wording points back to the received Daodejing version."
+    },
     "confidence": "high",
     "evidenceLayer": "historical_documented",
-    "sourceIds": ["source:daodejing-edition"]
+    "sourceIds": [
+      "source:daodejing-edition"
+    ],
+    "publicationState": "public",
+    "reviewStatus": "publishable"
   },
   {
     "id": "relation:return-quoted-analects-version",
-    "source": { "kind": "passage", "slug": "return-to-ritual" },
-    "target": { "kind": "text_version", "slug": "analects-received" },
+    "source": {
+      "kind": "passage",
+      "slug": "return-to-ritual"
+    },
+    "target": {
+      "kind": "text_version",
+      "slug": "analects-received"
+    },
     "relationType": "quoted_from_version",
-    "label": { "zh-CN": "引自具体版本", "en": "Quoted from a specific version" },
-    "summary": { "zh-CN": "段落原文回指《论语》通行本版本。", "en": "The passage's wording points back to the received Analects version." },
+    "label": {
+      "zh-CN": "引自具体版本",
+      "en": "Quoted from a specific version"
+    },
+    "summary": {
+      "zh-CN": "段落原文回指《论语》通行本版本。",
+      "en": "The passage's wording points back to the received Analects version."
+    },
     "confidence": "high",
     "evidenceLayer": "historical_documented",
-    "sourceIds": ["source:analects-edition"]
+    "sourceIds": [
+      "source:analects-edition"
+    ],
+    "publicationState": "public",
+    "reviewStatus": "publishable"
   },
   {
     "id": "relation:changan-luoyang-corridor",
-    "source": { "kind": "place", "slug": "changan" },
-    "target": { "kind": "place", "slug": "luoyang" },
+    "source": {
+      "kind": "place",
+      "slug": "changan"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "luoyang"
+    },
     "relationType": "route_connects",
-    "label": { "zh-CN": "城市走廊相连", "en": "Connected by an imperial corridor" },
-    "summary": { "zh-CN": "长安与洛阳是隋唐政治、交通和宗教传播网络中的核心城市。", "en": "Chang'an and Luoyang were core cities in Sui–Tang political, transport and religious networks." },
+    "label": {
+      "zh-CN": "城市走廊相连",
+      "en": "Connected by an imperial corridor"
+    },
+    "summary": {
+      "zh-CN": "长安与洛阳是隋唐政治、交通和宗教传播网络中的核心城市。",
+      "en": "Chang'an and Luoyang were core cities in Sui–Tang political, transport and religious networks."
+    },
     "confidence": "high",
     "evidenceLayer": "historical_documented",
-    "sourceIds": ["source:historical-geography"]
+    "sourceIds": [
+      "source:historical-geography",
+      "source:unesco-silk-roads-corridor"
+    ],
+    "publicationState": "public",
+    "reviewStatus": "publishable"
   },
   {
     "id": "relation:daodejing-analects-comparative",
-    "source": { "kind": "text", "slug": "daodejing" },
-    "target": { "kind": "text", "slug": "analects" },
+    "source": {
+      "kind": "text",
+      "slug": "daodejing"
+    },
+    "target": {
+      "kind": "text",
+      "slug": "analects"
+    },
     "relationType": "comparative_parallel",
-    "label": { "zh-CN": "比较阅读", "en": "Comparative reading" },
-    "summary": { "zh-CN": "本关系只建立策展比较入口，不声称两个文本具有同一作者、同一传统或直接影响关系。", "en": "This is a curatorial comparison, not a claim of common authorship, common tradition or direct influence." },
+    "label": {
+      "zh-CN": "比较阅读",
+      "en": "Comparative reading"
+    },
+    "summary": {
+      "zh-CN": "本关系只建立策展比较入口，不声称两个文本具有同一作者、同一传统或直接影响关系。",
+      "en": "This is a curatorial comparison, not a claim of common authorship, common tradition or direct influence."
+    },
     "confidence": "medium",
     "evidenceLayer": "scholarly_interpretation",
-    "sourceIds": ["source:editorial-method"]
+    "sourceIds": [
+      "source:comparative-method",
+      "source:editorial-method"
+    ],
+    "publicationState": "public",
+    "reviewStatus": "publishable"
   },
   {
     "id": "relation:heart-sutra-daodejing-comparative",
-    "source": { "kind": "text", "slug": "heart-sutra" },
-    "target": { "kind": "text", "slug": "daodejing" },
+    "source": {
+      "kind": "text",
+      "slug": "heart-sutra"
+    },
+    "target": {
+      "kind": "text",
+      "slug": "daodejing"
+    },
     "relationType": "comparative_parallel",
-    "label": { "zh-CN": "概念比较入口", "en": "Conceptual comparison entry" },
-    "summary": { "zh-CN": "两部文本可以被并置阅读，但其术语、历史语境和宗教功能必须分别说明。", "en": "The texts can be placed side by side, while their terms, historical contexts and religious functions remain distinct." },
+    "label": {
+      "zh-CN": "概念比较入口",
+      "en": "Conceptual comparison entry"
+    },
+    "summary": {
+      "zh-CN": "两部文本可以被并置阅读，但其术语、历史语境和宗教功能必须分别说明。",
+      "en": "The texts can be placed side by side, while their terms, historical contexts and religious functions remain distinct."
+    },
     "confidence": "medium",
     "evidenceLayer": "scholarly_interpretation",
-    "sourceIds": ["source:editorial-method"]
+    "sourceIds": [
+      "source:comparative-method",
+      "source:editorial-method"
+    ],
+    "publicationState": "public",
+    "reviewStatus": "publishable"
   },
   {
     "id": "relation:cheng-commented-daodejing",
-    "source": { "kind": "figure", "slug": "cheng-xuanying" },
-    "target": { "kind": "text", "slug": "daodejing" },
+    "source": {
+      "kind": "figure",
+      "slug": "cheng-xuanying"
+    },
+    "target": {
+      "kind": "text",
+      "slug": "daodejing"
+    },
     "relationType": "commented_on",
-    "label": { "zh-CN": "进入《道德经》注释传统", "en": "Participated in Daodejing commentary" },
-    "summary": { "zh-CN": "成玄英提供唐初道家经典解释活动的案例，具体注本版本仍待目录核定。", "en": "Cheng Xuanying provides a case of early Tang Daoist interpretation; the specific commentary edition still requires catalogue verification." },
-    "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceIds": ["source:daoist-historical-record", "source:daodejing-edition"]
+    "label": {
+      "zh-CN": "进入《道德经》注释传统",
+      "en": "Participated in Daodejing commentary"
+    },
+    "summary": {
+      "zh-CN": "成玄英提供唐初道家经典解释活动的案例，具体注本版本仍待目录核定。",
+      "en": "Cheng Xuanying provides a case of early Tang Daoist interpretation; the specific commentary edition still requires catalogue verification."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:daoist-historical-record",
+      "source:daodejing-edition",
+      "source:daodejing-xuande-ctext",
+      "source:cheng-xuanying-datawiki"
+    ],
+    "qualifiers": {
+      "historicity": "inferred",
+      "note": {
+        "zh-CN": "现存纂疏保留成玄英疏的传承见证；本关系不把辑本当作完整原疏，也不把文本题署扩展为单一作者事实。",
+        "en": "The surviving collected subcommentary preserves a witness to Cheng Xuanying's subcommentary tradition; this does not treat it as a complete original or turn a title attribution into a sole-authorship claim."
+      }
+    }
   },
   {
     "id": "relation:yan-hongwen-context",
-    "source": { "kind": "figure", "slug": "yan-shigu" },
-    "target": { "kind": "institution", "slug": "hongwen-institute" },
+    "source": {
+      "kind": "figure",
+      "slug": "yan-shigu"
+    },
+    "target": {
+      "kind": "institution",
+      "slug": "hongwen-institute"
+    },
     "relationType": "institutional_context",
-    "label": { "zh-CN": "宫廷学术制度语境", "en": "Court scholarly institutional context" },
-    "summary": { "zh-CN": "颜师古的文本整理活动被置于唐初宫廷学术机构的背景中；具体职任需继续核定。", "en": "Yan Shigu's editorial work is placed in the setting of early Tang court scholarship; specific office holding remains to be verified." },
-    "confidence": "low", "evidenceLayer": "historical_inferred", "sourceIds": ["source:education-classics-records"]
+    "label": {
+      "zh-CN": "宫廷学术制度语境",
+      "en": "Court scholarly institutional context"
+    },
+    "summary": {
+      "zh-CN": "颜师古的文本整理活动被置于唐初宫廷学术机构的背景中；具体职任需继续核定。",
+      "en": "Yan Shigu's editorial work is placed in the setting of early Tang court scholarship; specific office holding remains to be verified."
+    },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:education-classics-records"
+    ]
   },
   {
     "id": "relation:jizang-active-luoyang",
-    "source": { "kind": "figure", "slug": "jizang" },
-    "target": { "kind": "place", "slug": "luoyang" },
+    "source": {
+      "kind": "figure",
+      "slug": "jizang"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "luoyang"
+    },
     "relationType": "active_in",
-    "label": { "zh-CN": "与洛阳佛教网络相连", "en": "Connected with Luoyang Buddhist networks" },
-    "summary": { "zh-CN": "本关系记录隋唐之际人物与洛阳宗教网络的研究入口，不代替逐年行迹。", "en": "This records a research entry between the figure and Luoyang's religious networks, not a year-by-year itinerary." },
-    "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceIds": ["source:buddhist-biographical-records", "source:historical-geography"]
+    "label": {
+      "zh-CN": "与洛阳佛教网络相连",
+      "en": "Connected with Luoyang Buddhist networks"
+    },
+    "summary": {
+      "zh-CN": "本关系记录隋唐之际人物与洛阳宗教网络的研究入口，不代替逐年行迹。",
+      "en": "This records a research entry between the figure and Luoyang's religious networks, not a year-by-year itinerary."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:buddhist-biographical-records",
+      "source:historical-geography"
+    ]
+  },
+  {
+    "id": "relation:cheng-xuanying-active-changan",
+    "source": {
+      "kind": "figure",
+      "slug": "cheng-xuanying"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "changan"
+    },
+    "relationType": "active_in",
+    "label": {
+      "zh-CN": "与唐初长安制度语境相连",
+      "en": "Connected with the early Tang institutional context of Chang'an"
+    },
+    "summary": {
+      "zh-CN": "编年资料记载成玄英 631 年应召前往长安、636 年参与佛道辩论；本关系只保留城市尺度活动锚点，相关一手传记、具体宫观和辩论地点仍待核对。",
+      "en": "A chronological reference places Cheng Xuanying in Chang'an after a summons in 631 and in a Buddhist–Daoist debate in 636; this retains a city-scale activity anchor while primary biography, specific institutions and debate site remain to be verified."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:cheng-xuanying-datawiki",
+      "source:historical-geography"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 631,
+        "endYear": 636,
+        "displayDate": {
+          "zh-CN": "631–636",
+          "en": "631–636"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:cheng-xuanying-datawiki"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "activity_site",
+      "historicity": "inferred",
+      "note": {
+        "zh-CN": "这是编年参考支持的城市尺度锚点，不等同于已核实的具体宫观坐标。",
+        "en": "This is a city-scale anchor supported by a chronological reference, not a verified coordinate for a specific Daoist institution."
+      }
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:jizang-active-changan",
+    "source": {
+      "kind": "figure",
+      "slug": "jizang"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "changan"
+    },
+    "relationType": "active_in",
+    "label": {
+      "zh-CN": "与隋末唐初京师寺院网络相连",
+      "en": "Connected with the capital monastic networks of the late Sui and early Tang"
+    },
+    "summary": {
+      "zh-CN": "《续高僧传》记载吉藏由隋末至唐初进入京师寺院网络，并在武德年间继续受到礼遇；这里以长安作城市尺度锚点，不把嘉祥寺或日严寺的具体现代位置混为一处。",
+      "en": "The Continued Biographies records Jizang's connection with capital monastic networks from the late Sui into the early Tang; Chang'an is used as a city-scale anchor without collapsing Jiaxiang Monastery and Riyan Monastery into one modern location."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:jizang-xugaosengzhuan",
+      "source:historical-geography"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 605,
+        "endYear": 623,
+        "displayDate": {
+          "zh-CN": "约 605–623",
+          "en": "c. 605–623"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:jizang-xugaosengzhuan"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "activity_site",
+      "historicity": "documented",
+      "note": {
+        "zh-CN": "长安为城市尺度投影；嘉祥寺的现代地点、日严寺的具体建筑和逐年行迹仍待拆分。",
+        "en": "Chang'an is a city-scale projection; Jiaxiang's modern location, the specific Riyan building and a year-by-year itinerary remain to be separated."
+      }
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
   },
   {
     "id": "relation:translation-network-located-changan",
-    "source": { "kind": "institution", "slug": "changan-translation-bureau" },
-    "target": { "kind": "place", "slug": "changan" },
+    "source": {
+      "kind": "institution",
+      "slug": "changan-translation-bureau"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "changan"
+    },
     "relationType": "located_in",
-    "label": { "zh-CN": "以长安为城市范围", "en": "Located within Chang'an's urban scope" },
-    "summary": { "zh-CN": "该网络汇总长安不同时期的译场，具体寺院和建筑位置仍须项目级拆分。", "en": "The network groups translation bureaux in Chang'an across periods; monasteries and building locations remain project-specific." },
-    "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceIds": ["source:buddhist-institutional-records", "source:historical-geography"]
+    "label": {
+      "zh-CN": "以长安为城市范围",
+      "en": "Located within Chang'an's urban scope"
+    },
+    "summary": {
+      "zh-CN": "该网络汇总长安不同时期的译场，具体寺院和建筑位置仍须项目级拆分。",
+      "en": "The network groups translation bureaux in Chang'an across periods; monasteries and building locations remain project-specific."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:buddhist-institutional-records",
+      "source:historical-geography",
+      "source:xuanzang-records"
+    ],
+    "publicationState": "public",
+    "reviewStatus": "publishable"
   },
   {
     "id": "relation:daoist-network-located-changan",
-    "source": { "kind": "institution", "slug": "changan-daoist-monastic-network" },
-    "target": { "kind": "place", "slug": "changan" },
+    "source": {
+      "kind": "institution",
+      "slug": "changan-daoist-monastic-network"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "changan"
+    },
     "relationType": "located_in",
-    "label": { "zh-CN": "以长安为城市范围", "en": "Located within Chang'an's urban scope" },
-    "summary": { "zh-CN": "网络条目表示城市尺度的宫观联系，不把全部节点归为同一机构。", "en": "The network records city-scale institutional links without treating all nodes as one institution." },
-    "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceIds": ["source:daoist-historical-record", "source:historical-geography"]
+    "label": {
+      "zh-CN": "以长安为城市范围",
+      "en": "Located within Chang'an's urban scope"
+    },
+    "summary": {
+      "zh-CN": "网络条目表示城市尺度的宫观联系，不把全部节点归为同一机构。",
+      "en": "The network records city-scale institutional links without treating all nodes as one institution."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:daoist-historical-record",
+      "source:historical-geography"
+    ]
   },
   {
     "id": "relation:pagoda-site-located-changan",
-    "source": { "kind": "place", "slug": "great-wild-goose-pagoda-site" },
-    "target": { "kind": "place", "slug": "changan" },
+    "source": {
+      "kind": "place",
+      "slug": "great-wild-goose-pagoda-site"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "changan"
+    },
     "relationType": "located_in",
-    "label": { "zh-CN": "位于历史长安范围", "en": "Located within historical Chang'an" },
-    "summary": { "zh-CN": "遗址属于长安城市空间；精确历史坊区与保护边界需由权威地理资料补充。", "en": "The site belongs to Chang'an's urban space; historical ward and conservation boundary need authoritative geographic records." },
-    "confidence": "high", "evidenceLayer": "historical_documented", "sourceIds": ["source:buddhist-institutional-records", "source:historical-geography"]
+    "label": {
+      "zh-CN": "位于历史长安范围",
+      "en": "Located within historical Chang'an"
+    },
+    "summary": {
+      "zh-CN": "遗址属于长安城市空间；精确历史坊区与保护边界需由权威地理资料补充。",
+      "en": "The site belongs to Chang'an's urban space; historical ward and conservation boundary need authoritative geographic records."
+    },
+    "confidence": "high",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:buddhist-institutional-records",
+      "source:historical-geography",
+      "source:unesco-silk-roads-corridor"
+    ],
+    "publicationState": "public",
+    "reviewStatus": "publishable"
   },
   {
     "id": "relation:longmen-located-luoyang",
-    "source": { "kind": "place", "slug": "longmen-grottoes" },
-    "target": { "kind": "place", "slug": "luoyang" },
+    "source": {
+      "kind": "place",
+      "slug": "longmen-grottoes"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "luoyang"
+    },
     "relationType": "located_in",
-    "label": { "zh-CN": "位于洛阳以南", "en": "Located south of Luoyang" },
-    "summary": { "zh-CN": "UNESCO 遗产资料将龙门石窟定位于古都洛阳以南的伊河两岸。", "en": "UNESCO heritage documentation locates Longmen on both banks of the Yi River south of ancient Luoyang." },
-    "confidence": "high", "evidenceLayer": "historical_documented", "sourceIds": ["source:unesco-longmen"]
+    "label": {
+      "zh-CN": "位于洛阳以南",
+      "en": "Located south of Luoyang"
+    },
+    "summary": {
+      "zh-CN": "UNESCO 遗产资料将龙门石窟定位于古都洛阳以南的伊河两岸。",
+      "en": "UNESCO heritage documentation locates Longmen on both banks of the Yi River south of ancient Luoyang."
+    },
+    "confidence": "high",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:unesco-longmen"
+    ],
+    "publicationState": "public",
+    "reviewStatus": "publishable"
   },
   {
     "id": "relation:dao-spoken-passage-daodejing",
-    "source": { "kind": "passage", "slug": "dao-that-can-be-spoken" },
-    "target": { "kind": "text", "slug": "daodejing" },
+    "source": {
+      "kind": "passage",
+      "slug": "dao-that-can-be-spoken"
+    },
+    "target": {
+      "kind": "text",
+      "slug": "daodejing"
+    },
     "relationType": "passage_of",
-    "label": { "zh-CN": "属于文本段落", "en": "Passage of the text" },
-    "summary": { "zh-CN": "段落回指《道德经》文本和通行本章次。", "en": "The passage points back to the Daodejing text and received chapter locator." },
-    "confidence": "high", "evidenceLayer": "historical_documented", "sourceIds": ["source:daodejing-edition"]
+    "label": {
+      "zh-CN": "属于文本段落",
+      "en": "Passage of the text"
+    },
+    "summary": {
+      "zh-CN": "段落回指《道德经》文本和通行本章次。",
+      "en": "The passage points back to the Daodejing text and received chapter locator."
+    },
+    "confidence": "high",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:daodejing-edition"
+    ],
+    "publicationState": "public",
+    "reviewStatus": "publishable"
   },
   {
     "id": "relation:water-passage-daodejing",
-    "source": { "kind": "passage", "slug": "highest-good-like-water" },
-    "target": { "kind": "text", "slug": "daodejing" },
+    "source": {
+      "kind": "passage",
+      "slug": "highest-good-like-water"
+    },
+    "target": {
+      "kind": "text",
+      "slug": "daodejing"
+    },
     "relationType": "passage_of",
-    "label": { "zh-CN": "属于文本段落", "en": "Passage of the text" },
-    "summary": { "zh-CN": "完整句群回指《道德经》第八章。", "en": "The complete sentence group points back to chapter 8 of the Daodejing." },
-    "confidence": "high", "evidenceLayer": "historical_documented", "sourceIds": ["source:daodejing-edition"]
+    "label": {
+      "zh-CN": "属于文本段落",
+      "en": "Passage of the text"
+    },
+    "summary": {
+      "zh-CN": "完整句群回指《道德经》第八章。",
+      "en": "The complete sentence group points back to chapter 8 of the Daodejing."
+    },
+    "confidence": "high",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:daodejing-edition"
+    ]
   },
   {
     "id": "relation:decrease-passage-daodejing",
-    "source": { "kind": "passage", "slug": "learning-increases-dao-decreases" },
-    "target": { "kind": "text", "slug": "daodejing" },
+    "source": {
+      "kind": "passage",
+      "slug": "learning-increases-dao-decreases"
+    },
+    "target": {
+      "kind": "text",
+      "slug": "daodejing"
+    },
     "relationType": "passage_of",
-    "label": { "zh-CN": "属于文本段落", "en": "Passage of the text" },
-    "summary": { "zh-CN": "段落回指《道德经》第四十八章。", "en": "The passage points back to chapter 48 of the Daodejing." },
-    "confidence": "high", "evidenceLayer": "historical_documented", "sourceIds": ["source:daodejing-edition"]
+    "label": {
+      "zh-CN": "属于文本段落",
+      "en": "Passage of the text"
+    },
+    "summary": {
+      "zh-CN": "段落回指《道德经》第四十八章。",
+      "en": "The passage points back to chapter 48 of the Daodejing."
+    },
+    "confidence": "high",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:daodejing-edition"
+    ]
   },
   {
     "id": "relation:practice-passage-analects",
-    "source": { "kind": "passage", "slug": "learn-and-practice" },
-    "target": { "kind": "text", "slug": "analects" },
+    "source": {
+      "kind": "passage",
+      "slug": "learn-and-practice"
+    },
+    "target": {
+      "kind": "text",
+      "slug": "analects"
+    },
     "relationType": "passage_of",
-    "label": { "zh-CN": "属于文本段落", "en": "Passage of the text" },
-    "summary": { "zh-CN": "段落回指《论语·学而》及通行本版本。", "en": "The passage points back to the Xue Er chapter and received Analects version." },
-    "confidence": "high", "evidenceLayer": "historical_documented", "sourceIds": ["source:analects-edition"]
+    "label": {
+      "zh-CN": "属于文本段落",
+      "en": "Passage of the text"
+    },
+    "summary": {
+      "zh-CN": "段落回指《论语·学而》及通行本版本。",
+      "en": "The passage points back to the Xue Er chapter and received Analects version."
+    },
+    "confidence": "high",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:analects-edition"
+    ],
+    "publicationState": "public",
+    "reviewStatus": "publishable"
   },
   {
     "id": "relation:three-passage-analects",
-    "source": { "kind": "passage", "slug": "three-walk-together" },
-    "target": { "kind": "text", "slug": "analects" },
+    "source": {
+      "kind": "passage",
+      "slug": "three-walk-together"
+    },
+    "target": {
+      "kind": "text",
+      "slug": "analects"
+    },
     "relationType": "passage_of",
-    "label": { "zh-CN": "属于文本段落", "en": "Passage of the text" },
-    "summary": { "zh-CN": "段落回指《论语·述而》及通行本版本。", "en": "The passage points back to the Shu Er chapter and received Analects version." },
-    "confidence": "high", "evidenceLayer": "historical_documented", "sourceIds": ["source:analects-edition"]
+    "label": {
+      "zh-CN": "属于文本段落",
+      "en": "Passage of the text"
+    },
+    "summary": {
+      "zh-CN": "段落回指《论语·述而》及通行本版本。",
+      "en": "The passage points back to the Shu Er chapter and received Analects version."
+    },
+    "confidence": "high",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:analects-edition"
+    ]
   },
   {
     "id": "relation:do-not-impose-passage-analects",
-    "source": { "kind": "passage", "slug": "do-not-impose" },
-    "target": { "kind": "text", "slug": "analects" },
+    "source": {
+      "kind": "passage",
+      "slug": "do-not-impose"
+    },
+    "target": {
+      "kind": "text",
+      "slug": "analects"
+    },
     "relationType": "passage_of",
-    "label": { "zh-CN": "属于文本段落", "en": "Passage of the text" },
-    "summary": { "zh-CN": "段落回指《论语·卫灵公》及通行本版本。", "en": "The passage points back to the Wei Ling Gong chapter and received Analects version." },
-    "confidence": "high", "evidenceLayer": "historical_documented", "sourceIds": ["source:analects-edition"]
+    "label": {
+      "zh-CN": "属于文本段落",
+      "en": "Passage of the text"
+    },
+    "summary": {
+      "zh-CN": "段落回指《论语·卫灵公》及通行本版本。",
+      "en": "The passage points back to the Wei Ling Gong chapter and received Analects version."
+    },
+    "confidence": "high",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:analects-edition"
+    ]
+  },
+  {
+    "id": "relation:xuanzang-participated-departure",
+    "source": {
+      "kind": "figure",
+      "slug": "xuanzang"
+    },
+    "target": {
+      "kind": "event",
+      "slug": "xuanzang-departs-changan"
+    },
+    "relationType": "participated_in",
+    "label": {
+      "zh-CN": "参与西行出发",
+      "en": "Participated in the departure west"
+    },
+    "summary": {
+      "zh-CN": "玄奘人物记录与“离开长安西行”事件相连；出发月份、许可叙事和初段路线仍保留不确定性。",
+      "en": "Xuanzang's biographical record is connected to the departure event; the month, permission narrative and first route segment remain uncertain."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:xuanzang-records"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "departure",
+        "timeType": "circa",
+        "startYear": 629,
+        "endYear": 629,
+        "displayDate": {
+          "zh-CN": "约 629",
+          "en": "c. 629"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:xuanzang-records"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "documented"
+    }
+  },
+  {
+    "id": "relation:xuanzang-participated-return",
+    "source": {
+      "kind": "figure",
+      "slug": "xuanzang"
+    },
+    "target": {
+      "kind": "event",
+      "slug": "xuanzang-return-changan"
+    },
+    "relationType": "participated_in",
+    "label": {
+      "zh-CN": "参与归返长安事件",
+      "en": "Participated in the return to Chang'an"
+    },
+    "summary": {
+      "zh-CN": "玄奘的求法经历在约 645 年回到长安后进入译经、讲学和寺院制度语境。",
+      "en": "After returning to Chang'an around 645, Xuanzang's pilgrimage experience entered translation, teaching and monastic institutional contexts."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:xuanzang-records",
+      "source:buddhist-institutional-records"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "return",
+        "timeType": "circa",
+        "startYear": 645,
+        "endYear": 645,
+        "displayDate": {
+          "zh-CN": "约 645",
+          "en": "c. 645"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:xuanzang-records"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "documented"
+    }
+  },
+  {
+    "id": "relation:xuanzang-departure-occurred-changan",
+    "source": {
+      "kind": "event",
+      "slug": "xuanzang-departs-changan"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "changan"
+    },
+    "relationType": "occurred_at",
+    "label": {
+      "zh-CN": "出发于长安",
+      "en": "Departure occurred at Chang'an"
+    },
+    "summary": {
+      "zh-CN": "事件以长安为出发地理锚点；路线离开城市后的具体节点不由此关系推定。",
+      "en": "Chang'an is the geographic anchor for the departure; this relation does not infer the specific nodes after leaving the city."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:xuanzang-records",
+      "source:historical-geography"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "departure",
+        "timeType": "circa",
+        "startYear": 629,
+        "endYear": 629,
+        "displayDate": {
+          "zh-CN": "约 629",
+          "en": "c. 629"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:xuanzang-records"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "departure_site",
+      "historicity": "documented"
+    }
+  },
+  {
+    "id": "relation:xuanzang-return-occurred-changan",
+    "source": {
+      "kind": "event",
+      "slug": "xuanzang-return-changan"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "changan"
+    },
+    "relationType": "occurred_at",
+    "label": {
+      "zh-CN": "归返长安",
+      "en": "Return occurred at Chang'an"
+    },
+    "summary": {
+      "zh-CN": "约 645 年的归返事件把跨区域路线接回长安城市和制度空间。",
+      "en": "The return around 645 reconnects the transregional route with Chang'an's urban and institutional space."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:xuanzang-records",
+      "source:historical-geography"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "return",
+        "timeType": "circa",
+        "startYear": 645,
+        "endYear": 645,
+        "displayDate": {
+          "zh-CN": "约 645",
+          "en": "c. 645"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:xuanzang-records"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "arrival_site",
+      "historicity": "documented"
+    }
+  },
+  {
+    "id": "relation:daci-en-foundation-occurred-changan",
+    "source": {
+      "kind": "event",
+      "slug": "daci-en-monastery-established"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "changan"
+    },
+    "relationType": "occurred_at",
+    "label": {
+      "zh-CN": "建立于长安",
+      "en": "Foundation occurred in Chang'an"
+    },
+    "summary": {
+      "zh-CN": "大慈恩寺建立事件以长安为城市尺度地点，并与后续玄奘译经空间分开建模。",
+      "en": "The foundation event is anchored at Chang'an at city scale and is modelled separately from Xuanzang's later translation sites."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:buddhist-institutional-records",
+      "source:historical-geography",
+      "source:xuanzang-records"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "foundation",
+        "timeType": "circa",
+        "startYear": 648,
+        "endYear": 648,
+        "displayDate": {
+          "zh-CN": "约 648",
+          "en": "c. 648"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-institutional-records"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "institutional_site",
+      "historicity": "documented"
+    },
+    "publicationState": "public",
+    "reviewStatus": "publishable"
+  },
+  {
+    "id": "relation:xuanzang-active-daci-en",
+    "source": {
+      "kind": "figure",
+      "slug": "xuanzang"
+    },
+    "target": {
+      "kind": "institution",
+      "slug": "daci-en-monastery"
+    },
+    "relationType": "active_in",
+    "label": {
+      "zh-CN": "在大慈恩寺译经与讲学",
+      "en": "Active at Great Ci'en Monastery"
+    },
+    "summary": {
+      "zh-CN": "大慈恩寺是玄奘回到长安后译经、讲学和制度化工作的核心机构节点；具体译经项目另行连接文本和版本。",
+      "en": "Great Ci'en Monastery is a core institutional node for Xuanzang's translation, teaching and institutional work after his return; individual translation projects will link separately to texts and versions."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:xuanzang-records",
+      "source:buddhist-institutional-records"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_activity",
+        "timeType": "range",
+        "startYear": 648,
+        "endYear": 664,
+        "displayDate": {
+          "zh-CN": "约 648–664",
+          "en": "c. 648–664"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:xuanzang-records"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "translation_site",
+      "historicity": "documented"
+    }
+  },
+  {
+    "id": "relation:xuanzang-institutional-translation-network",
+    "source": {
+      "kind": "figure",
+      "slug": "xuanzang"
+    },
+    "target": {
+      "kind": "institution",
+      "slug": "changan-translation-bureau"
+    },
+    "relationType": "institutional_context",
+    "label": {
+      "zh-CN": "进入长安译经场网络",
+      "en": "Situated in Chang'an's translation-bureau network"
+    },
+    "summary": {
+      "zh-CN": "玄奘的译经工作依托寺院、语言分工、校勘和制度支持；这里连接的是网络语境，不把不同项目合并为一处固定建筑。",
+      "en": "Xuanzang's translation work relied on monastic space, language roles, textual checking and institutional support; this connects a network context rather than one fixed building."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:xuanzang-records",
+      "source:buddhist-institutional-records"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_circulation",
+        "timeType": "range",
+        "startYear": 645,
+        "endYear": 664,
+        "displayDate": {
+          "zh-CN": "约 645–664",
+          "en": "c. 645–664"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:buddhist-institutional-records"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "institutional_site",
+      "historicity": "inferred"
+    }
+  },
+  {
+    "id": "relation:western-regions-attributed-xuanzang",
+    "source": {
+      "kind": "text",
+      "slug": "great-tang-records-western-regions"
+    },
+    "target": {
+      "kind": "figure",
+      "slug": "xuanzang"
+    },
+    "relationType": "attributed_to",
+    "label": {
+      "zh-CN": "见闻与传述关联玄奘",
+      "en": "Travel knowledge associated with Xuanzang"
+    },
+    "summary": {
+      "zh-CN": "《大唐西域记》与玄奘的旅行见闻和口述传统相关，但文本并不因此被简化为玄奘单独写作。",
+      "en": "The Record is connected to Xuanzang's travel observations and transmitted accounts, but is not reduced to sole authorship by Xuanzang."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:xuanzang-records",
+      "source:buddhist-biographical-records"
+    ],
+    "qualifiers": {
+      "attributionStatus": "recorded_by_others",
+      "historicity": "inferred",
+      "note": {
+        "zh-CN": "人物见闻、口述与编纂者之间的层次仍需按版本和研究文献细分。",
+        "en": "The layers among personal observation, transmitted account and compiler still require edition- and scholarship-level separation."
+      }
+    }
+  },
+  {
+    "id": "relation:xuanzang-remembered-daci-en",
+    "source": {
+      "kind": "figure",
+      "slug": "xuanzang"
+    },
+    "target": {
+      "kind": "institution",
+      "slug": "daci-en-monastery"
+    },
+    "relationType": "remembered_in",
+    "label": {
+      "zh-CN": "在大慈恩寺记忆中延续",
+      "en": "Remembered through Great Ci'en Monastery"
+    },
+    "summary": {
+      "zh-CN": "大慈恩寺作为译经与寺院网络节点承接玄奘的后世机构记忆；本条不等同于神格化或单一纪念仪式。",
+      "en": "Great Ci'en Monastery carries institutional memory of Xuanzang through translation and monastic networks; this does not assert deification or one single commemorative ritual."
+    },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:buddhist-institutional-records",
+      "source:xuanzang-records"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_and_memory_scope",
+        "timeType": "range",
+        "startYear": 648,
+        "endYear": 907,
+        "displayDate": {
+          "zh-CN": "唐代机构与记忆语境",
+          "en": "Tang institutional and memory context"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:buddhist-institutional-records"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "memory_site",
+      "historicity": "inferred",
+      "receptionMode": "institutionalised"
+    }
+  },
+  {
+    "id": "relation:xuanzang-route-dunhuang-context",
+    "source": {
+      "kind": "route",
+      "slug": "xuanzang-western-pilgrimage"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "dunhuang"
+    },
+    "relationType": "route_connects",
+    "label": {
+      "zh-CN": "路线经过敦煌区域",
+      "en": "Route connects through the Dunhuang region"
+    },
+    "summary": {
+      "zh-CN": "路线把敦煌作为河西走廊的区域锚点，而不是主张已复原逐日行程。",
+      "en": "The route uses Dunhuang as a regional anchor in the Hexi Corridor rather than claiming a reconstructed day-by-day itinerary."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:xuanzang-records",
+      "source:historical-geography",
+      "source:unesco-silk-roads-corridor"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "route_activity",
+        "timeType": "range",
+        "startYear": 629,
+        "endYear": 645,
+        "displayDate": {
+          "zh-CN": "约 629–645",
+          "en": "c. 629–645"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:xuanzang-records"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "route_segment",
+      "historicity": "inferred"
+    },
+    "publicationState": "public",
+    "reviewStatus": "publishable"
+  },
+  {
+    "id": "relation:sima-participated-kaiyuan",
+    "source": {
+      "kind": "figure",
+      "slug": "sima-chengzhen"
+    },
+    "target": {
+      "kind": "event",
+      "slug": "kaiyuan-institutional-expansion"
+    },
+    "relationType": "participated_in",
+    "label": {
+      "zh-CN": "处于开元制度扩展语境",
+      "en": "Situated in the Kaiyuan institutional-expansion context"
+    },
+    "summary": {
+      "zh-CN": "司马承祯与开元时期的宫廷召见、道教制度和知识网络相连；该事件是研究性阶段标签，不是一次单独行程。",
+      "en": "Sima Chengzhen is connected with the Kaiyuan courtly, Daoist and knowledge networks; this event is an analytical period label rather than one itinerary."
+    },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:sima-old-tang-biography",
+      "source:daoist-historical-record",
+      "source:tang-imperial-records"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "analytic_period",
+        "timeType": "range",
+        "startYear": 713,
+        "endYear": 735,
+        "displayDate": {
+          "zh-CN": "约 713–735",
+          "en": "c. 713–735"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-historical-record"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "inferred",
+      "note": {
+        "zh-CN": "把人物与分析性时代带相连，不等于证明每一项制度变化都由司马承祯参与。",
+        "en": "This links the figure to an analytical period and does not claim that he participated in every institutional change within it."
+      }
+    }
+  },
+  {
+    "id": "relation:sima-daoist-institutional-context",
+    "source": {
+      "kind": "figure",
+      "slug": "sima-chengzhen"
+    },
+    "target": {
+      "kind": "institution",
+      "slug": "changan-daoist-monastic-network"
+    },
+    "relationType": "institutional_context",
+    "label": {
+      "zh-CN": "连接长安道教宫观网络",
+      "en": "Connected with Chang'an's Daoist institutional network"
+    },
+    "summary": {
+      "zh-CN": "司马承祯的道教身份与唐代城市、宫廷和道观制度网络相连，但网络条目不代表一处固定宫观。",
+      "en": "Sima Chengzhen's Daoist identity is connected with Tang urban, courtly and monastic networks without reducing the network to one fixed monastery."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:sima-old-tang-biography",
+      "source:daoist-historical-record"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_scope",
+        "timeType": "range",
+        "startYear": 647,
+        "endYear": 735,
+        "displayDate": {
+          "zh-CN": "647–735 的机构语境",
+          "en": "Institutional context, 647–735"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-historical-record"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "institutional_site",
+      "historicity": "inferred"
+    }
+  },
+  {
+    "id": "relation:daodejing-received-by-sima",
+    "source": {
+      "kind": "text",
+      "slug": "daodejing"
+    },
+    "target": {
+      "kind": "figure",
+      "slug": "sima-chengzhen"
+    },
+    "relationType": "received_by",
+    "label": {
+      "zh-CN": "在司马承祯的道教语境中被接收",
+      "en": "Received within Sima Chengzhen's Daoist context"
+    },
+    "summary": {
+      "zh-CN": "《道德经》与司马承祯所处的上清传统和唐代道教解释语境相连；这不是把文本作者归于司马承祯。",
+      "en": "The Daodejing is connected with Sima Chengzhen's Shangqing and Tang Daoist interpretive context; this is not an authorship claim."
+    },
+    "confidence": "low",
+    "evidenceLayer": "scholarly_interpretation",
+    "sourceIds": [
+      "source:daoist-historical-record",
+      "source:daodejing-edition"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "textual_circulation",
+        "timeType": "range",
+        "startYear": 647,
+        "endYear": 735,
+        "displayDate": {
+          "zh-CN": "647–735 的解释语境",
+          "en": "Interpretive context, 647–735"
+        },
+        "confidence": "low",
+        "evidenceLayer": "scholarly_interpretation",
+        "sourceId": "source:daoist-historical-record"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "inferred",
+      "receptionMode": "reinterpreted",
+      "note": {
+        "zh-CN": "后续需补具体唐代注本、法脉和版本定位。",
+        "en": "Specific Tang commentaries, lineage records and edition locators still need to be added."
+      }
+    }
+  },
+  {
+    "id": "relation:sima-remembered-daoist-network",
+    "source": {
+      "kind": "figure",
+      "slug": "sima-chengzhen"
+    },
+    "target": {
+      "kind": "institution",
+      "slug": "changan-daoist-monastic-network"
+    },
+    "relationType": "remembered_in",
+    "label": {
+      "zh-CN": "在长安道教机构记忆中延续",
+      "en": "Remembered through Chang'an's Daoist institutions"
+    },
+    "summary": {
+      "zh-CN": "司马承祯的后世记忆通过道教人物谱系、宫观网络和唐代制度叙事延续；本条不等同于神格化。",
+      "en": "Later memory of Sima Chengzhen continues through Daoist lineages, institutional networks and Tang histories; this does not assert deification."
+    },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:daoist-historical-record",
+      "source:sima-old-tang-biography"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_and_memory_scope",
+        "timeType": "range",
+        "startYear": 735,
+        "endYear": 907,
+        "displayDate": {
+          "zh-CN": "735–907 的机构记忆语境",
+          "en": "Institutional memory context, 735–907"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-historical-record"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "memory_site",
+      "historicity": "inferred",
+      "receptionMode": "institutionalised"
+    }
+  },
+  {
+    "id": "relation:kong-participated-five-classics",
+    "source": {
+      "kind": "figure",
+      "slug": "kong-yingda"
+    },
+    "target": {
+      "kind": "event",
+      "slug": "five-classics-corrected-meanings-project"
+    },
+    "relationType": "participated_in",
+    "label": {
+      "zh-CN": "参与《五经正义》编纂工程",
+      "en": "Participated in the Corrected Meanings project"
+    },
+    "summary": {
+      "zh-CN": "孔颖达与《五经正义》的编纂、注疏和国家教育工程相连；编纂并非个人独著行为。",
+      "en": "Kong Yingda is connected with the compilation, commentary and state-education project of the Corrected Meanings; the compilation was not a solitary authorship act."
+    },
+    "confidence": "high",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:kong-new-tang-biography",
+      "source:confucian-commentarial-record"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "compilation",
+        "timeType": "range",
+        "startYear": 630,
+        "endYear": 648,
+        "displayDate": {
+          "zh-CN": "约 630–648",
+          "en": "c. 630–648"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:confucian-commentarial-record"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "documented",
+      "note": {
+        "zh-CN": "人物参与编纂与注疏，不等于整部文本由一人独立完成。",
+        "en": "The figure's participation in compilation and commentary does not make the composite work a single-author text."
+      }
+    }
+  },
+  {
+    "id": "relation:five-classics-project-occurred-changan",
+    "source": {
+      "kind": "event",
+      "slug": "five-classics-corrected-meanings-project"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "changan"
+    },
+    "relationType": "occurred_at",
+    "label": {
+      "zh-CN": "在长安制度空间中展开",
+      "en": "Developed within Chang'an's institutional space"
+    },
+    "summary": {
+      "zh-CN": "《五经正义》编纂工程与长安的国家教育和经学制度空间相连；具体场所和阶段仍需拆分。",
+      "en": "The Corrected Meanings project is connected with Chang'an's state-learning and classical institutions; specific sites and phases still need to be separated."
+    },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:education-classics-records",
+      "source:historical-geography"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "compilation",
+        "timeType": "range",
+        "startYear": 630,
+        "endYear": 653,
+        "displayDate": {
+          "zh-CN": "约 630–653",
+          "en": "c. 630–653"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:education-classics-records"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "institutional_site",
+      "historicity": "inferred"
+    }
+  },
+  {
+    "id": "relation:kong-active-guozijian",
+    "source": {
+      "kind": "figure",
+      "slug": "kong-yingda"
+    },
+    "target": {
+      "kind": "institution",
+      "slug": "guozijian"
+    },
+    "relationType": "active_in",
+    "label": {
+      "zh-CN": "连接国子监经学制度",
+      "en": "Connected with the Guozijian classical-learning system"
+    },
+    "summary": {
+      "zh-CN": "孔颖达的人物活动放回国子监和国家教育制度后，才能看见经学注疏如何获得制度作用；具体官职和校舍仍待核定。",
+      "en": "Placing Kong Yingda within the Guozijian and state-learning system shows how commentary gained institutional force; exact offices and buildings remain to be verified."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:kong-new-tang-biography",
+      "source:education-classics-records"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_activity",
+        "timeType": "range",
+        "startYear": 630,
+        "endYear": 648,
+        "displayDate": {
+          "zh-CN": "约 630–648",
+          "en": "c. 630–648"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:education-classics-records"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "institutional_site",
+      "historicity": "inferred"
+    }
+  },
+  {
+    "id": "relation:kong-commented-five-classics",
+    "source": {
+      "kind": "figure",
+      "slug": "kong-yingda"
+    },
+    "target": {
+      "kind": "text",
+      "slug": "five-classics-corrected-meanings"
+    },
+    "relationType": "commented_on",
+    "label": {
+      "zh-CN": "参与经学注疏",
+      "en": "Contributed to classical commentary"
+    },
+    "summary": {
+      "zh-CN": "孔颖达与《五经正义》的注疏和编纂层相连，但文本条目保留其复合和集体生产性质。",
+      "en": "Kong Yingda is connected with the commentary and compilation layers of the Corrected Meanings while the text remains marked as composite and collectively produced."
+    },
+    "confidence": "high",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:kong-new-tang-biography",
+      "source:confucian-commentarial-record"
+    ]
+  },
+  {
+    "id": "relation:five-classics-attributed-kong",
+    "source": {
+      "kind": "text",
+      "slug": "five-classics-corrected-meanings"
+    },
+    "target": {
+      "kind": "figure",
+      "slug": "kong-yingda"
+    },
+    "relationType": "attributed_to",
+    "label": {
+      "zh-CN": "编纂与注疏贡献关联孔颖达",
+      "en": "Compilation and commentary associated with Kong Yingda"
+    },
+    "summary": {
+      "zh-CN": "《五经正义》传统上与孔颖达的编纂和注疏贡献相连，但文本本身是复合的制度性成果，不应简化为个人独著。",
+      "en": "The Corrected Meanings is associated with Kong Yingda's editorial and commentarial contribution, but remains a composite institutional work rather than a sole-authored book."
+    },
+    "confidence": "high",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:kong-new-tang-biography",
+      "source:confucian-commentarial-record"
+    ],
+    "qualifiers": {
+      "attributionStatus": "anonymous_or_composite",
+      "historicity": "documented",
+      "note": {
+        "zh-CN": "人物贡献与文本总体作者身份分开建模。",
+        "en": "The figure's contribution is modelled separately from the work's composite authorship."
+      }
+    }
+  },
+  {
+    "id": "relation:five-classics-received-guozijian",
+    "source": {
+      "kind": "text",
+      "slug": "five-classics-corrected-meanings"
+    },
+    "target": {
+      "kind": "institution",
+      "slug": "guozijian"
+    },
+    "relationType": "received_by",
+    "label": {
+      "zh-CN": "进入国子监教育语境",
+      "en": "Received within the Guozijian educational context"
+    },
+    "summary": {
+      "zh-CN": "《五经正义》通过经学教学和国家教育制度获得后续传播语境；具体课程和版本使用仍需逐项核对。",
+      "en": "The Corrected Meanings entered later circulation through classical teaching and state education; specific curricula and edition use still require item-level checking."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:education-classics-records",
+      "source:confucian-commentarial-record"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_circulation",
+        "timeType": "range",
+        "startYear": 653,
+        "endYear": 907,
+        "displayDate": {
+          "zh-CN": "653–907 的制度传播语境",
+          "en": "Institutional circulation, 653–907"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:education-classics-records"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "inferred",
+      "receptionMode": "institutionalised"
+    }
+  },
+  {
+    "id": "relation:kong-remembered-guozijian",
+    "source": {
+      "kind": "figure",
+      "slug": "kong-yingda"
+    },
+    "target": {
+      "kind": "institution",
+      "slug": "guozijian"
+    },
+    "relationType": "remembered_in",
+    "label": {
+      "zh-CN": "在国子监经学记忆中延续",
+      "en": "Remembered through Guozijian classical learning"
+    },
+    "summary": {
+      "zh-CN": "孔颖达的后世机构记忆与《五经正义》及国家教育叙事相连；本条不把制度记忆等同于个人崇拜。",
+      "en": "Institutional memory of Kong Yingda is connected with the Corrected Meanings and state-learning narratives; this is not a claim of personal cult."
+    },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:education-classics-records",
+      "source:confucian-commentarial-record"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_and_memory_scope",
+        "timeType": "range",
+        "startYear": 648,
+        "endYear": 907,
+        "displayDate": {
+          "zh-CN": "648–907 的制度记忆语境",
+          "en": "Institutional memory context, 648–907"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:education-classics-records"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "memory_site",
+      "historicity": "inferred",
+      "receptionMode": "institutionalised"
+    }
+  },
+  {
+    "id": "relation:laozi-participated-zhou-rites",
+    "source": {
+      "kind": "figure",
+      "slug": "laozi"
+    },
+    "target": {
+      "kind": "event",
+      "slug": "confucius-asks-laozi-about-rites"
+    },
+    "relationType": "participated_in",
+    "label": {
+      "zh-CN": "出现在孔子问礼叙事中",
+      "en": "Appears in the Confucius–Laozi rites-asking tradition"
+    },
+    "summary": {
+      "zh-CN": "《史记》把老子置于孔子向周地问礼的叙事中；本条保留史传和传统层，不把会见当作独立可证的现场记录。",
+      "en": "The Shiji places Laozi in the narrative of Confucius asking about rites in Zhou; this retains the historiographical and traditional layer rather than treating the encounter as independently verified field evidence."
+    },
+    "confidence": "low",
+    "evidenceLayer": "traditional_account",
+    "sourceIds": [
+      "source:shiji-laozi-biography",
+      "source:shiji-confucius-biography"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "traditional_occurrence",
+        "timeType": "traditional_date",
+        "startYear": -550,
+        "endYear": -500,
+        "displayDate": {
+          "zh-CN": "传统叙事：春秋晚期；年代不确",
+          "en": "Traditional account: late Spring and Autumn period; date uncertain"
+        },
+        "confidence": "low",
+        "evidenceLayer": "traditional_account",
+        "sourceId": "source:shiji-laozi-biography"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "traditional",
+      "note": {
+        "zh-CN": "人物出现在史传事件中，不等于会见细节已被同时代材料独立证实。",
+        "en": "Appearance in a historiographical event does not independently verify the details of the encounter."
+      }
+    },
+    "publicationState": "public",
+    "reviewStatus": "publishable"
+  },
+  {
+    "id": "relation:confucius-participated-zhou-rites",
+    "source": {
+      "kind": "figure",
+      "slug": "confucius"
+    },
+    "target": {
+      "kind": "event",
+      "slug": "confucius-asks-laozi-about-rites"
+    },
+    "relationType": "participated_in",
+    "label": {
+      "zh-CN": "在周地向老子问礼",
+      "en": "Asks Laozi about rites in Zhou"
+    },
+    "summary": {
+      "zh-CN": "孔子问礼故事由《史记》保存为儒道相遇的史传入口；具体年代和对话细节仍标为传统叙事。",
+      "en": "The Shiji preserves the rites-asking story as a historiographical entry into a Dao–Ru encounter; exact dating and dialogue details remain traditional."
+    },
+    "confidence": "low",
+    "evidenceLayer": "traditional_account",
+    "sourceIds": [
+      "source:shiji-confucius-biography",
+      "source:shiji-laozi-biography"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "traditional_occurrence",
+        "timeType": "traditional_date",
+        "startYear": -550,
+        "endYear": -500,
+        "displayDate": {
+          "zh-CN": "传统叙事：春秋晚期；年代不确",
+          "en": "Traditional account: late Spring and Autumn period; date uncertain"
+        },
+        "confidence": "low",
+        "evidenceLayer": "traditional_account",
+        "sourceId": "source:shiji-confucius-biography"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "traditional",
+      "note": {
+        "zh-CN": "事件作为史传和跨传统比较入口，不作为孔子行程的精确复原。",
+        "en": "The event is a historiographical and cross-tradition entry, not a precise reconstruction of Confucius's itinerary."
+      }
+    },
+    "publicationState": "public",
+    "reviewStatus": "publishable"
+  },
+  {
+    "id": "relation:confucius-laozi-occurred-luoyang",
+    "source": {
+      "kind": "event",
+      "slug": "confucius-asks-laozi-about-rites"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "luoyang"
+    },
+    "relationType": "occurred_at",
+    "label": {
+      "zh-CN": "置于周地洛阳语境",
+      "en": "Placed in the Zhou–Luoyang context"
+    },
+    "summary": {
+      "zh-CN": "事件使用洛阳作为周地礼学和交通语境的城市级锚点，不主张已精确定位会见地点。",
+      "en": "The event uses Luoyang as a city-scale anchor for the Zhou rites and travel context without claiming a precisely located meeting site."
+    },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:shiji-laozi-biography",
+      "source:historical-geography"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "traditional_occurrence",
+        "timeType": "traditional_date",
+        "startYear": -550,
+        "endYear": -500,
+        "displayDate": {
+          "zh-CN": "传统叙事：春秋晚期；地点为城市级语境",
+          "en": "Traditional account: late Spring and Autumn period; city-scale spatial context"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "context_only",
+      "historicity": "traditional",
+      "note": {
+        "zh-CN": "洛阳是周地城市级锚点，不等于已确定具体宫室或档案地点。",
+        "en": "Luoyang is a city-scale Zhou anchor, not a confirmed palace or archive location."
+      }
+    },
+    "publicationState": "public",
+    "reviewStatus": "publishable"
+  },
+  {
+    "id": "relation:laozi-context-luoyang",
+    "source": {
+      "kind": "figure",
+      "slug": "laozi"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "luoyang"
+    },
+    "relationType": "active_in",
+    "label": {
+      "zh-CN": "与周地礼学语境相连",
+      "en": "Connected with the Zhou rites context"
+    },
+    "summary": {
+      "zh-CN": "老子在史传中与周王室藏室和问礼叙事相连；这里使用洛阳作为城市级传统语境，不把传说行迹写成精确驻留。",
+      "en": "Laozi is connected in historiographical tradition with the Zhou archive and rites-asking narrative; Luoyang is used as a city-scale traditional context, not as a precise residence claim."
+    },
+    "confidence": "low",
+    "evidenceLayer": "traditional_account",
+    "sourceIds": [
+      "source:shiji-laozi-biography",
+      "source:historical-geography"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "traditional_date",
+        "startYear": -550,
+        "endYear": -500,
+        "displayDate": {
+          "zh-CN": "传统叙事：春秋晚期；年代不确",
+          "en": "Traditional account: late Spring and Autumn period; date uncertain"
+        },
+        "confidence": "low",
+        "evidenceLayer": "traditional_account",
+        "sourceId": "source:shiji-laozi-biography"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "context_only",
+      "historicity": "traditional"
+    },
+    "publicationState": "public",
+    "reviewStatus": "publishable"
+  },
+  {
+    "id": "relation:confucius-context-luoyang",
+    "source": {
+      "kind": "figure",
+      "slug": "confucius"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "luoyang"
+    },
+    "relationType": "active_in",
+    "label": {
+      "zh-CN": "与周地问礼语境相连",
+      "en": "Connected with the Zhou rites-asking context"
+    },
+    "summary": {
+      "zh-CN": "孔子问礼于周的史传叙事可以用洛阳作为城市级空间入口，但不等于复原一条确定的旅行路线。",
+      "en": "The historiographical account of Confucius asking about rites in Zhou can use Luoyang as a city-scale spatial entry without reconstructing a certain travel route."
+    },
+    "confidence": "low",
+    "evidenceLayer": "traditional_account",
+    "sourceIds": [
+      "source:shiji-confucius-biography",
+      "source:historical-geography"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "traditional_date",
+        "startYear": -550,
+        "endYear": -500,
+        "displayDate": {
+          "zh-CN": "传统叙事：春秋晚期；年代不确",
+          "en": "Traditional account: late Spring and Autumn period; date uncertain"
+        },
+        "confidence": "low",
+        "evidenceLayer": "traditional_account",
+        "sourceId": "source:shiji-confucius-biography"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "context_only",
+      "historicity": "traditional"
+    },
+    "publicationState": "public",
+    "reviewStatus": "publishable"
+  },
+  {
+    "id": "relation:daodejing-attributed-laozi",
+    "source": {
+      "kind": "text",
+      "slug": "daodejing"
+    },
+    "target": {
+      "kind": "figure",
+      "slug": "laozi"
+    },
+    "relationType": "attributed_to",
+    "label": {
+      "zh-CN": "传统上归于老子",
+      "en": "Traditionally attributed to Laozi"
+    },
+    "summary": {
+      "zh-CN": "《道德经》传统上与老子相连，但文本成书、编纂和作者归属仍有多层历史，不能简化为老子一人独著。",
+      "en": "The Daodejing is traditionally connected with Laozi, but its formation, compilation and attribution remain layered and cannot be reduced to sole authorship by one person."
+    },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:shiji-laozi-biography",
+      "source:daodejing-edition"
+    ],
+    "qualifiers": {
+      "attributionStatus": "attributed_saying",
+      "historicity": "contested",
+      "note": {
+        "zh-CN": "人物传统归属与文本复合成书分开建模。",
+        "en": "Traditional figure attribution and composite textual formation are modelled separately."
+      }
+    },
+    "publicationState": "public",
+    "reviewStatus": "publishable"
+  },
+  {
+    "id": "relation:dao-passage-attributed-laozi",
+    "source": {
+      "kind": "passage",
+      "slug": "dao-that-can-be-spoken"
+    },
+    "target": {
+      "kind": "figure",
+      "slug": "laozi"
+    },
+    "relationType": "attributed_to",
+    "label": {
+      "zh-CN": "传统上作为老子言说保存",
+      "en": "Preserved traditionally as a saying of Laozi"
+    },
+    "summary": {
+      "zh-CN": "《道德经》第一章可作为老子传统的代表性言说入口，但 passage 的版本和传述层优先于直接口述假设。",
+      "en": "Daodejing chapter 1 can serve as a representative speech entry for the Laozi tradition, while version and transmission layers take priority over assuming direct oral attestation."
+    },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:daodejing-edition",
+      "source:shiji-laozi-biography"
+    ],
+    "qualifiers": {
+      "attributionStatus": "attributed_saying",
+      "historicity": "contested",
+      "note": {
+        "zh-CN": "这是传世本段落的传统归属，不等于可还原为人物当场逐字记录。",
+        "en": "This is a traditional attribution of a received passage, not a recoverable verbatim record of the historical person speaking."
+      }
+    },
+    "publicationState": "public",
+    "reviewStatus": "publishable"
+  },
+  {
+    "id": "relation:laozi-remembered-daoist-network",
+    "source": {
+      "kind": "figure",
+      "slug": "laozi"
+    },
+    "target": {
+      "kind": "institution",
+      "slug": "changan-daoist-monastic-network"
+    },
+    "relationType": "remembered_in",
+    "label": {
+      "zh-CN": "在唐代道教机构记忆中延续",
+      "en": "Remembered through Tang Daoist institutions"
+    },
+    "summary": {
+      "zh-CN": "老子作为经典源头和道教传统人物进入唐代宫观、皇室与制度记忆；本条不等同于把李耳直接神格化为同一实体。",
+      "en": "Laozi as a classical source figure enters Tang institutional, imperial and Daoist memory; this does not collapse Li Er into a single later sacralised identity."
+    },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:daoist-historical-record",
+      "source:daodejing-edition"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_and_memory_scope",
+        "timeType": "range",
+        "startYear": 618,
+        "endYear": 907,
+        "displayDate": {
+          "zh-CN": "618–907 的唐代道教机构记忆语境",
+          "en": "Tang Daoist institutional-memory context, 618–907"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-historical-record"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "memory_site",
+      "historicity": "inferred",
+      "receptionMode": "institutionalised"
+    }
+  },
+  {
+    "id": "relation:laozi-reception-kaiyuan",
+    "source": {
+      "kind": "figure",
+      "slug": "laozi"
+    },
+    "target": {
+      "kind": "event",
+      "slug": "kaiyuan-institutional-expansion"
+    },
+    "relationType": "influenced",
+    "label": {
+      "zh-CN": "作为道家经典源头进入开元语境",
+      "en": "Enters the Kaiyuan context as a Daoist classical source"
+    },
+    "summary": {
+      "zh-CN": "这条关系表达后世经典和制度接受的策展连接，不主张老子本人参与开元时期每一项制度变化。",
+      "en": "This relation expresses a curatorial connection through later textual and institutional reception, not personal participation in every Kaiyuan-era change."
+    },
+    "confidence": "low",
+    "evidenceLayer": "scholarly_interpretation",
+    "sourceIds": [
+      "source:daoist-historical-record",
+      "source:daodejing-edition",
+      "source:tang-imperial-records"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_circulation",
+        "timeType": "range",
+        "startYear": 713,
+        "endYear": 741,
+        "displayDate": {
+          "zh-CN": "713–741 的后世接受语境",
+          "en": "Later-reception context, 713–741"
+        },
+        "confidence": "low",
+        "evidenceLayer": "scholarly_interpretation",
+        "sourceId": "source:daoist-historical-record"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "inferred",
+      "receptionMode": "reinterpreted"
+    }
+  },
+  {
+    "id": "relation:analects-attributed-confucius",
+    "source": {
+      "kind": "text",
+      "slug": "analects"
+    },
+    "target": {
+      "kind": "figure",
+      "slug": "confucius"
+    },
+    "relationType": "attributed_to",
+    "label": {
+      "zh-CN": "保存孔子及弟子言行",
+      "en": "Preserves sayings and actions associated with Confucius and his disciples"
+    },
+    "summary": {
+      "zh-CN": "《论语》以孔子及弟子言行为核心，但属于复合传述文本；关系标明由他人记录和编纂，而非单一作者逐字写作。",
+      "en": "The Analects centres on sayings and actions associated with Confucius and his disciples, but is a composite transmitted text recorded and compiled by others rather than a single-author transcript."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:analects-edition",
+      "source:shiji-confucius-biography"
+    ],
+    "qualifiers": {
+      "attributionStatus": "recorded_by_others",
+      "historicity": "documented",
+      "note": {
+        "zh-CN": "孔子作为说话者的传统归属与《论语》的复合编纂层分开显示。",
+        "en": "The traditional speaker attribution to Confucius is shown separately from the Analects' composite compilation layers."
+      }
+    },
+    "publicationState": "public",
+    "reviewStatus": "publishable"
+  },
+  {
+    "id": "relation:learn-and-practice-attributed-confucius",
+    "source": {
+      "kind": "passage",
+      "slug": "learn-and-practice"
+    },
+    "target": {
+      "kind": "figure",
+      "slug": "confucius"
+    },
+    "relationType": "attributed_to",
+    "label": {
+      "zh-CN": "作为孔子言说由传述保存",
+      "en": "Preserved as a saying of Confucius through transmission"
+    },
+    "summary": {
+      "zh-CN": "《学而》篇的开篇言说以孔子为传统说话者，但其文本保存经过弟子、编纂和传本层。",
+      "en": "The opening of Xue Er is traditionally voiced by Confucius, while its preservation passes through disciples, compilation and received editions."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:analects-edition",
+      "source:shiji-confucius-biography"
+    ],
+    "qualifiers": {
+      "attributionStatus": "recorded_by_others",
+      "historicity": "documented"
+    },
+    "publicationState": "public",
+    "reviewStatus": "publishable"
+  },
+  {
+    "id": "relation:confucius-remembered-guozijian",
+    "source": {
+      "kind": "figure",
+      "slug": "confucius"
+    },
+    "target": {
+      "kind": "institution",
+      "slug": "guozijian"
+    },
+    "relationType": "remembered_in",
+    "label": {
+      "zh-CN": "在国家经学教育记忆中延续",
+      "en": "Remembered through state classical education"
+    },
+    "summary": {
+      "zh-CN": "孔子通过经典、注疏和国家教育制度进入唐代经学记忆；这一关系表达后世制度接收，不把孔子写成唐代机构的在场人物。",
+      "en": "Confucius enters Tang classical-learning memory through classics, commentary and state education; this records later institutional reception rather than placing him physically in a Tang institution."
+    },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:education-classics-records",
+      "source:analects-edition"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_and_memory_scope",
+        "timeType": "range",
+        "startYear": 618,
+        "endYear": 907,
+        "displayDate": {
+          "zh-CN": "618–907 的唐代经学制度记忆语境",
+          "en": "Tang classical-learning memory context, 618–907"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:education-classics-records"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "memory_site",
+      "historicity": "inferred",
+      "receptionMode": "institutionalised"
+    }
+  },
+  {
+    "id": "relation:confucius-reception-five-classics",
+    "source": {
+      "kind": "figure",
+      "slug": "confucius"
+    },
+    "target": {
+      "kind": "event",
+      "slug": "five-classics-corrected-meanings-project"
+    },
+    "relationType": "influenced",
+    "label": {
+      "zh-CN": "作为经典传统源头进入《五经正义》工程",
+      "en": "Enters the Corrected Meanings project as a classical source figure"
+    },
+    "summary": {
+      "zh-CN": "孔子与《五经正义》的关系是后世经典接受和制度化解释的长链，不是孔子本人参与唐代编纂工程。",
+      "en": "The connection between Confucius and the Corrected Meanings is a chain of later classical reception and institutional interpretation, not personal participation in a Tang compilation project."
+    },
+    "confidence": "low",
+    "evidenceLayer": "scholarly_interpretation",
+    "sourceIds": [
+      "source:analects-edition",
+      "source:confucian-commentarial-record",
+      "source:education-classics-records"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_circulation",
+        "timeType": "range",
+        "startYear": 630,
+        "endYear": 653,
+        "displayDate": {
+          "zh-CN": "630–653 的后世经学接受语境",
+          "en": "Later classical-reception context, 630–653"
+        },
+        "confidence": "low",
+        "evidenceLayer": "scholarly_interpretation",
+        "sourceId": "source:confucian-commentarial-record"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "inferred",
+      "receptionMode": "reinterpreted"
+    }
+  },
+  {
+    "id": "relation:analects-received-kong",
+    "source": {
+      "kind": "text",
+      "slug": "analects"
+    },
+    "target": {
+      "kind": "figure",
+      "slug": "kong-yingda"
+    },
+    "relationType": "received_by",
+    "label": {
+      "zh-CN": "在孔颖达的唐代经学语境中被接收",
+      "en": "Received within Kong Yingda's Tang classical-learning context"
+    },
+    "summary": {
+      "zh-CN": "《论语》进入孔颖达所处的经学、注疏和国家教育语境；这条关系表达后世解释，不把孔颖达与孔子合并。",
+      "en": "The Analects enters the classical, commentarial and state-learning context associated with Kong Yingda; this is later interpretation, not a merging of Kong Yingda with Confucius."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:analects-edition",
+      "source:confucian-commentarial-record",
+      "source:education-classics-records"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "textual_circulation",
+        "timeType": "range",
+        "startYear": 630,
+        "endYear": 648,
+        "displayDate": {
+          "zh-CN": "630–648 的唐代经学解释语境",
+          "en": "Tang classical interpretation context, 630–648"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:confucian-commentarial-record"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "inferred",
+      "receptionMode": "reinterpreted"
+    }
+  },
+  {
+    "id": "relation:sakyamuni-participated-first-sermon",
+    "source": {
+      "kind": "figure",
+      "slug": "sakyamuni"
+    },
+    "target": {
+      "kind": "event",
+      "slug": "buddha-first-sermon-at-sarnath"
+    },
+    "relationType": "participated_in",
+    "label": {
+      "zh-CN": "在鹿野苑初转法轮传统中说法",
+      "en": "Teaches in the Sarnath first-sermon tradition"
+    },
+    "summary": {
+      "zh-CN": "早期佛教文本把佛陀与鹿野苑初转法轮相连；关系保留文本传述和传统年代层，不声称逐字现场记录。",
+      "en": "Early Buddhist texts connect the Buddha with the first turning at Sarnath; the relation retains transmitted and traditional dating layers rather than claiming a verbatim record."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "traditional_account",
+    "sourceIds": [
+      "source:buddha-early-texts",
+      "source:sarnath-site-record"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "traditional_occurrence",
+        "timeType": "traditional_date",
+        "startYear": -500,
+        "endYear": -400,
+        "displayDate": {
+          "zh-CN": "传统叙事：约公元前 5 世纪；年代有争议",
+          "en": "Traditional account: around the fifth century BCE; dates contested"
+        },
+        "confidence": "low",
+        "evidenceLayer": "traditional_account",
+        "sourceId": "source:buddha-early-texts"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "traditional",
+      "note": {
+        "zh-CN": "事件、经文和遗址的证据层分开呈现。",
+        "en": "The evidence layers of event, discourse and site remain separate."
+      }
+    },
+    "publicationState": "public",
+    "reviewStatus": "publishable"
+  },
+  {
+    "id": "relation:first-sermon-occurred-sarnath",
+    "source": {
+      "kind": "event",
+      "slug": "buddha-first-sermon-at-sarnath"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "sarnath"
+    },
+    "relationType": "occurred_at",
+    "label": {
+      "zh-CN": "发生于鹿野苑传统地点",
+      "en": "Occurs at the traditional Sarnath site"
+    },
+    "summary": {
+      "zh-CN": "鹿野苑是经文和后世遗产记忆中的初转法轮地点；现实坐标指向遗址级地点，不等于保存了公元前现场。",
+      "en": "Sarnath is the first-teaching location in textual and later heritage memory; the real coordinate points to a site-level referent, not a preserved fifth-century BCE scene."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:buddha-early-texts",
+      "source:sarnath-site-record"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "traditional_occurrence",
+        "timeType": "traditional_date",
+        "startYear": -500,
+        "endYear": -400,
+        "displayDate": {
+          "zh-CN": "传统叙事：约公元前 5 世纪；年代有争议",
+          "en": "Traditional account: around the fifth century BCE; dates contested"
+        },
+        "confidence": "low",
+        "evidenceLayer": "traditional_account",
+        "sourceId": "source:buddha-early-texts"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "activity_site",
+      "historicity": "traditional"
+    },
+    "publicationState": "public",
+    "reviewStatus": "publishable"
+  },
+  {
+    "id": "relation:sakyamuni-active-sarnath",
+    "source": {
+      "kind": "figure",
+      "slug": "sakyamuni"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "sarnath"
+    },
+    "relationType": "active_in",
+    "label": {
+      "zh-CN": "与鹿野苑说法传统相连",
+      "en": "Connected with the Sarnath teaching tradition"
+    },
+    "summary": {
+      "zh-CN": "人物与地点的连接来自初转法轮传述和后世遗产记忆；这里不把鹿野苑写成可完全复原的个人行迹。",
+      "en": "The figure–place connection comes from the first-teaching tradition and later heritage memory; it is not a fully reconstructed personal itinerary."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "traditional_account",
+    "sourceIds": [
+      "source:buddha-early-texts",
+      "source:sarnath-site-record"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "traditional_date",
+        "startYear": -500,
+        "endYear": -400,
+        "displayDate": {
+          "zh-CN": "传统叙事：约公元前 5 世纪；年代有争议",
+          "en": "Traditional account: around the fifth century BCE; dates contested"
+        },
+        "confidence": "low",
+        "evidenceLayer": "traditional_account",
+        "sourceId": "source:buddha-early-texts"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "activity_site",
+      "historicity": "traditional"
+    },
+    "publicationState": "public",
+    "reviewStatus": "publishable"
+  },
+  {
+    "id": "relation:dhammacakkappavattana-has-version",
+    "source": {
+      "kind": "text",
+      "slug": "dhammacakkappavattana-sutta"
+    },
+    "target": {
+      "kind": "text_version",
+      "slug": "dhammacakkappavattana-sutta-pali"
+    },
+    "relationType": "has_version",
+    "label": {
+      "zh-CN": "对应巴利语数字版本",
+      "en": "Has a Pāli digital version"
+    },
+    "summary": {
+      "zh-CN": "文本与版本分开，便于以后加入汉译、异本和不同传承。",
+      "en": "The text and version remain separate so Chinese translations, parallels and recensions can be added later."
+    },
+    "confidence": "high",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:buddha-early-texts"
+    ],
+    "publicationState": "public",
+    "reviewStatus": "publishable"
+  },
+  {
+    "id": "relation:turning-passage-of-text",
+    "source": {
+      "kind": "passage",
+      "slug": "turning-of-dharma-wheel"
+    },
+    "target": {
+      "kind": "text",
+      "slug": "dhammacakkappavattana-sutta"
+    },
+    "relationType": "passage_of",
+    "label": {
+      "zh-CN": "属于《转法轮经》段落",
+      "en": "Passage of the Dhammacakkappavattana Sutta"
+    },
+    "summary": {
+      "zh-CN": "段落回指经文文本层，同时保留具体版本和说话者归属。",
+      "en": "The passage points back to the discourse text while retaining version and speaker-attribution layers."
+    },
+    "confidence": "high",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:buddha-early-texts"
+    ],
+    "publicationState": "public",
+    "reviewStatus": "publishable"
+  },
+  {
+    "id": "relation:turning-passage-quoted-pali",
+    "source": {
+      "kind": "passage",
+      "slug": "turning-of-dharma-wheel"
+    },
+    "target": {
+      "kind": "text_version",
+      "slug": "dhammacakkappavattana-sutta-pali"
+    },
+    "relationType": "quoted_from_version",
+    "label": {
+      "zh-CN": "引自 SN 56.11 巴利语版本",
+      "en": "Quoted from the Pāli SN 56.11 version"
+    },
+    "summary": {
+      "zh-CN": "短引文回指明确的数字版本，避免把译文和原典混为一层。",
+      "en": "The short excerpt points to an explicit digital version rather than mixing translation and source text into one layer."
+    },
+    "confidence": "high",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:buddha-early-texts"
+    ],
+    "publicationState": "public",
+    "reviewStatus": "publishable"
+  },
+  {
+    "id": "relation:turning-passage-attributed-sakyamuni",
+    "source": {
+      "kind": "passage",
+      "slug": "turning-of-dharma-wheel"
+    },
+    "target": {
+      "kind": "figure",
+      "slug": "sakyamuni"
+    },
+    "relationType": "attributed_to",
+    "label": {
+      "zh-CN": "作为释迦牟尼教法由传述保存",
+      "en": "Preserved as Śākyamuni's teaching through transmission"
+    },
+    "summary": {
+      "zh-CN": "段落传统上由佛陀宣说，但现存文本经由僧团记忆、结集和传本保存，故明确标为 recorded_by_others。",
+      "en": "The passage is traditionally voiced by the Buddha, while the surviving text is preserved through monastic memory, compilation and transmission, so it is marked recorded_by_others."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:buddha-early-texts"
+    ],
+    "qualifiers": {
+      "attributionStatus": "recorded_by_others",
+      "historicity": "traditional"
+    },
+    "publicationState": "public",
+    "reviewStatus": "publishable"
+  },
+  {
+    "id": "relation:sakyamuni-remembered-sarnath",
+    "source": {
+      "kind": "figure",
+      "slug": "sakyamuni"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "sarnath"
+    },
+    "relationType": "remembered_in",
+    "label": {
+      "zh-CN": "在鹿野苑朝圣与遗址记忆中延续",
+      "en": "Remembered through Sarnath pilgrimage and heritage"
+    },
+    "summary": {
+      "zh-CN": "鹿野苑把佛陀初转法轮的经文传统转化为持续的遗址、朝圣和文化遗产记忆；本条不把后世记忆倒写成同时代事实。",
+      "en": "Sarnath turns the first-teaching tradition into continuing site, pilgrimage and heritage memory; later memory is not projected back as contemporaneous fact."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:sarnath-site-record",
+      "source:buddha-early-texts"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "cult_emergence",
+        "timeType": "range",
+        "startYear": -250,
+        "endYear": 1200,
+        "displayDate": {
+          "zh-CN": "约公元前 3 世纪至公元 12 世纪的遗址与朝圣记忆发展",
+          "en": "Development of site and pilgrimage memory from c. 3rd century BCE to the 12th century CE"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:sarnath-site-record"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "memory_site",
+      "historicity": "inferred",
+      "receptionMode": "ritualised"
+    },
+    "publicationState": "public",
+    "reviewStatus": "publishable"
+  },
+  {
+    "id": "relation:sakyamuni-represented-heart-sutra",
+    "source": {
+      "kind": "text",
+      "slug": "heart-sutra"
+    },
+    "target": {
+      "kind": "figure",
+      "slug": "sakyamuni"
+    },
+    "relationType": "represented_by",
+    "label": {
+      "zh-CN": "以佛陀形象进入后世般若经典语境",
+      "en": "Represents the Buddha within a later Prajñāpāramitā context"
+    },
+    "summary": {
+      "zh-CN": "《心经》的后世经典语境把佛陀置于般若教法和菩萨问答框架中；这是文学与宗教传统中的再呈现，不是释迦牟尼的直接作者署名。",
+      "en": "The later scriptural context of the Heart Sutra places the Buddha within a Prajñāpāramitā teaching and question-and-answer frame; this is literary and religious representation, not direct authorship by Śākyamuni."
+    },
+    "confidence": "low",
+    "evidenceLayer": "literary_representation",
+    "sourceIds": [
+      "source:heart-sutra-edition",
+      "source:buddha-early-texts"
+    ],
+    "qualifiers": {
+      "attributionStatus": "later_literary_voice",
+      "historicity": "traditional",
+      "note": {
+        "zh-CN": "后世经典中的佛陀形象与历史人物、早期经文传述分开建模。",
+        "en": "The Buddha's later scriptural representation remains separate from the historical person and early discourse transmission."
+      }
+    }
+  },
+  {
+    "id": "relation:sakyamuni-reception-daci-en",
+    "source": {
+      "kind": "figure",
+      "slug": "sakyamuni"
+    },
+    "target": {
+      "kind": "event",
+      "slug": "daci-en-monastery-established"
+    },
+    "relationType": "influenced",
+    "label": {
+      "zh-CN": "作为佛教教法源头进入大慈恩寺制度语境",
+      "en": "Enters the Great Ci'en institutional context as a source of Buddhist teaching"
+    },
+    "summary": {
+      "zh-CN": "这条关系表达唐代寺院和译经制度对佛教源头的后世接收，不主张释迦牟尼本人参与大慈恩寺建立。",
+      "en": "This relation expresses later Tang monastic and translation-institutional reception of Buddhist origins, not personal participation by Śākyamuni in the monastery's foundation."
+    },
+    "confidence": "low",
+    "evidenceLayer": "scholarly_interpretation",
+    "sourceIds": [
+      "source:buddha-early-texts",
+      "source:buddhist-institutional-records",
+      "source:xuanzang-records"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_circulation",
+        "timeType": "range",
+        "startYear": 648,
+        "endYear": 907,
+        "displayDate": {
+          "zh-CN": "648–907 的唐代佛教制度接受语境",
+          "en": "Tang Buddhist institutional-reception context, 648–907"
+        },
+        "confidence": "low",
+        "evidenceLayer": "scholarly_interpretation",
+        "sourceId": "source:buddhist-institutional-records"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "inferred",
+      "receptionMode": "institutionalised"
+    },
+    "publicationState": "public",
+    "reviewStatus": "publishable"
+  },
+  {
+    "id": "relation:turning-text-has-thanissaro-version",
+    "source": {
+      "kind": "text",
+      "slug": "dhammacakkappavattana-sutta"
+    },
+    "target": {
+      "kind": "text_version",
+      "slug": "dhammacakkappavattana-sutta-thanissaro-en"
+    },
+    "relationType": "has_version",
+    "label": {
+      "zh-CN": "对应 Thanissaro 英译版本",
+      "en": "Has the Thanissaro English translation"
+    },
+    "summary": {
+      "zh-CN": "经文作品与现代英译版本分开建模，保留译者和权利边界。",
+      "en": "The discourse work remains separate from a modern English translation, preserving translator and rights boundaries."
+    },
+    "confidence": "high",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:sn56-11-thanissaro"
+    ]
+  },
+  {
+    "id": "relation:turning-translation-quoted-thanissaro",
+    "source": {
+      "kind": "passage",
+      "slug": "turning-of-dharma-wheel-thanissaro-en"
+    },
+    "target": {
+      "kind": "text_version",
+      "slug": "dhammacakkappavattana-sutta-thanissaro-en"
+    },
+    "relationType": "quoted_from_version",
+    "label": {
+      "zh-CN": "引自 Thanissaro 英译版本",
+      "en": "Quoted from the Thanissaro English version"
+    },
+    "summary": {
+      "zh-CN": "英文短引回指具体译本和 SN 56.11 定位，不把英译措辞混入巴利语原文层。",
+      "en": "The English excerpt points to a specific translation and SN 56.11 locator without mixing its wording into the Pāli source layer."
+    },
+    "confidence": "high",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:sn56-11-thanissaro"
+    ]
+  },
+  {
+    "id": "relation:turning-passage-parallel-thanissaro",
+    "source": {
+      "kind": "passage",
+      "slug": "turning-of-dharma-wheel-thanissaro-en"
+    },
+    "target": {
+      "kind": "passage",
+      "slug": "turning-of-dharma-wheel"
+    },
+    "relationType": "comparative_parallel",
+    "label": {
+      "zh-CN": "与 SN 56.11 巴利语短引对照",
+      "en": "Compared with the Pāli SN 56.11 excerpt"
+    },
+    "summary": {
+      "zh-CN": "两段共享 SN 56.11 的经文定位，但分属不同语言版本；对照仅用于显示措辞层差异。",
+      "en": "Both passages share the SN 56.11 textual locator but belong to different language versions; the comparison only exposes wording-layer differences."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:buddha-early-texts",
+      "source:sn56-11-thanissaro"
+    ]
+  },
+  {
+    "id": "relation:turning-translation-attributed-sakyamuni",
+    "source": {
+      "kind": "passage",
+      "slug": "turning-of-dharma-wheel-thanissaro-en"
+    },
+    "target": {
+      "kind": "figure",
+      "slug": "sakyamuni"
+    },
+    "relationType": "attributed_to",
+    "label": {
+      "zh-CN": "作为释迦牟尼教法的英译传述",
+      "en": "English transmission of teaching attributed to Śākyamuni"
+    },
+    "summary": {
+      "zh-CN": "英译版本延续同一经文的传统说话者归属，但文本经由巴利语传承和现代翻译保存。",
+      "en": "The English witness retains the discourse's traditional speaker attribution while being preserved through Pāli transmission and modern translation."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:buddha-early-texts",
+      "source:sn56-11-thanissaro"
+    ],
+    "qualifiers": {
+      "attributionStatus": "recorded_by_others",
+      "historicity": "traditional"
+    }
+  },
+  {
+    "id": "relation:daci-en-event-institutional-context",
+    "source": {
+      "kind": "event",
+      "slug": "daci-en-monastery-established"
+    },
+    "target": {
+      "kind": "institution",
+      "slug": "daci-en-monastery"
+    },
+    "relationType": "institutional_context",
+    "label": {
+      "zh-CN": "对应大慈恩寺机构",
+      "en": "Institutional context of Great Ci'en Monastery"
+    },
+    "summary": {
+      "zh-CN": "建立事件与大慈恩寺机构条目保持分层：事件表达约 648 年的建立语境，机构条目承载后续译经、寺院网络与空间说明。",
+      "en": "The foundation event remains distinct from the Great Ci'en institution: the event marks the c. 648 foundation context while the institution carries later translation, monastic-network and spatial description."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:xuanzang-records"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "foundation",
+        "timeType": "circa",
+        "startYear": 648,
+        "endYear": 648,
+        "displayDate": {
+          "zh-CN": "约 648",
+          "en": "c. 648"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:xuanzang-records"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "institutional_site",
+      "historicity": "documented"
+    },
+    "publicationState": "public",
+    "reviewStatus": "publishable"
+  },
+  {
+    "id": "relation:li-shimin-participated-tang-foundation",
+    "source": {
+      "kind": "figure",
+      "slug": "li-shimin"
+    },
+    "target": {
+      "kind": "event",
+      "slug": "tang-dynasty-founded"
+    },
+    "relationType": "participated_in",
+    "label": {
+      "zh-CN": "参与唐朝建立的政治过程",
+      "en": "Participated in the political process that founded the Tang"
+    },
+    "summary": {
+      "zh-CN": "李世民与 617–618 年唐朝建立的政治过程相连；关系只表达其参与和制度语境，不把王朝建立归因于单一人物。",
+      "en": "Li Shimin is connected to the political process of Tang state formation in 617–618; this records participation and context rather than attributing the dynasty's foundation to one person."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:tang-taizong-ctext",
+      "source:tang-imperial-records"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 617,
+        "endYear": 618,
+        "displayDate": {
+          "zh-CN": "617–618",
+          "en": "617–618"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:tang-taizong-ctext"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "documented",
+      "note": {
+        "zh-CN": "关系表达参与，不等同于唯一创立者或单线因果。",
+        "en": "The relation records participation, not sole authorship or a single causal line."
+      }
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:li-shimin-active-changan",
+    "source": {
+      "kind": "figure",
+      "slug": "li-shimin"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "changan"
+    },
+    "relationType": "active_in",
+    "label": {
+      "zh-CN": "在长安政治制度语境中活动",
+      "en": "Active in Chang'an's political and institutional context"
+    },
+    "summary": {
+      "zh-CN": "长安是李世民即位后政治、教育与宗教制度交汇的城市尺度节点；本关系不推定具体宫殿、常住轨迹或单一机构关系。",
+      "en": "Chang'an was a city-scale node where political, educational and religious institutions converged after Li Shimin's accession; this does not infer a specific palace, residence pattern or single institutional tie."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:tang-taizong-ctext",
+      "source:historical-geography"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 626,
+        "endYear": 649,
+        "displayDate": {
+          "zh-CN": "626–649",
+          "en": "626–649"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:tang-taizong-ctext"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "activity_site",
+      "historicity": "documented"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:wu-zhao-participated-wu-zhou",
+    "source": {
+      "kind": "figure",
+      "slug": "wu-zhao"
+    },
+    "target": {
+      "kind": "event",
+      "slug": "wu-zhou-established"
+    },
+    "relationType": "participated_in",
+    "label": {
+      "zh-CN": "建立武周的政治转型",
+      "en": "Participated in the political transition that established Wu Zhou"
+    },
+    "summary": {
+      "zh-CN": "武曌与 690 年武周建立这一政治转型直接相连；本关系只锚定制度事件，不从身份推导单一宗教动机。",
+      "en": "Wu Zhao is directly connected to the political transition that established Wu Zhou in 690; this anchors an institutional event without inferring a single religious motive from identity."
+    },
+    "confidence": "high",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:wu-zhou-chronology",
+      "source:tang-imperial-records"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "dynastic_transition",
+        "timeType": "exact",
+        "startYear": 690,
+        "endYear": 690,
+        "displayDate": {
+          "zh-CN": "690",
+          "en": "690"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:wu-zhou-chronology"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "documented",
+      "note": {
+        "zh-CN": "政策、仪式与宗教赞助需拆分为各自的后续关系。",
+        "en": "Policies, rituals and religious patronage require separate follow-up relations."
+      }
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:wu-zhao-active-luoyang",
+    "source": {
+      "kind": "figure",
+      "slug": "wu-zhao"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "luoyang"
+    },
+    "relationType": "active_in",
+    "label": {
+      "zh-CN": "在洛阳两京制度语境中活动",
+      "en": "Active in Luoyang's two-capital institutional context"
+    },
+    "summary": {
+      "zh-CN": "690 年定鼎洛邑使洛阳成为武周政治与仪式表达的重要城市节点；本关系不等同于覆盖武曌全部生涯的固定居住断言。",
+      "en": "The 690 designation of Luoyang as a capital makes it an important urban node for Wu Zhou politics and ritual representation; this is not a claim of fixed residence across Wu Zhao's entire life."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:wu-zhou-chronology",
+      "source:historical-geography"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 690,
+        "endYear": 705,
+        "displayDate": {
+          "zh-CN": "690–705",
+          "en": "690–705"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:wu-zhou-chronology"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "activity_site",
+      "historicity": "documented"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:yijing-participated-departure-by-sea",
+    "source": {
+      "kind": "figure",
+      "slug": "yijing"
+    },
+    "target": {
+      "kind": "event",
+      "slug": "yijing-departs-by-sea"
+    },
+    "relationType": "participated_in",
+    "label": {
+      "zh-CN": "由海路出发求法",
+      "en": "Departed by sea on a pilgrimage for learning"
+    },
+    "summary": {
+      "zh-CN": "义净与约 671 年由海路出发的求法事件相连；传记材料确认海路方向和跨区域行程，但出发港仍待单独核定。",
+      "en": "Yijing is connected to the c. 671 maritime pilgrimage departure; the biographical material supports the maritime direction and transregional journey, while the departure port remains to be verified separately."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:yijing-biography-ctext",
+      "source:buddhist-biographical-records",
+      "source:historical-geography"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "departure",
+        "timeType": "circa",
+        "startYear": 671,
+        "endYear": 671,
+        "displayDate": {
+          "zh-CN": "约 671",
+          "en": "c. 671"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:yijing-biography-ctext"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "documented",
+      "note": {
+        "zh-CN": "海路起点和中途港口不由此关系自动补全。",
+        "en": "The maritime origin and intermediate ports are not auto-filled by this relation."
+      }
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:yijing-participated-return",
+    "source": {
+      "kind": "figure",
+      "slug": "yijing"
+    },
+    "target": {
+      "kind": "event",
+      "slug": "yijing-returns"
+    },
+    "relationType": "participated_in",
+    "label": {
+      "zh-CN": "携经回到唐境",
+      "en": "Returned to Tang territory with scriptures"
+    },
+    "summary": {
+      "zh-CN": "义净与约 695 年携梵本经回到河洛的归返节点相连；“河洛”保留为区域表达，不在此处压缩为单一城市。",
+      "en": "Yijing is connected to the c. 695 return with Sanskrit scriptures to the He-Luo region; “He-Luo” remains a regional expression rather than being collapsed into one city here."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:yijing-biography-ctext",
+      "source:buddhist-biographical-records",
+      "source:buddhist-institutional-records"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "return",
+        "timeType": "circa",
+        "startYear": 695,
+        "endYear": 695,
+        "displayDate": {
+          "zh-CN": "约 695",
+          "en": "c. 695"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:yijing-biography-ctext"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "documented",
+      "note": {
+        "zh-CN": "归返后的具体抵达城市和译经项目需另行连接。",
+        "en": "The specific arrival city and translation projects after the return require separate links."
+      }
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:yijing-active-nalanda",
+    "source": {
+      "kind": "figure",
+      "slug": "yijing"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "nalanda"
+    },
+    "relationType": "active_in",
+    "label": {
+      "zh-CN": "与那烂陀学习网络相连",
+      "en": "Connected with Nalanda's learning network"
+    },
+    "summary": {
+      "zh-CN": "资料将义净约 675 年到达那烂陀并停留十年作为学习节点；地图只显示那烂陀这一地点，不推定其完整南亚路线。",
+      "en": "The sources place Yijing's arrival at Nalanda around 675 and a decade of study there; the map shows Nalanda as a learning node without inferring his full South Asian itinerary."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:yijing-datawiki",
+      "source:unesco-nalanda"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "pilgrimage_and_learning_scope",
+        "timeType": "range",
+        "startYear": 675,
+        "endYear": 685,
+        "displayDate": {
+          "zh-CN": "约 675–685",
+          "en": "c. 675–685"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:yijing-datawiki"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "activity_site",
+      "historicity": "documented"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:yan-shigu-participated-five-classics",
+    "source": {
+      "kind": "figure",
+      "slug": "yan-shigu"
+    },
+    "target": {
+      "kind": "event",
+      "slug": "five-classics-corrected-meanings-project"
+    },
+    "relationType": "participated_in",
+    "label": {
+      "zh-CN": "参与《五经正义》校定与编纂",
+      "en": "Participated in the collation and compilation of the Corrected Meanings of the Five Classics"
+    },
+    "summary": {
+      "zh-CN": "《贞观政要》记载颜师古先考定五经，后与孔颖达等参与《五经正义》编纂；本关系保留协作过程，不把颜师古表述为唯一作者。",
+      "en": "The Essentials of Government records Yan Shigu's collation of the Classics and later participation with Kong Yingda and others in the Corrected Meanings project; this preserves the collaborative process rather than naming Yan its sole author."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:zhenguan-governance-records",
+      "source:education-classics-records",
+      "source:confucian-commentarial-record"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "compilation",
+        "timeType": "range",
+        "startYear": 630,
+        "endYear": 648,
+        "displayDate": {
+          "zh-CN": "约 630–648",
+          "en": "c. 630–648"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:zhenguan-governance-records"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "documented",
+      "note": {
+        "zh-CN": "具体分工、校定步骤和最终版本流传仍需继续拆分。",
+        "en": "Specific roles, editorial steps and the later transmission of the final edition still require further separation."
+      }
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:zhuangzi-participated-textual-horizon",
+    "source": { "kind": "figure", "slug": "zhuangzi" },
+    "target": { "kind": "event", "slug": "zhuangzi-textual-horizon" },
+    "relationType": "participated_in",
+    "label": { "zh-CN": "处于《庄子》文本形成传统中", "en": "Participated in the Zhuangzi textual horizon" },
+    "summary": { "zh-CN": "人物庄周与《庄子》文本传统相连，但事件表示形成区间，不主张单一作者完成全书。", "en": "Zhuang Zhou is connected with the Zhuangzi textual tradition, while the event marks a formation range rather than sole authorship of the whole work." },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": ["source:zhuangzi-ctext", "source:editorial-method"],
+    "temporalAssertions": [{ "predicate": "analytic_period", "timeType": "range", "startYear": -350, "endYear": -250, "displayDate": { "zh-CN": "约公元前 4–3 世纪", "en": "c. fourth–third centuries BCE" }, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:zhuangzi-ctext" }],
+    "qualifiers": { "historicity": "inferred", "note": { "zh-CN": "人物生平与文本层次保持分开。", "en": "Biography and textual layers remain separate." } },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:zhuangzi-horizon-mengcheng",
+    "source": { "kind": "event", "slug": "zhuangzi-textual-horizon" },
+    "target": { "kind": "place", "slug": "mengcheng" },
+    "relationType": "occurred_at",
+    "label": { "zh-CN": "以孟城作为区域传统锚点", "en": "Uses Mengcheng as a regional tradition anchor" },
+    "summary": { "zh-CN": "孟城只作为庄子传统与现代地理之间的区域锚点，不表示文本形成事件发生于一个可精确定位的现场。", "en": "Mengcheng is a regional anchor between the Zhuangzi tradition and modern geography, not a precisely located scene of textual formation." },
+    "confidence": "low",
+    "evidenceLayer": "scholarly_interpretation",
+    "sourceIds": ["source:zhuangzi-ctext", "source:a1-map-anchors", "source:editorial-method"],
+    "temporalAssertions": [{ "predicate": "analytic_period", "timeType": "range", "startYear": -350, "endYear": -250, "displayDate": { "zh-CN": "约公元前 4–3 世纪的区域传统入口", "en": "Regional tradition gateway, c. fourth–third centuries BCE" }, "confidence": "low", "evidenceLayer": "scholarly_interpretation", "sourceId": "source:editorial-method" }],
+    "qualifiers": { "spatialRole": "context_only", "historicity": "inferred" },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:zhuangzi-active-mengcheng",
+    "source": { "kind": "figure", "slug": "zhuangzi" },
+    "target": { "kind": "place", "slug": "mengcheng" },
+    "relationType": "active_in",
+    "label": { "zh-CN": "与孟城区域传统相连", "en": "Connected with the Mengcheng regional tradition" },
+    "summary": { "zh-CN": "孟城是人物传统的区域尺度地图入口，不把现代城市中心当作庄周每一次活动的精确坐标。", "en": "Mengcheng is a regional map gateway for the figure tradition, not an exact coordinate for every activity of Zhuang Zhou." },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": ["source:zhuangzi-ctext", "source:a1-map-anchors"],
+    "temporalAssertions": [{ "predicate": "life", "timeType": "range", "startYear": -350, "endYear": -250, "displayDate": { "zh-CN": "约公元前 4–3 世纪的区域关联", "en": "Regional association, c. fourth–third centuries BCE" }, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:zhuangzi-ctext" }],
+    "qualifiers": { "spatialRole": "activity_site", "historicity": "inferred", "note": { "zh-CN": "区域锚点，不是精确活动点。", "en": "Regional anchor, not an exact activity point." } },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:zhuangzi-represented-zhuangzi-text",
+    "source": { "kind": "figure", "slug": "zhuangzi" },
+    "target": { "kind": "text", "slug": "zhuangzi" },
+    "relationType": "represented_by",
+    "label": { "zh-CN": "由《庄子》复合文本传统表现", "en": "Represented through the composite Zhuangzi tradition" },
+    "summary": { "zh-CN": "《庄子》保存庄周及其思想传统的复合言说层，不能简化为人物逐字著作。", "en": "The Zhuangzi preserves composite layers of sayings and thought associated with Zhuang Zhou rather than a verbatim work by one figure." },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": ["source:zhuangzi-ctext"],
+    "qualifiers": { "attributionStatus": "anonymous_or_composite", "historicity": "inferred" },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:zhuangzi-received-cheng-xuanying",
+    "source": { "kind": "figure", "slug": "zhuangzi" },
+    "target": { "kind": "figure", "slug": "cheng-xuanying" },
+    "relationType": "received_by",
+    "label": { "zh-CN": "在成玄英的唐代解释传统中被接收", "en": "Received through Cheng Xuanying's Tang interpretive tradition" },
+    "summary": { "zh-CN": "庄子传统在唐代解释和道教知识网络中继续被接收；这条关系表达后世解释，不合并两位人物。", "en": "The Zhuangzi tradition was received in Tang interpretation and Daoist knowledge networks; this is later reception, not a merging of the two figures." },
+    "confidence": "low",
+    "evidenceLayer": "scholarly_interpretation",
+    "sourceIds": ["source:cheng-xuanying-datawiki", "source:editorial-method"],
+    "temporalAssertions": [{ "predicate": "textual_circulation", "timeType": "range", "startYear": 630, "endYear": 700, "displayDate": { "zh-CN": "唐代解释与传播语境", "en": "Tang interpretive and circulation context" }, "confidence": "low", "evidenceLayer": "scholarly_interpretation", "sourceId": "source:cheng-xuanying-datawiki" }],
+    "qualifiers": { "historicity": "inferred", "receptionMode": "reinterpreted" },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:mengzi-participated-teaching",
+    "source": { "kind": "figure", "slug": "mengzi" },
+    "target": { "kind": "event", "slug": "mengzi-travel-and-teaching" },
+    "relationType": "participated_in",
+    "label": { "zh-CN": "参与游说与讲学传统", "en": "Participated in itinerant counsel and teaching" },
+    "summary": { "zh-CN": "孟子人物入口通过游历诸侯和论政言说连接事件与文本，但不绘制未经核实的逐站路线。", "en": "The Mencius entry connects itinerant counsel and political speech to event and text without drawing an unverified stop-by-stop route." },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": ["source:mengzi-ctext", "source:editorial-method"],
+    "temporalAssertions": [{ "predicate": "activity", "timeType": "range", "startYear": -330, "endYear": -300, "displayDate": { "zh-CN": "约公元前 4 世纪", "en": "c. fourth century BCE" }, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:mengzi-ctext" }],
+    "qualifiers": { "historicity": "inferred" },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:mengzi-teaching-zoucheng",
+    "source": { "kind": "event", "slug": "mengzi-travel-and-teaching" },
+    "target": { "kind": "place", "slug": "zoucheng" },
+    "relationType": "occurred_at",
+    "label": { "zh-CN": "以邹城作为地域传统锚点", "en": "Uses Zoucheng as a regional tradition anchor" },
+    "summary": { "zh-CN": "邹城在地图中表示孟子传统的地域入口，不主张所有游说事件均发生于此。", "en": "Zoucheng represents the regional gateway of the Mencius tradition and does not claim that every counsel event occurred there." },
+    "confidence": "low",
+    "evidenceLayer": "scholarly_interpretation",
+    "sourceIds": ["source:mengzi-ctext", "source:a1-map-anchors", "source:editorial-method"],
+    "temporalAssertions": [{ "predicate": "activity", "timeType": "range", "startYear": -330, "endYear": -300, "displayDate": { "zh-CN": "约公元前 4 世纪的地域传统入口", "en": "Regional tradition gateway, c. fourth century BCE" }, "confidence": "low", "evidenceLayer": "scholarly_interpretation", "sourceId": "source:editorial-method" }],
+    "qualifiers": { "spatialRole": "context_only", "historicity": "inferred" },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:mengzi-active-zoucheng",
+    "source": { "kind": "figure", "slug": "mengzi" },
+    "target": { "kind": "place", "slug": "zoucheng" },
+    "relationType": "active_in",
+    "label": { "zh-CN": "与邹城地域传统相连", "en": "Connected with the Zoucheng regional tradition" },
+    "summary": { "zh-CN": "邹城作为城市尺度锚点把孟子人物入口连接到现实地图，具体行迹仍需按国家与地点分别核对。", "en": "Zoucheng connects the Mencius entry to the real map at city scale; specific itineraries require separate state- and place-level review." },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": ["source:mengzi-ctext", "source:a1-map-anchors"],
+    "temporalAssertions": [{ "predicate": "life", "timeType": "range", "startYear": -400, "endYear": -300, "displayDate": { "zh-CN": "约公元前 4 世纪的区域关联", "en": "Regional association, c. fourth century BCE" }, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:mengzi-ctext" }],
+    "qualifiers": { "spatialRole": "activity_site", "historicity": "inferred" },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:mengzi-represented-mengzi-text",
+    "source": { "kind": "figure", "slug": "mengzi" },
+    "target": { "kind": "text", "slug": "mengzi" },
+    "relationType": "represented_by",
+    "label": { "zh-CN": "由《孟子》传述与编纂文本表现", "en": "Represented through the transmitted and compiled Mengzi" },
+    "summary": { "zh-CN": "《孟子》把人物言说、弟子传述和编纂层组织成经典入口，不能等同于逐字现场记录。", "en": "The Mengzi organises sayings, disciple transmission and compilation into a classic entry rather than a verbatim record of a scene." },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": ["source:mengzi-ctext"],
+    "qualifiers": { "attributionStatus": "anonymous_or_composite", "historicity": "inferred" },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:mengzi-received-kong-yingda",
+    "source": { "kind": "figure", "slug": "mengzi" },
+    "target": { "kind": "figure", "slug": "kong-yingda" },
+    "relationType": "received_by",
+    "label": { "zh-CN": "进入孔颖达所处的唐代经学接受语境", "en": "Received within Kong Yingda's Tang classical-learning context" },
+    "summary": { "zh-CN": "孟子传统在唐代经学、注疏与国家教育语境中获得后续解释；不把后世经典地位回写为战国现场。", "en": "The Mencius tradition entered Tang classical, commentarial and state-learning interpretation without projecting later canonical status back into the Warring States scene." },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": ["source:confucian-commentarial-record", "source:education-classics-records"],
+    "temporalAssertions": [{ "predicate": "textual_circulation", "timeType": "range", "startYear": 630, "endYear": 648, "displayDate": { "zh-CN": "约 630–648 的唐代经学接受语境", "en": "Tang classical-reception context, c. 630–648" }, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:confucian-commentarial-record" }],
+    "qualifiers": { "historicity": "inferred", "receptionMode": "canonicalised" },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:zhang-participated-celestial-masters",
+    "source": { "kind": "figure", "slug": "zhang-daoling" },
+    "target": { "kind": "event", "slug": "celestial-masters-tradition-formation" },
+    "relationType": "participated_in",
+    "label": { "zh-CN": "处于天师道传统形成层", "en": "Participated in the formation layer of the Celestial Masters tradition" },
+    "summary": { "zh-CN": "张道陵作为人物入口连接天师道组织与后世谱系，但事件明确标为传统/争议层。", "en": "Zhang Daoling connects the figure entry to Celestial Masters organisation and later lineages, while the event is marked traditional and contested." },
+    "confidence": "low",
+    "evidenceLayer": "traditional_account",
+    "sourceIds": ["source:zhang-daoling-ctext", "source:editorial-method"],
+    "temporalAssertions": [{ "predicate": "traditional_occurrence", "timeType": "traditional_date", "startYear": 142, "endYear": 142, "displayDate": { "zh-CN": "传统置于东汉；约 142 的传述节点", "en": "Traditionally placed in the Eastern Han; a transmitted c. 142 node" }, "confidence": "low", "evidenceLayer": "traditional_account", "sourceId": "source:zhang-daoling-ctext" }],
+    "qualifiers": { "historicity": "contested" },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:zhang-celestial-masters-heming",
+    "source": { "kind": "event", "slug": "celestial-masters-tradition-formation" },
+    "target": { "kind": "place", "slug": "mount-heming" },
+    "relationType": "occurred_at",
+    "label": { "zh-CN": "以鹤鸣山作为传统空间锚点", "en": "Uses Heming Mountain as a tradition-space anchor" },
+    "summary": { "zh-CN": "鹤鸣山把天师道传述与现实地理相连，但地点层同时承载后世记忆，不能证明全部东汉活动细节。", "en": "Heming Mountain connects Celestial Masters traditions to real geography while retaining later memory; it does not verify every Eastern Han activity detail." },
+    "confidence": "low",
+    "evidenceLayer": "traditional_account",
+    "sourceIds": ["source:zhang-daoling-ctext", "source:a1-map-anchors"],
+    "temporalAssertions": [{ "predicate": "traditional_occurrence", "timeType": "traditional_date", "startYear": 142, "endYear": 142, "displayDate": { "zh-CN": "传统传述的空间节点", "en": "Spatial node in the transmitted tradition" }, "confidence": "low", "evidenceLayer": "traditional_account", "sourceId": "source:zhang-daoling-ctext" }],
+    "qualifiers": { "spatialRole": "memory_site", "historicity": "traditional", "note": { "zh-CN": "传统空间与后世记忆交汇。", "en": "A convergence of traditional space and later memory." } },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:zhang-active-heming",
+    "source": { "kind": "figure", "slug": "zhang-daoling" },
+    "target": { "kind": "place", "slug": "mount-heming" },
+    "relationType": "active_in",
+    "label": { "zh-CN": "与鹤鸣山传统空间相连", "en": "Connected with the Heming Mountain tradition space" },
+    "summary": { "zh-CN": "地图只显示鹤鸣山的区域锚点，不把祖师传记中的圣迹叙事转换成伪精确坐标。", "en": "The map shows Heming Mountain as a regional anchor without converting hagiographic narratives into falsely precise coordinates." },
+    "confidence": "low",
+    "evidenceLayer": "traditional_account",
+    "sourceIds": ["source:zhang-daoling-ctext", "source:a1-map-anchors"],
+    "temporalAssertions": [{ "predicate": "activity", "timeType": "traditional_date", "startYear": 142, "endYear": 142, "displayDate": { "zh-CN": "传统置于东汉的空间关联", "en": "Spatial association traditionally placed in the Eastern Han" }, "confidence": "low", "evidenceLayer": "traditional_account", "sourceId": "source:zhang-daoling-ctext" }],
+    "qualifiers": { "spatialRole": "activity_site", "historicity": "contested" },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:zhang-represented-zhengyi-tradition",
+    "source": { "kind": "figure", "slug": "zhang-daoling" },
+    "target": { "kind": "text", "slug": "zhengyi-mengwei-dao" },
+    "relationType": "represented_by",
+    "label": { "zh-CN": "由正一盟威道传统一层表现", "en": "Represented through the Zhengyi Mengwei Dao tradition" },
+    "summary": { "zh-CN": "文本入口表现张道陵与天师道组织、授受和后世谱系的传统关联，不等同于单一成书作者。", "en": "The text entry represents traditional links among Zhang Daoling, Celestial Masters organisation and later transmission without assigning sole authorship to one figure." },
+    "confidence": "low",
+    "evidenceLayer": "traditional_account",
+    "sourceIds": ["source:zhang-daoling-ctext"],
+    "qualifiers": { "attributionStatus": "anonymous_or_composite", "historicity": "traditional" },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:zhang-remembered-heming",
+    "source": { "kind": "figure", "slug": "zhang-daoling" },
+    "target": { "kind": "place", "slug": "mount-heming" },
+    "relationType": "remembered_in",
+    "label": { "zh-CN": "在鹤鸣山祖师记忆中延续", "en": "Remembered through the Heming Mountain founder tradition" },
+    "summary": { "zh-CN": "鹤鸣山承接张道陵与天师谱系的后世圣迹记忆；该关系不把后世神圣化回写为东汉事实。", "en": "Heming Mountain carries later sacred memory of Zhang Daoling and Celestial Masters lineages without projecting sacralisation back as an Eastern Han fact." },
+    "confidence": "low",
+    "evidenceLayer": "later_deification",
+    "sourceIds": ["source:zhang-daoling-ctext"],
+    "temporalAssertions": [{ "predicate": "cult_emergence", "timeType": "range", "startYear": 200, "endYear": 700, "displayDate": { "zh-CN": "约 200–700 的后世圣迹与记忆层", "en": "Later sacred-memory layer, c. 200–700" }, "confidence": "low", "evidenceLayer": "later_deification", "sourceId": "source:zhang-daoling-ctext" }],
+    "qualifiers": { "spatialRole": "memory_site", "historicity": "traditional", "receptionMode": "ritualised" },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:ge-participated-baopuzi",
+    "source": { "kind": "figure", "slug": "ge-hong" },
+    "target": { "kind": "event", "slug": "ge-hong-baopuzi-activity" },
+    "relationType": "participated_in",
+    "label": { "zh-CN": "参与《抱朴子》文本活动", "en": "Participated in the Baopuzi textual activity" },
+    "summary": { "zh-CN": "葛洪与《抱朴子》的内外篇和东晋知识生产相连，人物与后世神仙传统保持分层。", "en": "Ge Hong is connected with the Baopuzi's inner and outer chapters and Eastern Jin knowledge production, while later immortality traditions remain layered separately." },
+    "confidence": "medium",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": ["source:baopuzi-ctext"],
+    "temporalAssertions": [{ "predicate": "composition", "timeType": "range", "startYear": 317, "endYear": 330, "displayDate": { "zh-CN": "约 317–330", "en": "c. 317–330" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:baopuzi-ctext" }],
+    "qualifiers": { "historicity": "documented" },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:ge-baopuzi-luofu",
+    "source": { "kind": "event", "slug": "ge-hong-baopuzi-activity" },
+    "target": { "kind": "place", "slug": "mount-luofu" },
+    "relationType": "occurred_at",
+    "label": { "zh-CN": "与罗浮山传统空间相连", "en": "Connected with the Mount Luofu tradition space" },
+    "summary": { "zh-CN": "罗浮山作为道教传统与人物记忆的区域锚点，不能替代葛洪每一段活动的精确地理证据。", "en": "Mount Luofu is a regional anchor for Daoist tradition and figure memory, not a substitute for exact geography of every activity." },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": ["source:baopuzi-ctext", "source:a1-map-anchors"],
+    "temporalAssertions": [{ "predicate": "activity", "timeType": "range", "startYear": 317, "endYear": 330, "displayDate": { "zh-CN": "约 317–330 的区域活动关联", "en": "Regional activity association, c. 317–330" }, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:baopuzi-ctext" }],
+    "qualifiers": { "spatialRole": "activity_site", "historicity": "inferred" },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:ge-active-luofu",
+    "source": { "kind": "figure", "slug": "ge-hong" },
+    "target": { "kind": "place", "slug": "mount-luofu" },
+    "relationType": "active_in",
+    "label": { "zh-CN": "与罗浮山区域传统相连", "en": "Connected with the Mount Luofu regional tradition" },
+    "summary": { "zh-CN": "罗浮山作为区域锚点连接葛洪、炼养和道教记忆；地图不显示伪精确山中行迹。", "en": "Mount Luofu connects Ge Hong, cultivation traditions and Daoist memory as a regional anchor; the map does not invent precise mountain itineraries." },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": ["source:baopuzi-ctext", "source:a1-map-anchors"],
+    "temporalAssertions": [{ "predicate": "activity", "timeType": "range", "startYear": 317, "endYear": 330, "displayDate": { "zh-CN": "约 317–330 的区域关联", "en": "Regional association, c. 317–330" }, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:baopuzi-ctext" }],
+    "qualifiers": { "spatialRole": "activity_site", "historicity": "inferred" },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:ge-represented-baopuzi",
+    "source": { "kind": "figure", "slug": "ge-hong" },
+    "target": { "kind": "text", "slug": "baopuzi" },
+    "relationType": "represented_by",
+    "label": { "zh-CN": "由《抱朴子》文本活动表现", "en": "Represented through the Baopuzi textual activity" },
+    "summary": { "zh-CN": "《抱朴子》是葛洪思想、知识整理和东晋文本活动的主要入口，内外篇保持不同层次。", "en": "The Baopuzi is a primary entry into Ge Hong's thought, knowledge organisation and Eastern Jin textual activity, with inner and outer layers kept distinct." },
+    "confidence": "high",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": ["source:baopuzi-ctext"],
+    "qualifiers": { "attributionStatus": "recorded_by_others", "historicity": "documented" },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:ge-remembered-luofu",
+    "source": { "kind": "figure", "slug": "ge-hong" },
+    "target": { "kind": "place", "slug": "mount-luofu" },
+    "relationType": "remembered_in",
+    "label": { "zh-CN": "在罗浮山道教记忆中延续", "en": "Remembered through Mount Luofu Daoist memory" },
+    "summary": { "zh-CN": "罗浮山承接葛洪与神仙/炼养传统的后世记忆；人物史与神话接受不合并。", "en": "Mount Luofu carries later memory of Ge Hong and immortality/cultivation traditions without merging historical biography and mythic reception." },
+    "confidence": "low",
+    "evidenceLayer": "later_deification",
+    "sourceIds": ["source:baopuzi-ctext"],
+    "temporalAssertions": [{ "predicate": "cult_emergence", "timeType": "range", "startYear": 300, "endYear": 700, "displayDate": { "zh-CN": "约 300–700 的后世道教记忆层", "en": "Later Daoist-memory layer, c. 300–700" }, "confidence": "low", "evidenceLayer": "later_deification", "sourceId": "source:baopuzi-ctext" }],
+    "qualifiers": { "spatialRole": "memory_site", "historicity": "traditional", "receptionMode": "ritualised" },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:ashoka-participated-edicts",
+    "source": { "kind": "figure", "slug": "ashoka" },
+    "target": { "kind": "event", "slug": "ashoka-edicts-and-dhamma" },
+    "relationType": "participated_in",
+    "label": { "zh-CN": "处于敕诏与法政策事件中", "en": "Participated in the edicts and dhamma policy event" },
+    "summary": { "zh-CN": "阿育王人物入口通过敕诏、治理与伦理政策进入可核验的铭刻历史层。", "en": "The Ashoka entry reaches a documented inscriptional history through edicts, governance and ethical policy." },
+    "confidence": "high",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": ["source:ashoka-edicts-unesco"],
+    "temporalAssertions": [{ "predicate": "policy", "timeType": "range", "startYear": -268, "endYear": -232, "displayDate": { "zh-CN": "约公元前 268–232 年", "en": "c. 268–232 BCE" }, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:ashoka-edicts-unesco" }],
+    "qualifiers": { "historicity": "documented" },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:ashoka-edicts-sanchi",
+    "source": { "kind": "event", "slug": "ashoka-edicts-and-dhamma" },
+    "target": { "kind": "place", "slug": "sanchi" },
+    "relationType": "occurred_at",
+    "label": { "zh-CN": "与桑奇遗址物质记忆相连", "en": "Connected with Sanchi's material memory" },
+    "summary": { "zh-CN": "桑奇是阿育王相关佛教遗产与铭刻记忆的现实地点，不代表阿育王全部政策或行迹。", "en": "Sanchi is a real site of Buddhist heritage and inscriptional memory associated with Ashoka, not the full extent of his policy or itinerary." },
+    "confidence": "medium",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": ["source:unesco-sanchi", "source:ashoka-edicts-unesco"],
+    "temporalAssertions": [{ "predicate": "site_activity", "timeType": "range", "startYear": -268, "endYear": -232, "displayDate": { "zh-CN": "约公元前 268–232 年的遗址关联", "en": "Site association, c. 268–232 BCE" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:unesco-sanchi" }],
+    "qualifiers": { "spatialRole": "activity_site", "historicity": "documented" },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:ashoka-active-sanchi",
+    "source": { "kind": "figure", "slug": "ashoka" },
+    "target": { "kind": "place", "slug": "sanchi" },
+    "relationType": "active_in",
+    "label": { "zh-CN": "与桑奇现实遗址相连", "en": "Connected with the real Sanchi site" },
+    "summary": { "zh-CN": "桑奇为阿育王相关遗址的现实地图入口，空间范围与人物全部活动范围严格分开。", "en": "Sanchi is the real-map gateway for an Ashoka-associated site, kept distinct from the full geographic extent of the figure's activity." },
+    "confidence": "medium",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": ["source:unesco-sanchi", "source:ashoka-edicts-unesco"],
+    "temporalAssertions": [{ "predicate": "site_activity", "timeType": "range", "startYear": -268, "endYear": -232, "displayDate": { "zh-CN": "约公元前 268–232 年的遗址关联", "en": "Site association, c. 268–232 BCE" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:unesco-sanchi" }],
+    "qualifiers": { "spatialRole": "activity_site", "historicity": "documented" },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:ashoka-represented-edicts",
+    "source": { "kind": "figure", "slug": "ashoka" },
+    "target": { "kind": "text", "slug": "ashoka-edicts" },
+    "relationType": "represented_by",
+    "label": { "zh-CN": "由阿育王敕诏铭刻表现", "en": "Represented through the Ashokan Edicts" },
+    "summary": { "zh-CN": "敕诏把阿育王放入铭刻、治理和法政策的历史层，后世传记另行建模。", "en": "The edicts place Ashoka in an inscriptional, governance and dhamma-policy layer, while later biography remains separate." },
+    "confidence": "high",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": ["source:ashoka-edicts-unesco"],
+    "qualifiers": { "attributionStatus": "direct_attestation", "historicity": "documented" },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:ashoka-remembered-sanchi",
+    "source": { "kind": "figure", "slug": "ashoka" },
+    "target": { "kind": "place", "slug": "sanchi" },
+    "relationType": "remembered_in",
+    "label": { "zh-CN": "在桑奇遗产记忆中延续", "en": "Remembered through Sanchi heritage" },
+    "summary": { "zh-CN": "桑奇把阿育王相关铭刻与佛教遗产转化为持续的物质记忆；遗产记忆不等同于当时全部历史活动。", "en": "Sanchi turns Ashoka-associated inscriptions and Buddhist heritage into continuing material memory; heritage memory is not the whole historical activity of the period." },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": ["source:unesco-sanchi", "source:ashoka-edicts-unesco"],
+    "temporalAssertions": [{ "predicate": "cult_emergence", "timeType": "range", "startYear": -268, "endYear": 1200, "displayDate": { "zh-CN": "公元前 3 世纪至后世遗产记忆层", "en": "From the third century BCE into later heritage memory" }, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:unesco-sanchi" }],
+    "qualifiers": { "spatialRole": "memory_site", "historicity": "inferred", "receptionMode": "reinterpreted" },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:nagarjuna-participated-madhyamaka",
+    "source": { "kind": "figure", "slug": "nagarjuna" },
+    "target": { "kind": "event", "slug": "nagarjuna-madhyamaka-horizon" },
+    "relationType": "participated_in",
+    "label": { "zh-CN": "处于中观论辩形成视野", "en": "Participated in the Madhyamaka argumentative horizon" },
+    "summary": { "zh-CN": "龙树人物入口与中观文本和论辩传统相连，但年代和作品归属保持争议标记。", "en": "Nāgārjuna is connected with Madhyamaka texts and debate while dating and work attribution remain marked as contested." },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": ["source:nagarjuna-sep"],
+    "temporalAssertions": [{ "predicate": "analytic_period", "timeType": "range", "startYear": 150, "endYear": 250, "displayDate": { "zh-CN": "约公元 150–250 年", "en": "c. 150–250 CE" }, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:nagarjuna-sep" }],
+    "qualifiers": { "historicity": "contested" },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:nagarjuna-madhyamaka-nagarjunakonda",
+    "source": { "kind": "event", "slug": "nagarjuna-madhyamaka-horizon" },
+    "target": { "kind": "place", "slug": "nagarjunakonda" },
+    "relationType": "occurred_at",
+    "label": { "zh-CN": "以那伽朱那康达作为区域锚点", "en": "Uses Nagarjunakonda as a regional anchor" },
+    "summary": { "zh-CN": "那伽朱那康达作为南印度佛教文化景观的区域锚点，不证明龙树在此的每一项活动。", "en": "Nagarjunakonda is a regional anchor in the South Indian Buddhist cultural landscape and does not verify every activity of Nāgārjuna there." },
+    "confidence": "low",
+    "evidenceLayer": "scholarly_interpretation",
+    "sourceIds": ["source:nagarjuna-sep", "source:a1-map-anchors"],
+    "temporalAssertions": [{ "predicate": "geographic_and_religious_scope", "timeType": "range", "startYear": 150, "endYear": 250, "displayDate": { "zh-CN": "约公元 150–250 年的区域思想史锚点", "en": "Regional intellectual-history anchor, c. 150–250 CE" }, "confidence": "low", "evidenceLayer": "scholarly_interpretation", "sourceId": "source:nagarjuna-sep" }],
+    "qualifiers": { "spatialRole": "context_only", "historicity": "contested" },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:nagarjuna-active-nagarjunakonda",
+    "source": { "kind": "figure", "slug": "nagarjuna" },
+    "target": { "kind": "place", "slug": "nagarjunakonda" },
+    "relationType": "active_in",
+    "label": { "zh-CN": "与那伽朱那康达区域传统相连", "en": "Connected with the Nagarjunakonda regional tradition" },
+    "summary": { "zh-CN": "该点以区域尺度展示龙树传统的南印度地理入口，坐标不表示无争议的个人活动点。", "en": "The point shows a South Indian geographic gateway for Nāgārjuna traditions at regional scale, not an uncontested personal activity site." },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": ["source:nagarjuna-sep", "source:a1-map-anchors"],
+    "temporalAssertions": [{ "predicate": "activity", "timeType": "range", "startYear": 150, "endYear": 250, "displayDate": { "zh-CN": "约公元 150–250 年的区域关联", "en": "Regional association, c. 150–250 CE" }, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:nagarjuna-sep" }],
+    "qualifiers": { "spatialRole": "activity_site", "historicity": "contested" },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:nagarjuna-represented-mulamadhyamakakarika",
+    "source": { "kind": "figure", "slug": "nagarjuna" },
+    "target": { "kind": "text", "slug": "mulamadhyamakakarika" },
+    "relationType": "represented_by",
+    "label": { "zh-CN": "由《中论》传统表现", "en": "Represented through the Mūlamadhyamakakārikā tradition" },
+    "summary": { "zh-CN": "《中论》是龙树与中观论辩的核心文本入口，但作品归属和年代保持争议。", "en": "The Mūlamadhyamakakārikā is a central textual entry for Nāgārjuna and Madhyamaka debate, while attribution and dating remain contested." },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": ["source:nagarjuna-sep"],
+    "qualifiers": { "attributionStatus": "anonymous_or_composite", "historicity": "contested" },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:nagarjuna-received-kumarajiva",
+    "source": { "kind": "figure", "slug": "nagarjuna" },
+    "target": { "kind": "figure", "slug": "kumarajiva" },
+    "relationType": "received_by",
+    "label": { "zh-CN": "在鸠摩罗什汉译与中观传播中被接收", "en": "Received through Kumarajiva's translation and Madhyamaka transmission" },
+    "summary": { "zh-CN": "龙树传统在鸠摩罗什时代的汉译和解释网络中获得后续传播；该关系表示接受链，不等同于直接会面。", "en": "Nāgārjuna traditions were transmitted through Chinese translation and interpretive networks associated with Kumarajiva; this is a reception chain, not a direct meeting claim." },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": ["source:nagarjuna-sep", "source:kumarajiva-biography"],
+    "temporalAssertions": [{ "predicate": "textual_circulation", "timeType": "range", "startYear": 401, "endYear": 413, "displayDate": { "zh-CN": "约 401–413 的汉译传播语境", "en": "Chinese-transmission context, c. 401–413" }, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:kumarajiva-biography" }],
+    "qualifiers": { "historicity": "inferred", "receptionMode": "transmitted", "note": { "zh-CN": "接受链不表示两人同时同地。", "en": "A reception chain does not imply the two figures were together." } },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:kumarajiva-participated-translations",
+    "source": { "kind": "figure", "slug": "kumarajiva" },
+    "target": { "kind": "event", "slug": "kumarajiva-changan-translations" },
+    "relationType": "participated_in",
+    "label": { "zh-CN": "参与长安译经活动", "en": "Participated in the Chang'an translation activity" },
+    "summary": { "zh-CN": "鸠摩罗什与长安译场、团队协作和汉译佛典生产相连，译本不归为单人独作。", "en": "Kumarajiva is connected with the Chang'an translation bureau, collaborative teams and Chinese Buddhist-text production without assigning each translation to one person alone." },
+    "confidence": "medium",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": ["source:kumarajiva-biography"],
+    "temporalAssertions": [{ "predicate": "translation", "timeType": "range", "startYear": 401, "endYear": 413, "displayDate": { "zh-CN": "约 401–413", "en": "c. 401–413" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:kumarajiva-biography" }],
+    "qualifiers": { "historicity": "documented" },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:kumarajiva-translations-changan",
+    "source": { "kind": "event", "slug": "kumarajiva-changan-translations" },
+    "target": { "kind": "place", "slug": "changan" },
+    "relationType": "occurred_at",
+    "label": { "zh-CN": "发生于长安译经空间", "en": "Occurred in the Chang'an translation space" },
+    "summary": { "zh-CN": "长安是鸠摩罗什译经和制度化传播的城市尺度锚点；具体译场仍需继续定位。", "en": "Chang'an is the city-scale anchor for Kumarajiva's translation and institutional circulation; the exact bureau still requires localisation." },
+    "confidence": "medium",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": ["source:kumarajiva-biography", "source:historical-geography"],
+    "temporalAssertions": [{ "predicate": "translation", "timeType": "range", "startYear": 401, "endYear": 413, "displayDate": { "zh-CN": "约 401–413 的长安译经语境", "en": "Chang'an translation context, c. 401–413" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:kumarajiva-biography" }],
+    "qualifiers": { "spatialRole": "translation_site", "historicity": "documented" },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:kumarajiva-active-changan",
+    "source": { "kind": "figure", "slug": "kumarajiva" },
+    "target": { "kind": "place", "slug": "changan" },
+    "relationType": "active_in",
+    "label": { "zh-CN": "在长安译经网络中活动", "en": "Active in the Chang'an translation network" },
+    "summary": { "zh-CN": "长安把鸠摩罗什与译场、寺院和汉译经典生产连接起来，地图点位不替代具体机构史。", "en": "Chang'an connects Kumarajiva with translation, monastic and Chinese-text production networks; the map point does not replace institutional history." },
+    "confidence": "medium",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": ["source:kumarajiva-biography", "source:historical-geography"],
+    "temporalAssertions": [{ "predicate": "translation", "timeType": "range", "startYear": 401, "endYear": 413, "displayDate": { "zh-CN": "约 401–413", "en": "c. 401–413" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:kumarajiva-biography" }],
+    "qualifiers": { "spatialRole": "translation_site", "historicity": "documented" },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:kumarajiva-translated-lotus-sutra",
+    "source": { "kind": "figure", "slug": "kumarajiva" },
+    "target": { "kind": "text", "slug": "lotus-sutra" },
+    "relationType": "translated_or_transmitted",
+    "label": { "zh-CN": "参与《法华经》汉译与传承", "en": "Participated in the Chinese translation and transmission of the Lotus Sutra" },
+    "summary": { "zh-CN": "人物与《法华经》汉译传统相连；当前只发布译经/流通层，不把全部成书历史归给鸠摩罗什。", "en": "The figure is connected with the Lotus Sutra's Chinese translation tradition; the current entry covers translation/circulation rather than assigning the whole composition history to Kumarajiva." },
+    "confidence": "medium",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": ["source:kumarajiva-biography"],
+    "temporalAssertions": [{ "predicate": "translation", "timeType": "range", "startYear": 401, "endYear": 413, "displayDate": { "zh-CN": "约 401–413 的汉译层", "en": "Chinese translation layer, c. 401–413" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:kumarajiva-biography" }],
+    "qualifiers": { "historicity": "documented", "receptionMode": "transmitted" },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:kumarajiva-received-xuanzang",
+    "source": { "kind": "figure", "slug": "kumarajiva" },
+    "target": { "kind": "figure", "slug": "xuanzang" },
+    "relationType": "received_by",
+    "label": { "zh-CN": "进入玄奘时代的汉译佛教传播链", "en": "Received within the Buddhist transmission chain reaching Xuanzang's era" },
+    "summary": { "zh-CN": "该关系表示汉译佛典和译经制度的后续传播链，不主张鸠摩罗什与玄奘直接相遇。", "en": "The relation marks later circulation of translated Buddhist texts and translation institutions, not a direct meeting between Kumarajiva and Xuanzang." },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": ["source:kumarajiva-biography", "source:buddhist-biographical-records"],
+    "temporalAssertions": [{ "predicate": "textual_circulation", "timeType": "range", "startYear": 600, "endYear": 650, "displayDate": { "zh-CN": "隋唐之际的后续传播语境", "en": "Later circulation context around the Sui–Tang transition" }, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:buddhist-biographical-records" }],
+    "qualifiers": { "historicity": "inferred", "receptionMode": "transmitted" },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:faxian-participated-pilgrimage",
+    "source": { "kind": "figure", "slug": "faxian" },
+    "target": { "kind": "event", "slug": "faxian-pilgrimage-and-foguoji" },
+    "relationType": "participated_in",
+    "label": { "zh-CN": "参与求法与《佛国记》记录", "en": "Participated in the pilgrimage and Foguoji record" },
+    "summary": { "zh-CN": "法显把求法旅行、僧团见闻与归国后的文字记录连接起来，路线保持区域尺度。", "en": "Faxian connects pilgrimage, monastic observations and the post-return written record while the route remains regional in scale." },
+    "confidence": "medium",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": ["source:faxian-foguoji"],
+    "temporalAssertions": [{ "predicate": "route_activity", "timeType": "range", "startYear": 399, "endYear": 414, "displayDate": { "zh-CN": "约 399–414", "en": "c. 399–414" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:faxian-foguoji" }],
+    "qualifiers": { "historicity": "documented" },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:faxian-pilgrimage-changan",
+    "source": { "kind": "event", "slug": "faxian-pilgrimage-and-foguoji" },
+    "target": { "kind": "place", "slug": "changan" },
+    "relationType": "occurred_at",
+    "label": { "zh-CN": "以长安作为求法出发锚点", "en": "Uses Chang'an as a departure anchor" },
+    "summary": { "zh-CN": "长安是法显求法叙事的出发城市锚点；后续跨区域路线由路线实体承载。", "en": "Chang'an is the city-scale departure anchor in Faxian's pilgrimage narrative; the later transregional movement is carried by the route entity." },
+    "confidence": "medium",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": ["source:faxian-foguoji", "source:historical-geography"],
+    "temporalAssertions": [{ "predicate": "departure", "timeType": "circa", "startYear": 399, "endYear": 399, "displayDate": { "zh-CN": "约 399 年出发", "en": "Departure around 399" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:faxian-foguoji" }],
+    "qualifiers": { "spatialRole": "departure_site", "historicity": "documented" },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:faxian-travelled-pilgrimage-route",
+    "source": { "kind": "figure", "slug": "faxian" },
+    "target": { "kind": "route", "slug": "faxian-pilgrimage-route" },
+    "relationType": "travelled_through",
+    "label": { "zh-CN": "行经法显求法路线", "en": "Travelled through the Faxian pilgrimage route" },
+    "summary": { "zh-CN": "路线以长安、敦煌、鹿野苑和那烂陀为现实地理锚点，保留重建与未定位段落。", "en": "The route uses Chang'an, Dunhuang, Sarnath and Nalanda as real geographic anchors while retaining reconstructed and unlocated segments." },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": ["source:faxian-foguoji", "source:historical-geography"],
+    "temporalAssertions": [{ "predicate": "route_activity", "timeType": "range", "startYear": 399, "endYear": 414, "displayDate": { "zh-CN": "约 399–414", "en": "c. 399–414" }, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:faxian-foguoji" }],
+    "qualifiers": { "spatialRole": "route_segment", "historicity": "inferred" },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:faxian-represented-foguoji",
+    "source": { "kind": "figure", "slug": "faxian" },
+    "target": { "kind": "text", "slug": "foguoji" },
+    "relationType": "represented_by",
+    "label": { "zh-CN": "由《佛国记》记录传统表现", "en": "Represented through the Foguoji record tradition" },
+    "summary": { "zh-CN": "《佛国记》把法显的旅行见闻与归国后的记录层连接起来，不等同于未经编辑的现场逐字稿。", "en": "The Foguoji connects Faxian's travel observations with a post-return recording layer and is not treated as an unedited verbatim field transcript." },
+    "confidence": "medium",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": ["source:faxian-foguoji"],
+    "qualifiers": { "attributionStatus": "recorded_by_others", "historicity": "documented" },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:faxian-received-xuanzang",
+    "source": { "kind": "figure", "slug": "faxian" },
+    "target": { "kind": "figure", "slug": "xuanzang" },
+    "relationType": "received_by",
+    "label": { "zh-CN": "进入后世求法与取经传统的比较链", "en": "Received within later pilgrimage and knowledge-transmission comparisons" },
+    "summary": { "zh-CN": "法显与玄奘在后世求法史和知识流动叙事中形成比较入口；不主张两人直接相遇或单线影响。", "en": "Faxian and Xuanzang form a comparative entry in later pilgrimage and knowledge-movement histories; this does not assert direct contact or a single-line influence." },
+    "confidence": "low",
+    "evidenceLayer": "scholarly_interpretation",
+    "sourceIds": ["source:faxian-foguoji", "source:buddhist-biographical-records", "source:editorial-method"],
+    "temporalAssertions": [{ "predicate": "research_scope", "timeType": "range", "startYear": 600, "endYear": 700, "displayDate": { "zh-CN": "隋唐求法史比较语境", "en": "Sui–Tang comparative pilgrimage-history context" }, "confidence": "low", "evidenceLayer": "scholarly_interpretation", "sourceId": "source:editorial-method" }],
+    "qualifiers": { "historicity": "inferred", "receptionMode": "reinterpreted" },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:faxian-route-changan",
+    "source": { "kind": "route", "slug": "faxian-pilgrimage-route" },
+    "target": { "kind": "place", "slug": "changan" },
+    "relationType": "route_connects",
+    "label": { "zh-CN": "路线连接长安", "en": "Route connects Chang'an" },
+    "summary": { "zh-CN": "长安作为出发锚点进入法显路线读模型。", "en": "Chang'an enters the Faxian route read model as a departure anchor." },
+    "confidence": "medium", "evidenceLayer": "historical_documented", "sourceIds": ["source:faxian-foguoji"],
+    "temporalAssertions": [{ "predicate": "departure", "timeType": "circa", "startYear": 399, "endYear": 399, "displayDate": { "zh-CN": "约 399 年", "en": "c. 399" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:faxian-foguoji" }],
+    "qualifiers": { "spatialRole": "departure_site", "historicity": "documented" }, "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:faxian-route-dunhuang",
+    "source": { "kind": "route", "slug": "faxian-pilgrimage-route" },
+    "target": { "kind": "place", "slug": "dunhuang" },
+    "relationType": "route_connects",
+    "label": { "zh-CN": "路线连接敦煌区域", "en": "Route connects the Dunhuang region" },
+    "summary": { "zh-CN": "敦煌是河西走廊的区域锚点，不代表已复原全部中段路线。", "en": "Dunhuang is a Hexi Corridor regional anchor, not a reconstruction of every middle-route segment." },
+    "confidence": "low", "evidenceLayer": "historical_inferred", "sourceIds": ["source:faxian-foguoji", "source:historical-geography"],
+    "temporalAssertions": [{ "predicate": "route_time", "timeType": "range", "startYear": 399, "endYear": 414, "displayDate": { "zh-CN": "约 399–414 的路线区域锚点", "en": "Route regional anchor, c. 399–414" }, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:historical-geography" }],
+    "qualifiers": { "spatialRole": "route_segment", "historicity": "inferred" }, "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:faxian-route-sarnath",
+    "source": { "kind": "route", "slug": "faxian-pilgrimage-route" },
+    "target": { "kind": "place", "slug": "sarnath" },
+    "relationType": "route_connects",
+    "label": { "zh-CN": "路线连接鹿野苑", "en": "Route connects Sarnath" },
+    "summary": { "zh-CN": "鹿野苑作为佛教学习与朝圣地理的现实地点进入法显路线，具体停留段落仍待定位。", "en": "Sarnath enters the Faxian route as a real site in Buddhist learning and pilgrimage geography; specific stop passages remain to be located." },
+    "confidence": "low", "evidenceLayer": "historical_inferred", "sourceIds": ["source:faxian-foguoji", "source:historical-geography"],
+    "temporalAssertions": [{ "predicate": "route_time", "timeType": "range", "startYear": 399, "endYear": 414, "displayDate": { "zh-CN": "约 399–414 的路线节点", "en": "Route node, c. 399–414" }, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:faxian-foguoji" }],
+    "qualifiers": { "spatialRole": "route_segment", "historicity": "inferred" }, "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:faxian-route-nalanda",
+    "source": { "kind": "route", "slug": "faxian-pilgrimage-route" },
+    "target": { "kind": "place", "slug": "nalanda" },
+    "relationType": "route_connects",
+    "label": { "zh-CN": "路线连接那烂陀区域", "en": "Route connects the Nalanda region" },
+    "summary": { "zh-CN": "那烂陀作为学习网络的现实地点进入路线读模型，不把后世遗址范围等同于法显逐日行程。", "en": "Nalanda enters the route read model as a real learning-network site without equating the later heritage extent with Faxian's day-by-day itinerary." },
+    "confidence": "low", "evidenceLayer": "historical_inferred", "sourceIds": ["source:faxian-foguoji", "source:unesco-nalanda"],
+    "temporalAssertions": [{ "predicate": "route_time", "timeType": "range", "startYear": 399, "endYear": 414, "displayDate": { "zh-CN": "约 399–414 的路线节点", "en": "Route node, c. 399–414" }, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:faxian-foguoji" }],
+    "qualifiers": { "spatialRole": "route_segment", "historicity": "inferred" }, "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:pangu-participated-cosmogenesis",
+    "source": { "kind": "figure", "slug": "pangu" },
+    "target": { "kind": "event", "slug": "pangu-cosmogenesis" },
+    "relationType": "participated_in",
+    "label": { "zh-CN": "处于盘古开辟神话事件中", "en": "Participated in the Pangu cosmogenesis narrative" },
+    "summary": { "zh-CN": "盘古是宇宙生成叙事中的神话角色，事件不进入现实历史年表。", "en": "Pangu is a mythic persona in a cosmogenic narrative; the event does not enter a real historical chronology." },
+    "confidence": "medium", "evidenceLayer": "mythic_symbolic", "sourceIds": ["source:mythic-figures-ctext"],
+    "temporalAssertions": [{ "predicate": "traditional_occurrence", "timeType": "atemporal", "displayDate": { "zh-CN": "神话时间：无单一历史纪年", "en": "Mythic time: no single historical date" }, "confidence": "unknown", "evidenceLayer": "mythic_symbolic", "sourceId": "source:mythic-figures-ctext" }],
+    "qualifiers": { "historicity": "mythic" }, "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:pangu-cosmogenesis-space",
+    "source": { "kind": "event", "slug": "pangu-cosmogenesis" },
+    "target": { "kind": "place", "slug": "primordial-cosmos" },
+    "relationType": "occurred_at",
+    "label": { "zh-CN": "发生于原初宇宙象征空间", "en": "Occurs in the primordial cosmos symbolic space" },
+    "summary": { "zh-CN": "原初宇宙是神话空间节点，不提供现实地理坐标。", "en": "The primordial cosmos is a mythic-space node and carries no real geographic coordinate." },
+    "confidence": "medium", "evidenceLayer": "mythic_symbolic", "sourceIds": ["source:mythic-figures-ctext"],
+    "temporalAssertions": [{ "predicate": "traditional_occurrence", "timeType": "atemporal", "displayDate": { "zh-CN": "神话时间：无单一历史纪年", "en": "Mythic time: no single historical date" }, "confidence": "unknown", "evidenceLayer": "mythic_symbolic", "sourceId": "source:mythic-figures-ctext" }],
+    "qualifiers": { "spatialRole": "sacred_symbolic", "historicity": "mythic" }, "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:pangu-remembered-primordial-cosmos",
+    "source": { "kind": "figure", "slug": "pangu" },
+    "target": { "kind": "place", "slug": "primordial-cosmos" },
+    "relationType": "remembered_in",
+    "label": { "zh-CN": "在原初宇宙神话空间中延续", "en": "Remembered through primordial-cosmos mythology" },
+    "summary": { "zh-CN": "盘古通过宇宙开辟叙事在象征空间中被记忆，不能转译成现实地图点位。", "en": "Pangu is remembered through cosmogenesis in symbolic space and cannot be translated into a real map point." },
+    "confidence": "medium", "evidenceLayer": "mythic_symbolic", "sourceIds": ["source:mythic-figures-ctext"],
+    "temporalAssertions": [{ "predicate": "analytic_scope", "timeType": "atemporal", "displayDate": { "zh-CN": "神话与宇宙叙事层", "en": "Mythic and cosmological narrative layer" }, "confidence": "unknown", "evidenceLayer": "mythic_symbolic", "sourceId": "source:mythic-figures-ctext" }],
+    "qualifiers": { "spatialRole": "sacred_symbolic", "historicity": "mythic", "receptionMode": "ritualised" }, "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:pangu-represented-mythic-cosmologies",
+    "source": { "kind": "figure", "slug": "pangu" },
+    "target": { "kind": "text", "slug": "mythic-cosmologies" },
+    "relationType": "represented_by",
+    "label": { "zh-CN": "由神话宇宙叙事文本表现", "en": "Represented through mythic cosmological narratives" },
+    "summary": { "zh-CN": "相关文本保存盘古的神话记忆层，而不是历史人物传记。", "en": "The relevant texts preserve Pangu's mythic memory layer rather than a historical biography." },
+    "confidence": "medium", "evidenceLayer": "mythic_symbolic", "sourceIds": ["source:mythic-figures-ctext"],
+    "qualifiers": { "attributionStatus": "anonymous_or_composite", "historicity": "mythic" }, "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:nuwa-participated-repair",
+    "source": { "kind": "figure", "slug": "nuwa" },
+    "target": { "kind": "event", "slug": "nuwa-repairing-sky" },
+    "relationType": "participated_in",
+    "label": { "zh-CN": "处于女娲补天与造人叙事中", "en": "Participated in the Nuwa creation and repair narrative" },
+    "summary": { "zh-CN": "女娲是创生与修复神话中的神话角色，事件不进入现实历史年表。", "en": "Nuwa is a mythic persona in creation and repair narratives; the event does not enter real historical chronology." },
+    "confidence": "medium", "evidenceLayer": "mythic_symbolic", "sourceIds": ["source:nuwa-british-museum", "source:mythic-figures-ctext"],
+    "temporalAssertions": [{ "predicate": "traditional_occurrence", "timeType": "atemporal", "displayDate": { "zh-CN": "神话时间：无单一历史纪年", "en": "Mythic time: no single historical date" }, "confidence": "unknown", "evidenceLayer": "mythic_symbolic", "sourceId": "source:nuwa-british-museum" }],
+    "qualifiers": { "historicity": "mythic" }, "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:nuwa-repair-space",
+    "source": { "kind": "event", "slug": "nuwa-repairing-sky" },
+    "target": { "kind": "place", "slug": "nuwa-cosmos" },
+    "relationType": "occurred_at",
+    "label": { "zh-CN": "发生于女娲创生象征空间", "en": "Occurs in the Nuwa creation symbolic space" },
+    "summary": { "zh-CN": "女娲创生象征空间承载神话叙事，不是现实地理位置。", "en": "The Nuwa creation symbolic space carries mythic narrative rather than a real geographic location." },
+    "confidence": "medium", "evidenceLayer": "mythic_symbolic", "sourceIds": ["source:nuwa-british-museum", "source:mythic-figures-ctext"],
+    "temporalAssertions": [{ "predicate": "traditional_occurrence", "timeType": "atemporal", "displayDate": { "zh-CN": "神话时间：无单一历史纪年", "en": "Mythic time: no single historical date" }, "confidence": "unknown", "evidenceLayer": "mythic_symbolic", "sourceId": "source:nuwa-british-museum" }],
+    "qualifiers": { "spatialRole": "sacred_symbolic", "historicity": "mythic" }, "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:nuwa-remembered-nuwa-cosmos",
+    "source": { "kind": "figure", "slug": "nuwa" },
+    "target": { "kind": "place", "slug": "nuwa-cosmos" },
+    "relationType": "remembered_in",
+    "label": { "zh-CN": "在女娲创生象征空间中延续", "en": "Remembered through Nuwa creation space" },
+    "summary": { "zh-CN": "女娲的创生、修复和后世图像记忆进入象征空间，不进入现实地图。", "en": "Nuwa's creation, repair and later visual memory enter symbolic space rather than the real map." },
+    "confidence": "medium", "evidenceLayer": "mythic_symbolic", "sourceIds": ["source:nuwa-british-museum", "source:mythic-figures-ctext"],
+    "temporalAssertions": [{ "predicate": "analytic_scope", "timeType": "atemporal", "displayDate": { "zh-CN": "神话与后世图像记忆层", "en": "Mythic and later visual-memory layer" }, "confidence": "unknown", "evidenceLayer": "mythic_symbolic", "sourceId": "source:nuwa-british-museum" }],
+    "qualifiers": { "spatialRole": "sacred_symbolic", "historicity": "mythic", "receptionMode": "reinterpreted" }, "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:nuwa-represented-mythic-cosmologies",
+    "source": { "kind": "figure", "slug": "nuwa" },
+    "target": { "kind": "text", "slug": "mythic-cosmologies" },
+    "relationType": "represented_by",
+    "label": { "zh-CN": "由神话宇宙叙事文本表现", "en": "Represented through mythic cosmological narratives" },
+    "summary": { "zh-CN": "相关文本保存女娲创生与补天的神话层，不构成历史人物传记。", "en": "The relevant texts preserve Nuwa's creation and repair mythic layer rather than a historical biography." },
+    "confidence": "medium", "evidenceLayer": "mythic_symbolic", "sourceIds": ["source:nuwa-british-museum", "source:mythic-figures-ctext"],
+    "qualifiers": { "attributionStatus": "anonymous_or_composite", "historicity": "mythic" }, "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:fuxi-participated-trigrams",
+    "source": { "kind": "figure", "slug": "fuxi" },
+    "target": { "kind": "event", "slug": "fuxi-trigrams-and-order" },
+    "relationType": "participated_in",
+    "label": { "zh-CN": "处于伏羲画卦与秩序叙事中", "en": "Participated in the Fu Xi trigram and order narrative" },
+    "summary": { "zh-CN": "伏羲作为象征性祖先人物连接卦象与秩序叙事，不作为可考制度发明者。", "en": "Fu Xi as a symbolic ancestral figure connects trigrams and order without being treated as a historically verified inventor." },
+    "confidence": "medium", "evidenceLayer": "mythic_symbolic", "sourceIds": ["source:fuxi-british-museum", "source:mythic-figures-ctext"],
+    "temporalAssertions": [{ "predicate": "traditional_occurrence", "timeType": "atemporal", "displayDate": { "zh-CN": "神话时间：无单一历史纪年", "en": "Mythic time: no single historical date" }, "confidence": "unknown", "evidenceLayer": "mythic_symbolic", "sourceId": "source:fuxi-british-museum" }],
+    "qualifiers": { "historicity": "mythic" }, "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:fuxi-trigrams-space",
+    "source": { "kind": "event", "slug": "fuxi-trigrams-and-order" },
+    "target": { "kind": "place", "slug": "trigram-cosmos" },
+    "relationType": "occurred_at",
+    "label": { "zh-CN": "发生于八卦秩序象征空间", "en": "Occurs in the trigram-order symbolic space" },
+    "summary": { "zh-CN": "八卦秩序是象征空间节点，不提供伏羲的现实地理坐标。", "en": "Trigram order is a symbolic-space node and provides no real geographic coordinate for Fu Xi." },
+    "confidence": "medium", "evidenceLayer": "mythic_symbolic", "sourceIds": ["source:fuxi-british-museum", "source:mythic-figures-ctext"],
+    "temporalAssertions": [{ "predicate": "traditional_occurrence", "timeType": "atemporal", "displayDate": { "zh-CN": "神话时间：无单一历史纪年", "en": "Mythic time: no single historical date" }, "confidence": "unknown", "evidenceLayer": "mythic_symbolic", "sourceId": "source:fuxi-british-museum" }],
+    "qualifiers": { "spatialRole": "sacred_symbolic", "historicity": "mythic" }, "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:fuxi-remembered-trigram-cosmos",
+    "source": { "kind": "figure", "slug": "fuxi" },
+    "target": { "kind": "place", "slug": "trigram-cosmos" },
+    "relationType": "remembered_in",
+    "label": { "zh-CN": "在八卦秩序象征空间中延续", "en": "Remembered through trigram-order symbolic space" },
+    "summary": { "zh-CN": "伏羲与八卦的关系进入符号和宇宙秩序记忆，不转译为现实地图地点。", "en": "Fu Xi's relation to the trigrams enters symbolic and cosmological memory rather than a real map location." },
+    "confidence": "medium", "evidenceLayer": "mythic_symbolic", "sourceIds": ["source:fuxi-british-museum", "source:mythic-figures-ctext"],
+    "temporalAssertions": [{ "predicate": "analytic_scope", "timeType": "atemporal", "displayDate": { "zh-CN": "符号与宇宙秩序记忆层", "en": "Symbolic and cosmological-order memory layer" }, "confidence": "unknown", "evidenceLayer": "mythic_symbolic", "sourceId": "source:fuxi-british-museum" }],
+    "qualifiers": { "spatialRole": "sacred_symbolic", "historicity": "mythic", "receptionMode": "reinterpreted" }, "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:fuxi-represented-mythic-cosmologies",
+    "source": { "kind": "figure", "slug": "fuxi" },
+    "target": { "kind": "text", "slug": "mythic-cosmologies" },
+    "relationType": "represented_by",
+    "label": { "zh-CN": "由神话宇宙叙事文本表现", "en": "Represented through mythic cosmological narratives" },
+    "summary": { "zh-CN": "相关文本保存伏羲与卦象秩序的神话层，不主张可考的个人发明史。", "en": "The relevant texts preserve the mythic layer of Fu Xi and trigram order without claiming a verifiable personal invention history." },
+    "confidence": "medium", "evidenceLayer": "mythic_symbolic", "sourceIds": ["source:fuxi-british-museum", "source:mythic-figures-ctext"],
+    "qualifiers": { "attributionStatus": "anonymous_or_composite", "historicity": "mythic" }, "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:huangdi-participated-sovereignty",
+    "source": { "kind": "figure", "slug": "huangdi" },
+    "target": { "kind": "event", "slug": "huangdi-legendary-sovereignty" },
+    "relationType": "participated_in",
+    "label": { "zh-CN": "处于黄帝传说秩序与统治叙事中", "en": "Participated in Huangdi's legendary order and sovereignty narrative" },
+    "summary": { "zh-CN": "黄帝作为传说祖先连接政治秩序与后世国家记忆，不分配伪精确生年。", "en": "Huangdi as a legendary ancestor connects political order and later state memory without a falsely precise birth date." },
+    "confidence": "medium", "evidenceLayer": "mythic_symbolic", "sourceIds": ["source:huangdi-ctext", "source:mythic-figures-ctext"],
+    "temporalAssertions": [{ "predicate": "traditional_occurrence", "timeType": "atemporal", "displayDate": { "zh-CN": "传说时代：无可考生年", "en": "Legendary time: no verifiable birth date" }, "confidence": "unknown", "evidenceLayer": "mythic_symbolic", "sourceId": "source:huangdi-ctext" }],
+    "qualifiers": { "historicity": "mythic" }, "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:huangdi-sovereignty-space",
+    "source": { "kind": "event", "slug": "huangdi-legendary-sovereignty" },
+    "target": { "kind": "place", "slug": "trigram-cosmos" },
+    "relationType": "occurred_at",
+    "label": { "zh-CN": "进入秩序与祖先象征空间", "en": "Enters the symbolic space of order and ancestry" },
+    "summary": { "zh-CN": "黄帝传说的秩序和祖先层进入象征空间，不作为现实地点。", "en": "Huangdi's order and ancestral layers enter symbolic space rather than a real location." },
+    "confidence": "low", "evidenceLayer": "mythic_symbolic", "sourceIds": ["source:huangdi-ctext", "source:mythic-figures-ctext"],
+    "temporalAssertions": [{ "predicate": "traditional_occurrence", "timeType": "atemporal", "displayDate": { "zh-CN": "传说时代：无可考生年", "en": "Legendary time: no verifiable birth date" }, "confidence": "unknown", "evidenceLayer": "mythic_symbolic", "sourceId": "source:huangdi-ctext" }],
+    "qualifiers": { "spatialRole": "sacred_symbolic", "historicity": "mythic" }, "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:huangdi-remembered-trigram-cosmos",
+    "source": { "kind": "figure", "slug": "huangdi" },
+    "target": { "kind": "place", "slug": "trigram-cosmos" },
+    "relationType": "remembered_in",
+    "label": { "zh-CN": "在祖先与秩序象征空间中延续", "en": "Remembered through ancestral and order symbolism" },
+    "summary": { "zh-CN": "黄帝的后世政治、医术和祖先记忆进入象征空间，不转化为历史人物坐标。", "en": "Huangdi's later political, technical and ancestral memory enters symbolic space rather than becoming a historical-person coordinate." },
+    "confidence": "medium", "evidenceLayer": "mythic_symbolic", "sourceIds": ["source:huangdi-ctext", "source:mythic-figures-ctext"],
+    "temporalAssertions": [{ "predicate": "analytic_scope", "timeType": "atemporal", "displayDate": { "zh-CN": "传说与后世象征记忆层", "en": "Legendary and later symbolic-memory layer" }, "confidence": "unknown", "evidenceLayer": "mythic_symbolic", "sourceId": "source:huangdi-ctext" }],
+    "qualifiers": { "spatialRole": "sacred_symbolic", "historicity": "mythic", "receptionMode": "reinterpreted" }, "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:huangdi-represented-mythic-cosmologies",
+    "source": { "kind": "figure", "slug": "huangdi" },
+    "target": { "kind": "text", "slug": "mythic-cosmologies" },
+    "relationType": "represented_by",
+    "label": { "zh-CN": "由上古神话与宇宙叙事文本表现", "en": "Represented through ancient mythic and cosmological narratives" },
+    "summary": { "zh-CN": "相关文本保存黄帝传说和后世谱系层，不把传说叙事当作可考生平。", "en": "The texts preserve Huangdi's legendary and genealogical layers rather than a verifiable biography." },
+    "confidence": "medium", "evidenceLayer": "mythic_symbolic", "sourceIds": ["source:huangdi-ctext", "source:mythic-figures-ctext"],
+    "qualifiers": { "attributionStatus": "anonymous_or_composite", "historicity": "mythic" }, "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:xi-wangmu-participated-kunlun",
+    "source": { "kind": "figure", "slug": "xi-wangmu" },
+    "target": { "kind": "event", "slug": "xiwangmu-kunlun-tradition" },
+    "relationType": "participated_in",
+    "label": { "zh-CN": "处于西王母与昆仑神圣传统中", "en": "Participated in the Xi Wangmu and Kunlun sacred tradition" },
+    "summary": { "zh-CN": "西王母连接昆仑、仙境和神圣女性叙事，事件属于神话/神圣传统层。", "en": "Xi Wangmu connects Kunlun, immortality and sacred-female narratives within mythic and sacred-traditional layers." },
+    "confidence": "medium", "evidenceLayer": "mythic_symbolic", "sourceIds": ["source:xi-wangmu-british-museum", "source:mythic-figures-ctext"],
+    "temporalAssertions": [{ "predicate": "traditional_occurrence", "timeType": "atemporal", "displayDate": { "zh-CN": "神话与神圣传统时间：无单一历史纪年", "en": "Mythic and sacred traditional time: no single historical date" }, "confidence": "unknown", "evidenceLayer": "mythic_symbolic", "sourceId": "source:xi-wangmu-british-museum" }],
+    "qualifiers": { "historicity": "mythic" }, "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:xi-wangmu-kunlun-space",
+    "source": { "kind": "event", "slug": "xiwangmu-kunlun-tradition" },
+    "target": { "kind": "place", "slug": "kunlun-mythic-space" },
+    "relationType": "occurred_at",
+    "label": { "zh-CN": "进入昆仑神圣象征空间", "en": "Enters the Kunlun sacred symbolic space" },
+    "summary": { "zh-CN": "昆仑在本馆是神圣象征空间，不与现实山脉坐标混淆。", "en": "Kunlun is a sacred symbolic space in the museum and is not conflated with real mountain coordinates." },
+    "confidence": "medium", "evidenceLayer": "mythic_symbolic", "sourceIds": ["source:xi-wangmu-british-museum", "source:mythic-figures-ctext"],
+    "temporalAssertions": [{ "predicate": "traditional_occurrence", "timeType": "atemporal", "displayDate": { "zh-CN": "神话与神圣传统时间：无单一历史纪年", "en": "Mythic and sacred traditional time: no single historical date" }, "confidence": "unknown", "evidenceLayer": "mythic_symbolic", "sourceId": "source:xi-wangmu-british-museum" }],
+    "qualifiers": { "spatialRole": "sacred_symbolic", "historicity": "mythic" }, "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:xi-wangmu-remembered-kunlun",
+    "source": { "kind": "figure", "slug": "xi-wangmu" },
+    "target": { "kind": "place", "slug": "kunlun-mythic-space" },
+    "relationType": "remembered_in",
+    "label": { "zh-CN": "在昆仑仙境象征空间中延续", "en": "Remembered through Kunlun immortality space" },
+    "summary": { "zh-CN": "西王母的神话与艺术记忆通过昆仑象征空间延续，不进入现实地图。", "en": "Xi Wangmu's mythic and artistic memory continues through Kunlun symbolic space rather than the real map." },
+    "confidence": "medium", "evidenceLayer": "mythic_symbolic", "sourceIds": ["source:xi-wangmu-british-museum", "source:mythic-figures-ctext"],
+    "temporalAssertions": [{ "predicate": "analytic_scope", "timeType": "atemporal", "displayDate": { "zh-CN": "神话与后世艺术记忆层", "en": "Mythic and later artistic-memory layer" }, "confidence": "unknown", "evidenceLayer": "mythic_symbolic", "sourceId": "source:xi-wangmu-british-museum" }],
+    "qualifiers": { "spatialRole": "sacred_symbolic", "historicity": "mythic", "receptionMode": "reinterpreted" }, "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:xi-wangmu-represented-mythic-cosmologies",
+    "source": { "kind": "figure", "slug": "xi-wangmu" },
+    "target": { "kind": "text", "slug": "mythic-cosmologies" },
+    "relationType": "represented_by",
+    "label": { "zh-CN": "由神话与神圣宇宙叙事文本表现", "en": "Represented through mythic and sacred cosmological narratives" },
+    "summary": { "zh-CN": "相关文本提供西王母、昆仑和仙境传统的记忆入口，而不是历史人物传记。", "en": "The texts provide a memory entry into Xi Wangmu, Kunlun and immortality traditions rather than a historical biography." },
+    "confidence": "medium", "evidenceLayer": "mythic_symbolic", "sourceIds": ["source:xi-wangmu-british-museum", "source:mythic-figures-ctext"],
+    "qualifiers": { "attributionStatus": "anonymous_or_composite", "historicity": "mythic" }, "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:taishang-participated-sacralisation",
+    "source": { "kind": "figure", "slug": "taishang-laojun" },
+    "target": { "kind": "event", "slug": "taishang-laojun-sacralisation" },
+    "relationType": "participated_in",
+    "label": { "zh-CN": "处于太上老君神格化形成层", "en": "Participated in the formation layer of Taishang Laojun sacralisation" },
+    "summary": { "zh-CN": "太上老君作为独立神圣身份进入道教神格化和天界谱系，不与老子人物节点合并。", "en": "Taishang Laojun enters Daoist sacralisation and celestial genealogy as a distinct sacred identity rather than merging with Laozi's figure node." },
+    "confidence": "medium", "evidenceLayer": "later_deification", "sourceIds": ["source:taishang-laojun-ctext"],
+    "temporalAssertions": [{ "predicate": "deification", "timeType": "range", "startYear": 200, "endYear": 700, "displayDate": { "zh-CN": "约 200–700 的后世神格化层", "en": "Later deification layer, c. 200–700" }, "confidence": "low", "evidenceLayer": "later_deification", "sourceId": "source:taishang-laojun-ctext" }],
+    "qualifiers": { "historicity": "traditional", "receptionMode": "deified" }, "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:taishang-sacralisation-space",
+    "source": { "kind": "event", "slug": "taishang-laojun-sacralisation" },
+    "target": { "kind": "place", "slug": "daoist-celestial-realm" },
+    "relationType": "occurred_at",
+    "label": { "zh-CN": "进入道教天界象征空间", "en": "Enters Daoist celestial symbolic space" },
+    "summary": { "zh-CN": "道教天界是神圣宇宙节点，不是现实地图上的地理位置。", "en": "The Daoist celestial realm is a sacred-cosmos node, not a geographic location on the real map." },
+    "confidence": "medium", "evidenceLayer": "later_deification", "sourceIds": ["source:taishang-laojun-ctext"],
+    "temporalAssertions": [{ "predicate": "deification", "timeType": "range", "startYear": 200, "endYear": 700, "displayDate": { "zh-CN": "约 200–700 的后世神格化层", "en": "Later deification layer, c. 200–700" }, "confidence": "low", "evidenceLayer": "later_deification", "sourceId": "source:taishang-laojun-ctext" }],
+    "qualifiers": { "spatialRole": "sacred_symbolic", "historicity": "traditional" }, "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:taishang-remembered-celestial-realm",
+    "source": { "kind": "figure", "slug": "taishang-laojun" },
+    "target": { "kind": "place", "slug": "daoist-celestial-realm" },
+    "relationType": "remembered_in",
+    "label": { "zh-CN": "在道教天界象征空间中延续", "en": "Remembered through the Daoist celestial realm" },
+    "summary": { "zh-CN": "太上老君通过道教经典和神圣谱系在天界象征空间中延续，与老子保持身份分层。", "en": "Taishang Laojun continues through Daoist scriptures and sacred genealogy in celestial symbolic space while remaining distinct from Laozi." },
+    "confidence": "medium", "evidenceLayer": "later_deification", "sourceIds": ["source:taishang-laojun-ctext"],
+    "temporalAssertions": [{ "predicate": "institutional_and_memory_scope", "timeType": "range", "startYear": 200, "endYear": 700, "displayDate": { "zh-CN": "约 200–700 的神圣谱系与记忆层", "en": "Sacred-genealogy and memory layer, c. 200–700" }, "confidence": "low", "evidenceLayer": "later_deification", "sourceId": "source:taishang-laojun-ctext" }],
+    "qualifiers": { "spatialRole": "sacred_symbolic", "historicity": "traditional", "receptionMode": "ritualised" }, "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:taishang-represented-mythic-cosmologies",
+    "source": { "kind": "figure", "slug": "taishang-laojun" },
+    "target": { "kind": "text", "slug": "mythic-cosmologies" },
+    "relationType": "represented_by",
+    "label": { "zh-CN": "由道教宇宙叙事文本表现", "en": "Represented through Daoist cosmological narratives" },
+    "summary": { "zh-CN": "相关文本表现太上老君的神圣谱系和宇宙秩序层，不把它回写成老子历史言论。", "en": "The texts represent Taishang Laojun's sacred genealogy and cosmic-order layer without writing it back as Laozi's historical speech." },
+    "confidence": "medium", "evidenceLayer": "later_deification", "sourceIds": ["source:taishang-laojun-ctext", "source:mythic-figures-ctext"],
+    "qualifiers": { "attributionStatus": "later_literary_voice", "historicity": "traditional" }, "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:laozi-deified-taishang-laojun",
+    "source": { "kind": "figure", "slug": "laozi" },
+    "target": { "kind": "figure", "slug": "taishang-laojun" },
+    "relationType": "deified_as",
+    "label": { "zh-CN": "在后世道教传统中神格化为太上老君", "en": "Deified as Taishang Laojun in later Daoist traditions" },
+    "summary": { "zh-CN": "老子与太上老君保持两个节点；该关系只表达后世神格化，不把天界身份写回老子历史生平。", "en": "Laozi and Taishang Laojun remain two nodes; this relation expresses later sacralisation without writing celestial identity back into Laozi's historical biography." },
+    "confidence": "medium",
+    "evidenceLayer": "later_deification",
+    "sourceIds": ["source:taishang-laojun-ctext", "source:editorial-method"],
+    "temporalAssertions": [{ "predicate": "deification", "timeType": "range", "startYear": 200, "endYear": 700, "displayDate": { "zh-CN": "约 200–700 的后世神格化层", "en": "Later deification layer, c. 200–700" }, "confidence": "low", "evidenceLayer": "later_deification", "sourceId": "source:taishang-laojun-ctext" }],
+    "qualifiers": { "historicity": "traditional", "receptionMode": "deified", "note": { "zh-CN": "身份分层：老子 ≠ 太上老君。", "en": "Identity layering: Laozi is not Taishang Laojun." } },
+    "publicationState": "preview", "reviewStatus": "bilingual_reviewed"
   }
 ]

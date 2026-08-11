@@ -1,0 +1,42 @@
+{
+  "id": "d175913d-5ff5-5e40-b7e2-e4b6b3489b70",
+  "locale": "en",
+  "kind": "event",
+  "slug": "tang-dynasty-founded",
+  "title": "Foundation of the Tang dynasty",
+  "tradition": "confucianism",
+  "evidence": "historical_documented",
+  "timeLabel": "618",
+  "shortSummary": "The dynastic transition of 618 reorganized the political, educational and religious resource environment of Chang'an.",
+  "curatorialDescription": [
+    "The timeline emphasizes institutional change rather than reducing the foundation to one biographical instant."
+  ],
+  "researchNote": "Control of the capital, institutional continuity and transitions of individual institutions remain to be separated.",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:tang-imperial-records",
+      "title": "Official histories and institutional records of the Sui–Tang period",
+      "locator": "帝王、制度与年代条目；具体版本和卷页待核",
+      "grade": "B",
+      "role": "Research reference for Sui–Tang figures, capitals, institutions and event dates"
+    },
+    {
+      "id": "source:met-tang-overview",
+      "title": "The Metropolitan Museum of Art: Tang Dynasty (618–907)",
+      "locator": "Heilbrunn Timeline of Art History; Sui reunification, Tang chronology, Chang'an and the An Lushan rebellion",
+      "grade": "B",
+      "role": "Public overview source for Sui–Tang chronology, cosmopolitan Chang'an and the mid-Tang transition",
+      "url": "https://www.metmuseum.org/essays/tang-dynasty-618-906"
+    }
+  ],
+  "profile": {
+    "eventKind": "dynastic_transition",
+    "historicity": "documented",
+    "sequenceOrder": 2,
+    "eventScope": "imperial"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

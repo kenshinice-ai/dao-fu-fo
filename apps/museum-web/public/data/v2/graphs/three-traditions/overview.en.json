@@ -1,28 +1,1547 @@
 {
   "locale": "en",
-  "title": "A Chang'an question graph across three traditions",
-  "question": "How did figures, texts and concepts enter the same imperial city?",
+  "graphType": "three-traditions",
+  "title": "Three-traditions relation network",
+  "question": "How are figures, texts, institutions and places connected?",
   "nodes": [
-    { "id": "changan", "label": "Chang'an", "kind": "place", "tradition": "convergence", "x": 490, "y": 290, "slug": "changan" },
-    { "id": "xuanzang", "label": "Xuanzang", "kind": "figure", "tradition": "buddhism", "x": 230, "y": 170, "slug": "xuanzang" },
-    { "id": "heart-sutra", "label": "Heart Sutra", "kind": "text", "tradition": "buddhism", "x": 140, "y": 330, "slug": "heart-sutra" },
-    { "id": "emptiness", "label": "Emptiness", "kind": "concept", "tradition": "buddhism", "x": 300, "y": 440, "slug": "emptiness" },
-    { "id": "sima", "label": "Sima Chengzhen", "kind": "figure", "tradition": "daoism", "x": 500, "y": 100, "slug": "sima-chengzhen" },
-    { "id": "daodejing", "label": "Daodejing", "kind": "text", "tradition": "daoism", "x": 680, "y": 160, "slug": "daodejing" },
-    { "id": "naturalness", "label": "Naturalness", "kind": "concept", "tradition": "daoism", "x": 750, "y": 330, "slug": "naturalness" },
-    { "id": "kong", "label": "Kong Yingda", "kind": "figure", "tradition": "confucianism", "x": 620, "y": 450, "slug": "kong-yingda" },
-    { "id": "five-classics", "label": "Correct Meaning", "kind": "text", "tradition": "confucianism", "x": 830, "y": 460, "slug": "correct-meaning-five-classics" },
-    { "id": "ritual", "label": "Ritual", "kind": "concept", "tradition": "confucianism", "x": 440, "y": 500, "slug": "ritual" }
+    {
+      "id": "event:buddha-first-sermon-at-sarnath",
+      "kind": "event",
+      "slug": "buddha-first-sermon-at-sarnath",
+      "label": "The Buddha's first sermon at Sarnath",
+      "tradition": "buddhism",
+      "x": 490,
+      "y": 75
+    },
+    {
+      "id": "event:confucius-asks-laozi-about-rites",
+      "kind": "event",
+      "slug": "confucius-asks-laozi-about-rites",
+      "label": "Confucius visits Zhou to ask Laozi about rites",
+      "tradition": "daoism",
+      "x": 516.9466452163255,
+      "y": 76.69533921738724
+    },
+    {
+      "id": "event:daci-en-monastery-established",
+      "kind": "event",
+      "slug": "daci-en-monastery-established",
+      "label": "Establishment of the Great Ci'en Monastery",
+      "tradition": "buddhism",
+      "x": 543.4683257404438,
+      "y": 81.75462035734432
+    },
+    {
+      "id": "event:five-classics-corrected-meanings-project",
+      "kind": "event",
+      "slug": "five-classics-corrected-meanings-project",
+      "label": "Compilation project of the Corrected Meanings of the Five Classics",
+      "tradition": "confucianism",
+      "x": 569.1467788272058,
+      "y": 90.09805553402597
+    },
+    {
+      "id": "event:kaiyuan-institutional-expansion",
+      "kind": "event",
+      "slug": "kaiyuan-institutional-expansion",
+      "label": "Institutional expansion in the Kaiyuan era",
+      "tradition": "daoism",
+      "x": 593.5770399318689,
+      "y": 101.59406379056932
+    },
+    {
+      "id": "event:xuanzang-departs-changan",
+      "kind": "event",
+      "slug": "xuanzang-departs-changan",
+      "label": "Xuanzang departs Chang'an",
+      "tradition": "buddhism",
+      "x": 616.3738292428817,
+      "y": 116.0613462093863
+    },
+    {
+      "id": "event:xuanzang-return-changan",
+      "kind": "event",
+      "slug": "xuanzang-return-changan",
+      "label": "Xuanzang returns to Chang'an",
+      "tradition": "buddhism",
+      "x": 637.177627774668,
+      "y": 133.27174510439653
+    },
+    {
+      "id": "figure:cheng-xuanying",
+      "kind": "figure",
+      "slug": "cheng-xuanying",
+      "label": "Cheng Xuanying",
+      "tradition": "daoism",
+      "x": 655.6603471967946,
+      "y": 152.95384220403173
+    },
+    {
+      "id": "figure:confucius",
+      "kind": "figure",
+      "slug": "confucius",
+      "label": "Confucius (Kong Qiu)",
+      "tradition": "confucianism",
+      "x": 671.5305039829333,
+      "y": 174.79723907951575
+    },
+    {
+      "id": "figure:jizang",
+      "kind": "figure",
+      "slug": "jizang",
+      "label": "Jizang",
+      "tradition": "buddhism",
+      "x": 684.5378162801942,
+      "y": 198.4574523135094
+    },
+    {
+      "id": "figure:kong-yingda",
+      "kind": "figure",
+      "slug": "kong-yingda",
+      "label": "Kong Yingda",
+      "tradition": "confucianism",
+      "x": 694.477151003458,
+      "y": 223.56134620938633
+    },
+    {
+      "id": "figure:laozi",
+      "kind": "figure",
+      "slug": "laozi",
+      "label": "Laozi (Li Er)",
+      "tradition": "daoism",
+      "x": 701.191758906668,
+      "y": 249.7130173640692
+    },
+    {
+      "id": "figure:sakyamuni",
+      "kind": "figure",
+      "slug": "sakyamuni",
+      "label": "Śākyamuni Buddha (Gautama)",
+      "tradition": "buddhism",
+      "x": 704.5757466120783,
+      "y": 276.5000383011976
+    },
+    {
+      "id": "figure:sima-chengzhen",
+      "kind": "figure",
+      "slug": "sima-chengzhen",
+      "label": "Sima Chengzhen",
+      "tradition": "daoism",
+      "x": 704.5757466120783,
+      "y": 303.4999616988024
+    },
+    {
+      "id": "figure:xuanzang",
+      "kind": "figure",
+      "slug": "xuanzang",
+      "label": "Xuanzang",
+      "tradition": "buddhism",
+      "x": 701.191758906668,
+      "y": 330.2869826359308
+    },
+    {
+      "id": "figure:yan-shigu",
+      "kind": "figure",
+      "slug": "yan-shigu",
+      "label": "Yan Shigu",
+      "tradition": "confucianism",
+      "x": 694.477151003458,
+      "y": 356.43865379061367
+    },
+    {
+      "id": "institution:changan-daoist-monastic-network",
+      "kind": "institution",
+      "slug": "changan-daoist-monastic-network",
+      "label": "Chang'an Daoist monastic network",
+      "tradition": "daoism",
+      "x": 684.5378162801942,
+      "y": 381.54254768649065
+    },
+    {
+      "id": "institution:changan-translation-bureau",
+      "kind": "institution",
+      "slug": "changan-translation-bureau",
+      "label": "Chang'an translation-bureau network",
+      "tradition": "buddhism",
+      "x": 671.5305039829332,
+      "y": 405.2027609204843
+    },
+    {
+      "id": "institution:daci-en-monastery",
+      "kind": "institution",
+      "slug": "daci-en-monastery",
+      "label": "Great Ci'en Monastery",
+      "tradition": "buddhism",
+      "x": 655.6603471967946,
+      "y": 427.04615779596827
+    },
+    {
+      "id": "institution:guozijian",
+      "kind": "institution",
+      "slug": "guozijian",
+      "label": "Guozijian",
+      "tradition": "confucianism",
+      "x": 637.177627774668,
+      "y": 446.72825489560347
+    },
+    {
+      "id": "institution:hongwen-institute",
+      "kind": "institution",
+      "slug": "hongwen-institute",
+      "label": "Hongwen Institute",
+      "tradition": "confucianism",
+      "x": 616.3738292428817,
+      "y": 463.93865379061367
+    },
+    {
+      "id": "passage:dao-that-can-be-spoken",
+      "kind": "passage",
+      "slug": "dao-that-can-be-spoken",
+      "label": "A Dao that can be spoken",
+      "tradition": "daoism",
+      "x": 593.5770399318689,
+      "y": 478.40593620943065
+    },
+    {
+      "id": "passage:do-not-impose",
+      "kind": "passage",
+      "slug": "do-not-impose",
+      "label": "Do not impose on others what you do not desire",
+      "tradition": "confucianism",
+      "x": 569.1467788272058,
+      "y": 489.901944465974
+    },
+    {
+      "id": "passage:form-is-emptiness",
+      "kind": "passage",
+      "slug": "form-is-emptiness",
+      "label": "Form is not different from emptiness",
+      "tradition": "buddhism",
+      "x": 543.4683257404438,
+      "y": 498.2453796426557
+    },
+    {
+      "id": "passage:highest-good-like-water",
+      "kind": "passage",
+      "slug": "highest-good-like-water",
+      "label": "Highest goodness is like water",
+      "tradition": "daoism",
+      "x": 516.9466452163255,
+      "y": 503.3046607826127
+    },
+    {
+      "id": "passage:humans-follow-earth",
+      "kind": "passage",
+      "slug": "humans-follow-earth",
+      "label": "Humans follow earth; earth follows heaven",
+      "tradition": "daoism",
+      "x": 490,
+      "y": 505
+    },
+    {
+      "id": "passage:learn-and-practice",
+      "kind": "passage",
+      "slug": "learn-and-practice",
+      "label": "To learn and practise at due times",
+      "tradition": "confucianism",
+      "x": 463.05335478367454,
+      "y": 503.3046607826127
+    },
+    {
+      "id": "passage:learning-increases-dao-decreases",
+      "kind": "passage",
+      "slug": "learning-increases-dao-decreases",
+      "label": "In learning one increases; in the Dao one decreases",
+      "tradition": "daoism",
+      "x": 436.53167425955615,
+      "y": 498.2453796426557
+    },
+    {
+      "id": "passage:return-to-ritual",
+      "kind": "passage",
+      "slug": "return-to-ritual",
+      "label": "Conquer the self and return to ritual",
+      "tradition": "confucianism",
+      "x": 410.8532211727942,
+      "y": 489.901944465974
+    },
+    {
+      "id": "passage:three-walk-together",
+      "kind": "passage",
+      "slug": "three-walk-together",
+      "label": "When three walk together, there is surely a teacher for me",
+      "tradition": "confucianism",
+      "x": 386.42296006813126,
+      "y": 478.4059362094307
+    },
+    {
+      "id": "passage:turning-of-dharma-wheel",
+      "kind": "passage",
+      "slug": "turning-of-dharma-wheel",
+      "label": "This is the noble truth of suffering",
+      "tradition": "buddhism",
+      "x": 363.6261707571183,
+      "y": 463.93865379061367
+    },
+    {
+      "id": "passage:turning-of-dharma-wheel-thanissaro-en",
+      "kind": "passage",
+      "slug": "turning-of-dharma-wheel-thanissaro-en",
+      "label": "This is the noble truth of stress",
+      "tradition": "buddhism",
+      "x": 342.82237222533195,
+      "y": 446.72825489560347
+    },
+    {
+      "id": "place:changan",
+      "kind": "place",
+      "slug": "changan",
+      "label": "Chang'an",
+      "tradition": "convergence",
+      "x": 324.3396528032053,
+      "y": 427.04615779596827
+    },
+    {
+      "id": "place:dunhuang",
+      "kind": "place",
+      "slug": "dunhuang",
+      "label": "Dunhuang",
+      "tradition": "buddhism",
+      "x": 308.4694960170667,
+      "y": 405.2027609204842
+    },
+    {
+      "id": "place:great-wild-goose-pagoda-site",
+      "kind": "place",
+      "slug": "great-wild-goose-pagoda-site",
+      "label": "Great Wild Goose Pagoda site",
+      "tradition": "buddhism",
+      "x": 295.46218371980575,
+      "y": 381.5425476864905
+    },
+    {
+      "id": "place:longmen-grottoes",
+      "kind": "place",
+      "slug": "longmen-grottoes",
+      "label": "Longmen Grottoes",
+      "tradition": "buddhism",
+      "x": 285.522848996542,
+      "y": 356.4386537906137
+    },
+    {
+      "id": "place:luoyang",
+      "kind": "place",
+      "slug": "luoyang",
+      "label": "Luoyang",
+      "tradition": "convergence",
+      "x": 278.80824109333196,
+      "y": 330.28698263593077
+    },
+    {
+      "id": "place:sarnath",
+      "kind": "place",
+      "slug": "sarnath",
+      "label": "Sarnath",
+      "tradition": "buddhism",
+      "x": 275.4242533879216,
+      "y": 303.49996169880234
+    },
+    {
+      "id": "route:xuanzang-western-pilgrimage",
+      "kind": "route",
+      "slug": "xuanzang-western-pilgrimage",
+      "label": "Xuanzang's western pilgrimage route",
+      "tradition": "buddhism",
+      "x": 275.4242533879216,
+      "y": 276.5000383011977
+    },
+    {
+      "id": "text:analects",
+      "kind": "text",
+      "slug": "analects",
+      "label": "Analects",
+      "tradition": "confucianism",
+      "x": 278.80824109333196,
+      "y": 249.7130173640693
+    },
+    {
+      "id": "text:daodejing",
+      "kind": "text",
+      "slug": "daodejing",
+      "label": "Daodejing",
+      "tradition": "daoism",
+      "x": 285.52284899654194,
+      "y": 223.56134620938633
+    },
+    {
+      "id": "text:dhammacakkappavattana-sutta",
+      "kind": "text",
+      "slug": "dhammacakkappavattana-sutta",
+      "label": "Dhammacakkappavattana Sutta",
+      "tradition": "buddhism",
+      "x": 295.4621837198057,
+      "y": 198.45745231350955
+    },
+    {
+      "id": "text:five-classics-corrected-meanings",
+      "kind": "text",
+      "slug": "five-classics-corrected-meanings",
+      "label": "Corrected Meanings of the Five Classics",
+      "tradition": "confucianism",
+      "x": 308.4694960170667,
+      "y": 174.79723907951583
+    },
+    {
+      "id": "text:great-tang-records-western-regions",
+      "kind": "text",
+      "slug": "great-tang-records-western-regions",
+      "label": "Record of the Western Regions of the Great Tang",
+      "tradition": "buddhism",
+      "x": 324.33965280320524,
+      "y": 152.9538422040318
+    },
+    {
+      "id": "text:heart-sutra",
+      "kind": "text",
+      "slug": "heart-sutra",
+      "label": "Heart Sutra",
+      "tradition": "buddhism",
+      "x": 342.8223722253319,
+      "y": 133.27174510439656
+    },
+    {
+      "id": "text_version:analects-received",
+      "kind": "text_version",
+      "slug": "analects-received",
+      "label": "Received text of the Analects",
+      "tradition": "confucianism",
+      "x": 363.62617075711825,
+      "y": 116.06134620938633
+    },
+    {
+      "id": "text_version:daodejing-received",
+      "kind": "text_version",
+      "slug": "daodejing-received",
+      "label": "Received text of the Daodejing",
+      "tradition": "daoism",
+      "x": 386.4229600681312,
+      "y": 101.59406379056932
+    },
+    {
+      "id": "text_version:dhammacakkappavattana-sutta-pali",
+      "kind": "text_version",
+      "slug": "dhammacakkappavattana-sutta-pali",
+      "label": "Pāli digital version of the Dhammacakkappavattana Sutta",
+      "tradition": "buddhism",
+      "x": 410.8532211727941,
+      "y": 90.098055534026
+    },
+    {
+      "id": "text_version:dhammacakkappavattana-sutta-thanissaro-en",
+      "kind": "text_version",
+      "slug": "dhammacakkappavattana-sutta-thanissaro-en",
+      "label": "Thanissaro English translation of SN 56.11",
+      "tradition": "buddhism",
+      "x": 436.5316742595561,
+      "y": 81.75462035734435
+    },
+    {
+      "id": "text_version:heart-sutra-chinese-received",
+      "kind": "text_version",
+      "slug": "heart-sutra-chinese-received",
+      "label": "Received Chinese version of the Heart Sutra",
+      "tradition": "buddhism",
+      "x": 463.05335478367454,
+      "y": 76.69533921738727
+    }
   ],
   "edges": [
-    { "id": "e1", "source": "xuanzang", "target": "heart-sutra", "label": "connected to a translation tradition", "evidence": "traditional attribution and textual version must be distinguished" },
-    { "id": "e2", "source": "heart-sutra", "target": "emptiness", "label": "expresses a central concept", "evidence": "primary passage" },
-    { "id": "e3", "source": "xuanzang", "target": "changan", "label": "worked in after returning", "evidence": "historical record" },
-    { "id": "e4", "source": "sima", "target": "daodejing", "label": "part of a classical interpretive tradition", "evidence": "historical and traditional sources" },
-    { "id": "e5", "source": "daodejing", "target": "naturalness", "label": "expresses the concept", "evidence": "Daodejing chapter 25" },
-    { "id": "e6", "source": "sima", "target": "changan", "label": "connected with Tang court networks", "evidence": "historical record" },
-    { "id": "e7", "source": "kong", "target": "five-classics", "label": "led the commentarial project", "evidence": "history of classical learning" },
-    { "id": "e8", "source": "five-classics", "target": "ritual", "label": "entered ritual and educational interpretation", "evidence": "textual and institutional context" },
-    { "id": "e9", "source": "kong", "target": "changan", "label": "entered the state-learning network", "evidence": "historical record" }
+    {
+      "id": "relation:xuanzang-active-changan",
+      "source": "figure:xuanzang",
+      "target": "place:changan",
+      "label": "Active in Chang'an",
+      "summary": "Chang'an was the main setting for Xuanzang's translation, teaching and institutional work.",
+      "relationType": "active_in",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:xuanzang-records"
+      ]
+    },
+    {
+      "id": "relation:xuanzang-travelled-dunhuang",
+      "source": "figure:xuanzang",
+      "target": "place:dunhuang",
+      "label": "Travelled through the Dunhuang region",
+      "summary": "Dunhuang belongs to the Hexi Corridor context of the pilgrimage route; individual stops still require item-level verification.",
+      "relationType": "travelled_through",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:xuanzang-records",
+        "source:historical-geography"
+      ]
+    },
+    {
+      "id": "relation:xuanzang-active-luoyang",
+      "source": "figure:xuanzang",
+      "target": "place:luoyang",
+      "label": "Connected with Luoyang",
+      "summary": "Luoyang was an important political and religious node; this records a regional connection, not a claim of permanent residence.",
+      "relationType": "active_in",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:xuanzang-records",
+        "source:historical-geography"
+      ]
+    },
+    {
+      "id": "relation:sima-active-changan",
+      "source": "figure:sima-chengzhen",
+      "target": "place:changan",
+      "label": "Summoned to the capital in 711 (Chang'an anchor)",
+      "summary": "The Old Book of Tang records that Ruizong summoned Sima Chengzhen to the capital in 711; this relation uses Chang'an as a city-scale anchor for that episode only. Later Kaiyuan summons involving the eastern capital Luoyang and Mount Wangwu are kept separate and are not turned into continuous activity in Chang'an from 713 to 735.",
+      "relationType": "active_in",
+      "evidence": "historical_documented",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:sima-old-tang-biography",
+        "source:sui-tang-changan-urban-study"
+      ]
+    },
+    {
+      "id": "relation:kong-active-changan",
+      "source": "figure:kong-yingda",
+      "target": "place:changan",
+      "label": "Taught at Chang'an Guozijian in 640",
+      "summary": "The Beilin District Gazetteer records that in 640, at the Guozijian in Wuben Ward, Chang'an, Emperor Taizong ordered Guozijian libationer Kong Yingda to lecture on the Classic of Filial Piety and help establish the Corrected Meanings as a textbook; this relation records only that institution- and year-specific activity in Chang'an.",
+      "relationType": "active_in",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:kong-new-tang-biography",
+        "source:kong-wujing-zhengyi-record",
+        "source:changan-guozijian-gazetteer"
+      ]
+    },
+    {
+      "id": "relation:heart-sutra-has-version",
+      "source": "text:heart-sutra",
+      "target": "text_version:heart-sutra-chinese-received",
+      "label": "Has a Chinese received version",
+      "summary": "The text record is separated from a specific version so passages can cite the version layer.",
+      "relationType": "has_version",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:heart-sutra-edition"
+      ]
+    },
+    {
+      "id": "relation:daodejing-has-version",
+      "source": "text:daodejing",
+      "target": "text_version:daodejing-received",
+      "label": "Has a received version",
+      "summary": "The Daodejing record is separated from its received version so textual variation remains visible.",
+      "relationType": "has_version",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:daodejing-edition"
+      ]
+    },
+    {
+      "id": "relation:analects-has-version",
+      "source": "text:analects",
+      "target": "text_version:analects-received",
+      "label": "Has a received version",
+      "summary": "The Analects record is separated from its received version to keep passage locators traceable.",
+      "relationType": "has_version",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:analects-edition"
+      ]
+    },
+    {
+      "id": "relation:form-passage-heart-sutra",
+      "source": "passage:form-is-emptiness",
+      "target": "text:heart-sutra",
+      "label": "Passage of the text",
+      "summary": "The passage points back to the Heart Sutra text layer while retaining version and locator information.",
+      "relationType": "passage_of",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:heart-sutra-edition"
+      ]
+    },
+    {
+      "id": "relation:humans-passage-daodejing",
+      "source": "passage:humans-follow-earth",
+      "target": "text:daodejing",
+      "label": "Passage of the text",
+      "summary": "The passage points back to the Daodejing text layer while retaining its chapter locator.",
+      "relationType": "passage_of",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:daodejing-edition"
+      ]
+    },
+    {
+      "id": "relation:return-passage-analects",
+      "source": "passage:return-to-ritual",
+      "target": "text:analects",
+      "label": "Passage of the text",
+      "summary": "The passage points back to the Analects text layer while retaining its chapter locator.",
+      "relationType": "passage_of",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:analects-edition"
+      ]
+    },
+    {
+      "id": "relation:form-quoted-heart-version",
+      "source": "passage:form-is-emptiness",
+      "target": "text_version:heart-sutra-chinese-received",
+      "label": "Quoted from a specific version",
+      "summary": "The passage's source text and translation must be read and checked against an explicit version.",
+      "relationType": "quoted_from_version",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:heart-sutra-edition"
+      ]
+    },
+    {
+      "id": "relation:humans-quoted-daodejing-version",
+      "source": "passage:humans-follow-earth",
+      "target": "text_version:daodejing-received",
+      "label": "Quoted from a specific version",
+      "summary": "The passage's wording points back to the received Daodejing version.",
+      "relationType": "quoted_from_version",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:daodejing-edition"
+      ]
+    },
+    {
+      "id": "relation:return-quoted-analects-version",
+      "source": "passage:return-to-ritual",
+      "target": "text_version:analects-received",
+      "label": "Quoted from a specific version",
+      "summary": "The passage's wording points back to the received Analects version.",
+      "relationType": "quoted_from_version",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:analects-edition"
+      ]
+    },
+    {
+      "id": "relation:changan-luoyang-corridor",
+      "source": "place:changan",
+      "target": "place:luoyang",
+      "label": "Connected by an imperial corridor",
+      "summary": "Chang'an and Luoyang were core cities in Sui–Tang political, transport and religious networks.",
+      "relationType": "route_connects",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:historical-geography"
+      ]
+    },
+    {
+      "id": "relation:daodejing-analects-comparative",
+      "source": "text:daodejing",
+      "target": "text:analects",
+      "label": "Comparative reading",
+      "summary": "This is a curatorial comparison, not a claim of common authorship, common tradition or direct influence.",
+      "relationType": "comparative_parallel",
+      "evidence": "scholarly_interpretation",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:comparative-method",
+        "source:editorial-method"
+      ]
+    },
+    {
+      "id": "relation:heart-sutra-daodejing-comparative",
+      "source": "text:heart-sutra",
+      "target": "text:daodejing",
+      "label": "Conceptual comparison entry",
+      "summary": "The texts can be placed side by side, while their terms, historical contexts and religious functions remain distinct.",
+      "relationType": "comparative_parallel",
+      "evidence": "scholarly_interpretation",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:comparative-method",
+        "source:editorial-method"
+      ]
+    },
+    {
+      "id": "relation:cheng-commented-daodejing",
+      "source": "figure:cheng-xuanying",
+      "target": "text:daodejing",
+      "label": "Participated in Daodejing commentary",
+      "summary": "Cheng Xuanying provides a case of early Tang Daoist interpretation; the specific commentary edition still requires catalogue verification.",
+      "relationType": "commented_on",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:daoist-historical-record",
+        "source:daodejing-edition"
+      ]
+    },
+    {
+      "id": "relation:yan-hongwen-context",
+      "source": "figure:yan-shigu",
+      "target": "institution:hongwen-institute",
+      "label": "Court scholarly institutional context",
+      "summary": "Yan Shigu's editorial work is placed in the setting of early Tang court scholarship; specific office holding remains to be verified.",
+      "relationType": "institutional_context",
+      "evidence": "historical_inferred",
+      "confidence": "low",
+      "sourceIds": [
+        "source:education-classics-records"
+      ]
+    },
+    {
+      "id": "relation:jizang-active-luoyang",
+      "source": "figure:jizang",
+      "target": "place:luoyang",
+      "label": "Connected with Luoyang Buddhist networks",
+      "summary": "This records a research entry between the figure and Luoyang's religious networks, not a year-by-year itinerary.",
+      "relationType": "active_in",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:buddhist-biographical-records",
+        "source:historical-geography"
+      ]
+    },
+    {
+      "id": "relation:translation-network-located-changan",
+      "source": "institution:changan-translation-bureau",
+      "target": "place:changan",
+      "label": "Located within Chang'an's urban scope",
+      "summary": "The network groups translation bureaux in Chang'an across periods; monasteries and building locations remain project-specific.",
+      "relationType": "located_in",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:buddhist-institutional-records",
+        "source:historical-geography"
+      ]
+    },
+    {
+      "id": "relation:daoist-network-located-changan",
+      "source": "institution:changan-daoist-monastic-network",
+      "target": "place:changan",
+      "label": "Located within Chang'an's urban scope",
+      "summary": "The network records city-scale institutional links without treating all nodes as one institution.",
+      "relationType": "located_in",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:daoist-historical-record",
+        "source:historical-geography"
+      ]
+    },
+    {
+      "id": "relation:pagoda-site-located-changan",
+      "source": "place:great-wild-goose-pagoda-site",
+      "target": "place:changan",
+      "label": "Located within historical Chang'an",
+      "summary": "The site belongs to Chang'an's urban space; historical ward and conservation boundary need authoritative geographic records.",
+      "relationType": "located_in",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:buddhist-institutional-records",
+        "source:historical-geography"
+      ]
+    },
+    {
+      "id": "relation:longmen-located-luoyang",
+      "source": "place:longmen-grottoes",
+      "target": "place:luoyang",
+      "label": "Located south of Luoyang",
+      "summary": "UNESCO heritage documentation locates Longmen on both banks of the Yi River south of ancient Luoyang.",
+      "relationType": "located_in",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:unesco-longmen"
+      ]
+    },
+    {
+      "id": "relation:dao-spoken-passage-daodejing",
+      "source": "passage:dao-that-can-be-spoken",
+      "target": "text:daodejing",
+      "label": "Passage of the text",
+      "summary": "The passage points back to the Daodejing text and received chapter locator.",
+      "relationType": "passage_of",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:daodejing-edition"
+      ]
+    },
+    {
+      "id": "relation:water-passage-daodejing",
+      "source": "passage:highest-good-like-water",
+      "target": "text:daodejing",
+      "label": "Passage of the text",
+      "summary": "The complete sentence group points back to chapter 8 of the Daodejing.",
+      "relationType": "passage_of",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:daodejing-edition"
+      ]
+    },
+    {
+      "id": "relation:decrease-passage-daodejing",
+      "source": "passage:learning-increases-dao-decreases",
+      "target": "text:daodejing",
+      "label": "Passage of the text",
+      "summary": "The passage points back to chapter 48 of the Daodejing.",
+      "relationType": "passage_of",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:daodejing-edition"
+      ]
+    },
+    {
+      "id": "relation:practice-passage-analects",
+      "source": "passage:learn-and-practice",
+      "target": "text:analects",
+      "label": "Passage of the text",
+      "summary": "The passage points back to the Xue Er chapter and received Analects version.",
+      "relationType": "passage_of",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:analects-edition"
+      ]
+    },
+    {
+      "id": "relation:three-passage-analects",
+      "source": "passage:three-walk-together",
+      "target": "text:analects",
+      "label": "Passage of the text",
+      "summary": "The passage points back to the Shu Er chapter and received Analects version.",
+      "relationType": "passage_of",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:analects-edition"
+      ]
+    },
+    {
+      "id": "relation:do-not-impose-passage-analects",
+      "source": "passage:do-not-impose",
+      "target": "text:analects",
+      "label": "Passage of the text",
+      "summary": "The passage points back to the Wei Ling Gong chapter and received Analects version.",
+      "relationType": "passage_of",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:analects-edition"
+      ]
+    },
+    {
+      "id": "relation:xuanzang-participated-departure",
+      "source": "figure:xuanzang",
+      "target": "event:xuanzang-departs-changan",
+      "label": "Participated in the departure west",
+      "summary": "Xuanzang's biographical record is connected to the departure event; the month, permission narrative and first route segment remain uncertain.",
+      "relationType": "participated_in",
+      "evidence": "historical_documented",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:xuanzang-records"
+      ]
+    },
+    {
+      "id": "relation:xuanzang-participated-return",
+      "source": "figure:xuanzang",
+      "target": "event:xuanzang-return-changan",
+      "label": "Participated in the return to Chang'an",
+      "summary": "After returning to Chang'an around 645, Xuanzang's pilgrimage experience entered translation, teaching and monastic institutional contexts.",
+      "relationType": "participated_in",
+      "evidence": "historical_documented",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:xuanzang-records",
+        "source:buddhist-institutional-records"
+      ]
+    },
+    {
+      "id": "relation:xuanzang-departure-occurred-changan",
+      "source": "event:xuanzang-departs-changan",
+      "target": "place:changan",
+      "label": "Departure occurred at Chang'an",
+      "summary": "Chang'an is the geographic anchor for the departure; this relation does not infer the specific nodes after leaving the city.",
+      "relationType": "occurred_at",
+      "evidence": "historical_documented",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:xuanzang-records",
+        "source:historical-geography"
+      ]
+    },
+    {
+      "id": "relation:xuanzang-return-occurred-changan",
+      "source": "event:xuanzang-return-changan",
+      "target": "place:changan",
+      "label": "Return occurred at Chang'an",
+      "summary": "The return around 645 reconnects the transregional route with Chang'an's urban and institutional space.",
+      "relationType": "occurred_at",
+      "evidence": "historical_documented",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:xuanzang-records",
+        "source:historical-geography"
+      ]
+    },
+    {
+      "id": "relation:daci-en-foundation-occurred-changan",
+      "source": "event:daci-en-monastery-established",
+      "target": "place:changan",
+      "label": "Foundation occurred in Chang'an",
+      "summary": "The foundation event is anchored at Chang'an at city scale and is modelled separately from Xuanzang's later translation sites.",
+      "relationType": "occurred_at",
+      "evidence": "historical_documented",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:buddhist-institutional-records",
+        "source:historical-geography"
+      ]
+    },
+    {
+      "id": "relation:xuanzang-active-daci-en",
+      "source": "figure:xuanzang",
+      "target": "institution:daci-en-monastery",
+      "label": "Active at Great Ci'en Monastery",
+      "summary": "Great Ci'en Monastery is a core institutional node for Xuanzang's translation, teaching and institutional work after his return; individual translation projects will link separately to texts and versions.",
+      "relationType": "active_in",
+      "evidence": "historical_documented",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:xuanzang-records",
+        "source:buddhist-institutional-records"
+      ]
+    },
+    {
+      "id": "relation:xuanzang-institutional-translation-network",
+      "source": "figure:xuanzang",
+      "target": "institution:changan-translation-bureau",
+      "label": "Situated in Chang'an's translation-bureau network",
+      "summary": "Xuanzang's translation work relied on monastic space, language roles, textual checking and institutional support; this connects a network context rather than one fixed building.",
+      "relationType": "institutional_context",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:xuanzang-records",
+        "source:buddhist-institutional-records"
+      ]
+    },
+    {
+      "id": "relation:western-regions-attributed-xuanzang",
+      "source": "text:great-tang-records-western-regions",
+      "target": "figure:xuanzang",
+      "label": "Travel knowledge associated with Xuanzang",
+      "summary": "The Record is connected to Xuanzang's travel observations and transmitted accounts, but is not reduced to sole authorship by Xuanzang.",
+      "relationType": "attributed_to",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:xuanzang-records",
+        "source:buddhist-biographical-records"
+      ]
+    },
+    {
+      "id": "relation:xuanzang-remembered-daci-en",
+      "source": "figure:xuanzang",
+      "target": "institution:daci-en-monastery",
+      "label": "Remembered through Great Ci'en Monastery",
+      "summary": "Great Ci'en Monastery carries institutional memory of Xuanzang through translation and monastic networks; this does not assert deification or one single commemorative ritual.",
+      "relationType": "remembered_in",
+      "evidence": "historical_inferred",
+      "confidence": "low",
+      "sourceIds": [
+        "source:buddhist-institutional-records",
+        "source:xuanzang-records"
+      ]
+    },
+    {
+      "id": "relation:xuanzang-route-dunhuang-context",
+      "source": "route:xuanzang-western-pilgrimage",
+      "target": "place:dunhuang",
+      "label": "Route connects through the Dunhuang region",
+      "summary": "The route uses Dunhuang as a regional anchor in the Hexi Corridor rather than claiming a reconstructed day-by-day itinerary.",
+      "relationType": "route_connects",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:xuanzang-records",
+        "source:historical-geography",
+        "source:unesco-silk-roads-corridor"
+      ]
+    },
+    {
+      "id": "relation:sima-participated-kaiyuan",
+      "source": "figure:sima-chengzhen",
+      "target": "event:kaiyuan-institutional-expansion",
+      "label": "Situated in the Kaiyuan institutional-expansion context",
+      "summary": "Sima Chengzhen is connected with the Kaiyuan courtly, Daoist and knowledge networks; this event is an analytical period label rather than one itinerary.",
+      "relationType": "participated_in",
+      "evidence": "historical_inferred",
+      "confidence": "low",
+      "sourceIds": [
+        "source:sima-old-tang-biography",
+        "source:daoist-historical-record",
+        "source:tang-imperial-records"
+      ]
+    },
+    {
+      "id": "relation:sima-daoist-institutional-context",
+      "source": "figure:sima-chengzhen",
+      "target": "institution:changan-daoist-monastic-network",
+      "label": "Connected with Chang'an's Daoist institutional network",
+      "summary": "Sima Chengzhen's Daoist identity is connected with Tang urban, courtly and monastic networks without reducing the network to one fixed monastery.",
+      "relationType": "institutional_context",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:sima-old-tang-biography",
+        "source:daoist-historical-record"
+      ]
+    },
+    {
+      "id": "relation:daodejing-received-by-sima",
+      "source": "text:daodejing",
+      "target": "figure:sima-chengzhen",
+      "label": "Received within Sima Chengzhen's Daoist context",
+      "summary": "The Daodejing is connected with Sima Chengzhen's Shangqing and Tang Daoist interpretive context; this is not an authorship claim.",
+      "relationType": "received_by",
+      "evidence": "scholarly_interpretation",
+      "confidence": "low",
+      "sourceIds": [
+        "source:daoist-historical-record",
+        "source:daodejing-edition"
+      ]
+    },
+    {
+      "id": "relation:sima-remembered-daoist-network",
+      "source": "figure:sima-chengzhen",
+      "target": "institution:changan-daoist-monastic-network",
+      "label": "Remembered through Chang'an's Daoist institutions",
+      "summary": "Later memory of Sima Chengzhen continues through Daoist lineages, institutional networks and Tang histories; this does not assert deification.",
+      "relationType": "remembered_in",
+      "evidence": "historical_inferred",
+      "confidence": "low",
+      "sourceIds": [
+        "source:daoist-historical-record",
+        "source:sima-old-tang-biography"
+      ]
+    },
+    {
+      "id": "relation:kong-participated-five-classics",
+      "source": "figure:kong-yingda",
+      "target": "event:five-classics-corrected-meanings-project",
+      "label": "Participated in the Corrected Meanings project",
+      "summary": "Kong Yingda is connected with the compilation, commentary and state-education project of the Corrected Meanings; the compilation was not a solitary authorship act.",
+      "relationType": "participated_in",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:kong-new-tang-biography",
+        "source:confucian-commentarial-record"
+      ]
+    },
+    {
+      "id": "relation:five-classics-project-occurred-changan",
+      "source": "event:five-classics-corrected-meanings-project",
+      "target": "place:changan",
+      "label": "Developed within Chang'an's institutional space",
+      "summary": "The Corrected Meanings project is connected with Chang'an's state-learning and classical institutions; specific sites and phases still need to be separated.",
+      "relationType": "occurred_at",
+      "evidence": "historical_inferred",
+      "confidence": "low",
+      "sourceIds": [
+        "source:education-classics-records",
+        "source:historical-geography"
+      ]
+    },
+    {
+      "id": "relation:kong-active-guozijian",
+      "source": "figure:kong-yingda",
+      "target": "institution:guozijian",
+      "label": "Connected with the Guozijian classical-learning system",
+      "summary": "Placing Kong Yingda within the Guozijian and state-learning system shows how commentary gained institutional force; exact offices and buildings remain to be verified.",
+      "relationType": "active_in",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:kong-new-tang-biography",
+        "source:education-classics-records"
+      ]
+    },
+    {
+      "id": "relation:kong-commented-five-classics",
+      "source": "figure:kong-yingda",
+      "target": "text:five-classics-corrected-meanings",
+      "label": "Contributed to classical commentary",
+      "summary": "Kong Yingda is connected with the commentary and compilation layers of the Corrected Meanings while the text remains marked as composite and collectively produced.",
+      "relationType": "commented_on",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:kong-new-tang-biography",
+        "source:confucian-commentarial-record"
+      ]
+    },
+    {
+      "id": "relation:five-classics-attributed-kong",
+      "source": "text:five-classics-corrected-meanings",
+      "target": "figure:kong-yingda",
+      "label": "Compilation and commentary associated with Kong Yingda",
+      "summary": "The Corrected Meanings is associated with Kong Yingda's editorial and commentarial contribution, but remains a composite institutional work rather than a sole-authored book.",
+      "relationType": "attributed_to",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:kong-new-tang-biography",
+        "source:confucian-commentarial-record"
+      ]
+    },
+    {
+      "id": "relation:five-classics-received-guozijian",
+      "source": "text:five-classics-corrected-meanings",
+      "target": "institution:guozijian",
+      "label": "Received within the Guozijian educational context",
+      "summary": "The Corrected Meanings entered later circulation through classical teaching and state education; specific curricula and edition use still require item-level checking.",
+      "relationType": "received_by",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:education-classics-records",
+        "source:confucian-commentarial-record"
+      ]
+    },
+    {
+      "id": "relation:kong-remembered-guozijian",
+      "source": "figure:kong-yingda",
+      "target": "institution:guozijian",
+      "label": "Remembered through Guozijian classical learning",
+      "summary": "Institutional memory of Kong Yingda is connected with the Corrected Meanings and state-learning narratives; this is not a claim of personal cult.",
+      "relationType": "remembered_in",
+      "evidence": "historical_inferred",
+      "confidence": "low",
+      "sourceIds": [
+        "source:education-classics-records",
+        "source:confucian-commentarial-record"
+      ]
+    },
+    {
+      "id": "relation:laozi-participated-zhou-rites",
+      "source": "figure:laozi",
+      "target": "event:confucius-asks-laozi-about-rites",
+      "label": "Appears in the Confucius–Laozi rites-asking tradition",
+      "summary": "The Shiji places Laozi in the narrative of Confucius asking about rites in Zhou; this retains the historiographical and traditional layer rather than treating the encounter as independently verified field evidence.",
+      "relationType": "participated_in",
+      "evidence": "traditional_account",
+      "confidence": "low",
+      "sourceIds": [
+        "source:shiji-laozi-biography",
+        "source:shiji-confucius-biography"
+      ]
+    },
+    {
+      "id": "relation:confucius-participated-zhou-rites",
+      "source": "figure:confucius",
+      "target": "event:confucius-asks-laozi-about-rites",
+      "label": "Asks Laozi about rites in Zhou",
+      "summary": "The Shiji preserves the rites-asking story as a historiographical entry into a Dao–Ru encounter; exact dating and dialogue details remain traditional.",
+      "relationType": "participated_in",
+      "evidence": "traditional_account",
+      "confidence": "low",
+      "sourceIds": [
+        "source:shiji-confucius-biography",
+        "source:shiji-laozi-biography"
+      ]
+    },
+    {
+      "id": "relation:confucius-laozi-occurred-luoyang",
+      "source": "event:confucius-asks-laozi-about-rites",
+      "target": "place:luoyang",
+      "label": "Placed in the Zhou–Luoyang context",
+      "summary": "The event uses Luoyang as a city-scale anchor for the Zhou rites and travel context without claiming a precisely located meeting site.",
+      "relationType": "occurred_at",
+      "evidence": "historical_inferred",
+      "confidence": "low",
+      "sourceIds": [
+        "source:shiji-laozi-biography",
+        "source:historical-geography"
+      ]
+    },
+    {
+      "id": "relation:laozi-context-luoyang",
+      "source": "figure:laozi",
+      "target": "place:luoyang",
+      "label": "Connected with the Zhou rites context",
+      "summary": "Laozi is connected in historiographical tradition with the Zhou archive and rites-asking narrative; Luoyang is used as a city-scale traditional context, not as a precise residence claim.",
+      "relationType": "active_in",
+      "evidence": "traditional_account",
+      "confidence": "low",
+      "sourceIds": [
+        "source:shiji-laozi-biography",
+        "source:historical-geography"
+      ]
+    },
+    {
+      "id": "relation:confucius-context-luoyang",
+      "source": "figure:confucius",
+      "target": "place:luoyang",
+      "label": "Connected with the Zhou rites-asking context",
+      "summary": "The historiographical account of Confucius asking about rites in Zhou can use Luoyang as a city-scale spatial entry without reconstructing a certain travel route.",
+      "relationType": "active_in",
+      "evidence": "traditional_account",
+      "confidence": "low",
+      "sourceIds": [
+        "source:shiji-confucius-biography",
+        "source:historical-geography"
+      ]
+    },
+    {
+      "id": "relation:daodejing-attributed-laozi",
+      "source": "text:daodejing",
+      "target": "figure:laozi",
+      "label": "Traditionally attributed to Laozi",
+      "summary": "The Daodejing is traditionally connected with Laozi, but its formation, compilation and attribution remain layered and cannot be reduced to sole authorship by one person.",
+      "relationType": "attributed_to",
+      "evidence": "historical_inferred",
+      "confidence": "low",
+      "sourceIds": [
+        "source:shiji-laozi-biography",
+        "source:daodejing-edition"
+      ]
+    },
+    {
+      "id": "relation:dao-passage-attributed-laozi",
+      "source": "passage:dao-that-can-be-spoken",
+      "target": "figure:laozi",
+      "label": "Preserved traditionally as a saying of Laozi",
+      "summary": "Daodejing chapter 1 can serve as a representative speech entry for the Laozi tradition, while version and transmission layers take priority over assuming direct oral attestation.",
+      "relationType": "attributed_to",
+      "evidence": "historical_inferred",
+      "confidence": "low",
+      "sourceIds": [
+        "source:daodejing-edition",
+        "source:shiji-laozi-biography"
+      ]
+    },
+    {
+      "id": "relation:laozi-remembered-daoist-network",
+      "source": "figure:laozi",
+      "target": "institution:changan-daoist-monastic-network",
+      "label": "Remembered through Tang Daoist institutions",
+      "summary": "Laozi as a classical source figure enters Tang institutional, imperial and Daoist memory; this does not collapse Li Er into a single later sacralised identity.",
+      "relationType": "remembered_in",
+      "evidence": "historical_inferred",
+      "confidence": "low",
+      "sourceIds": [
+        "source:daoist-historical-record",
+        "source:daodejing-edition"
+      ]
+    },
+    {
+      "id": "relation:laozi-reception-kaiyuan",
+      "source": "figure:laozi",
+      "target": "event:kaiyuan-institutional-expansion",
+      "label": "Enters the Kaiyuan context as a Daoist classical source",
+      "summary": "This relation expresses a curatorial connection through later textual and institutional reception, not personal participation in every Kaiyuan-era change.",
+      "relationType": "influenced",
+      "evidence": "scholarly_interpretation",
+      "confidence": "low",
+      "sourceIds": [
+        "source:daoist-historical-record",
+        "source:daodejing-edition",
+        "source:tang-imperial-records"
+      ]
+    },
+    {
+      "id": "relation:analects-attributed-confucius",
+      "source": "text:analects",
+      "target": "figure:confucius",
+      "label": "Preserves sayings and actions associated with Confucius and his disciples",
+      "summary": "The Analects centres on sayings and actions associated with Confucius and his disciples, but is a composite transmitted text recorded and compiled by others rather than a single-author transcript.",
+      "relationType": "attributed_to",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:analects-edition",
+        "source:shiji-confucius-biography"
+      ]
+    },
+    {
+      "id": "relation:learn-and-practice-attributed-confucius",
+      "source": "passage:learn-and-practice",
+      "target": "figure:confucius",
+      "label": "Preserved as a saying of Confucius through transmission",
+      "summary": "The opening of Xue Er is traditionally voiced by Confucius, while its preservation passes through disciples, compilation and received editions.",
+      "relationType": "attributed_to",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:analects-edition",
+        "source:shiji-confucius-biography"
+      ]
+    },
+    {
+      "id": "relation:confucius-remembered-guozijian",
+      "source": "figure:confucius",
+      "target": "institution:guozijian",
+      "label": "Remembered through state classical education",
+      "summary": "Confucius enters Tang classical-learning memory through classics, commentary and state education; this records later institutional reception rather than placing him physically in a Tang institution.",
+      "relationType": "remembered_in",
+      "evidence": "historical_inferred",
+      "confidence": "low",
+      "sourceIds": [
+        "source:education-classics-records",
+        "source:analects-edition"
+      ]
+    },
+    {
+      "id": "relation:confucius-reception-five-classics",
+      "source": "figure:confucius",
+      "target": "event:five-classics-corrected-meanings-project",
+      "label": "Enters the Corrected Meanings project as a classical source figure",
+      "summary": "The connection between Confucius and the Corrected Meanings is a chain of later classical reception and institutional interpretation, not personal participation in a Tang compilation project.",
+      "relationType": "influenced",
+      "evidence": "scholarly_interpretation",
+      "confidence": "low",
+      "sourceIds": [
+        "source:analects-edition",
+        "source:confucian-commentarial-record",
+        "source:education-classics-records"
+      ]
+    },
+    {
+      "id": "relation:analects-received-kong",
+      "source": "text:analects",
+      "target": "figure:kong-yingda",
+      "label": "Received within Kong Yingda's Tang classical-learning context",
+      "summary": "The Analects enters the classical, commentarial and state-learning context associated with Kong Yingda; this is later interpretation, not a merging of Kong Yingda with Confucius.",
+      "relationType": "received_by",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:analects-edition",
+        "source:confucian-commentarial-record",
+        "source:education-classics-records"
+      ]
+    },
+    {
+      "id": "relation:sakyamuni-participated-first-sermon",
+      "source": "figure:sakyamuni",
+      "target": "event:buddha-first-sermon-at-sarnath",
+      "label": "Teaches in the Sarnath first-sermon tradition",
+      "summary": "Early Buddhist texts connect the Buddha with the first turning at Sarnath; the relation retains transmitted and traditional dating layers rather than claiming a verbatim record.",
+      "relationType": "participated_in",
+      "evidence": "traditional_account",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:buddha-early-texts",
+        "source:sarnath-site-record"
+      ]
+    },
+    {
+      "id": "relation:first-sermon-occurred-sarnath",
+      "source": "event:buddha-first-sermon-at-sarnath",
+      "target": "place:sarnath",
+      "label": "Occurs at the traditional Sarnath site",
+      "summary": "Sarnath is the first-teaching location in textual and later heritage memory; the real coordinate points to a site-level referent, not a preserved fifth-century BCE scene.",
+      "relationType": "occurred_at",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:buddha-early-texts",
+        "source:sarnath-site-record"
+      ]
+    },
+    {
+      "id": "relation:sakyamuni-active-sarnath",
+      "source": "figure:sakyamuni",
+      "target": "place:sarnath",
+      "label": "Connected with the Sarnath teaching tradition",
+      "summary": "The figure–place connection comes from the first-teaching tradition and later heritage memory; it is not a fully reconstructed personal itinerary.",
+      "relationType": "active_in",
+      "evidence": "traditional_account",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:buddha-early-texts",
+        "source:sarnath-site-record"
+      ]
+    },
+    {
+      "id": "relation:dhammacakkappavattana-has-version",
+      "source": "text:dhammacakkappavattana-sutta",
+      "target": "text_version:dhammacakkappavattana-sutta-pali",
+      "label": "Has a Pāli digital version",
+      "summary": "The text and version remain separate so Chinese translations, parallels and recensions can be added later.",
+      "relationType": "has_version",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:buddha-early-texts"
+      ]
+    },
+    {
+      "id": "relation:turning-passage-of-text",
+      "source": "passage:turning-of-dharma-wheel",
+      "target": "text:dhammacakkappavattana-sutta",
+      "label": "Passage of the Dhammacakkappavattana Sutta",
+      "summary": "The passage points back to the discourse text while retaining version and speaker-attribution layers.",
+      "relationType": "passage_of",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:buddha-early-texts"
+      ]
+    },
+    {
+      "id": "relation:turning-passage-quoted-pali",
+      "source": "passage:turning-of-dharma-wheel",
+      "target": "text_version:dhammacakkappavattana-sutta-pali",
+      "label": "Quoted from the Pāli SN 56.11 version",
+      "summary": "The short excerpt points to an explicit digital version rather than mixing translation and source text into one layer.",
+      "relationType": "quoted_from_version",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:buddha-early-texts"
+      ]
+    },
+    {
+      "id": "relation:turning-passage-attributed-sakyamuni",
+      "source": "passage:turning-of-dharma-wheel",
+      "target": "figure:sakyamuni",
+      "label": "Preserved as Śākyamuni's teaching through transmission",
+      "summary": "The passage is traditionally voiced by the Buddha, while the surviving text is preserved through monastic memory, compilation and transmission, so it is marked recorded_by_others.",
+      "relationType": "attributed_to",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:buddha-early-texts"
+      ]
+    },
+    {
+      "id": "relation:sakyamuni-remembered-sarnath",
+      "source": "figure:sakyamuni",
+      "target": "place:sarnath",
+      "label": "Remembered through Sarnath pilgrimage and heritage",
+      "summary": "Sarnath turns the first-teaching tradition into continuing site, pilgrimage and heritage memory; later memory is not projected back as contemporaneous fact.",
+      "relationType": "remembered_in",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:sarnath-site-record",
+        "source:buddha-early-texts"
+      ]
+    },
+    {
+      "id": "relation:sakyamuni-represented-heart-sutra",
+      "source": "text:heart-sutra",
+      "target": "figure:sakyamuni",
+      "label": "Represents the Buddha within a later Prajñāpāramitā context",
+      "summary": "The later scriptural context of the Heart Sutra places the Buddha within a Prajñāpāramitā teaching and question-and-answer frame; this is literary and religious representation, not direct authorship by Śākyamuni.",
+      "relationType": "represented_by",
+      "evidence": "literary_representation",
+      "confidence": "low",
+      "sourceIds": [
+        "source:heart-sutra-edition",
+        "source:buddha-early-texts"
+      ]
+    },
+    {
+      "id": "relation:sakyamuni-reception-daci-en",
+      "source": "figure:sakyamuni",
+      "target": "event:daci-en-monastery-established",
+      "label": "Enters the Great Ci'en institutional context as a source of Buddhist teaching",
+      "summary": "This relation expresses later Tang monastic and translation-institutional reception of Buddhist origins, not personal participation by Śākyamuni in the monastery's foundation.",
+      "relationType": "influenced",
+      "evidence": "scholarly_interpretation",
+      "confidence": "low",
+      "sourceIds": [
+        "source:buddha-early-texts",
+        "source:buddhist-institutional-records",
+        "source:xuanzang-records"
+      ]
+    },
+    {
+      "id": "relation:turning-text-has-thanissaro-version",
+      "source": "text:dhammacakkappavattana-sutta",
+      "target": "text_version:dhammacakkappavattana-sutta-thanissaro-en",
+      "label": "Has the Thanissaro English translation",
+      "summary": "The discourse work remains separate from a modern English translation, preserving translator and rights boundaries.",
+      "relationType": "has_version",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:sn56-11-thanissaro"
+      ]
+    },
+    {
+      "id": "relation:turning-translation-quoted-thanissaro",
+      "source": "passage:turning-of-dharma-wheel-thanissaro-en",
+      "target": "text_version:dhammacakkappavattana-sutta-thanissaro-en",
+      "label": "Quoted from the Thanissaro English version",
+      "summary": "The English excerpt points to a specific translation and SN 56.11 locator without mixing its wording into the Pāli source layer.",
+      "relationType": "quoted_from_version",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:sn56-11-thanissaro"
+      ]
+    },
+    {
+      "id": "relation:turning-passage-parallel-thanissaro",
+      "source": "passage:turning-of-dharma-wheel-thanissaro-en",
+      "target": "passage:turning-of-dharma-wheel",
+      "label": "Compared with the Pāli SN 56.11 excerpt",
+      "summary": "Both passages share the SN 56.11 textual locator but belong to different language versions; the comparison only exposes wording-layer differences.",
+      "relationType": "comparative_parallel",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:buddha-early-texts",
+        "source:sn56-11-thanissaro"
+      ]
+    },
+    {
+      "id": "relation:turning-translation-attributed-sakyamuni",
+      "source": "passage:turning-of-dharma-wheel-thanissaro-en",
+      "target": "figure:sakyamuni",
+      "label": "English transmission of teaching attributed to Śākyamuni",
+      "summary": "The English witness retains the discourse's traditional speaker attribution while being preserved through Pāli transmission and modern translation.",
+      "relationType": "attributed_to",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:buddha-early-texts",
+        "source:sn56-11-thanissaro"
+      ]
+    }
   ]
 }

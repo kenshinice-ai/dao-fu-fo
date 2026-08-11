@@ -1,0 +1,156 @@
+[
+  {
+    "kind": "event", "slug": "zhuangzi-textual-horizon", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_inferred", "importance": 5, "isFeatured": true,
+    "translations": {
+      "zh-CN": { "title": "《庄子》文本形成视野", "shortSummary": "战国至早期帝国之间的篇章、传述和编纂形成了《庄子》的复合文本传统。", "curatorialDescription": ["事件表示文本层的形成区间，不等同于庄周在某年完成全书。"], "researchNote": "篇章层和注疏节点需继续按版本拆分。", "timeLabel": "约公元前 4–3 世纪", "keyFacts": [] },
+      "en": { "title": "The textual horizon of the Zhuangzi", "shortSummary": "Chapter, transmission and compilation layers across the Warring States and early imperial periods shaped the composite Zhuangzi tradition.", "curatorialDescription": ["The event marks a formation range rather than claiming that Zhuang Zhou completed the whole work in one year."], "researchNote": "Chapter layers and commentaries require version-level separation.", "timeLabel": "c. fourth–third centuries BCE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:zhuangzi-ctext" }],
+    "temporalAssertions": [{ "predicate": "analytic_period", "timeType": "range", "startYear": -350, "endYear": -250, "displayDate": { "zh-CN": "约公元前 4–3 世纪", "en": "c. fourth–third centuries BCE" }, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:zhuangzi-ctext" }],
+    "sourceIds": ["source:zhuangzi-ctext", "source:editorial-method"],
+    "related": [], "profile": { "eventKind": "analytical_period", "historicity": "inferred", "sequenceOrder": 1, "eventScope": "regional" }
+  },
+  {
+    "kind": "event", "slug": "mengzi-travel-and-teaching", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_inferred", "importance": 5, "isFeatured": true,
+    "translations": {
+      "zh-CN": { "title": "孟子游说诸侯与讲学传统", "shortSummary": "孟子游历诸侯、论政和讲学的传述成为儒家政治伦理的重要人物—事件入口。", "curatorialDescription": ["本事件保留游历与言说的传统层，不绘制未经证实的逐站路线。"], "researchNote": "各国行迹、会见对象和文本记录需逐条拆分。", "timeLabel": "约公元前 4 世纪", "keyFacts": [] },
+      "en": { "title": "Mencius's itinerant counsel and teaching", "shortSummary": "Accounts of Mencius travelling among rulers, offering counsel and teaching became a major figure–event entry for Confucian political ethics.", "curatorialDescription": ["The event keeps itinerary and speech in a traditional layer and does not draw an unverified stop-by-stop route."], "researchNote": "States visited, interlocutors and textual records require separate entries.", "timeLabel": "c. fourth century BCE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "confucianism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:mengzi-ctext" }],
+    "temporalAssertions": [{ "predicate": "activity", "timeType": "range", "startYear": -330, "endYear": -300, "displayDate": { "zh-CN": "约公元前 4 世纪", "en": "c. fourth century BCE" }, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:mengzi-ctext" }],
+    "sourceIds": ["source:mengzi-ctext", "source:editorial-method"],
+    "related": [], "profile": { "eventKind": "other", "historicity": "inferred", "sequenceOrder": 2, "eventScope": "regional" }
+  },
+  {
+    "kind": "event", "slug": "celestial-masters-tradition-formation", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "traditional_account", "importance": 4, "isFeatured": true,
+    "translations": {
+      "zh-CN": { "title": "天师道传统的形成与组织化", "shortSummary": "张道陵及其后继谱系被放入东汉至六朝的组织、授受与神圣化形成层。", "curatorialDescription": ["事件连接人物、文本和鹤鸣山传统空间，但不把后世谱系全部写回东汉现场。"], "researchNote": "教团组织、经箓文本和祖师谱系需要分别核对。", "timeLabel": "传统置于东汉；约 142 的传述节点", "keyFacts": [] },
+      "en": { "title": "Formation and organisation of the Celestial Masters tradition", "shortSummary": "Zhang Daoling and successor lineages are placed within Eastern Han to Six Dynasties layers of organisation, transmission and sacralisation.", "curatorialDescription": ["The event connects figure, text and Heming Mountain traditions without projecting the entire later lineage into an Eastern Han scene."], "researchNote": "Organisation, registers and founder genealogies require separate verification.", "timeLabel": "Traditionally placed in the Eastern Han; a transmitted c. 142 node", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "traditional_account", "sourceId": "source:zhang-daoling-ctext" }],
+    "temporalAssertions": [{ "predicate": "traditional_occurrence", "timeType": "traditional_date", "startYear": 142, "endYear": 142, "displayDate": { "zh-CN": "传统置于东汉；约 142 的传述节点", "en": "Traditionally placed in the Eastern Han; a transmitted c. 142 node" }, "confidence": "low", "evidenceLayer": "traditional_account", "sourceId": "source:zhang-daoling-ctext" }],
+    "sourceIds": ["source:zhang-daoling-ctext", "source:editorial-method"],
+    "related": [], "profile": { "eventKind": "other", "historicity": "contested", "sequenceOrder": 3, "eventScope": "regional" }
+  },
+  {
+    "kind": "event", "slug": "ge-hong-baopuzi-activity", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 5, "isFeatured": true,
+    "translations": {
+      "zh-CN": { "title": "葛洪《抱朴子》文本活动", "shortSummary": "东晋时期的《抱朴子》写作与知识整理连接道教、炼养、伦理和政治论述。", "curatorialDescription": ["事件突出文本工程和知识网络，不把后世神仙叙事当作同一层的实验记录。"], "researchNote": "内外篇、版本和地域活动需继续细化。", "timeLabel": "约 317–330", "keyFacts": [] },
+      "en": { "title": "Ge Hong's Baopuzi textual activity", "shortSummary": "Eastern Jin writing and knowledge organisation in the Baopuzi connect Daoist cultivation, ethics, politics and technical discourse.", "curatorialDescription": ["The event foregrounds textual work and knowledge networks rather than treating later immortality narratives as laboratory records."], "researchNote": "Inner/outer chapters, versions and regional activity require refinement.", "timeLabel": "c. 317–330", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:baopuzi-ctext" }],
+    "temporalAssertions": [{ "predicate": "composition", "timeType": "range", "startYear": 317, "endYear": 330, "displayDate": { "zh-CN": "约 317–330", "en": "c. 317–330" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:baopuzi-ctext" }],
+    "sourceIds": ["source:baopuzi-ctext", "source:editorial-method"],
+    "related": [], "profile": { "eventKind": "editorial_project", "historicity": "documented", "sequenceOrder": 4, "eventScope": "regional" }
+  },
+  {
+    "kind": "event", "slug": "ashoka-edicts-and-dhamma", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 5, "isFeatured": true,
+    "translations": {
+      "zh-CN": { "title": "阿育王敕诏与法政策", "shortSummary": "阿育王时期的敕诏把治理、伦理政策、铭刻和跨区域传播放在同一历史事件框架中。", "curatorialDescription": ["敕诏与后世佛教传记分开呈现；桑奇是现实遗址锚点，不代表阿育王全部活动范围。"], "researchNote": "敕诏分类、遗址序列和佛教网络需进一步细分。", "timeLabel": "约公元前 268–232 年", "keyFacts": [] },
+      "en": { "title": "Ashoka's edicts and dhamma policy", "shortSummary": "Ashokan edicts place governance, ethical policy, inscriptions and transregional circulation in one historical event frame.", "curatorialDescription": ["Edicts and later Buddhist biography remain separate; Sanchi is a real-site anchor, not the full extent of Ashoka's activity."], "researchNote": "Edict groups, site sequence and Buddhist networks require further separation.", "timeLabel": "c. 268–232 BCE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:ashoka-edicts-unesco" }],
+    "temporalAssertions": [{ "predicate": "policy", "timeType": "range", "startYear": -268, "endYear": -232, "displayDate": { "zh-CN": "约公元前 268–232 年", "en": "c. 268–232 BCE" }, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:ashoka-edicts-unesco" }],
+    "sourceIds": ["source:ashoka-edicts-unesco", "source:unesco-sanchi", "source:editorial-method"],
+    "related": [], "profile": { "eventKind": "policy", "historicity": "documented", "sequenceOrder": 5, "eventScope": "imperial" }
+  },
+  {
+    "kind": "event", "slug": "nagarjuna-madhyamaka-horizon", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_inferred", "importance": 5, "isFeatured": true,
+    "translations": {
+      "zh-CN": { "title": "龙树与中观论辩的形成视野", "shortSummary": "约公元 2–3 世纪的中观论辩构成龙树及其后世解释传统的思想事件入口。", "curatorialDescription": ["人物年代、文本归属和后世中观影响分开建模，不把学派发展倒写为单一生平事实。"], "researchNote": "作品归属、地区和汉译链需继续核对。", "timeLabel": "约公元 150–250 年", "keyFacts": [] },
+      "en": { "title": "The Madhyamaka horizon associated with Nāgārjuna", "shortSummary": "Second- to third-century Madhyamaka debate provides an event entry into Nāgārjuna and later interpretive traditions.", "curatorialDescription": ["Figure dating, textual attribution and later Madhyamaka influence remain separate rather than turning school development into one biography."], "researchNote": "Work attribution, regional setting and Chinese transmission require review.", "timeLabel": "c. 150–250 CE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:nagarjuna-sep" }],
+    "temporalAssertions": [{ "predicate": "analytic_period", "timeType": "range", "startYear": 150, "endYear": 250, "displayDate": { "zh-CN": "约公元 150–250 年", "en": "c. 150–250 CE" }, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:nagarjuna-sep" }],
+    "sourceIds": ["source:nagarjuna-sep", "source:editorial-method"],
+    "related": [], "profile": { "eventKind": "analytical_period", "historicity": "inferred", "sequenceOrder": 6, "eventScope": "transregional" }
+  },
+  {
+    "kind": "event", "slug": "kumarajiva-changan-translations", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 5, "isFeatured": true,
+    "translations": {
+      "zh-CN": { "title": "鸠摩罗什长安译经活动", "shortSummary": "约 401–413 年的长安译经活动把龟兹、后秦都城、译场和汉译佛典连接起来。", "curatorialDescription": ["译者、译场、参与者与单部经典保持不同节点；不把团队成果归于单一译者。"], "researchNote": "具体译本、译场人员和版本流传需接入目录级来源。", "timeLabel": "约 401–413", "keyFacts": [] },
+      "en": { "title": "Kumarajiva's translation activity in Chang'an", "shortSummary": "Translation activity around 401–413 connected Kucha, the Later Qin capital, translation institutions and Chinese Buddhist texts.", "curatorialDescription": ["Translator, translation bureau, collaborators and individual scriptures remain separate; team production is not assigned to one translator alone."], "researchNote": "Specific translations, personnel and version transmission require catalogue-level sources.", "timeLabel": "c. 401–413", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:kumarajiva-biography" }],
+    "temporalAssertions": [{ "predicate": "translation", "timeType": "range", "startYear": 401, "endYear": 413, "displayDate": { "zh-CN": "约 401–413", "en": "c. 401–413" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:kumarajiva-biography" }],
+    "sourceIds": ["source:kumarajiva-biography", "source:editorial-method"],
+    "related": [], "profile": { "eventKind": "editorial_project", "historicity": "documented", "sequenceOrder": 7, "eventScope": "transregional" }
+  },
+  {
+    "kind": "event", "slug": "faxian-pilgrimage-and-foguoji", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 5, "isFeatured": true,
+    "translations": {
+      "zh-CN": { "title": "法显求法与《佛国记》记录", "shortSummary": "约 399–414 年的求法旅行和归国记录把长安、南亚学习网络与汉文旅行文本连接起来。", "curatorialDescription": ["路线节点保留现实地理与区域尺度，不把重建路线当作逐日事实。"], "researchNote": "出发、停留和归返节点需继续按文本段落定位。", "timeLabel": "约 399–414", "keyFacts": [] },
+      "en": { "title": "Faxian's pilgrimage and the Foguoji record", "shortSummary": "The pilgrimage and post-return record around 399–414 connects Chang'an, South Asian learning networks and a Chinese travel text.", "curatorialDescription": ["Waypoints retain real geography and regional scale without presenting a reconstructed route as a day-by-day fact."], "researchNote": "Departure, stops and return nodes require passage-level localisation.", "timeLabel": "c. 399–414", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:faxian-foguoji" }],
+    "temporalAssertions": [{ "predicate": "route_activity", "timeType": "range", "startYear": 399, "endYear": 414, "displayDate": { "zh-CN": "约 399–414", "en": "c. 399–414" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:faxian-foguoji" }],
+    "sourceIds": ["source:faxian-foguoji", "source:historical-geography", "source:editorial-method"],
+    "related": [], "profile": { "eventKind": "journey", "historicity": "documented", "sequenceOrder": 8, "eventScope": "transregional" }
+  },
+  {
+    "kind": "event", "slug": "pangu-cosmogenesis", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "mythic_symbolic", "importance": 5, "isFeatured": true,
+    "translations": {
+      "zh-CN": { "title": "盘古开辟天地", "shortSummary": "盘古开辟叙事是中国宇宙生成神话的象征性事件，不进入现实历史年代或地理地图。", "curatorialDescription": ["事件进入神话时间与象征空间，用来展示宇宙秩序如何被叙述。"], "researchNote": "不同文本中的盘古版本、成书时代和后世图像需分开记录。", "timeLabel": "神话时间：无单一历史纪年", "keyFacts": [] },
+      "en": { "title": "Pangu separates heaven and earth", "shortSummary": "Pangu's creation narrative is a symbolic cosmogenic event, not an entry on a real historical timeline or geographic map.", "curatorialDescription": ["The event belongs to mythic time and symbolic space, showing how cosmic order is narrated."], "researchNote": "Versions, textual dates and later visual memory require separate records.", "timeLabel": "Mythic time: no single historical date", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "mythic_symbolic", "sourceId": "source:mythic-figures-ctext" }],
+    "temporalAssertions": [{ "predicate": "traditional_occurrence", "timeType": "atemporal", "displayDate": { "zh-CN": "神话时间：无单一历史纪年", "en": "Mythic time: no single historical date" }, "confidence": "unknown", "evidenceLayer": "mythic_symbolic", "sourceId": "source:mythic-figures-ctext" }],
+    "sourceIds": ["source:mythic-figures-ctext", "source:editorial-method"],
+    "related": [], "profile": { "eventKind": "other", "historicity": "mythic", "sequenceOrder": 9, "eventScope": "cosmological" }
+  },
+  {
+    "kind": "event", "slug": "nuwa-repairing-sky", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "mythic_symbolic", "importance": 5, "isFeatured": true,
+    "translations": {
+      "zh-CN": { "title": "女娲补天与造人", "shortSummary": "女娲补天与造人叙事把创生、修复和秩序重建组织为神话事件。", "curatorialDescription": ["事件不对应现实地图地点；女娲的后世祭祀和艺术记忆另建接受层。"], "researchNote": "女娲版本、文本见证和地域信仰需继续拆分。", "timeLabel": "神话时间：无单一历史纪年", "keyFacts": [] },
+      "en": { "title": "Nuwa creates humans and repairs the sky", "shortSummary": "Nuwa's creation and sky-repair narratives organise generation, repair and restored order as a mythic event.", "curatorialDescription": ["The event has no real geographic coordinate; later cult and visual memory belong to reception layers."], "researchNote": "Versions, textual witnesses and regional traditions require separation.", "timeLabel": "Mythic time: no single historical date", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "mythic_symbolic", "sourceId": "source:nuwa-british-museum" }],
+    "temporalAssertions": [{ "predicate": "traditional_occurrence", "timeType": "atemporal", "displayDate": { "zh-CN": "神话时间：无单一历史纪年", "en": "Mythic time: no single historical date" }, "confidence": "unknown", "evidenceLayer": "mythic_symbolic", "sourceId": "source:nuwa-british-museum" }],
+    "sourceIds": ["source:nuwa-british-museum", "source:mythic-figures-ctext", "source:editorial-method"],
+    "related": [], "profile": { "eventKind": "other", "historicity": "mythic", "sequenceOrder": 10, "eventScope": "cosmological" }
+  },
+  {
+    "kind": "event", "slug": "fuxi-trigrams-and-order", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "mythic_symbolic", "importance": 5, "isFeatured": true,
+    "translations": {
+      "zh-CN": { "title": "伏羲画卦与秩序生成", "shortSummary": "伏羲画卦叙事把符号、分类与宇宙秩序连接起来。", "curatorialDescription": ["卦象是象征和思想史的入口，不把传说人物当作可考的制度发明者。"], "researchNote": "伏羲谱系、卦象传统与后世图像需分开标注。", "timeLabel": "神话时间：无单一历史纪年", "keyFacts": [] },
+      "en": { "title": "Fu Xi draws the trigrams and orders the world", "shortSummary": "Fu Xi's trigram narrative links symbols, classification and cosmic order.", "curatorialDescription": ["The trigrams are an entry into symbolic and intellectual history, not evidence of a historically verified inventor."], "researchNote": "Fu Xi genealogies, trigram traditions and later visual memory require separate labels.", "timeLabel": "Mythic time: no single historical date", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "mythic_symbolic", "sourceId": "source:fuxi-british-museum" }],
+    "temporalAssertions": [{ "predicate": "traditional_occurrence", "timeType": "atemporal", "displayDate": { "zh-CN": "神话时间：无单一历史纪年", "en": "Mythic time: no single historical date" }, "confidence": "unknown", "evidenceLayer": "mythic_symbolic", "sourceId": "source:fuxi-british-museum" }],
+    "sourceIds": ["source:fuxi-british-museum", "source:mythic-figures-ctext", "source:editorial-method"],
+    "related": [], "profile": { "eventKind": "other", "historicity": "mythic", "sequenceOrder": 11, "eventScope": "cosmological" }
+  },
+  {
+    "kind": "event", "slug": "huangdi-legendary-sovereignty", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "mythic_symbolic", "importance": 5, "isFeatured": true,
+    "translations": {
+      "zh-CN": { "title": "黄帝传说中的秩序与统治", "shortSummary": "黄帝叙事把祖先谱系、政治秩序、医术和后世国家象征汇入传说人物层。", "curatorialDescription": ["黄帝不是被放入可考的公元前纪年，而是在传说与后世政治记忆中定位。"], "researchNote": "五帝叙事、黄帝术数和国家象征需逐层拆分。", "timeLabel": "传说时代：无可考生年", "keyFacts": [] },
+      "en": { "title": "Legendary sovereignty and order around Huangdi", "shortSummary": "Huangdi narratives gather ancestral genealogy, political order, medicine and later state symbolism around a legendary figure.", "curatorialDescription": ["Huangdi is not assigned a speculative BCE date; the entry locates him in legend and later political memory."], "researchNote": "Five Emperors narratives, technical traditions and state symbolism require separate layers.", "timeLabel": "Legendary time: no verifiable birth date", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "mythic_symbolic", "sourceId": "source:huangdi-ctext" }],
+    "temporalAssertions": [{ "predicate": "traditional_occurrence", "timeType": "atemporal", "displayDate": { "zh-CN": "传说时代：无可考生年", "en": "Legendary time: no verifiable birth date" }, "confidence": "unknown", "evidenceLayer": "mythic_symbolic", "sourceId": "source:huangdi-ctext" }],
+    "sourceIds": ["source:huangdi-ctext", "source:mythic-figures-ctext", "source:editorial-method"],
+    "related": [], "profile": { "eventKind": "other", "historicity": "mythic", "sequenceOrder": 12, "eventScope": "cosmological" }
+  },
+  {
+    "kind": "event", "slug": "xiwangmu-kunlun-tradition", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "mythic_symbolic", "importance": 5, "isFeatured": true,
+    "translations": {
+      "zh-CN": { "title": "西王母与昆仑神圣传统", "shortSummary": "西王母与昆仑叙事把仙境、长生、边界和神圣女性形象连接成象征空间。", "curatorialDescription": ["昆仑在本馆作为神圣象征空间呈现，不与现实山地坐标混淆。"], "researchNote": "文本、图像与地方祭祀传统需分别建档。", "timeLabel": "神话与神圣传统时间：无单一历史纪年", "keyFacts": [] },
+      "en": { "title": "Xi Wangmu and the Kunlun sacred tradition", "shortSummary": "Xi Wangmu and Kunlun narratives connect immortality, boundaries and a sacred female figure in symbolic space.", "curatorialDescription": ["Kunlun is presented as sacred symbolic space and is not conflated with coordinates for a real mountain range."], "researchNote": "Texts, images and local cult traditions require separate records.", "timeLabel": "Mythic and sacred traditional time: no single historical date", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "mythic_symbolic", "sourceId": "source:xi-wangmu-british-museum" }],
+    "temporalAssertions": [{ "predicate": "traditional_occurrence", "timeType": "atemporal", "displayDate": { "zh-CN": "神话与神圣传统时间：无单一历史纪年", "en": "Mythic and sacred traditional time: no single historical date" }, "confidence": "unknown", "evidenceLayer": "mythic_symbolic", "sourceId": "source:xi-wangmu-british-museum" }],
+    "sourceIds": ["source:xi-wangmu-british-museum", "source:mythic-figures-ctext", "source:editorial-method"],
+    "related": [], "profile": { "eventKind": "other", "historicity": "mythic", "sequenceOrder": 13, "eventScope": "cosmological" }
+  },
+  {
+    "kind": "event", "slug": "taishang-laojun-sacralisation", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "later_deification", "importance": 5, "isFeatured": true,
+    "translations": {
+      "zh-CN": { "title": "老子神格化为太上老君", "shortSummary": "后世道教把老子纳入神圣谱系，形成太上老君这一独立身份与天界空间。", "curatorialDescription": ["事件只描述神格化和接受史，不把太上老君的天界身份回写成老子历史生平。"], "researchNote": "出现年代、经典形成和三清谱系需继续按文本与仪式资料核对。", "timeLabel": "约汉末至唐代的后世层（200–700）", "keyFacts": [] },
+      "en": { "title": "Laozi's sacralisation as Taishang Laojun", "shortSummary": "Later Daoist traditions placed Laozi within a sacred genealogy, forming Taishang Laojun as a distinct identity and celestial space.", "curatorialDescription": ["The event describes sacralisation and reception without writing Taishang Laojun's celestial identity back into Laozi's historical biography."], "researchNote": "Emergence, textual formation and Three Pure Ones genealogy require textual and ritual review.", "timeLabel": "Later layer from late Han to Tang (200–700)", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "later_deification", "sourceId": "source:taishang-laojun-ctext" }],
+    "temporalAssertions": [{ "predicate": "deification", "timeType": "range", "startYear": 200, "endYear": 700, "displayDate": { "zh-CN": "约汉末至唐代的后世层（200–700）", "en": "Later layer from late Han to Tang (200–700)" }, "confidence": "low", "evidenceLayer": "later_deification", "sourceId": "source:taishang-laojun-ctext" }],
+    "sourceIds": ["source:taishang-laojun-ctext", "source:editorial-method"],
+    "related": [], "profile": { "eventKind": "other", "historicity": "traditional", "sequenceOrder": 14, "eventScope": "cosmological" }
+  }
+]

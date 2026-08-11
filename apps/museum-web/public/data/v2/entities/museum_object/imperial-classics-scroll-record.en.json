@@ -1,0 +1,40 @@
+{
+  "id": "ff77ea03-e426-57ba-94da-8fbd0e88bc65",
+  "locale": "en",
+  "kind": "museum_object",
+  "slug": "imperial-classics-scroll-record",
+  "title": "State-school classics scroll (object placeholder)",
+  "tradition": "confucianism",
+  "evidence": "historical_inferred",
+  "timeLabel": "Object pending; Tang official-learning context",
+  "shortSummary": "A scroll object can show how classics entered official learning through copying, collation and teaching.",
+  "curatorialDescription": [
+    "The object type remains separate from any particular manuscript of the Corrected Meanings; no collection is assigned."
+  ],
+  "researchNote": "Classic, date, material, text version, accession and image licence are required.",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:object-records",
+      "title": "Pending catalogue of museum objects and image records",
+      "locator": "对象类型、馆藏机构、图像权利和编号待补",
+      "grade": "C",
+      "role": "Placeholder source for Alpha object cards, not a publishable collection claim"
+    },
+    {
+      "id": "source:education-classics-records",
+      "title": "Records on the Tang Guozijian and classical learning institutions",
+      "locator": "国子监、经学与《五经正义》制度语境；底本待核",
+      "grade": "B",
+      "role": "Research reference for state education, classical commentary and knowledge institutions"
+    }
+  ],
+  "profile": {
+    "objectType": "manuscript_scroll",
+    "rightsStatus": "unknown",
+    "collectionStatus": "placeholder"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

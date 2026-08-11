@@ -1,0 +1,50 @@
+{
+  "id": "9599aa6a-7f94-535a-a8bc-ba832eb1120f",
+  "locale": "zh-CN",
+  "kind": "event",
+  "slug": "confucius-asks-laozi-about-rites",
+  "title": "孔子适周问礼于老子",
+  "tradition": "daoism",
+  "evidence": "traditional_account",
+  "timeLabel": "传统叙事：春秋晚期；年代不确",
+  "shortSummary": "《史记》把孔子向周地老子问礼的叙事保存为儒道相遇的早期史传入口。",
+  "curatorialDescription": [
+    "这是一个有明确文本出处、但不能直接还原为现场逐字记录的传统事件。它适合展示两位人物如何在后世史传中被放进同一空间和言说关系。"
+  ],
+  "researchNote": "《史记》的记载提供史传层；周都地点、会见年代和老子临别言说的历史性仍应标记为传统叙事，不作为无争议事实。",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:shiji-laozi-biography",
+      "title": "《史记·老子韩非列传》",
+      "locator": "《史记·老子韩非列传》：老子姓李名耳；孔子适周问礼于老子；老子西出函谷关叙事",
+      "grade": "A",
+      "role": "李耳身份、孔子问礼叙事与老子传统形成层的早期史传依据",
+      "url": "https://ctext.org/shiji/lao-zi-han-fei-lie-zhuan/zhs"
+    },
+    {
+      "id": "source:shiji-confucius-biography",
+      "title": "《史记·孔子世家》",
+      "locator": "《史记·孔子世家》：孔子问礼于周、修诗书礼乐、以诗书礼乐教弟子等段落",
+      "grade": "A",
+      "role": "孔子生平、周游、教学与后世史传形象的早期史传依据",
+      "url": "https://ctext.org/shiji/kong-zi-shi-jia/zhs"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "道·儒·佛文明数字博物馆策展与方法说明",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "项目的策展框架与术语规则"
+    }
+  ],
+  "profile": {
+    "eventKind": "other",
+    "historicity": "traditional",
+    "sequenceOrder": 1,
+    "eventScope": "regional"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

@@ -1,0 +1,110 @@
+{
+  "kind": "text",
+  "slug": "dhammacakkappavattana-sutta",
+  "publicationState": "public",
+  "reviewStatus": "publishable",
+  "primaryEvidenceLayer": "historical_inferred",
+  "importance": 5,
+  "isFeatured": true,
+  "translations": {
+    "zh-CN": {
+      "title": "《转法轮经》（Dhammacakkappavattana Sutta）",
+      "subtitle": "鹿野苑初转法轮传统中的早期佛教经文",
+      "shortSummary": "《转法轮经》把佛陀在鹿野苑向五比丘说法的传统保存为一组可追溯的经文传承。",
+      "curatorialDescription": [
+        "本馆把‘佛陀说法’作为经文传述和后世编纂层来展示，不把文本当作现代意义上的现场录音或逐字速记。"
+      ],
+      "researchNote": "SN 56.11 的文本、语言、结集和传抄历史需要与鹿野苑考古遗址及后世汉译传统分别连接。",
+      "timeLabel": "早期佛教传述；文本形成与结集年代不等同于佛陀生平",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "文本类型",
+            "en": "Text kind"
+          },
+          "value": {
+            "zh-CN": "早期佛教经文",
+            "en": "Early Buddhist discourse"
+          }
+        },
+        {
+          "label": {
+            "zh-CN": "核心地点",
+            "en": "Key place"
+          },
+          "value": {
+            "zh-CN": "鹿野苑（Isipatana）",
+            "en": "Sarnath (Isipatana)"
+          }
+        }
+      ]
+    },
+    "en": {
+      "title": "Dhammacakkappavattana Sutta",
+      "subtitle": "An early Buddhist discourse in the tradition of the first turning at Sarnath",
+      "shortSummary": "The Dhammacakkappavattana Sutta preserves a transmitted discourse tradition in which the Buddha teaches the five mendicants at Sarnath.",
+      "curatorialDescription": [
+        "The museum presents ‘the Buddha taught’ as a transmitted and compiled textual layer, not as a modern recording or verbatim stenographic transcript."
+      ],
+      "researchNote": "The text, its language, recitation and compilation history must be connected separately to Sarnath's archaeology and later Chinese translation traditions.",
+      "timeLabel": "Early Buddhist transmission; textual formation is not the same as the Buddha's lifetime",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "文本类型",
+            "en": "Text kind"
+          },
+          "value": {
+            "zh-CN": "早期佛教经文",
+            "en": "Early Buddhist discourse"
+          }
+        },
+        {
+          "label": {
+            "zh-CN": "核心地点",
+            "en": "Key place"
+          },
+          "value": {
+            "zh-CN": "鹿野苑（Isipatana）",
+            "en": "Sarnath (Isipatana)"
+          }
+        }
+      ]
+    }
+  },
+  "traditions": [
+    {
+      "tradition": "buddhism",
+      "role": "primary",
+      "isPrimary": true,
+      "confidence": "high",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:buddha-early-texts"
+    }
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "textual_attestation",
+      "timeType": "range",
+      "startYear": -300,
+      "endYear": 200,
+      "displayDate": {
+        "zh-CN": "早期佛教传述；文本形成与结集年代仍需分层",
+        "en": "Early Buddhist transmission; textual formation and compilation remain layered questions"
+      },
+      "confidence": "low",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:buddha-early-texts"
+    }
+  ],
+  "sourceIds": [
+    "source:buddha-early-texts",
+    "source:editorial-method"
+  ],
+  "profile": {
+    "textKind": "scripture",
+    "originalLanguageCode": "pli",
+    "canonicalStatus": "canonical",
+    "attributionStatus": "traditional"
+  }
+}

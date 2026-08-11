@@ -1,0 +1,46 @@
+{
+  "id": "2051108a-65de-5572-8123-fabd77ffdc36",
+  "locale": "zh-CN",
+  "kind": "museum_object",
+  "slug": "translation-bureau-tablet",
+  "title": "译经机构碑刻记录（对象记录占位）",
+  "subtitle": "制度空间的物质证据入口",
+  "tradition": "buddhism",
+  "evidence": "historical_inferred",
+  "timeLabel": "对象记录待核；唐代译经制度语境",
+  "shortSummary": "对象卡尝试把译经制度从人物传记中拆出来，寻找建筑、碑刻和机构记忆的物质载体。",
+  "curatorialDescription": [
+    "当前是对象记录占位；页面不会展示未经授权或未经确认的碑刻图像。"
+  ],
+  "researchNote": "需要绑定具体碑刻、拓片或馆藏记录，并补充年代、地点、文字释读和图像权利。",
+  "keyFacts": [
+    {
+      "label": "对象类型",
+      "value": "碑刻或拓片记录（待核）"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:object-records",
+      "title": "博物馆藏品与图像记录待建档清单",
+      "locator": "对象类型、馆藏机构、图像权利和编号待补",
+      "grade": "C",
+      "role": "Alpha 对象卡片的占位来源；不是可直接发布的藏品断言"
+    },
+    {
+      "id": "source:buddhist-institutional-records",
+      "title": "隋唐寺院、译场与僧团制度资料",
+      "locator": "大慈恩寺、译经场与寺院网络专题；底本待核",
+      "grade": "B",
+      "role": "寺院、译经机构和佛教城市网络的制度语境"
+    }
+  ],
+  "profile": {
+    "objectType": "inscription_record",
+    "rightsStatus": "unknown",
+    "collectionStatus": "placeholder"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

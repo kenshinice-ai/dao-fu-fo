@@ -1,0 +1,46 @@
+{
+  "id": "98f243b5-4044-5ca0-a2c0-12b8388bd3d0",
+  "locale": "en",
+  "kind": "concept",
+  "slug": "form-and-emptiness",
+  "title": "Form and emptiness",
+  "subtitle": "A short phrase, textual structure and histories of interpretation",
+  "tradition": "buddhism",
+  "evidence": "scholarly_interpretation",
+  "timeLabel": "Scriptural concept; Sui–Tang circulation focus",
+  "shortSummary": "Form and emptiness is one of the Heart Sutra's most cited expressions, but it must be read within a specific version, passage structure and Prajnaparamita context.",
+  "curatorialDescription": [
+    "The museum separates concept, passage and version cards so visitors see the wording and locator before entering comparison and interpretation.",
+    "Traditions can be placed side by side without treating shared translated words such as emptiness, Dao or ritual as one system of thought."
+  ],
+  "researchNote": "Variant readings, translator attribution, the history of Chinese terminology and scholarship on cross-tradition comparison still need citations.",
+  "keyFacts": [
+    {
+      "label": "Text entry",
+      "value": "Heart Sutra passages and versions"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:heart-sutra-edition",
+      "title": "Chinese editions and catalogues of the Heart Sutra",
+      "locator": "第2节：舍利子，色不异空，空不异色，色即是空，空即是色",
+      "grade": "A",
+      "role": "Initial basis for the passage text and version locator",
+      "url": "https://ctext.org/wiki.pl?chapter=412996&if=en"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "Curatorial and methodological notes of the Dao–Ru–Fo Digital Museum",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "Curatorial framework and terminology rules"
+    }
+  ],
+  "profile": {
+    "conceptKind": "doctrinal"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

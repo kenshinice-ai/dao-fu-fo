@@ -1,0 +1,56 @@
+{
+  "id": "3a18eab5-4b48-58fb-b7e2-3fbc7782e4c0",
+  "locale": "zh-CN",
+  "kind": "place",
+  "slug": "qiuci",
+  "title": "龟兹",
+  "subtitle": "丝绸之路上的语言、音乐与佛教交流节点",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "隋唐交通与佛教交流语境",
+  "shortSummary": "龟兹使求法路线不再只是从长安指向印度的直线，而成为多语言、多宗教和多种媒介交错的区域。",
+  "curatorialDescription": [
+    "本条使用现实地理层描述区域节点；具体佛寺、石窟、人物与艺术对象需要另建条目。",
+    "“龟兹”是历史名称，现代地理对应和历史范围不能用一个点位完全替代。"
+  ],
+  "researchNote": "需要补充历史地名对应、考古报告、石窟和语言文化资料的具体定位。",
+  "keyFacts": [
+    {
+      "label": "地点类型",
+      "value": "历史区域节点"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:historical-geography",
+      "title": "隋唐历史地理与城市沿革资料",
+      "locator": "长安、洛阳、敦煌历史名称与地理范围",
+      "grade": "A",
+      "role": "真实地点、历史名称和坐标示意的地理依据"
+    },
+    {
+      "id": "source:unesco-silk-roads-corridor",
+      "title": "UNESCO 世界遗产中心：丝绸之路长安—天山廊道路网",
+      "locator": "World Heritage List no. 1442; component coordinates and corridor description",
+      "grade": "A",
+      "role": "长安、洛阳、大雁塔、龟兹区域遗址及跨区域廊道的地理依据",
+      "url": "https://whc.unesco.org/en/list/1442/maps/"
+    },
+    {
+      "id": "source:buddhist-biographical-records",
+      "title": "隋唐高僧传记与求法记录资料",
+      "locator": "义净、玄奘及求法僧侣条目；底本与卷页待核",
+      "grade": "B",
+      "role": "佛教人物、求法路线与译经活动的研究入口"
+    }
+  ],
+  "profile": {
+    "placeReality": "approximate_region",
+    "geometryType": "point",
+    "coordinateConfidence": "not_applicable",
+    "geographicSourceId": "source:unesco-silk-roads-corridor"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

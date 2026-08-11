@@ -1,0 +1,50 @@
+{
+  "id": "f5d20c94-a228-5498-9c9a-5abf34bbfc7a",
+  "locale": "zh-CN",
+  "kind": "passage",
+  "slug": "learning-increases-dao-decreases",
+  "title": "为学日益，为道日损",
+  "tradition": "daoism",
+  "evidence": "historical_inferred",
+  "timeLabel": "传世本第四十八章",
+  "shortSummary": "章句以“益”与“损”对照学习积累和趋向无为的实践方向。",
+  "curatorialDescription": [
+    "“损”不被简单译成反知识，而需在整章和注释传统中理解。"
+  ],
+  "researchNote": "需补通行本异文、注本和英译比较。",
+  "keyFacts": [],
+  "related": [
+    {
+      "kind": "text",
+      "slug": "daodejing",
+      "title": "《道德经》",
+      "relation": "摘录自"
+    }
+  ],
+  "sources": [
+    {
+      "id": "source:daodejing-edition",
+      "title": "《道德经》通行本与章句资料",
+      "locator": "第二十五章（“人法地，地法天，天法道，道法自然”）",
+      "grade": "A",
+      "role": "道家 passage 原文和章次定位的初始依据",
+      "url": "https://ctext.org/text.pl?if=en&node=11616&show=parallel"
+    }
+  ],
+  "profile": {
+    "textSlug": "daodejing",
+    "textVersionSlug": "daodejing-received",
+    "passageKind": "classic_saying",
+    "locatorOriginal": "第四十八章",
+    "locatorNormalised": "Daodejing 48",
+    "originalText": "为学日益，为道日损。损之又损，以至于无为。无为而无不为。",
+    "punctuatedText": "为学日益，为道日损。损之又损，以至于无为。无为而无不为。",
+    "modernZh": "求学每日增加，行道每日减损；减损又减损，直到无为，而无为并非无所成就。",
+    "translationEn": "In learning one increases daily; in the Dao one decreases daily, decreasing until non-forcing, through which nothing is left undone.",
+    "ritualSensitivity": "public_textual",
+    "attributionStatus": "anonymous_or_composite",
+    "variantReadings": []
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

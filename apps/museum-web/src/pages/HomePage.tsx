@@ -1,5 +1,6 @@
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 import { Link } from "react-router-dom";
+import { CivilisationMap } from "../components/CivilisationMap";
 import { ErrorState, LoadingState } from "../components/LoadingState";
 import { Icon } from "../components/Icon";
 import { TraditionMark } from "../components/TraditionMark";
@@ -7,6 +8,82 @@ import { useMuseumContext } from "../context";
 import { staticData } from "../data/staticData";
 import { useStaticData } from "../data/useStaticData";
 import { entityPath, withLang } from "../routing";
+import type { ReadModelRelationIndex } from "@drf-museum/domain-schema";
+import type { MapContextData, Locale, OverviewData, Tradition } from "../types";
+
+interface HomeAtlasData extends MapContextData {
+  relations: ReadModelRelationIndex;
+}
+
+function HomeAtlasPreview({ data, locale }: { data: OverviewData; locale: Locale }) {
+  const loader = useCallback(async (signal: AbortSignal): Promise<HomeAtlasData> => {
+    const [mapContext, relations] = await Promise.all([
+      staticData.mapContext(locale, signal),
+      staticData.relations(locale, signal),
+    ]);
+    return { ...mapContext, relations };
+  }, [locale]);
+  const { data: atlas, error } = useStaticData(loader);
+  const [focus, setFocus] = useState<string>();
+  const traditions: Tradition[] = ["daoism", "confucianism", "buddhism"];
+
+  return (
+    <div className="home-atlas-panel">
+      <div className="home-atlas-panel-header">
+        <div>
+          <p className="eyebrow">Atlas / {locale === "zh-CN" ? "全历史时空" : "Full historical space-time"}</p>
+          <h2>{locale === "zh-CN" ? "先从地图进入" : "Begin with the map"}</h2>
+        </div>
+        <Link className="text-link" to={withLang("/explore?view=map", locale)}>
+          {locale === "zh-CN" ? "打开完整地图" : "Open full map"} <Icon name="arrow" />
+        </Link>
+      </div>
+      {error ? <ErrorState locale={locale} error={error} /> : null}
+      {!error && !atlas ? <LoadingState locale={locale} /> : null}
+      {atlas ? <CivilisationMap
+        className="home-atlas-map"
+        data={atlas.map}
+        routes={atlas.routes}
+        locale={locale}
+        traditions={traditions}
+        focus={focus}
+        relations={atlas.relations}
+        searchItems={atlas.searchItems}
+        onFocus={setFocus}
+      /> : null}
+      <div className="home-atlas-index">
+        <div className="home-atlas-index-heading">
+          <div>
+            <span className="control-label">{locale === "zh-CN" ? "人物索引" : "Figure index"}</span>
+            <strong>{locale === "zh-CN" ? "选择人物，沿着他的时空关系继续" : "Choose a figure and follow their space-time relations"}</strong>
+          </div>
+          <span>{data.featuredFigures.length} {locale === "zh-CN" ? "位当前人物" : "figures indexed"}</span>
+        </div>
+        <div className="home-atlas-figure-list">
+          {data.featuredFigures.map((figure) => (
+            <article className={`home-atlas-figure-card tradition-card-${figure.tradition}`} key={figure.slug}>
+              <div className="home-atlas-figure-title">
+                <TraditionMark tradition={figure.tradition} size="sm" />
+                <strong>{figure.title}</strong>
+              </div>
+              <span>{figure.timeLabel} · {figure.placeLabel}</span>
+              <div className="home-atlas-figure-actions">
+                <Link to={withLang(`/explore?view=${figure.spaceView ?? "map"}&focus=figure:${figure.slug}`, locale)}>
+                  {figure.spaceView === "cosmos"
+                    ? (locale === "zh-CN" ? "象征空间" : "Cosmos")
+                    : (locale === "zh-CN" ? "地图" : "Map")}
+                </Link>
+                <Link to={entityPath(figure.kind, figure.slug, locale)}>
+                  {locale === "zh-CN" ? "档案" : "Dossier"}
+                </Link>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export function HomePage() {
   const { locale } = useMuseumContext();
@@ -15,10 +92,11 @@ export function HomePage() {
 
   if (error) return <ErrorState locale={locale} error={error} />;
   if (!data) return <LoadingState locale={locale} />;
+  const totalFigureCount = data.traditions.reduce((total, tradition) => total + tradition.counts.figures, 0);
 
   return (
     <>
-      <section className="home-hero">
+      <section className="home-hero home-atlas-hero">
         <div className="hero-copy">
           <p className="eyebrow">{data.eyebrow}</p>
           <h1>{data.heroTitle}</h1>
@@ -38,32 +116,7 @@ export function HomePage() {
             <small>{data.exhibition.sections} / {data.exhibition.minutes} min</small>
           </div>
         </div>
-
-        <div className="civilisation-rivers" aria-label={locale === "zh-CN" ? "道儒佛三条文明河流" : "Three civilisational currents"}>
-          <svg viewBox="0 0 620 760" role="img">
-            <title>{locale === "zh-CN" ? "道儒佛在历史中相遇的抽象图" : "Abstract diagram of three traditions meeting through history"}</title>
-            <defs>
-              <linearGradient id="paperGlow" x1="0" x2="1">
-                <stop offset="0" stopColor="#fbf8f0" />
-                <stop offset="1" stopColor="#e8e0d0" />
-              </linearGradient>
-            </defs>
-            <rect x="0" y="0" width="620" height="760" rx="28" fill="url(#paperGlow)" />
-            <path className="river river-daoist" d="M90 30C140 155 360 130 326 275S154 410 228 542 465 611 530 730" />
-            <path className="river river-confucian" d="M310 20C260 158 118 203 196 330s286 97 229 240-179 112-213 176" />
-            <path className="river river-buddhist" d="M530 24C500 160 394 206 446 332s-30 220-200 405" />
-            <circle cx="326" cy="275" r="74" className="river-confluence" />
-            <text x="326" y="268" textAnchor="middle">{locale === "zh-CN" ? "长安" : "Chang'an"}</text>
-            <text x="326" y="298" textAnchor="middle" className="river-year">650</text>
-            <g className="river-label river-label-daoist"><circle cx="96" cy="72" r="24" /><text x="96" y="80" textAnchor="middle">道</text></g>
-            <g className="river-label river-label-confucian"><circle cx="310" cy="62" r="24" /><text x="310" y="70" textAnchor="middle">儒</text></g>
-            <g className="river-label river-label-buddhist"><circle cx="524" cy="68" r="24" /><text x="524" y="76" textAnchor="middle">佛</text></g>
-          </svg>
-          <div className="rivers-caption">
-            <span>{locale === "zh-CN" ? "三条传统，不是三座孤岛" : "Three traditions, not three islands"}</span>
-            <small>{locale === "zh-CN" ? "时间 · 地理 · 经典 · 人物" : "Time · place · texts · figures"}</small>
-          </div>
-        </div>
+        <HomeAtlasPreview data={data} locale={locale} />
       </section>
 
       <section className="tradition-section section-shell" aria-labelledby="tradition-heading">
@@ -92,6 +145,45 @@ export function HomePage() {
               <span className="card-link">{locale === "zh-CN" ? "进入" : "Enter"} <Icon name="arrow" /></span>
             </Link>
           ))}
+        </div>
+      </section>
+
+      <section className="figure-spotlight section-shell" aria-labelledby="figure-spotlight-heading">
+        <div className="section-heading">
+          <p className="eyebrow">04 / {locale === "zh-CN" ? "人物入口" : "Figure gateways"}</p>
+          <h2 id="figure-spotlight-heading">{locale === "zh-CN" ? "人物、空间与时间" : "People, place and time"}</h2>
+          <p>{locale === "zh-CN" ? "从老子、孔子与释迦牟尼等源头人物，到历代思想家、译经家、制度人物与后世接受；每个人物都回到具体地点、事件、文本和后世影响。" : "From source figures such as Laozi, Confucius and Śākyamuni to thinkers, translators, institutional figures and later reception across the centuries, each person returns to a place, event, text and later influence."}</p>
+        </div>
+        <div className="figure-spotlight-grid">
+          {data.featuredFigures.map((figure, index) => (
+            <Link
+              className={`figure-spotlight-card tradition-card-${figure.tradition}`}
+              key={figure.slug}
+              to={entityPath(figure.kind, figure.slug, locale)}
+            >
+              <div className="figure-spotlight-topline">
+                <span className="figure-spotlight-index">{String(index + 1).padStart(2, "0")}</span>
+                <span className={`figure-spotlight-tradition tradition-${figure.tradition}`}>
+                  <TraditionMark tradition={figure.tradition} size="sm" />
+                  {figure.traditionLabel}
+                </span>
+              </div>
+              <h3>{figure.title}</h3>
+              <p className="figure-spotlight-role">{figure.role}</p>
+              <p className="figure-spotlight-summary">{figure.summary}</p>
+              <dl>
+                <div><dt>{locale === "zh-CN" ? "时间" : "Time"}</dt><dd>{figure.timeLabel}</dd></div>
+                <div><dt>{locale === "zh-CN" ? "地点" : "Place"}</dt><dd>{figure.placeLabel}</dd></div>
+              </dl>
+              <span className="figure-spotlight-link">{locale === "zh-CN" ? "查看人物档案" : "Open figure dossier"} <Icon name="arrow" /></span>
+            </Link>
+          ))}
+        </div>
+        <div className="figure-spotlight-footer">
+          <span>{locale === "zh-CN" ? `当前收录 ${totalFigureCount} 位人物，三种传统；空间待核处明确保留证据边界。` : `${totalFigureCount} figures across three traditions; pending places remain explicitly marked.`}</span>
+          <Link className="text-link" to={withLang("/compare?set=cross-era-figures", locale)}>
+            {locale === "zh-CN" ? "进入跨时代人物比较" : "Open cross-era figure comparison"} <Icon name="arrow" />
+          </Link>
         </div>
       </section>
 

@@ -1,8 +1,8 @@
 {
   "kind": "figure",
   "slug": "xuanzang",
-  "publicationState": "preview",
-  "reviewStatus": "bilingual_reviewed",
+  "publicationState": "public",
+  "reviewStatus": "publishable",
   "primaryEvidenceLayer": "historical_documented",
   "importance": 5,
   "isFeatured": true,
@@ -105,6 +105,7 @@
   ],
   "profile": {
     "historicity": "documented",
+    "figureClass": "historical_person",
     "gender": "male",
     "canonicalNameOriginal": "玄奘",
     "nameLanguageCode": "lzh"

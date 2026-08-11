@@ -1,0 +1,144 @@
+[
+  {
+    "kind": "event",
+    "slug": "confucius-asks-laozi-about-rites",
+    "publicationState": "public",
+    "reviewStatus": "publishable",
+    "primaryEvidenceLayer": "traditional_account",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "孔子适周问礼于老子",
+        "shortSummary": "《史记》把孔子向周地老子问礼的叙事保存为儒道相遇的早期史传入口。",
+        "curatorialDescription": [
+          "这是一个有明确文本出处、但不能直接还原为现场逐字记录的传统事件。它适合展示两位人物如何在后世史传中被放进同一空间和言说关系。"
+        ],
+        "researchNote": "《史记》的记载提供史传层；周都地点、会见年代和老子临别言说的历史性仍应标记为传统叙事，不作为无争议事实。",
+        "timeLabel": "传统叙事：春秋晚期；年代不确",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Confucius visits Zhou to ask Laozi about rites",
+        "shortSummary": "The Shiji preserves Confucius's visit to Laozi in Zhou as an early historiographical entry into a Dao–Ru encounter.",
+        "curatorialDescription": [
+          "This is a textually located tradition, not a recoverable verbatim transcript of a meeting. It is useful for showing how later historiography places two figures within one spatial and speech relationship."
+        ],
+        "researchNote": "The Shiji provides the historiographical layer. The capital's exact site, meeting date and farewell sayings remain marked as traditional rather than uncontested fact.",
+        "timeLabel": "Traditional account: late Spring and Autumn period; date uncertain",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "traditional_account",
+        "sourceId": "source:shiji-laozi-biography"
+      },
+      {
+        "tradition": "confucianism",
+        "role": "secondary",
+        "isPrimary": false,
+        "confidence": "medium",
+        "evidenceLayer": "traditional_account",
+        "sourceId": "source:shiji-confucius-biography"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "traditional_occurrence",
+        "timeType": "traditional_date",
+        "startYear": -550,
+        "endYear": -500,
+        "displayDate": {
+          "zh-CN": "传统叙事：春秋晚期；年代不确",
+          "en": "Traditional account: late Spring and Autumn period; date uncertain"
+        },
+        "confidence": "low",
+        "evidenceLayer": "traditional_account",
+        "sourceId": "source:shiji-confucius-biography"
+      }
+    ],
+    "sourceIds": [
+      "source:shiji-laozi-biography",
+      "source:shiji-confucius-biography",
+      "source:editorial-method"
+    ],
+    "profile": {
+      "eventKind": "other",
+      "historicity": "traditional",
+      "sequenceOrder": 1,
+      "eventScope": "regional"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "buddha-first-sermon-at-sarnath",
+    "publicationState": "public",
+    "reviewStatus": "publishable",
+    "primaryEvidenceLayer": "traditional_account",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "佛陀在鹿野苑初转法轮",
+        "shortSummary": "早期佛教文本和后世遗产传统把鹿野苑记为佛陀向最初弟子说法的重要地点。",
+        "curatorialDescription": [
+          "事件、文本和遗址分别建模：经文保存的是教法传述，鹿野苑保存的是现实遗址和后世朝圣记忆，三者不压缩成一条无层次的传记事实。"
+        ],
+        "researchNote": "事件年代采用宽泛传统区间；SN 56.11 的文本传承、遗址考古层和现代世界遗产叙事需要分别阅读。",
+        "timeLabel": "传统叙事：约公元前 5 世纪；年代有争议",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "The Buddha's first sermon at Sarnath",
+        "shortSummary": "Early Buddhist texts and later heritage traditions remember Sarnath as the place where the Buddha taught his first disciples.",
+        "curatorialDescription": [
+          "Event, text and site remain separate: the discourse is a transmitted teaching, Sarnath is a real archaeological place, and later pilgrimage memory is not compressed into one undifferentiated biography."
+        ],
+        "researchNote": "The event uses a broad traditional range. The transmission of SN 56.11, archaeological layers and the modern World Heritage narrative require separate reading.",
+        "timeLabel": "Traditional account: around the fifth century BCE; dates contested",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "traditional_account",
+        "sourceId": "source:buddha-early-texts"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "traditional_occurrence",
+        "timeType": "traditional_date",
+        "startYear": -500,
+        "endYear": -400,
+        "displayDate": {
+          "zh-CN": "传统叙事：约公元前 5 世纪；年代有争议",
+          "en": "Traditional account: around the fifth century BCE; dates contested"
+        },
+        "confidence": "low",
+        "evidenceLayer": "traditional_account",
+        "sourceId": "source:buddha-early-texts"
+      }
+    ],
+    "sourceIds": [
+      "source:buddha-early-texts",
+      "source:sarnath-site-record",
+      "source:editorial-method"
+    ],
+    "profile": {
+      "eventKind": "other",
+      "historicity": "traditional",
+      "sequenceOrder": 2,
+      "eventScope": "regional"
+    }
+  }
+]

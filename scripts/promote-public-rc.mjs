@@ -3,6 +3,7 @@ import { spawnSync } from "node:child_process";
 import { readFile, readdir, rename, writeFile } from "node:fs/promises";
 import { join, resolve } from "node:path";
 import { PublicReleaseCandidateSchema } from "@drf-museum/domain-schema";
+import { getContentArtifactRoot } from "./artifact-roots.mjs";
 
 const apply = process.argv.includes("--apply");
 const promotedByArgument = process.argv.find((argument) => argument.startsWith("--promoted-by="));
@@ -148,7 +149,7 @@ try {
   await writeChanges();
   run("npm", ["run", "build:content:public"]);
   run("npm", ["run", "verify:content:public"]);
-  const checksumsPath = resolve(repoRoot, ".artifacts/content/public-v2/manifest/checksums.json");
+  const checksumsPath = resolve(getContentArtifactRoot("public", repoRoot), "manifest/checksums.json");
   const artifactChecksumSha256 = sha256(await readFile(checksumsPath));
   const promotedCandidate = PublicReleaseCandidateSchema.parse({
     ...candidate,

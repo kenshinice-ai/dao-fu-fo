@@ -1,0 +1,41 @@
+{
+  "id": "aa1275ad-261f-5616-bd4c-b4e4ce6cf333",
+  "locale": "en",
+  "kind": "text_version",
+  "slug": "great-tang-records-western-regions-received",
+  "title": "Received edited version of the Record of the Western Regions",
+  "subtitle": "A research entry point for locating travel passages",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "Modern edited version; corresponding to a Tang text",
+  "shortSummary": "This version record supports passage locators, translation and variant comparison for the Record of the Western Regions.",
+  "curatorialDescription": [
+    "A version record is not the author's manuscript; it records the edited text used and the base-text information still to be checked."
+  ],
+  "researchNote": "Editor, publisher, edition, page references or digital identifier still need to be added.",
+  "keyFacts": [
+    {
+      "label": "Version type",
+      "value": "Edited received edition"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:buddhist-biographical-records",
+      "title": "Biographical and pilgrimage records of Sui–Tang Buddhist monks",
+      "locator": "义净、玄奘及求法僧侣条目；底本与卷页待核",
+      "grade": "B",
+      "role": "Research entry point for Buddhist figures, pilgrimage routes and translation activity"
+    }
+  ],
+  "profile": {
+    "textSlug": "great-tang-records-western-regions",
+    "versionKind": "edition",
+    "languageCode": "zh",
+    "citationLabel": "《大唐西域记》整理本（待补版本信息）",
+    "rightsStatus": "external_reference_only"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

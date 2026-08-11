@@ -1,8 +1,8 @@
 {
   "kind": "place",
   "slug": "changan",
-  "publicationState": "preview",
-  "reviewStatus": "bilingual_reviewed",
+  "publicationState": "public",
+  "reviewStatus": "publishable",
   "primaryEvidenceLayer": "historical_documented",
   "importance": 5,
   "isFeatured": true,
@@ -18,8 +18,26 @@
       "researchNote": "当前为历史城市级别的 Alpha 地点，尚未把寺院、宫观、国子监和译经场拆成完整 institution/place 对。",
       "timeLabel": "隋唐重点：581–907",
       "keyFacts": [
-        { "label": { "zh-CN": "地点类型", "en": "Place type" }, "value": { "zh-CN": "帝国都城", "en": "Imperial capital" } },
-        { "label": { "zh-CN": "现代对应", "en": "Modern referent" }, "value": { "zh-CN": "今西安一带", "en": "Area of present-day Xi'an" } }
+        {
+          "label": {
+            "zh-CN": "地点类型",
+            "en": "Place type"
+          },
+          "value": {
+            "zh-CN": "帝国都城",
+            "en": "Imperial capital"
+          }
+        },
+        {
+          "label": {
+            "zh-CN": "现代对应",
+            "en": "Modern referent"
+          },
+          "value": {
+            "zh-CN": "今西安一带",
+            "en": "Area of present-day Xi'an"
+          }
+        }
       ]
     },
     "en": {
@@ -33,19 +51,84 @@
       "researchNote": "This is an Alpha city-level place. Monasteries, Daoist institutions, the Guozijian and translation sites have not yet been modelled as complete institution/place pairs.",
       "timeLabel": "Sui–Tang focus: 581–907",
       "keyFacts": [
-        { "label": { "zh-CN": "地点类型", "en": "Place type" }, "value": { "zh-CN": "帝国都城", "en": "Imperial capital" } },
-        { "label": { "zh-CN": "现代对应", "en": "Modern referent" }, "value": { "zh-CN": "今西安一带", "en": "Area of present-day Xi'an" } }
+        {
+          "label": {
+            "zh-CN": "地点类型",
+            "en": "Place type"
+          },
+          "value": {
+            "zh-CN": "帝国都城",
+            "en": "Imperial capital"
+          }
+        },
+        {
+          "label": {
+            "zh-CN": "现代对应",
+            "en": "Modern referent"
+          },
+          "value": {
+            "zh-CN": "今西安一带",
+            "en": "Area of present-day Xi'an"
+          }
+        }
       ]
     }
   },
   "traditions": [
-    { "tradition": "buddhism", "role": "syncretic", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:historical-geography" },
-    { "tradition": "daoism", "role": "syncretic", "isPrimary": false, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:historical-geography" },
-    { "tradition": "confucianism", "role": "syncretic", "isPrimary": false, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:historical-geography" }
+    {
+      "tradition": "buddhism",
+      "role": "syncretic",
+      "isPrimary": true,
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:historical-geography"
+    },
+    {
+      "tradition": "daoism",
+      "role": "syncretic",
+      "isPrimary": false,
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:historical-geography"
+    },
+    {
+      "tradition": "confucianism",
+      "role": "syncretic",
+      "isPrimary": false,
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:historical-geography"
+    }
   ],
   "temporalAssertions": [
-    { "predicate": "activity", "timeType": "range", "startYear": 581, "endYear": 907, "displayDate": { "zh-CN": "隋唐重点：581–907", "en": "Sui–Tang focus: 581–907" }, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:historical-geography" }
+    {
+      "predicate": "activity",
+      "timeType": "range",
+      "startYear": 581,
+      "endYear": 907,
+      "displayDate": {
+        "zh-CN": "隋唐重点：581–907",
+        "en": "Sui–Tang focus: 581–907"
+      },
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:sui-tang-changan-urban-study"
+    }
   ],
-  "sourceIds": ["source:historical-geography", "source:unesco-silk-roads-corridor", "source:editorial-method"],
-  "profile": { "placeReality": "real_historical", "geometryType": "point", "coordinates": [108.942, 34.261], "coordinateConfidence": "centroid", "geographicSourceId": "source:historical-geography" }
+  "sourceIds": [
+    "source:historical-geography",
+    "source:sui-tang-changan-urban-study",
+    "source:unesco-silk-roads-corridor",
+    "source:editorial-method"
+  ],
+  "profile": {
+    "placeReality": "real_historical",
+    "geometryType": "point",
+    "coordinates": [
+      108.942,
+      34.261
+    ],
+    "coordinateConfidence": "centroid",
+    "geographicSourceId": "source:sui-tang-changan-urban-study"
+  }
 }

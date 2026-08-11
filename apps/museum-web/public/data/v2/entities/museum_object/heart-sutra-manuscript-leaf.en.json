@@ -1,0 +1,47 @@
+{
+  "id": "a62f0f3a-539b-54b4-ad12-6d6bd8c6a381",
+  "locale": "en",
+  "kind": "museum_object",
+  "slug": "heart-sutra-manuscript-leaf",
+  "title": "Heart Sutra manuscript leaf (object placeholder)",
+  "subtitle": "From passage to material carrier",
+  "tradition": "buddhism",
+  "evidence": "historical_inferred",
+  "timeLabel": "Object record pending; Sui–Tang circulation context",
+  "shortSummary": "The object card places a Heart Sutra passage within paper, ink, writing, preservation and circulation, but is not yet tied to a specific collection.",
+  "curatorialDescription": [
+    "This is an Alpha object-record placeholder; it does not claim that a collecting institution has confirmed the object or licensed an image."
+  ],
+  "researchNote": "Institution, accession number, date, material, dimensions, image rights and version relationship still need to be added.",
+  "keyFacts": [
+    {
+      "label": "Object type",
+      "value": "Manuscript leaf (pending verification)"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:object-records",
+      "title": "Pending catalogue of museum objects and image records",
+      "locator": "对象类型、馆藏机构、图像权利和编号待补",
+      "grade": "C",
+      "role": "Placeholder source for Alpha object cards, not a publishable collection claim"
+    },
+    {
+      "id": "source:heart-sutra-edition",
+      "title": "Chinese editions and catalogues of the Heart Sutra",
+      "locator": "第2节：舍利子，色不异空，空不异色，色即是空，空即是色",
+      "grade": "A",
+      "role": "Initial basis for the passage text and version locator",
+      "url": "https://ctext.org/wiki.pl?chapter=412996&if=en"
+    }
+  ],
+  "profile": {
+    "objectType": "manuscript",
+    "rightsStatus": "unknown",
+    "collectionStatus": "placeholder"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

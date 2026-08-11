@@ -1,0 +1,42 @@
+{
+  "id": "076f9c85-6e57-517b-afa7-215006ac47c4",
+  "locale": "zh-CN",
+  "kind": "figure",
+  "slug": "cheng-xuanying",
+  "title": "成玄英",
+  "tradition": "daoism",
+  "evidence": "historical_inferred",
+  "timeLabel": "约 7 世纪",
+  "shortSummary": "成玄英提供了观察唐初《道德经》《庄子》解释活动与道教知识网络的入口。",
+  "curatorialDescription": [
+    "本条目把注疏活动放在文本版本、宫观与帝国知识制度之间，而不把后世归纳直接当作生平事实。"
+  ],
+  "researchNote": "生卒年、具体任职和注本传承仍需以版本目录及人物资料逐项核定。",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:daoist-historical-record",
+      "title": "隋唐道教人物与制度研究资料",
+      "locator": "人物、宫观与皇室关系专题",
+      "grade": "B",
+      "role": "司马承祯及隋唐道教制度语境的学术参考"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "道·儒·佛文明数字博物馆策展与方法说明",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "项目的策展框架与术语规则"
+    }
+  ],
+  "profile": {
+    "historicity": "inferred",
+    "figureClass": "historical_person",
+    "gender": "male",
+    "canonicalNameOriginal": "成玄英",
+    "nameLanguageCode": "lzh"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

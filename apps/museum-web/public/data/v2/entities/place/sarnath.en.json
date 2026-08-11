@@ -1,0 +1,65 @@
+{
+  "id": "e3c88298-e03c-5f1d-ad68-a8fcdc99b934",
+  "locale": "en",
+  "kind": "place",
+  "slug": "sarnath",
+  "title": "Sarnath",
+  "subtitle": "A first-teaching tradition and later Buddhist pilgrimage site",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "Early Buddhist tradition through the site's first-millennium development; modern conservation continues",
+  "shortSummary": "Sarnath connects Śākyamuni, the first-turning-of-the-Dharma tradition, early monastic memory and later Buddhist pilgrimage to a real archaeological place.",
+  "curatorialDescription": [
+    "The real map shows a geographic reference for the archaeological site; the claim that the Buddha first taught here belongs to a layered history of texts, tradition and heritage memory.",
+    "The place record does not treat surviving monuments as a literal scene from the fifth century BCE. Teaching tradition, archaeological remains and modern conservation remain separate layers."
+  ],
+  "researchNote": "The coordinate is a site-level schematic point. The first-teaching narrative comes from early Buddhist texts and later heritage memory; architectural phases and pilgrimage history still require periodisation.",
+  "keyFacts": [
+    {
+      "label": "Place type",
+      "value": "Real historical place / archaeological site"
+    },
+    {
+      "label": "Spatial role",
+      "value": "Teaching, monastic and pilgrimage-memory site"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:sarnath-site-record",
+      "title": "UNESCO and the Archaeological Survey of India: Ancient Buddhist Site of Sarnath",
+      "locator": "World Heritage List no. 927；鹿野苑遗址、初转法轮传统与遗址保护范围；约 25.381°N, 83.022°E",
+      "grade": "A",
+      "role": "Authoritative geographic and heritage entry for Sarnath's real site, archaeological layers and Buddhist pilgrimage memory",
+      "url": "https://whc.unesco.org/en/list/927/"
+    },
+    {
+      "id": "source:buddha-early-texts",
+      "title": "Early Buddhist texts in the Pāli canon: MN 26 and SN 56.11",
+      "locator": "MN 26 Ariyapariyesanā：求法与到达鹿野苑；SN 56.11 Dhammacakkappavattana：鹿野苑初转法轮文本",
+      "grade": "A",
+      "role": "Primary-text entry for Buddha biography, early teaching traditions and the Sarnath setting; the transmitted discourse is not treated as a verbatim transcript",
+      "url": "https://suttacentral.net/sn56.11/en/sujato"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "Curatorial and methodological notes of the Dao–Ru–Fo Digital Museum",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "Curatorial framework and terminology rules"
+    }
+  ],
+  "profile": {
+    "placeReality": "real_historical",
+    "geometryType": "point",
+    "coordinates": [
+      83.0227,
+      25.3811
+    ],
+    "coordinateConfidence": "centroid",
+    "geographicSourceId": "source:sarnath-site-record"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

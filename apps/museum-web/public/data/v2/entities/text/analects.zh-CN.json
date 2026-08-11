@@ -1,0 +1,48 @@
+{
+  "id": "73870aa6-3666-57d4-a5ad-094be551a2cd",
+  "locale": "zh-CN",
+  "kind": "text",
+  "slug": "analects",
+  "title": "《论语》",
+  "subtitle": "孔门言行与儒家经典文本",
+  "tradition": "confucianism",
+  "evidence": "historical_inferred",
+  "timeLabel": "编纂与流传：战国至汉代区间",
+  "shortSummary": "《论语》通过孔子及其弟子言行保存早期儒家伦理、教育和政治讨论。",
+  "curatorialDescription": [
+    "《论语》不是一个脱离编纂历史的单一作者文本；它在传播、注释和国家教育中不断获得新的制度语境。"
+  ],
+  "researchNote": "篇章形成、传本和注疏关系将在 text-version 与 commentary 数据中继续细化。",
+  "keyFacts": [
+    {
+      "label": "文本类型",
+      "value": "儒家经典"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:analects-edition",
+      "title": "《论语》通行本与篇章资料",
+      "locator": "颜渊第十二，第1章（“克己复礼为仁”）",
+      "grade": "A",
+      "role": "儒家 passage 原文和篇章定位的初始依据",
+      "url": "https://ctext.org/wiki.pl?chapter=198285&if=en&remap=gb"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "道·儒·佛文明数字博物馆策展与方法说明",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "项目的策展框架与术语规则"
+    }
+  ],
+  "profile": {
+    "textKind": "classic",
+    "originalLanguageCode": "lzh",
+    "canonicalStatus": "canonical",
+    "attributionStatus": "composite"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "633ef57c-985b-5094-baab-9f1ec05aec54",
+  "locale": "zh-CN",
+  "kind": "concept",
+  "slug": "classical-commentary",
+  "title": "经典注疏",
+  "tradition": "confucianism",
+  "evidence": "scholarly_interpretation",
+  "timeLabel": "隋唐知识制度重点",
+  "shortSummary": "注疏把经典、历代解释、校勘与教育实践组织成可传递的知识结构。",
+  "curatorialDescription": [
+    "概念不把“儒家经典”看作静态书目，而关注文本如何经由编纂和教学获得制度效力。"
+  ],
+  "researchNote": "后续需按具体经典、版本、注家与官学使用场景拆分。",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:confucian-commentarial-record",
+      "title": "《五经正义》与唐代经学制度资料",
+      "locator": "孔颖达与经学注疏制度",
+      "grade": "B",
+      "role": "孔颖达及唐代经学、教育制度的参考依据"
+    },
+    {
+      "id": "source:education-classics-records",
+      "title": "唐代国子监与经学制度资料",
+      "locator": "国子监、经学与《五经正义》制度语境；底本待核",
+      "grade": "B",
+      "role": "国家教育、经学注疏和知识制度的研究参考"
+    }
+  ],
+  "profile": {
+    "conceptKind": "interpretive_method"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

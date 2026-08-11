@@ -1,0 +1,62 @@
+{
+  "id": "b5bf26aa-b611-5a8c-bdfa-3c6686360275",
+  "locale": "zh-CN",
+  "kind": "passage",
+  "slug": "dao-that-can-be-spoken",
+  "title": "道可道，非常道",
+  "tradition": "daoism",
+  "evidence": "historical_inferred",
+  "timeLabel": "传世本第一章",
+  "shortSummary": "《道德经》开篇以语言、命名与恒常之间的张力建立阅读问题。",
+  "curatorialDescription": [
+    "段落不被处理成拒绝语言的口号，而与版本、章次和后续注释一起展示。"
+  ],
+  "researchNote": "Alpha 暂据通行本，需补出土本异文和唐代注本。",
+  "keyFacts": [],
+  "quote": {
+    "original": "道可道，非常道；名可名，非常名。",
+    "interpretation": "可说、可名与恒常之间的张力是本章的起点。",
+    "locator": "《道德经》第一章"
+  },
+  "related": [
+    {
+      "kind": "text",
+      "slug": "daodejing",
+      "title": "《道德经》",
+      "relation": "摘录自"
+    }
+  ],
+  "sources": [
+    {
+      "id": "source:daodejing-edition",
+      "title": "《道德经》通行本与章句资料",
+      "locator": "第二十五章（“人法地，地法天，天法道，道法自然”）",
+      "grade": "A",
+      "role": "道家 passage 原文和章次定位的初始依据",
+      "url": "https://ctext.org/text.pl?if=en&node=11616&show=parallel"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "道·儒·佛文明数字博物馆策展与方法说明",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "项目的策展框架与术语规则"
+    }
+  ],
+  "profile": {
+    "textSlug": "daodejing",
+    "textVersionSlug": "daodejing-received",
+    "passageKind": "classic_saying",
+    "locatorOriginal": "第一章",
+    "locatorNormalised": "Daodejing 1",
+    "originalText": "道可道，非常道；名可名，非常名。",
+    "punctuatedText": "道可道，非常道；名可名，非常名。",
+    "modernZh": "能够说出的道，不是恒常的道；能够命名的名，不是恒常的名。",
+    "translationEn": "A Dao that can be spoken is not the constant Dao; a name that can be named is not the constant name.",
+    "ritualSensitivity": "public_textual",
+    "attributionStatus": "anonymous_or_composite",
+    "variantReadings": []
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

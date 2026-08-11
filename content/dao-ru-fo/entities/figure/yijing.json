@@ -101,10 +101,13 @@
   ],
   "sourceIds": [
     "source:buddhist-biographical-records",
-    "source:editorial-method"
+    "source:editorial-method",
+    "source:yijing-biography-ctext",
+    "source:yijing-datawiki"
   ],
   "profile": {
     "historicity": "documented",
+    "figureClass": "historical_person",
     "gender": "male",
     "canonicalNameOriginal": "义净",
     "nameLanguageCode": "lzh"

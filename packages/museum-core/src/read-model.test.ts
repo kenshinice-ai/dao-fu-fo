@@ -10,6 +10,8 @@ describe("read-model contract", () => {
     expect(paths.sourceIndex("en")).toBe("/museum/data/v2/sources/en/index.json");
     expect(paths.manifest("quality-report")).toBe("/museum/data/v2/manifest/quality-report.json");
     expect(paths.sacredCosmos("daoism", "zh-CN")).toBe("/museum/data/v2/maps/cosmos/daoism.zh-CN.json");
+    expect(paths.comparison("cross-era-figures", "en")).toBe("/museum/data/v2/comparisons/cross-era-figures.en.json");
+    expect(paths.textReading("three-traditions-passage-reading", "zh-CN")).toBe("/museum/data/v2/text-readings/three-traditions-passage-reading.zh-CN.json");
   });
 
   it("does not treat preview artifacts as public", () => {

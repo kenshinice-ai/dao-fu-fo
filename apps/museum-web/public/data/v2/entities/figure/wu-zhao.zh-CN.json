@@ -1,0 +1,53 @@
+{
+  "id": "8f021f4b-2fec-5986-95b5-4a7a802c77aa",
+  "locale": "zh-CN",
+  "kind": "figure",
+  "slug": "wu-zhao",
+  "title": "武曌（武则天）",
+  "subtitle": "权力、宗教赞助与制度记忆中的女性统治者",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "624–705",
+  "shortSummary": "武曌的政治实践与宗教赞助，使长安和洛阳的制度、仪式与后世记忆成为可以并置研究的场域。",
+  "curatorialDescription": [
+    "本馆将政治权力、宗教赞助和后世神圣化叙事拆开，不把某一种传统的宣传材料直接当作统治事实。",
+    "她的条目用于展示同一人物如何在历史记录、仪式语境和后世记忆中被不同方式书写。"
+  ],
+  "researchNote": "Alpha 条目；需要逐项核对碑刻、正史、仪式文本与后世佛教和道教叙事的证据层。",
+  "keyFacts": [
+    {
+      "label": "身份",
+      "value": "武周统治者"
+    },
+    {
+      "label": "策展用途",
+      "value": "制度、仪式与记忆"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:tang-imperial-records",
+      "title": "隋唐正史人物与制度记录",
+      "locator": "帝王、制度与年代条目；具体版本和卷页待核",
+      "grade": "B",
+      "role": "隋唐人物、都城、制度和事件时间的研究参考"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "道·儒·佛文明数字博物馆策展与方法说明",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "项目的策展框架与术语规则"
+    }
+  ],
+  "profile": {
+    "historicity": "documented",
+    "figureClass": "historical_person",
+    "gender": "female",
+    "canonicalNameOriginal": "武曌",
+    "nameLanguageCode": "lzh"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

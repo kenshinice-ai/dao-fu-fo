@@ -1,0 +1,142 @@
+{
+  "locale": "en",
+  "layer": "sacred_symbolic",
+  "title": "Dao–Ru–Fo symbolic space",
+  "description": "A symbolic space of tradition nodes, comparative relations and a curatorial encounter point; it uses no real-world coordinates.",
+  "disclaimer": "Symbolic space is not a real map and does not collapse Daoist, Confucian and Buddhist cosmologies into one system.",
+  "nodes": [
+    {
+      "id": "tradition:daoism",
+      "kind": "tradition",
+      "slug": "daoism",
+      "label": "Daoist Traditions",
+      "shortLabel": "Dao",
+      "summary": "A tradition node; distinct traditions are not collapsed into one theology.",
+      "tradition": "daoism",
+      "zone": "daoist_tradition",
+      "x": 300,
+      "y": 190,
+      "evidenceLayer": "scholarly_interpretation",
+      "sourceIds": [
+        "source:editorial-method"
+      ]
+    },
+    {
+      "id": "tradition:confucianism",
+      "kind": "tradition",
+      "slug": "confucianism",
+      "label": "Confucian Traditions",
+      "shortLabel": "Ru",
+      "summary": "A tradition node; distinct traditions are not collapsed into one theology.",
+      "tradition": "confucianism",
+      "zone": "confucian_tradition",
+      "x": 510,
+      "y": 330,
+      "evidenceLayer": "scholarly_interpretation",
+      "sourceIds": [
+        "source:editorial-method"
+      ]
+    },
+    {
+      "id": "tradition:buddhism",
+      "kind": "tradition",
+      "slug": "buddhism",
+      "label": "Buddhism",
+      "shortLabel": "Fo",
+      "summary": "A tradition node; distinct traditions are not collapsed into one theology.",
+      "tradition": "buddhism",
+      "zone": "buddhist_tradition",
+      "x": 720,
+      "y": 190,
+      "evidenceLayer": "scholarly_interpretation",
+      "sourceIds": [
+        "source:editorial-method"
+      ]
+    },
+    {
+      "id": "symbolic:encounter",
+      "kind": "symbolic_node",
+      "slug": "encounter",
+      "label": "Encounter",
+      "shortLabel": "Encounter",
+      "summary": "A curatorial comparison node, not a shared theological entity.",
+      "tradition": "convergence",
+      "zone": "comparative_encounter",
+      "x": 510,
+      "y": 260,
+      "evidenceLayer": "scholarly_interpretation",
+      "sourceIds": [
+        "source:editorial-method"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "cosmos:frame:daoism",
+      "source": "symbolic:encounter",
+      "target": "tradition:daoism",
+      "relationType": "comparative_parallel",
+      "label": "Comparative frame",
+      "summary": "Marks encounter and juxtaposition, not doctrinal equivalence.",
+      "confidence": "high",
+      "evidenceLayer": "scholarly_interpretation",
+      "sourceIds": [
+        "source:editorial-method"
+      ]
+    },
+    {
+      "id": "cosmos:frame:confucianism",
+      "source": "symbolic:encounter",
+      "target": "tradition:confucianism",
+      "relationType": "comparative_parallel",
+      "label": "Comparative frame",
+      "summary": "Marks encounter and juxtaposition, not doctrinal equivalence.",
+      "confidence": "high",
+      "evidenceLayer": "scholarly_interpretation",
+      "sourceIds": [
+        "source:editorial-method"
+      ]
+    },
+    {
+      "id": "cosmos:frame:buddhism",
+      "source": "symbolic:encounter",
+      "target": "tradition:buddhism",
+      "relationType": "comparative_parallel",
+      "label": "Comparative frame",
+      "summary": "Marks encounter and juxtaposition, not doctrinal equivalence.",
+      "confidence": "high",
+      "evidenceLayer": "scholarly_interpretation",
+      "sourceIds": [
+        "source:editorial-method"
+      ]
+    },
+    {
+      "id": "relation:daodejing-analects-comparative",
+      "source": "tradition:daoism",
+      "target": "tradition:confucianism",
+      "relationType": "comparative_parallel",
+      "label": "Comparative reading",
+      "summary": "This is a curatorial comparison, not a claim of common authorship, common tradition or direct influence.",
+      "confidence": "medium",
+      "evidenceLayer": "scholarly_interpretation",
+      "sourceIds": [
+        "source:comparative-method",
+        "source:editorial-method"
+      ]
+    },
+    {
+      "id": "relation:heart-sutra-daodejing-comparative",
+      "source": "tradition:buddhism",
+      "target": "tradition:daoism",
+      "relationType": "comparative_parallel",
+      "label": "Conceptual comparison entry",
+      "summary": "The texts can be placed side by side, while their terms, historical contexts and religious functions remain distinct.",
+      "confidence": "medium",
+      "evidenceLayer": "scholarly_interpretation",
+      "sourceIds": [
+        "source:comparative-method",
+        "source:editorial-method"
+      ]
+    }
+  ]
+}

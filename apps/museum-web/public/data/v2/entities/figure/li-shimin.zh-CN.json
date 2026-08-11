@@ -1,0 +1,53 @@
+{
+  "id": "a2459e74-0e7a-5283-9804-0af27ea459cc",
+  "locale": "zh-CN",
+  "kind": "figure",
+  "slug": "li-shimin",
+  "title": "李世民",
+  "subtitle": "唐太宗与都城制度的塑形者",
+  "tradition": "confucianism",
+  "evidence": "historical_documented",
+  "timeLabel": "598–649",
+  "shortSummary": "李世民所处的宫廷、教育和宗教制度语境，帮助解释长安为何成为多种知识与信仰网络的汇聚点。",
+  "curatorialDescription": [
+    "本馆不把皇帝当作三教故事的唯一主角，而是把他放在制度资源、城市空间和不同传统协商的背景中。",
+    "人物条目只承担历史语境功能，具体诏令、机构关系与后世形象需要分别引用。"
+  ],
+  "researchNote": "Alpha 条目；需要按具体事件补齐正史版本、诏令定位和寺院、道观、学校之间的关系证据。",
+  "keyFacts": [
+    {
+      "label": "身份",
+      "value": "唐太宗"
+    },
+    {
+      "label": "策展用途",
+      "value": "制度与城市语境"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:tang-imperial-records",
+      "title": "隋唐正史人物与制度记录",
+      "locator": "帝王、制度与年代条目；具体版本和卷页待核",
+      "grade": "B",
+      "role": "隋唐人物、都城、制度和事件时间的研究参考"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "道·儒·佛文明数字博物馆策展与方法说明",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "项目的策展框架与术语规则"
+    }
+  ],
+  "profile": {
+    "historicity": "documented",
+    "figureClass": "historical_person",
+    "gender": "male",
+    "canonicalNameOriginal": "李世民",
+    "nameLanguageCode": "lzh"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

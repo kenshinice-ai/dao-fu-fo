@@ -1,0 +1,41 @@
+{
+  "id": "8876cdf2-593a-5416-b379-290a1f71f6c9",
+  "locale": "en",
+  "kind": "place",
+  "slug": "zhongnan-mountains",
+  "title": "Zhongnan Mountains",
+  "tradition": "daoism",
+  "evidence": "historical_documented",
+  "timeLabel": "Sui–Tang focus; long cultural landscape",
+  "shortSummary": "The Zhongnan Mountains are a real landscape near Chang'an and a layered setting for cultivation, reclusion and religious narrative.",
+  "curatorialDescription": [
+    "Real geography and sacred narratives coexist here, but the map and symbolic cosmos must remain separate views."
+  ],
+  "researchNote": "Extent, historical names, institutional sites and sacred accounts require item-level sources.",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:historical-geography",
+      "title": "Historical geography and urban gazetteers of the Sui–Tang period",
+      "locator": "长安、洛阳、敦煌历史名称与地理范围",
+      "grade": "A",
+      "role": "Geographic basis for real places, historical names and coordinate approximations"
+    },
+    {
+      "id": "source:daoist-historical-record",
+      "title": "Studies on Daoist figures and institutions in the Sui–Tang period",
+      "locator": "人物、宫观与皇室关系专题",
+      "grade": "B",
+      "role": "Scholarly context for Sima Chengzhen and Sui–Tang Daoist institutions"
+    }
+  ],
+  "profile": {
+    "placeReality": "approximate_region",
+    "geometryType": "point",
+    "coordinateConfidence": "not_applicable",
+    "geographicSourceId": "source:historical-geography"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

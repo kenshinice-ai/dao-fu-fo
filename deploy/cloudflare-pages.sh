@@ -20,6 +20,7 @@ Usage:
   ./deploy/cloudflare-pages.sh projects
   ./deploy/cloudflare-pages.sh create
   ./deploy/cloudflare-pages.sh preview [branch]
+  ./deploy/cloudflare-pages.sh preview-public [branch]
   CONFIRM_PRODUCTION=${PROJECT_NAME} ./deploy/cloudflare-pages.sh production
   ./deploy/cloudflare-pages.sh list [production|preview]
 
@@ -28,6 +29,9 @@ Environment:
   CF_PAGES_PRODUCTION_BRANCH   Production branch (default: ${PRODUCTION_BRANCH})
   WRANGLER_VERSION             Wrangler version/range (default: latest)
   ALLOW_DIRTY_DEPLOY=1         Allow a production upload from a dirty Git tree
+  CF_PAGES_CONTENT_VISIBILITY  preview (default) or public for the uploaded web artifact
+  CF_PAGES_PRODUCTION_VISIBILITY
+                               production artifact visibility (default: public; use preview for Full Alpha)
   CONFIRM_PRODUCTION           Must equal the project name for production
 
 This script does not deploy unless preview or production is explicitly selected.
@@ -49,8 +53,30 @@ git_is_dirty() {
 preflight() {
   cd "${REPO_ROOT}"
 
+  local visibility="${CF_PAGES_CONTENT_VISIBILITY:-preview}"
+  local deployment_mode="${DRF_WEB_DEPLOYMENT_MODE:-prototype}"
+  if [[ "${visibility}" != "preview" && "${visibility}" != "public" ]]; then
+    echo "ERROR: CF_PAGES_CONTENT_VISIBILITY must be preview or public." >&2
+    return 2
+  fi
+
   echo "==> Running repository release gates"
+  # The architecture gates intentionally inspect the prototype staging
+  # boundary. Full Alpha overlay happens only after those gates pass.
+  unset DRF_WEB_DEPLOYMENT_MODE
   npm run check
+
+  if [[ "${visibility}" == "public" ]]; then
+    echo "==> Building the promoted Public RC web artifact"
+    npm run build:content:public
+    npm run verify:content:public
+    npm run build:web:public
+    npm run verify:static
+  elif [[ "${deployment_mode}" == "full-alpha" ]]; then
+    echo "==> Building the complete Alpha web artifact for explicit production synchronization"
+    DRF_WEB_VISIBILITY=preview DRF_WEB_DEPLOYMENT_MODE=full-alpha npm run build -w @drf-museum/web
+    DRF_WEB_VISIBILITY=preview DRF_WEB_DEPLOYMENT_MODE=full-alpha npm run verify:static
+  fi
 
   echo "==> Checking deploy directory"
   [[ -f "${DIST_DIR}/index.html" ]]
@@ -155,7 +181,22 @@ case "${command}" in
     echo "==> Uploading preview branch '${preview_branch}'"
     deploy_branch "${preview_branch}"
     ;;
+  preview-public)
+    preview_branch="${2:-public-rc}"
+    if [[ "${preview_branch}" == "${PRODUCTION_BRANCH}" ]]; then
+      echo "ERROR: preview branch must differ from production branch '${PRODUCTION_BRANCH}'." >&2
+      exit 2
+    fi
+    CF_PAGES_CONTENT_VISIBILITY=public preflight
+    echo "==> Uploading Public RC preview branch '${preview_branch}'"
+    deploy_branch "${preview_branch}"
+    ;;
   production)
+    production_visibility="${CF_PAGES_PRODUCTION_VISIBILITY:-public}"
+    if [[ "${production_visibility}" != "preview" && "${production_visibility}" != "public" ]]; then
+      echo "ERROR: CF_PAGES_PRODUCTION_VISIBILITY must be preview or public." >&2
+      exit 2
+    fi
     if [[ "${CONFIRM_PRODUCTION:-}" != "${PROJECT_NAME}" ]]; then
       echo "ERROR: production upload requires explicit confirmation:" >&2
       echo "  CONFIRM_PRODUCTION=${PROJECT_NAME} ./deploy/cloudflare-pages.sh production" >&2
@@ -166,7 +207,11 @@ case "${command}" in
       echo "Commit the release, or set ALLOW_DIRTY_DEPLOY=1 and record the exception in HANDOFF." >&2
       exit 2
     fi
-    preflight
+    if [[ "${production_visibility}" == "preview" ]]; then
+      CF_PAGES_CONTENT_VISIBILITY=preview DRF_WEB_DEPLOYMENT_MODE=full-alpha preflight
+    else
+      CF_PAGES_CONTENT_VISIBILITY=public preflight
+    fi
     echo "==> Uploading production branch '${PRODUCTION_BRANCH}'"
     deploy_branch "${PRODUCTION_BRANCH}"
     ;;

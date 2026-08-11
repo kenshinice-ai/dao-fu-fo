@@ -1,0 +1,47 @@
+{
+  "id": "aa91d726-1e82-5955-afaf-3d582603ee20",
+  "locale": "en",
+  "kind": "event",
+  "slug": "sui-unification",
+  "title": "The founding and unification of the Sui",
+  "subtitle": "One starting point for the time slice",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "From 581",
+  "shortSummary": "The founding and unification of the Sui provides political context for Sui–Tang institutions, capitals and networks of knowledge.",
+  "curatorialDescription": [
+    "The event record supplies dates and institutional context; it does not treat political unification as a single cause of religious convergence or urban life."
+  ],
+  "researchNote": "Founding, unification, capital changes and reforms need to be split into separate events with official-history and geographic sources.",
+  "keyFacts": [
+    {
+      "label": "Event type",
+      "value": "State formation and unification process"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:tang-imperial-records",
+      "title": "Official histories and institutional records of the Sui–Tang period",
+      "locator": "帝王、制度与年代条目；具体版本和卷页待核",
+      "grade": "B",
+      "role": "Research reference for Sui–Tang figures, capitals, institutions and event dates"
+    },
+    {
+      "id": "source:historical-geography",
+      "title": "Historical geography and urban gazetteers of the Sui–Tang period",
+      "locator": "长安、洛阳、敦煌历史名称与地理范围",
+      "grade": "A",
+      "role": "Geographic basis for real places, historical names and coordinate approximations"
+    }
+  ],
+  "profile": {
+    "eventKind": "dynastic_transition",
+    "historicity": "documented",
+    "sequenceOrder": 1,
+    "eventScope": "imperial"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

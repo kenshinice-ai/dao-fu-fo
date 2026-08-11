@@ -1,31 +1,69 @@
 {
+  "id": "886f4bbe-70e0-577a-be22-92994e833fe8",
   "locale": "en",
   "kind": "figure",
   "slug": "kong-yingda",
   "title": "Kong Yingda",
-  "subtitle": "574–648 · early Tang classical scholar",
+  "subtitle": "Classical scholar and compiler associated with the Corrected Meanings of the Five Classics",
   "tradition": "confucianism",
-  "evidence": "Historically documented",
+  "evidence": "historical_documented",
   "timeLabel": "574–648",
-  "shortSummary": "Kong Yingda connects classical interpretation, collaborative compilation and state education, showing Confucian learning as both intellectual tradition and institutional project.",
+  "shortSummary": "Kong Yingda represents how Tang classical learning entered state education, commentary and institutional knowledge production.",
   "curatorialDescription": [
-    "The classical project associated with Kong Yingda brought interpretation into a state undertaking. It did not merely preserve older texts; it made choices among commentarial traditions, standardised readings and educational uses.",
-    "The museum models figure, text, commentary and institution separately. This allows visitors to ask who compiled, which versions were used and where the work entered education.",
-    "His case also shows why Confucian traditions cannot be reduced to private ethics. Ritual order, schools, officials and textual interpretation all shaped historical influence."
+    "Kong Yingda is not simply a biographical ‘interpreter of classics’. His case brings texts, commentators, editorial projects and state education into the same frame.",
+    "Through him we can see how Confucian traditions moved from textual interpretation into official learning and political order while retaining internal differences and historical context."
   ],
-  "researchNote": "The compilation, revision and official circulation of the Correct Meaning involved multiple participants and stages. The first release uses approximate dates and does not present the project as a single-author book.",
+  "researchNote": "This Alpha structured sample still needs sources for contributors, textual transmission and the Guozijian context.",
   "keyFacts": [
-    { "label": "Core field", "value": "classical learning · commentary · state education" },
-    { "label": "Related text", "value": "Correct Meaning of the Five Classics" },
-    { "label": "Evidence discipline", "value": "collaborative project, not sole authorship" }
+    {
+      "label": "Representative project",
+      "value": "The Five Classics Corrected Meanings"
+    },
+    {
+      "label": "Institutional context",
+      "value": "Classical learning and state education"
+    }
   ],
-  "related": [
-    { "kind": "text", "slug": "correct-meaning-five-classics", "title": "Correct Meaning of the Five Classics", "relation": "led and participated in compilation" },
-    { "kind": "concept", "slug": "ritual", "title": "Ritual", "relation": "classical and institutional theme" },
-    { "kind": "place", "slug": "imperial-academy-changan", "title": "Imperial Academy, Chang'an", "relation": "state educational context" }
-  ],
+  "related": [],
   "sources": [
-    { "title": "Old Book of Tang", "locator": "biography of Kong Yingda", "grade": "A", "role": "biography and classical scholarship" },
-    { "title": "Prefaces to the Correct Meaning and studies of Tang classical learning", "locator": "compilation and circulation", "grade": "B", "role": "textual project and state education; full edition details pending" }
-  ]
+    {
+      "id": "source:kong-new-tang-biography",
+      "title": "Kong Yingda biography in the New Book of Tang, Classical Learning I",
+      "locator": "列传第一百二十三·儒学上：孔颖达传",
+      "grade": "A",
+      "role": "Primary historical locator for Kong Yingda's biography, classical scholarship and Tang state-learning context",
+      "url": "https://ctext.org/wiki.pl?chapter=451765&if=gb&remap=gb"
+    },
+    {
+      "id": "source:kong-wujing-zhengyi-record",
+      "title": "New Book of Tang bibliographic records for Kong Yingda's commissioned commentaries",
+      "locator": "志第四十七·艺文一：孔颖达任国子祭酒并奉诏参与《尚书正义》等经疏编纂",
+      "grade": "A",
+      "role": "Primary bibliographic locator for Kong Yingda's attributed works, imperial commission and state-learning context",
+      "url": "https://ctext.org/wiki.pl?chapter=189091&if=en"
+    },
+    {
+      "id": "source:confucian-commentarial-record",
+      "title": "The Five Classics Corrected Meanings and Tang classical learning",
+      "locator": "孔颖达与经学注疏制度",
+      "grade": "B",
+      "role": "Reference basis for Kong Yingda and Tang classical learning institutions"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "Curatorial and methodological notes of the Dao–Ru–Fo Digital Museum",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "Curatorial framework and terminology rules"
+    }
+  ],
+  "profile": {
+    "historicity": "documented",
+    "figureClass": "historical_person",
+    "gender": "male",
+    "canonicalNameOriginal": "孔颖达",
+    "nameLanguageCode": "lzh"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
 }

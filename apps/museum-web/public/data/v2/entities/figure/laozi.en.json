@@ -1,0 +1,75 @@
+{
+  "id": "82f8072e-ce53-5b91-92fc-9c0d66b64f6c",
+  "locale": "en",
+  "kind": "figure",
+  "slug": "laozi",
+  "title": "Laozi (Li Er)",
+  "subtitle": "A source figure of Daoist classicism and a later object of sacralisation",
+  "tradition": "daoism",
+  "evidence": "traditional_account",
+  "timeLabel": "Traditionally placed in the late Spring and Autumn period; dates contested",
+  "shortSummary": "Laozi is a recognisable gateway into Daoist classicism, but the Li Er biography, the sage-name Laozi, the formation of the Daodejing and the later Taishang Laojun image must remain distinct layers.",
+  "curatorialDescription": [
+    "The museum treats Li Er as a name in early historiographical tradition, Laozi as a figure in intellectual and lineage traditions, and the authorship and formation of the Daodejing as a separate modelled question.",
+    "Laozi can connect an early source horizon with Tang reception and later sacralisation, but fame must not turn every Daoist text into a direct utterance by one person."
+  ],
+  "researchNote": "Life dates and historicity are contested. The Shiji provides an early historiographical layer; textual attribution, the departure through Hangu Pass and later Taishang Laojun sacralisation require separate relations and sources.",
+  "keyFacts": [
+    {
+      "label": "Figure class",
+      "value": "Traditional sage / historiographical figure"
+    },
+    {
+      "label": "Key distinction",
+      "value": "Li Er, Laozi, the Daodejing and Taishang Laojun remain distinct"
+    }
+  ],
+  "related": [
+    {
+      "kind": "text",
+      "slug": "daodejing",
+      "title": "Daodejing",
+      "relation": "Traditional attribution and textual debate"
+    },
+    {
+      "kind": "place",
+      "slug": "luoyang",
+      "title": "Luoyang",
+      "relation": "Zhou rites-asking narrative context"
+    }
+  ],
+  "sources": [
+    {
+      "id": "source:shiji-laozi-biography",
+      "title": "Records of the Historian: Biographies of Laozi and Han Fei",
+      "locator": "《史记·老子韩非列传》：老子姓李名耳；孔子适周问礼于老子；老子西出函谷关叙事",
+      "grade": "A",
+      "role": "Early historiographical basis for Li Er, the Confucius–Laozi encounter and layers of the Laozi tradition",
+      "url": "https://ctext.org/shiji/lao-zi-han-fei-lie-zhuan/zhs"
+    },
+    {
+      "id": "source:daodejing-edition",
+      "title": "Received editions and chapter references for the Daodejing",
+      "locator": "第二十五章（“人法地，地法天，天法道，道法自然”）",
+      "grade": "A",
+      "role": "Initial basis for the Daoist passage and chapter locator",
+      "url": "https://ctext.org/text.pl?if=en&node=11616&show=parallel"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "Curatorial and methodological notes of the Dao–Ru–Fo Digital Museum",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "Curatorial framework and terminology rules"
+    }
+  ],
+  "profile": {
+    "historicity": "contested",
+    "figureClass": "traditional_sage",
+    "gender": "male",
+    "canonicalNameOriginal": "李耳 / 老子",
+    "nameLanguageCode": "lzh"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

@@ -1,31 +1,72 @@
 {
+  "id": "570841a0-1645-59a3-bea7-a47bc84c1630",
   "locale": "zh-CN",
   "kind": "place",
   "slug": "changan",
   "title": "长安",
-  "subtitle": "唐代帝国都城",
+  "subtitle": "隋唐帝国的都城与三教交汇点",
   "tradition": "convergence",
-  "evidence": "真实历史地点 · 城市范围",
-  "timeLabel": "隋唐重点展示期 581—907",
-  "shortSummary": "长安把宫廷、官学、寺院、宫观、市场与国际旅人压缩在同一城市，是观察三传统相遇的核心空间。",
+  "evidence": "historical_documented",
+  "timeLabel": "隋唐重点：581–907",
+  "shortSummary": "长安把宫廷、国家教育、寺院、道观、市场和国际旅行者压缩在同一座城市中。",
   "curatorialDescription": [
-    "本馆不把长安当作地图上的一个点，而把它看成制度和关系的密集场。人物进入城市、经典在机构中被翻译或讲授、宗教地点获得国家支持，也可能受到政策限制。",
-    "现代西安与唐长安存在地理延续，但不能直接把现代行政边界当成唐代城市。第一版使用近似中心和地点节点呈现，后续将加入城坊与历史地名层。",
-    "长安同时属于佛、道、儒的历史网络，因此传统标记为“交汇”，不等于三者在城中没有差异。"
+    "长安不是三教和谐共存的抽象背景，而是制度、资源、权威和信仰网络相互竞争又彼此借用的城市空间。",
+    "地图中的位置采用真实地理示意；历史名称、机构性质和具体建筑位置需要随着时代与来源继续细化。"
   ],
-  "researchNote": "当前地图为基于真实经纬度的历史地理示意，不提供考古级精确城坊复原。涉及具体寺观、官学和宫城位置时分别标注坐标置信度。",
+  "researchNote": "当前为历史城市级别的 Alpha 地点，尚未把寺院、宫观、国子监和译经场拆成完整 institution/place 对。",
   "keyFacts": [
-    { "label": "地点现实性", "value": "真实历史城市" },
-    { "label": "坐标精度", "value": "城市近似中心" },
-    { "label": "传统角色", "value": "道 · 儒 · 佛交汇" }
+    {
+      "label": "地点类型",
+      "value": "帝国都城"
+    },
+    {
+      "label": "现代对应",
+      "value": "今西安一带"
+    }
   ],
-  "related": [
-    { "kind": "place", "slug": "great-cien-monastery", "title": "大慈恩寺", "relation": "佛教机构地点" },
-    { "kind": "place", "slug": "imperial-academy-changan", "title": "长安国子监", "relation": "国家教育地点" },
-    { "kind": "figure", "slug": "xuanzang", "title": "玄奘", "relation": "活动人物" }
-  ],
+  "related": [],
   "sources": [
-    { "title": "唐长安城历史地理研究", "locator": "城市格局与城坊研究", "grade": "B", "role": "历史城市范围；正式版补完整书目" },
-    { "title": "现代地理坐标", "locator": "西安城市近似中心", "grade": "C", "role": "地图聚焦，不作为唐代城址精确证明" }
-  ]
+    {
+      "id": "source:historical-geography",
+      "title": "隋唐历史地理与城市沿革资料",
+      "locator": "长安、洛阳、敦煌历史名称与地理范围",
+      "grade": "A",
+      "role": "真实地点、历史名称和坐标示意的地理依据"
+    },
+    {
+      "id": "source:sui-tang-changan-urban-study",
+      "title": "《基于空间信息技术与文化分析的新考古发现：古代中国都城空间关系研究》",
+      "locator": "Remote Sensing 14 (2022), 3298：隋唐都城研究、长安城市图与坐标化空间范围",
+      "grade": "B",
+      "role": "长安隋唐时期、现实西安对应关系与坐标范围的同行评议地理依据",
+      "url": "https://doi.org/10.3390/rs14143298"
+    },
+    {
+      "id": "source:unesco-silk-roads-corridor",
+      "title": "UNESCO 世界遗产中心：丝绸之路长安—天山廊道路网",
+      "locator": "World Heritage List no. 1442; component coordinates and corridor description",
+      "grade": "A",
+      "role": "长安、洛阳、大雁塔、龟兹区域遗址及跨区域廊道的地理依据",
+      "url": "https://whc.unesco.org/en/list/1442/maps/"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "道·儒·佛文明数字博物馆策展与方法说明",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "项目的策展框架与术语规则"
+    }
+  ],
+  "profile": {
+    "placeReality": "real_historical",
+    "geometryType": "point",
+    "coordinates": [
+      108.942,
+      34.261
+    ],
+    "coordinateConfidence": "centroid",
+    "geographicSourceId": "source:sui-tang-changan-urban-study"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
 }

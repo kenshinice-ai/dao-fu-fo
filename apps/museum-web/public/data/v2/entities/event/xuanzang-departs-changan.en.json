@@ -1,0 +1,42 @@
+{
+  "id": "7d3417c2-0fc9-5dd1-9b0b-7f0108c11759",
+  "locale": "en",
+  "kind": "event",
+  "slug": "xuanzang-departs-changan",
+  "title": "Xuanzang departs Chang'an",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "c. 629",
+  "shortSummary": "Around 629, Xuanzang's journey connected Chang'an with pilgrimage networks across the Hexi Corridor, Central Asia and South Asia.",
+  "curatorialDescription": [
+    "Departure begins the route evidence; it does not give every point on later maps equal certainty."
+  ],
+  "researchNote": "Month of departure, permission narratives and the first route segment require comparison across sources.",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:xuanzang-records",
+      "title": "Biography of the Tripiṭaka Master of the Great Ci'en Monastery",
+      "locator": "《大唐大慈恩寺三藏法师传》全书（卷一至卷十）；卷一开篇为玄奘本传，后续卷次记录求法与译经活动",
+      "grade": "A",
+      "role": "Primary biographical basis for Xuanzang's travels and translation work",
+      "url": "https://ctext.org/library.pl?if=en&res=112971"
+    },
+    {
+      "id": "source:historical-geography",
+      "title": "Historical geography and urban gazetteers of the Sui–Tang period",
+      "locator": "长安、洛阳、敦煌历史名称与地理范围",
+      "grade": "A",
+      "role": "Geographic basis for real places, historical names and coordinate approximations"
+    }
+  ],
+  "profile": {
+    "eventKind": "journey",
+    "historicity": "documented",
+    "sequenceOrder": 3,
+    "eventScope": "transregional"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

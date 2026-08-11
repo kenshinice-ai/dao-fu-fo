@@ -1,0 +1,54 @@
+{
+  "id": "49f7230b-02ee-5c86-817e-682f81037303",
+  "locale": "en",
+  "kind": "institution",
+  "slug": "daci-en-monastery",
+  "title": "Great Ci'en Monastery",
+  "subtitle": "A key site for Xuanzang's translation work and Chang'an Buddhist institutions",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "Tang focus: c. 648–907",
+  "shortSummary": "Great Ci'en Monastery is a core institutional entry for connecting Xuanzang, translation, monastic networks and Chang'an's urban space.",
+  "curatorialDescription": [
+    "A monastery was not a static backdrop but an institutional node where people, texts, objects, patronage and ritual activity met.",
+    "This record stays at institution level; the Giant Wild Goose Pagoda, translation spaces and manuscript holdings will become separate place and object records."
+  ],
+  "researchNote": "Monastery history, translation sites, participants and archaeological or image records still require item-level sources and rights information.",
+  "keyFacts": [
+    {
+      "label": "Institution type",
+      "value": "Buddhist monastery and translation site"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:buddhist-institutional-records",
+      "title": "Studies of Sui–Tang monasteries, translation bureaux and monastic institutions",
+      "locator": "大慈恩寺、译经场与寺院网络专题；底本待核",
+      "grade": "B",
+      "role": "Institutional context for monasteries, translation sites and Buddhist urban networks"
+    },
+    {
+      "id": "source:xuanzang-records",
+      "title": "Biography of the Tripiṭaka Master of the Great Ci'en Monastery",
+      "locator": "《大唐大慈恩寺三藏法师传》全书（卷一至卷十）；卷一开篇为玄奘本传，后续卷次记录求法与译经活动",
+      "grade": "A",
+      "role": "Primary biographical basis for Xuanzang's travels and translation work",
+      "url": "https://ctext.org/library.pl?if=en&res=112971"
+    },
+    {
+      "id": "source:historical-geography",
+      "title": "Historical geography and urban gazetteers of the Sui–Tang period",
+      "locator": "长安、洛阳、敦煌历史名称与地理范围",
+      "grade": "A",
+      "role": "Geographic basis for real places, historical names and coordinate approximations"
+    }
+  ],
+  "profile": {
+    "institutionKind": "monastery",
+    "networkScope": false
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

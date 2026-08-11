@@ -1,0 +1,41 @@
+{
+  "id": "614ae18a-ac30-55e1-8eca-7661bdc7f0ee",
+  "locale": "en",
+  "kind": "event",
+  "slug": "wu-zhou-established",
+  "title": "Establishment of the Wu Zhou",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "690",
+  "shortSummary": "The political transition of 690 changed imperial representation, the two-capital system and the allocation of religious resources.",
+  "curatorialDescription": [
+    "The event avoids explaining complex policy with a single pro-Buddhist label and instead anchors edicts, images and institutions in time."
+  ],
+  "researchNote": "Policies, rituals, texts and image projects require separate citations; motives are not inferred from identity alone.",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:tang-imperial-records",
+      "title": "Official histories and institutional records of the Sui–Tang period",
+      "locator": "帝王、制度与年代条目；具体版本和卷页待核",
+      "grade": "B",
+      "role": "Research reference for Sui–Tang figures, capitals, institutions and event dates"
+    },
+    {
+      "id": "source:historical-geography",
+      "title": "Historical geography and urban gazetteers of the Sui–Tang period",
+      "locator": "长安、洛阳、敦煌历史名称与地理范围",
+      "grade": "A",
+      "role": "Geographic basis for real places, historical names and coordinate approximations"
+    }
+  ],
+  "profile": {
+    "eventKind": "dynastic_transition",
+    "historicity": "documented",
+    "sequenceOrder": 9,
+    "eventScope": "imperial"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

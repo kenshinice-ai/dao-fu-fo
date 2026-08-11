@@ -1,0 +1,48 @@
+{
+  "id": "124cdd89-c62d-5d15-85d0-3dbfec725a67",
+  "locale": "en",
+  "kind": "event",
+  "slug": "xuanzang-return-changan",
+  "title": "Xuanzang returns to Chang'an",
+  "subtitle": "A turning point from travel to translation institutions",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "c. 645",
+  "shortSummary": "After Xuanzang returned to Chang'an, pilgrimage experience became long-term work in translation, teaching and monastic institutions.",
+  "curatorialDescription": [
+    "The timeline treats the return as the point where route and urban institutions meet, rather than the endpoint of a legend."
+  ],
+  "researchNote": "Exact year, arrival route, translation projects and differences among biographical versions still need verification.",
+  "keyFacts": [
+    {
+      "label": "Event type",
+      "value": "Return from pilgrimage and institutional transition"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:xuanzang-records",
+      "title": "Biography of the Tripiṭaka Master of the Great Ci'en Monastery",
+      "locator": "《大唐大慈恩寺三藏法师传》全书（卷一至卷十）；卷一开篇为玄奘本传，后续卷次记录求法与译经活动",
+      "grade": "A",
+      "role": "Primary biographical basis for Xuanzang's travels and translation work",
+      "url": "https://ctext.org/library.pl?if=en&res=112971"
+    },
+    {
+      "id": "source:buddhist-institutional-records",
+      "title": "Studies of Sui–Tang monasteries, translation bureaux and monastic institutions",
+      "locator": "大慈恩寺、译经场与寺院网络专题；底本待核",
+      "grade": "B",
+      "role": "Institutional context for monasteries, translation sites and Buddhist urban networks"
+    }
+  ],
+  "profile": {
+    "eventKind": "journey",
+    "historicity": "documented",
+    "sequenceOrder": 5,
+    "eventScope": "transregional"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

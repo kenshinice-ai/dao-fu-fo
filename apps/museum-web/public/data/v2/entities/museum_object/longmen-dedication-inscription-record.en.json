@@ -1,0 +1,41 @@
+{
+  "id": "dc10efc6-18db-5ff8-99f5-a51cbbcceadc",
+  "locale": "en",
+  "kind": "museum_object",
+  "slug": "longmen-dedication-inscription-record",
+  "title": "Longmen dedicatory inscription record (object placeholder)",
+  "tradition": "buddhism",
+  "evidence": "historical_inferred",
+  "timeLabel": "Object pending; late Northern Wei through Tang",
+  "shortSummary": "A dedicatory inscription can connect image, donor, vow, date and cave location as a traceable object.",
+  "curatorialDescription": [
+    "Many inscriptions exist at the heritage site, but this record points to none of them yet and uses no unlicensed image."
+  ],
+  "researchNote": "A specific inscription needs authoritative catalogue number, transcription, location, date and permission.",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:object-records",
+      "title": "Pending catalogue of museum objects and image records",
+      "locator": "对象类型、馆藏机构、图像权利和编号待补",
+      "grade": "C",
+      "role": "Placeholder source for Alpha object cards, not a publishable collection claim"
+    },
+    {
+      "id": "source:unesco-longmen",
+      "title": "UNESCO World Heritage Centre: Longmen Grottoes",
+      "locator": "World Heritage List no. 1003; site history, location and significance",
+      "grade": "A",
+      "role": "Authoritative entry for the site's extent, chronology and Tang sculptural context",
+      "url": "https://whc.unesco.org/en/list/1003/"
+    }
+  ],
+  "profile": {
+    "objectType": "inscription",
+    "rightsStatus": "unknown",
+    "collectionStatus": "placeholder"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

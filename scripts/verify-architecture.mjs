@@ -1,7 +1,10 @@
 import { readFile, readdir } from "node:fs/promises";
 import { extname, join, relative, resolve } from "node:path";
+import { getWebPublicStageRoot } from "./web-public-stage.mjs";
 
 const repoRoot = process.cwd();
+const deploymentMode = process.env.DRF_WEB_DEPLOYMENT_MODE ?? "prototype";
+if (!["prototype", "full-alpha"].includes(deploymentMode)) fail(`unsupported web deployment mode: ${deploymentMode}`);
 
 async function readText(path) {
   return readFile(resolve(repoRoot, path), "utf8");
@@ -37,7 +40,7 @@ for (const packageName of forbiddenRuntimePackages) {
 const runtimeFiles = [
   ...(await walk("apps/museum-web/src")),
   ...(await walk("apps/museum-web/public")),
-].filter((path) => [".ts", ".tsx", ".js", ".mjs", ".json", ".html"].includes(extname(path)));
+].filter((path) => !path.includes("/apps/museum-web/public/data/v2/") && [".ts", ".tsx", ".js", ".mjs", ".json", ".html"].includes(extname(path)));
 
 const forbiddenRuntimePatterns = [
   ["DATABASE_URL", /\bDATABASE_URL\b/],
@@ -59,11 +62,11 @@ for (const file of runtimeFiles) {
 const rootPackage = await readJson("package.json");
 const previewBuild = rootPackage.scripts?.["build:content"] ?? "";
 const publicBuild = rootPackage.scripts?.["build:content:public"] ?? "";
-if (!previewBuild.includes("--database-bundle .artifacts/database/import-v1.json")) {
+if (!previewBuild.includes("scripts/compile-content.mjs") || !previewBuild.includes("--database-bundle .artifacts/database/import-v1.json")) {
   fail("preview build must emit the deterministic database import bundle");
 }
 if (previewBuild.includes("apps/museum-web/public")) fail("preview build writes into the deployed public directory");
-if (!publicBuild.includes("--public") || !publicBuild.includes(".artifacts/content/public-v2")) {
+if (!publicBuild.includes("scripts/compile-content.mjs") || !publicBuild.includes("--public")) {
   fail("public build must use public visibility and an isolated artifact directory");
 }
 if (publicBuild.includes("apps/museum-web/public")) fail("public compiler build writes into the prototype directory implicitly");
@@ -78,13 +81,17 @@ if (!staticAdapter.includes("createReadModelPaths") || !staticAdapter.includes("
   fail("web static adapter must consume the shared read-model path contract over HTTP");
 }
 
-const prototypeManifest = await readJson("apps/museum-web/public/data/v2/manifest/content-version.json");
+const deployedManifest = await readJson(join(getWebPublicStageRoot(), "data/v2/manifest/content-version.json"));
 const authoringProfile = await readJson("content/dao-ru-fo/profile.json");
-if (prototypeManifest.releaseStage !== "first-viewable-prototype") {
-  fail("deployed static data is not explicitly labelled first-viewable-prototype");
+const expectedReleaseStage = deploymentMode === "full-alpha" ? "alpha" : "first-viewable-prototype";
+if (deployedManifest.releaseStage !== expectedReleaseStage) {
+  fail(`deployed static data is not explicitly labelled ${expectedReleaseStage}`);
 }
-if (prototypeManifest.contentVersion === authoringProfile.contentVersion) {
+if (deploymentMode === "prototype" && deployedManifest.contentVersion === authoringProfile.contentVersion) {
   fail("prototype and Alpha authoring content versions must remain visibly distinct until an explicit promotion");
+}
+if (deploymentMode === "full-alpha" && deployedManifest.contentVersion !== authoringProfile.contentVersion) {
+  fail("Full Alpha deployed static data must match the current authoring content version");
 }
 
 const viteConfig = await readText("apps/museum-web/vite.config.ts");

@@ -1,0 +1,50 @@
+{
+  "id": "894119ab-ff24-5cad-a21f-bd4b9998e36e",
+  "locale": "en",
+  "kind": "passage",
+  "slug": "do-not-impose",
+  "title": "Do not impose on others what you do not desire",
+  "tradition": "confucianism",
+  "evidence": "historical_inferred",
+  "timeLabel": "Received text, Wei Ling Gong",
+  "shortSummary": "The answer expresses shu as restraint in treating others, beginning from what one would not wish to bear oneself.",
+  "curatorialDescription": [
+    "The passage remains in its question-and-virtue context rather than becoming an isolated slogan detached from relational ethics."
+  ],
+  "researchNote": "The Wei Ling Gong context, early commentary and Tang exegesis remain to be added.",
+  "keyFacts": [],
+  "related": [
+    {
+      "kind": "text",
+      "slug": "analects",
+      "title": "Analects",
+      "relation": "Excerpt from"
+    }
+  ],
+  "sources": [
+    {
+      "id": "source:analects-edition",
+      "title": "Received editions and chapter references for the Analects",
+      "locator": "颜渊第十二，第1章（“克己复礼为仁”）",
+      "grade": "A",
+      "role": "Initial basis for the Confucian passage and chapter locator",
+      "url": "https://ctext.org/wiki.pl?chapter=198285&if=en&remap=gb"
+    }
+  ],
+  "profile": {
+    "textSlug": "analects",
+    "textVersionSlug": "analects-received",
+    "passageKind": "classic_saying",
+    "locatorOriginal": "卫灵公篇",
+    "locatorNormalised": "Analects 15.24",
+    "originalText": "己所不欲，勿施于人。",
+    "punctuatedText": "己所不欲，勿施于人。",
+    "modernZh": "自己不愿承受的事情，不要加在别人身上。",
+    "translationEn": "Do not impose on others what you do not desire for yourself.",
+    "ritualSensitivity": "public_textual",
+    "attributionStatus": "anonymous_or_composite",
+    "variantReadings": []
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

@@ -1,26 +1,733 @@
 {
   "locale": "en",
   "items": [
-    { "kind": "figure", "slug": "xuanzang", "title": "Xuanzang", "context": "Tang Buddhist monk, pilgrim and central organiser of translation work.", "tradition": "buddhism" },
-    { "kind": "figure", "slug": "sima-chengzhen", "title": "Sima Chengzhen", "context": "A figure connecting mountain cultivation, Daoist traditions and Tang court networks.", "tradition": "daoism" },
-    { "kind": "figure", "slug": "kong-yingda", "title": "Kong Yingda", "context": "Early Tang classical scholar associated with the Correct Meaning of the Five Classics and state learning.", "tradition": "confucianism" },
-    { "kind": "text", "slug": "heart-sutra", "title": "Heart Sutra", "context": "A concise and influential Buddhist text expressing prajñā and emptiness.", "tradition": "buddhism" },
-    { "kind": "text", "slug": "daodejing", "title": "Daodejing", "context": "A foundational text on Dao, virtue, non-coercive action and naturalness.", "tradition": "daoism" },
-    { "kind": "text", "slug": "correct-meaning-five-classics", "title": "Correct Meaning of the Five Classics", "context": "A major Tang state project in classical commentary and education.", "tradition": "confucianism" },
-    { "kind": "text", "slug": "analects", "title": "Analects", "context": "Sayings and encounters associated with Confucius and his disciples, repeatedly reinterpreted by later Confucian traditions.", "tradition": "confucianism" },
-    { "kind": "passage", "slug": "form-is-emptiness", "title": "Form is not different from emptiness", "context": "A representative line on the relationship between form and emptiness in the Heart Sutra.", "tradition": "buddhism" },
-    { "kind": "passage", "slug": "humans-follow-earth", "title": "The Dao follows what is naturally so", "context": "Daodejing chapter 25 on humans, earth, heaven, Dao and naturalness.", "tradition": "daoism" },
-    { "kind": "passage", "slug": "return-to-ritual", "title": "Restrain oneself and return to ritual", "context": "Analects 12.1 connects self-regulation, ritual and benevolence.", "tradition": "confucianism" },
-    { "kind": "concept", "slug": "emptiness", "title": "Emptiness", "context": "A Buddhist discussion of dependent arising and the absence of fixed self-existence.", "tradition": "buddhism" },
-    { "kind": "concept", "slug": "naturalness", "title": "Naturalness", "context": "The Daoist sense of being-so-of-itself, not simply the modern natural world.", "tradition": "daoism" },
-    { "kind": "concept", "slug": "ritual", "title": "Ritual", "context": "A Confucian concept linking self-cultivation, social order, institutions and classical interpretation.", "tradition": "confucianism" },
-    { "kind": "place", "slug": "changan", "title": "Chang'an", "context": "Tang imperial capital and meeting point for politics, education, translation and religious institutions.", "tradition": "convergence" },
-    { "kind": "place", "slug": "great-cien-monastery", "title": "Great Ci'en Monastery", "context": "Buddhist site closely connected with Xuanzang's translation work and the Great Wild Goose Pagoda.", "tradition": "buddhism" },
-    { "kind": "place", "slug": "louguantai", "title": "Louguantai", "context": "An important historical Daoist site on the northern side of Mount Zhongnan.", "tradition": "daoism" },
-    { "kind": "place", "slug": "imperial-academy-changan", "title": "Imperial Academy, Chang'an", "context": "A historical gateway into the connection among classics, education and the state.", "tradition": "confucianism" },
-    { "kind": "place", "slug": "luoyang", "title": "Luoyang", "context": "A key city in Sui–Tang political, religious and transport networks.", "tradition": "convergence" },
-    { "kind": "place", "slug": "dunhuang", "title": "Dunhuang", "context": "A major node linking the Central Plains, Central Asian routes and Buddhist visual culture.", "tradition": "buddhism" },
-    { "kind": "place", "slug": "mount-wutai", "title": "Mount Wutai", "context": "A real mountain region connected with Buddhist pilgrimage and devotion to Mañjuśrī.", "tradition": "buddhism" },
-    { "kind": "museum_object", "slug": "great-wild-goose-pagoda", "title": "Great Wild Goose Pagoda", "context": "Architectural heritage connected with Xuanzang, textual preservation and Buddhist memory in Chang'an.", "tradition": "buddhism" }
+    {
+      "id": "633ef57c-985b-5094-baab-9f1ec05aec54",
+      "kind": "concept",
+      "slug": "classical-commentary",
+      "title": "Classical commentary",
+      "context": "Commentary organizes classics, inherited interpretation, textual criticism and teaching into transmissible knowledge structures.",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "98f243b5-4044-5ca0-a2c0-12b8388bd3d0",
+      "kind": "concept",
+      "slug": "form-and-emptiness",
+      "title": "Form and emptiness",
+      "context": "Form and emptiness is one of the Heart Sutra's most cited expressions, but it must be read within a specific version, passage structure and Prajnaparamita context.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "d3143aba-3e62-5d1b-997d-9321cfa5ebb3",
+      "kind": "concept",
+      "slug": "naturalness-and-self-so",
+      "title": "Naturalness and self-so",
+      "context": "In early Daoist texts, ziran first concerns being so of itself and should not be equated directly with the modern category of nature.",
+      "tradition": "daoism"
+    },
+    {
+      "id": "96bac993-09c8-5a34-b48d-0ae74ab24e61",
+      "kind": "concept",
+      "slug": "pilgrimage-and-transmission",
+      "title": "Pilgrimage and transmission",
+      "context": "Pilgrimage became durable knowledge transmission through translation, cataloguing, teaching and institutional collaboration.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "c49f31f8-a96b-561a-b471-d3608349ab0c",
+      "kind": "concept",
+      "slug": "ritual-order",
+      "title": "Ritual and order",
+      "context": "Li can refer to texts and norms as well as concrete ritual, relational identity and order within state education.",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "f5a85754-8fa3-5f1a-a4e0-d576b6d3ed4f",
+      "kind": "concept",
+      "slug": "translation-as-institution",
+      "title": "Translation as institution",
+      "context": "Translation is not only the exchange of words; it depends on sites, people, versions, review and relations of power.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "ac2ea706-f0b1-5207-815b-b8d985585615",
+      "kind": "event",
+      "slug": "an-lushan-rebellion-begins",
+      "title": "An Lushan Rebellion begins",
+      "context": "War beginning in 755 disrupted the two capitals and changed the demographic, fiscal and institutional environment of religious life.",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "db9bc3d8-e82d-5ecb-96f4-cf1d220ba214",
+      "kind": "event",
+      "slug": "an-lushan-rebellion-ends",
+      "title": "End of the An Lushan Rebellion",
+      "context": "The end of warfare around 763 did not restore the pre-war order but opened a long restructuring of finance, regional power and institutions.",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "4837cd93-8615-5c0a-8c82-b96bb81c0d49",
+      "kind": "event",
+      "slug": "buddha-first-sermon-at-sarnath",
+      "title": "The Buddha's first sermon at Sarnath",
+      "context": "Early Buddhist texts and later heritage traditions remember Sarnath as the place where the Buddha taught his first disciples.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "9599aa6a-7f94-535a-a8bc-ba832eb1120f",
+      "kind": "event",
+      "slug": "confucius-asks-laozi-about-rites",
+      "title": "Confucius visits Zhou to ask Laozi about rites",
+      "context": "The Shiji preserves Confucius's visit to Laozi in Zhou as an early historiographical entry into a Dao–Ru encounter.",
+      "tradition": "daoism"
+    },
+    {
+      "id": "60e3e832-3bca-55ee-a45a-2d7412ff3e16",
+      "kind": "event",
+      "slug": "daci-en-monastery-established",
+      "title": "Establishment of the Great Ci'en Monastery",
+      "context": "The monastery created a new institutional setting for Buddhism, translation and imperial patronage in Chang'an.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "8a7eb613-bf57-59ae-8958-f08d01600abb",
+      "kind": "event",
+      "slug": "five-classics-corrected-meanings-project",
+      "title": "Compilation project of the Corrected Meanings of the Five Classics",
+      "context": "A multi-year early Tang editorial project brought commentarial traditions into state education and examination knowledge.",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "903e0e6e-b314-54e2-8ea6-21319a68ca55",
+      "kind": "event",
+      "slug": "great-wild-goose-pagoda-first-construction",
+      "title": "First construction of the Great Wild Goose Pagoda",
+      "context": "The initial phase around 652 linked the preservation of texts and images with translation and visible urban architecture.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "bab56698-ef14-54f2-992a-679db900dc25",
+      "kind": "event",
+      "slug": "huichang-religious-policies",
+      "title": "Huichang religious policies",
+      "context": "Policies around 845 sharply changed the property, personnel and public standing of Buddhist and other religious institutions.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "a3e6c417-f8ac-5987-baba-59e595a8912e",
+      "kind": "event",
+      "slug": "kaiyuan-institutional-expansion",
+      "title": "Institutional expansion in the Kaiyuan era",
+      "context": "The Kaiyuan era provides a range for studying expansion in court, education, religious institutions and transregional exchange.",
+      "tradition": "daoism"
+    },
+    {
+      "id": "aa91d726-1e82-5955-afaf-3d582603ee20",
+      "kind": "event",
+      "slug": "sui-unification",
+      "title": "The founding and unification of the Sui",
+      "context": "The founding and unification of the Sui provides political context for Sui–Tang institutions, capitals and networks of knowledge.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "d175913d-5ff5-5e40-b7e2-e4b6b3489b70",
+      "kind": "event",
+      "slug": "tang-dynasty-founded",
+      "title": "Foundation of the Tang dynasty",
+      "context": "The dynastic transition of 618 reorganized the political, educational and religious resource environment of Chang'an.",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "77797f57-d25b-5e57-909b-a5c57722ffc7",
+      "kind": "event",
+      "slug": "tang-end-transition",
+      "title": "The Tang-end political transition",
+      "context": "The political transition around 907 marks the exhibition's Sui–Tang boundary while reminding us that institutions and textual networks do not disappear in one year.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "614ae18a-ac30-55e1-8eca-7661bdc7f0ee",
+      "kind": "event",
+      "slug": "wu-zhou-established",
+      "title": "Establishment of the Wu Zhou",
+      "context": "The political transition of 690 changed imperial representation, the two-capital system and the allocation of religious resources.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "7d3417c2-0fc9-5dd1-9b0b-7f0108c11759",
+      "kind": "event",
+      "slug": "xuanzang-departs-changan",
+      "title": "Xuanzang departs Chang'an",
+      "context": "Around 629, Xuanzang's journey connected Chang'an with pilgrimage networks across the Hexi Corridor, Central Asia and South Asia.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "124cdd89-c62d-5d15-85d0-3dbfec725a67",
+      "kind": "event",
+      "slug": "xuanzang-return-changan",
+      "title": "Xuanzang returns to Chang'an",
+      "context": "After Xuanzang returned to Chang'an, pilgrimage experience became long-term work in translation, teaching and monastic institutions.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "9134ebc2-a3e4-5d54-8d09-016b2ea529c6",
+      "kind": "event",
+      "slug": "yijing-departs-by-sea",
+      "title": "Yijing departs by sea",
+      "context": "Around 671, Yijing travelled south by sea, showing that pilgrimage and transmission were not limited to an overland route west of Chang'an.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "1c4ba68f-cb32-5ca9-bc69-251b1d4639dd",
+      "kind": "event",
+      "slug": "yijing-returns",
+      "title": "Yijing returns to Tang territory",
+      "context": "Around 695, Yijing's return brought maritime travel experience into translation, writing and institutional networks.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "076f9c85-6e57-517b-afa7-215006ac47c4",
+      "kind": "figure",
+      "slug": "cheng-xuanying",
+      "title": "Cheng Xuanying",
+      "context": "Cheng Xuanying offers an entry into early Tang interpretation of the Daodejing and Zhuangzi and its Daoist knowledge networks.",
+      "tradition": "daoism"
+    },
+    {
+      "id": "037a6b08-f97f-5a13-92dc-15dce8431b0c",
+      "kind": "figure",
+      "slug": "confucius",
+      "title": "Confucius (Kong Qiu)",
+      "context": "Confucius is a recognisable gateway into Confucian classics, education and political ethics; sayings in the Analects must be separated from disciple records, compilation layers and later classical reception.",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "297168a1-9dc6-5132-a9ff-38aebc1f2f33",
+      "kind": "figure",
+      "slug": "jizang",
+      "title": "Jizang",
+      "context": "Jizang's teaching and commentary provide a case for Buddhist thought, textual interpretation and urban networks across the Sui–Tang transition.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "886f4bbe-70e0-577a-be22-92994e833fe8",
+      "kind": "figure",
+      "slug": "kong-yingda",
+      "title": "Kong Yingda",
+      "context": "Kong Yingda represents how Tang classical learning entered state education, commentary and institutional knowledge production.",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "82f8072e-ce53-5b91-92fc-9c0d66b64f6c",
+      "kind": "figure",
+      "slug": "laozi",
+      "title": "Laozi (Li Er)",
+      "context": "Laozi is a recognisable gateway into Daoist classicism, but the Li Er biography, the sage-name Laozi, the formation of the Daodejing and the later Taishang Laojun image must remain distinct layers.",
+      "tradition": "daoism"
+    },
+    {
+      "id": "a2459e74-0e7a-5283-9804-0af27ea459cc",
+      "kind": "figure",
+      "slug": "li-shimin",
+      "title": "Li Shimin",
+      "context": "Li Shimin's courtly, educational and religious institutional context helps explain why Chang'an became a meeting point for different networks of knowledge and belief.",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "18a70214-56c9-528b-a22c-bf1279bf76ed",
+      "kind": "figure",
+      "slug": "sakyamuni",
+      "title": "Śākyamuni Buddha (Gautama)",
+      "context": "Śākyamuni is a central gateway into Buddhist thought and pilgrimage geography, but fragmentary early-text biographies, later Buddha legends and sacred narratives must remain layered.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "5bf99d90-4c5a-575b-8a79-7957a33ef9eb",
+      "kind": "figure",
+      "slug": "sima-chengzhen",
+      "title": "Sima Chengzhen",
+      "context": "Sima Chengzhen connects mountain cultivation, Daoist lineages and Tang imperial patronage.",
+      "tradition": "daoism"
+    },
+    {
+      "id": "8f021f4b-2fec-5986-95b5-4a7a802c77aa",
+      "kind": "figure",
+      "slug": "wu-zhao",
+      "title": "Wu Zhao (Wu Zetian)",
+      "context": "Wu Zhao's political practice and religious patronage make the institutions, rituals and later memories of Chang'an and Luoyang available for comparison.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "cd7fb9ab-cea1-5e4a-b288-a1e20d568770",
+      "kind": "figure",
+      "slug": "xuanzang",
+      "title": "Xuanzang",
+      "context": "Xuanzang connects a pilgrimage for learning with translation and institutional life in Chang'an.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "b6d2701c-2848-587f-9aaa-718c1b3feaae",
+      "kind": "figure",
+      "slug": "yan-shigu",
+      "title": "Yan Shigu",
+      "context": "Yan Shigu connects early Tang textual editing and commentary with state knowledge projects.",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "dfa5a7a3-6389-5a9a-8556-d8996da23c3c",
+      "kind": "figure",
+      "slug": "yijing",
+      "title": "Yijing",
+      "context": "Yijing connects maritime pilgrimage, learning in South Asia and the production of Chinese Buddhist translations.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "dca3a5c6-e9ae-5c58-b6c6-0bc876610748",
+      "kind": "institution",
+      "slug": "changan-daoist-monastic-network",
+      "title": "Chang'an Daoist monastic network",
+      "context": "Daoist activity in Chang'an relied on multiple institutions, ritual services, ordination records and court connections rather than one building.",
+      "tradition": "daoism"
+    },
+    {
+      "id": "79e8a237-c2d3-5d9a-91be-0b776fbf448b",
+      "kind": "institution",
+      "slug": "changan-translation-bureau",
+      "title": "Chang'an translation-bureau network",
+      "context": "Translation was collaborative work supported by monastic space, language roles, textual checking and imperial patronage.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "49f7230b-02ee-5c86-817e-682f81037303",
+      "kind": "institution",
+      "slug": "daci-en-monastery",
+      "title": "Great Ci'en Monastery",
+      "context": "Great Ci'en Monastery is a core institutional entry for connecting Xuanzang, translation, monastic networks and Chang'an's urban space.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "ff7c6f90-a1bd-5998-acb3-bcdd30ff7672",
+      "kind": "institution",
+      "slug": "guozijian",
+      "title": "Guozijian",
+      "context": "The Guozijian connects the Five Classics, commentary, examination and state education within a traceable institutional line.",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "5f45c0de-0fc8-53c1-b977-6a59e0df8616",
+      "kind": "institution",
+      "slug": "hongwen-institute",
+      "title": "Hongwen Institute",
+      "context": "The Hongwen Institute offers an institutional entry into Tang court collections, scholarly consultation and education.",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "e64798e8-36e1-5385-8469-38922b87584c",
+      "kind": "institution",
+      "slug": "louguan",
+      "title": "Louguan Daoist institution",
+      "context": "As an institutional record, Louguan helps separate Laozi legend, Daoist figures, monastic space and later sacred-site narratives.",
+      "tradition": "daoism"
+    },
+    {
+      "id": "0e0c02cf-f54c-5aae-b13c-cbd7665f41ca",
+      "kind": "museum_object",
+      "slug": "classics-commentary-manuscript",
+      "title": "Classical commentary manuscript record (object placeholder)",
+      "context": "The object card connects the Corrected Meanings and Guozijian to manuscripts, folios and practices of reading.",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "23c8800c-019b-59bf-ac4d-336f2aa49420",
+      "kind": "museum_object",
+      "slug": "daodejing-commentary-manuscript-record",
+      "title": "Daodejing commentary manuscript record (object placeholder)",
+      "context": "The object record reserves an archive entry for manuscript form, writing layers and provenance of Tang Daodejing commentaries.",
+      "tradition": "daoism"
+    },
+    {
+      "id": "e57dbe03-6c89-5fd1-8e37-60b572b2cb62",
+      "kind": "museum_object",
+      "slug": "daoist-inscription-rubbing-record",
+      "title": "Daoist institutional inscription rubbing (object placeholder)",
+      "context": "Inscriptions and rubbings can anchor institutions, figures, dates and patronage in verifiable textual objects.",
+      "tradition": "daoism"
+    },
+    {
+      "id": "c7d7bfe9-78a2-50e5-85d7-de43a7f46d75",
+      "kind": "museum_object",
+      "slug": "guozijian-ritual-vessel-record",
+      "title": "Official-learning ritual object record (object placeholder)",
+      "context": "A ritual object can connect the concept of li with school space, participants and concrete action.",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "a62f0f3a-539b-54b4-ad12-6d6bd8c6a381",
+      "kind": "museum_object",
+      "slug": "heart-sutra-manuscript-leaf",
+      "title": "Heart Sutra manuscript leaf (object placeholder)",
+      "context": "The object card places a Heart Sutra passage within paper, ink, writing, preservation and circulation, but is not yet tied to a specific collection.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "ff77ea03-e426-57ba-94da-8fbd0e88bc65",
+      "kind": "museum_object",
+      "slug": "imperial-classics-scroll-record",
+      "title": "State-school classics scroll (object placeholder)",
+      "context": "A scroll object can show how classics entered official learning through copying, collation and teaching.",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "dc10efc6-18db-5ff8-99f5-a51cbbcceadc",
+      "kind": "museum_object",
+      "slug": "longmen-dedication-inscription-record",
+      "title": "Longmen dedicatory inscription record (object placeholder)",
+      "context": "A dedicatory inscription can connect image, donor, vow, date and cave location as a traceable object.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "2051108a-65de-5572-8123-fabd77ffdc36",
+      "kind": "museum_object",
+      "slug": "translation-bureau-tablet",
+      "title": "Inscription record for a translation institution (object placeholder)",
+      "context": "The object card separates translation institutions from biography and looks for material carriers in buildings, inscriptions and institutional memory.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "a1be51e1-f85d-5104-9c71-a2d56685be71",
+      "kind": "museum_object",
+      "slug": "translation-catalogue-manuscript-record",
+      "title": "Translation catalogue manuscript (object placeholder)",
+      "context": "Catalogue objects can record translated titles, versions, attribution and institutional organization of textual circulation.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "b5bf26aa-b611-5a8c-bdfa-3c6686360275",
+      "kind": "passage",
+      "slug": "dao-that-can-be-spoken",
+      "title": "A Dao that can be spoken",
+      "context": "The opening of the Daodejing frames a problem among language, naming and constancy.",
+      "tradition": "daoism"
+    },
+    {
+      "id": "894119ab-ff24-5cad-a21f-bd4b9998e36e",
+      "kind": "passage",
+      "slug": "do-not-impose",
+      "title": "Do not impose on others what you do not desire",
+      "context": "The answer expresses shu as restraint in treating others, beginning from what one would not wish to bear oneself.",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "08c09a75-a9b6-5cd1-b167-41025b7bb298",
+      "kind": "passage",
+      "slug": "form-is-emptiness",
+      "title": "Form is not different from emptiness",
+      "context": "This line circulated widely in Chinese Buddhism, but it must be read within its paragraph and textual version.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "af0bf57a-5a39-5b0e-8b18-3adf052bc8e6",
+      "kind": "passage",
+      "slug": "highest-good-like-water",
+      "title": "Highest goodness is like water",
+      "context": "The water metaphor connects benefiting things, non-contention and dwelling in low places as relational qualities.",
+      "tradition": "daoism"
+    },
+    {
+      "id": "49104720-7747-5ab4-8aec-be1e3ed88957",
+      "kind": "passage",
+      "slug": "humans-follow-earth",
+      "title": "Humans follow earth; earth follows heaven",
+      "context": "The line arranges humans, earth, heaven, the Dao and naturalness in a layered order that must be read in its received-text context.",
+      "tradition": "daoism"
+    },
+    {
+      "id": "6870c0fd-b027-54de-912c-cd1b805beddc",
+      "kind": "passage",
+      "slug": "learn-and-practice",
+      "title": "To learn and practise at due times",
+      "context": "The Analects opens by connecting learning, repeated practice and pleasure.",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "f5d20c94-a228-5498-9c9a-5abf34bbfc7a",
+      "kind": "passage",
+      "slug": "learning-increases-dao-decreases",
+      "title": "In learning one increases; in the Dao one decreases",
+      "context": "The passage contrasts accumulation in learning with a practice of decreasing toward non-forcing.",
+      "tradition": "daoism"
+    },
+    {
+      "id": "5a7e473d-5322-5ff9-a0d7-8f102a05a6a9",
+      "kind": "passage",
+      "slug": "prajna-all-dharmas",
+      "title": "These dharmas have the characteristic of emptiness",
+      "context": "The line places emptiness within a description of dharmas and helps demonstrate the relation among concept, passage and version layers.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "fcba224c-175f-570c-b658-d5efe3de9fcc",
+      "kind": "passage",
+      "slug": "prajna-five-skandhas",
+      "title": "Seeing the five aggregates as empty",
+      "context": "The line compresses seeing, the five aggregates and emptiness into a short phrase that must be read in a specific version and context.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "4aed2dd6-0e94-5df4-b879-e3687db04297",
+      "kind": "passage",
+      "slug": "prajna-no-wisdom",
+      "title": "No wisdom and no attainment",
+      "context": "The line invites a distinction between the sutra's context of non-attainment and a modern denial of knowledge.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "67fadcb7-a43e-51c4-afb4-f05d19cbc16e",
+      "kind": "passage",
+      "slug": "return-to-ritual",
+      "title": "Conquer the self and return to ritual",
+      "context": "The line connects humaneness with self-restraint and ritual practice, and was repeatedly reinterpreted in political and educational settings.",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "5f0cd94e-98d9-5c38-9516-54659ae1d839",
+      "kind": "passage",
+      "slug": "three-walk-together",
+      "title": "When three walk together, there is surely a teacher for me",
+      "context": "The saying places learning in companionship, discernment of strengths and self-correction.",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "00d53b72-86d2-5115-99eb-ba9ffceca80f",
+      "kind": "passage",
+      "slug": "turning-of-dharma-wheel",
+      "title": "This is the noble truth of suffering",
+      "context": "The short line keeps Buddhist teaching within the textual setting of the first turning at Sarnath rather than turning it into a context-free modern maxim.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "d0c4899f-b1df-5b57-aa22-b6f8b1b21a01",
+      "kind": "passage",
+      "slug": "turning-of-dharma-wheel-thanissaro-en",
+      "title": "This is the noble truth of stress",
+      "context": "This passage shares the SN 56.11 locator with the Pāli excerpt while preserving Thanissaro's English rendering of dukkha.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "570841a0-1645-59a3-bea7-a47bc84c1630",
+      "kind": "place",
+      "slug": "changan",
+      "title": "Chang'an",
+      "context": "Chang'an compressed court, state education, monasteries, Daoist institutions, markets and international travellers into one city.",
+      "tradition": "convergence"
+    },
+    {
+      "id": "0dafc415-232a-5e18-b63b-4044a09e519f",
+      "kind": "place",
+      "slug": "dunhuang",
+      "title": "Dunhuang",
+      "context": "Dunhuang connects Buddhist art, textual preservation, travel routes and multilingual culture.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "7e7d7d0d-8007-59c5-ac23-2ca12194d28b",
+      "kind": "place",
+      "slug": "great-wild-goose-pagoda-site",
+      "title": "Great Wild Goose Pagoda site",
+      "context": "The site connects Xuanzang, translation, textual preservation and the urban space of Chang'an.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "36de50b4-d018-5999-a605-c8ce790af2f5",
+      "kind": "place",
+      "slug": "longmen-grottoes",
+      "title": "Longmen Grottoes",
+      "context": "Longmen brings Luoyang, imperial patronage, Buddhist images and inscriptions into one material landscape.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "7f7e88ba-4e06-5257-b398-36ce485188f6",
+      "kind": "place",
+      "slug": "luoyang",
+      "title": "Luoyang",
+      "context": "Luoyang connects imperial politics, transport networks, Buddhist transmission and classical culture as a counterpoint to Chang'an.",
+      "tradition": "convergence"
+    },
+    {
+      "id": "8865370b-6cb4-5aa6-b3e8-3d72fbad9b0e",
+      "kind": "place",
+      "slug": "mount-wutai",
+      "title": "Mount Wutai",
+      "context": "Mount Wutai combines a real mountain landscape, monastic networks and Buddhist sacred narratives, making the museum's two-layer geography visible.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "fa8e031e-ec10-5e1b-a9d2-8d2247ea61b5",
+      "kind": "place",
+      "slug": "nalanda",
+      "title": "Nalanda",
+      "context": "Nalanda places the pilgrimages of Xuanzang and Yijing within a concrete institution and transregional network rather than an abstract India.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "3a18eab5-4b48-58fb-b7e2-3fbc7782e4c0",
+      "kind": "place",
+      "slug": "qiuci",
+      "title": "Kucha",
+      "context": "Kucha keeps a pilgrimage route from becoming a straight line from Chang'an to India; it was a region where languages, religions and media intersected.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "e3c88298-e03c-5f1d-ad68-a8fcdc99b934",
+      "kind": "place",
+      "slug": "sarnath",
+      "title": "Sarnath",
+      "context": "Sarnath connects Śākyamuni, the first-turning-of-the-Dharma tradition, early monastic memory and later Buddhist pilgrimage to a real archaeological place.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "8876cdf2-593a-5416-b379-290a1f71f6c9",
+      "kind": "place",
+      "slug": "zhongnan-mountains",
+      "title": "Zhongnan Mountains",
+      "context": "The Zhongnan Mountains are a real landscape near Chang'an and a layered setting for cultivation, reclusion and religious narrative.",
+      "tradition": "daoism"
+    },
+    {
+      "id": "b587cd4f-49d2-585b-84bb-93b8bc6aa59e",
+      "kind": "route",
+      "slug": "changan-luoyang-imperial-corridor",
+      "title": "Chang'an–Luoyang imperial corridor",
+      "context": "The route organizes political, educational, religious and human movement between the two capitals as a spatial research frame.",
+      "tradition": "convergence"
+    },
+    {
+      "id": "a8b3ffa4-3ad8-5cf8-a8d4-18bf4ab53530",
+      "kind": "route",
+      "slug": "xuanzang-western-pilgrimage",
+      "title": "Xuanzang's western pilgrimage route",
+      "context": "The route places Chang'an, the Hexi Corridor, Central Asia and South Asia in one research view without treating every node as a verified day-by-day itinerary.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "33affe77-a0b7-524b-aaab-02bb53abb65b",
+      "kind": "text_version",
+      "slug": "analects-received",
+      "title": "Received text of the Analects",
+      "context": "An Alpha version record for the received chapters of the Analects.",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "91f95e39-fba6-5ae3-89dc-0ef2532de566",
+      "kind": "text_version",
+      "slug": "daodejing-received",
+      "title": "Received text of the Daodejing",
+      "context": "An Alpha version record for the received chapters of the Daodejing.",
+      "tradition": "daoism"
+    },
+    {
+      "id": "5480a392-6666-5622-8997-f0cd9cf89cce",
+      "kind": "text_version",
+      "slug": "daoist-institutional-records-research",
+      "title": "Sui–Tang Daoist institutional research collection",
+      "context": "This version is a catalogue placeholder that reminds the editorial team to replace the collection with citable texts or records.",
+      "tradition": "daoism"
+    },
+    {
+      "id": "91cd610a-3340-5c98-bcfd-84b631ef4733",
+      "kind": "text_version",
+      "slug": "dhammacakkappavattana-sutta-pali",
+      "title": "Pāli digital version of the Dhammacakkappavattana Sutta",
+      "context": "The version layer records the Pāli text's reference, language and digital-edition context.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "d1fab361-2d92-5c25-a277-2a59e087fd64",
+      "kind": "text_version",
+      "slug": "dhammacakkappavattana-sutta-thanissaro-en",
+      "title": "Thanissaro English translation of SN 56.11",
+      "context": "This version keeps an English translation witness separate from the Pāli version so translator choices can be compared without treating translation as the source text.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "ab45d427-9666-5b39-9335-a4f6e0d500df",
+      "kind": "text_version",
+      "slug": "five-classics-corrected-meanings-received",
+      "title": "Received edited version of the Corrected Meanings",
+      "context": "The version layer separates the specific edited text, fascicles and citation locator from the general text record.",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "aa1275ad-261f-5616-bd4c-b4e4ce6cf333",
+      "kind": "text_version",
+      "slug": "great-tang-records-western-regions-received",
+      "title": "Received edited version of the Record of the Western Regions",
+      "context": "This version record supports passage locators, translation and variant comparison for the Record of the Western Regions.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "d4b76e84-7163-5031-aa34-1f1c5580f4df",
+      "kind": "text_version",
+      "slug": "heart-sutra-chinese-received",
+      "title": "Received Chinese version of the Heart Sutra",
+      "context": "A version placeholder for the first passage display; the precise edition remains under review.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "73870aa6-3666-57d4-a5ad-094be551a2cd",
+      "kind": "text",
+      "slug": "analects",
+      "title": "Analects",
+      "context": "The Analects preserves early Confucian discussions of ethics, education and politics through sayings and encounters associated with Confucius and his disciples.",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "4869f9d9-f4b2-5604-85f4-0d22ad79004c",
+      "kind": "text",
+      "slug": "daodejing",
+      "title": "Daodejing",
+      "context": "The formation, compilation and attribution of the Daodejing have several historical layers, and later Daoist and philosophical traditions repeatedly reinterpreted it.",
+      "tradition": "daoism"
+    },
+    {
+      "id": "155a8f30-dcd8-5a55-8bd0-2f8a23c3f595",
+      "kind": "text",
+      "slug": "daoist-institutional-records",
+      "title": "Sui–Tang Daoist institutional records",
+      "context": "This research-layer text collection helps distinguish Daoist biographies, institutional history and later genealogical narratives.",
+      "tradition": "daoism"
+    },
+    {
+      "id": "a067399b-91ee-5c36-abb0-54f050a74dc2",
+      "kind": "text",
+      "slug": "dhammacakkappavattana-sutta",
+      "title": "Dhammacakkappavattana Sutta",
+      "context": "The Dhammacakkappavattana Sutta preserves a transmitted discourse tradition in which the Buddha teaches the five mendicants at Sarnath.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "021ac145-9453-58ba-ab29-d30893d1b62c",
+      "kind": "text",
+      "slug": "five-classics-corrected-meanings",
+      "title": "Corrected Meanings of the Five Classics",
+      "context": "The Corrected Meanings provides an entry into how Tang classical commentary entered state education and regimes of interpretation.",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "4626d893-15ef-5eb3-9d10-b5806a8128a4",
+      "kind": "text",
+      "slug": "great-tang-records-western-regions",
+      "title": "Record of the Western Regions of the Great Tang",
+      "context": "The Record turns a pilgrim's travel experience into an account of geography, institutions, cities and religious sites.",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "5584e8c1-f35d-5f06-b59b-a800e5145793",
+      "kind": "text",
+      "slug": "heart-sutra",
+      "title": "Heart Sutra",
+      "context": "The Heart Sutra presents Prajñāpāramitā thought in a highly condensed form and became one of the most widely circulated texts in Chinese Buddhism.",
+      "tradition": "buddhism"
+    }
   ]
 }

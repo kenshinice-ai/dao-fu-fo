@@ -1,0 +1,41 @@
+{
+  "id": "8a7eb613-bf57-59ae-8958-f08d01600abb",
+  "locale": "zh-CN",
+  "kind": "event",
+  "slug": "five-classics-corrected-meanings-project",
+  "title": "《五经正义》编纂工程",
+  "tradition": "confucianism",
+  "evidence": "historical_inferred",
+  "timeLabel": "约 630–653",
+  "shortSummary": "唐初持续多年的经典整理，把不同注释传统汇入国家教育与考试知识体系。",
+  "curatorialDescription": [
+    "事件采用时间范围而非单一完成日，以呈现编纂、修订和颁行并非同一步骤。"
+  ],
+  "researchNote": "启动、修订、奏上与使用节点需按正史、目录和版本研究进一步拆分。",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:confucian-commentarial-record",
+      "title": "《五经正义》与唐代经学制度资料",
+      "locator": "孔颖达与经学注疏制度",
+      "grade": "B",
+      "role": "孔颖达及唐代经学、教育制度的参考依据"
+    },
+    {
+      "id": "source:education-classics-records",
+      "title": "唐代国子监与经学制度资料",
+      "locator": "国子监、经学与《五经正义》制度语境；底本待核",
+      "grade": "B",
+      "role": "国家教育、经学注疏和知识制度的研究参考"
+    }
+  ],
+  "profile": {
+    "eventKind": "editorial_project",
+    "historicity": "inferred",
+    "sequenceOrder": 4,
+    "eventScope": "imperial"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

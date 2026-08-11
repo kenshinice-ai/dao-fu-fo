@@ -1,0 +1,41 @@
+{
+  "id": "bab56698-ef14-54f2-992a-679db900dc25",
+  "locale": "en",
+  "kind": "event",
+  "slug": "huichang-religious-policies",
+  "title": "Huichang religious policies",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "c. 845",
+  "shortSummary": "Policies around 845 sharply changed the property, personnel and public standing of Buddhist and other religious institutions.",
+  "curatorialDescription": [
+    "The record centres policy and implementation rather than reducing a complex process to one uniform persecution event."
+  ],
+  "researchNote": "Edict sequence, regional implementation and the position of Daoism and other religions require separate verification.",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:tang-imperial-records",
+      "title": "Official histories and institutional records of the Sui–Tang period",
+      "locator": "帝王、制度与年代条目；具体版本和卷页待核",
+      "grade": "B",
+      "role": "Research reference for Sui–Tang figures, capitals, institutions and event dates"
+    },
+    {
+      "id": "source:buddhist-institutional-records",
+      "title": "Studies of Sui–Tang monasteries, translation bureaux and monastic institutions",
+      "locator": "大慈恩寺、译经场与寺院网络专题；底本待核",
+      "grade": "B",
+      "role": "Institutional context for monasteries, translation sites and Buddhist urban networks"
+    }
+  ],
+  "profile": {
+    "eventKind": "policy",
+    "historicity": "documented",
+    "sequenceOrder": 14,
+    "eventScope": "imperial"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

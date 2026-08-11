@@ -1,0 +1,41 @@
+{
+  "id": "903e0e6e-b314-54e2-8ea6-21319a68ca55",
+  "locale": "zh-CN",
+  "kind": "event",
+  "slug": "great-wild-goose-pagoda-first-construction",
+  "title": "大雁塔初建",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "约 652",
+  "shortSummary": "约 652 年的初建阶段把经像保存、译经事业与可见的城市建筑联系起来。",
+  "curatorialDescription": [
+    "“初建”不代表现存形制；后世修建和结构变化必须另行标注。"
+  ],
+  "researchNote": "初建形制、用途与后续改建节点需依据建筑史和保护资料核定。",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:buddhist-institutional-records",
+      "title": "隋唐寺院、译场与僧团制度资料",
+      "locator": "大慈恩寺、译经场与寺院网络专题；底本待核",
+      "grade": "B",
+      "role": "寺院、译经机构和佛教城市网络的制度语境"
+    },
+    {
+      "id": "source:historical-geography",
+      "title": "隋唐历史地理与城市沿革资料",
+      "locator": "长安、洛阳、敦煌历史名称与地理范围",
+      "grade": "A",
+      "role": "真实地点、历史名称和坐标示意的地理依据"
+    }
+  ],
+  "profile": {
+    "eventKind": "construction",
+    "historicity": "documented",
+    "sequenceOrder": 7,
+    "eventScope": "local"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

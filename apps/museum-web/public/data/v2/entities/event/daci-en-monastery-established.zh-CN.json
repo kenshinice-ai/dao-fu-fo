@@ -1,0 +1,42 @@
+{
+  "id": "60e3e832-3bca-55ee-a45a-2d7412ff3e16",
+  "locale": "zh-CN",
+  "kind": "event",
+  "slug": "daci-en-monastery-established",
+  "title": "大慈恩寺建立",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "约 648",
+  "shortSummary": "大慈恩寺的建立为长安佛教、译经和皇室支持提供了新的制度空间。",
+  "curatorialDescription": [
+    "寺院建立与后续译场、塔院和人物活动分开建模，避免把长期制度史压成一个日期。"
+  ],
+  "researchNote": "建立缘起、寺域、早期职事与项目关系需继续核定。",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:buddhist-institutional-records",
+      "title": "隋唐寺院、译场与僧团制度资料",
+      "locator": "大慈恩寺、译经场与寺院网络专题；底本待核",
+      "grade": "B",
+      "role": "寺院、译经机构和佛教城市网络的制度语境"
+    },
+    {
+      "id": "source:xuanzang-records",
+      "title": "《大唐大慈恩寺三藏法师传》",
+      "locator": "《大唐大慈恩寺三藏法师传》全书（卷一至卷十）；卷一开篇为玄奘本传，后续卷次记录求法与译经活动",
+      "grade": "A",
+      "role": "玄奘生平、求法与译经活动的原始传记依据",
+      "url": "https://ctext.org/library.pl?if=en&res=112971"
+    }
+  ],
+  "profile": {
+    "eventKind": "foundation",
+    "historicity": "documented",
+    "sequenceOrder": 6,
+    "eventScope": "local"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

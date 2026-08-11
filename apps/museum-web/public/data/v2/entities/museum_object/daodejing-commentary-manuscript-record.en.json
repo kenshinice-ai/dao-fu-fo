@@ -1,0 +1,41 @@
+{
+  "id": "23c8800c-019b-59bf-ac4d-336f2aa49420",
+  "locale": "en",
+  "kind": "museum_object",
+  "slug": "daodejing-commentary-manuscript-record",
+  "title": "Daodejing commentary manuscript record (object placeholder)",
+  "tradition": "daoism",
+  "evidence": "historical_inferred",
+  "timeLabel": "Object pending; Tang commentary context",
+  "shortSummary": "The object record reserves an archive entry for manuscript form, writing layers and provenance of Tang Daodejing commentaries.",
+  "curatorialDescription": [
+    "No collection object is attached; no image is shown and the placeholder type is not treated as a confirmed object."
+  ],
+  "researchNote": "Collection, accession, material, date, attribution, provenance and image rights are required.",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:object-records",
+      "title": "Pending catalogue of museum objects and image records",
+      "locator": "对象类型、馆藏机构、图像权利和编号待补",
+      "grade": "C",
+      "role": "Placeholder source for Alpha object cards, not a publishable collection claim"
+    },
+    {
+      "id": "source:daodejing-edition",
+      "title": "Received editions and chapter references for the Daodejing",
+      "locator": "第二十五章（“人法地，地法天，天法道，道法自然”）",
+      "grade": "A",
+      "role": "Initial basis for the Daoist passage and chapter locator",
+      "url": "https://ctext.org/text.pl?if=en&node=11616&show=parallel"
+    }
+  ],
+  "profile": {
+    "objectType": "manuscript",
+    "rightsStatus": "unknown",
+    "collectionStatus": "placeholder"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "ab45d427-9666-5b39-9335-a4f6e0d500df",
+  "locale": "zh-CN",
+  "kind": "text_version",
+  "slug": "five-classics-corrected-meanings-received",
+  "title": "《五经正义》通行整理本",
+  "subtitle": "经学注疏的版本层入口",
+  "tradition": "confucianism",
+  "evidence": "historical_documented",
+  "timeLabel": "现代整理本；对应唐代经学文本",
+  "shortSummary": "版本层把《五经正义》的具体整理本、卷次和引文定位从文本总条目中分离出来。",
+  "curatorialDescription": [
+    "后续段落引用必须回到明确版本，不能只引用“《五经正义》”这一总称。"
+  ],
+  "researchNote": "需要补充整理者、卷次、底本、页码和引文标准。",
+  "keyFacts": [
+    {
+      "label": "版本类型",
+      "value": "整理本"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:education-classics-records",
+      "title": "唐代国子监与经学制度资料",
+      "locator": "国子监、经学与《五经正义》制度语境；底本待核",
+      "grade": "B",
+      "role": "国家教育、经学注疏和知识制度的研究参考"
+    }
+  ],
+  "profile": {
+    "textSlug": "five-classics-corrected-meanings",
+    "versionKind": "edition",
+    "languageCode": "zh",
+    "citationLabel": "《五经正义》整理本（待补版本信息）",
+    "rightsStatus": "external_reference_only"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

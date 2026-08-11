@@ -4,6 +4,7 @@ import type {
   ExhibitionData,
   GraphData,
   Locale,
+  MapContextData,
   MuseumMapData,
   OverviewData,
   ProfileData,
@@ -11,23 +12,44 @@ import type {
   TimelineData,
 } from "../types";
 import { createReadModelPaths } from "@drf-museum/core";
-import type { ReadModelAudioIndex, ReadModelRelationIndex } from "@drf-museum/domain-schema";
+import type {
+  ContentQualityReport,
+  ReadModelComparison,
+  ReadModelAudioIndex,
+  ReadModelRelationIndex,
+  ReadModelReviewQueue,
+  ReadModelSacredCosmos,
+  ReadModelSourceIndex,
+  ReadModelTextReading,
+} from "@drf-museum/domain-schema";
 
 const root = `${import.meta.env.BASE_URL}data/v2`;
 const readModelPaths = createReadModelPaths(root);
 
+function isJsonResponse(response: Response): boolean {
+  return (response.headers.get("content-type") ?? "").toLowerCase().includes("json");
+}
+
 async function request<T>(path: string, signal?: AbortSignal): Promise<T> {
   const url = path.startsWith(root) ? path : `${root}/${path}`;
   const response = await fetch(url, { signal });
-  if (!response.ok) throw new Error(`Static data ${response.status}: ${url}`);
+  if (!response.ok || !isJsonResponse(response)) throw new Error(`Static data ${response.status}: ${url}`);
   return (await response.json()) as T;
+}
+
+async function requestWithFallback<T>(primaryPath: string, fallbackPath: string, signal?: AbortSignal): Promise<T> {
+  const primaryUrl = primaryPath.startsWith(root) ? primaryPath : `${root}/${primaryPath}`;
+  const response = await fetch(primaryUrl, { signal });
+  if (response.ok && isJsonResponse(response)) return (await response.json()) as T;
+  if (!response.ok && response.status !== 404) throw new Error(`Static data ${response.status}: ${primaryUrl}`);
+  return request<T>(fallbackPath, signal);
 }
 
 async function requestEntity(kind: EntityKind, slug: string, locale: Locale, signal?: AbortSignal): Promise<EntityData> {
   const path = readModelPaths.entity(kind, slug, locale);
   const response = await fetch(path, { signal });
-  if (response.ok) return (await response.json()) as EntityData;
-  if (response.status !== 404) throw new Error(`Static data ${response.status}: ${path}`);
+  if (response.ok && isJsonResponse(response)) return (await response.json()) as EntityData;
+  if (!response.ok && response.status !== 404) throw new Error(`Static data ${response.status}: ${path}`);
 
   const index = await request<{ locale: Locale; items: SearchItem[] }>(readModelPaths.searchIndex(locale), signal);
   const item = index.items.find((candidate) => candidate.kind === kind && candidate.slug === slug);
@@ -62,7 +84,30 @@ async function requestEntity(kind: EntityKind, slug: string, locale: Locale, sig
     researchNote: generic.researchNote,
     keyFacts: [],
     related: [],
-    sources: [{ title: generic.sourceTitle, locator: `index:${kind}:${slug}`, grade: "C", role: generic.sourceRole }],
+    sources: [{ id: `source:index:${kind}:${slug}`, title: generic.sourceTitle, locator: `index:${kind}:${slug}`, grade: "C", role: generic.sourceRole }],
+    profile: {},
+  };
+}
+
+async function requestMapContext(locale: Locale, signal?: AbortSignal): Promise<MapContextData> {
+  const loadOptionalRoute = (slug: string) => requestEntity("route", slug, locale, signal).catch((error: unknown) => {
+    if (signal?.aborted) throw error;
+    return null;
+  });
+  const [map, pilgrimageRoute, imperialCorridor, search] = await Promise.all([
+    requestWithFallback<MuseumMapData>(
+      readModelPaths.realMap("overview", locale),
+      readModelPaths.realMap("suitang", locale),
+      signal,
+    ),
+    loadOptionalRoute("xuanzang-western-pilgrimage"),
+    loadOptionalRoute("changan-luoyang-imperial-corridor"),
+    request<{ locale: Locale; items: SearchItem[] }>(readModelPaths.searchIndex(locale), signal),
+  ]);
+  return {
+    map,
+    routes: [pilgrimageRoute, imperialCorridor].filter((route): route is EntityData => route !== null),
+    searchItems: search.items,
   };
 }
 
@@ -76,15 +121,45 @@ export const staticData = {
   entity: (kind: EntityKind, slug: string, locale: Locale, signal?: AbortSignal) =>
     requestEntity(kind, slug, locale, signal),
   timeline: (locale: Locale, signal?: AbortSignal) =>
-    request<TimelineData>(`timeline/suitang.${locale}.json`, signal),
+    requestWithFallback<TimelineData>(
+      readModelPaths.timeline("overview", locale),
+      readModelPaths.timeline("suitang", locale),
+      signal,
+    ),
   graph: (locale: Locale, signal?: AbortSignal) =>
     request<GraphData>(`graphs/three-traditions/overview.${locale}.json`, signal),
   map: (locale: Locale, signal?: AbortSignal) =>
-    request<MuseumMapData>(`maps/real/suitang.${locale}.geojson`, signal),
+    requestWithFallback<MuseumMapData>(
+      readModelPaths.realMap("overview", locale),
+      readModelPaths.realMap("suitang", locale),
+      signal,
+    ),
+  mapContext: (locale: Locale, signal?: AbortSignal) =>
+    requestMapContext(locale, signal),
+  sacredCosmos: (locale: Locale, signal?: AbortSignal) =>
+    request<ReadModelSacredCosmos>(readModelPaths.sacredCosmos("overview", locale), signal),
+  comparison: (name: string, locale: Locale, signal?: AbortSignal) =>
+    requestWithFallback<ReadModelComparison>(
+      readModelPaths.comparison(name, locale),
+      readModelPaths.comparison("public-rc-figures", locale),
+      signal,
+    ),
+  textReading: (name: string, locale: Locale, signal?: AbortSignal) =>
+    requestWithFallback<ReadModelTextReading>(
+      readModelPaths.textReading(name, locale),
+      readModelPaths.textReading("public-rc-passage-reading", locale),
+      signal,
+    ),
   searchIndex: (locale: Locale, signal?: AbortSignal) =>
     request<{ locale: Locale; items: SearchItem[] }>(readModelPaths.searchIndex(locale), signal),
   relations: (locale: Locale, signal?: AbortSignal) =>
     request<ReadModelRelationIndex>(readModelPaths.relations(locale), signal),
+  sourceIndex: (locale: Locale, signal?: AbortSignal) =>
+    request<ReadModelSourceIndex>(readModelPaths.sourceIndex(locale), signal),
+  qualityReport: (signal?: AbortSignal) =>
+    request<ContentQualityReport>(readModelPaths.manifest("quality-report"), signal),
+  reviewQueue: (signal?: AbortSignal) =>
+    request<ReadModelReviewQueue>(readModelPaths.manifest("review-queue"), signal),
   audio: (locale: Locale, signal?: AbortSignal) =>
     request<ReadModelAudioIndex>(readModelPaths.audio(locale), signal),
 };

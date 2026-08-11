@@ -1,0 +1,37 @@
+{
+  "id": "d1fab361-2d92-5c25-a277-2a59e087fd64",
+  "locale": "en",
+  "kind": "text_version",
+  "slug": "dhammacakkappavattana-sutta-thanissaro-en",
+  "title": "Thanissaro English translation of SN 56.11",
+  "subtitle": "An English translation witness for SN 56.11",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "Modern English translation; corresponding to the transmitted SN 56.11 layer",
+  "shortSummary": "This version keeps an English translation witness separate from the Pāli version so translator choices can be compared without treating translation as the source text.",
+  "curatorialDescription": [
+    "The English version makes visible how dukkha is rendered in a translator's context; it is not a separate scripture and does not replace the Pāli text."
+  ],
+  "researchNote": "This slice records a short quotation only; the full translation, rights and additional English witnesses require item-by-item review under the source licence.",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:sn56-11-thanissaro",
+      "title": "Access to Insight: SN 56.11 translated by Thanissaro Bhikkhu",
+      "locator": "SN 56.11，四圣谛段落；“This is the noble truth of stress.”",
+      "grade": "A",
+      "role": "English translation witness for comparing translator wording with the Pāli passage; excerpts remain subject to the source site's licence",
+      "url": "https://www.accesstoinsight.org/tipitaka/sn/sn56/sn56.011.than.html"
+    }
+  ],
+  "profile": {
+    "textSlug": "dhammacakkappavattana-sutta",
+    "versionKind": "translation",
+    "languageCode": "en",
+    "citationLabel": "Access to Insight, SN 56.11, translated by Thanissaro Bhikkhu",
+    "rightsStatus": "quotation_only"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

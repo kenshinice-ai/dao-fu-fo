@@ -1,0 +1,48 @@
+{
+  "id": "5584e8c1-f35d-5f06-b59b-a800e5145793",
+  "locale": "en",
+  "kind": "text",
+  "slug": "heart-sutra",
+  "title": "Heart Sutra",
+  "subtitle": "A Buddhist Prajñāpāramitā scripture",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "Chinese translation and circulation: Sui–Tang focus",
+  "shortSummary": "The Heart Sutra presents Prajñāpāramitā thought in a highly condensed form and became one of the most widely circulated texts in Chinese Buddhism.",
+  "curatorialDescription": [
+    "The museum records the Heart Sutra's text, versions, transmission and later recitation separately instead of treating a popular line as a context-free maxim."
+  ],
+  "researchNote": "Specific translators, editions and variant readings will be verified passage by passage in the next editorial batch.",
+  "keyFacts": [
+    {
+      "label": "Text kind",
+      "value": "Buddhist scripture"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:heart-sutra-edition",
+      "title": "Chinese editions and catalogues of the Heart Sutra",
+      "locator": "第2节：舍利子，色不异空，空不异色，色即是空，空即是色",
+      "grade": "A",
+      "role": "Initial basis for the passage text and version locator",
+      "url": "https://ctext.org/wiki.pl?chapter=412996&if=en"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "Curatorial and methodological notes of the Dao–Ru–Fo Digital Museum",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "Curatorial framework and terminology rules"
+    }
+  ],
+  "profile": {
+    "textKind": "sutra",
+    "originalLanguageCode": "sa",
+    "canonicalStatus": "influential",
+    "attributionStatus": "contested"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

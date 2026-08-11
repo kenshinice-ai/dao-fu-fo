@@ -1,0 +1,74 @@
+{
+  "id": "a8b3ffa4-3ad8-5cf8-a8d4-18bf4ab53530",
+  "locale": "en",
+  "kind": "route",
+  "slug": "xuanzang-western-pilgrimage",
+  "title": "Xuanzang's western pilgrimage route",
+  "subtitle": "A schematic of transregional knowledge movement from Chang'an",
+  "tradition": "buddhism",
+  "evidence": "historical_inferred",
+  "timeLabel": "c. 629–645",
+  "shortSummary": "The route places Chang'an, the Hexi Corridor, Central Asia and South Asia in one research view without treating every node as a verified day-by-day itinerary.",
+  "curatorialDescription": [
+    "The route is a composite read model of biography, historical geography and later maps; each node retains its own evidence layer and confidence.",
+    "The real map draws only nodes with geographic referents; traditional narratives and sacred sites belong to another layer."
+  ],
+  "researchNote": "Departure, return, stop nodes, route variants and map sources still need to be added; this is an Alpha route skeleton.",
+  "keyFacts": [
+    {
+      "label": "Route type",
+      "value": "Pilgrimage and knowledge-transmission route"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:xuanzang-records",
+      "title": "Biography of the Tripiṭaka Master of the Great Ci'en Monastery",
+      "locator": "《大唐大慈恩寺三藏法师传》全书（卷一至卷十）；卷一开篇为玄奘本传，后续卷次记录求法与译经活动",
+      "grade": "A",
+      "role": "Primary biographical basis for Xuanzang's travels and translation work",
+      "url": "https://ctext.org/library.pl?if=en&res=112971"
+    },
+    {
+      "id": "source:historical-geography",
+      "title": "Historical geography and urban gazetteers of the Sui–Tang period",
+      "locator": "长安、洛阳、敦煌历史名称与地理范围",
+      "grade": "A",
+      "role": "Geographic basis for real places, historical names and coordinate approximations"
+    },
+    {
+      "id": "source:unesco-silk-roads-corridor",
+      "title": "UNESCO World Heritage Centre: Silk Roads, Chang'an–Tianshan Corridor",
+      "locator": "World Heritage List no. 1442; component coordinates and corridor description",
+      "grade": "A",
+      "role": "Geographic basis for Chang'an, Luoyang, the Great Wild Goose Pagoda, Kucha-region sites and the transregional corridor",
+      "url": "https://whc.unesco.org/en/list/1442/maps/"
+    },
+    {
+      "id": "source:unesco-nalanda",
+      "title": "UNESCO World Heritage Centre: Archaeological Site of Nalanda Mahavihara",
+      "locator": "World Heritage List no. 1502; N25 8 12 E85 26 38",
+      "grade": "A",
+      "role": "Authoritative entry for Nalanda's location, chronology and monastic-scholastic character",
+      "url": "https://whc.unesco.org/en/list/1502/"
+    }
+  ],
+  "profile": {
+    "routeKind": "pilgrimage",
+    "certainty": "reconstructed",
+    "waypointSlugs": [
+      "changan",
+      "dunhuang",
+      "qiuci",
+      "nalanda"
+    ],
+    "corridorNote": {
+      "zh-CN": "仅列有据可考或可作为区域锚点的节点，不绘制伪精确逐日路径。",
+      "en": "Only evidenced stops or regional anchors are listed; no falsely precise day-by-day line is drawn."
+    },
+    "animationAllowed": false
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

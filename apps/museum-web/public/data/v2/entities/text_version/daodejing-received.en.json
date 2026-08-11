@@ -1,0 +1,36 @@
+{
+  "id": "91f95e39-fba6-5ae3-89dc-0ef2532de566",
+  "locale": "en",
+  "kind": "text_version",
+  "slug": "daodejing-received",
+  "title": "Received text of the Daodejing",
+  "tradition": "daoism",
+  "evidence": "historical_inferred",
+  "timeLabel": "Circulation of the received text",
+  "shortSummary": "An Alpha version record for the received chapters of the Daodejing.",
+  "curatorialDescription": [
+    "The received text is not the only textual form; a version entity provides a stable anchor for variants and commentaries."
+  ],
+  "researchNote": "Edition, chapter and variant details are required before publication.",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:daodejing-edition",
+      "title": "Received editions and chapter references for the Daodejing",
+      "locator": "第二十五章（“人法地，地法天，天法道，道法自然”）",
+      "grade": "A",
+      "role": "Initial basis for the Daoist passage and chapter locator",
+      "url": "https://ctext.org/text.pl?if=en&node=11616&show=parallel"
+    }
+  ],
+  "profile": {
+    "textSlug": "daodejing",
+    "versionKind": "recension",
+    "languageCode": "lzh",
+    "citationLabel": "Daodejing received text",
+    "rightsStatus": "public_domain"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

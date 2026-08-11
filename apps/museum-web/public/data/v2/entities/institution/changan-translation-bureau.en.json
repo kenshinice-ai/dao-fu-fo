@@ -1,0 +1,40 @@
+{
+  "id": "79e8a237-c2d3-5d9a-91be-0b776fbf448b",
+  "locale": "en",
+  "kind": "institution",
+  "slug": "changan-translation-bureau",
+  "title": "Chang'an translation-bureau network",
+  "tradition": "buddhism",
+  "evidence": "historical_inferred",
+  "timeLabel": "Tang period; project dates pending",
+  "shortSummary": "Translation was collaborative work supported by monastic space, language roles, textual checking and imperial patronage.",
+  "curatorialDescription": [
+    "It is modelled as a network so that bureaux in different monasteries and periods are not falsely merged into one permanent institution."
+  ],
+  "researchNote": "Locations, participants, functions and dates must be separated by translation project.",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:buddhist-institutional-records",
+      "title": "Studies of Sui–Tang monasteries, translation bureaux and monastic institutions",
+      "locator": "大慈恩寺、译经场与寺院网络专题；底本待核",
+      "grade": "B",
+      "role": "Institutional context for monasteries, translation sites and Buddhist urban networks"
+    },
+    {
+      "id": "source:xuanzang-records",
+      "title": "Biography of the Tripiṭaka Master of the Great Ci'en Monastery",
+      "locator": "《大唐大慈恩寺三藏法师传》全书（卷一至卷十）；卷一开篇为玄奘本传，后续卷次记录求法与译经活动",
+      "grade": "A",
+      "role": "Primary biographical basis for Xuanzang's travels and translation work",
+      "url": "https://ctext.org/library.pl?if=en&res=112971"
+    }
+  ],
+  "profile": {
+    "institutionKind": "translation_network",
+    "networkScope": true
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

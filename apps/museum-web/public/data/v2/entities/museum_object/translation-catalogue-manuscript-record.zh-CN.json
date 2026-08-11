@@ -1,0 +1,40 @@
+{
+  "id": "a1be51e1-f85d-5104-9c71-a2d56685be71",
+  "locale": "zh-CN",
+  "kind": "museum_object",
+  "slug": "translation-catalogue-manuscript-record",
+  "title": "译经目录写本记录（对象占位）",
+  "tradition": "buddhism",
+  "evidence": "historical_inferred",
+  "timeLabel": "对象记录待核；唐代译经语境",
+  "shortSummary": "经录与目录对象可记录译名、版本、译者归属和经典流通的制度化整理。",
+  "curatorialDescription": [
+    "目录文本和承载它的具体写本是不同层级，当前条目只预留对象档案。"
+  ],
+  "researchNote": "需确定具体经录、版本、写本馆藏、编号、年代和图像权利。",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:object-records",
+      "title": "博物馆藏品与图像记录待建档清单",
+      "locator": "对象类型、馆藏机构、图像权利和编号待补",
+      "grade": "C",
+      "role": "Alpha 对象卡片的占位来源；不是可直接发布的藏品断言"
+    },
+    {
+      "id": "source:buddhist-institutional-records",
+      "title": "隋唐寺院、译场与僧团制度资料",
+      "locator": "大慈恩寺、译经场与寺院网络专题；底本待核",
+      "grade": "B",
+      "role": "寺院、译经机构和佛教城市网络的制度语境"
+    }
+  ],
+  "profile": {
+    "objectType": "catalogue_manuscript",
+    "rightsStatus": "unknown",
+    "collectionStatus": "placeholder"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

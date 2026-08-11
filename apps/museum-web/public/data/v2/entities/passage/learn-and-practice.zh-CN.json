@@ -1,0 +1,50 @@
+{
+  "id": "6870c0fd-b027-54de-912c-cd1b805beddc",
+  "locale": "zh-CN",
+  "kind": "passage",
+  "slug": "learn-and-practice",
+  "title": "学而时习之",
+  "tradition": "confucianism",
+  "evidence": "historical_inferred",
+  "timeLabel": "传世本《学而》篇",
+  "shortSummary": "《论语》开篇把学习、按时践习与愉悦联系起来。",
+  "curatorialDescription": [
+    "“习”同时保留复习、实践与养成的解释空间，不固定为单一现代学习法。"
+  ],
+  "researchNote": "需补古注、唐代经学注疏和英译差异。",
+  "keyFacts": [],
+  "related": [
+    {
+      "kind": "text",
+      "slug": "analects",
+      "title": "《论语》",
+      "relation": "摘录自"
+    }
+  ],
+  "sources": [
+    {
+      "id": "source:analects-edition",
+      "title": "《论语》通行本与篇章资料",
+      "locator": "颜渊第十二，第1章（“克己复礼为仁”）",
+      "grade": "A",
+      "role": "儒家 passage 原文和篇章定位的初始依据",
+      "url": "https://ctext.org/wiki.pl?chapter=198285&if=en&remap=gb"
+    }
+  ],
+  "profile": {
+    "textSlug": "analects",
+    "textVersionSlug": "analects-received",
+    "passageKind": "classic_saying",
+    "locatorOriginal": "学而篇",
+    "locatorNormalised": "Analects 1.1",
+    "originalText": "学而时习之，不亦说乎？",
+    "punctuatedText": "学而时习之，不亦说乎？",
+    "modernZh": "学习并按时温习和践行，不也是令人愉悦的吗？",
+    "translationEn": "To learn and practise at due times—is this not a pleasure?",
+    "ritualSensitivity": "public_textual",
+    "attributionStatus": "anonymous_or_composite",
+    "variantReadings": []
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

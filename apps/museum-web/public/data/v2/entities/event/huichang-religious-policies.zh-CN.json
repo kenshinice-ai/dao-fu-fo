@@ -1,0 +1,41 @@
+{
+  "id": "bab56698-ef14-54f2-992a-679db900dc25",
+  "locale": "zh-CN",
+  "kind": "event",
+  "slug": "huichang-religious-policies",
+  "title": "会昌宗教政策",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "约 845",
+  "shortSummary": "845 年前后的政策集中改变了佛教等宗教机构的财产、人员与公共地位。",
+  "curatorialDescription": [
+    "条目以政策与执行后果为中心，不将复杂过程简化为一次同质化“灭佛”事件。"
+  ],
+  "researchNote": "诏令序列、地区执行差异、道教与其他宗教的政策位置需分别核定。",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:tang-imperial-records",
+      "title": "隋唐正史人物与制度记录",
+      "locator": "帝王、制度与年代条目；具体版本和卷页待核",
+      "grade": "B",
+      "role": "隋唐人物、都城、制度和事件时间的研究参考"
+    },
+    {
+      "id": "source:buddhist-institutional-records",
+      "title": "隋唐寺院、译场与僧团制度资料",
+      "locator": "大慈恩寺、译经场与寺院网络专题；底本待核",
+      "grade": "B",
+      "role": "寺院、译经机构和佛教城市网络的制度语境"
+    }
+  ],
+  "profile": {
+    "eventKind": "policy",
+    "historicity": "documented",
+    "sequenceOrder": 14,
+    "eventScope": "imperial"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

@@ -1,0 +1,142 @@
+{
+  "locale": "zh-CN",
+  "layer": "sacred_symbolic",
+  "title": "道·儒·佛象征空间",
+  "description": "以传统节点、比较关系和策展相遇点呈现象征空间；它不使用现实经纬度。",
+  "disclaimer": "象征空间不是现实地图，也不把道、儒、佛压缩成同一套宇宙观。",
+  "nodes": [
+    {
+      "id": "tradition:daoism",
+      "kind": "tradition",
+      "slug": "daoism",
+      "label": "道家与道教传统",
+      "shortLabel": "道",
+      "summary": "传统名称节点；不把不同传统压缩成一套统一神学。",
+      "tradition": "daoism",
+      "zone": "daoist_tradition",
+      "x": 300,
+      "y": 190,
+      "evidenceLayer": "scholarly_interpretation",
+      "sourceIds": [
+        "source:editorial-method"
+      ]
+    },
+    {
+      "id": "tradition:confucianism",
+      "kind": "tradition",
+      "slug": "confucianism",
+      "label": "儒家传统",
+      "shortLabel": "儒",
+      "summary": "传统名称节点；不把不同传统压缩成一套统一神学。",
+      "tradition": "confucianism",
+      "zone": "confucian_tradition",
+      "x": 510,
+      "y": 330,
+      "evidenceLayer": "scholarly_interpretation",
+      "sourceIds": [
+        "source:editorial-method"
+      ]
+    },
+    {
+      "id": "tradition:buddhism",
+      "kind": "tradition",
+      "slug": "buddhism",
+      "label": "佛教",
+      "shortLabel": "佛",
+      "summary": "传统名称节点；不把不同传统压缩成一套统一神学。",
+      "tradition": "buddhism",
+      "zone": "buddhist_tradition",
+      "x": 720,
+      "y": 190,
+      "evidenceLayer": "scholarly_interpretation",
+      "sourceIds": [
+        "source:editorial-method"
+      ]
+    },
+    {
+      "id": "symbolic:encounter",
+      "kind": "symbolic_node",
+      "slug": "encounter",
+      "label": "相遇",
+      "shortLabel": "相遇",
+      "summary": "策展比较节点，不是共同神学实体。",
+      "tradition": "convergence",
+      "zone": "comparative_encounter",
+      "x": 510,
+      "y": 260,
+      "evidenceLayer": "scholarly_interpretation",
+      "sourceIds": [
+        "source:editorial-method"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "cosmos:frame:daoism",
+      "source": "symbolic:encounter",
+      "target": "tradition:daoism",
+      "relationType": "comparative_parallel",
+      "label": "比较框架",
+      "summary": "表示相遇与并置，不表示教义等同。",
+      "confidence": "high",
+      "evidenceLayer": "scholarly_interpretation",
+      "sourceIds": [
+        "source:editorial-method"
+      ]
+    },
+    {
+      "id": "cosmos:frame:confucianism",
+      "source": "symbolic:encounter",
+      "target": "tradition:confucianism",
+      "relationType": "comparative_parallel",
+      "label": "比较框架",
+      "summary": "表示相遇与并置，不表示教义等同。",
+      "confidence": "high",
+      "evidenceLayer": "scholarly_interpretation",
+      "sourceIds": [
+        "source:editorial-method"
+      ]
+    },
+    {
+      "id": "cosmos:frame:buddhism",
+      "source": "symbolic:encounter",
+      "target": "tradition:buddhism",
+      "relationType": "comparative_parallel",
+      "label": "比较框架",
+      "summary": "表示相遇与并置，不表示教义等同。",
+      "confidence": "high",
+      "evidenceLayer": "scholarly_interpretation",
+      "sourceIds": [
+        "source:editorial-method"
+      ]
+    },
+    {
+      "id": "relation:daodejing-analects-comparative",
+      "source": "tradition:daoism",
+      "target": "tradition:confucianism",
+      "relationType": "comparative_parallel",
+      "label": "比较阅读",
+      "summary": "本关系只建立策展比较入口，不声称两个文本具有同一作者、同一传统或直接影响关系。",
+      "confidence": "medium",
+      "evidenceLayer": "scholarly_interpretation",
+      "sourceIds": [
+        "source:comparative-method",
+        "source:editorial-method"
+      ]
+    },
+    {
+      "id": "relation:heart-sutra-daodejing-comparative",
+      "source": "tradition:buddhism",
+      "target": "tradition:daoism",
+      "relationType": "comparative_parallel",
+      "label": "概念比较入口",
+      "summary": "两部文本可以被并置阅读，但其术语、历史语境和宗教功能必须分别说明。",
+      "confidence": "medium",
+      "evidenceLayer": "scholarly_interpretation",
+      "sourceIds": [
+        "source:comparative-method",
+        "source:editorial-method"
+      ]
+    }
+  ]
+}

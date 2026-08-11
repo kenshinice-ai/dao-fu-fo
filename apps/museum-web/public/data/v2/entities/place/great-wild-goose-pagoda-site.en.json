@@ -1,0 +1,53 @@
+{
+  "id": "7e7d7d0d-8007-59c5-ac23-2ca12194d28b",
+  "locale": "en",
+  "kind": "place",
+  "slug": "great-wild-goose-pagoda-site",
+  "title": "Great Wild Goose Pagoda site",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "Founded in the Tang; phases pending",
+  "shortSummary": "The site connects Xuanzang, translation, textual preservation and the urban space of Chang'an.",
+  "curatorialDescription": [
+    "The place record identifies a locatable site; building phases, changing functions and modern protection boundaries require separate layers."
+  ],
+  "researchNote": "Coordinates, heritage boundary and construction phases must be attached to authoritative geographic and conservation records.",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:buddhist-institutional-records",
+      "title": "Studies of Sui–Tang monasteries, translation bureaux and monastic institutions",
+      "locator": "大慈恩寺、译经场与寺院网络专题；底本待核",
+      "grade": "B",
+      "role": "Institutional context for monasteries, translation sites and Buddhist urban networks"
+    },
+    {
+      "id": "source:unesco-silk-roads-corridor",
+      "title": "UNESCO World Heritage Centre: Silk Roads, Chang'an–Tianshan Corridor",
+      "locator": "World Heritage List no. 1442; component coordinates and corridor description",
+      "grade": "A",
+      "role": "Geographic basis for Chang'an, Luoyang, the Great Wild Goose Pagoda, Kucha-region sites and the transregional corridor",
+      "url": "https://whc.unesco.org/en/list/1442/maps/"
+    },
+    {
+      "id": "source:historical-geography",
+      "title": "Historical geography and urban gazetteers of the Sui–Tang period",
+      "locator": "长安、洛阳、敦煌历史名称与地理范围",
+      "grade": "A",
+      "role": "Geographic basis for real places, historical names and coordinate approximations"
+    }
+  ],
+  "profile": {
+    "placeReality": "real_historical",
+    "geometryType": "point",
+    "coordinates": [
+      108.959444,
+      34.219722
+    ],
+    "coordinateConfidence": "exact",
+    "geographicSourceId": "source:unesco-silk-roads-corridor"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

@@ -1,31 +1,69 @@
 {
+  "id": "5bf99d90-4c5a-575b-8a79-7957a33ef9eb",
   "locale": "en",
   "kind": "figure",
   "slug": "sima-chengzhen",
   "title": "Sima Chengzhen",
-  "subtitle": "647–735 · Tang Daoist figure",
+  "subtitle": "A representative figure of the Shangqing Daoist tradition",
   "tradition": "daoism",
-  "evidence": "Historically documented · traditional layers also present",
+  "evidence": "historical_documented",
   "timeLabel": "647–735",
-  "shortSummary": "Sima Chengzhen connects mountain cultivation, textual traditions and Tang court networks.",
+  "shortSummary": "Sima Chengzhen connects mountain cultivation, Daoist lineages and Tang imperial patronage.",
   "curatorialDescription": [
-    "Sima Chengzhen matters not only as an individual biography but as a figure crossing three spaces: mountains, lineage and court. Tang Daoism could appear as mountain cultivation while also entering imperial ritual and patronage.",
-    "A relation graph must distinguish lineage tradition, documented activity and later veneration. They may concern one figure but belong to different evidence layers.",
-    "His case also shows why Daoist philosophical concepts and organised Daoism are not identical, even when textual interpretation and practice connect them."
+    "Sima Chengzhen shows why Daoism cannot be reduced either to an abstract philosophy or to a single court institution. It was a historical network of people, mountains, lineages, texts and imperial relationships.",
+    "His entry must distinguish documented activity, traditional identity and later memory rather than replacing this complexity with one biographical date."
   ],
-  "researchNote": "The first release shows only foundational relations among court, mountain cultivation and textual tradition. Lineage detail will expand after source and tradition review.",
+  "researchNote": "This Alpha structured sample still needs versioned references for lineage, institutions and court encounters.",
   "keyFacts": [
-    { "label": "Tradition", "value": "associated with Shangqing Daoism" },
-    { "label": "Spaces", "value": "mountain cultivation · court networks" },
-    { "label": "Views", "value": "figure relations · timeline" }
+    {
+      "label": "Tradition",
+      "value": "Shangqing Daoist tradition"
+    },
+    {
+      "label": "Spatial thread",
+      "value": "Mountain and institutional networks"
+    }
   ],
-  "related": [
-    { "kind": "text", "slug": "daodejing", "title": "Daodejing", "relation": "classical interpretive background" },
-    { "kind": "concept", "slug": "naturalness", "title": "Naturalness", "relation": "related concept" },
-    { "kind": "place", "slug": "louguantai", "title": "Louguantai", "relation": "Tang Daoist site network" }
-  ],
+  "related": [],
   "sources": [
-    { "title": "Old Book of Tang", "locator": "biographical and court records concerning Daoist figures", "grade": "A", "role": "historical figure and court activity" },
-    { "title": "Studies of Daoism in the Tang", "locator": "Sima Chengzhen and the court", "grade": "B", "role": "lineage and institutional background; full bibliography pending" }
-  ]
+    {
+      "id": "source:sima-old-tang-biography",
+      "title": "Sima Chengzhen entry in the Old Book of Tang biographies of recluses",
+      "locator": "《旧唐书》隐逸传：司马承祯条；召见、入朝活动与王屋山活动记载",
+      "grade": "A",
+      "role": "Primary historical locator for Sima Chengzhen's biography, court encounters and institutional context",
+      "url": "https://ctext.org/wiki.pl?if=gb&remap=gb&res=456206"
+    },
+    {
+      "id": "source:sima-chengzhen-full-tang-text",
+      "title": "Complete Tang Prose: Sima Chengzhen",
+      "locator": "卷九百二十四：司马承祯条；道士身份、召至都与王屋山建观记载",
+      "grade": "A",
+      "role": "Tang-text locator for Sima Chengzhen's Daoist identity, court summons and institutional context",
+      "url": "https://ctext.org/wiki.pl?chapter=226793&if=gb"
+    },
+    {
+      "id": "source:daoist-historical-record",
+      "title": "Studies on Daoist figures and institutions in the Sui–Tang period",
+      "locator": "人物、宫观与皇室关系专题",
+      "grade": "B",
+      "role": "Scholarly context for Sima Chengzhen and Sui–Tang Daoist institutions"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "Curatorial and methodological notes of the Dao–Ru–Fo Digital Museum",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "Curatorial framework and terminology rules"
+    }
+  ],
+  "profile": {
+    "historicity": "documented",
+    "figureClass": "historical_person",
+    "gender": "male",
+    "canonicalNameOriginal": "司马承祯",
+    "nameLanguageCode": "lzh"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
 }

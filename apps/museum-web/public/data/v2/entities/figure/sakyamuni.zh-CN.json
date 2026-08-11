@@ -1,0 +1,75 @@
+{
+  "id": "18a70214-56c9-528b-a22c-bf1279bf76ed",
+  "locale": "zh-CN",
+  "kind": "figure",
+  "slug": "sakyamuni",
+  "title": "释迦牟尼佛（乔达摩·悉达多）",
+  "subtitle": "佛教教法源头、僧团记忆与跨区域传播的核心人物",
+  "tradition": "buddhism",
+  "evidence": "traditional_account",
+  "timeLabel": "传统与学术年代有争议；约公元前 5 世纪导航区间",
+  "shortSummary": "释迦牟尼是佛教思想和朝圣地理的核心入口，但早期文本中的片段性生平、后世佛传和神圣叙事必须分层展示。",
+  "curatorialDescription": [
+    "本馆把释迦牟尼的历史性问题、早期佛教文本中的传述、鹿野苑的教法记忆和后世经典中的佛陀形象连接起来，但不把后世完整佛传倒写成一份同时代传记。",
+    "鹿野苑可以成为‘人物—事件—地点—言说—后世朝圣’的完整样本；现实地图显示遗址，神圣意义和佛教记忆则标注为传统与后世层。"
+  ],
+  "researchNote": "早期佛教文本并不提供一份连贯的现代传记；年代采用宽泛导航区间，初转法轮与鹿野苑关系分别标记为早期传述、遗产记忆和后世朝圣层。",
+  "keyFacts": [
+    {
+      "label": "人物类别",
+      "value": "历史人物／传统圣者"
+    },
+    {
+      "label": "关键区分",
+      "value": "早期教法传述不等于逐字现场记录"
+    }
+  ],
+  "related": [
+    {
+      "kind": "place",
+      "slug": "sarnath",
+      "title": "鹿野苑",
+      "relation": "初转法轮与后世朝圣记忆"
+    },
+    {
+      "kind": "text",
+      "slug": "dhammacakkappavattana-sutta",
+      "title": "《转法轮经》",
+      "relation": "早期教法传述文本"
+    }
+  ],
+  "sources": [
+    {
+      "id": "source:buddha-early-texts",
+      "title": "巴利经藏早期佛教文本：MN 26 与 SN 56.11",
+      "locator": "MN 26 Ariyapariyesanā：求法与到达鹿野苑；SN 56.11 Dhammacakkappavattana：鹿野苑初转法轮文本",
+      "grade": "A",
+      "role": "释迦牟尼生平叙事、早期教法传述与鹿野苑空间关联的原典入口；不把经文传述等同于逐字现场记录",
+      "url": "https://suttacentral.net/sn56.11/en/sujato"
+    },
+    {
+      "id": "source:sarnath-site-record",
+      "title": "UNESCO 与印度考古调查局：鹿野苑古佛教遗址",
+      "locator": "World Heritage List no. 927；鹿野苑遗址、初转法轮传统与遗址保护范围；约 25.381°N, 83.022°E",
+      "grade": "A",
+      "role": "鹿野苑现实地点、遗址层与佛教朝圣记忆的权威地理和遗产入口",
+      "url": "https://whc.unesco.org/en/list/927/"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "道·儒·佛文明数字博物馆策展与方法说明",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "项目的策展框架与术语规则"
+    }
+  ],
+  "profile": {
+    "historicity": "contested",
+    "figureClass": "historical_person",
+    "gender": "male",
+    "canonicalNameOriginal": "Siddhattha Gotama / Śākyamuni",
+    "nameLanguageCode": "pli-sa"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "b6d2701c-2848-587f-9aaa-718c1b3feaae",
+  "locale": "en",
+  "kind": "figure",
+  "slug": "yan-shigu",
+  "title": "Yan Shigu",
+  "tradition": "confucianism",
+  "evidence": "historical_documented",
+  "timeLabel": "581–645",
+  "shortSummary": "Yan Shigu connects early Tang textual editing and commentary with state knowledge projects.",
+  "curatorialDescription": [
+    "His record shows that textual scholarship was not isolated study but was connected to official learning, editions and institutions."
+  ],
+  "researchNote": "Specific editorial projects, edition histories and offices still require volume- and page-level sources.",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:education-classics-records",
+      "title": "Records on the Tang Guozijian and classical learning institutions",
+      "locator": "国子监、经学与《五经正义》制度语境；底本待核",
+      "grade": "B",
+      "role": "Research reference for state education, classical commentary and knowledge institutions"
+    },
+    {
+      "id": "source:tang-imperial-records",
+      "title": "Official histories and institutional records of the Sui–Tang period",
+      "locator": "帝王、制度与年代条目；具体版本和卷页待核",
+      "grade": "B",
+      "role": "Research reference for Sui–Tang figures, capitals, institutions and event dates"
+    }
+  ],
+  "profile": {
+    "historicity": "documented",
+    "figureClass": "historical_person",
+    "gender": "male",
+    "canonicalNameOriginal": "颜师古",
+    "nameLanguageCode": "lzh"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

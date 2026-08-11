@@ -1,0 +1,49 @@
+{
+  "id": "4aed2dd6-0e94-5df4-b879-e3687db04297",
+  "locale": "zh-CN",
+  "kind": "passage",
+  "slug": "prajna-no-wisdom",
+  "title": "无智亦无得",
+  "subtitle": "《心经》关于知识与所得的段落",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "《心经》汉译与流通语境",
+  "shortSummary": "这句经文适合引导观众区分“无所得”的经文语境与现代语境中的知识否定。",
+  "curatorialDescription": [
+    "本馆将这句放在《心经》整体结构中，不把它剪裁成脱离经文的励志格言。"
+  ],
+  "researchNote": "需要补充版本定位、句读和不同注疏对“智”“得”的解释。",
+  "keyFacts": [
+    {
+      "label": "段落类型",
+      "value": "经文摘录"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:heart-sutra-edition",
+      "title": "《般若波罗蜜多心经》汉译本与经录资料",
+      "locator": "第2节：舍利子，色不异空，空不异色，色即是空，空即是色",
+      "grade": "A",
+      "role": "passage 原文和版本定位的初始依据",
+      "url": "https://ctext.org/wiki.pl?chapter=412996&if=en"
+    }
+  ],
+  "profile": {
+    "textSlug": "heart-sutra",
+    "textVersionSlug": "heart-sutra-chinese-received",
+    "passageKind": "scripture_excerpt",
+    "locatorOriginal": "无所得段落；具体行号待核",
+    "locatorNormalised": "heart-sutra:no-wisdom-no-attainment",
+    "originalText": "无智亦无得。",
+    "punctuatedText": "无智亦无得。",
+    "modernZh": "在这里，智慧和获得都不被当作可以执取的固定对象。",
+    "translationEn": "There is no wisdom and no attainment.",
+    "ritualSensitivity": "public_textual",
+    "attributionStatus": "anonymous_or_composite",
+    "variantReadings": []
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

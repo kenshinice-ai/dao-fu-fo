@@ -1,0 +1,40 @@
+{
+  "id": "c7d7bfe9-78a2-50e5-85d7-de43a7f46d75",
+  "locale": "en",
+  "kind": "museum_object",
+  "slug": "guozijian-ritual-vessel-record",
+  "title": "Official-learning ritual object record (object placeholder)",
+  "tradition": "confucianism",
+  "evidence": "historical_inferred",
+  "timeLabel": "Object pending; Sui–Tang educational ritual context",
+  "shortSummary": "A ritual object can connect the concept of li with school space, participants and concrete action.",
+  "curatorialDescription": [
+    "No object class or date is assigned yet, avoiding presentation of a general institution as a specific artefact."
+  ],
+  "researchNote": "Object class, findspot, date, use and rights require an excavation report or museum catalogue.",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:object-records",
+      "title": "Pending catalogue of museum objects and image records",
+      "locator": "对象类型、馆藏机构、图像权利和编号待补",
+      "grade": "C",
+      "role": "Placeholder source for Alpha object cards, not a publishable collection claim"
+    },
+    {
+      "id": "source:education-classics-records",
+      "title": "Records on the Tang Guozijian and classical learning institutions",
+      "locator": "国子监、经学与《五经正义》制度语境；底本待核",
+      "grade": "B",
+      "role": "Research reference for state education, classical commentary and knowledge institutions"
+    }
+  ],
+  "profile": {
+    "objectType": "ritual_object",
+    "rightsStatus": "unknown",
+    "collectionStatus": "placeholder"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

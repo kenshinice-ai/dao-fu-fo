@@ -1,0 +1,41 @@
+{
+  "id": "23c8800c-019b-59bf-ac4d-336f2aa49420",
+  "locale": "zh-CN",
+  "kind": "museum_object",
+  "slug": "daodejing-commentary-manuscript-record",
+  "title": "《道德经》注本写本记录（对象占位）",
+  "tradition": "daoism",
+  "evidence": "historical_inferred",
+  "timeLabel": "对象记录待核；唐代注释语境",
+  "shortSummary": "对象卡为唐代《道德经》注释的写本形态、书写层和流传史预留档案入口。",
+  "curatorialDescription": [
+    "尚未绑定具体馆藏，不展示图像，也不把占位类型当作已确认对象。"
+  ],
+  "researchNote": "需补馆藏机构、编号、材质、年代、注家归属、流传与图像权利。",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:object-records",
+      "title": "博物馆藏品与图像记录待建档清单",
+      "locator": "对象类型、馆藏机构、图像权利和编号待补",
+      "grade": "C",
+      "role": "Alpha 对象卡片的占位来源；不是可直接发布的藏品断言"
+    },
+    {
+      "id": "source:daodejing-edition",
+      "title": "《道德经》通行本与章句资料",
+      "locator": "第二十五章（“人法地，地法天，天法道，道法自然”）",
+      "grade": "A",
+      "role": "道家 passage 原文和章次定位的初始依据",
+      "url": "https://ctext.org/text.pl?if=en&node=11616&show=parallel"
+    }
+  ],
+  "profile": {
+    "objectType": "manuscript",
+    "rightsStatus": "unknown",
+    "collectionStatus": "placeholder"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "dfa5a7a3-6389-5a9a-8556-d8996da23c3c",
+  "locale": "zh-CN",
+  "kind": "figure",
+  "slug": "yijing",
+  "title": "义净",
+  "subtitle": "求法者、译经家与海上交通的见证者",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "635–713",
+  "shortSummary": "义净把海上求法、印度学习和汉译佛典的生产联系起来，是理解跨区域知识流动的重要人物。",
+  "curatorialDescription": [
+    "与玄奘的陆路经历并置时，义净帮助观众看到隋唐佛教知识流动并不只有一条路线。",
+    "本馆把求法叙事、译经成果和后世传记分层呈现，避免把旅行故事直接等同于完整历史事实。"
+  ],
+  "researchNote": "Alpha 条目；需要补充《大唐西域求法高僧传》及相关译经目录的具体版本、卷页与路线节点。",
+  "keyFacts": [
+    {
+      "label": "主要身份",
+      "value": "僧侣、求法者、译经家"
+    },
+    {
+      "label": "路线视角",
+      "value": "海上与南亚网络"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:buddhist-biographical-records",
+      "title": "隋唐高僧传记与求法记录资料",
+      "locator": "义净、玄奘及求法僧侣条目；底本与卷页待核",
+      "grade": "B",
+      "role": "佛教人物、求法路线与译经活动的研究入口"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "道·儒·佛文明数字博物馆策展与方法说明",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "项目的策展框架与术语规则"
+    }
+  ],
+  "profile": {
+    "historicity": "documented",
+    "figureClass": "historical_person",
+    "gender": "male",
+    "canonicalNameOriginal": "义净",
+    "nameLanguageCode": "lzh"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

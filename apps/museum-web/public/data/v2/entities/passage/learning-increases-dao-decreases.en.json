@@ -1,0 +1,50 @@
+{
+  "id": "f5d20c94-a228-5498-9c9a-5abf34bbfc7a",
+  "locale": "en",
+  "kind": "passage",
+  "slug": "learning-increases-dao-decreases",
+  "title": "In learning one increases; in the Dao one decreases",
+  "tradition": "daoism",
+  "evidence": "historical_inferred",
+  "timeLabel": "Received text, chapter 48",
+  "shortSummary": "The passage contrasts accumulation in learning with a practice of decreasing toward non-forcing.",
+  "curatorialDescription": [
+    "Decrease is not rendered simply as opposition to knowledge; it must be read within the chapter and commentarial traditions."
+  ],
+  "researchNote": "Received variants, commentaries and translation comparison remain to be added.",
+  "keyFacts": [],
+  "related": [
+    {
+      "kind": "text",
+      "slug": "daodejing",
+      "title": "Daodejing",
+      "relation": "Excerpt from"
+    }
+  ],
+  "sources": [
+    {
+      "id": "source:daodejing-edition",
+      "title": "Received editions and chapter references for the Daodejing",
+      "locator": "第二十五章（“人法地，地法天，天法道，道法自然”）",
+      "grade": "A",
+      "role": "Initial basis for the Daoist passage and chapter locator",
+      "url": "https://ctext.org/text.pl?if=en&node=11616&show=parallel"
+    }
+  ],
+  "profile": {
+    "textSlug": "daodejing",
+    "textVersionSlug": "daodejing-received",
+    "passageKind": "classic_saying",
+    "locatorOriginal": "第四十八章",
+    "locatorNormalised": "Daodejing 48",
+    "originalText": "为学日益，为道日损。损之又损，以至于无为。无为而无不为。",
+    "punctuatedText": "为学日益，为道日损。损之又损，以至于无为。无为而无不为。",
+    "modernZh": "求学每日增加，行道每日减损；减损又减损，直到无为，而无为并非无所成就。",
+    "translationEn": "In learning one increases daily; in the Dao one decreases daily, decreasing until non-forcing, through which nothing is left undone.",
+    "ritualSensitivity": "public_textual",
+    "attributionStatus": "anonymous_or_composite",
+    "variantReadings": []
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

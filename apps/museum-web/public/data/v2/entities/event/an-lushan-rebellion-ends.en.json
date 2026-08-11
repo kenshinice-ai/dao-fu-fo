@@ -1,0 +1,42 @@
+{
+  "id": "db9bc3d8-e82d-5ecb-96f4-cf1d220ba214",
+  "locale": "en",
+  "kind": "event",
+  "slug": "an-lushan-rebellion-ends",
+  "title": "End of the An Lushan Rebellion",
+  "tradition": "confucianism",
+  "evidence": "historical_documented",
+  "timeLabel": "c. 763",
+  "shortSummary": "The end of warfare around 763 did not restore the pre-war order but opened a long restructuring of finance, regional power and institutions.",
+  "curatorialDescription": [
+    "The timeline separates the end of war from its institutional consequences rather than equating an end date with recovery."
+  ],
+  "researchNote": "Regional recovery and institutional effects require local histories and material evidence.",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:tang-imperial-records",
+      "title": "Official histories and institutional records of the Sui–Tang period",
+      "locator": "帝王、制度与年代条目；具体版本和卷页待核",
+      "grade": "B",
+      "role": "Research reference for Sui–Tang figures, capitals, institutions and event dates"
+    },
+    {
+      "id": "source:met-tang-overview",
+      "title": "The Metropolitan Museum of Art: Tang Dynasty (618–907)",
+      "locator": "Heilbrunn Timeline of Art History; Sui reunification, Tang chronology, Chang'an and the An Lushan rebellion",
+      "grade": "B",
+      "role": "Public overview source for Sui–Tang chronology, cosmopolitan Chang'an and the mid-Tang transition",
+      "url": "https://www.metmuseum.org/essays/tang-dynasty-618-906"
+    }
+  ],
+  "profile": {
+    "eventKind": "conflict",
+    "historicity": "documented",
+    "sequenceOrder": 13,
+    "eventScope": "imperial"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

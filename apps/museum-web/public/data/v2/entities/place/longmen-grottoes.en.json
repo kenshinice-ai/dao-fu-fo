@@ -1,0 +1,46 @@
+{
+  "id": "36de50b4-d018-5999-a605-c8ce790af2f5",
+  "locale": "en",
+  "kind": "place",
+  "slug": "longmen-grottoes",
+  "title": "Longmen Grottoes",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "Late Northern Wei through Tang focus",
+  "shortSummary": "Longmen brings Luoyang, imperial patronage, Buddhist images and inscriptions into one material landscape.",
+  "curatorialDescription": [
+    "The record is modelled at heritage-site level; caves, sculptures, inscriptions and building phases remain to be separated into citable objects."
+  ],
+  "researchNote": "The next batch should attach UNESCO documentation and catalogues for specific caves, sculptures and inscriptions.",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:unesco-longmen",
+      "title": "UNESCO World Heritage Centre: Longmen Grottoes",
+      "locator": "World Heritage List no. 1003; site history, location and significance",
+      "grade": "A",
+      "role": "Authoritative entry for the site's extent, chronology and Tang sculptural context",
+      "url": "https://whc.unesco.org/en/list/1003/"
+    },
+    {
+      "id": "source:historical-geography",
+      "title": "Historical geography and urban gazetteers of the Sui–Tang period",
+      "locator": "长安、洛阳、敦煌历史名称与地理范围",
+      "grade": "A",
+      "role": "Geographic basis for real places, historical names and coordinate approximations"
+    }
+  ],
+  "profile": {
+    "placeReality": "real_historical",
+    "geometryType": "point",
+    "coordinates": [
+      112.466667,
+      34.466667
+    ],
+    "coordinateConfidence": "exact",
+    "geographicSourceId": "source:unesco-longmen"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

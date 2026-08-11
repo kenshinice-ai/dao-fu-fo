@@ -1,0 +1,41 @@
+{
+  "id": "1c4ba68f-cb32-5ca9-bc69-251b1d4639dd",
+  "locale": "zh-CN",
+  "kind": "event",
+  "slug": "yijing-returns",
+  "title": "义净携经回到唐境",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "约 695",
+  "shortSummary": "约 695 年，义净归来后，海路旅行经验进入翻译、著述与制度网络。",
+  "curatorialDescription": [
+    "归来节点用于连接路线与文本生产，具体抵达城市和后续行程仍需细分。"
+  ],
+  "researchNote": "抵达地点、入洛时间及译经项目应据传记和经录复核。",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:buddhist-biographical-records",
+      "title": "隋唐高僧传记与求法记录资料",
+      "locator": "义净、玄奘及求法僧侣条目；底本与卷页待核",
+      "grade": "B",
+      "role": "佛教人物、求法路线与译经活动的研究入口"
+    },
+    {
+      "id": "source:buddhist-institutional-records",
+      "title": "隋唐寺院、译场与僧团制度资料",
+      "locator": "大慈恩寺、译经场与寺院网络专题；底本待核",
+      "grade": "B",
+      "role": "寺院、译经机构和佛教城市网络的制度语境"
+    }
+  ],
+  "profile": {
+    "eventKind": "journey",
+    "historicity": "documented",
+    "sequenceOrder": 10,
+    "eventScope": "transregional"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

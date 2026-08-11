@@ -1,0 +1,140 @@
+{
+  "kind": "figure",
+  "slug": "confucius",
+  "publicationState": "public",
+  "reviewStatus": "publishable",
+  "primaryEvidenceLayer": "historical_documented",
+  "importance": 5,
+  "isFeatured": true,
+  "translations": {
+    "zh-CN": {
+      "title": "孔子（孔丘）",
+      "subtitle": "经典教育、礼与政治伦理的历史人物",
+      "shortSummary": "孔子是儒家经典、教育和政治伦理的高识别度入口；《论语》中的孔子言说必须和弟子记录、编纂层及后世经学接受分开。",
+      "curatorialDescription": [
+        "孔子的历史人物层可以与《史记·孔子世家》、周礼问学叙事和教学活动相连，但《论语》不是脱离传述历史的单一作者文本。",
+        "从孔子到孔颖达，博物馆呈现的是‘人物—言说—编纂—制度接受’的长链，而不是把唐代经学倒推成孔子本人直接参与。"
+      ],
+      "researchNote": "孔子生平有早期史传依据；《论语》为复合性传述文本，具体言说关系以 recorded_by_others 标注，唐代制度接受另行连接。",
+      "timeLabel": "约公元前 551–479 年",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "人物类别",
+            "en": "Figure class"
+          },
+          "value": {
+            "zh-CN": "历史人物",
+            "en": "Historical person"
+          }
+        },
+        {
+          "label": {
+            "zh-CN": "关键区分",
+            "en": "Key distinction"
+          },
+          "value": {
+            "zh-CN": "孔子言说经由弟子与编纂传统保存",
+            "en": "Confucius's sayings survive through disciples and compilation traditions"
+          }
+        }
+      ]
+    },
+    "en": {
+      "title": "Confucius (Kong Qiu)",
+      "subtitle": "A historical figure of classical education, ritual and political ethics",
+      "shortSummary": "Confucius is a recognisable gateway into Confucian classics, education and political ethics; sayings in the Analects must be separated from disciple records, compilation layers and later classical reception.",
+      "curatorialDescription": [
+        "The historical-person layer can connect Confucius with the House of Confucius in the Shiji, the Zhou rites-asking narrative and teaching activity, while the Analects remains a composite text of transmitted sayings.",
+        "From Confucius to Kong Yingda, the museum presents a long chain of person, speech, compilation and institutional reception rather than projecting Tang classical learning back onto Confucius as direct participation."
+      ],
+      "researchNote": "Confucius has an early historiographical record. The Analects is a composite transmitted text; saying relations are marked recorded_by_others, while Tang institutional reception is modelled separately.",
+      "timeLabel": "c. 551–479 BCE",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "人物类别",
+            "en": "Figure class"
+          },
+          "value": {
+            "zh-CN": "历史人物",
+            "en": "Historical person"
+          }
+        },
+        {
+          "label": {
+            "zh-CN": "关键区分",
+            "en": "Key distinction"
+          },
+          "value": {
+            "zh-CN": "孔子言说经由弟子与编纂传统保存",
+            "en": "Confucius's sayings survive through disciples and compilation traditions"
+          }
+        }
+      ]
+    }
+  },
+  "traditions": [
+    {
+      "tradition": "confucianism",
+      "role": "primary",
+      "isPrimary": true,
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:shiji-confucius-biography"
+    }
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "life",
+      "timeType": "circa",
+      "startYear": -551,
+      "endYear": -479,
+      "displayDate": {
+        "zh-CN": "约公元前 551–479 年",
+        "en": "c. 551–479 BCE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:shiji-confucius-biography"
+    }
+  ],
+  "sourceIds": [
+    "source:shiji-confucius-biography",
+    "source:analects-edition",
+    "source:editorial-method"
+  ],
+  "related": [
+    {
+      "kind": "text",
+      "slug": "analects",
+      "title": {
+        "zh-CN": "《论语》",
+        "en": "Analects"
+      },
+      "relation": {
+        "zh-CN": "言行传述文本",
+        "en": "Text of transmitted sayings and actions"
+      }
+    },
+    {
+      "kind": "figure",
+      "slug": "kong-yingda",
+      "title": {
+        "zh-CN": "孔颖达",
+        "en": "Kong Yingda"
+      },
+      "relation": {
+        "zh-CN": "后世经学接受与编纂",
+        "en": "Later classical reception and compilation"
+      }
+    }
+  ],
+  "profile": {
+    "historicity": "documented",
+    "figureClass": "historical_person",
+    "gender": "male",
+    "canonicalNameOriginal": "孔丘",
+    "nameLanguageCode": "lzh"
+  }
+}

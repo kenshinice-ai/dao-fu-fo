@@ -1,0 +1,65 @@
+{
+  "kind": "text_version",
+  "slug": "dhammacakkappavattana-sutta-thanissaro-en",
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed",
+  "primaryEvidenceLayer": "historical_documented",
+  "importance": 3,
+  "isFeatured": false,
+  "translations": {
+    "zh-CN": {
+      "title": "《转法轮经》Thanissaro 英译",
+      "subtitle": "SN 56.11 的英文翻译见证",
+      "shortSummary": "这一版本把同一经文的英译措辞与巴利语版本分开保存，便于比较译者选择而不把译文当作原典。",
+      "curatorialDescription": [
+        "英译版本用于观察 dukkha 在不同译者语境中的措辞选择；它不是另一部独立经典，也不替代巴利语文本。"
+      ],
+      "researchNote": "当前只收录短引文作为版本对读切片；完整译文、版权和更多英译将按原站许可逐项审核。",
+      "timeLabel": "现代英译；对应 SN 56.11 传述层",
+      "keyFacts": []
+    },
+    "en": {
+      "title": "Thanissaro English translation of SN 56.11",
+      "subtitle": "An English translation witness for SN 56.11",
+      "shortSummary": "This version keeps an English translation witness separate from the Pāli version so translator choices can be compared without treating translation as the source text.",
+      "curatorialDescription": [
+        "The English version makes visible how dukkha is rendered in a translator's context; it is not a separate scripture and does not replace the Pāli text."
+      ],
+      "researchNote": "This slice records a short quotation only; the full translation, rights and additional English witnesses require item-by-item review under the source licence.",
+      "timeLabel": "Modern English translation; corresponding to the transmitted SN 56.11 layer",
+      "keyFacts": []
+    }
+  },
+  "traditions": [
+    {
+      "tradition": "buddhism",
+      "role": "primary",
+      "isPrimary": true,
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:sn56-11-thanissaro"
+    }
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "version_scope",
+      "timeType": "atemporal",
+      "displayDate": {
+        "zh-CN": "现代英译版本；不等同于经文形成年代",
+        "en": "Modern English translation; not the date of textual formation"
+      },
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:sn56-11-thanissaro"
+    }
+  ],
+  "sourceIds": ["source:sn56-11-thanissaro"],
+  "related": [],
+  "profile": {
+    "textSlug": "dhammacakkappavattana-sutta",
+    "versionKind": "translation",
+    "languageCode": "en",
+    "citationLabel": "Access to Insight, SN 56.11, translated by Thanissaro Bhikkhu",
+    "rightsStatus": "quotation_only"
+  }
+}

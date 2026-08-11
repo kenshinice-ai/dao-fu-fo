@@ -1,0 +1,574 @@
+{
+  "schemaVersion": "1.0",
+  "locale": "en",
+  "slug": "cross-era-figures",
+  "title": "Cross-era figures: source, transmission and later reception",
+  "question": "How are Laozi, Confucius and Śākyamuni understood across different times, places, texts and later institutions?",
+  "disclaimer": "This is a comparison built from the current relations and sources; it does not collapse three figures, three traditions or different evidence layers into one historical fact.",
+  "entities": [
+    {
+      "key": "figure:laozi",
+      "kind": "figure",
+      "slug": "laozi",
+      "title": "Laozi (Li Er)",
+      "tradition": "daoism",
+      "evidence": "traditional_account",
+      "timeLabel": "Traditionally placed in the late Spring and Autumn period; dates contested",
+      "summary": "Laozi is a recognisable gateway into Daoist classicism, but the Li Er biography, the sage-name Laozi, the formation of the Daodejing and the later Taishang Laojun image must remain distinct layers.",
+      "sourceIds": [
+        "source:shiji-laozi-biography",
+        "source:daodejing-edition",
+        "source:editorial-method"
+      ]
+    },
+    {
+      "key": "figure:confucius",
+      "kind": "figure",
+      "slug": "confucius",
+      "title": "Confucius (Kong Qiu)",
+      "tradition": "confucianism",
+      "evidence": "historical_documented",
+      "timeLabel": "c. 551–479 BCE",
+      "summary": "Confucius is a recognisable gateway into Confucian classics, education and political ethics; sayings in the Analects must be separated from disciple records, compilation layers and later classical reception.",
+      "sourceIds": [
+        "source:shiji-confucius-biography",
+        "source:analects-edition",
+        "source:editorial-method"
+      ]
+    },
+    {
+      "key": "figure:sakyamuni",
+      "kind": "figure",
+      "slug": "sakyamuni",
+      "title": "Śākyamuni Buddha (Gautama)",
+      "tradition": "buddhism",
+      "evidence": "traditional_account",
+      "timeLabel": "Traditional and scholarly dates contested; broad fifth-century BCE navigation range",
+      "summary": "Śākyamuni is a central gateway into Buddhist thought and pilgrimage geography, but fragmentary early-text biographies, later Buddha legends and sacred narratives must remain layered.",
+      "sourceIds": [
+        "source:buddha-early-texts",
+        "source:sarnath-site-record",
+        "source:editorial-method"
+      ]
+    }
+  ],
+  "axes": [
+    {
+      "id": "historicity",
+      "label": "Historicity and figure class",
+      "description": "Separates historical documentation, traditional accounts, sacralisation and later literary representation.",
+      "cells": [
+        {
+          "entityKey": "figure:laozi",
+          "status": "recorded",
+          "value": "contested · traditional_sage",
+          "details": [
+            "traditional_account"
+          ],
+          "evidenceLayer": "traditional_account",
+          "sourceIds": [
+            "source:shiji-laozi-biography",
+            "source:daodejing-edition",
+            "source:editorial-method"
+          ]
+        },
+        {
+          "entityKey": "figure:confucius",
+          "status": "recorded",
+          "value": "documented · historical_person",
+          "details": [
+            "historical_documented"
+          ],
+          "evidenceLayer": "historical_documented",
+          "sourceIds": [
+            "source:shiji-confucius-biography",
+            "source:analects-edition",
+            "source:editorial-method"
+          ]
+        },
+        {
+          "entityKey": "figure:sakyamuni",
+          "status": "recorded",
+          "value": "contested · historical_person",
+          "details": [
+            "traditional_account"
+          ],
+          "evidenceLayer": "traditional_account",
+          "sourceIds": [
+            "source:buddha-early-texts",
+            "source:sarnath-site-record",
+            "source:editorial-method"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tradition",
+      "label": "Tradition",
+      "description": "Shows primary and secondary affiliations with evidence layers and sources, without implying a value hierarchy.",
+      "cells": [
+        {
+          "entityKey": "figure:laozi",
+          "status": "recorded",
+          "value": "Daoist Traditions · primary",
+          "details": [
+            "Daoist Traditions · primary"
+          ],
+          "evidenceLayer": "traditional_account",
+          "confidence": "medium",
+          "sourceIds": [
+            "source:shiji-laozi-biography"
+          ]
+        },
+        {
+          "entityKey": "figure:confucius",
+          "status": "recorded",
+          "value": "Confucian Traditions · primary",
+          "details": [
+            "Confucian Traditions · primary"
+          ],
+          "evidenceLayer": "historical_documented",
+          "confidence": "high",
+          "sourceIds": [
+            "source:shiji-confucius-biography"
+          ]
+        },
+        {
+          "entityKey": "figure:sakyamuni",
+          "status": "recorded",
+          "value": "Buddhism · primary",
+          "details": [
+            "Buddhism · primary"
+          ],
+          "evidenceLayer": "traditional_account",
+          "confidence": "high",
+          "sourceIds": [
+            "source:buddha-early-texts"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time",
+      "label": "Time layers",
+      "description": "Keeps source-period claims distinct from traditional dates, textual transmission and later-reception periods.",
+      "cells": [
+        {
+          "entityKey": "figure:laozi",
+          "status": "recorded",
+          "value": "Traditionally placed in the late Spring and Autumn period; dates contested",
+          "details": [
+            "life: Traditionally placed in the late Spring and Autumn period; dates contested"
+          ],
+          "evidenceLayer": "traditional_account",
+          "confidence": "low",
+          "sourceIds": [
+            "source:shiji-laozi-biography"
+          ]
+        },
+        {
+          "entityKey": "figure:confucius",
+          "status": "recorded",
+          "value": "c. 551–479 BCE",
+          "details": [
+            "life: c. 551–479 BCE"
+          ],
+          "evidenceLayer": "historical_documented",
+          "confidence": "medium",
+          "sourceIds": [
+            "source:shiji-confucius-biography"
+          ]
+        },
+        {
+          "entityKey": "figure:sakyamuni",
+          "status": "recorded",
+          "value": "Traditional and scholarly dates contested; broad fifth-century BCE navigation range",
+          "details": [
+            "life: Traditional and scholarly dates contested; broad fifth-century BCE navigation range"
+          ],
+          "evidenceLayer": "traditional_account",
+          "confidence": "low",
+          "sourceIds": [
+            "source:buddha-early-texts"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "speech",
+      "label": "Speech and transmission",
+      "description": "Traces the evidence chain among sayings, passages, texts and speaker attribution.",
+      "cells": [
+        {
+          "entityKey": "figure:laozi",
+          "status": "derived",
+          "value": "2 relations",
+          "details": [
+            "Traditionally attributed to Laozi → Daodejing · attributed_saying",
+            "Preserved traditionally as a saying of Laozi → A Dao that can be spoken · attributed_saying"
+          ],
+          "evidenceLayer": "historical_inferred",
+          "confidence": "low",
+          "sourceIds": [
+            "source:shiji-laozi-biography",
+            "source:daodejing-edition"
+          ]
+        },
+        {
+          "entityKey": "figure:confucius",
+          "status": "derived",
+          "value": "2 relations",
+          "details": [
+            "Preserves sayings and actions associated with Confucius and his disciples → Analects · recorded_by_others",
+            "Preserved as a saying of Confucius through transmission → To learn and practise at due times · recorded_by_others"
+          ],
+          "evidenceLayer": "historical_inferred",
+          "confidence": "medium",
+          "sourceIds": [
+            "source:analects-edition",
+            "source:shiji-confucius-biography"
+          ]
+        },
+        {
+          "entityKey": "figure:sakyamuni",
+          "status": "derived",
+          "value": "3 relations",
+          "details": [
+            "Preserved as Śākyamuni's teaching through transmission → This is the noble truth of suffering · recorded_by_others",
+            "Represents the Buddha within a later Prajñāpāramitā context → Heart Sutra · later_literary_voice",
+            "English transmission of teaching attributed to Śākyamuni → This is the noble truth of stress · recorded_by_others"
+          ],
+          "evidenceLayer": "historical_inferred",
+          "confidence": "medium",
+          "sourceIds": [
+            "source:buddha-early-texts",
+            "source:heart-sutra-edition",
+            "source:sn56-11-thanissaro"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "space",
+      "label": "Space and place",
+      "description": "Lists activity sites, institutional spaces, route nodes and memory sites while retaining spatial roles.",
+      "cells": [
+        {
+          "entityKey": "figure:laozi",
+          "status": "derived",
+          "value": "1 relation",
+          "details": [
+            "Connected with the Zhou rites context → Luoyang · context_only"
+          ],
+          "evidenceLayer": "traditional_account",
+          "confidence": "low",
+          "sourceIds": [
+            "source:shiji-laozi-biography",
+            "source:historical-geography"
+          ]
+        },
+        {
+          "entityKey": "figure:confucius",
+          "status": "derived",
+          "value": "1 relation",
+          "details": [
+            "Connected with the Zhou rites-asking context → Luoyang · context_only"
+          ],
+          "evidenceLayer": "traditional_account",
+          "confidence": "low",
+          "sourceIds": [
+            "source:shiji-confucius-biography",
+            "source:historical-geography"
+          ]
+        },
+        {
+          "entityKey": "figure:sakyamuni",
+          "status": "derived",
+          "value": "1 relation",
+          "details": [
+            "Connected with the Sarnath teaching tradition → Sarnath · activity_site"
+          ],
+          "evidenceLayer": "traditional_account",
+          "confidence": "medium",
+          "sourceIds": [
+            "source:buddha-early-texts",
+            "source:sarnath-site-record"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "events",
+      "label": "Events and actions",
+      "description": "Separates events in which a figure participates from analytical events that later connect the figure to a context.",
+      "cells": [
+        {
+          "entityKey": "figure:laozi",
+          "status": "derived",
+          "value": "2 relations",
+          "details": [
+            "Appears in the Confucius–Laozi rites-asking tradition → Confucius visits Zhou to ask Laozi about rites",
+            "Enters the Kaiyuan context as a Daoist classical source → Institutional expansion in the Kaiyuan era · reinterpreted"
+          ],
+          "evidenceLayer": "traditional_account",
+          "confidence": "low",
+          "sourceIds": [
+            "source:shiji-laozi-biography",
+            "source:shiji-confucius-biography",
+            "source:daoist-historical-record",
+            "source:daodejing-edition",
+            "source:tang-imperial-records"
+          ]
+        },
+        {
+          "entityKey": "figure:confucius",
+          "status": "derived",
+          "value": "2 relations",
+          "details": [
+            "Asks Laozi about rites in Zhou → Confucius visits Zhou to ask Laozi about rites",
+            "Enters the Corrected Meanings project as a classical source figure → Compilation project of the Corrected Meanings of the Five Classics · reinterpreted"
+          ],
+          "evidenceLayer": "traditional_account",
+          "confidence": "low",
+          "sourceIds": [
+            "source:shiji-confucius-biography",
+            "source:shiji-laozi-biography",
+            "source:analects-edition",
+            "source:confucian-commentarial-record",
+            "source:education-classics-records"
+          ]
+        },
+        {
+          "entityKey": "figure:sakyamuni",
+          "status": "derived",
+          "value": "2 relations",
+          "details": [
+            "Teaches in the Sarnath first-sermon tradition → The Buddha's first sermon at Sarnath",
+            "Enters the Great Ci'en institutional context as a source of Buddhist teaching → Establishment of the Great Ci'en Monastery · institutionalised"
+          ],
+          "evidenceLayer": "traditional_account",
+          "confidence": "medium",
+          "sourceIds": [
+            "source:buddha-early-texts",
+            "source:sarnath-site-record",
+            "source:buddhist-institutional-records",
+            "source:xuanzang-records"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "texts",
+      "label": "Texts and versions",
+      "description": "Keeps classics, versions, passages, commentary and later reception distinct.",
+      "cells": [
+        {
+          "entityKey": "figure:laozi",
+          "status": "derived",
+          "value": "2 relations",
+          "details": [
+            "Traditionally attributed to Laozi → Daodejing · attributed_saying",
+            "Preserved traditionally as a saying of Laozi → A Dao that can be spoken · attributed_saying"
+          ],
+          "evidenceLayer": "historical_inferred",
+          "confidence": "low",
+          "sourceIds": [
+            "source:shiji-laozi-biography",
+            "source:daodejing-edition"
+          ]
+        },
+        {
+          "entityKey": "figure:confucius",
+          "status": "derived",
+          "value": "2 relations",
+          "details": [
+            "Preserves sayings and actions associated with Confucius and his disciples → Analects · recorded_by_others",
+            "Preserved as a saying of Confucius through transmission → To learn and practise at due times · recorded_by_others"
+          ],
+          "evidenceLayer": "historical_inferred",
+          "confidence": "medium",
+          "sourceIds": [
+            "source:analects-edition",
+            "source:shiji-confucius-biography"
+          ]
+        },
+        {
+          "entityKey": "figure:sakyamuni",
+          "status": "derived",
+          "value": "3 relations",
+          "details": [
+            "Preserved as Śākyamuni's teaching through transmission → This is the noble truth of suffering · recorded_by_others",
+            "Represents the Buddha within a later Prajñāpāramitā context → Heart Sutra · later_literary_voice",
+            "English transmission of teaching attributed to Śākyamuni → This is the noble truth of stress · recorded_by_others"
+          ],
+          "evidenceLayer": "historical_inferred",
+          "confidence": "medium",
+          "sourceIds": [
+            "source:buddha-early-texts",
+            "source:heart-sutra-edition",
+            "source:sn56-11-thanissaro"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reception",
+      "label": "Later reception and influence",
+      "description": "Shows institutionalisation, reinterpretation, memory, sacralisation and literary representation without projecting them back as contemporaneous facts.",
+      "cells": [
+        {
+          "entityKey": "figure:laozi",
+          "status": "derived",
+          "value": "2 relations",
+          "details": [
+            "Remembered through Tang Daoist institutions → Chang'an Daoist monastic network · memory_site · institutionalised",
+            "Enters the Kaiyuan context as a Daoist classical source → Institutional expansion in the Kaiyuan era · reinterpreted"
+          ],
+          "evidenceLayer": "historical_inferred",
+          "confidence": "low",
+          "sourceIds": [
+            "source:daoist-historical-record",
+            "source:daodejing-edition",
+            "source:tang-imperial-records"
+          ]
+        },
+        {
+          "entityKey": "figure:confucius",
+          "status": "derived",
+          "value": "2 relations",
+          "details": [
+            "Remembered through state classical education → Guozijian · memory_site · institutionalised",
+            "Enters the Corrected Meanings project as a classical source figure → Compilation project of the Corrected Meanings of the Five Classics · reinterpreted"
+          ],
+          "evidenceLayer": "historical_inferred",
+          "confidence": "low",
+          "sourceIds": [
+            "source:education-classics-records",
+            "source:analects-edition",
+            "source:confucian-commentarial-record"
+          ]
+        },
+        {
+          "entityKey": "figure:sakyamuni",
+          "status": "derived",
+          "value": "3 relations",
+          "details": [
+            "Remembered through Sarnath pilgrimage and heritage → Sarnath · memory_site · ritualised",
+            "Represents the Buddha within a later Prajñāpāramitā context → Heart Sutra · later_literary_voice",
+            "Enters the Great Ci'en institutional context as a source of Buddhist teaching → Establishment of the Great Ci'en Monastery · institutionalised"
+          ],
+          "evidenceLayer": "historical_inferred",
+          "confidence": "medium",
+          "sourceIds": [
+            "source:sarnath-site-record",
+            "source:buddha-early-texts",
+            "source:heart-sutra-edition",
+            "source:buddhist-institutional-records",
+            "source:xuanzang-records"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "evidence",
+      "label": "Evidence and sources",
+      "description": "Each cell can return to sources, locators and evidence grades; not recorded does not mean non-existent.",
+      "cells": [
+        {
+          "entityKey": "figure:laozi",
+          "status": "recorded",
+          "value": "3 sources",
+          "details": [
+            "Records of the Historian: Biographies of Laozi and Han Fei · A · 《史记·老子韩非列传》：老子姓李名耳；孔子适周问礼于老子；老子西出函谷关叙事",
+            "Received editions and chapter references for the Daodejing · A · 第二十五章（“人法地，地法天，天法道，道法自然”）",
+            "Curatorial and methodological notes of the Dao–Ru–Fo Digital Museum · B · methodology:content-v2"
+          ],
+          "evidenceLayer": "traditional_account",
+          "sourceIds": [
+            "source:shiji-laozi-biography",
+            "source:daodejing-edition",
+            "source:editorial-method"
+          ]
+        },
+        {
+          "entityKey": "figure:confucius",
+          "status": "recorded",
+          "value": "3 sources",
+          "details": [
+            "Records of the Historian: The House of Confucius · A · 《史记·孔子世家》：孔子问礼于周、修诗书礼乐、以诗书礼乐教弟子等段落",
+            "Received editions and chapter references for the Analects · A · 颜渊第十二，第1章（“克己复礼为仁”）",
+            "Curatorial and methodological notes of the Dao–Ru–Fo Digital Museum · B · methodology:content-v2"
+          ],
+          "evidenceLayer": "historical_documented",
+          "sourceIds": [
+            "source:shiji-confucius-biography",
+            "source:analects-edition",
+            "source:editorial-method"
+          ]
+        },
+        {
+          "entityKey": "figure:sakyamuni",
+          "status": "recorded",
+          "value": "3 sources",
+          "details": [
+            "Early Buddhist texts in the Pāli canon: MN 26 and SN 56.11 · A · MN 26 Ariyapariyesanā：求法与到达鹿野苑；SN 56.11 Dhammacakkappavattana：鹿野苑初转法轮文本",
+            "UNESCO and the Archaeological Survey of India: Ancient Buddhist Site of Sarnath · A · World Heritage List no. 927；鹿野苑遗址、初转法轮传统与遗址保护范围；约 25.381°N, 83.022°E",
+            "Curatorial and methodological notes of the Dao–Ru–Fo Digital Museum · B · methodology:content-v2"
+          ],
+          "evidenceLayer": "traditional_account",
+          "sourceIds": [
+            "source:buddha-early-texts",
+            "source:sarnath-site-record",
+            "source:editorial-method"
+          ]
+        }
+      ]
+    }
+  ],
+  "directRelations": [],
+  "bridges": [
+    {
+      "key": "event:confucius-asks-laozi-about-rites",
+      "kind": "event",
+      "slug": "confucius-asks-laozi-about-rites",
+      "title": "Confucius visits Zhou to ask Laozi about rites",
+      "entityKeys": [
+        "figure:confucius",
+        "figure:laozi"
+      ],
+      "relationTypes": [
+        "participated_in"
+      ],
+      "summaries": [
+        "The Shiji places Laozi in the narrative of Confucius asking about rites in Zhou; this retains the historiographical and traditional layer rather than treating the encounter as independently verified field evidence.",
+        "The Shiji preserves the rites-asking story as a historiographical entry into a Dao–Ru encounter; exact dating and dialogue details remain traditional."
+      ],
+      "sourceIds": [
+        "source:shiji-confucius-biography",
+        "source:shiji-laozi-biography"
+      ]
+    },
+    {
+      "key": "place:luoyang",
+      "kind": "place",
+      "slug": "luoyang",
+      "title": "Luoyang",
+      "entityKeys": [
+        "figure:confucius",
+        "figure:laozi"
+      ],
+      "relationTypes": [
+        "active_in"
+      ],
+      "summaries": [
+        "Laozi is connected in historiographical tradition with the Zhou archive and rites-asking narrative; Luoyang is used as a city-scale traditional context, not as a precise residence claim.",
+        "The historiographical account of Confucius asking about rites in Zhou can use Luoyang as a city-scale spatial entry without reconstructing a certain travel route."
+      ],
+      "sourceIds": [
+        "source:historical-geography",
+        "source:shiji-confucius-biography",
+        "source:shiji-laozi-biography"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "a1be51e1-f85d-5104-9c71-a2d56685be71",
+  "locale": "en",
+  "kind": "museum_object",
+  "slug": "translation-catalogue-manuscript-record",
+  "title": "Translation catalogue manuscript (object placeholder)",
+  "tradition": "buddhism",
+  "evidence": "historical_inferred",
+  "timeLabel": "Object pending; Tang translation context",
+  "shortSummary": "Catalogue objects can record translated titles, versions, attribution and institutional organization of textual circulation.",
+  "curatorialDescription": [
+    "A catalogue text and a particular manuscript carrying it are separate layers; this record reserves the object layer only."
+  ],
+  "researchNote": "Catalogue title, edition, manuscript collection, accession, date and image rights are required.",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:object-records",
+      "title": "Pending catalogue of museum objects and image records",
+      "locator": "对象类型、馆藏机构、图像权利和编号待补",
+      "grade": "C",
+      "role": "Placeholder source for Alpha object cards, not a publishable collection claim"
+    },
+    {
+      "id": "source:buddhist-institutional-records",
+      "title": "Studies of Sui–Tang monasteries, translation bureaux and monastic institutions",
+      "locator": "大慈恩寺、译经场与寺院网络专题；底本待核",
+      "grade": "B",
+      "role": "Institutional context for monasteries, translation sites and Buddhist urban networks"
+    }
+  ],
+  "profile": {
+    "objectType": "catalogue_manuscript",
+    "rightsStatus": "unknown",
+    "collectionStatus": "placeholder"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

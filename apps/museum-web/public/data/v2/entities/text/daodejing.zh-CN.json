@@ -1,0 +1,48 @@
+{
+  "id": "4869f9d9-f4b2-5604-85f4-0d22ad79004c",
+  "locale": "zh-CN",
+  "kind": "text",
+  "slug": "daodejing",
+  "title": "《道德经》",
+  "subtitle": "道家思想的核心文本之一",
+  "tradition": "daoism",
+  "evidence": "historical_inferred",
+  "timeLabel": "成书与编纂：战国至汉代区间",
+  "shortSummary": "《道德经》的成书、编纂和作者归属具有复杂层次，后世道教与哲学传统不断重新解释它。",
+  "curatorialDescription": [
+    "本馆把文本形成、传统归属、章句版本和后世解释分开呈现，不把‘老子说’直接等同于单一历史时刻。"
+  ],
+  "researchNote": "文本成书区间、出土材料和传世本差异需要在完整文本版本模型中继续展开。",
+  "keyFacts": [
+    {
+      "label": "文本类型",
+      "value": "哲学/经典文本"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:daodejing-edition",
+      "title": "《道德经》通行本与章句资料",
+      "locator": "第二十五章（“人法地，地法天，天法道，道法自然”）",
+      "grade": "A",
+      "role": "道家 passage 原文和章次定位的初始依据",
+      "url": "https://ctext.org/text.pl?if=en&node=11616&show=parallel"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "道·儒·佛文明数字博物馆策展与方法说明",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "项目的策展框架与术语规则"
+    }
+  ],
+  "profile": {
+    "textKind": "classic",
+    "originalLanguageCode": "lzh",
+    "canonicalStatus": "influential",
+    "attributionStatus": "contested"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

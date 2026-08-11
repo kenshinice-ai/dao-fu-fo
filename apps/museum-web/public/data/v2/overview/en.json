@@ -1,8 +1,8 @@
 {
   "locale": "en",
   "eyebrow": "Digital exhibition · spatiotemporal knowledge",
-  "heroTitle": "Three paths, one civilisational museum",
-  "heroLead": "Begin in Sui–Tang Chang'an: follow Daoist mountains, institutions and court connections; Confucian ritual and education; and Buddhist translation and transmission—then return to texts, figures and evidence.",
+  "heroTitle": "Three paths across shared historical space-time",
+  "heroLead": "From mythic and traditional origins through early Chinese thought, Buddhist source regions and later transmission, trace Dao, Ru and Fo through people, events, places, texts and later influence on a living map.",
   "primaryAction": "Enter the Chang'an exhibition",
   "secondaryAction": "Explore freely",
   "todayLabel": "Passage of the day",
@@ -27,9 +27,9 @@
       "subtitle": "道",
       "statement": "Follow texts, mountains, institutions and lineages to distinguish Daoist thought from organised Daoism.",
       "counts": {
-        "figures": 1,
-        "texts": 1,
-        "passages": 1
+        "figures": 12,
+        "texts": 6,
+        "passages": 4
       },
       "focusEntity": {
         "kind": "figure",
@@ -42,9 +42,9 @@
       "subtitle": "儒",
       "statement": "Follow ritual, classical learning and state education to see Confucian traditions embedded in imperial institutions.",
       "counts": {
-        "figures": 1,
-        "texts": 2,
-        "passages": 1
+        "figures": 5,
+        "texts": 3,
+        "passages": 4
       },
       "focusEntity": {
         "kind": "figure",
@@ -57,14 +57,308 @@
       "subtitle": "佛",
       "statement": "Follow pilgrimage, translation and monasteries to see how an imported tradition found new forms in China.",
       "counts": {
-        "figures": 1,
-        "texts": 1,
-        "passages": 1
+        "figures": 9,
+        "texts": 7,
+        "passages": 6
       },
       "focusEntity": {
         "kind": "figure",
         "slug": "xuanzang"
       }
+    }
+  ],
+  "featuredFigures": [
+    {
+      "kind": "figure",
+      "slug": "laozi",
+      "tradition": "daoism",
+      "traditionLabel": "Dao",
+      "title": "Laozi (Li Er)",
+      "role": "Source figure · tradition and biography",
+      "summary": "A recognisable gateway into Daoist classicism; figure, text attribution and later sacralisation remain distinct layers.",
+      "timeLabel": "Late Spring and Autumn period; contested",
+      "placeLabel": "Luoyang · encounter and memory"
+    },
+    {
+      "kind": "figure",
+      "slug": "sima-chengzhen",
+      "tradition": "daoism",
+      "traditionLabel": "Dao",
+      "title": "Sima Chengzhen",
+      "role": "Tang Daoist master · mountain and institution",
+      "summary": "Connects mountain cultivation, Daoist lineages and Tang imperial patronage.",
+      "timeLabel": "647–735",
+      "placeLabel": "Chang'an · summons anchor"
+    },
+    {
+      "kind": "figure",
+      "slug": "confucius",
+      "tradition": "confucianism",
+      "traditionLabel": "Ru",
+      "title": "Confucius (Kong Qiu)",
+      "role": "Source figure · speech and transmission",
+      "summary": "A gateway into Confucian classics, education and political ethics; Analects layers remain separate.",
+      "timeLabel": "c. 551–479 BCE",
+      "placeLabel": "Luoyang · asking about rites"
+    },
+    {
+      "kind": "figure",
+      "slug": "kong-yingda",
+      "tradition": "confucianism",
+      "traditionLabel": "Ru",
+      "title": "Kong Yingda",
+      "role": "Tang classical scholar · education and commentary",
+      "summary": "Represents how Tang classical learning entered state education, commentary and institutional knowledge production.",
+      "timeLabel": "574–648",
+      "placeLabel": "Chang'an · Guozijian anchor"
+    },
+    {
+      "kind": "figure",
+      "slug": "sakyamuni",
+      "tradition": "buddhism",
+      "traditionLabel": "Buddhism",
+      "title": "Śākyamuni Buddha (Gautama)",
+      "role": "Source figure · early texts and sacred place",
+      "summary": "Connects Buddhist thought, early textual transmission and pilgrimage geography without collapsing history and sacred narrative.",
+      "timeLabel": "Traditional and scholarly dates contested",
+      "placeLabel": "Sarnath · first sermon"
+    },
+    {
+      "kind": "figure",
+      "slug": "xuanzang",
+      "tradition": "buddhism",
+      "traditionLabel": "Buddhism",
+      "title": "Xuanzang",
+      "role": "Pilgrimage and translation · Chang'an network",
+      "summary": "Connects a pilgrimage for learning with translation and institutional life in Chang'an.",
+      "timeLabel": "c. 602–664",
+      "placeLabel": "Chang'an · translation and institution"
+    },
+    {
+      "kind": "figure",
+      "slug": "cheng-xuanying",
+      "tradition": "daoism",
+      "traditionLabel": "Dao",
+      "title": "Cheng Xuanying",
+      "role": "Early Tang interpreter · texts and knowledge networks",
+      "summary": "An entry into Daodejing and Zhuangzi interpretation and Daoist knowledge networks; life and commentary transmission remain under review.",
+      "timeLabel": "c. seventh century",
+      "placeLabel": "Place pending · commentary and institutions"
+    },
+    {
+      "kind": "figure",
+      "slug": "jizang",
+      "tradition": "buddhism",
+      "traditionLabel": "Buddhism",
+      "title": "Jizang",
+      "role": "Sui–Tang Buddhist thinker · teaching and commentary",
+      "summary": "Uses teaching, writings and institutions to approach Buddhist thought and textual interpretation while retaining historical layers in school labels.",
+      "timeLabel": "549–623",
+      "placeLabel": "Urban networks · itinerary pending"
+    },
+    {
+      "kind": "figure",
+      "slug": "li-shimin",
+      "tradition": "confucianism",
+      "traditionLabel": "Ru",
+      "title": "Li Shimin",
+      "role": "Tang Taizong · institutions and urban context",
+      "summary": "Places courtly, educational and religious institutions in the context of Chang'an as a meeting point for networks of knowledge and belief.",
+      "timeLabel": "598–649",
+      "placeLabel": "Chang'an–Luoyang · institutional context"
+    },
+    {
+      "kind": "figure",
+      "slug": "wu-zhao",
+      "tradition": "buddhism",
+      "traditionLabel": "Buddhism",
+      "title": "Wu Zhao (Wu Zetian)",
+      "role": "Ruler of Zhou · ritual and memory",
+      "summary": "Places political power, religious patronage and later memory side by side to show how one figure is written across traditions.",
+      "timeLabel": "624–705",
+      "placeLabel": "Chang'an–Luoyang · ritual and memory"
+    },
+    {
+      "kind": "figure",
+      "slug": "yan-shigu",
+      "tradition": "confucianism",
+      "traditionLabel": "Ru",
+      "title": "Yan Shigu",
+      "role": "Early Tang editor · official learning and commentary",
+      "summary": "Connects classical editing and commentary with state knowledge projects; specific offices and projects remain pending item-level review.",
+      "timeLabel": "581–645",
+      "placeLabel": "Place pending · state knowledge project"
+    },
+    {
+      "kind": "figure",
+      "slug": "yijing",
+      "tradition": "buddhism",
+      "traditionLabel": "Buddhism",
+      "title": "Yijing",
+      "role": "Pilgrim and translator · maritime networks",
+      "summary": "Connects maritime pilgrimage, South Asian learning and Chinese Buddhist translation, adding a route beyond Xuanzang's overland journey.",
+      "timeLabel": "635–713",
+      "placeLabel": "Maritime–South Asia · route nodes pending"
+    },
+    {
+      "kind": "figure",
+      "slug": "zhuangzi",
+      "tradition": "daoism",
+      "traditionLabel": "Dao",
+      "title": "Zhuangzi (Zhuang Zhou)",
+      "role": "Warring States thinker · composite textual tradition",
+      "summary": "Connects parabolic philosophy, biography and layered Zhuangzi chapters; a regional map anchor does not replace an exact itinerary.",
+      "timeLabel": "c. fourth century BCE; textual layers contested",
+      "placeLabel": "Mengcheng · regional tradition anchor"
+    },
+    {
+      "kind": "figure",
+      "slug": "mengzi",
+      "tradition": "confucianism",
+      "traditionLabel": "Ru",
+      "title": "Mencius (Meng Ke)",
+      "role": "Itinerant counsel · human nature and canonisation",
+      "summary": "Connects Warring States counsel and political ethics with the transmitted and compiled Mengzi.",
+      "timeLabel": "c. fourth century BCE",
+      "placeLabel": "Zoucheng · regional tradition gateway"
+    },
+    {
+      "kind": "figure",
+      "slug": "zhang-daoling",
+      "tradition": "daoism",
+      "traditionLabel": "Dao",
+      "title": "Zhang Daoling",
+      "role": "Celestial Masters origins · historical and sacred founder layers",
+      "summary": "Places Eastern Han clues, Celestial Masters lineages and later sacralisation in distinct relation layers.",
+      "timeLabel": "Traditionally Eastern Han; dates contested",
+      "placeLabel": "Heming Mountain · tradition and memory space"
+    },
+    {
+      "kind": "figure",
+      "slug": "ge-hong",
+      "tradition": "daoism",
+      "traditionLabel": "Dao",
+      "title": "Ge Hong",
+      "role": "Eastern Jin thinker · Baopuzi and cultivation knowledge",
+      "summary": "Connects textual work, Daoist knowledge and later Mount Luofu memory while keeping biography and immortality narratives distinct.",
+      "timeLabel": "c. 283–343; life range under review",
+      "placeLabel": "Mount Luofu · regional and memory anchor"
+    },
+    {
+      "kind": "figure",
+      "slug": "ashoka",
+      "tradition": "buddhism",
+      "traditionLabel": "Buddhism",
+      "title": "Ashoka",
+      "role": "Mauryan ruler · edicts and dhamma policy",
+      "summary": "Uses inscriptions, governance and Buddhist heritage to trace circulation without equating later biography with edict evidence.",
+      "timeLabel": "c. 268–232 BCE",
+      "placeLabel": "Sanchi · real site and material memory"
+    },
+    {
+      "kind": "figure",
+      "slug": "nagarjuna",
+      "tradition": "buddhism",
+      "traditionLabel": "Buddhism",
+      "title": "Nāgārjuna",
+      "role": "Madhyamaka thinker · attribution and reception",
+      "summary": "Connects Madhyamaka debate, the Mūlamadhyamakakārikā and later Chinese transmission while keeping dating contested.",
+      "timeLabel": "c. 150–250 CE; dates contested",
+      "placeLabel": "Nagarjunakonda · regional anchor"
+    },
+    {
+      "kind": "figure",
+      "slug": "kumarajiva",
+      "tradition": "buddhism",
+      "traditionLabel": "Buddhism",
+      "title": "Kumarajiva",
+      "role": "Translator · Kucha–Chang'an knowledge movement",
+      "summary": "Connects transregional movement, Chang'an translation institutions and Chinese Buddhist-text production as collaborative work.",
+      "timeLabel": "344–413",
+      "placeLabel": "Chang'an · translation-institution anchor"
+    },
+    {
+      "kind": "figure",
+      "slug": "faxian",
+      "tradition": "buddhism",
+      "traditionLabel": "Buddhism",
+      "title": "Faxian",
+      "role": "Pilgrim and recorder · transregional route",
+      "summary": "Connects pilgrimage, monastic observations and the Foguoji, adding a knowledge route beyond Xuanzang.",
+      "timeLabel": "c. 337–422; route c. 399–414",
+      "placeLabel": "Chang'an–South Asia · Faxian route"
+    },
+    {
+      "kind": "figure",
+      "slug": "pangu",
+      "tradition": "daoism",
+      "traditionLabel": "Dao",
+      "title": "Pangu",
+      "role": "Mythic persona · cosmogenesis",
+      "summary": "An entry into creation and cosmic order narratives; it is not mapped to real historical geography.",
+      "timeLabel": "Mythic time: no single historical date",
+      "placeLabel": "Primordial cosmos · symbolic space",
+      "spaceView": "cosmos"
+    },
+    {
+      "kind": "figure",
+      "slug": "nuwa",
+      "tradition": "daoism",
+      "traditionLabel": "Dao",
+      "title": "Nuwa",
+      "role": "Mythic persona · creation and repair",
+      "summary": "Connects creation, repair and restored order while later visual and cult memory remains separately marked.",
+      "timeLabel": "Mythic time: no single historical date",
+      "placeLabel": "Nuwa creation · symbolic space",
+      "spaceView": "cosmos"
+    },
+    {
+      "kind": "figure",
+      "slug": "fuxi",
+      "tradition": "daoism",
+      "traditionLabel": "Dao",
+      "title": "Fu Xi",
+      "role": "Mythic persona · trigrams and order",
+      "summary": "Approaches Fu Xi through symbols, classification and cosmic order without claiming a verifiable personal invention history.",
+      "timeLabel": "Mythic time: no single historical date",
+      "placeLabel": "Trigram order · symbolic space",
+      "spaceView": "cosmos"
+    },
+    {
+      "kind": "figure",
+      "slug": "huangdi",
+      "tradition": "daoism",
+      "traditionLabel": "Dao",
+      "title": "Huangdi (Yellow Emperor)",
+      "role": "Legendary figure · ancestry and order",
+      "summary": "Places Five Emperors traditions, political symbolism and later state memory together without a false birth date.",
+      "timeLabel": "Legendary time: no verifiable birth date",
+      "placeLabel": "Ancestry and order · symbolic space",
+      "spaceView": "cosmos"
+    },
+    {
+      "kind": "figure",
+      "slug": "xi-wangmu",
+      "tradition": "daoism",
+      "traditionLabel": "Dao",
+      "title": "Xi Wangmu (Queen Mother of the West)",
+      "role": "Sacred figure · Kunlun and immortality",
+      "summary": "Connects Kunlun, immortality and sacred-female imagery while real geography and mythic space remain distinct.",
+      "timeLabel": "Mythic and sacred traditional time: no single historical date",
+      "placeLabel": "Kunlun · symbolic space",
+      "spaceView": "cosmos"
+    },
+    {
+      "kind": "figure",
+      "slug": "taishang-laojun",
+      "tradition": "daoism",
+      "traditionLabel": "Dao",
+      "title": "Taishang Laojun",
+      "role": "Sacred figure · later sacralisation of Laozi",
+      "summary": "A distinct identity connected to Laozi through deification and Daoist sacred genealogy in celestial space.",
+      "timeLabel": "Later deification layer: c. 200–700",
+      "placeLabel": "Daoist celestial realm · symbolic space",
+      "spaceView": "cosmos"
     }
   ],
   "methodologyTitle": "History, tradition and myth do not share one label",

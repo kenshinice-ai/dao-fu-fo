@@ -1,0 +1,46 @@
+{
+  "id": "0e0c02cf-f54c-5aae-b13c-cbd7665f41ca",
+  "locale": "en",
+  "kind": "museum_object",
+  "slug": "classics-commentary-manuscript",
+  "title": "Classical commentary manuscript record (object placeholder)",
+  "subtitle": "Material clues to the interpretation of classics",
+  "tradition": "confucianism",
+  "evidence": "historical_inferred",
+  "timeLabel": "Object record pending; Tang classical-learning context",
+  "shortSummary": "The object card connects the Corrected Meanings and Guozijian to manuscripts, folios and practices of reading.",
+  "curatorialDescription": [
+    "No specific collection has yet been established; this record shows the fields and rights boundary a future object archive must contain."
+  ],
+  "researchNote": "Collection, accession number, material, date, writing layers, provenance and image licence still need to be added.",
+  "keyFacts": [
+    {
+      "label": "Object type",
+      "value": "Classical commentary manuscript (pending verification)"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:object-records",
+      "title": "Pending catalogue of museum objects and image records",
+      "locator": "对象类型、馆藏机构、图像权利和编号待补",
+      "grade": "C",
+      "role": "Placeholder source for Alpha object cards, not a publishable collection claim"
+    },
+    {
+      "id": "source:education-classics-records",
+      "title": "Records on the Tang Guozijian and classical learning institutions",
+      "locator": "国子监、经学与《五经正义》制度语境；底本待核",
+      "grade": "B",
+      "role": "Research reference for state education, classical commentary and knowledge institutions"
+    }
+  ],
+  "profile": {
+    "objectType": "manuscript",
+    "rightsStatus": "unknown",
+    "collectionStatus": "placeholder"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

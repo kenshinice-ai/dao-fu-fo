@@ -1,8 +1,8 @@
 {
   "kind": "text",
   "slug": "daodejing",
-  "publicationState": "preview",
-  "reviewStatus": "bilingual_reviewed",
+  "publicationState": "public",
+  "reviewStatus": "publishable",
   "primaryEvidenceLayer": "historical_inferred",
   "importance": 5,
   "isFeatured": true,
@@ -11,23 +11,80 @@
       "title": "《道德经》",
       "subtitle": "道家思想的核心文本之一",
       "shortSummary": "《道德经》的成书、编纂和作者归属具有复杂层次，后世道教与哲学传统不断重新解释它。",
-      "curatorialDescription": ["本馆把文本形成、传统归属、章句版本和后世解释分开呈现，不把‘老子说’直接等同于单一历史时刻。"],
+      "curatorialDescription": [
+        "本馆把文本形成、传统归属、章句版本和后世解释分开呈现，不把‘老子说’直接等同于单一历史时刻。"
+      ],
       "researchNote": "文本成书区间、出土材料和传世本差异需要在完整文本版本模型中继续展开。",
       "timeLabel": "成书与编纂：战国至汉代区间",
-      "keyFacts": [{ "label": { "zh-CN": "文本类型", "en": "Text kind" }, "value": { "zh-CN": "哲学/经典文本", "en": "Philosophical and classical text" } }]
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "文本类型",
+            "en": "Text kind"
+          },
+          "value": {
+            "zh-CN": "哲学/经典文本",
+            "en": "Philosophical and classical text"
+          }
+        }
+      ]
     },
     "en": {
       "title": "Daodejing",
       "subtitle": "One of the key texts of Daoist thought",
       "shortSummary": "The formation, compilation and attribution of the Daodejing have several historical layers, and later Daoist and philosophical traditions repeatedly reinterpreted it.",
-      "curatorialDescription": ["The museum separates textual formation, traditional attribution, chapter versions and later interpretation instead of treating ‘Laozi said’ as a single historical moment."],
+      "curatorialDescription": [
+        "The museum separates textual formation, traditional attribution, chapter versions and later interpretation instead of treating ‘Laozi said’ as a single historical moment."
+      ],
       "researchNote": "Composition ranges, excavated materials and differences among received editions will be expanded through the full text-version model.",
       "timeLabel": "Composition and compilation: Warring States to Han ranges",
-      "keyFacts": [{ "label": { "zh-CN": "文本类型", "en": "Text kind" }, "value": { "zh-CN": "哲学/经典文本", "en": "Philosophical and classical text" } }]
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "文本类型",
+            "en": "Text kind"
+          },
+          "value": {
+            "zh-CN": "哲学/经典文本",
+            "en": "Philosophical and classical text"
+          }
+        }
+      ]
     }
   },
-  "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:daodejing-edition" }],
-  "temporalAssertions": [{ "predicate": "composition", "timeType": "range", "startYear": -475, "endYear": 220, "displayDate": { "zh-CN": "成书与编纂：战国至汉代区间", "en": "Composition and compilation: Warring States to Han ranges" }, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:daodejing-edition" }],
-  "sourceIds": ["source:daodejing-edition", "source:editorial-method"],
-  "profile": { "textKind": "classic", "originalLanguageCode": "lzh", "canonicalStatus": "influential", "attributionStatus": "contested" }
+  "traditions": [
+    {
+      "tradition": "daoism",
+      "role": "primary",
+      "isPrimary": true,
+      "confidence": "medium",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:daodejing-edition"
+    }
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "composition",
+      "timeType": "range",
+      "startYear": -475,
+      "endYear": 220,
+      "displayDate": {
+        "zh-CN": "成书与编纂：战国至汉代区间",
+        "en": "Composition and compilation: Warring States to Han ranges"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:daodejing-edition"
+    }
+  ],
+  "sourceIds": [
+    "source:daodejing-edition",
+    "source:editorial-method"
+  ],
+  "profile": {
+    "textKind": "classic",
+    "originalLanguageCode": "lzh",
+    "canonicalStatus": "influential",
+    "attributionStatus": "contested"
+  }
 }

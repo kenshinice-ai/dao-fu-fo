@@ -1,0 +1,46 @@
+{
+  "id": "0e0c02cf-f54c-5aae-b13c-cbd7665f41ca",
+  "locale": "zh-CN",
+  "kind": "museum_object",
+  "slug": "classics-commentary-manuscript",
+  "title": "经学注疏写本记录（对象记录占位）",
+  "subtitle": "经典解释的物质化线索",
+  "tradition": "confucianism",
+  "evidence": "historical_inferred",
+  "timeLabel": "对象记录待核；唐代经学传播语境",
+  "shortSummary": "对象卡将《五经正义》和国子监的制度线索连接到写本、册页和阅读实践。",
+  "curatorialDescription": [
+    "对象尚未落实到具体馆藏；本条只展示未来对象档案应包含的字段和权利边界。"
+  ],
+  "researchNote": "需要补充馆藏、编号、材质、年代、书写层、流传和图像授权信息。",
+  "keyFacts": [
+    {
+      "label": "对象类型",
+      "value": "经学写本（待核）"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:object-records",
+      "title": "博物馆藏品与图像记录待建档清单",
+      "locator": "对象类型、馆藏机构、图像权利和编号待补",
+      "grade": "C",
+      "role": "Alpha 对象卡片的占位来源；不是可直接发布的藏品断言"
+    },
+    {
+      "id": "source:education-classics-records",
+      "title": "唐代国子监与经学制度资料",
+      "locator": "国子监、经学与《五经正义》制度语境；底本待核",
+      "grade": "B",
+      "role": "国家教育、经学注疏和知识制度的研究参考"
+    }
+  ],
+  "profile": {
+    "objectType": "manuscript",
+    "rightsStatus": "unknown",
+    "collectionStatus": "placeholder"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

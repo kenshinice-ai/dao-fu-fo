@@ -1,0 +1,40 @@
+{
+  "id": "e57dbe03-6c89-5fd1-8e37-60b572b2cb62",
+  "locale": "zh-CN",
+  "kind": "museum_object",
+  "slug": "daoist-inscription-rubbing-record",
+  "title": "道教宫观碑刻拓片记录（对象占位）",
+  "tradition": "daoism",
+  "evidence": "historical_inferred",
+  "timeLabel": "对象记录待核；隋唐宫观语境",
+  "shortSummary": "碑刻与拓片可把宫观、人物、时间和赞助关系落到可校验的文字对象。",
+  "curatorialDescription": [
+    "当前只定义对象需求，不声称某一拓片已经入藏或获授权。"
+  ],
+  "researchNote": "需落实原碑、拓片馆藏、释文、年代、地点、编号及使用许可。",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:object-records",
+      "title": "博物馆藏品与图像记录待建档清单",
+      "locator": "对象类型、馆藏机构、图像权利和编号待补",
+      "grade": "C",
+      "role": "Alpha 对象卡片的占位来源；不是可直接发布的藏品断言"
+    },
+    {
+      "id": "source:daoist-historical-record",
+      "title": "隋唐道教人物与制度研究资料",
+      "locator": "人物、宫观与皇室关系专题",
+      "grade": "B",
+      "role": "司马承祯及隋唐道教制度语境的学术参考"
+    }
+  ],
+  "profile": {
+    "objectType": "rubbing",
+    "rightsStatus": "unknown",
+    "collectionStatus": "placeholder"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

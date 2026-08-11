@@ -1,0 +1,41 @@
+{
+  "id": "8876cdf2-593a-5416-b379-290a1f71f6c9",
+  "locale": "zh-CN",
+  "kind": "place",
+  "slug": "zhongnan-mountains",
+  "title": "终南山",
+  "tradition": "daoism",
+  "evidence": "historical_documented",
+  "timeLabel": "隋唐重点；长期文化地景",
+  "shortSummary": "终南山是长安近郊的真实山地，也是修行、隐逸与宗教叙事叠加的文化空间。",
+  "curatorialDescription": [
+    "真实地理和圣地叙事在此并存，但地图层与象征宇宙层必须分别呈现。"
+  ],
+  "researchNote": "范围、历史地名、宫观寺院节点及圣地叙事需逐条绑定来源。",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:historical-geography",
+      "title": "隋唐历史地理与城市沿革资料",
+      "locator": "长安、洛阳、敦煌历史名称与地理范围",
+      "grade": "A",
+      "role": "真实地点、历史名称和坐标示意的地理依据"
+    },
+    {
+      "id": "source:daoist-historical-record",
+      "title": "隋唐道教人物与制度研究资料",
+      "locator": "人物、宫观与皇室关系专题",
+      "grade": "B",
+      "role": "司马承祯及隋唐道教制度语境的学术参考"
+    }
+  ],
+  "profile": {
+    "placeReality": "approximate_region",
+    "geometryType": "point",
+    "coordinateConfidence": "not_applicable",
+    "geographicSourceId": "source:historical-geography"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

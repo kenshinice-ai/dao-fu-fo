@@ -1,0 +1,175 @@
+[
+  {
+    "slug": "cross-era-figures",
+    "title": {
+      "zh-CN": "跨时代人物：源头、传述与后世接收",
+      "en": "Cross-era figures: source, transmission and later reception"
+    },
+    "question": {
+      "zh-CN": "老子、孔子与释迦牟尼如何在不同时间、空间、文本和后世制度中被理解？",
+      "en": "How are Laozi, Confucius and Śākyamuni understood across different times, places, texts and later institutions?"
+    },
+    "disclaimer": {
+      "zh-CN": "这是基于当前关系与来源的比较阅读，不把三位人物、三种传统或不同证据层压缩成同一历史事实。",
+      "en": "This is a comparison built from the current relations and sources; it does not collapse three figures, three traditions or different evidence layers into one historical fact."
+    },
+    "entityKeys": [
+      "figure:laozi",
+      "figure:confucius",
+      "figure:sakyamuni"
+    ],
+    "axes": [
+      {
+        "id": "historicity",
+        "label": {
+          "zh-CN": "历史性与人物类别",
+          "en": "Historicity and figure class"
+        },
+        "description": {
+          "zh-CN": "区分历史记录、传统叙事、神圣化和后世文学再现。",
+          "en": "Separates historical documentation, traditional accounts, sacralisation and later literary representation."
+        }
+      },
+      {
+        "id": "tradition",
+        "label": {
+          "zh-CN": "传统归属",
+          "en": "Tradition"
+        },
+        "description": {
+          "zh-CN": "显示主传统、次级关联、证据层和来源，而不预设价值排序。",
+          "en": "Shows primary and secondary affiliations with evidence layers and sources, without implying a value hierarchy."
+        }
+      },
+      {
+        "id": "time",
+        "label": {
+          "zh-CN": "时间层",
+          "en": "Time layers"
+        },
+        "description": {
+          "zh-CN": "把人物源头时间与传统日期、文本传述和后世接受时间分开。",
+          "en": "Keeps source-period claims distinct from traditional dates, textual transmission and later-reception periods."
+        }
+      },
+      {
+        "id": "speech",
+        "label": {
+          "zh-CN": "言说与传述",
+          "en": "Speech and transmission"
+        },
+        "description": {
+          "zh-CN": "追踪言说、段落、文本和说话者归属之间的证据链。",
+          "en": "Traces the evidence chain among sayings, passages, texts and speaker attribution."
+        }
+      },
+      {
+        "id": "space",
+        "label": {
+          "zh-CN": "空间与地点",
+          "en": "Space and place"
+        },
+        "description": {
+          "zh-CN": "列出活动地点、制度空间、路线节点和记忆地点，并保留空间角色。",
+          "en": "Lists activity sites, institutional spaces, route nodes and memory sites while retaining spatial roles."
+        }
+      },
+      {
+        "id": "events",
+        "label": {
+          "zh-CN": "事件与行动",
+          "en": "Events and actions"
+        },
+        "description": {
+          "zh-CN": "区分人物参与的事件与后世把人物接入的分析性事件。",
+          "en": "Separates events in which a figure participates from analytical events that later connect the figure to a context."
+        }
+      },
+      {
+        "id": "texts",
+        "label": {
+          "zh-CN": "文本与版本",
+          "en": "Texts and versions"
+        },
+        "description": {
+          "zh-CN": "把经典、版本、段落、注释和后世接收分别显示。",
+          "en": "Keeps classics, versions, passages, commentary and later reception distinct."
+        }
+      },
+      {
+        "id": "reception",
+        "label": {
+          "zh-CN": "后世接收与影响",
+          "en": "Later reception and influence"
+        },
+        "description": {
+          "zh-CN": "展示制度化、再解释、纪念、神圣化和文学再现，而不把它们倒写为人物当时的事实。",
+          "en": "Shows institutionalisation, reinterpretation, memory, sacralisation and literary representation without projecting them back as contemporaneous facts."
+        }
+      },
+      {
+        "id": "evidence",
+        "label": {
+          "zh-CN": "证据与来源",
+          "en": "Evidence and sources"
+        },
+        "description": {
+          "zh-CN": "每一格都能回到来源、定位和证据等级；未记录不等于不存在。",
+          "en": "Each cell can return to sources, locators and evidence grades; not recorded does not mean non-existent."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "public-rc-figures",
+    "title": {
+      "zh-CN": "Public RC 人物：人物、空间、时间与文本入口",
+      "en": "Public RC figures: people, place, time and textual gateways"
+    },
+    "question": {
+      "zh-CN": "玄奘、司马承祯与孔颖达如何在同一座城市中进入不同的传统与制度关系？",
+      "en": "How do Xuanzang, Sima Chengzhen and Kong Yingda enter different traditions and institutional relations in one city?"
+    },
+    "disclaimer": {
+      "zh-CN": "这是当前 Public RC 已审核人物的并置阅读，不把三位人物、三种传统或不同证据层压缩成同一历史事实。",
+      "en": "This places the currently reviewed Public RC figures side by side; it does not collapse three people, traditions or evidence layers into one historical fact."
+    },
+    "entityKeys": [
+      "figure:xuanzang",
+      "figure:sima-chengzhen",
+      "figure:kong-yingda"
+    ],
+    "axes": [
+      {
+        "id": "historicity",
+        "label": { "zh-CN": "历史性与人物类别", "en": "Historicity and figure class" },
+        "description": { "zh-CN": "区分文献记录与仍需展开的研究边界。", "en": "Separates documented claims from research boundaries that remain open." }
+      },
+      {
+        "id": "tradition",
+        "label": { "zh-CN": "传统归属", "en": "Tradition" },
+        "description": { "zh-CN": "显示主传统、证据层和来源，而不预设价值排序。", "en": "Shows primary traditions, evidence layers and sources without implying a value hierarchy." }
+      },
+      {
+        "id": "time",
+        "label": { "zh-CN": "时间层", "en": "Time layers" },
+        "description": { "zh-CN": "把人物年代与关系事件的时间边界分开。", "en": "Keeps biographical periods distinct from relation-event boundaries." }
+      },
+      {
+        "id": "space",
+        "label": { "zh-CN": "空间与地点", "en": "Space and place" },
+        "description": { "zh-CN": "显示长安活动锚点及其空间角色。", "en": "Shows Chang'an activity anchors and their spatial roles." }
+      },
+      {
+        "id": "texts",
+        "label": { "zh-CN": "文本与版本", "en": "Texts and versions" },
+        "description": { "zh-CN": "把人物、经典、版本和原典入口保持为不同层。", "en": "Keeps figures, classics, versions and passage gateways as distinct layers." }
+      },
+      {
+        "id": "evidence",
+        "label": { "zh-CN": "证据与来源", "en": "Evidence and sources" },
+        "description": { "zh-CN": "每一格都能回到来源、定位和证据等级。", "en": "Each cell returns to sources, locators and evidence grades." }
+      }
+    ]
+  }
+]

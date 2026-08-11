@@ -1,8 +1,8 @@
 {
   "kind": "figure",
   "slug": "sima-chengzhen",
-  "publicationState": "preview",
-  "reviewStatus": "bilingual_reviewed",
+  "publicationState": "public",
+  "reviewStatus": "publishable",
   "primaryEvidenceLayer": "historical_documented",
   "importance": 4,
   "isFeatured": true,
@@ -101,11 +101,13 @@
   ],
   "sourceIds": [
     "source:sima-old-tang-biography",
+    "source:sima-chengzhen-full-tang-text",
     "source:daoist-historical-record",
     "source:editorial-method"
   ],
   "profile": {
     "historicity": "documented",
+    "figureClass": "historical_person",
     "gender": "male",
     "canonicalNameOriginal": "司马承祯",
     "nameLanguageCode": "lzh"

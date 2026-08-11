@@ -1,0 +1,3814 @@
+{
+  "schemaVersion": "1.0",
+  "locale": "en",
+  "slug": "dhammacakkappavattana-version-reading",
+  "readingMode": "same_text_versions",
+  "textSlug": "dhammacakkappavattana-sutta",
+  "title": "Dhammacakkappavattana Sutta version reading: Pāli and Thanissaro English",
+  "question": "What can be compared between a Pāli excerpt and a modern English translation of one discourse, and which differences must remain visible?",
+  "disclaimer": "This is a language-version reading within one text, not a collation of Pāli manuscripts; “suffering / stress” records translator wording without declaring a single authorised rendering.",
+  "readings": [
+    {
+      "key": "passage:turning-of-dharma-wheel",
+      "kind": "passage",
+      "slug": "turning-of-dharma-wheel",
+      "title": "This is the noble truth of suffering",
+      "subtitle": "A Four Noble Truths saying in the Dhammacakkappavattana Sutta",
+      "tradition": "buddhism",
+      "evidence": "historical_inferred",
+      "timeLabel": "SN 56.11; transmitted first-teaching context at Sarnath",
+      "sourceIds": [
+        "source:buddha-early-texts",
+        "source:sn56-11-thanissaro",
+        "source:editorial-method"
+      ],
+      "text": {
+        "key": "text:dhammacakkappavattana-sutta",
+        "slug": "dhammacakkappavattana-sutta",
+        "title": "Dhammacakkappavattana Sutta",
+        "summary": "The Dhammacakkappavattana Sutta preserves a transmitted discourse tradition in which the Buddha teaches the five mendicants at Sarnath."
+      },
+      "version": {
+        "key": "text_version:dhammacakkappavattana-sutta-pali",
+        "slug": "dhammacakkappavattana-sutta-pali",
+        "title": "Pāli digital version of the Dhammacakkappavattana Sutta",
+        "versionKind": "digital_edition",
+        "languageCode": "pli",
+        "citationLabel": "SuttaCentral, SN 56.11, Pāli/English digital edition",
+        "rightsStatus": "external_reference_only"
+      },
+      "passage": {
+        "title": "This is the noble truth of suffering",
+        "passageKind": "scripture_excerpt",
+        "locatorOriginal": "相应部 56.11",
+        "locatorNormalised": "Saṃyutta Nikāya 56.11",
+        "originalText": "Idaṃ dukkhaṃ ariyasaccaṃ.",
+        "punctuatedText": "Idaṃ dukkhaṃ ariyasaccaṃ.",
+        "modernZh": "这是苦圣谛。",
+        "translationEn": "This is the noble truth of suffering.",
+        "ritualSensitivity": "public_textual",
+        "attributionStatus": "recorded_by_others",
+        "variantReadings": [
+          {
+            "id": "variant:turning-dukkha-english-renderings",
+            "kind": "translation",
+            "status": "attested",
+            "label": "English renderings of dukkha",
+            "form": "suffering / stress",
+            "note": "The current Pāli passage uses suffering in its English field; the Thanissaro English witness uses stress. This records a translator-wording difference, not a manuscript variant or a single authorised interpretation of the Pāli.",
+            "sourceIds": [
+              "source:buddha-early-texts",
+              "source:sn56-11-thanissaro"
+            ]
+          }
+        ]
+      },
+      "reviewEvidence": [
+        {
+          "subjectKind": "entity",
+          "subjectKey": "passage:turning-of-dharma-wheel",
+          "reviewStatus": "bilingual_reviewed",
+          "requiredChecks": [
+            "schema",
+            "fact",
+            "bilingual",
+            "rights",
+            "accessibility",
+            "editorial",
+            "tradition"
+          ],
+          "completedChecks": [],
+          "missingChecks": [
+            "schema",
+            "fact",
+            "bilingual",
+            "rights",
+            "accessibility",
+            "editorial",
+            "tradition"
+          ],
+          "failedChecks": [],
+          "blocking": true,
+          "checks": []
+        },
+        {
+          "subjectKind": "entity",
+          "subjectKey": "text:dhammacakkappavattana-sutta",
+          "reviewStatus": "bilingual_reviewed",
+          "requiredChecks": [
+            "schema",
+            "fact",
+            "bilingual",
+            "rights",
+            "accessibility",
+            "editorial",
+            "tradition"
+          ],
+          "completedChecks": [],
+          "missingChecks": [
+            "schema",
+            "fact",
+            "bilingual",
+            "rights",
+            "accessibility",
+            "editorial",
+            "tradition"
+          ],
+          "failedChecks": [],
+          "blocking": true,
+          "checks": []
+        },
+        {
+          "subjectKind": "entity",
+          "subjectKey": "text_version:dhammacakkappavattana-sutta-pali",
+          "reviewStatus": "bilingual_reviewed",
+          "requiredChecks": [
+            "schema",
+            "fact",
+            "bilingual",
+            "rights",
+            "accessibility",
+            "editorial"
+          ],
+          "completedChecks": [],
+          "missingChecks": [
+            "schema",
+            "fact",
+            "bilingual",
+            "rights",
+            "accessibility",
+            "editorial"
+          ],
+          "failedChecks": [],
+          "blocking": true,
+          "checks": []
+        },
+        {
+          "subjectKind": "relation",
+          "subjectKey": "relation:dhammacakkappavattana-has-version",
+          "reviewStatus": "bilingual_reviewed",
+          "requiredChecks": [
+            "schema",
+            "fact",
+            "rights",
+            "editorial"
+          ],
+          "completedChecks": [],
+          "missingChecks": [
+            "schema",
+            "fact",
+            "rights",
+            "editorial"
+          ],
+          "failedChecks": [],
+          "blocking": true,
+          "checks": []
+        },
+        {
+          "subjectKind": "relation",
+          "subjectKey": "relation:turning-passage-of-text",
+          "reviewStatus": "bilingual_reviewed",
+          "requiredChecks": [
+            "schema",
+            "fact",
+            "rights",
+            "editorial"
+          ],
+          "completedChecks": [],
+          "missingChecks": [
+            "schema",
+            "fact",
+            "rights",
+            "editorial"
+          ],
+          "failedChecks": [],
+          "blocking": true,
+          "checks": []
+        },
+        {
+          "subjectKind": "relation",
+          "subjectKey": "relation:turning-passage-quoted-pali",
+          "reviewStatus": "bilingual_reviewed",
+          "requiredChecks": [
+            "schema",
+            "fact",
+            "rights",
+            "editorial"
+          ],
+          "completedChecks": [],
+          "missingChecks": [
+            "schema",
+            "fact",
+            "rights",
+            "editorial"
+          ],
+          "failedChecks": [],
+          "blocking": true,
+          "checks": []
+        },
+        {
+          "subjectKind": "relation",
+          "subjectKey": "relation:turning-passage-attributed-sakyamuni",
+          "reviewStatus": "bilingual_reviewed",
+          "requiredChecks": [
+            "schema",
+            "fact",
+            "rights",
+            "editorial"
+          ],
+          "completedChecks": [],
+          "missingChecks": [
+            "schema",
+            "fact",
+            "rights",
+            "editorial"
+          ],
+          "failedChecks": [],
+          "blocking": true,
+          "checks": []
+        },
+        {
+          "subjectKind": "relation",
+          "subjectKey": "relation:turning-text-has-thanissaro-version",
+          "reviewStatus": "bilingual_reviewed",
+          "requiredChecks": [
+            "schema",
+            "fact",
+            "rights",
+            "editorial"
+          ],
+          "completedChecks": [],
+          "missingChecks": [
+            "schema",
+            "fact",
+            "rights",
+            "editorial"
+          ],
+          "failedChecks": [],
+          "blocking": true,
+          "checks": []
+        },
+        {
+          "subjectKind": "relation",
+          "subjectKey": "relation:turning-passage-parallel-thanissaro",
+          "reviewStatus": "bilingual_reviewed",
+          "requiredChecks": [
+            "schema",
+            "fact",
+            "rights",
+            "editorial"
+          ],
+          "completedChecks": [],
+          "missingChecks": [
+            "schema",
+            "fact",
+            "rights",
+            "editorial"
+          ],
+          "failedChecks": [],
+          "blocking": true,
+          "checks": []
+        }
+      ]
+    },
+    {
+      "key": "passage:turning-of-dharma-wheel-thanissaro-en",
+      "kind": "passage",
+      "slug": "turning-of-dharma-wheel-thanissaro-en",
+      "title": "This is the noble truth of stress",
+      "subtitle": "A short English witness for the Four Noble Truths section of SN 56.11",
+      "tradition": "buddhism",
+      "evidence": "historical_documented",
+      "timeLabel": "Modern English translation; corresponding to the SN 56.11 Four Noble Truths section",
+      "sourceIds": [
+        "source:sn56-11-thanissaro",
+        "source:buddha-early-texts",
+        "source:editorial-method"
+      ],
+      "text": {
+        "key": "text:dhammacakkappavattana-sutta",
+        "slug": "dhammacakkappavattana-sutta",
+        "title": "Dhammacakkappavattana Sutta",
+        "summary": "The Dhammacakkappavattana Sutta preserves a transmitted discourse tradition in which the Buddha teaches the five mendicants at Sarnath."
+      },
+      "version": {
+        "key": "text_version:dhammacakkappavattana-sutta-thanissaro-en",
+        "slug": "dhammacakkappavattana-sutta-thanissaro-en",
+        "title": "Thanissaro English translation of SN 56.11",
+        "versionKind": "translation",
+        "languageCode": "en",
+        "citationLabel": "Access to Insight, SN 56.11, translated by Thanissaro Bhikkhu",
+        "rightsStatus": "quotation_only"
+      },
+      "passage": {
+        "title": "This is the noble truth of stress",
+        "passageKind": "scripture_excerpt",
+        "locatorOriginal": "SN 56.11 · 四圣谛段落",
+        "locatorNormalised": "Saṃyutta Nikāya 56.11 · Four Noble Truths section",
+        "originalText": "This is the noble truth of stress.",
+        "punctuatedText": "This is the noble truth of stress.",
+        "modernZh": "这是苦圣谛。",
+        "translationEn": "This is the noble truth of stress.",
+        "ritualSensitivity": "public_textual",
+        "attributionStatus": "recorded_by_others",
+        "variantReadings": []
+      },
+      "reviewEvidence": [
+        {
+          "subjectKind": "entity",
+          "subjectKey": "passage:turning-of-dharma-wheel-thanissaro-en",
+          "reviewStatus": "bilingual_reviewed",
+          "requiredChecks": [
+            "schema",
+            "fact",
+            "bilingual",
+            "rights",
+            "accessibility",
+            "editorial"
+          ],
+          "completedChecks": [],
+          "missingChecks": [
+            "schema",
+            "fact",
+            "bilingual",
+            "rights",
+            "accessibility",
+            "editorial"
+          ],
+          "failedChecks": [],
+          "blocking": true,
+          "checks": []
+        },
+        {
+          "subjectKind": "entity",
+          "subjectKey": "text:dhammacakkappavattana-sutta",
+          "reviewStatus": "bilingual_reviewed",
+          "requiredChecks": [
+            "schema",
+            "fact",
+            "bilingual",
+            "rights",
+            "accessibility",
+            "editorial",
+            "tradition"
+          ],
+          "completedChecks": [],
+          "missingChecks": [
+            "schema",
+            "fact",
+            "bilingual",
+            "rights",
+            "accessibility",
+            "editorial",
+            "tradition"
+          ],
+          "failedChecks": [],
+          "blocking": true,
+          "checks": []
+        },
+        {
+          "subjectKind": "entity",
+          "subjectKey": "text_version:dhammacakkappavattana-sutta-thanissaro-en",
+          "reviewStatus": "bilingual_reviewed",
+          "requiredChecks": [
+            "schema",
+            "fact",
+            "bilingual",
+            "rights",
+            "accessibility",
+            "editorial"
+          ],
+          "completedChecks": [],
+          "missingChecks": [
+            "schema",
+            "fact",
+            "bilingual",
+            "rights",
+            "accessibility",
+            "editorial"
+          ],
+          "failedChecks": [],
+          "blocking": true,
+          "checks": []
+        },
+        {
+          "subjectKind": "relation",
+          "subjectKey": "relation:dhammacakkappavattana-has-version",
+          "reviewStatus": "bilingual_reviewed",
+          "requiredChecks": [
+            "schema",
+            "fact",
+            "rights",
+            "editorial"
+          ],
+          "completedChecks": [],
+          "missingChecks": [
+            "schema",
+            "fact",
+            "rights",
+            "editorial"
+          ],
+          "failedChecks": [],
+          "blocking": true,
+          "checks": []
+        },
+        {
+          "subjectKind": "relation",
+          "subjectKey": "relation:turning-passage-of-text",
+          "reviewStatus": "bilingual_reviewed",
+          "requiredChecks": [
+            "schema",
+            "fact",
+            "rights",
+            "editorial"
+          ],
+          "completedChecks": [],
+          "missingChecks": [
+            "schema",
+            "fact",
+            "rights",
+            "editorial"
+          ],
+          "failedChecks": [],
+          "blocking": true,
+          "checks": []
+        },
+        {
+          "subjectKind": "relation",
+          "subjectKey": "relation:turning-text-has-thanissaro-version",
+          "reviewStatus": "bilingual_reviewed",
+          "requiredChecks": [
+            "schema",
+            "fact",
+            "rights",
+            "editorial"
+          ],
+          "completedChecks": [],
+          "missingChecks": [
+            "schema",
+            "fact",
+            "rights",
+            "editorial"
+          ],
+          "failedChecks": [],
+          "blocking": true,
+          "checks": []
+        },
+        {
+          "subjectKind": "relation",
+          "subjectKey": "relation:turning-translation-quoted-thanissaro",
+          "reviewStatus": "bilingual_reviewed",
+          "requiredChecks": [
+            "schema",
+            "fact",
+            "rights",
+            "editorial"
+          ],
+          "completedChecks": [],
+          "missingChecks": [
+            "schema",
+            "fact",
+            "rights",
+            "editorial"
+          ],
+          "failedChecks": [],
+          "blocking": true,
+          "checks": []
+        },
+        {
+          "subjectKind": "relation",
+          "subjectKey": "relation:turning-passage-parallel-thanissaro",
+          "reviewStatus": "bilingual_reviewed",
+          "requiredChecks": [
+            "schema",
+            "fact",
+            "rights",
+            "editorial"
+          ],
+          "completedChecks": [],
+          "missingChecks": [
+            "schema",
+            "fact",
+            "rights",
+            "editorial"
+          ],
+          "failedChecks": [],
+          "blocking": true,
+          "checks": []
+        },
+        {
+          "subjectKind": "relation",
+          "subjectKey": "relation:turning-translation-attributed-sakyamuni",
+          "reviewStatus": "bilingual_reviewed",
+          "requiredChecks": [
+            "schema",
+            "fact",
+            "rights",
+            "editorial"
+          ],
+          "completedChecks": [],
+          "missingChecks": [
+            "schema",
+            "fact",
+            "rights",
+            "editorial"
+          ],
+          "failedChecks": [],
+          "blocking": true,
+          "checks": []
+        }
+      ]
+    }
+  ],
+  "axes": [
+    {
+      "id": "textual_layer",
+      "label": "Version layers within one text",
+      "description": "Confirms the shared discourse while showing each explicit text version.",
+      "cells": [
+        {
+          "passageKey": "passage:turning-of-dharma-wheel",
+          "status": "recorded",
+          "value": "Dhammacakkappavattana Sutta → Pāli digital version of the Dhammacakkappavattana Sutta → This is the noble truth of suffering",
+          "details": [
+            "Text: Dhammacakkappavattana Sutta",
+            "Version: Pāli digital version of the Dhammacakkappavattana Sutta",
+            "Passage: This is the noble truth of suffering"
+          ],
+          "evidenceLayer": "historical_inferred",
+          "sourceIds": [
+            "source:buddha-early-texts",
+            "source:sn56-11-thanissaro",
+            "source:editorial-method"
+          ],
+          "reviewEvidence": [
+            {
+              "subjectKind": "entity",
+              "subjectKey": "passage:turning-of-dharma-wheel",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "entity",
+              "subjectKey": "text:dhammacakkappavattana-sutta",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "entity",
+              "subjectKey": "text_version:dhammacakkappavattana-sutta-pali",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:dhammacakkappavattana-has-version",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-of-text",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-quoted-pali",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-attributed-sakyamuni",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-text-has-thanissaro-version",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-parallel-thanissaro",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            }
+          ]
+        },
+        {
+          "passageKey": "passage:turning-of-dharma-wheel-thanissaro-en",
+          "status": "recorded",
+          "value": "Dhammacakkappavattana Sutta → Thanissaro English translation of SN 56.11 → This is the noble truth of stress",
+          "details": [
+            "Text: Dhammacakkappavattana Sutta",
+            "Version: Thanissaro English translation of SN 56.11",
+            "Passage: This is the noble truth of stress"
+          ],
+          "evidenceLayer": "historical_documented",
+          "sourceIds": [
+            "source:sn56-11-thanissaro",
+            "source:buddha-early-texts",
+            "source:editorial-method"
+          ],
+          "reviewEvidence": [
+            {
+              "subjectKind": "entity",
+              "subjectKey": "passage:turning-of-dharma-wheel-thanissaro-en",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "entity",
+              "subjectKey": "text:dhammacakkappavattana-sutta",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "entity",
+              "subjectKey": "text_version:dhammacakkappavattana-sutta-thanissaro-en",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:dhammacakkappavattana-has-version",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-of-text",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-text-has-thanissaro-version",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-translation-quoted-thanissaro",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-parallel-thanissaro",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-translation-attributed-sakyamuni",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "locator",
+      "label": "Shared and version-specific locators",
+      "description": "Compares the shared SN 56.11 locator with each version's citation interface.",
+      "cells": [
+        {
+          "passageKey": "passage:turning-of-dharma-wheel",
+          "status": "recorded",
+          "value": "Saṃyutta Nikāya 56.11",
+          "details": [
+            "相应部 56.11"
+          ],
+          "evidenceLayer": "historical_inferred",
+          "sourceIds": [
+            "source:buddha-early-texts",
+            "source:sn56-11-thanissaro"
+          ],
+          "reviewEvidence": [
+            {
+              "subjectKind": "entity",
+              "subjectKey": "passage:turning-of-dharma-wheel",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "entity",
+              "subjectKey": "text:dhammacakkappavattana-sutta",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "entity",
+              "subjectKey": "text_version:dhammacakkappavattana-sutta-pali",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:dhammacakkappavattana-has-version",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-of-text",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-quoted-pali",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-attributed-sakyamuni",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-text-has-thanissaro-version",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-parallel-thanissaro",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            }
+          ]
+        },
+        {
+          "passageKey": "passage:turning-of-dharma-wheel-thanissaro-en",
+          "status": "recorded",
+          "value": "Saṃyutta Nikāya 56.11 · Four Noble Truths section",
+          "details": [
+            "SN 56.11 · 四圣谛段落"
+          ],
+          "evidenceLayer": "historical_documented",
+          "sourceIds": [
+            "source:sn56-11-thanissaro",
+            "source:buddha-early-texts"
+          ],
+          "reviewEvidence": [
+            {
+              "subjectKind": "entity",
+              "subjectKey": "passage:turning-of-dharma-wheel-thanissaro-en",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "entity",
+              "subjectKey": "text:dhammacakkappavattana-sutta",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "entity",
+              "subjectKey": "text_version:dhammacakkappavattana-sutta-thanissaro-en",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:dhammacakkappavattana-has-version",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-of-text",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-text-has-thanissaro-version",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-translation-quoted-thanissaro",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-parallel-thanissaro",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-translation-attributed-sakyamuni",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wording",
+      "label": "Source wording and translator wording",
+      "description": "Places Pāli wording beside translation wording without presenting translation as a source-language variant.",
+      "cells": [
+        {
+          "passageKey": "passage:turning-of-dharma-wheel",
+          "status": "recorded",
+          "value": "Idaṃ dukkhaṃ ariyasaccaṃ.",
+          "details": [
+            "Punctuation: Idaṃ dukkhaṃ ariyasaccaṃ."
+          ],
+          "evidenceLayer": "historical_inferred",
+          "sourceIds": [
+            "source:buddha-early-texts",
+            "source:sn56-11-thanissaro"
+          ],
+          "reviewEvidence": [
+            {
+              "subjectKind": "entity",
+              "subjectKey": "passage:turning-of-dharma-wheel",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "entity",
+              "subjectKey": "text:dhammacakkappavattana-sutta",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "entity",
+              "subjectKey": "text_version:dhammacakkappavattana-sutta-pali",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:dhammacakkappavattana-has-version",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-of-text",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-quoted-pali",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-attributed-sakyamuni",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-text-has-thanissaro-version",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-parallel-thanissaro",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            }
+          ]
+        },
+        {
+          "passageKey": "passage:turning-of-dharma-wheel-thanissaro-en",
+          "status": "recorded",
+          "value": "This is the noble truth of stress.",
+          "details": [
+            "Punctuation: This is the noble truth of stress."
+          ],
+          "evidenceLayer": "historical_documented",
+          "sourceIds": [
+            "source:sn56-11-thanissaro",
+            "source:buddha-early-texts"
+          ],
+          "reviewEvidence": [
+            {
+              "subjectKind": "entity",
+              "subjectKey": "passage:turning-of-dharma-wheel-thanissaro-en",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "entity",
+              "subjectKey": "text:dhammacakkappavattana-sutta",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "entity",
+              "subjectKey": "text_version:dhammacakkappavattana-sutta-thanissaro-en",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:dhammacakkappavattana-has-version",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-of-text",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-text-has-thanissaro-version",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-translation-quoted-thanissaro",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-parallel-thanissaro",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-translation-attributed-sakyamuni",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attribution",
+      "label": "Transmission and attribution",
+      "description": "Both witnesses retain traditional speaker attribution and mediated preservation.",
+      "cells": [
+        {
+          "passageKey": "passage:turning-of-dharma-wheel",
+          "status": "derived",
+          "value": "recorded_by_others",
+          "details": [
+            "Preserved as Śākyamuni's teaching through transmission → Śākyamuni Buddha (Gautama)"
+          ],
+          "evidenceLayer": "historical_inferred",
+          "confidence": "medium",
+          "sourceIds": [
+            "source:buddha-early-texts",
+            "source:sn56-11-thanissaro"
+          ],
+          "reviewEvidence": [
+            {
+              "subjectKind": "entity",
+              "subjectKey": "passage:turning-of-dharma-wheel",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "entity",
+              "subjectKey": "text:dhammacakkappavattana-sutta",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "entity",
+              "subjectKey": "text_version:dhammacakkappavattana-sutta-pali",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:dhammacakkappavattana-has-version",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-of-text",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-quoted-pali",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-attributed-sakyamuni",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-text-has-thanissaro-version",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-parallel-thanissaro",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            }
+          ]
+        },
+        {
+          "passageKey": "passage:turning-of-dharma-wheel-thanissaro-en",
+          "status": "derived",
+          "value": "recorded_by_others",
+          "details": [
+            "English transmission of teaching attributed to Śākyamuni → Śākyamuni Buddha (Gautama)"
+          ],
+          "evidenceLayer": "historical_inferred",
+          "confidence": "medium",
+          "sourceIds": [
+            "source:sn56-11-thanissaro",
+            "source:buddha-early-texts"
+          ],
+          "reviewEvidence": [
+            {
+              "subjectKind": "entity",
+              "subjectKey": "passage:turning-of-dharma-wheel-thanissaro-en",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "entity",
+              "subjectKey": "text:dhammacakkappavattana-sutta",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "entity",
+              "subjectKey": "text_version:dhammacakkappavattana-sutta-thanissaro-en",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:dhammacakkappavattana-has-version",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-of-text",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-text-has-thanissaro-version",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-translation-quoted-thanissaro",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-parallel-thanissaro",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-translation-attributed-sakyamuni",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "interpretation",
+      "label": "Translation choice",
+      "description": "Shows how translation choices shape reception without declaring one rendering the only answer.",
+      "cells": [
+        {
+          "passageKey": "passage:turning-of-dharma-wheel",
+          "status": "recorded",
+          "value": "This is the noble truth of suffering.",
+          "details": [
+            "现代汉语：这是苦圣谛。"
+          ],
+          "evidenceLayer": "historical_inferred",
+          "sourceIds": [
+            "source:buddha-early-texts",
+            "source:sn56-11-thanissaro",
+            "source:editorial-method"
+          ],
+          "reviewEvidence": [
+            {
+              "subjectKind": "entity",
+              "subjectKey": "passage:turning-of-dharma-wheel",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "entity",
+              "subjectKey": "text:dhammacakkappavattana-sutta",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "entity",
+              "subjectKey": "text_version:dhammacakkappavattana-sutta-pali",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:dhammacakkappavattana-has-version",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-of-text",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-quoted-pali",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-attributed-sakyamuni",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-text-has-thanissaro-version",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-parallel-thanissaro",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            }
+          ]
+        },
+        {
+          "passageKey": "passage:turning-of-dharma-wheel-thanissaro-en",
+          "status": "recorded",
+          "value": "This is the noble truth of stress.",
+          "details": [
+            "现代汉语：这是苦圣谛。"
+          ],
+          "evidenceLayer": "historical_documented",
+          "sourceIds": [
+            "source:sn56-11-thanissaro",
+            "source:buddha-early-texts",
+            "source:editorial-method"
+          ],
+          "reviewEvidence": [
+            {
+              "subjectKind": "entity",
+              "subjectKey": "passage:turning-of-dharma-wheel-thanissaro-en",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "entity",
+              "subjectKey": "text:dhammacakkappavattana-sutta",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "entity",
+              "subjectKey": "text_version:dhammacakkappavattana-sutta-thanissaro-en",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:dhammacakkappavattana-has-version",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-of-text",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-text-has-thanissaro-version",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-translation-quoted-thanissaro",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-parallel-thanissaro",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-translation-attributed-sakyamuni",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time",
+      "label": "Text and version time",
+      "description": "Separates the transmitted textual layer from the modern English version.",
+      "cells": [
+        {
+          "passageKey": "passage:turning-of-dharma-wheel",
+          "status": "recorded",
+          "value": "Transmission and textual layer of SN 56.11",
+          "details": [
+            "textual_attestation: Transmission and textual layer of SN 56.11"
+          ],
+          "evidenceLayer": "historical_inferred",
+          "confidence": "low",
+          "sourceIds": [
+            "source:buddha-early-texts"
+          ],
+          "reviewEvidence": [
+            {
+              "subjectKind": "entity",
+              "subjectKey": "passage:turning-of-dharma-wheel",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "entity",
+              "subjectKey": "text:dhammacakkappavattana-sutta",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "entity",
+              "subjectKey": "text_version:dhammacakkappavattana-sutta-pali",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:dhammacakkappavattana-has-version",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-of-text",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-quoted-pali",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-attributed-sakyamuni",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-text-has-thanissaro-version",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-parallel-thanissaro",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            }
+          ]
+        },
+        {
+          "passageKey": "passage:turning-of-dharma-wheel-thanissaro-en",
+          "status": "recorded",
+          "value": "Corresponding to the transmitted and textual layer of SN 56.11; the English witness is modern",
+          "details": [
+            "textual_attestation: Corresponding to the transmitted and textual layer of SN 56.11; the English witness is modern"
+          ],
+          "evidenceLayer": "historical_inferred",
+          "confidence": "low",
+          "sourceIds": [
+            "source:buddha-early-texts"
+          ],
+          "reviewEvidence": [
+            {
+              "subjectKind": "entity",
+              "subjectKey": "passage:turning-of-dharma-wheel-thanissaro-en",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "entity",
+              "subjectKey": "text:dhammacakkappavattana-sutta",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "entity",
+              "subjectKey": "text_version:dhammacakkappavattana-sutta-thanissaro-en",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:dhammacakkappavattana-has-version",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-of-text",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-text-has-thanissaro-version",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-translation-quoted-thanissaro",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-parallel-thanissaro",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-translation-attributed-sakyamuni",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "evidence",
+      "label": "Sources, rights and review",
+      "description": "Each column retains sources, rights boundaries and reviewer evidence.",
+      "cells": [
+        {
+          "passageKey": "passage:turning-of-dharma-wheel",
+          "status": "recorded",
+          "value": "3 sources",
+          "details": [
+            "Early Buddhist texts in the Pāli canon: MN 26 and SN 56.11 · A · MN 26 Ariyapariyesanā：求法与到达鹿野苑；SN 56.11 Dhammacakkappavattana：鹿野苑初转法轮文本",
+            "Access to Insight: SN 56.11 translated by Thanissaro Bhikkhu · A · SN 56.11，四圣谛段落；“This is the noble truth of stress.”",
+            "Curatorial and methodological notes of the Dao–Ru–Fo Digital Museum · B · methodology:content-v2",
+            "Version rights: external_reference_only"
+          ],
+          "evidenceLayer": "historical_inferred",
+          "sourceIds": [
+            "source:buddha-early-texts",
+            "source:sn56-11-thanissaro",
+            "source:editorial-method"
+          ],
+          "reviewEvidence": [
+            {
+              "subjectKind": "entity",
+              "subjectKey": "passage:turning-of-dharma-wheel",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "entity",
+              "subjectKey": "text:dhammacakkappavattana-sutta",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "entity",
+              "subjectKey": "text_version:dhammacakkappavattana-sutta-pali",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:dhammacakkappavattana-has-version",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-of-text",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-quoted-pali",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-attributed-sakyamuni",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-text-has-thanissaro-version",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-parallel-thanissaro",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            }
+          ]
+        },
+        {
+          "passageKey": "passage:turning-of-dharma-wheel-thanissaro-en",
+          "status": "recorded",
+          "value": "3 sources",
+          "details": [
+            "Access to Insight: SN 56.11 translated by Thanissaro Bhikkhu · A · SN 56.11，四圣谛段落；“This is the noble truth of stress.”",
+            "Early Buddhist texts in the Pāli canon: MN 26 and SN 56.11 · A · MN 26 Ariyapariyesanā：求法与到达鹿野苑；SN 56.11 Dhammacakkappavattana：鹿野苑初转法轮文本",
+            "Curatorial and methodological notes of the Dao–Ru–Fo Digital Museum · B · methodology:content-v2",
+            "Version rights: quotation_only"
+          ],
+          "evidenceLayer": "historical_documented",
+          "sourceIds": [
+            "source:sn56-11-thanissaro",
+            "source:buddha-early-texts",
+            "source:editorial-method"
+          ],
+          "reviewEvidence": [
+            {
+              "subjectKind": "entity",
+              "subjectKey": "passage:turning-of-dharma-wheel-thanissaro-en",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "entity",
+              "subjectKey": "text:dhammacakkappavattana-sutta",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial",
+                "tradition"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "entity",
+              "subjectKey": "text_version:dhammacakkappavattana-sutta-thanissaro-en",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "bilingual",
+                "rights",
+                "accessibility",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:dhammacakkappavattana-has-version",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-of-text",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-text-has-thanissaro-version",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-translation-quoted-thanissaro",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-passage-parallel-thanissaro",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            },
+            {
+              "subjectKind": "relation",
+              "subjectKey": "relation:turning-translation-attributed-sakyamuni",
+              "reviewStatus": "bilingual_reviewed",
+              "requiredChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "completedChecks": [],
+              "missingChecks": [
+                "schema",
+                "fact",
+                "rights",
+                "editorial"
+              ],
+              "failedChecks": [],
+              "blocking": true,
+              "checks": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "contextRelations": [
+    {
+      "id": "relation:dhammacakkappavattana-has-version",
+      "source": {
+        "kind": "text",
+        "slug": "dhammacakkappavattana-sutta"
+      },
+      "target": {
+        "kind": "text_version",
+        "slug": "dhammacakkappavattana-sutta-pali"
+      },
+      "relationType": "has_version",
+      "label": "Has a Pāli digital version",
+      "summary": "The text and version remain separate so Chinese translations, parallels and recensions can be added later.",
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceIds": [
+        "source:buddha-early-texts"
+      ]
+    },
+    {
+      "id": "relation:turning-passage-of-text",
+      "source": {
+        "kind": "passage",
+        "slug": "turning-of-dharma-wheel"
+      },
+      "target": {
+        "kind": "text",
+        "slug": "dhammacakkappavattana-sutta"
+      },
+      "relationType": "passage_of",
+      "label": "Passage of the Dhammacakkappavattana Sutta",
+      "summary": "The passage points back to the discourse text while retaining version and speaker-attribution layers.",
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceIds": [
+        "source:buddha-early-texts"
+      ]
+    },
+    {
+      "id": "relation:turning-passage-quoted-pali",
+      "source": {
+        "kind": "passage",
+        "slug": "turning-of-dharma-wheel"
+      },
+      "target": {
+        "kind": "text_version",
+        "slug": "dhammacakkappavattana-sutta-pali"
+      },
+      "relationType": "quoted_from_version",
+      "label": "Quoted from the Pāli SN 56.11 version",
+      "summary": "The short excerpt points to an explicit digital version rather than mixing translation and source text into one layer.",
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceIds": [
+        "source:buddha-early-texts"
+      ]
+    },
+    {
+      "id": "relation:turning-passage-attributed-sakyamuni",
+      "source": {
+        "kind": "passage",
+        "slug": "turning-of-dharma-wheel"
+      },
+      "target": {
+        "kind": "figure",
+        "slug": "sakyamuni"
+      },
+      "relationType": "attributed_to",
+      "label": "Preserved as Śākyamuni's teaching through transmission",
+      "summary": "The passage is traditionally voiced by the Buddha, while the surviving text is preserved through monastic memory, compilation and transmission, so it is marked recorded_by_others.",
+      "confidence": "medium",
+      "evidenceLayer": "historical_inferred",
+      "sourceIds": [
+        "source:buddha-early-texts"
+      ]
+    },
+    {
+      "id": "relation:turning-text-has-thanissaro-version",
+      "source": {
+        "kind": "text",
+        "slug": "dhammacakkappavattana-sutta"
+      },
+      "target": {
+        "kind": "text_version",
+        "slug": "dhammacakkappavattana-sutta-thanissaro-en"
+      },
+      "relationType": "has_version",
+      "label": "Has the Thanissaro English translation",
+      "summary": "The discourse work remains separate from a modern English translation, preserving translator and rights boundaries.",
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceIds": [
+        "source:sn56-11-thanissaro"
+      ]
+    },
+    {
+      "id": "relation:turning-translation-quoted-thanissaro",
+      "source": {
+        "kind": "passage",
+        "slug": "turning-of-dharma-wheel-thanissaro-en"
+      },
+      "target": {
+        "kind": "text_version",
+        "slug": "dhammacakkappavattana-sutta-thanissaro-en"
+      },
+      "relationType": "quoted_from_version",
+      "label": "Quoted from the Thanissaro English version",
+      "summary": "The English excerpt points to a specific translation and SN 56.11 locator without mixing its wording into the Pāli source layer.",
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceIds": [
+        "source:sn56-11-thanissaro"
+      ]
+    },
+    {
+      "id": "relation:turning-passage-parallel-thanissaro",
+      "source": {
+        "kind": "passage",
+        "slug": "turning-of-dharma-wheel-thanissaro-en"
+      },
+      "target": {
+        "kind": "passage",
+        "slug": "turning-of-dharma-wheel"
+      },
+      "relationType": "comparative_parallel",
+      "label": "Compared with the Pāli SN 56.11 excerpt",
+      "summary": "Both passages share the SN 56.11 textual locator but belong to different language versions; the comparison only exposes wording-layer differences.",
+      "confidence": "medium",
+      "evidenceLayer": "historical_inferred",
+      "sourceIds": [
+        "source:buddha-early-texts",
+        "source:sn56-11-thanissaro"
+      ]
+    },
+    {
+      "id": "relation:turning-translation-attributed-sakyamuni",
+      "source": {
+        "kind": "passage",
+        "slug": "turning-of-dharma-wheel-thanissaro-en"
+      },
+      "target": {
+        "kind": "figure",
+        "slug": "sakyamuni"
+      },
+      "relationType": "attributed_to",
+      "label": "English transmission of teaching attributed to Śākyamuni",
+      "summary": "The English witness retains the discourse's traditional speaker attribution while being preserved through Pāli transmission and modern translation.",
+      "confidence": "medium",
+      "evidenceLayer": "historical_inferred",
+      "sourceIds": [
+        "source:buddha-early-texts",
+        "source:sn56-11-thanissaro"
+      ]
+    }
+  ]
+}

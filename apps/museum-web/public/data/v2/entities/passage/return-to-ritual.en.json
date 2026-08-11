@@ -1,41 +1,74 @@
 {
+  "id": "67fadcb7-a43e-51c4-afb4-f05d19cbc16e",
   "locale": "en",
   "kind": "passage",
   "slug": "return-to-ritual",
-  "title": "To restrain oneself and return to ritual is benevolence",
-  "subtitle": "Analects 12.1",
+  "title": "Conquer the self and return to ritual",
+  "subtitle": "Analects, Yan Yuan chapter",
   "tradition": "confucianism",
-  "evidence": "Public primary text · section located",
-  "timeLabel": "Pre-Qin sayings tradition · interpreted through Sui–Tang classical learning",
-  "shortSummary": "The line connects self-regulation, ritual and benevolence, opening a path into the relationship between Confucian cultivation and social order.",
+  "evidence": "historical_inferred",
+  "timeLabel": "Analects chapter and Tang classical-learning context",
+  "shortSummary": "The line connects humaneness with self-restraint and ritual practice, and was repeatedly reinterpreted in political and educational settings.",
   "curatorialDescription": [
-    "Ritual is not only ceremonial surface; it also concerns relationship, role, measure and shared order. Restraining oneself should not be reduced to suppressing individuality, but read within the problem of benevolence.",
-    "Ritual can enter education and politics as an institution while also shaping everyday conduct and self-cultivation. These dimensions are connected but not interchangeable.",
-    "Sui–Tang classical learning brought earlier texts into new commentarial and educational systems. The passage therefore links the Analects with a Tang institutional context."
+    "‘Conquer the self and return to ritual’ is more than private moral advice. It connects body, ritual, education and political order and opens onto the institutional life of Confucian concepts."
   ],
-  "researchNote": "The first release uses the received section locator Analects 12.1. The modern Chinese explanation and English translation are original museum summaries.",
+  "researchNote": "The Alpha entry begins with a chapter locator; commentaries, variants and Tang classical-learning contexts remain to be added.",
   "keyFacts": [
-    { "label": "Kind", "value": "classic saying" },
-    { "label": "Locator", "value": "Analects 12.1" },
-    { "label": "Keywords", "value": "self-restraint · ritual · benevolence" }
+    {
+      "label": "Sensitivity",
+      "value": "Public textual"
+    }
   ],
   "quote": {
-    "original": "克己復禮為仁。一日克己復禮，天下歸仁焉。",
-    "interpretation": "Restraining the tendency to centre only one's own desires and returning to ritual relations is one way benevolence is practised.",
-    "locator": "Analects 12.1"
+    "original": "克己复礼为仁。",
+    "interpretation": "In the context of the Yan Yuan chapter, humaneness is connected with self-restraint and the practice of ritual; it is not an abstract goodwill outside relationships and institutions.",
+    "locator": "Analects, Yan Yuan chapter"
   },
   "related": [
-    { "kind": "text", "slug": "analects", "title": "Analects", "relation": "source text" },
-    { "kind": "concept", "slug": "ritual", "title": "Ritual", "relation": "central concept" },
-    { "kind": "figure", "slug": "kong-yingda", "title": "Kong Yingda", "relation": "Tang classical-learning context" }
+    {
+      "kind": "figure",
+      "slug": "kong-yingda",
+      "title": "Kong Yingda",
+      "relation": "Tang classical-learning context"
+    },
+    {
+      "kind": "text",
+      "slug": "analects",
+      "title": "Analects",
+      "relation": "Excerpt from"
+    }
   ],
   "sources": [
     {
-      "title": "Chinese Text Project · Analects",
-      "locator": "Yan Yuan 12.1",
+      "id": "source:analects-edition",
+      "title": "Received editions and chapter references for the Analects",
+      "locator": "颜渊第十二，第1章（“克己复礼为仁”）",
       "grade": "A",
-      "role": "primary text locator",
-      "url": "https://ctext.org/analects/yan-yuan"
+      "role": "Initial basis for the Confucian passage and chapter locator",
+      "url": "https://ctext.org/wiki.pl?chapter=198285&if=en&remap=gb"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "Curatorial and methodological notes of the Dao–Ru–Fo Digital Museum",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "Curatorial framework and terminology rules"
     }
-  ]
+  ],
+  "profile": {
+    "textSlug": "analects",
+    "textVersionSlug": "analects-received",
+    "passageKind": "classic_saying",
+    "locatorOriginal": "颜渊篇",
+    "locatorNormalised": "Analects Yan Yuan",
+    "originalText": "克己复礼为仁。",
+    "punctuatedText": "克己复礼为仁。",
+    "modernZh": "约束自己，使行为回到礼的规范，就是仁。",
+    "translationEn": "To restrain the self and return to ritual is humaneness.",
+    "ritualSensitivity": "public_textual",
+    "attributionStatus": "anonymous_or_composite",
+    "variantReadings": []
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
 }

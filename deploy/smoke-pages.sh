@@ -86,23 +86,27 @@ expect_header "manifest" '^cache-control:.*max-age=3600' "data cache policy is a
 node - "${TMP_DIR}/manifest.body" <<'NODE'
 const { readFileSync } = require("node:fs");
 const manifest = JSON.parse(readFileSync(process.argv[2], "utf8"));
+const allowedReleaseStages = new Set(["alpha", "first-viewable-prototype", "lean-public-mvp", "public"]);
 if (
   manifest.schemaVersion !== "2.0" ||
   manifest.profile !== "dao-ru-fo" ||
-  manifest.releaseStage !== "first-viewable-prototype"
+  !allowedReleaseStages.has(manifest.releaseStage)
 ) {
   console.error("FAIL  manifest identity is unexpected", manifest);
   process.exit(1);
 }
-console.log(`PASS  manifest identity (${manifest.contentVersion})`);
+console.log(`PASS  manifest identity (${manifest.contentVersion}, ${manifest.releaseStage}, ${manifest.visibility})`);
 NODE
 pass_count=$((pass_count + 1))
 
 fetch "/data/v2/profile/en.json" "profile-en"
 expect_body "profile-en" '"locale"[[:space:]]*:[[:space:]]*"en"' "English static split is reachable"
 
-fetch "/data/v2/maps/real/suitang.zh-CN.geojson" "map"
+fetch "/data/v2/maps/real/overview.zh-CN.geojson" "map"
 expect_body "map" '"FeatureCollection"' "map GeoJSON split is reachable"
+
+fetch "/data/v2/timeline/overview.zh-CN.json" "historical-timeline"
+expect_body "historical-timeline" '"startYear"[[:space:]]*:[[:space:]]*-?[0-9]+' "historical timeline split is reachable"
 
 asset_path="$(
   grep -Eo '/assets/[^"[:space:]]+\.(js|css)' "${TMP_DIR}/home.body" |

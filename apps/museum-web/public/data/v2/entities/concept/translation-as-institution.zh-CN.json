@@ -1,0 +1,45 @@
+{
+  "id": "f5a85754-8fa3-5f1a-a4e0-d576b6d3ed4f",
+  "locale": "zh-CN",
+  "kind": "concept",
+  "slug": "translation-as-institution",
+  "title": "翻译作为制度",
+  "subtitle": "从个人语言能力到城市中的知识生产",
+  "tradition": "buddhism",
+  "evidence": "scholarly_interpretation",
+  "timeLabel": "比较概念；隋唐重点",
+  "shortSummary": "翻译不只是把词语换成另一种语言，也需要场所、人员、版本、审校和权力关系共同支撑。",
+  "curatorialDescription": [
+    "玄奘与义净的条目可以让观众看到，译经旅行如何进入长安的寺院、宫廷和知识制度。",
+    "这个概念是策展分析工具，不把所有翻译实践都压成同一种制度模型。"
+  ],
+  "researchNote": "需要将译场、参与者、底本、译经目录和具体段落逐项连到可核查来源。",
+  "keyFacts": [
+    {
+      "label": "概念层",
+      "value": "知识生产与制度"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:editorial-method",
+      "title": "道·儒·佛文明数字博物馆策展与方法说明",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "项目的策展框架与术语规则"
+    },
+    {
+      "id": "source:buddhist-institutional-records",
+      "title": "隋唐寺院、译场与僧团制度资料",
+      "locator": "大慈恩寺、译经场与寺院网络专题；底本待核",
+      "grade": "B",
+      "role": "寺院、译经机构和佛教城市网络的制度语境"
+    }
+  ],
+  "profile": {
+    "conceptKind": "institutional_process"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

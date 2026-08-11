@@ -1,0 +1,42 @@
+{
+  "id": "7d3417c2-0fc9-5dd1-9b0b-7f0108c11759",
+  "locale": "zh-CN",
+  "kind": "event",
+  "slug": "xuanzang-departs-changan",
+  "title": "玄奘离开长安西行",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "约 629",
+  "shortSummary": "约 629 年，玄奘的西行把长安与河西、中亚及南亚的求法网络连接起来。",
+  "curatorialDescription": [
+    "出发是路线证据的起点，不意味着后世地图上的每个节点都已被同等证实。"
+  ],
+  "researchNote": "出发月份、许可叙事与初段路线在不同资料中的差异需继续核对。",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:xuanzang-records",
+      "title": "《大唐大慈恩寺三藏法师传》",
+      "locator": "《大唐大慈恩寺三藏法师传》全书（卷一至卷十）；卷一开篇为玄奘本传，后续卷次记录求法与译经活动",
+      "grade": "A",
+      "role": "玄奘生平、求法与译经活动的原始传记依据",
+      "url": "https://ctext.org/library.pl?if=en&res=112971"
+    },
+    {
+      "id": "source:historical-geography",
+      "title": "隋唐历史地理与城市沿革资料",
+      "locator": "长安、洛阳、敦煌历史名称与地理范围",
+      "grade": "A",
+      "role": "真实地点、历史名称和坐标示意的地理依据"
+    }
+  ],
+  "profile": {
+    "eventKind": "journey",
+    "historicity": "documented",
+    "sequenceOrder": 3,
+    "eventScope": "transregional"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

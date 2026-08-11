@@ -1,0 +1,53 @@
+{
+  "id": "e64798e8-36e1-5385-8469-38922b87584c",
+  "locale": "en",
+  "kind": "institution",
+  "slug": "louguan",
+  "title": "Louguan Daoist institution",
+  "subtitle": "An entry into Guanzhong Daoist traditions and institutional networks",
+  "tradition": "daoism",
+  "evidence": "historical_documented",
+  "timeLabel": "Sui–Tang and later narratives; Guanzhong focus",
+  "shortSummary": "As an institutional record, Louguan helps separate Laozi legend, Daoist figures, monastic space and later sacred-site narratives.",
+  "curatorialDescription": [
+    "The museum separates real places, Daoist institutions and sacred geography so legendary sites are not presented as unexplained historical facts.",
+    "This record does not treat Louguan as a stand-in for all Daoism; it is a regional research node in Guanzhong."
+  ],
+  "researchNote": "Louguan's institutional history, inscriptions, figure associations and later sacred narratives still require dating and evidence-layer review.",
+  "keyFacts": [
+    {
+      "label": "Institution type",
+      "value": "Daoist institution and memory site"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:daoist-historical-record",
+      "title": "Studies on Daoist figures and institutions in the Sui–Tang period",
+      "locator": "人物、宫观与皇室关系专题",
+      "grade": "B",
+      "role": "Scholarly context for Sima Chengzhen and Sui–Tang Daoist institutions"
+    },
+    {
+      "id": "source:historical-geography",
+      "title": "Historical geography and urban gazetteers of the Sui–Tang period",
+      "locator": "长安、洛阳、敦煌历史名称与地理范围",
+      "grade": "A",
+      "role": "Geographic basis for real places, historical names and coordinate approximations"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "Curatorial and methodological notes of the Dao–Ru–Fo Digital Museum",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "Curatorial framework and terminology rules"
+    }
+  ],
+  "profile": {
+    "institutionKind": "daoist_monastery",
+    "networkScope": false
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

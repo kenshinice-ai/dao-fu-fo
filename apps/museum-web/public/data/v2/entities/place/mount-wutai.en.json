@@ -1,0 +1,60 @@
+{
+  "id": "8865370b-6cb4-5aa6-b3e8-3d72fbad9b0e",
+  "locale": "en",
+  "kind": "place",
+  "slug": "mount-wutai",
+  "title": "Mount Wutai",
+  "subtitle": "A real mountain and a site of Buddhist sacred narratives",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "Sui–Tang Buddhist geography and later sacred narratives",
+  "shortSummary": "Mount Wutai combines a real mountain landscape, monastic networks and Buddhist sacred narratives, making the museum's two-layer geography visible.",
+  "curatorialDescription": [
+    "The real map carries only the mountain's geographic referent; relic narratives, visions and Manjusri devotion belong to the sacred or traditional layer.",
+    "The record does not project later pilgrimage networks backward into a complete Sui–Tang institutional map."
+  ],
+  "researchNote": "Monasteries, inscriptions, pilgrimage routes and period-specific sources still need to be added at place level.",
+  "keyFacts": [
+    {
+      "label": "Place layers",
+      "value": "Real mountain + sacred geography"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:historical-geography",
+      "title": "Historical geography and urban gazetteers of the Sui–Tang period",
+      "locator": "长安、洛阳、敦煌历史名称与地理范围",
+      "grade": "A",
+      "role": "Geographic basis for real places, historical names and coordinate approximations"
+    },
+    {
+      "id": "source:unesco-mount-wutai",
+      "title": "UNESCO World Heritage Centre: Mount Wutai",
+      "locator": "World Heritage property no. 1279; Taihuai component centroid 39.031 / 113.563",
+      "grade": "A",
+      "role": "Authoritative entry for the real geographic extent and component centroid of Mount Wutai",
+      "url": "https://whc.unesco.org/en/list/1279/"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "Curatorial and methodological notes of the Dao–Ru–Fo Digital Museum",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "Curatorial framework and terminology rules"
+    }
+  ],
+  "profile": {
+    "placeReality": "real_historical",
+    "geometryType": "point",
+    "coordinates": [
+      113.563,
+      39.031
+    ],
+    "coordinateConfidence": "centroid",
+    "geographicSourceId": "source:unesco-mount-wutai"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

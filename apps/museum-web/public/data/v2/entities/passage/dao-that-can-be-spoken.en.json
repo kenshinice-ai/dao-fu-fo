@@ -1,0 +1,62 @@
+{
+  "id": "b5bf26aa-b611-5a8c-bdfa-3c6686360275",
+  "locale": "en",
+  "kind": "passage",
+  "slug": "dao-that-can-be-spoken",
+  "title": "A Dao that can be spoken",
+  "tradition": "daoism",
+  "evidence": "historical_inferred",
+  "timeLabel": "Received text, chapter 1",
+  "shortSummary": "The opening of the Daodejing frames a problem among language, naming and constancy.",
+  "curatorialDescription": [
+    "The passage is not reduced to an anti-language slogan; it is shown with edition, chapter and commentarial context."
+  ],
+  "researchNote": "The Alpha text follows a received edition; excavated variants and Tang commentaries remain to be added.",
+  "keyFacts": [],
+  "quote": {
+    "original": "道可道，非常道；名可名，非常名。",
+    "interpretation": "The chapter opens with a tension between what can be spoken or named and what is constant.",
+    "locator": "Daodejing 1"
+  },
+  "related": [
+    {
+      "kind": "text",
+      "slug": "daodejing",
+      "title": "Daodejing",
+      "relation": "Excerpt from"
+    }
+  ],
+  "sources": [
+    {
+      "id": "source:daodejing-edition",
+      "title": "Received editions and chapter references for the Daodejing",
+      "locator": "第二十五章（“人法地，地法天，天法道，道法自然”）",
+      "grade": "A",
+      "role": "Initial basis for the Daoist passage and chapter locator",
+      "url": "https://ctext.org/text.pl?if=en&node=11616&show=parallel"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "Curatorial and methodological notes of the Dao–Ru–Fo Digital Museum",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "Curatorial framework and terminology rules"
+    }
+  ],
+  "profile": {
+    "textSlug": "daodejing",
+    "textVersionSlug": "daodejing-received",
+    "passageKind": "classic_saying",
+    "locatorOriginal": "第一章",
+    "locatorNormalised": "Daodejing 1",
+    "originalText": "道可道，非常道；名可名，非常名。",
+    "punctuatedText": "道可道，非常道；名可名，非常名。",
+    "modernZh": "能够说出的道，不是恒常的道；能够命名的名，不是恒常的名。",
+    "translationEn": "A Dao that can be spoken is not the constant Dao; a name that can be named is not the constant name.",
+    "ritualSensitivity": "public_textual",
+    "attributionStatus": "anonymous_or_composite",
+    "variantReadings": []
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

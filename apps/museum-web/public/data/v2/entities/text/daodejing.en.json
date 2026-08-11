@@ -1,0 +1,48 @@
+{
+  "id": "4869f9d9-f4b2-5604-85f4-0d22ad79004c",
+  "locale": "en",
+  "kind": "text",
+  "slug": "daodejing",
+  "title": "Daodejing",
+  "subtitle": "One of the key texts of Daoist thought",
+  "tradition": "daoism",
+  "evidence": "historical_inferred",
+  "timeLabel": "Composition and compilation: Warring States to Han ranges",
+  "shortSummary": "The formation, compilation and attribution of the Daodejing have several historical layers, and later Daoist and philosophical traditions repeatedly reinterpreted it.",
+  "curatorialDescription": [
+    "The museum separates textual formation, traditional attribution, chapter versions and later interpretation instead of treating ‘Laozi said’ as a single historical moment."
+  ],
+  "researchNote": "Composition ranges, excavated materials and differences among received editions will be expanded through the full text-version model.",
+  "keyFacts": [
+    {
+      "label": "Text kind",
+      "value": "Philosophical and classical text"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:daodejing-edition",
+      "title": "Received editions and chapter references for the Daodejing",
+      "locator": "第二十五章（“人法地，地法天，天法道，道法自然”）",
+      "grade": "A",
+      "role": "Initial basis for the Daoist passage and chapter locator",
+      "url": "https://ctext.org/text.pl?if=en&node=11616&show=parallel"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "Curatorial and methodological notes of the Dao–Ru–Fo Digital Museum",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "Curatorial framework and terminology rules"
+    }
+  ],
+  "profile": {
+    "textKind": "classic",
+    "originalLanguageCode": "lzh",
+    "canonicalStatus": "influential",
+    "attributionStatus": "contested"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

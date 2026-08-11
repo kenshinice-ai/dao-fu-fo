@@ -1,0 +1,42 @@
+{
+  "id": "297168a1-9dc6-5132-a9ff-38aebc1f2f33",
+  "locale": "zh-CN",
+  "kind": "figure",
+  "slug": "jizang",
+  "title": "吉藏",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "549–623",
+  "shortSummary": "吉藏的讲学与注疏活动为隋唐之际佛教思想、文本解释和城市网络提供案例。",
+  "curatorialDescription": [
+    "条目强调人物、著述与机构环境的连接，并保留宗派标签形成史中的复杂性。"
+  ],
+  "researchNote": "具体行迹、著作版本和宗派归属表述需继续核对佛教传记与目录资料。",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:buddhist-biographical-records",
+      "title": "隋唐高僧传记与求法记录资料",
+      "locator": "义净、玄奘及求法僧侣条目；底本与卷页待核",
+      "grade": "B",
+      "role": "佛教人物、求法路线与译经活动的研究入口"
+    },
+    {
+      "id": "source:buddhist-institutional-records",
+      "title": "隋唐寺院、译场与僧团制度资料",
+      "locator": "大慈恩寺、译经场与寺院网络专题；底本待核",
+      "grade": "B",
+      "role": "寺院、译经机构和佛教城市网络的制度语境"
+    }
+  ],
+  "profile": {
+    "historicity": "documented",
+    "figureClass": "historical_person",
+    "gender": "male",
+    "canonicalNameOriginal": "吉藏",
+    "nameLanguageCode": "lzh"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

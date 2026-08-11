@@ -17,6 +17,24 @@
     "citationStatus": "verified"
   },
   {
+    "id": "source:comparative-method",
+    "sourceType": "scholarly_book",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "Massimiliano Lacertosa，《Interpreting Dao (道) between ‘Way-making’ and ‘Be-wëgen’》",
+      "en": "Massimiliano Lacertosa, “Interpreting Dao (道) between ‘Way-making’ and ‘Be-wëgen’”"
+    },
+    "locator": "《Ancient and Modern Practices of Citizenship in Asia and the West》chapter 5，pp. 103–120；比较作为解释框架而非概念等同",
+    "role": {
+      "zh-CN": "为跨传统文本的比较阅读提供方法依据，并支持保留差异、避免直接等同",
+      "en": "Methodological basis for comparative reading across traditions while preserving difference and avoiding direct equivalence"
+    },
+    "rightsStatus": "quotation_only",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://www.cambridge.org/core/books/ancient-and-modern-practices-of-citizenship-in-asia-and-the-west/interpreting-dao-between-waymaking-and-bewegen/CAFD486CD1B7104EDDB070DD77CBB970"
+  },
+  {
     "id": "source:xuanzang-records",
     "sourceType": "primary_text",
     "evidenceGrade": "A",
@@ -50,6 +68,42 @@
     "rightsStatus": "quotation_only"
   },
   {
+    "id": "source:cheng-xuanying-datawiki",
+    "sourceType": "reference_work",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "中国哲学书电子化计划：成玄英资料页",
+      "en": "Chinese Text Project: Cheng Xuanying biographical data"
+    },
+    "locator": "成玄英资料页：631 年应唐太宗之召前往长安、636 年参与佛道辩论；页面明确为编年参考，相关一手史料仍待逐卷核对",
+    "role": {
+      "zh-CN": "成玄英与长安城市制度语境的编年参考；只支持城市尺度的活动锚点，不替代一手传记定位",
+      "en": "Chronological reference for Cheng Xuanying's Chang'an institutional context; it supports a city-scale activity anchor without replacing primary biographical verification"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://ctext.org/datawiki.pl?if=gb&res=766397"
+  },
+  {
+    "id": "source:daodejing-xuande-ctext",
+    "sourceType": "primary_text",
+    "evidenceGrade": "A",
+    "title": {
+      "zh-CN": "《道德真经玄德纂疏》卷五：成玄英疏",
+      "en": "Collected Subcommentary on the Daodejing, juan 5: Cheng Xuanying's subcommentary"
+    },
+    "locator": "《道德真经玄德纂疏》卷五：题署并引“西华法师成玄英疏”；用于成疏传承见证，不等同于完整原疏存世",
+    "role": {
+      "zh-CN": "成玄英《道德经》注疏传承的原典见证，支持人物—文本关系的版本层限定",
+      "en": "Primary-text witness for the transmission of Cheng Xuanying's Daodejing subcommentary, supporting a version-bounded figure–text relation"
+    },
+    "rightsStatus": "public_domain",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://ctext.org/wiki.pl?chapter=724377&if=en&remap=gb"
+  },
+  {
     "id": "source:sima-old-tang-biography",
     "sourceType": "primary_text",
     "evidenceGrade": "A",
@@ -66,6 +120,24 @@
     "locatorLevel": "edition",
     "citationStatus": "verified",
     "url": "https://ctext.org/wiki.pl?if=gb&remap=gb&res=456206"
+  },
+  {
+    "id": "source:sima-chengzhen-full-tang-text",
+    "sourceType": "primary_text",
+    "evidenceGrade": "A",
+    "title": {
+      "zh-CN": "《全唐文·司马承祯》",
+      "en": "Complete Tang Prose: Sima Chengzhen"
+    },
+    "locator": "卷九百二十四：司马承祯条；道士身份、召至都与王屋山建观记载",
+    "role": {
+      "zh-CN": "补充司马承祯道士身份、入朝召见和制度关系的唐代文献定位",
+      "en": "Tang-text locator for Sima Chengzhen's Daoist identity, court summons and institutional context"
+    },
+    "rightsStatus": "public_domain",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://ctext.org/wiki.pl?chapter=226793&if=gb"
   },
   {
     "id": "source:confucian-commentarial-record",
@@ -101,6 +173,24 @@
     "url": "https://ctext.org/wiki.pl?chapter=451765&if=gb&remap=gb"
   },
   {
+    "id": "source:kong-wujing-zhengyi-record",
+    "sourceType": "primary_text",
+    "evidenceGrade": "A",
+    "title": {
+      "zh-CN": "《新唐书·艺文志》孔颖达奉诏撰经疏记录",
+      "en": "New Book of Tang bibliographic records for Kong Yingda's commissioned commentaries"
+    },
+    "locator": "志第四十七·艺文一：孔颖达任国子祭酒并奉诏参与《尚书正义》等经疏编纂",
+    "role": {
+      "zh-CN": "补充孔颖达作品归属、奉诏编纂与官学制度语境的原始文献定位",
+      "en": "Primary bibliographic locator for Kong Yingda's attributed works, imperial commission and state-learning context"
+    },
+    "rightsStatus": "public_domain",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://ctext.org/wiki.pl?chapter=189091&if=en"
+  },
+  {
     "id": "source:historical-geography",
     "sourceType": "map_or_gazetteer",
     "evidenceGrade": "A",
@@ -116,6 +206,24 @@
     "rightsStatus": "quotation_only"
   },
   {
+    "id": "source:sui-tang-changan-urban-study",
+    "sourceType": "peer_reviewed_article",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "《基于空间信息技术与文化分析的新考古发现：古代中国都城空间关系研究》",
+      "en": "New Archaeological Discoveries Based on Spatial Information Technology and Cultural Analysis"
+    },
+    "locator": "Remote Sensing 14 (2022), 3298：隋唐都城研究、长安城市图与坐标化空间范围",
+    "role": {
+      "zh-CN": "长安隋唐时期、现实西安对应关系与坐标范围的同行评议地理依据",
+      "en": "Peer-reviewed geographic basis for Sui–Tang Chang'an, its Xi'an referent and coordinate bounds"
+    },
+    "rightsStatus": "open_licensed",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://doi.org/10.3390/rs14143298"
+  },
+  {
     "id": "source:heart-sutra-edition",
     "sourceType": "text_edition",
     "evidenceGrade": "A",
@@ -129,7 +237,7 @@
       "en": "Initial basis for the passage text and version locator"
     },
     "rightsStatus": "public_domain",
-    "locatorLevel": "edition",
+    "locatorLevel": "precise",
     "citationStatus": "verified",
     "url": "https://ctext.org/wiki.pl?chapter=412996&if=en"
   },
@@ -147,7 +255,7 @@
       "en": "Initial basis for the Daoist passage and chapter locator"
     },
     "rightsStatus": "public_domain",
-    "locatorLevel": "edition",
+    "locatorLevel": "precise",
     "citationStatus": "verified",
     "url": "https://ctext.org/text.pl?if=en&node=11616&show=parallel"
   },
@@ -165,7 +273,7 @@
       "en": "Initial basis for the Confucian passage and chapter locator"
     },
     "rightsStatus": "public_domain",
-    "locatorLevel": "edition",
+    "locatorLevel": "precise",
     "citationStatus": "verified",
     "url": "https://ctext.org/wiki.pl?chapter=198285&if=en&remap=gb"
   },
@@ -183,6 +291,24 @@
       "en": "Research entry point for Buddhist figures, pilgrimage routes and translation activity"
     },
     "rightsStatus": "external_reference_only"
+  },
+  {
+    "id": "source:jizang-xugaosengzhuan",
+    "sourceType": "primary_text",
+    "evidenceGrade": "A",
+    "title": {
+      "zh-CN": "《续高僧传》卷十一《释吉藏传》",
+      "en": "Continued Biographies of Eminent Monks, juan 11: Jizang"
+    },
+    "locator": "《续高僧传》卷十一《释吉藏传》：隋定百越后东游秦望、止泊嘉祥；隋末入京师寺院；武德六年五月卒于长安时期的传记叙事",
+    "role": {
+      "zh-CN": "吉藏行迹、嘉祥寺与隋末唐初京师寺院网络的一手传记定位；嘉祥寺具体现代地点和建筑坐标不由此记录推定",
+      "en": "Primary biographical locator for Jizang's itinerary, Jiaxiang Monastery and late-Sui/early-Tang capital monastic networks; it does not infer a modern site or building coordinate for Jiaxiang"
+    },
+    "rightsStatus": "public_domain",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://ctext.org/wiki.pl?chapter=525699&if=en"
   },
   {
     "id": "source:tang-imperial-records",
@@ -228,6 +354,24 @@
       "en": "Research reference for state education, classical commentary and knowledge institutions"
     },
     "rightsStatus": "external_reference_only"
+  },
+  {
+    "id": "source:changan-guozijian-gazetteer",
+    "sourceType": "institutional_record",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "《碑林区志》：唐长安国子学与孔颖达讲学纪年",
+      "en": "Beilin District Gazetteer: Tang Chang'an Guozijian and Kong Yingda's lecture"
+    },
+    "locator": "《碑林区志》大事记：贞观十四年（640）太宗幸国子学，命祭酒孔颖达讲《孝经》并撰定《五经正义》",
+    "role": {
+      "zh-CN": "长安务本坊国子学、孔颖达讲学与《五经正义》教材编定的精确地方志定位",
+      "en": "Precise gazetteer locator for the Wuben Ward Guozijian, Kong Yingda's lecture and the establishment of the Corrected Meanings as a textbook"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://dfz.shaanxi.gov.cn/zslm/fzzlk/xbsxsxz/xbsxz/xas_16198/201405/P020240923623390886739.pdf"
   },
   {
     "id": "source:object-records",
@@ -335,5 +479,473 @@
     "locatorLevel": "item",
     "citationStatus": "verified",
     "url": "https://whc.unesco.org/en/list/1279/"
+  },
+  {
+    "id": "source:shiji-laozi-biography",
+    "sourceType": "primary_text",
+    "evidenceGrade": "A",
+    "title": {
+      "zh-CN": "《史记·老子韩非列传》",
+      "en": "Records of the Historian: Biographies of Laozi and Han Fei"
+    },
+    "locator": "《史记·老子韩非列传》：老子姓李名耳；孔子适周问礼于老子；老子西出函谷关叙事",
+    "role": {
+      "zh-CN": "李耳身份、孔子问礼叙事与老子传统形成层的早期史传依据",
+      "en": "Early historiographical basis for Li Er, the Confucius–Laozi encounter and layers of the Laozi tradition"
+    },
+    "rightsStatus": "public_domain",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://ctext.org/shiji/lao-zi-han-fei-lie-zhuan/zhs"
+  },
+  {
+    "id": "source:shiji-confucius-biography",
+    "sourceType": "primary_text",
+    "evidenceGrade": "A",
+    "title": {
+      "zh-CN": "《史记·孔子世家》",
+      "en": "Records of the Historian: The House of Confucius"
+    },
+    "locator": "《史记·孔子世家》：孔子问礼于周、修诗书礼乐、以诗书礼乐教弟子等段落",
+    "role": {
+      "zh-CN": "孔子生平、周游、教学与后世史传形象的早期史传依据",
+      "en": "Early historiographical basis for Confucius's life, travels, teaching and later biographical image"
+    },
+    "rightsStatus": "public_domain",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://ctext.org/shiji/kong-zi-shi-jia/zhs"
+  },
+  {
+    "id": "source:buddha-early-texts",
+    "sourceType": "primary_text",
+    "evidenceGrade": "A",
+    "title": {
+      "zh-CN": "巴利经藏早期佛教文本：MN 26 与 SN 56.11",
+      "en": "Early Buddhist texts in the Pāli canon: MN 26 and SN 56.11"
+    },
+    "locator": "MN 26 Ariyapariyesanā：求法与到达鹿野苑；SN 56.11 Dhammacakkappavattana：鹿野苑初转法轮文本",
+    "role": {
+      "zh-CN": "释迦牟尼生平叙事、早期教法传述与鹿野苑空间关联的原典入口；不把经文传述等同于逐字现场记录",
+      "en": "Primary-text entry for Buddha biography, early teaching traditions and the Sarnath setting; the transmitted discourse is not treated as a verbatim transcript"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://suttacentral.net/sn56.11/en/sujato"
+  },
+  {
+    "id": "source:sarnath-site-record",
+    "sourceType": "institutional_record",
+    "evidenceGrade": "A",
+    "title": {
+      "zh-CN": "UNESCO 与印度考古调查局：鹿野苑古佛教遗址",
+      "en": "UNESCO and the Archaeological Survey of India: Ancient Buddhist Site of Sarnath"
+    },
+    "locator": "World Heritage List no. 927；鹿野苑遗址、初转法轮传统与遗址保护范围；约 25.381°N, 83.022°E",
+    "role": {
+      "zh-CN": "鹿野苑现实地点、遗址层与佛教朝圣记忆的权威地理和遗产入口",
+      "en": "Authoritative geographic and heritage entry for Sarnath's real site, archaeological layers and Buddhist pilgrimage memory"
+    },
+    "rightsStatus": "open_licensed",
+    "locatorLevel": "item",
+    "citationStatus": "verified",
+    "url": "https://whc.unesco.org/en/list/927/"
+  },
+  {
+    "id": "source:sn56-11-thanissaro",
+    "sourceType": "primary_text",
+    "evidenceGrade": "A",
+    "title": {
+      "zh-CN": "Access to Insight：SN 56.11 Thanissaro 英译",
+      "en": "Access to Insight: SN 56.11 translated by Thanissaro Bhikkhu"
+    },
+    "locator": "SN 56.11，四圣谛段落；“This is the noble truth of stress.”",
+    "role": {
+      "zh-CN": "同一经文的英译版本入口，用于把译者措辞与巴利语段落分层比较；英文摘录受原站许可约束",
+      "en": "English translation witness for comparing translator wording with the Pāli passage; excerpts remain subject to the source site's licence"
+    },
+    "rightsStatus": "quotation_only",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://www.accesstoinsight.org/tipitaka/sn/sn56/sn56.011.than.html"
+  },
+  {
+    "id": "source:tang-taizong-ctext",
+    "sourceType": "reference_work",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "中国哲学书电子化计划：唐太宗生平与唐初编年",
+      "en": "Chinese Text Project: Chronology of Tang Taizong and the early Tang"
+    },
+    "locator": "唐太宗资料页：617 年晋阳起兵、626 年即位与 626–649 年在位编年；用于人物—王朝建立和长安制度语境的限定性定位",
+    "role": {
+      "zh-CN": "李世民参与唐朝建立及其长安制度语境的编年参考；不将王朝建立归因于单一人物",
+      "en": "Chronological reference for Li Shimin's participation in Tang state formation and the Chang'an institutional context; the dynasty's foundation is not attributed to one person alone"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://ctext.org/datawiki.pl?if=gb&res=110816"
+  },
+  {
+    "id": "source:wu-zhou-chronology",
+    "sourceType": "reference_work",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "中国哲学书电子化计划：武周编年与两京语境",
+      "en": "Chinese Text Project: Wu Zhou chronology and the two-capital context"
+    },
+    "locator": "武周资料页：690 年建国、定鼎洛邑与 705 年复唐；用于武曌—武周建立和洛阳活动语境的限定性定位",
+    "role": {
+      "zh-CN": "武周政治转型、洛阳两京制度与后续复唐节点的编年参考",
+      "en": "Chronological reference for the Wu Zhou transition, Luoyang's two-capital context and the later restoration of Tang"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://ctext.org/datawiki.pl?if=gb&res=819305"
+  },
+  {
+    "id": "source:yijing-biography-ctext",
+    "sourceType": "primary_text",
+    "evidenceGrade": "A",
+    "title": {
+      "zh-CN": "《全唐文》卷九百十四《义净》",
+      "en": "Complete Tang Prose, juan 914: Yijing"
+    },
+    "locator": "《全唐文》卷九百十四《义净》：咸亨二年至番禺，附海舶经二十五年游三十余国；证圣元年携梵本经还河洛",
+    "role": {
+      "zh-CN": "义净海路出发、跨区域游历与携经归来河洛的唐代文献定位；出发港和具体抵达城市仍不由此关系推定",
+      "en": "Tang-text locator for Yijing's maritime departure, transregional travel and return with scriptures to the He-Luo region; it does not infer a specific port or arrival city"
+    },
+    "rightsStatus": "public_domain",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://ctext.org/wiki.pl?chapter=167043&if=gb&remap=gb"
+  },
+  {
+    "id": "source:yijing-datawiki",
+    "sourceType": "reference_work",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "中国哲学书电子化计划：义净生平资料页",
+      "en": "Chinese Text Project: Yijing biographical data"
+    },
+    "locator": "义净资料页：上元二年（675）到那烂陀寺并停留十年；用于那烂陀学习节点，不替代完整路线考证",
+    "role": {
+      "zh-CN": "义净到达那烂陀及长期学习节点的编年参考",
+      "en": "Chronological reference for Yijing's arrival at Nalanda and extended study there"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://ctext.org/datawiki.pl?if=gb&remap=gb&res=2068999"
+  },
+  {
+    "id": "source:zhenguan-governance-records",
+    "sourceType": "primary_text",
+    "evidenceGrade": "A",
+    "title": {
+      "zh-CN": "《贞观政要》卷七：五经校定与《五经正义》编纂",
+      "en": "Essentials of Government in the Zhenguan Period, juan 7: the Five Classics project"
+    },
+    "locator": "《贞观政要》卷七：太宗命颜师古考定五经，后命颜师古、孔颖达等撰《五经正义》，成后颁于国学",
+    "role": {
+      "zh-CN": "颜师古参与唐初经典校定与《五经正义》编纂的原始文献定位；不将其表述为唯一作者",
+      "en": "Primary-text locator for Yan Shigu's participation in the early Tang collation of the Classics and the Corrected Meanings project; he is not treated as its sole author"
+    },
+    "rightsStatus": "public_domain",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://ctext.org/wiki.pl?chapter=769131&if=gb&remap=gb"
+  },
+  {
+    "id": "source:zhuangzi-ctext",
+    "sourceType": "primary_text",
+    "evidenceGrade": "A",
+    "title": {
+      "zh-CN": "《庄子》中国哲学书电子化计划文本页",
+      "en": "Chinese Text Project edition of the Zhuangzi"
+    },
+    "locator": "《庄子》内篇、外篇与杂篇目录及底本说明；用于文本层和人物年代的保守导航，不把全书归为单一作者的直接记录",
+    "role": {
+      "zh-CN": "庄周人物传统、《庄子》篇章层和文本复合性的原典入口",
+      "en": "Primary-text entry for traditions around Zhuang Zhou, the chapter layers of the Zhuangzi and its composite textual history"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://ctext.org/zhuangzi"
+  },
+  {
+    "id": "source:mengzi-ctext",
+    "sourceType": "primary_text",
+    "evidenceGrade": "A",
+    "title": {
+      "zh-CN": "《孟子》中国哲学书电子化计划文本页",
+      "en": "Chinese Text Project edition of the Mengzi"
+    },
+    "locator": "《孟子》七篇文本及《史记·孟子荀卿列传》相关目录入口；人物年代保留为导航区间，游说诸侯不扩写为逐年行程",
+    "role": {
+      "zh-CN": "孟子言说、游历诸侯叙事和文本传述层的原典入口",
+      "en": "Primary-text entry for Mencius's sayings, itinerant traditions and the transmitted text layer"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://ctext.org/mengzi"
+  },
+  {
+    "id": "source:zhang-daoling-ctext",
+    "sourceType": "reference_work",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "中国哲学书电子化计划：张道陵资料页",
+      "en": "Chinese Text Project: Zhang Daoling data page"
+    },
+    "locator": "张道陵资料页：东汉人物、五斗米道/天师道传统及后世神圣化叙述；生平细节与天师授受保持传统/争议层",
+    "role": {
+      "zh-CN": "张道陵历史人物与天师道后世传记层的限定性参考",
+      "en": "Constrained reference for Zhang Daoling's historical-person layer and later Celestial Masters hagiography"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://ctext.org/dictionary.pl?char=%E5%BC%B5%E9%81%93%E9%99%B5&if=gb"
+  },
+  {
+    "id": "source:baopuzi-ctext",
+    "sourceType": "primary_text",
+    "evidenceGrade": "A",
+    "title": {
+      "zh-CN": "《抱朴子》中国哲学书电子化计划资料页",
+      "en": "Chinese Text Project data page for the Baopuzi"
+    },
+    "locator": "《抱朴子》内篇、外篇及葛洪自叙说明；用于葛洪的文本活动与道教/儒家论述，不把炼丹叙事直接等同于可验证实验记录",
+    "role": {
+      "zh-CN": "葛洪文本活动、思想论述和后世道教接受的原典入口",
+      "en": "Primary-text entry for Ge Hong's textual activity, argument and later Daoist reception"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://ctext.org/datawiki.pl?if=gb&res=425102"
+  },
+  {
+    "id": "source:ashoka-edicts-unesco",
+    "sourceType": "archaeological_report",
+    "evidenceGrade": "A",
+    "title": {
+      "zh-CN": "UNESCO：阿育王敕诏遗址系列提名资料",
+      "en": "UNESCO: Serial nomination for Ashokan Edict sites"
+    },
+    "locator": "阿育王敕诏遗址系列提名：约公元前 268–232 年统治、岩刻与石柱敕诏、法（dhamma）传播及遗址分布；不将后世传记神话倒写为敕诏事实",
+    "role": {
+      "zh-CN": "阿育王统治年代、敕诏物证和佛教传播语境的考古/遗产资料",
+      "en": "Archaeological and heritage evidence for Ashoka's reign, edicts and Buddhist transmission context"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://whc.unesco.org/en/tentativelists/6803"
+  },
+  {
+    "id": "source:nagarjuna-sep",
+    "sourceType": "reference_work",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "斯坦福哲学百科：龙树（Nāgārjuna）",
+      "en": "Stanford Encyclopedia of Philosophy: Nāgārjuna"
+    },
+    "locator": "人物生平与作品章节：约公元 150–250 年的学术导航区间、《中论》及后世中观传统影响；年代和作品归属保持学术争议说明",
+    "role": {
+      "zh-CN": "龙树人物年代、核心作品与思想影响的学术参考",
+      "en": "Scholarly reference for Nāgārjuna's date range, core works and philosophical reception"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://plato.stanford.edu/entries/nagarjuna/"
+  },
+  {
+    "id": "source:kumarajiva-biography",
+    "sourceType": "institutional_record",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "陕西省政府：鸠摩罗什文化资料",
+      "en": "People's Government of Shaanxi: Kumarajiva cultural record"
+    },
+    "locator": "资料页：344–413 年、龟兹出生、约 401 年入长安及译经活动；译经数量与团队规模保留为待逐项核对的研究问题",
+    "role": {
+      "zh-CN": "鸠摩罗什进入长安译经语境和龟兹—长安空间联系的机构参考",
+      "en": "Institutional reference for Kumarajiva's Kucha–Chang'an context and translation activity"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://en.shaanxi.gov.cn/tourism/culture/cele/201712/t20171221_1594886.html"
+  },
+  {
+    "id": "source:faxian-foguoji",
+    "sourceType": "primary_text",
+    "evidenceGrade": "A",
+    "title": {
+      "zh-CN": "《法显传／佛国记》中国哲学书电子化计划资料页",
+      "en": "Chinese Text Project data page for Faxian's Foguoji"
+    },
+    "locator": "法显资料页与《佛国记》：399 年左右从长安出发、印度与斯里兰卡停留、归国及文本记录；路线节点只作区域锚点",
+    "role": {
+      "zh-CN": "法显求法路线与《佛国记》文本活动的原典入口",
+      "en": "Primary-text entry for Faxian's pilgrimage route and the Foguoji record"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://ctext.org/datawiki.pl?if=en&res=970684"
+  },
+  {
+    "id": "source:mythic-figures-ctext",
+    "sourceType": "primary_text",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "上古神话与道教宇宙叙事的中国哲学书电子化计划资料",
+      "en": "Chinese Text Project materials for mythic and Daoist cosmological narratives"
+    },
+    "locator": "《天中记》卷十一、《太上老君开天经》等文本中的盘古、伏羲、女娲、黄帝和宇宙谱系叙事；只作为传统/神话层证据",
+    "role": {
+      "zh-CN": "神话人物、宇宙开辟叙事与后世道教编排的文本见证",
+      "en": "Textual witnesses for mythic figures, cosmogenesis narratives and later Daoist ordering"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://ctext.org/wiki.pl?chapter=903927&if=gb&remap=gb"
+  },
+  {
+    "id": "source:xi-wangmu-british-museum",
+    "sourceType": "museum_catalogue",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "大英博物馆 Collections Online：西王母",
+      "en": "British Museum Collections Online: Xi Wang Mu"
+    },
+    "locator": "人物术语页：西王母作为中国道教神话中的西王母；相关艺术对象仅用于后世图像/记忆层",
+    "role": {
+      "zh-CN": "西王母神话身份与后世艺术记忆的博物馆目录参考",
+      "en": "Museum-catalogue reference for Xi Wang Mu's mythic identity and later artistic memory"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://www.britishmuseum.org/collection/term/BIOG15655"
+  },
+  {
+    "id": "source:fuxi-british-museum",
+    "sourceType": "museum_catalogue",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "大英博物馆 Collections Online：伏羲",
+      "en": "British Museum Collections Online: Fu Xi"
+    },
+    "locator": "人物术语页：伏羲作为中国神话人物；艺术对象与图像史不反推为历史生平证据",
+    "role": {
+      "zh-CN": "伏羲神话身份与图像记忆的博物馆目录参考",
+      "en": "Museum-catalogue reference for Fu Xi's mythic identity and visual memory"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://www.britishmuseum.org/collection/term/BIOG136211"
+  },
+  {
+    "id": "source:nuwa-british-museum",
+    "sourceType": "museum_catalogue",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "大英博物馆 Collections Online：女娲",
+      "en": "British Museum Collections Online: Nu Wa"
+    },
+    "locator": "人物术语页：女娲作为中国神话人物/神灵；相关艺术对象进入后世记忆层，不进入历史时间轴",
+    "role": {
+      "zh-CN": "女娲神话身份与后世图像记忆的博物馆目录参考",
+      "en": "Museum-catalogue reference for Nu Wa's mythic identity and later visual memory"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://www.britishmuseum.org/collection/term/BIOG136212"
+  },
+  {
+    "id": "source:huangdi-ctext",
+    "sourceType": "reference_work",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "中国哲学书电子化计划：黄帝资料页",
+      "en": "Chinese Text Project: Huangdi data page"
+    },
+    "locator": "黄帝资料页及《史记》五帝叙事索引：传说时代祖先、后世祭祀和政治象征层；不作为可考生年来源",
+    "role": {
+      "zh-CN": "黄帝传说人物、五帝谱系与后世象征性记忆的参考",
+      "en": "Reference for Huangdi's legendary-person layer, Five Emperors genealogy and later symbolic memory"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://ctext.org/dictionary.pl?did=739&if=gb&remap=gb"
+  },
+  {
+    "id": "source:taishang-laojun-ctext",
+    "sourceType": "primary_text",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "中国哲学书电子化计划：太上老君资料页",
+      "en": "Chinese Text Project: Taishang Laojun materials"
+    },
+    "locator": "太上老君资料页及道教经典引文：老子神格化与三清谱系的后世层；与老子人物节点严格分开",
+    "role": {
+      "zh-CN": "太上老君神圣身份、道教经典谱系和老子神格化关系的文本参考",
+      "en": "Textual reference for Taishang Laojun's sacred identity, Daoist cosmology and the relation to Laozi's later sacralisation"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://ctext.org/dictionary.pl?char=%E5%A4%AA%E4%B8%8A%E8%80%81%E5%90%9B&if=gb"
+  },
+  {
+    "id": "source:a1-map-anchors",
+    "sourceType": "map_or_gazetteer",
+    "evidenceGrade": "C",
+    "title": {
+      "zh-CN": "A1 地图区域锚点登记（策展草案）",
+      "en": "A1 map-region anchor register (curatorial draft)"
+    },
+    "locator": "孟城、邹城、鹤鸣山、罗浮山、那伽朱那康达与桑奇的地图/城市中心或区域锚点；坐标只表达地理参照，不证明人物到访",
+    "role": {
+      "zh-CN": "A1 批次新增地点的坐标和区域尺度登记；等待逐点地理来源复核",
+      "en": "Coordinate and regional-scale register for A1 places; each anchor still awaits point-by-point geographic review"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "topic",
+    "citationStatus": "draft",
+    "url": "https://www.openstreetmap.org/"
+  },
+  {
+    "id": "source:unesco-sanchi",
+    "sourceType": "archaeological_report",
+    "evidenceGrade": "A",
+    "title": {
+      "zh-CN": "UNESCO 世界遗产：桑奇佛教遗址",
+      "en": "UNESCO World Heritage: Buddhist Monuments at Sanchi"
+    },
+    "locator": "桑奇佛教遗址遗产地资料：阿育王柱、佛教纪念性建筑与后世遗产空间；地点层不反推阿育王所有活动范围",
+    "role": {
+      "zh-CN": "桑奇现实遗址与阿育王后世物质记忆的遗产资料",
+      "en": "Heritage documentation for Sanchi's real site and material memory associated with Ashoka"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://whc.unesco.org/en/list/524/"
   }
 ]

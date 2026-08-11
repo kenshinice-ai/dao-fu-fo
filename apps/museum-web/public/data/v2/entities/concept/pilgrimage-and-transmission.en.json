@@ -1,0 +1,38 @@
+{
+  "id": "96bac993-09c8-5a34-b48d-0ae74ab24e61",
+  "locale": "en",
+  "kind": "concept",
+  "slug": "pilgrimage-and-transmission",
+  "title": "Pilgrimage and transmission",
+  "tradition": "buddhism",
+  "evidence": "scholarly_interpretation",
+  "timeLabel": "Sui–Tang transregional focus",
+  "shortSummary": "Pilgrimage became durable knowledge transmission through translation, cataloguing, teaching and institutional collaboration.",
+  "curatorialDescription": [
+    "The concept separates legendary travel into route evidence, text versions, language labour and urban institutions."
+  ],
+  "researchNote": "Itineraries, stops and translation projects must be verified per figure rather than collapsed into one standard Silk Road.",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:buddhist-biographical-records",
+      "title": "Biographical and pilgrimage records of Sui–Tang Buddhist monks",
+      "locator": "义净、玄奘及求法僧侣条目；底本与卷页待核",
+      "grade": "B",
+      "role": "Research entry point for Buddhist figures, pilgrimage routes and translation activity"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "Curatorial and methodological notes of the Dao–Ru–Fo Digital Museum",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "Curatorial framework and terminology rules"
+    }
+  ],
+  "profile": {
+    "conceptKind": "institutional_process"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

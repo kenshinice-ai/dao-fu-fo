@@ -1,8 +1,8 @@
 {
   "kind": "place",
   "slug": "nalanda",
-  "publicationState": "preview",
-  "reviewStatus": "bilingual_reviewed",
+  "publicationState": "public",
+  "reviewStatus": "publishable",
   "primaryEvidenceLayer": "historical_documented",
   "importance": 4,
   "isFeatured": false,
@@ -17,7 +17,18 @@
       ],
       "researchNote": "需要补充旅行记录、考古资料、机构史和不同语言传统之间的互证。",
       "timeLabel": "隋唐求法与跨区域知识网络",
-      "keyFacts": [{ "label": { "zh-CN": "地点类型", "en": "Place type" }, "value": { "zh-CN": "学习与宗教机构遗址语境", "en": "Learning and religious institutional context" } }]
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "地点类型",
+            "en": "Place type"
+          },
+          "value": {
+            "zh-CN": "学习与宗教机构遗址语境",
+            "en": "Learning and religious institutional context"
+          }
+        }
+      ]
     },
     "en": {
       "title": "Nalanda",
@@ -29,11 +40,58 @@
       ],
       "researchNote": "Travel records, archaeology, institutional history and cross-language comparison still need to be assembled.",
       "timeLabel": "Sui–Tang pilgrimage and transregional knowledge networks",
-      "keyFacts": [{ "label": { "zh-CN": "地点类型", "en": "Place type" }, "value": { "zh-CN": "学习与宗教机构遗址语境", "en": "Learning and religious institutional context" } }]
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "地点类型",
+            "en": "Place type"
+          },
+          "value": {
+            "zh-CN": "学习与宗教机构遗址语境",
+            "en": "Learning and religious institutional context"
+          }
+        }
+      ]
     }
   },
-  "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:buddhist-biographical-records" }],
-  "temporalAssertions": [{ "predicate": "pilgrimage_and_learning_scope", "timeType": "range", "startYear": 600, "endYear": 750, "displayDate": { "zh-CN": "隋唐求法与跨区域知识网络", "en": "Sui–Tang pilgrimage and transregional knowledge networks" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:buddhist-biographical-records" }],
-  "sourceIds": ["source:buddhist-biographical-records", "source:unesco-nalanda", "source:historical-geography"],
-  "profile": { "placeReality": "real_historical", "geometryType": "point", "coordinates": [85.443889, 25.136667], "coordinateConfidence": "exact", "geographicSourceId": "source:unesco-nalanda" }
+  "traditions": [
+    {
+      "tradition": "buddhism",
+      "role": "primary",
+      "isPrimary": true,
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:buddhist-biographical-records"
+    }
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "pilgrimage_and_learning_scope",
+      "timeType": "range",
+      "startYear": 600,
+      "endYear": 750,
+      "displayDate": {
+        "zh-CN": "隋唐求法与跨区域知识网络",
+        "en": "Sui–Tang pilgrimage and transregional knowledge networks"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:buddhist-biographical-records"
+    }
+  ],
+  "sourceIds": [
+    "source:buddhist-biographical-records",
+    "source:unesco-nalanda",
+    "source:historical-geography"
+  ],
+  "profile": {
+    "placeReality": "real_historical",
+    "geometryType": "point",
+    "coordinates": [
+      85.443889,
+      25.136667
+    ],
+    "coordinateConfidence": "exact",
+    "geographicSourceId": "source:unesco-nalanda"
+  }
 }

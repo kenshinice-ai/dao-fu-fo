@@ -1,0 +1,40 @@
+{
+  "id": "e57dbe03-6c89-5fd1-8e37-60b572b2cb62",
+  "locale": "en",
+  "kind": "museum_object",
+  "slug": "daoist-inscription-rubbing-record",
+  "title": "Daoist institutional inscription rubbing (object placeholder)",
+  "tradition": "daoism",
+  "evidence": "historical_inferred",
+  "timeLabel": "Object pending; Sui–Tang institutional context",
+  "shortSummary": "Inscriptions and rubbings can anchor institutions, figures, dates and patronage in verifiable textual objects.",
+  "curatorialDescription": [
+    "The record defines an object need; it does not claim that a rubbing is held or licensed."
+  ],
+  "researchNote": "Original stele, rubbing collection, transcription, date, place, accession and licence are required.",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:object-records",
+      "title": "Pending catalogue of museum objects and image records",
+      "locator": "对象类型、馆藏机构、图像权利和编号待补",
+      "grade": "C",
+      "role": "Placeholder source for Alpha object cards, not a publishable collection claim"
+    },
+    {
+      "id": "source:daoist-historical-record",
+      "title": "Studies on Daoist figures and institutions in the Sui–Tang period",
+      "locator": "人物、宫观与皇室关系专题",
+      "grade": "B",
+      "role": "Scholarly context for Sima Chengzhen and Sui–Tang Daoist institutions"
+    }
+  ],
+  "profile": {
+    "objectType": "rubbing",
+    "rightsStatus": "unknown",
+    "collectionStatus": "placeholder"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

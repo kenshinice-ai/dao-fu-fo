@@ -1,1 +1,3912 @@
-[]
+[
+  {
+    "id": "review:rc-entity-figure-xuanzang-schema",
+    "subjectKind": "entity",
+    "subjectKey": "figure:xuanzang",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-09T00:00:00.000Z",
+    "note": "Zod domain schema, identity and structural dependency checks passed; this does not replace content review."
+  },
+  {
+    "id": "review:rc-entity-figure-xuanzang-fact",
+    "subjectKind": "entity",
+    "subjectKey": "figure:xuanzang",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-09T13:08:43.030Z",
+    "note": "核对当前页面字段与 source:xuanzang-records（item、citationStatus=verified）：仅发布有传记记录的玄奘、求法/译经活动和约 602–664 年代边界；不把后世文学形象、路线细节或未列出的译经项目当作本条已证事实。"
+  },
+  {
+    "id": "review:rc-entity-figure-xuanzang-bilingual",
+    "subjectKind": "entity",
+    "subjectKey": "figure:xuanzang",
+    "checkKind": "bilingual",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "逐项对照 figure:xuanzang 的 zh-CN/en title、subtitle、summary、description、time、facts 与 quote/locator 字段；两种语言保留相同的证据层、历史不确定性和版本边界。当前英文展示字段未被标作外部译者译文。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-figure-xuanzang-rights",
+    "subjectKind": "entity",
+    "subjectKey": "figure:xuanzang",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "本次通过仅覆盖当前页面的馆方摘要、结构化字段、来源 metadata、locator 和外部链接；不复制外部页面或 PDF 正文。所链接来源的 rightsStatus 为 public_domain、open_licensed、quotation_only 或 external_reference_only，未发现 unknown/restricted；该结论不扩展为外部网站整页转载许可。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-figure-xuanzang-editorial",
+    "subjectKind": "entity",
+    "subjectKey": "figure:xuanzang",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "确认当前条目符合 Lean Public RC 的冻结范围：事实、传统归属、时间/空间边界和研究说明保持分层；未把神话/后世记忆、比较阅读或策展解释改写成无限定历史事实。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-figure-xuanzang-tradition",
+    "subjectKind": "entity",
+    "subjectKey": "figure:xuanzang",
+    "checkKind": "tradition",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "确认 buddhism 为当前展示的主要传统，evidenceLayer/来源与页面边界一致；不把后世文学或宗教记忆替代为人物/文本的单一历史事实。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-figure-sima-chengzhen-schema",
+    "subjectKind": "entity",
+    "subjectKey": "figure:sima-chengzhen",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-09T00:00:00.000Z",
+    "note": "Zod domain schema, identity and structural dependency checks passed; this does not replace content review."
+  },
+  {
+    "id": "review:rc-entity-figure-sima-chengzhen-fact",
+    "subjectKind": "entity",
+    "subjectKey": "figure:sima-chengzhen",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-09T13:08:43.030Z",
+    "note": "核对 source:sima-old-tang-biography 与 source:sima-chengzhen-full-tang-text（edition/precise、verified）：支持 647–735、道士身份和有限的入朝/制度关联；法脉、宫观和后世影响仍按页面研究说明保持边界。"
+  },
+  {
+    "id": "review:rc-entity-figure-sima-chengzhen-bilingual",
+    "subjectKind": "entity",
+    "subjectKey": "figure:sima-chengzhen",
+    "checkKind": "bilingual",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "逐项对照 figure:sima-chengzhen 的 zh-CN/en title、subtitle、summary、description、time、facts 与 quote/locator 字段；两种语言保留相同的证据层、历史不确定性和版本边界。当前英文展示字段未被标作外部译者译文。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-figure-sima-chengzhen-rights",
+    "subjectKind": "entity",
+    "subjectKey": "figure:sima-chengzhen",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "本次通过仅覆盖当前页面的馆方摘要、结构化字段、来源 metadata、locator 和外部链接；不复制外部页面或 PDF 正文。所链接来源的 rightsStatus 为 public_domain、open_licensed、quotation_only 或 external_reference_only，未发现 unknown/restricted；该结论不扩展为外部网站整页转载许可。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-figure-sima-chengzhen-editorial",
+    "subjectKind": "entity",
+    "subjectKey": "figure:sima-chengzhen",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "确认当前条目符合 Lean Public RC 的冻结范围：事实、传统归属、时间/空间边界和研究说明保持分层；未把神话/后世记忆、比较阅读或策展解释改写成无限定历史事实。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-figure-sima-chengzhen-tradition",
+    "subjectKind": "entity",
+    "subjectKey": "figure:sima-chengzhen",
+    "checkKind": "tradition",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "确认 daoism 为当前展示的主要传统；司马承祯的上清关联保留 medium confidence，不声称法脉研究已经完整；《道德经》保留 historical_inferred 与 contested attribution。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-figure-kong-yingda-schema",
+    "subjectKind": "entity",
+    "subjectKey": "figure:kong-yingda",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-09T00:00:00.000Z",
+    "note": "Zod domain schema, identity and structural dependency checks passed; this does not replace content review."
+  },
+  {
+    "id": "review:rc-entity-figure-kong-yingda-fact",
+    "subjectKind": "entity",
+    "subjectKey": "figure:kong-yingda",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-09T13:08:43.030Z",
+    "note": "核对 source:kong-new-tang-biography 与 source:kong-wujing-zhengyi-record（precise、verified）：支持 574–648、经学活动和奉诏编纂语境；不把全部编纂参与者、版本流传或制度接受细节扩写为已完成事实。"
+  },
+  {
+    "id": "review:rc-entity-figure-kong-yingda-bilingual",
+    "subjectKind": "entity",
+    "subjectKey": "figure:kong-yingda",
+    "checkKind": "bilingual",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "逐项对照 figure:kong-yingda 的 zh-CN/en title、subtitle、summary、description、time、facts 与 quote/locator 字段；两种语言保留相同的证据层、历史不确定性和版本边界。当前英文展示字段未被标作外部译者译文。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-figure-kong-yingda-rights",
+    "subjectKind": "entity",
+    "subjectKey": "figure:kong-yingda",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "本次通过仅覆盖当前页面的馆方摘要、结构化字段、来源 metadata、locator 和外部链接；不复制外部页面或 PDF 正文。所链接来源的 rightsStatus 为 public_domain、open_licensed、quotation_only 或 external_reference_only，未发现 unknown/restricted；该结论不扩展为外部网站整页转载许可。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-figure-kong-yingda-editorial",
+    "subjectKind": "entity",
+    "subjectKey": "figure:kong-yingda",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "确认当前条目符合 Lean Public RC 的冻结范围：事实、传统归属、时间/空间边界和研究说明保持分层；未把神话/后世记忆、比较阅读或策展解释改写成无限定历史事实。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-figure-kong-yingda-tradition",
+    "subjectKind": "entity",
+    "subjectKey": "figure:kong-yingda",
+    "checkKind": "tradition",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "确认 confucianism 为当前展示的主要传统；《论语》保留 composite attribution，孔颖达的经学/制度语境不扩写为单一传统的全部历史。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-text-heart-sutra-schema",
+    "subjectKind": "entity",
+    "subjectKey": "text:heart-sutra",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-09T00:00:00.000Z",
+    "note": "Zod domain schema, identity and structural dependency checks passed; this does not replace content review."
+  },
+  {
+    "id": "review:rc-entity-text-heart-sutra-fact",
+    "subjectKind": "entity",
+    "subjectKey": "text:heart-sutra",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-09T13:08:43.030Z",
+    "note": "核对 source:heart-sutra-edition（precise、verified）：支持《心经》作为汉译佛教文本及当前展示的文本定位；attributionStatus=contested 和研究说明保留，不推出唯一译者、唯一底本或完整异文结论。"
+  },
+  {
+    "id": "review:rc-entity-text-heart-sutra-bilingual",
+    "subjectKind": "entity",
+    "subjectKey": "text:heart-sutra",
+    "checkKind": "bilingual",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "逐项对照 text:heart-sutra 的 zh-CN/en title、subtitle、summary、description、time、facts 与 quote/locator 字段；两种语言保留相同的证据层、历史不确定性和版本边界。当前英文展示字段未被标作外部译者译文。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-text-heart-sutra-rights",
+    "subjectKind": "entity",
+    "subjectKey": "text:heart-sutra",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "本次通过仅覆盖当前页面的短古典摘录（版本页本身无长引）、source credit、章节/版本 locator、外部链接以及项目当前展示的 modernZh/translationEn/interpretation 字段；原典、数字转录、外部网页和项目解释分层，不镜像 Ctext、Cambridge 或地方志 PDF，也不把外部页面权利扩大为整页转载许可。已核对所链接来源无 unknown/restricted rights。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-text-heart-sutra-editorial",
+    "subjectKind": "entity",
+    "subjectKey": "text:heart-sutra",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "确认当前条目符合 Lean Public RC 的冻结范围：事实、传统归属、时间/空间边界和研究说明保持分层；未把神话/后世记忆、比较阅读或策展解释改写成无限定历史事实。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-text-heart-sutra-tradition",
+    "subjectKind": "entity",
+    "subjectKey": "text:heart-sutra",
+    "checkKind": "tradition",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "确认 buddhism 为当前展示的主要传统，evidenceLayer/来源与页面边界一致；不把后世文学或宗教记忆替代为人物/文本的单一历史事实。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-text-daodejing-schema",
+    "subjectKind": "entity",
+    "subjectKey": "text:daodejing",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-09T00:00:00.000Z",
+    "note": "Zod domain schema, identity and structural dependency checks passed; this does not replace content review."
+  },
+  {
+    "id": "review:rc-entity-text-daodejing-fact",
+    "subjectKind": "entity",
+    "subjectKey": "text:daodejing",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-09T13:08:43.030Z",
+    "note": "核对 source:daodejing-edition（precise、verified）：支持当前《道德经》作品入口及传世章句范围；historical_inferred、attributionStatus=contested 保留，不把复杂成书史压成单一作者/年份。"
+  },
+  {
+    "id": "review:rc-entity-text-daodejing-bilingual",
+    "subjectKind": "entity",
+    "subjectKey": "text:daodejing",
+    "checkKind": "bilingual",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "逐项对照 text:daodejing 的 zh-CN/en title、subtitle、summary、description、time、facts 与 quote/locator 字段；两种语言保留相同的证据层、历史不确定性和版本边界。当前英文展示字段未被标作外部译者译文。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-text-daodejing-rights",
+    "subjectKind": "entity",
+    "subjectKey": "text:daodejing",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "本次通过仅覆盖当前页面的短古典摘录（版本页本身无长引）、source credit、章节/版本 locator、外部链接以及项目当前展示的 modernZh/translationEn/interpretation 字段；原典、数字转录、外部网页和项目解释分层，不镜像 Ctext、Cambridge 或地方志 PDF，也不把外部页面权利扩大为整页转载许可。已核对所链接来源无 unknown/restricted rights。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-text-daodejing-editorial",
+    "subjectKind": "entity",
+    "subjectKey": "text:daodejing",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "确认当前条目符合 Lean Public RC 的冻结范围：事实、传统归属、时间/空间边界和研究说明保持分层；未把神话/后世记忆、比较阅读或策展解释改写成无限定历史事实。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-text-daodejing-tradition",
+    "subjectKind": "entity",
+    "subjectKey": "text:daodejing",
+    "checkKind": "tradition",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "确认 daoism 为当前展示的主要传统；司马承祯的上清关联保留 medium confidence，不声称法脉研究已经完整；《道德经》保留 historical_inferred 与 contested attribution。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-text-analects-schema",
+    "subjectKind": "entity",
+    "subjectKey": "text:analects",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-09T00:00:00.000Z",
+    "note": "Zod domain schema, identity and structural dependency checks passed; this does not replace content review."
+  },
+  {
+    "id": "review:rc-entity-text-analects-fact",
+    "subjectKind": "entity",
+    "subjectKey": "text:analects",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-09T13:08:43.030Z",
+    "note": "核对 source:analects-edition（precise、verified）：支持《论语》作品入口和当前篇章范围；attributionStatus=composite 保留，不把编纂、传本和孔子关系简化成单一作者事实。"
+  },
+  {
+    "id": "review:rc-entity-text-analects-bilingual",
+    "subjectKind": "entity",
+    "subjectKey": "text:analects",
+    "checkKind": "bilingual",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "逐项对照 text:analects 的 zh-CN/en title、subtitle、summary、description、time、facts 与 quote/locator 字段；两种语言保留相同的证据层、历史不确定性和版本边界。当前英文展示字段未被标作外部译者译文。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-text-analects-rights",
+    "subjectKind": "entity",
+    "subjectKey": "text:analects",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "本次通过仅覆盖当前页面的短古典摘录（版本页本身无长引）、source credit、章节/版本 locator、外部链接以及项目当前展示的 modernZh/translationEn/interpretation 字段；原典、数字转录、外部网页和项目解释分层，不镜像 Ctext、Cambridge 或地方志 PDF，也不把外部页面权利扩大为整页转载许可。已核对所链接来源无 unknown/restricted rights。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-text-analects-editorial",
+    "subjectKind": "entity",
+    "subjectKey": "text:analects",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "确认当前条目符合 Lean Public RC 的冻结范围：事实、传统归属、时间/空间边界和研究说明保持分层；未把神话/后世记忆、比较阅读或策展解释改写成无限定历史事实。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-text-analects-tradition",
+    "subjectKind": "entity",
+    "subjectKey": "text:analects",
+    "checkKind": "tradition",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "确认 confucianism 为当前展示的主要传统；《论语》保留 composite attribution，孔颖达的经学/制度语境不扩写为单一传统的全部历史。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-passage-form-is-emptiness-schema",
+    "subjectKind": "entity",
+    "subjectKey": "passage:form-is-emptiness",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-09T00:00:00.000Z",
+    "note": "Zod domain schema, identity and structural dependency checks passed; this does not replace content review."
+  },
+  {
+    "id": "review:rc-entity-passage-form-is-emptiness-fact",
+    "subjectKind": "entity",
+    "subjectKey": "passage:form-is-emptiness",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-09T13:08:43.030Z",
+    "note": "核对 source:heart-sutra-edition 的第 2 节 locator：当前四句汉文与 passage 原文一致；版本、译者和异文缺口仍显示在研究说明，项目现代中文/英文是展示解释，不冒充外部译本。"
+  },
+  {
+    "id": "review:rc-entity-passage-form-is-emptiness-bilingual",
+    "subjectKind": "entity",
+    "subjectKey": "passage:form-is-emptiness",
+    "checkKind": "bilingual",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "逐项对照 passage:form-is-emptiness 的 zh-CN/en title、subtitle、summary、description、time、facts 与 quote/locator 字段；两种语言保留相同的证据层、历史不确定性和版本边界。当前英文展示字段未被标作外部译者译文。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-passage-form-is-emptiness-rights",
+    "subjectKind": "entity",
+    "subjectKey": "passage:form-is-emptiness",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "本次通过仅覆盖当前页面的短古典摘录（版本页本身无长引）、source credit、章节/版本 locator、外部链接以及项目当前展示的 modernZh/translationEn/interpretation 字段；原典、数字转录、外部网页和项目解释分层，不镜像 Ctext、Cambridge 或地方志 PDF，也不把外部页面权利扩大为整页转载许可。已核对所链接来源无 unknown/restricted rights。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-passage-form-is-emptiness-editorial",
+    "subjectKind": "entity",
+    "subjectKey": "passage:form-is-emptiness",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "确认当前条目符合 Lean Public RC 的冻结范围：事实、传统归属、时间/空间边界和研究说明保持分层；未把神话/后世记忆、比较阅读或策展解释改写成无限定历史事实。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-passage-form-is-emptiness-tradition",
+    "subjectKind": "entity",
+    "subjectKey": "passage:form-is-emptiness",
+    "checkKind": "tradition",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "确认 buddhism 为当前展示的主要传统，evidenceLayer/来源与页面边界一致；不把后世文学或宗教记忆替代为人物/文本的单一历史事实。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-passage-humans-follow-earth-schema",
+    "subjectKind": "entity",
+    "subjectKey": "passage:humans-follow-earth",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-09T00:00:00.000Z",
+    "note": "Zod domain schema, identity and structural dependency checks passed; this does not replace content review."
+  },
+  {
+    "id": "review:rc-entity-passage-humans-follow-earth-fact",
+    "subjectKind": "entity",
+    "subjectKey": "passage:humans-follow-earth",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-09T13:08:43.030Z",
+    "note": "核对 source:daodejing-edition 的第二十五章 locator：当前原文与章次一致；保留传世本和 historical_inferred 边界，不把‘自然’解释为唯一现代含义。"
+  },
+  {
+    "id": "review:rc-entity-passage-humans-follow-earth-bilingual",
+    "subjectKind": "entity",
+    "subjectKey": "passage:humans-follow-earth",
+    "checkKind": "bilingual",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "逐项对照 passage:humans-follow-earth 的 zh-CN/en title、subtitle、summary、description、time、facts 与 quote/locator 字段；两种语言保留相同的证据层、历史不确定性和版本边界。当前英文展示字段未被标作外部译者译文。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-passage-humans-follow-earth-rights",
+    "subjectKind": "entity",
+    "subjectKey": "passage:humans-follow-earth",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "本次通过仅覆盖当前页面的短古典摘录（版本页本身无长引）、source credit、章节/版本 locator、外部链接以及项目当前展示的 modernZh/translationEn/interpretation 字段；原典、数字转录、外部网页和项目解释分层，不镜像 Ctext、Cambridge 或地方志 PDF，也不把外部页面权利扩大为整页转载许可。已核对所链接来源无 unknown/restricted rights。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-passage-humans-follow-earth-editorial",
+    "subjectKind": "entity",
+    "subjectKey": "passage:humans-follow-earth",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "确认当前条目符合 Lean Public RC 的冻结范围：事实、传统归属、时间/空间边界和研究说明保持分层；未把神话/后世记忆、比较阅读或策展解释改写成无限定历史事实。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-passage-humans-follow-earth-tradition",
+    "subjectKind": "entity",
+    "subjectKey": "passage:humans-follow-earth",
+    "checkKind": "tradition",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "确认 daoism 为当前展示的主要传统；司马承祯的上清关联保留 medium confidence，不声称法脉研究已经完整；《道德经》保留 historical_inferred 与 contested attribution。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-passage-return-to-ritual-schema",
+    "subjectKind": "entity",
+    "subjectKey": "passage:return-to-ritual",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-09T00:00:00.000Z",
+    "note": "Zod domain schema, identity and structural dependency checks passed; this does not replace content review."
+  },
+  {
+    "id": "review:rc-entity-passage-return-to-ritual-fact",
+    "subjectKind": "entity",
+    "subjectKey": "passage:return-to-ritual",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-09T13:08:43.030Z",
+    "note": "核对 source:analects-edition 的颜渊第十二篇章 locator：当前原文与篇章一致；不把后世注疏或唐代制度使用直接投射为原句事实。"
+  },
+  {
+    "id": "review:rc-entity-passage-return-to-ritual-bilingual",
+    "subjectKind": "entity",
+    "subjectKey": "passage:return-to-ritual",
+    "checkKind": "bilingual",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "逐项对照 passage:return-to-ritual 的 zh-CN/en title、subtitle、summary、description、time、facts 与 quote/locator 字段；两种语言保留相同的证据层、历史不确定性和版本边界。当前英文展示字段未被标作外部译者译文。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-passage-return-to-ritual-rights",
+    "subjectKind": "entity",
+    "subjectKey": "passage:return-to-ritual",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "本次通过仅覆盖当前页面的短古典摘录（版本页本身无长引）、source credit、章节/版本 locator、外部链接以及项目当前展示的 modernZh/translationEn/interpretation 字段；原典、数字转录、外部网页和项目解释分层，不镜像 Ctext、Cambridge 或地方志 PDF，也不把外部页面权利扩大为整页转载许可。已核对所链接来源无 unknown/restricted rights。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-passage-return-to-ritual-editorial",
+    "subjectKind": "entity",
+    "subjectKey": "passage:return-to-ritual",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "确认当前条目符合 Lean Public RC 的冻结范围：事实、传统归属、时间/空间边界和研究说明保持分层；未把神话/后世记忆、比较阅读或策展解释改写成无限定历史事实。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-passage-return-to-ritual-tradition",
+    "subjectKind": "entity",
+    "subjectKey": "passage:return-to-ritual",
+    "checkKind": "tradition",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "确认 confucianism 为当前展示的主要传统；《论语》保留 composite attribution，孔颖达的经学/制度语境不扩写为单一传统的全部历史。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-place-changan-schema",
+    "subjectKind": "entity",
+    "subjectKey": "place:changan",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-09T00:00:00.000Z",
+    "note": "Zod domain schema, identity and structural dependency checks passed; this does not replace content review."
+  },
+  {
+    "id": "review:rc-entity-place-changan-fact",
+    "subjectKind": "entity",
+    "subjectKey": "place:changan",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-09T13:08:43.030Z",
+    "note": "核对 source:sui-tang-changan-urban-study（precise、verified）与 source:unesco-silk-roads-corridor（item、verified）：支持隋唐长安/今西安的城市级锚点；坐标明确标为 centroid 示意，不冒充建筑级定位。"
+  },
+  {
+    "id": "review:rc-entity-place-changan-bilingual",
+    "subjectKind": "entity",
+    "subjectKey": "place:changan",
+    "checkKind": "bilingual",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "逐项对照 place:changan 的 zh-CN/en title、subtitle、summary、description、time、facts 与 quote/locator 字段；两种语言保留相同的证据层、历史不确定性和版本边界。当前英文展示字段未被标作外部译者译文。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-place-changan-rights",
+    "subjectKind": "entity",
+    "subjectKey": "place:changan",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "本次通过仅覆盖当前页面的馆方摘要、结构化字段、来源 metadata、locator 和外部链接；不复制外部页面或 PDF 正文。所链接来源的 rightsStatus 为 public_domain、open_licensed、quotation_only 或 external_reference_only，未发现 unknown/restricted；该结论不扩展为外部网站整页转载许可。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-place-changan-editorial",
+    "subjectKind": "entity",
+    "subjectKey": "place:changan",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "确认当前条目符合 Lean Public RC 的冻结范围：事实、传统归属、时间/空间边界和研究说明保持分层；未把神话/后世记忆、比较阅读或策展解释改写成无限定历史事实。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-place-changan-tradition",
+    "subjectKind": "entity",
+    "subjectKey": "place:changan",
+    "checkKind": "tradition",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "确认长安以 syncretic 方式并列 Buddhism、Daoism、Confucianism；页面明确写明这不是抽象的三教和谐背景，避免把城市交汇简化成价值判断。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-text-version-heart-sutra-chinese-received-schema",
+    "subjectKind": "entity",
+    "subjectKey": "text_version:heart-sutra-chinese-received",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-09T00:00:00.000Z",
+    "note": "Zod domain schema, identity and structural dependency checks passed; this does not replace content review."
+  },
+  {
+    "id": "review:rc-entity-text-version-heart-sutra-chinese-received-fact",
+    "subjectKind": "entity",
+    "subjectKey": "text_version:heart-sutra-chinese-received",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-09T13:08:43.030Z",
+    "note": "核对 source:heart-sutra-edition：该条作为 passage 的结构依赖和汉译通行版本记录发布；页面明确写明具体底本、译者和 locator 仍待补，不把它称为批校本或唯一版本。"
+  },
+  {
+    "id": "review:rc-entity-text-version-heart-sutra-chinese-received-bilingual",
+    "subjectKind": "entity",
+    "subjectKey": "text_version:heart-sutra-chinese-received",
+    "checkKind": "bilingual",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "逐项对照 text_version:heart-sutra-chinese-received 的 zh-CN/en title、subtitle、summary、description、time、facts 与 quote/locator 字段；两种语言保留相同的证据层、历史不确定性和版本边界。当前英文展示字段未被标作外部译者译文。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-text-version-heart-sutra-chinese-received-rights",
+    "subjectKind": "entity",
+    "subjectKey": "text_version:heart-sutra-chinese-received",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "本次通过仅覆盖当前页面的短古典摘录（版本页本身无长引）、source credit、章节/版本 locator、外部链接以及项目当前展示的 modernZh/translationEn/interpretation 字段；原典、数字转录、外部网页和项目解释分层，不镜像 Ctext、Cambridge 或地方志 PDF，也不把外部页面权利扩大为整页转载许可。已核对所链接来源无 unknown/restricted rights。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-text-version-heart-sutra-chinese-received-editorial",
+    "subjectKind": "entity",
+    "subjectKey": "text_version:heart-sutra-chinese-received",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "确认当前条目符合 Lean Public RC 的结构依赖范围：研究说明明确保留底本/译者/精确 locator 缺口，页面不把 Alpha placeholder 呈现为批校本；未扩大内容范围。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-text-version-daodejing-received-schema",
+    "subjectKind": "entity",
+    "subjectKey": "text_version:daodejing-received",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-09T00:00:00.000Z",
+    "note": "Zod domain schema, identity and structural dependency checks passed; this does not replace content review."
+  },
+  {
+    "id": "review:rc-entity-text-version-daodejing-received-fact",
+    "subjectKind": "entity",
+    "subjectKey": "text_version:daodejing-received",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-09T13:08:43.030Z",
+    "note": "核对 source:daodejing-edition：该条作为 passage 的结构依赖和传世章句记录发布；页面保留 Alpha 版本说明，不把通行本等同于单一历史底本。"
+  },
+  {
+    "id": "review:rc-entity-text-version-daodejing-received-bilingual",
+    "subjectKind": "entity",
+    "subjectKey": "text_version:daodejing-received",
+    "checkKind": "bilingual",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "逐项对照 text_version:daodejing-received 的 zh-CN/en title、subtitle、summary、description、time、facts 与 quote/locator 字段；两种语言保留相同的证据层、历史不确定性和版本边界。当前英文展示字段未被标作外部译者译文。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-text-version-daodejing-received-rights",
+    "subjectKind": "entity",
+    "subjectKey": "text_version:daodejing-received",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "本次通过仅覆盖当前页面的短古典摘录（版本页本身无长引）、source credit、章节/版本 locator、外部链接以及项目当前展示的 modernZh/translationEn/interpretation 字段；原典、数字转录、外部网页和项目解释分层，不镜像 Ctext、Cambridge 或地方志 PDF，也不把外部页面权利扩大为整页转载许可。已核对所链接来源无 unknown/restricted rights。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-text-version-daodejing-received-editorial",
+    "subjectKind": "entity",
+    "subjectKey": "text_version:daodejing-received",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "确认当前条目符合 Lean Public RC 的结构依赖范围：研究说明明确保留底本/译者/精确 locator 缺口，页面不把 Alpha placeholder 呈现为批校本；未扩大内容范围。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-text-version-analects-received-schema",
+    "subjectKind": "entity",
+    "subjectKey": "text_version:analects-received",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-09T00:00:00.000Z",
+    "note": "Zod domain schema, identity and structural dependency checks passed; this does not replace content review."
+  },
+  {
+    "id": "review:rc-entity-text-version-analects-received-fact",
+    "subjectKind": "entity",
+    "subjectKey": "text_version:analects-received",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-09T13:08:43.030Z",
+    "note": "核对 source:analects-edition：该条作为 passage 的结构依赖和传世篇章记录发布；页面保留 Alpha 版本说明，不声称完整版本谱系或单一底本。"
+  },
+  {
+    "id": "review:rc-entity-text-version-analects-received-bilingual",
+    "subjectKind": "entity",
+    "subjectKey": "text_version:analects-received",
+    "checkKind": "bilingual",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "逐项对照 text_version:analects-received 的 zh-CN/en title、subtitle、summary、description、time、facts 与 quote/locator 字段；两种语言保留相同的证据层、历史不确定性和版本边界。当前英文展示字段未被标作外部译者译文。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-text-version-analects-received-rights",
+    "subjectKind": "entity",
+    "subjectKey": "text_version:analects-received",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "本次通过仅覆盖当前页面的短古典摘录（版本页本身无长引）、source credit、章节/版本 locator、外部链接以及项目当前展示的 modernZh/translationEn/interpretation 字段；原典、数字转录、外部网页和项目解释分层，不镜像 Ctext、Cambridge 或地方志 PDF，也不把外部页面权利扩大为整页转载许可。已核对所链接来源无 unknown/restricted rights。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-text-version-analects-received-editorial",
+    "subjectKind": "entity",
+    "subjectKey": "text_version:analects-received",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "确认当前条目符合 Lean Public RC 的结构依赖范围：研究说明明确保留底本/译者/精确 locator 缺口，页面不把 Alpha placeholder 呈现为批校本；未扩大内容范围。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-relation-relation-xuanzang-active-changan-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:xuanzang-active-changan",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-09T00:00:00.000Z",
+    "note": "Relation schema, endpoint identity and source-reference checks passed; this does not replace relation review."
+  },
+  {
+    "id": "review:rc-relation-relation-xuanzang-active-changan-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:xuanzang-active-changan",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-09T13:08:43.030Z",
+    "note": "核对 source:xuanzang-records 及现有玄奘长安材料：关系只表达长安作为译经、讲学与制度工作的城市尺度锚点，不推出所有行程或每一译经项目都在同一建筑完成。"
+  },
+  {
+    "id": "review:rc-relation-relation-xuanzang-active-changan-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:xuanzang-active-changan",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "本次通过仅覆盖当前页面的馆方摘要、结构化字段、来源 metadata、locator 和外部链接；不复制外部页面或 PDF 正文。所链接来源的 rightsStatus 为 public_domain、open_licensed、quotation_only 或 external_reference_only，未发现 unknown/restricted；该结论不扩展为外部网站整页转载许可。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-relation-relation-xuanzang-active-changan-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:xuanzang-active-changan",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "确认当前条目符合 Lean Public RC 的冻结范围：事实、传统归属、时间/空间边界和研究说明保持分层；未把神话/后世记忆、比较阅读或策展解释改写成无限定历史事实。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-relation-relation-sima-active-changan-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:sima-active-changan",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-09T00:00:00.000Z",
+    "note": "Relation schema, endpoint identity and source-reference checks passed; this does not replace relation review."
+  },
+  {
+    "id": "review:rc-relation-relation-sima-active-changan-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:sima-active-changan",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "核对 source:sima-old-tang-biography：关系保留为景云二年约 711 年入京的单点城市锚点；不把开元年间东都洛阳、王屋山活动推成 713–735 年持续在长安。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-relation-relation-sima-active-changan-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:sima-active-changan",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "本次通过仅覆盖当前页面的馆方摘要、结构化字段、来源 metadata、locator 和外部链接；不复制外部页面或 PDF 正文。所链接来源的 rightsStatus 为 public_domain、open_licensed、quotation_only 或 external_reference_only，未发现 unknown/restricted；该结论不扩展为外部网站整页转载许可。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-relation-relation-sima-active-changan-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:sima-active-changan",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "确认当前条目符合 Lean Public RC 的冻结范围：事实、传统归属、时间/空间边界和研究说明保持分层；未把神话/后世记忆、比较阅读或策展解释改写成无限定历史事实。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-relation-relation-kong-active-changan-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:kong-active-changan",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-09T00:00:00.000Z",
+    "note": "Relation schema, endpoint identity and source-reference checks passed; this does not replace relation review."
+  },
+  {
+    "id": "review:rc-relation-relation-kong-active-changan-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:kong-active-changan",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "核对 source:kong-new-tang-biography、source:kong-wujing-zhengyi-record 与 source:changan-guozijian-gazetteer：关系收窄为贞观十四年（640）长安国子学讲《孝经》的机构/年份事件，不外推为其全部生平活动。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-relation-relation-kong-active-changan-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:kong-active-changan",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "本次通过仅覆盖当前页面的馆方摘要、结构化字段、来源 metadata、locator 和外部链接；不复制外部页面或 PDF 正文。所链接来源的 rightsStatus 为 public_domain、open_licensed、quotation_only 或 external_reference_only，未发现 unknown/restricted；该结论不扩展为外部网站整页转载许可。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-relation-relation-kong-active-changan-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:kong-active-changan",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "确认当前条目符合 Lean Public RC 的冻结范围：事实、传统归属、时间/空间边界和研究说明保持分层；未把神话/后世记忆、比较阅读或策展解释改写成无限定历史事实。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-relation-relation-form-passage-heart-sutra-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:form-passage-heart-sutra",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-09T00:00:00.000Z",
+    "note": "Relation schema, endpoint identity and source-reference checks passed; this does not replace relation review."
+  },
+  {
+    "id": "review:rc-relation-relation-form-passage-heart-sutra-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:form-passage-heart-sutra",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-09T13:08:43.030Z",
+    "note": "核对 passage 的 textSlug/textVersionSlug 与 relation 端点及 source:heart-sutra-edition locator：关系仅表达 passage_of 结构闭包。"
+  },
+  {
+    "id": "review:rc-relation-relation-form-passage-heart-sutra-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:form-passage-heart-sutra",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "本次通过仅覆盖当前页面的馆方摘要、结构化字段、来源 metadata、locator 和外部链接；不复制外部页面或 PDF 正文。所链接来源的 rightsStatus 为 public_domain、open_licensed、quotation_only 或 external_reference_only，未发现 unknown/restricted；该结论不扩展为外部网站整页转载许可。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-relation-relation-form-passage-heart-sutra-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:form-passage-heart-sutra",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "确认当前条目符合 Lean Public RC 的冻结范围：事实、传统归属、时间/空间边界和研究说明保持分层；未把神话/后世记忆、比较阅读或策展解释改写成无限定历史事实。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-relation-relation-humans-passage-daodejing-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:humans-passage-daodejing",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-09T00:00:00.000Z",
+    "note": "Relation schema, endpoint identity and source-reference checks passed; this does not replace relation review."
+  },
+  {
+    "id": "review:rc-relation-relation-humans-passage-daodejing-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:humans-passage-daodejing",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-09T13:08:43.030Z",
+    "note": "核对 passage 的 textSlug/textVersionSlug 与 relation 端点及 source:daodejing-edition locator：关系仅表达 passage_of 结构闭包。"
+  },
+  {
+    "id": "review:rc-relation-relation-humans-passage-daodejing-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:humans-passage-daodejing",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "本次通过仅覆盖当前页面的馆方摘要、结构化字段、来源 metadata、locator 和外部链接；不复制外部页面或 PDF 正文。所链接来源的 rightsStatus 为 public_domain、open_licensed、quotation_only 或 external_reference_only，未发现 unknown/restricted；该结论不扩展为外部网站整页转载许可。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-relation-relation-humans-passage-daodejing-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:humans-passage-daodejing",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "确认当前条目符合 Lean Public RC 的冻结范围：事实、传统归属、时间/空间边界和研究说明保持分层；未把神话/后世记忆、比较阅读或策展解释改写成无限定历史事实。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-relation-relation-return-passage-analects-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:return-passage-analects",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-09T00:00:00.000Z",
+    "note": "Relation schema, endpoint identity and source-reference checks passed; this does not replace relation review."
+  },
+  {
+    "id": "review:rc-relation-relation-return-passage-analects-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:return-passage-analects",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-09T13:08:43.030Z",
+    "note": "核对 passage 的 textSlug/textVersionSlug 与 relation 端点及 source:analects-edition locator：关系仅表达 passage_of 结构闭包。"
+  },
+  {
+    "id": "review:rc-relation-relation-return-passage-analects-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:return-passage-analects",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "本次通过仅覆盖当前页面的馆方摘要、结构化字段、来源 metadata、locator 和外部链接；不复制外部页面或 PDF 正文。所链接来源的 rightsStatus 为 public_domain、open_licensed、quotation_only 或 external_reference_only，未发现 unknown/restricted；该结论不扩展为外部网站整页转载许可。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-relation-relation-return-passage-analects-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:return-passage-analects",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "确认当前条目符合 Lean Public RC 的冻结范围：事实、传统归属、时间/空间边界和研究说明保持分层；未把神话/后世记忆、比较阅读或策展解释改写成无限定历史事实。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-relation-relation-daodejing-analects-comparative-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:daodejing-analects-comparative",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-09T00:00:00.000Z",
+    "note": "Relation schema, endpoint identity and source-reference checks passed; this does not replace relation review."
+  },
+  {
+    "id": "review:rc-relation-relation-daodejing-analects-comparative-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:daodejing-analects-comparative",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-09T13:08:43.030Z",
+    "note": "核对 source:comparative-method：这是策展比较入口，不是共同作者、直接影响或同一传统的历史断言；页面免责声明保留。"
+  },
+  {
+    "id": "review:rc-relation-relation-daodejing-analects-comparative-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:daodejing-analects-comparative",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "本次通过仅覆盖当前页面的馆方摘要、结构化字段、来源 metadata、locator 和外部链接；不复制外部页面或 PDF 正文。所链接来源的 rightsStatus 为 public_domain、open_licensed、quotation_only 或 external_reference_only，未发现 unknown/restricted；该结论不扩展为外部网站整页转载许可。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-relation-relation-daodejing-analects-comparative-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:daodejing-analects-comparative",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "确认当前条目符合 Lean Public RC 的冻结范围：事实、传统归属、时间/空间边界和研究说明保持分层；未把神话/后世记忆、比较阅读或策展解释改写成无限定历史事实。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-relation-relation-heart-sutra-daodejing-comparative-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:heart-sutra-daodejing-comparative",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-09T00:00:00.000Z",
+    "note": "Relation schema, endpoint identity and source-reference checks passed; this does not replace relation review."
+  },
+  {
+    "id": "review:rc-relation-relation-heart-sutra-daodejing-comparative-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:heart-sutra-daodejing-comparative",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-09T13:08:43.030Z",
+    "note": "核对 source:comparative-method：这是保留术语、时代和宗教功能差异的概念并置，不是两部文本等同或直接影响的历史断言。"
+  },
+  {
+    "id": "review:rc-relation-relation-heart-sutra-daodejing-comparative-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:heart-sutra-daodejing-comparative",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "本次通过仅覆盖当前页面的馆方摘要、结构化字段、来源 metadata、locator 和外部链接；不复制外部页面或 PDF 正文。所链接来源的 rightsStatus 为 public_domain、open_licensed、quotation_only 或 external_reference_only，未发现 unknown/restricted；该结论不扩展为外部网站整页转载许可。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-relation-relation-heart-sutra-daodejing-comparative-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:heart-sutra-daodejing-comparative",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "确认当前条目符合 Lean Public RC 的冻结范围：事实、传统归属、时间/空间边界和研究说明保持分层；未把神话/后世记忆、比较阅读或策展解释改写成无限定历史事实。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-relation-relation-heart-sutra-has-version-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:heart-sutra-has-version",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-09T00:00:00.000Z",
+    "note": "Relation schema, endpoint identity and source-reference checks passed; this does not replace relation review."
+  },
+  {
+    "id": "review:rc-relation-relation-heart-sutra-has-version-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:heart-sutra-has-version",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-09T13:08:43.030Z",
+    "note": "核对 source:heart-sutra-edition 与端点：关系仅表达作品到结构依赖版本的 has_version 闭包，不把 placeholder 变成唯一鉴定版。"
+  },
+  {
+    "id": "review:rc-relation-relation-heart-sutra-has-version-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:heart-sutra-has-version",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "本次通过仅覆盖当前页面的馆方摘要、结构化字段、来源 metadata、locator 和外部链接；不复制外部页面或 PDF 正文。所链接来源的 rightsStatus 为 public_domain、open_licensed、quotation_only 或 external_reference_only，未发现 unknown/restricted；该结论不扩展为外部网站整页转载许可。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-relation-relation-heart-sutra-has-version-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:heart-sutra-has-version",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "确认当前条目符合 Lean Public RC 的冻结范围：事实、传统归属、时间/空间边界和研究说明保持分层；未把神话/后世记忆、比较阅读或策展解释改写成无限定历史事实。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-relation-relation-daodejing-has-version-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:daodejing-has-version",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-09T00:00:00.000Z",
+    "note": "Relation schema, endpoint identity and source-reference checks passed; this does not replace relation review."
+  },
+  {
+    "id": "review:rc-relation-relation-daodejing-has-version-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:daodejing-has-version",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-09T13:08:43.030Z",
+    "note": "核对 source:daodejing-edition 与端点：关系仅表达作品到传世章句记录的 has_version 闭包，不声称无异文或唯一底本。"
+  },
+  {
+    "id": "review:rc-relation-relation-daodejing-has-version-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:daodejing-has-version",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "本次通过仅覆盖当前页面的馆方摘要、结构化字段、来源 metadata、locator 和外部链接；不复制外部页面或 PDF 正文。所链接来源的 rightsStatus 为 public_domain、open_licensed、quotation_only 或 external_reference_only，未发现 unknown/restricted；该结论不扩展为外部网站整页转载许可。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-relation-relation-daodejing-has-version-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:daodejing-has-version",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "确认当前条目符合 Lean Public RC 的冻结范围：事实、传统归属、时间/空间边界和研究说明保持分层；未把神话/后世记忆、比较阅读或策展解释改写成无限定历史事实。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-relation-relation-analects-has-version-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:analects-has-version",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-09T00:00:00.000Z",
+    "note": "Relation schema, endpoint identity and source-reference checks passed; this does not replace relation review."
+  },
+  {
+    "id": "review:rc-relation-relation-analects-has-version-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:analects-has-version",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-09T13:08:43.030Z",
+    "note": "核对 source:analects-edition 与端点：关系仅表达作品到传世篇章记录的 has_version 闭包，不声称完整版本谱系。"
+  },
+  {
+    "id": "review:rc-relation-relation-analects-has-version-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:analects-has-version",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "本次通过仅覆盖当前页面的馆方摘要、结构化字段、来源 metadata、locator 和外部链接；不复制外部页面或 PDF 正文。所链接来源的 rightsStatus 为 public_domain、open_licensed、quotation_only 或 external_reference_only，未发现 unknown/restricted；该结论不扩展为外部网站整页转载许可。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-relation-relation-analects-has-version-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:analects-has-version",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "确认当前条目符合 Lean Public RC 的冻结范围：事实、传统归属、时间/空间边界和研究说明保持分层；未把神话/后世记忆、比较阅读或策展解释改写成无限定历史事实。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-relation-relation-form-quoted-heart-version-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:form-quoted-heart-version",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-09T00:00:00.000Z",
+    "note": "Relation schema, endpoint identity and source-reference checks passed; this does not replace relation review."
+  },
+  {
+    "id": "review:rc-relation-relation-form-quoted-heart-version-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:form-quoted-heart-version",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-09T13:08:43.030Z",
+    "note": "核对 source:heart-sutra-edition、passage locator 和版本端点：关系只表示当前短引回到指定结构依赖，不把数字网页转录权利扩大为整页许可。"
+  },
+  {
+    "id": "review:rc-relation-relation-form-quoted-heart-version-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:form-quoted-heart-version",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "本次通过仅覆盖当前页面的馆方摘要、结构化字段、来源 metadata、locator 和外部链接；不复制外部页面或 PDF 正文。所链接来源的 rightsStatus 为 public_domain、open_licensed、quotation_only 或 external_reference_only，未发现 unknown/restricted；该结论不扩展为外部网站整页转载许可。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-relation-relation-form-quoted-heart-version-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:form-quoted-heart-version",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "确认当前条目符合 Lean Public RC 的冻结范围：事实、传统归属、时间/空间边界和研究说明保持分层；未把神话/后世记忆、比较阅读或策展解释改写成无限定历史事实。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-relation-relation-humans-quoted-daodejing-version-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:humans-quoted-daodejing-version",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-09T00:00:00.000Z",
+    "note": "Relation schema, endpoint identity and source-reference checks passed; this does not replace relation review."
+  },
+  {
+    "id": "review:rc-relation-relation-humans-quoted-daodejing-version-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:humans-quoted-daodejing-version",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-09T13:08:43.030Z",
+    "note": "核对 source:daodejing-edition、passage locator 和版本端点：关系只表示当前短引回到指定结构依赖，不把通行本记录当作完整数字版。"
+  },
+  {
+    "id": "review:rc-relation-relation-humans-quoted-daodejing-version-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:humans-quoted-daodejing-version",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "本次通过仅覆盖当前页面的馆方摘要、结构化字段、来源 metadata、locator 和外部链接；不复制外部页面或 PDF 正文。所链接来源的 rightsStatus 为 public_domain、open_licensed、quotation_only 或 external_reference_only，未发现 unknown/restricted；该结论不扩展为外部网站整页转载许可。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-relation-relation-humans-quoted-daodejing-version-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:humans-quoted-daodejing-version",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "确认当前条目符合 Lean Public RC 的冻结范围：事实、传统归属、时间/空间边界和研究说明保持分层；未把神话/后世记忆、比较阅读或策展解释改写成无限定历史事实。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-relation-relation-return-quoted-analects-version-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:return-quoted-analects-version",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-09T00:00:00.000Z",
+    "note": "Relation schema, endpoint identity and source-reference checks passed; this does not replace relation review."
+  },
+  {
+    "id": "review:rc-relation-relation-return-quoted-analects-version-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:return-quoted-analects-version",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-09T13:08:43.030Z",
+    "note": "核对 source:analects-edition、passage locator 和版本端点：关系只表示当前短引回到指定结构依赖，不把外部页面或译文整页复用。"
+  },
+  {
+    "id": "review:rc-relation-relation-return-quoted-analects-version-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:return-quoted-analects-version",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "本次通过仅覆盖当前页面的馆方摘要、结构化字段、来源 metadata、locator 和外部链接；不复制外部页面或 PDF 正文。所链接来源的 rightsStatus 为 public_domain、open_licensed、quotation_only 或 external_reference_only，未发现 unknown/restricted；该结论不扩展为外部网站整页转载许可。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-relation-relation-return-quoted-analects-version-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:return-quoted-analects-version",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "确认当前条目符合 Lean Public RC 的冻结范围：事实、传统归属、时间/空间边界和研究说明保持分层；未把神话/后世记忆、比较阅读或策展解释改写成无限定历史事实。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-figure-xuanzang-accessibility",
+    "subjectKind": "entity",
+    "subjectKey": "figure:xuanzang",
+    "checkKind": "accessibility",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "已纳入 RC 页面审核：npm run test:e2e 共 43/43 通过，含 axe WCAG 2A/2AA 检查；figure:xuanzang 对应详情路由已实际加载并通过 heading/main/键盘与无障碍树检查。自动 axe 不替代未来内容增补后的复测。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-figure-sima-chengzhen-accessibility",
+    "subjectKind": "entity",
+    "subjectKey": "figure:sima-chengzhen",
+    "checkKind": "accessibility",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "已纳入 RC 页面审核：npm run test:e2e 共 43/43 通过，含 axe WCAG 2A/2AA 检查；figure:sima-chengzhen 对应详情路由已实际加载并通过 heading/main/键盘与无障碍树检查。自动 axe 不替代未来内容增补后的复测。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-figure-kong-yingda-accessibility",
+    "subjectKind": "entity",
+    "subjectKey": "figure:kong-yingda",
+    "checkKind": "accessibility",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "已纳入 RC 页面审核：npm run test:e2e 共 43/43 通过，含 axe WCAG 2A/2AA 检查；figure:kong-yingda 对应详情路由已实际加载并通过 heading/main/键盘与无障碍树检查。自动 axe 不替代未来内容增补后的复测。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-text-heart-sutra-accessibility",
+    "subjectKind": "entity",
+    "subjectKey": "text:heart-sutra",
+    "checkKind": "accessibility",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "已纳入 RC 页面审核：npm run test:e2e 共 43/43 通过，含 axe WCAG 2A/2AA 检查；text:heart-sutra 对应详情路由已实际加载并通过 heading/main/键盘与无障碍树检查。自动 axe 不替代未来内容增补后的复测。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-text-daodejing-accessibility",
+    "subjectKind": "entity",
+    "subjectKey": "text:daodejing",
+    "checkKind": "accessibility",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "已纳入 RC 页面审核：npm run test:e2e 共 43/43 通过，含 axe WCAG 2A/2AA 检查；text:daodejing 对应详情路由已实际加载并通过 heading/main/键盘与无障碍树检查。自动 axe 不替代未来内容增补后的复测。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-text-analects-accessibility",
+    "subjectKind": "entity",
+    "subjectKey": "text:analects",
+    "checkKind": "accessibility",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "已纳入 RC 页面审核：npm run test:e2e 共 43/43 通过，含 axe WCAG 2A/2AA 检查；text:analects 对应详情路由已实际加载并通过 heading/main/键盘与无障碍树检查。自动 axe 不替代未来内容增补后的复测。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-passage-form-is-emptiness-accessibility",
+    "subjectKind": "entity",
+    "subjectKey": "passage:form-is-emptiness",
+    "checkKind": "accessibility",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "已纳入 RC 页面审核：npm run test:e2e 共 43/43 通过，含 axe WCAG 2A/2AA 检查；passage:form-is-emptiness 对应详情路由已实际加载并通过 heading/main/键盘与无障碍树检查。自动 axe 不替代未来内容增补后的复测。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-passage-humans-follow-earth-accessibility",
+    "subjectKind": "entity",
+    "subjectKey": "passage:humans-follow-earth",
+    "checkKind": "accessibility",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "已纳入 RC 页面审核：npm run test:e2e 共 43/43 通过，含 axe WCAG 2A/2AA 检查；passage:humans-follow-earth 对应详情路由已实际加载并通过 heading/main/键盘与无障碍树检查。自动 axe 不替代未来内容增补后的复测。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-passage-return-to-ritual-accessibility",
+    "subjectKind": "entity",
+    "subjectKey": "passage:return-to-ritual",
+    "checkKind": "accessibility",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "已纳入 RC 页面审核：npm run test:e2e 共 43/43 通过，含 axe WCAG 2A/2AA 检查；passage:return-to-ritual 对应详情路由已实际加载并通过 heading/main/键盘与无障碍树检查。自动 axe 不替代未来内容增补后的复测。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-place-changan-accessibility",
+    "subjectKind": "entity",
+    "subjectKey": "place:changan",
+    "checkKind": "accessibility",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "已纳入 RC 页面审核：npm run test:e2e 共 43/43 通过，含 axe WCAG 2A/2AA 检查；place:changan 对应详情路由已实际加载并通过 heading/main/键盘与无障碍树检查。自动 axe 不替代未来内容增补后的复测。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-text-version-heart-sutra-chinese-received-accessibility",
+    "subjectKind": "entity",
+    "subjectKey": "text_version:heart-sutra-chinese-received",
+    "checkKind": "accessibility",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "已纳入 RC 页面审核：npm run test:e2e 共 43/43 通过，含 axe WCAG 2A/2AA 检查；text_version:heart-sutra-chinese-received 对应详情路由已实际加载并通过 heading/main/键盘与无障碍树检查。自动 axe 不替代未来内容增补后的复测。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-text-version-daodejing-received-accessibility",
+    "subjectKind": "entity",
+    "subjectKey": "text_version:daodejing-received",
+    "checkKind": "accessibility",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "已纳入 RC 页面审核：npm run test:e2e 共 43/43 通过，含 axe WCAG 2A/2AA 检查；text_version:daodejing-received 对应详情路由已实际加载并通过 heading/main/键盘与无障碍树检查。自动 axe 不替代未来内容增补后的复测。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-text-version-analects-received-accessibility",
+    "subjectKind": "entity",
+    "subjectKey": "text_version:analects-received",
+    "checkKind": "accessibility",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "note": "已纳入 RC 页面审核：npm run test:e2e 共 43/43 通过，含 axe WCAG 2A/2AA 检查；text_version:analects-received 对应详情路由已实际加载并通过 heading/main/键盘与无障碍树检查。自动 axe 不替代未来内容增补后的复测。",
+    "reviewedAt": "2026-08-09T13:08:43.030Z"
+  },
+  {
+    "id": "review:rc-entity-figure-laozi-schema",
+    "subjectKind": "entity",
+    "subjectKey": "figure:laozi",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-entity-figure-laozi-fact",
+    "subjectKind": "entity",
+    "subjectKey": "figure:laozi",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 source:shiji-laozi-biography 与 source:daodejing-edition：老子以 traditional_sage / contested 处理，保留李耳、史传叙事与《道德经》传世本之间的归属边界；不把传统会见或单一作者说法写成无争议历史事实。"
+  },
+  {
+    "id": "review:rc-entity-figure-laozi-bilingual",
+    "subjectKind": "entity",
+    "subjectKey": "figure:laozi",
+    "checkKind": "bilingual",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "逐项对照 figure:laozi 的 zh-CN/en 标题、摘要、描述、时间和研究说明；两种语言保留相同的历史性、传统归属、空间角色和不确定性边界。"
+  },
+  {
+    "id": "review:rc-entity-figure-laozi-rights",
+    "subjectKind": "entity",
+    "subjectKey": "figure:laozi",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 figure:laozi 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-entity-figure-laozi-accessibility",
+    "subjectKind": "entity",
+    "subjectKey": "figure:laozi",
+    "checkKind": "accessibility",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 页面纳入最终浏览器与 axe 回归范围；figure:laozi 的详情、列表/地图替代文本和键盘路径保持与现有产品契约一致。"
+  },
+  {
+    "id": "review:rc-entity-figure-laozi-editorial",
+    "subjectKind": "entity",
+    "subjectKey": "figure:laozi",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 figure:laozi 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-entity-figure-laozi-tradition",
+    "subjectKind": "entity",
+    "subjectKey": "figure:laozi",
+    "checkKind": "tradition",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 figure:laozi 的传统归属、证据层和来源与当前策展边界一致；不以传统标签替代历史性判断。"
+  },
+  {
+    "id": "review:rc-entity-figure-confucius-schema",
+    "subjectKind": "entity",
+    "subjectKey": "figure:confucius",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-entity-figure-confucius-fact",
+    "subjectKind": "entity",
+    "subjectKey": "figure:confucius",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 source:shiji-confucius-biography 与 source:analects-edition：孔子作为有史传记录的人物入口，与《论语》的记录、传述和复合编纂层分开；不把后世制度记忆倒写为孔子本人当时的事实。"
+  },
+  {
+    "id": "review:rc-entity-figure-confucius-bilingual",
+    "subjectKind": "entity",
+    "subjectKey": "figure:confucius",
+    "checkKind": "bilingual",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "逐项对照 figure:confucius 的 zh-CN/en 标题、摘要、描述、时间和研究说明；两种语言保留相同的历史性、传统归属、空间角色和不确定性边界。"
+  },
+  {
+    "id": "review:rc-entity-figure-confucius-rights",
+    "subjectKind": "entity",
+    "subjectKey": "figure:confucius",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 figure:confucius 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-entity-figure-confucius-accessibility",
+    "subjectKind": "entity",
+    "subjectKey": "figure:confucius",
+    "checkKind": "accessibility",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 页面纳入最终浏览器与 axe 回归范围；figure:confucius 的详情、列表/地图替代文本和键盘路径保持与现有产品契约一致。"
+  },
+  {
+    "id": "review:rc-entity-figure-confucius-editorial",
+    "subjectKind": "entity",
+    "subjectKey": "figure:confucius",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 figure:confucius 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-entity-figure-confucius-tradition",
+    "subjectKind": "entity",
+    "subjectKey": "figure:confucius",
+    "checkKind": "tradition",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 figure:confucius 的传统归属、证据层和来源与当前策展边界一致；不以传统标签替代历史性判断。"
+  },
+  {
+    "id": "review:rc-entity-figure-sakyamuni-schema",
+    "subjectKind": "entity",
+    "subjectKey": "figure:sakyamuni",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-entity-figure-sakyamuni-fact",
+    "subjectKind": "entity",
+    "subjectKey": "figure:sakyamuni",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 source:buddha-early-texts 与 source:sarnath-site-record：释迦牟尼的人物、早期经文传述和鹿野苑遗址分别标注历史性与传统层，不把经文传述当作逐字现场记录。"
+  },
+  {
+    "id": "review:rc-entity-figure-sakyamuni-bilingual",
+    "subjectKind": "entity",
+    "subjectKey": "figure:sakyamuni",
+    "checkKind": "bilingual",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "逐项对照 figure:sakyamuni 的 zh-CN/en 标题、摘要、描述、时间和研究说明；两种语言保留相同的历史性、传统归属、空间角色和不确定性边界。"
+  },
+  {
+    "id": "review:rc-entity-figure-sakyamuni-rights",
+    "subjectKind": "entity",
+    "subjectKey": "figure:sakyamuni",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 figure:sakyamuni 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-entity-figure-sakyamuni-accessibility",
+    "subjectKind": "entity",
+    "subjectKey": "figure:sakyamuni",
+    "checkKind": "accessibility",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 页面纳入最终浏览器与 axe 回归范围；figure:sakyamuni 的详情、列表/地图替代文本和键盘路径保持与现有产品契约一致。"
+  },
+  {
+    "id": "review:rc-entity-figure-sakyamuni-editorial",
+    "subjectKind": "entity",
+    "subjectKey": "figure:sakyamuni",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 figure:sakyamuni 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-entity-figure-sakyamuni-tradition",
+    "subjectKind": "entity",
+    "subjectKey": "figure:sakyamuni",
+    "checkKind": "tradition",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 figure:sakyamuni 的传统归属、证据层和来源与当前策展边界一致；不以传统标签替代历史性判断。"
+  },
+  {
+    "id": "review:rc-entity-event-confucius-asks-laozi-about-rites-schema",
+    "subjectKind": "entity",
+    "subjectKey": "event:confucius-asks-laozi-about-rites",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-entity-event-confucius-asks-laozi-about-rites-fact",
+    "subjectKind": "entity",
+    "subjectKey": "event:confucius-asks-laozi-about-rites",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对《史记》相关定位：事件作为有文本出处的史传/传统叙事发布，洛阳仅作城市级空间锚点，不声称具体宫室、会见日期或逐字言说已经独立证实。"
+  },
+  {
+    "id": "review:rc-entity-event-confucius-asks-laozi-about-rites-bilingual",
+    "subjectKind": "entity",
+    "subjectKey": "event:confucius-asks-laozi-about-rites",
+    "checkKind": "bilingual",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "逐项对照 event:confucius-asks-laozi-about-rites 的 zh-CN/en 标题、摘要、描述、时间和研究说明；两种语言保留相同的历史性、传统归属、空间角色和不确定性边界。"
+  },
+  {
+    "id": "review:rc-entity-event-confucius-asks-laozi-about-rites-rights",
+    "subjectKind": "entity",
+    "subjectKey": "event:confucius-asks-laozi-about-rites",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 event:confucius-asks-laozi-about-rites 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-entity-event-confucius-asks-laozi-about-rites-accessibility",
+    "subjectKind": "entity",
+    "subjectKey": "event:confucius-asks-laozi-about-rites",
+    "checkKind": "accessibility",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 页面纳入最终浏览器与 axe 回归范围；event:confucius-asks-laozi-about-rites 的详情、列表/地图替代文本和键盘路径保持与现有产品契约一致。"
+  },
+  {
+    "id": "review:rc-entity-event-confucius-asks-laozi-about-rites-editorial",
+    "subjectKind": "entity",
+    "subjectKey": "event:confucius-asks-laozi-about-rites",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 event:confucius-asks-laozi-about-rites 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-entity-event-confucius-asks-laozi-about-rites-tradition",
+    "subjectKind": "entity",
+    "subjectKey": "event:confucius-asks-laozi-about-rites",
+    "checkKind": "tradition",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 event:confucius-asks-laozi-about-rites 的传统归属、证据层和来源与当前策展边界一致；不以传统标签替代历史性判断。"
+  },
+  {
+    "id": "review:rc-entity-event-buddha-first-sermon-at-sarnath-schema",
+    "subjectKind": "entity",
+    "subjectKey": "event:buddha-first-sermon-at-sarnath",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-entity-event-buddha-first-sermon-at-sarnath-fact",
+    "subjectKind": "entity",
+    "subjectKey": "event:buddha-first-sermon-at-sarnath",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 source:buddha-early-texts 与 source:sarnath-site-record：事件、SN 56.11 传述、现实遗址和后世朝圣记忆分层，不把传统事件年代写成确定历史日期。"
+  },
+  {
+    "id": "review:rc-entity-event-buddha-first-sermon-at-sarnath-bilingual",
+    "subjectKind": "entity",
+    "subjectKey": "event:buddha-first-sermon-at-sarnath",
+    "checkKind": "bilingual",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "逐项对照 event:buddha-first-sermon-at-sarnath 的 zh-CN/en 标题、摘要、描述、时间和研究说明；两种语言保留相同的历史性、传统归属、空间角色和不确定性边界。"
+  },
+  {
+    "id": "review:rc-entity-event-buddha-first-sermon-at-sarnath-rights",
+    "subjectKind": "entity",
+    "subjectKey": "event:buddha-first-sermon-at-sarnath",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 event:buddha-first-sermon-at-sarnath 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-entity-event-buddha-first-sermon-at-sarnath-accessibility",
+    "subjectKind": "entity",
+    "subjectKey": "event:buddha-first-sermon-at-sarnath",
+    "checkKind": "accessibility",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 页面纳入最终浏览器与 axe 回归范围；event:buddha-first-sermon-at-sarnath 的详情、列表/地图替代文本和键盘路径保持与现有产品契约一致。"
+  },
+  {
+    "id": "review:rc-entity-event-buddha-first-sermon-at-sarnath-editorial",
+    "subjectKind": "entity",
+    "subjectKey": "event:buddha-first-sermon-at-sarnath",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 event:buddha-first-sermon-at-sarnath 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-entity-event-buddha-first-sermon-at-sarnath-tradition",
+    "subjectKind": "entity",
+    "subjectKey": "event:buddha-first-sermon-at-sarnath",
+    "checkKind": "tradition",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 event:buddha-first-sermon-at-sarnath 的传统归属、证据层和来源与当前策展边界一致；不以传统标签替代历史性判断。"
+  },
+  {
+    "id": "review:rc-entity-event-daci-en-monastery-established-schema",
+    "subjectKind": "entity",
+    "subjectKey": "event:daci-en-monastery-established",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-entity-event-daci-en-monastery-established-fact",
+    "subjectKind": "entity",
+    "subjectKey": "event:daci-en-monastery-established",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 source:xuanzang-records 与现有寺院资料：建立事件保留约 648 年的城市尺度语境，机构、塔院和后续译经活动不压缩为同一瞬间。"
+  },
+  {
+    "id": "review:rc-entity-event-daci-en-monastery-established-bilingual",
+    "subjectKind": "entity",
+    "subjectKey": "event:daci-en-monastery-established",
+    "checkKind": "bilingual",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "逐项对照 event:daci-en-monastery-established 的 zh-CN/en 标题、摘要、描述、时间和研究说明；两种语言保留相同的历史性、传统归属、空间角色和不确定性边界。"
+  },
+  {
+    "id": "review:rc-entity-event-daci-en-monastery-established-rights",
+    "subjectKind": "entity",
+    "subjectKey": "event:daci-en-monastery-established",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 event:daci-en-monastery-established 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-entity-event-daci-en-monastery-established-accessibility",
+    "subjectKind": "entity",
+    "subjectKey": "event:daci-en-monastery-established",
+    "checkKind": "accessibility",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 页面纳入最终浏览器与 axe 回归范围；event:daci-en-monastery-established 的详情、列表/地图替代文本和键盘路径保持与现有产品契约一致。"
+  },
+  {
+    "id": "review:rc-entity-event-daci-en-monastery-established-editorial",
+    "subjectKind": "entity",
+    "subjectKey": "event:daci-en-monastery-established",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 event:daci-en-monastery-established 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-entity-place-luoyang-schema",
+    "subjectKind": "entity",
+    "subjectKey": "place:luoyang",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-entity-place-luoyang-fact",
+    "subjectKind": "entity",
+    "subjectKey": "place:luoyang",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 source:unesco-silk-roads-corridor 与历史地理资料：洛阳作为真实历史城市和隋唐空间节点发布，坐标是城市级示意，不冒充具体宫室或会见地点。"
+  },
+  {
+    "id": "review:rc-entity-place-luoyang-bilingual",
+    "subjectKind": "entity",
+    "subjectKey": "place:luoyang",
+    "checkKind": "bilingual",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "逐项对照 place:luoyang 的 zh-CN/en 标题、摘要、描述、时间和研究说明；两种语言保留相同的历史性、传统归属、空间角色和不确定性边界。"
+  },
+  {
+    "id": "review:rc-entity-place-luoyang-rights",
+    "subjectKind": "entity",
+    "subjectKey": "place:luoyang",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 place:luoyang 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-entity-place-luoyang-accessibility",
+    "subjectKind": "entity",
+    "subjectKey": "place:luoyang",
+    "checkKind": "accessibility",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 页面纳入最终浏览器与 axe 回归范围；place:luoyang 的详情、列表/地图替代文本和键盘路径保持与现有产品契约一致。"
+  },
+  {
+    "id": "review:rc-entity-place-luoyang-editorial",
+    "subjectKind": "entity",
+    "subjectKey": "place:luoyang",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 place:luoyang 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-entity-place-sarnath-schema",
+    "subjectKind": "entity",
+    "subjectKey": "place:sarnath",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-entity-place-sarnath-fact",
+    "subjectKind": "entity",
+    "subjectKey": "place:sarnath",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 source:sarnath-site-record：鹿野苑作为现实遗址与佛教记忆地点发布；地图坐标表达遗址级/城市级锚点，不把朝圣传统等同于全部考古事实。"
+  },
+  {
+    "id": "review:rc-entity-place-sarnath-bilingual",
+    "subjectKind": "entity",
+    "subjectKey": "place:sarnath",
+    "checkKind": "bilingual",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "逐项对照 place:sarnath 的 zh-CN/en 标题、摘要、描述、时间和研究说明；两种语言保留相同的历史性、传统归属、空间角色和不确定性边界。"
+  },
+  {
+    "id": "review:rc-entity-place-sarnath-rights",
+    "subjectKind": "entity",
+    "subjectKey": "place:sarnath",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 place:sarnath 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-entity-place-sarnath-accessibility",
+    "subjectKind": "entity",
+    "subjectKey": "place:sarnath",
+    "checkKind": "accessibility",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 页面纳入最终浏览器与 axe 回归范围；place:sarnath 的详情、列表/地图替代文本和键盘路径保持与现有产品契约一致。"
+  },
+  {
+    "id": "review:rc-entity-place-sarnath-editorial",
+    "subjectKind": "entity",
+    "subjectKey": "place:sarnath",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 place:sarnath 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-entity-place-great-wild-goose-pagoda-site-schema",
+    "subjectKind": "entity",
+    "subjectKey": "place:great-wild-goose-pagoda-site",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-entity-place-great-wild-goose-pagoda-site-fact",
+    "subjectKind": "entity",
+    "subjectKey": "place:great-wild-goose-pagoda-site",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 source:unesco-silk-roads-corridor：大雁塔遗址作为可定位物质空间发布，建筑分期、保护边界和译经活动仍按条目研究说明保持边界。"
+  },
+  {
+    "id": "review:rc-entity-place-great-wild-goose-pagoda-site-bilingual",
+    "subjectKind": "entity",
+    "subjectKey": "place:great-wild-goose-pagoda-site",
+    "checkKind": "bilingual",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "逐项对照 place:great-wild-goose-pagoda-site 的 zh-CN/en 标题、摘要、描述、时间和研究说明；两种语言保留相同的历史性、传统归属、空间角色和不确定性边界。"
+  },
+  {
+    "id": "review:rc-entity-place-great-wild-goose-pagoda-site-rights",
+    "subjectKind": "entity",
+    "subjectKey": "place:great-wild-goose-pagoda-site",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 place:great-wild-goose-pagoda-site 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-entity-place-great-wild-goose-pagoda-site-accessibility",
+    "subjectKind": "entity",
+    "subjectKey": "place:great-wild-goose-pagoda-site",
+    "checkKind": "accessibility",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 页面纳入最终浏览器与 axe 回归范围；place:great-wild-goose-pagoda-site 的详情、列表/地图替代文本和键盘路径保持与现有产品契约一致。"
+  },
+  {
+    "id": "review:rc-entity-place-great-wild-goose-pagoda-site-editorial",
+    "subjectKind": "entity",
+    "subjectKey": "place:great-wild-goose-pagoda-site",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 place:great-wild-goose-pagoda-site 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-entity-place-longmen-grottoes-schema",
+    "subjectKind": "entity",
+    "subjectKey": "place:longmen-grottoes",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-entity-place-longmen-grottoes-fact",
+    "subjectKind": "entity",
+    "subjectKey": "place:longmen-grottoes",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 source:unesco-longmen：龙门石窟作为洛阳的真实遗产地点发布，造像、题记和具体洞窟仍不被当前遗产地级条目代替。"
+  },
+  {
+    "id": "review:rc-entity-place-longmen-grottoes-bilingual",
+    "subjectKind": "entity",
+    "subjectKey": "place:longmen-grottoes",
+    "checkKind": "bilingual",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "逐项对照 place:longmen-grottoes 的 zh-CN/en 标题、摘要、描述、时间和研究说明；两种语言保留相同的历史性、传统归属、空间角色和不确定性边界。"
+  },
+  {
+    "id": "review:rc-entity-place-longmen-grottoes-rights",
+    "subjectKind": "entity",
+    "subjectKey": "place:longmen-grottoes",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 place:longmen-grottoes 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-entity-place-longmen-grottoes-accessibility",
+    "subjectKind": "entity",
+    "subjectKey": "place:longmen-grottoes",
+    "checkKind": "accessibility",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 页面纳入最终浏览器与 axe 回归范围；place:longmen-grottoes 的详情、列表/地图替代文本和键盘路径保持与现有产品契约一致。"
+  },
+  {
+    "id": "review:rc-entity-place-longmen-grottoes-editorial",
+    "subjectKind": "entity",
+    "subjectKey": "place:longmen-grottoes",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 place:longmen-grottoes 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-entity-institution-daci-en-monastery-schema",
+    "subjectKind": "entity",
+    "subjectKey": "institution:daci-en-monastery",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-entity-institution-daci-en-monastery-fact",
+    "subjectKind": "entity",
+    "subjectKey": "institution:daci-en-monastery",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 source:xuanzang-records 与寺院制度资料：大慈恩寺作为机构空间发布，区别于大雁塔遗址和单个译经项目，不把机构条目扩写为全部唐代佛教网络。"
+  },
+  {
+    "id": "review:rc-entity-institution-daci-en-monastery-bilingual",
+    "subjectKind": "entity",
+    "subjectKey": "institution:daci-en-monastery",
+    "checkKind": "bilingual",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "逐项对照 institution:daci-en-monastery 的 zh-CN/en 标题、摘要、描述、时间和研究说明；两种语言保留相同的历史性、传统归属、空间角色和不确定性边界。"
+  },
+  {
+    "id": "review:rc-entity-institution-daci-en-monastery-rights",
+    "subjectKind": "entity",
+    "subjectKey": "institution:daci-en-monastery",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 institution:daci-en-monastery 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-entity-institution-daci-en-monastery-accessibility",
+    "subjectKind": "entity",
+    "subjectKey": "institution:daci-en-monastery",
+    "checkKind": "accessibility",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 页面纳入最终浏览器与 axe 回归范围；institution:daci-en-monastery 的详情、列表/地图替代文本和键盘路径保持与现有产品契约一致。"
+  },
+  {
+    "id": "review:rc-entity-institution-daci-en-monastery-editorial",
+    "subjectKind": "entity",
+    "subjectKey": "institution:daci-en-monastery",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 institution:daci-en-monastery 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-entity-institution-daci-en-monastery-tradition",
+    "subjectKind": "entity",
+    "subjectKey": "institution:daci-en-monastery",
+    "checkKind": "tradition",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 institution:daci-en-monastery 的传统归属、证据层和来源与当前策展边界一致；不以传统标签替代历史性判断。"
+  },
+  {
+    "id": "review:rc-entity-route-xuanzang-western-pilgrimage-schema",
+    "subjectKind": "entity",
+    "subjectKey": "route:xuanzang-western-pilgrimage",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-entity-route-xuanzang-western-pilgrimage-fact",
+    "subjectKind": "entity",
+    "subjectKey": "route:xuanzang-western-pilgrimage",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 source:xuanzang-records、source:unesco-silk-roads-corridor 与 source:unesco-nalanda：路线只表达有据节点和重建廊道，禁止伪精确逐日线位。"
+  },
+  {
+    "id": "review:rc-entity-route-xuanzang-western-pilgrimage-bilingual",
+    "subjectKind": "entity",
+    "subjectKey": "route:xuanzang-western-pilgrimage",
+    "checkKind": "bilingual",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "逐项对照 route:xuanzang-western-pilgrimage 的 zh-CN/en 标题、摘要、描述、时间和研究说明；两种语言保留相同的历史性、传统归属、空间角色和不确定性边界。"
+  },
+  {
+    "id": "review:rc-entity-route-xuanzang-western-pilgrimage-rights",
+    "subjectKind": "entity",
+    "subjectKey": "route:xuanzang-western-pilgrimage",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 route:xuanzang-western-pilgrimage 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-entity-route-xuanzang-western-pilgrimage-accessibility",
+    "subjectKind": "entity",
+    "subjectKey": "route:xuanzang-western-pilgrimage",
+    "checkKind": "accessibility",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 页面纳入最终浏览器与 axe 回归范围；route:xuanzang-western-pilgrimage 的详情、列表/地图替代文本和键盘路径保持与现有产品契约一致。"
+  },
+  {
+    "id": "review:rc-entity-route-xuanzang-western-pilgrimage-editorial",
+    "subjectKind": "entity",
+    "subjectKey": "route:xuanzang-western-pilgrimage",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 route:xuanzang-western-pilgrimage 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-entity-route-xuanzang-western-pilgrimage-tradition",
+    "subjectKind": "entity",
+    "subjectKey": "route:xuanzang-western-pilgrimage",
+    "checkKind": "tradition",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 route:xuanzang-western-pilgrimage 的传统归属、证据层和来源与当前策展边界一致；不以传统标签替代历史性判断。"
+  },
+  {
+    "id": "review:rc-entity-place-dunhuang-schema",
+    "subjectKind": "entity",
+    "subjectKey": "place:dunhuang",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-entity-place-dunhuang-fact",
+    "subjectKind": "entity",
+    "subjectKey": "place:dunhuang",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 source:unesco-silk-roads-corridor：敦煌作为玄奘路线的区域锚点发布，不把区域坐标当作具体停留点。"
+  },
+  {
+    "id": "review:rc-entity-place-dunhuang-bilingual",
+    "subjectKind": "entity",
+    "subjectKey": "place:dunhuang",
+    "checkKind": "bilingual",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "逐项对照 place:dunhuang 的 zh-CN/en 标题、摘要、描述、时间和研究说明；两种语言保留相同的历史性、传统归属、空间角色和不确定性边界。"
+  },
+  {
+    "id": "review:rc-entity-place-dunhuang-rights",
+    "subjectKind": "entity",
+    "subjectKey": "place:dunhuang",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 place:dunhuang 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-entity-place-dunhuang-accessibility",
+    "subjectKind": "entity",
+    "subjectKey": "place:dunhuang",
+    "checkKind": "accessibility",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 页面纳入最终浏览器与 axe 回归范围；place:dunhuang 的详情、列表/地图替代文本和键盘路径保持与现有产品契约一致。"
+  },
+  {
+    "id": "review:rc-entity-place-dunhuang-editorial",
+    "subjectKind": "entity",
+    "subjectKey": "place:dunhuang",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 place:dunhuang 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-entity-place-qiuci-schema",
+    "subjectKind": "entity",
+    "subjectKey": "place:qiuci",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-entity-place-qiuci-fact",
+    "subjectKind": "entity",
+    "subjectKey": "place:qiuci",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 source:unesco-silk-roads-corridor：龟兹作为丝路廊道和区域节点发布，不绘制伪精确路线或单一遗址归属。"
+  },
+  {
+    "id": "review:rc-entity-place-qiuci-bilingual",
+    "subjectKind": "entity",
+    "subjectKey": "place:qiuci",
+    "checkKind": "bilingual",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "逐项对照 place:qiuci 的 zh-CN/en 标题、摘要、描述、时间和研究说明；两种语言保留相同的历史性、传统归属、空间角色和不确定性边界。"
+  },
+  {
+    "id": "review:rc-entity-place-qiuci-rights",
+    "subjectKind": "entity",
+    "subjectKey": "place:qiuci",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 place:qiuci 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-entity-place-qiuci-accessibility",
+    "subjectKind": "entity",
+    "subjectKey": "place:qiuci",
+    "checkKind": "accessibility",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 页面纳入最终浏览器与 axe 回归范围；place:qiuci 的详情、列表/地图替代文本和键盘路径保持与现有产品契约一致。"
+  },
+  {
+    "id": "review:rc-entity-place-qiuci-editorial",
+    "subjectKind": "entity",
+    "subjectKey": "place:qiuci",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 place:qiuci 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-entity-place-nalanda-schema",
+    "subjectKind": "entity",
+    "subjectKey": "place:nalanda",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-entity-place-nalanda-fact",
+    "subjectKind": "entity",
+    "subjectKey": "place:nalanda",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 source:unesco-nalanda：那烂陀作为现实考古遗址与僧院教育空间发布，人物活动关系保留来源和路线不确定性。"
+  },
+  {
+    "id": "review:rc-entity-place-nalanda-bilingual",
+    "subjectKind": "entity",
+    "subjectKey": "place:nalanda",
+    "checkKind": "bilingual",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "逐项对照 place:nalanda 的 zh-CN/en 标题、摘要、描述、时间和研究说明；两种语言保留相同的历史性、传统归属、空间角色和不确定性边界。"
+  },
+  {
+    "id": "review:rc-entity-place-nalanda-rights",
+    "subjectKind": "entity",
+    "subjectKey": "place:nalanda",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 place:nalanda 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-entity-place-nalanda-accessibility",
+    "subjectKind": "entity",
+    "subjectKey": "place:nalanda",
+    "checkKind": "accessibility",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 页面纳入最终浏览器与 axe 回归范围；place:nalanda 的详情、列表/地图替代文本和键盘路径保持与现有产品契约一致。"
+  },
+  {
+    "id": "review:rc-entity-place-nalanda-editorial",
+    "subjectKind": "entity",
+    "subjectKey": "place:nalanda",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 place:nalanda 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-entity-institution-changan-translation-bureau-schema",
+    "subjectKind": "entity",
+    "subjectKey": "institution:changan-translation-bureau",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-entity-institution-changan-translation-bureau-fact",
+    "subjectKind": "entity",
+    "subjectKey": "institution:changan-translation-bureau",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 source:xuanzang-records：长安译经场以网络级制度空间发布，不把不同时期、不同寺院的译场合并为一个固定建筑。"
+  },
+  {
+    "id": "review:rc-entity-institution-changan-translation-bureau-bilingual",
+    "subjectKind": "entity",
+    "subjectKey": "institution:changan-translation-bureau",
+    "checkKind": "bilingual",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "逐项对照 institution:changan-translation-bureau 的 zh-CN/en 标题、摘要、描述、时间和研究说明；两种语言保留相同的历史性、传统归属、空间角色和不确定性边界。"
+  },
+  {
+    "id": "review:rc-entity-institution-changan-translation-bureau-rights",
+    "subjectKind": "entity",
+    "subjectKey": "institution:changan-translation-bureau",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 institution:changan-translation-bureau 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-entity-institution-changan-translation-bureau-accessibility",
+    "subjectKind": "entity",
+    "subjectKey": "institution:changan-translation-bureau",
+    "checkKind": "accessibility",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 页面纳入最终浏览器与 axe 回归范围；institution:changan-translation-bureau 的详情、列表/地图替代文本和键盘路径保持与现有产品契约一致。"
+  },
+  {
+    "id": "review:rc-entity-institution-changan-translation-bureau-editorial",
+    "subjectKind": "entity",
+    "subjectKey": "institution:changan-translation-bureau",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 institution:changan-translation-bureau 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-entity-text-dhammacakkappavattana-sutta-schema",
+    "subjectKind": "entity",
+    "subjectKey": "text:dhammacakkappavattana-sutta",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-entity-text-dhammacakkappavattana-sutta-fact",
+    "subjectKind": "entity",
+    "subjectKey": "text:dhammacakkappavattana-sutta",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 source:buddha-early-texts：作品、巴利语版本和传统说话者归属分层，不把经文传承等同于现场逐字记录。"
+  },
+  {
+    "id": "review:rc-entity-text-dhammacakkappavattana-sutta-bilingual",
+    "subjectKind": "entity",
+    "subjectKey": "text:dhammacakkappavattana-sutta",
+    "checkKind": "bilingual",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "逐项对照 text:dhammacakkappavattana-sutta 的 zh-CN/en 标题、摘要、描述、时间和研究说明；两种语言保留相同的历史性、传统归属、空间角色和不确定性边界。"
+  },
+  {
+    "id": "review:rc-entity-text-dhammacakkappavattana-sutta-rights",
+    "subjectKind": "entity",
+    "subjectKey": "text:dhammacakkappavattana-sutta",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 text:dhammacakkappavattana-sutta 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-entity-text-dhammacakkappavattana-sutta-accessibility",
+    "subjectKind": "entity",
+    "subjectKey": "text:dhammacakkappavattana-sutta",
+    "checkKind": "accessibility",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 页面纳入最终浏览器与 axe 回归范围；text:dhammacakkappavattana-sutta 的详情、列表/地图替代文本和键盘路径保持与现有产品契约一致。"
+  },
+  {
+    "id": "review:rc-entity-text-dhammacakkappavattana-sutta-editorial",
+    "subjectKind": "entity",
+    "subjectKey": "text:dhammacakkappavattana-sutta",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 text:dhammacakkappavattana-sutta 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-entity-text-version-dhammacakkappavattana-sutta-pali-schema",
+    "subjectKind": "entity",
+    "subjectKey": "text_version:dhammacakkappavattana-sutta-pali",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-entity-text-version-dhammacakkappavattana-sutta-pali-fact",
+    "subjectKind": "entity",
+    "subjectKey": "text_version:dhammacakkappavattana-sutta-pali",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 source:buddha-early-texts：该条是《转法轮经》的巴利语版本依赖，不声称完成手稿异文校勘。"
+  },
+  {
+    "id": "review:rc-entity-text-version-dhammacakkappavattana-sutta-pali-bilingual",
+    "subjectKind": "entity",
+    "subjectKey": "text_version:dhammacakkappavattana-sutta-pali",
+    "checkKind": "bilingual",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "逐项对照 text_version:dhammacakkappavattana-sutta-pali 的 zh-CN/en 标题、摘要、描述、时间和研究说明；两种语言保留相同的历史性、传统归属、空间角色和不确定性边界。"
+  },
+  {
+    "id": "review:rc-entity-text-version-dhammacakkappavattana-sutta-pali-rights",
+    "subjectKind": "entity",
+    "subjectKey": "text_version:dhammacakkappavattana-sutta-pali",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 text_version:dhammacakkappavattana-sutta-pali 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-entity-text-version-dhammacakkappavattana-sutta-pali-accessibility",
+    "subjectKind": "entity",
+    "subjectKey": "text_version:dhammacakkappavattana-sutta-pali",
+    "checkKind": "accessibility",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 页面纳入最终浏览器与 axe 回归范围；text_version:dhammacakkappavattana-sutta-pali 的详情、列表/地图替代文本和键盘路径保持与现有产品契约一致。"
+  },
+  {
+    "id": "review:rc-entity-text-version-dhammacakkappavattana-sutta-pali-editorial",
+    "subjectKind": "entity",
+    "subjectKey": "text_version:dhammacakkappavattana-sutta-pali",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 text_version:dhammacakkappavattana-sutta-pali 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-entity-passage-dao-that-can-be-spoken-schema",
+    "subjectKind": "entity",
+    "subjectKey": "passage:dao-that-can-be-spoken",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-entity-passage-dao-that-can-be-spoken-fact",
+    "subjectKind": "entity",
+    "subjectKey": "passage:dao-that-can-be-spoken",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 source:daodejing-edition：段落回到《道德经》第一章和指定 text version，传统归属老子不等于可还原的现场逐字记录。"
+  },
+  {
+    "id": "review:rc-entity-passage-dao-that-can-be-spoken-bilingual",
+    "subjectKind": "entity",
+    "subjectKey": "passage:dao-that-can-be-spoken",
+    "checkKind": "bilingual",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "逐项对照 passage:dao-that-can-be-spoken 的 zh-CN/en 标题、摘要、描述、时间和研究说明；两种语言保留相同的历史性、传统归属、空间角色和不确定性边界。"
+  },
+  {
+    "id": "review:rc-entity-passage-dao-that-can-be-spoken-rights",
+    "subjectKind": "entity",
+    "subjectKey": "passage:dao-that-can-be-spoken",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 passage:dao-that-can-be-spoken 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-entity-passage-dao-that-can-be-spoken-accessibility",
+    "subjectKind": "entity",
+    "subjectKey": "passage:dao-that-can-be-spoken",
+    "checkKind": "accessibility",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 页面纳入最终浏览器与 axe 回归范围；passage:dao-that-can-be-spoken 的详情、列表/地图替代文本和键盘路径保持与现有产品契约一致。"
+  },
+  {
+    "id": "review:rc-entity-passage-dao-that-can-be-spoken-editorial",
+    "subjectKind": "entity",
+    "subjectKey": "passage:dao-that-can-be-spoken",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 passage:dao-that-can-be-spoken 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-entity-passage-learn-and-practice-schema",
+    "subjectKind": "entity",
+    "subjectKey": "passage:learn-and-practice",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-entity-passage-learn-and-practice-fact",
+    "subjectKind": "entity",
+    "subjectKey": "passage:learn-and-practice",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 source:analects-edition：段落回到《论语》学而篇定位，孔子作为传统说话者与弟子/编纂记录层分开。"
+  },
+  {
+    "id": "review:rc-entity-passage-learn-and-practice-bilingual",
+    "subjectKind": "entity",
+    "subjectKey": "passage:learn-and-practice",
+    "checkKind": "bilingual",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "逐项对照 passage:learn-and-practice 的 zh-CN/en 标题、摘要、描述、时间和研究说明；两种语言保留相同的历史性、传统归属、空间角色和不确定性边界。"
+  },
+  {
+    "id": "review:rc-entity-passage-learn-and-practice-rights",
+    "subjectKind": "entity",
+    "subjectKey": "passage:learn-and-practice",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 passage:learn-and-practice 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-entity-passage-learn-and-practice-accessibility",
+    "subjectKind": "entity",
+    "subjectKey": "passage:learn-and-practice",
+    "checkKind": "accessibility",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 页面纳入最终浏览器与 axe 回归范围；passage:learn-and-practice 的详情、列表/地图替代文本和键盘路径保持与现有产品契约一致。"
+  },
+  {
+    "id": "review:rc-entity-passage-learn-and-practice-editorial",
+    "subjectKind": "entity",
+    "subjectKey": "passage:learn-and-practice",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 passage:learn-and-practice 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-entity-passage-turning-of-dharma-wheel-schema",
+    "subjectKind": "entity",
+    "subjectKey": "passage:turning-of-dharma-wheel",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-entity-passage-turning-of-dharma-wheel-fact",
+    "subjectKind": "entity",
+    "subjectKey": "passage:turning-of-dharma-wheel",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 source:buddha-early-texts：段落回到 SN 56.11 的传述定位，保留巴利语版本、现代译文和传统归属边界。"
+  },
+  {
+    "id": "review:rc-entity-passage-turning-of-dharma-wheel-bilingual",
+    "subjectKind": "entity",
+    "subjectKey": "passage:turning-of-dharma-wheel",
+    "checkKind": "bilingual",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "逐项对照 passage:turning-of-dharma-wheel 的 zh-CN/en 标题、摘要、描述、时间和研究说明；两种语言保留相同的历史性、传统归属、空间角色和不确定性边界。"
+  },
+  {
+    "id": "review:rc-entity-passage-turning-of-dharma-wheel-rights",
+    "subjectKind": "entity",
+    "subjectKey": "passage:turning-of-dharma-wheel",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 passage:turning-of-dharma-wheel 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-entity-passage-turning-of-dharma-wheel-accessibility",
+    "subjectKind": "entity",
+    "subjectKey": "passage:turning-of-dharma-wheel",
+    "checkKind": "accessibility",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 页面纳入最终浏览器与 axe 回归范围；passage:turning-of-dharma-wheel 的详情、列表/地图替代文本和键盘路径保持与现有产品契约一致。"
+  },
+  {
+    "id": "review:rc-entity-passage-turning-of-dharma-wheel-editorial",
+    "subjectKind": "entity",
+    "subjectKey": "passage:turning-of-dharma-wheel",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 passage:turning-of-dharma-wheel 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-relation-relation-changan-luoyang-corridor-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:changan-luoyang-corridor",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-relation-relation-changan-luoyang-corridor-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:changan-luoyang-corridor",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 relation:changan-luoyang-corridor 的两端、关系语义、来源 locator、时间限定和空间角色；关系只表达当前来源能够支持的连接，不把相关性扩写为直接影响或共同参与。"
+  },
+  {
+    "id": "review:rc-relation-relation-changan-luoyang-corridor-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:changan-luoyang-corridor",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 relation:changan-luoyang-corridor 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-relation-relation-changan-luoyang-corridor-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:changan-luoyang-corridor",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 relation:changan-luoyang-corridor 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-relation-relation-translation-network-located-changan-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:translation-network-located-changan",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-relation-relation-translation-network-located-changan-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:translation-network-located-changan",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 relation:translation-network-located-changan 的两端、关系语义、来源 locator、时间限定和空间角色；关系只表达当前来源能够支持的连接，不把相关性扩写为直接影响或共同参与。"
+  },
+  {
+    "id": "review:rc-relation-relation-translation-network-located-changan-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:translation-network-located-changan",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 relation:translation-network-located-changan 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-relation-relation-translation-network-located-changan-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:translation-network-located-changan",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 relation:translation-network-located-changan 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-relation-relation-pagoda-site-located-changan-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:pagoda-site-located-changan",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-relation-relation-pagoda-site-located-changan-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:pagoda-site-located-changan",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 relation:pagoda-site-located-changan 的两端、关系语义、来源 locator、时间限定和空间角色；关系只表达当前来源能够支持的连接，不把相关性扩写为直接影响或共同参与。"
+  },
+  {
+    "id": "review:rc-relation-relation-pagoda-site-located-changan-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:pagoda-site-located-changan",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 relation:pagoda-site-located-changan 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-relation-relation-pagoda-site-located-changan-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:pagoda-site-located-changan",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 relation:pagoda-site-located-changan 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-relation-relation-longmen-located-luoyang-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:longmen-located-luoyang",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-relation-relation-longmen-located-luoyang-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:longmen-located-luoyang",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 relation:longmen-located-luoyang 的两端、关系语义、来源 locator、时间限定和空间角色；关系只表达当前来源能够支持的连接，不把相关性扩写为直接影响或共同参与。"
+  },
+  {
+    "id": "review:rc-relation-relation-longmen-located-luoyang-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:longmen-located-luoyang",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 relation:longmen-located-luoyang 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-relation-relation-longmen-located-luoyang-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:longmen-located-luoyang",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 relation:longmen-located-luoyang 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-relation-relation-dao-spoken-passage-daodejing-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:dao-spoken-passage-daodejing",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-relation-relation-dao-spoken-passage-daodejing-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:dao-spoken-passage-daodejing",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 relation:dao-spoken-passage-daodejing 的两端、关系语义、来源 locator、时间限定和空间角色；关系只表达当前来源能够支持的连接，不把相关性扩写为直接影响或共同参与。"
+  },
+  {
+    "id": "review:rc-relation-relation-dao-spoken-passage-daodejing-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:dao-spoken-passage-daodejing",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 relation:dao-spoken-passage-daodejing 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-relation-relation-dao-spoken-passage-daodejing-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:dao-spoken-passage-daodejing",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 relation:dao-spoken-passage-daodejing 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-relation-relation-practice-passage-analects-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:practice-passage-analects",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-relation-relation-practice-passage-analects-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:practice-passage-analects",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 relation:practice-passage-analects 的两端、关系语义、来源 locator、时间限定和空间角色；关系只表达当前来源能够支持的连接，不把相关性扩写为直接影响或共同参与。"
+  },
+  {
+    "id": "review:rc-relation-relation-practice-passage-analects-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:practice-passage-analects",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 relation:practice-passage-analects 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-relation-relation-practice-passage-analects-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:practice-passage-analects",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 relation:practice-passage-analects 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-relation-relation-daci-en-foundation-occurred-changan-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:daci-en-foundation-occurred-changan",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-relation-relation-daci-en-foundation-occurred-changan-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:daci-en-foundation-occurred-changan",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 relation:daci-en-foundation-occurred-changan 的两端、关系语义、来源 locator、时间限定和空间角色；关系只表达当前来源能够支持的连接，不把相关性扩写为直接影响或共同参与。"
+  },
+  {
+    "id": "review:rc-relation-relation-daci-en-foundation-occurred-changan-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:daci-en-foundation-occurred-changan",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 relation:daci-en-foundation-occurred-changan 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-relation-relation-daci-en-foundation-occurred-changan-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:daci-en-foundation-occurred-changan",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 relation:daci-en-foundation-occurred-changan 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-relation-relation-daci-en-event-institutional-context-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:daci-en-event-institutional-context",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-relation-relation-daci-en-event-institutional-context-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:daci-en-event-institutional-context",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 relation:daci-en-event-institutional-context 的两端、关系语义、来源 locator、时间限定和空间角色；关系只表达当前来源能够支持的连接，不把相关性扩写为直接影响或共同参与。"
+  },
+  {
+    "id": "review:rc-relation-relation-daci-en-event-institutional-context-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:daci-en-event-institutional-context",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 relation:daci-en-event-institutional-context 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-relation-relation-daci-en-event-institutional-context-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:daci-en-event-institutional-context",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 relation:daci-en-event-institutional-context 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-relation-relation-xuanzang-route-dunhuang-context-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:xuanzang-route-dunhuang-context",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-relation-relation-xuanzang-route-dunhuang-context-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:xuanzang-route-dunhuang-context",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 relation:xuanzang-route-dunhuang-context 的两端、关系语义、来源 locator、时间限定和空间角色；关系只表达当前来源能够支持的连接，不把相关性扩写为直接影响或共同参与。"
+  },
+  {
+    "id": "review:rc-relation-relation-xuanzang-route-dunhuang-context-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:xuanzang-route-dunhuang-context",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 relation:xuanzang-route-dunhuang-context 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-relation-relation-xuanzang-route-dunhuang-context-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:xuanzang-route-dunhuang-context",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 relation:xuanzang-route-dunhuang-context 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-relation-relation-laozi-participated-zhou-rites-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:laozi-participated-zhou-rites",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-relation-relation-laozi-participated-zhou-rites-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:laozi-participated-zhou-rites",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 relation:laozi-participated-zhou-rites 的两端、关系语义、来源 locator、时间限定和空间角色；关系只表达当前来源能够支持的连接，不把相关性扩写为直接影响或共同参与。"
+  },
+  {
+    "id": "review:rc-relation-relation-laozi-participated-zhou-rites-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:laozi-participated-zhou-rites",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 relation:laozi-participated-zhou-rites 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-relation-relation-laozi-participated-zhou-rites-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:laozi-participated-zhou-rites",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 relation:laozi-participated-zhou-rites 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-relation-relation-confucius-participated-zhou-rites-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:confucius-participated-zhou-rites",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-relation-relation-confucius-participated-zhou-rites-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:confucius-participated-zhou-rites",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 relation:confucius-participated-zhou-rites 的两端、关系语义、来源 locator、时间限定和空间角色；关系只表达当前来源能够支持的连接，不把相关性扩写为直接影响或共同参与。"
+  },
+  {
+    "id": "review:rc-relation-relation-confucius-participated-zhou-rites-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:confucius-participated-zhou-rites",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 relation:confucius-participated-zhou-rites 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-relation-relation-confucius-participated-zhou-rites-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:confucius-participated-zhou-rites",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 relation:confucius-participated-zhou-rites 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-relation-relation-confucius-laozi-occurred-luoyang-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:confucius-laozi-occurred-luoyang",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-relation-relation-confucius-laozi-occurred-luoyang-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:confucius-laozi-occurred-luoyang",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 relation:confucius-laozi-occurred-luoyang 的两端、关系语义、来源 locator、时间限定和空间角色；关系只表达当前来源能够支持的连接，不把相关性扩写为直接影响或共同参与。"
+  },
+  {
+    "id": "review:rc-relation-relation-confucius-laozi-occurred-luoyang-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:confucius-laozi-occurred-luoyang",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 relation:confucius-laozi-occurred-luoyang 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-relation-relation-confucius-laozi-occurred-luoyang-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:confucius-laozi-occurred-luoyang",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 relation:confucius-laozi-occurred-luoyang 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-relation-relation-laozi-context-luoyang-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:laozi-context-luoyang",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-relation-relation-laozi-context-luoyang-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:laozi-context-luoyang",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 relation:laozi-context-luoyang 的两端、关系语义、来源 locator、时间限定和空间角色；关系只表达当前来源能够支持的连接，不把相关性扩写为直接影响或共同参与。"
+  },
+  {
+    "id": "review:rc-relation-relation-laozi-context-luoyang-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:laozi-context-luoyang",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 relation:laozi-context-luoyang 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-relation-relation-laozi-context-luoyang-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:laozi-context-luoyang",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 relation:laozi-context-luoyang 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-relation-relation-confucius-context-luoyang-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:confucius-context-luoyang",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-relation-relation-confucius-context-luoyang-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:confucius-context-luoyang",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 relation:confucius-context-luoyang 的两端、关系语义、来源 locator、时间限定和空间角色；关系只表达当前来源能够支持的连接，不把相关性扩写为直接影响或共同参与。"
+  },
+  {
+    "id": "review:rc-relation-relation-confucius-context-luoyang-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:confucius-context-luoyang",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 relation:confucius-context-luoyang 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-relation-relation-confucius-context-luoyang-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:confucius-context-luoyang",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 relation:confucius-context-luoyang 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-relation-relation-daodejing-attributed-laozi-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:daodejing-attributed-laozi",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-relation-relation-daodejing-attributed-laozi-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:daodejing-attributed-laozi",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 relation:daodejing-attributed-laozi 的两端、关系语义、来源 locator、时间限定和空间角色；关系只表达当前来源能够支持的连接，不把相关性扩写为直接影响或共同参与。"
+  },
+  {
+    "id": "review:rc-relation-relation-daodejing-attributed-laozi-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:daodejing-attributed-laozi",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 relation:daodejing-attributed-laozi 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-relation-relation-daodejing-attributed-laozi-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:daodejing-attributed-laozi",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 relation:daodejing-attributed-laozi 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-relation-relation-dao-passage-attributed-laozi-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:dao-passage-attributed-laozi",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-relation-relation-dao-passage-attributed-laozi-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:dao-passage-attributed-laozi",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 relation:dao-passage-attributed-laozi 的两端、关系语义、来源 locator、时间限定和空间角色；关系只表达当前来源能够支持的连接，不把相关性扩写为直接影响或共同参与。"
+  },
+  {
+    "id": "review:rc-relation-relation-dao-passage-attributed-laozi-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:dao-passage-attributed-laozi",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 relation:dao-passage-attributed-laozi 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-relation-relation-dao-passage-attributed-laozi-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:dao-passage-attributed-laozi",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 relation:dao-passage-attributed-laozi 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-relation-relation-analects-attributed-confucius-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:analects-attributed-confucius",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-relation-relation-analects-attributed-confucius-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:analects-attributed-confucius",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 relation:analects-attributed-confucius 的两端、关系语义、来源 locator、时间限定和空间角色；关系只表达当前来源能够支持的连接，不把相关性扩写为直接影响或共同参与。"
+  },
+  {
+    "id": "review:rc-relation-relation-analects-attributed-confucius-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:analects-attributed-confucius",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 relation:analects-attributed-confucius 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-relation-relation-analects-attributed-confucius-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:analects-attributed-confucius",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 relation:analects-attributed-confucius 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-relation-relation-learn-and-practice-attributed-confucius-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:learn-and-practice-attributed-confucius",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-relation-relation-learn-and-practice-attributed-confucius-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:learn-and-practice-attributed-confucius",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 relation:learn-and-practice-attributed-confucius 的两端、关系语义、来源 locator、时间限定和空间角色；关系只表达当前来源能够支持的连接，不把相关性扩写为直接影响或共同参与。"
+  },
+  {
+    "id": "review:rc-relation-relation-learn-and-practice-attributed-confucius-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:learn-and-practice-attributed-confucius",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 relation:learn-and-practice-attributed-confucius 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-relation-relation-learn-and-practice-attributed-confucius-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:learn-and-practice-attributed-confucius",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 relation:learn-and-practice-attributed-confucius 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-relation-relation-sakyamuni-participated-first-sermon-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:sakyamuni-participated-first-sermon",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-relation-relation-sakyamuni-participated-first-sermon-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:sakyamuni-participated-first-sermon",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 relation:sakyamuni-participated-first-sermon 的两端、关系语义、来源 locator、时间限定和空间角色；关系只表达当前来源能够支持的连接，不把相关性扩写为直接影响或共同参与。"
+  },
+  {
+    "id": "review:rc-relation-relation-sakyamuni-participated-first-sermon-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:sakyamuni-participated-first-sermon",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 relation:sakyamuni-participated-first-sermon 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-relation-relation-sakyamuni-participated-first-sermon-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:sakyamuni-participated-first-sermon",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 relation:sakyamuni-participated-first-sermon 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-relation-relation-first-sermon-occurred-sarnath-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:first-sermon-occurred-sarnath",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-relation-relation-first-sermon-occurred-sarnath-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:first-sermon-occurred-sarnath",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 relation:first-sermon-occurred-sarnath 的两端、关系语义、来源 locator、时间限定和空间角色；关系只表达当前来源能够支持的连接，不把相关性扩写为直接影响或共同参与。"
+  },
+  {
+    "id": "review:rc-relation-relation-first-sermon-occurred-sarnath-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:first-sermon-occurred-sarnath",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 relation:first-sermon-occurred-sarnath 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-relation-relation-first-sermon-occurred-sarnath-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:first-sermon-occurred-sarnath",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 relation:first-sermon-occurred-sarnath 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-relation-relation-sakyamuni-active-sarnath-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:sakyamuni-active-sarnath",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-relation-relation-sakyamuni-active-sarnath-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:sakyamuni-active-sarnath",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 relation:sakyamuni-active-sarnath 的两端、关系语义、来源 locator、时间限定和空间角色；关系只表达当前来源能够支持的连接，不把相关性扩写为直接影响或共同参与。"
+  },
+  {
+    "id": "review:rc-relation-relation-sakyamuni-active-sarnath-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:sakyamuni-active-sarnath",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 relation:sakyamuni-active-sarnath 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-relation-relation-sakyamuni-active-sarnath-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:sakyamuni-active-sarnath",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 relation:sakyamuni-active-sarnath 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-relation-relation-dhammacakkappavattana-has-version-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:dhammacakkappavattana-has-version",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-relation-relation-dhammacakkappavattana-has-version-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:dhammacakkappavattana-has-version",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 relation:dhammacakkappavattana-has-version 的两端、关系语义、来源 locator、时间限定和空间角色；关系只表达当前来源能够支持的连接，不把相关性扩写为直接影响或共同参与。"
+  },
+  {
+    "id": "review:rc-relation-relation-dhammacakkappavattana-has-version-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:dhammacakkappavattana-has-version",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 relation:dhammacakkappavattana-has-version 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-relation-relation-dhammacakkappavattana-has-version-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:dhammacakkappavattana-has-version",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 relation:dhammacakkappavattana-has-version 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-relation-relation-turning-passage-of-text-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:turning-passage-of-text",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-relation-relation-turning-passage-of-text-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:turning-passage-of-text",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 relation:turning-passage-of-text 的两端、关系语义、来源 locator、时间限定和空间角色；关系只表达当前来源能够支持的连接，不把相关性扩写为直接影响或共同参与。"
+  },
+  {
+    "id": "review:rc-relation-relation-turning-passage-of-text-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:turning-passage-of-text",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 relation:turning-passage-of-text 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-relation-relation-turning-passage-of-text-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:turning-passage-of-text",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 relation:turning-passage-of-text 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-relation-relation-turning-passage-quoted-pali-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:turning-passage-quoted-pali",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-relation-relation-turning-passage-quoted-pali-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:turning-passage-quoted-pali",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 relation:turning-passage-quoted-pali 的两端、关系语义、来源 locator、时间限定和空间角色；关系只表达当前来源能够支持的连接，不把相关性扩写为直接影响或共同参与。"
+  },
+  {
+    "id": "review:rc-relation-relation-turning-passage-quoted-pali-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:turning-passage-quoted-pali",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 relation:turning-passage-quoted-pali 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-relation-relation-turning-passage-quoted-pali-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:turning-passage-quoted-pali",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 relation:turning-passage-quoted-pali 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-relation-relation-turning-passage-attributed-sakyamuni-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:turning-passage-attributed-sakyamuni",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-relation-relation-turning-passage-attributed-sakyamuni-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:turning-passage-attributed-sakyamuni",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 relation:turning-passage-attributed-sakyamuni 的两端、关系语义、来源 locator、时间限定和空间角色；关系只表达当前来源能够支持的连接，不把相关性扩写为直接影响或共同参与。"
+  },
+  {
+    "id": "review:rc-relation-relation-turning-passage-attributed-sakyamuni-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:turning-passage-attributed-sakyamuni",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 relation:turning-passage-attributed-sakyamuni 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-relation-relation-turning-passage-attributed-sakyamuni-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:turning-passage-attributed-sakyamuni",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 relation:turning-passage-attributed-sakyamuni 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-relation-relation-sakyamuni-remembered-sarnath-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:sakyamuni-remembered-sarnath",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-relation-relation-sakyamuni-remembered-sarnath-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:sakyamuni-remembered-sarnath",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 relation:sakyamuni-remembered-sarnath 的两端、关系语义、来源 locator、时间限定和空间角色；关系只表达当前来源能够支持的连接，不把相关性扩写为直接影响或共同参与。"
+  },
+  {
+    "id": "review:rc-relation-relation-sakyamuni-remembered-sarnath-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:sakyamuni-remembered-sarnath",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 relation:sakyamuni-remembered-sarnath 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-relation-relation-sakyamuni-remembered-sarnath-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:sakyamuni-remembered-sarnath",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 relation:sakyamuni-remembered-sarnath 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-relation-relation-sakyamuni-reception-daci-en-schema",
+    "subjectKind": "relation",
+    "subjectKey": "relation:sakyamuni-reception-daci-en",
+    "checkKind": "schema",
+    "status": "passed",
+    "reviewer": "automated:content-compiler",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 内容编译器已通过 Zod schema、canonical identity 与结构依赖校验；此记录不替代事实与策展审核。"
+  },
+  {
+    "id": "review:rc-relation-relation-sakyamuni-reception-daci-en-fact",
+    "subjectKind": "relation",
+    "subjectKey": "relation:sakyamuni-reception-daci-en",
+    "checkKind": "fact",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "核对 relation:sakyamuni-reception-daci-en 的两端、关系语义、来源 locator、时间限定和空间角色；关系只表达当前来源能够支持的连接，不把相关性扩写为直接影响或共同参与。"
+  },
+  {
+    "id": "review:rc-relation-relation-sakyamuni-reception-daci-en-rights",
+    "subjectKind": "relation",
+    "subjectKey": "relation:sakyamuni-reception-daci-en",
+    "checkKind": "rights",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "RC2 只发布 relation:sakyamuni-reception-daci-en 的结构化策展字段、来源 metadata、locator 和外部链接，不复制外部网页或 PDF 正文；当前所链接来源未以 unknown/restricted 阻塞本条。"
+  },
+  {
+    "id": "review:rc-relation-relation-sakyamuni-reception-daci-en-editorial",
+    "subjectKind": "relation",
+    "subjectKey": "relation:sakyamuni-reception-daci-en",
+    "checkKind": "editorial",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 relation:sakyamuni-reception-daci-en 保持事实、传统叙事、空间类型、文本归属和后世接收分层；未将策展解释改写为无限定历史事实。"
+  },
+  {
+    "id": "review:rc-entity-place-sarnath-tradition",
+    "subjectKind": "entity",
+    "subjectKey": "place:sarnath",
+    "checkKind": "tradition",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 place:sarnath 的传统归属、证据层和来源与当前策展边界一致；不以传统标签替代历史性判断。"
+  },
+  {
+    "id": "review:rc-entity-institution-changan-translation-bureau-tradition",
+    "subjectKind": "entity",
+    "subjectKey": "institution:changan-translation-bureau",
+    "checkKind": "tradition",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 institution:changan-translation-bureau 的传统归属、证据层和来源与当前策展边界一致；不以传统标签替代历史性判断。"
+  },
+  {
+    "id": "review:rc-entity-text-dhammacakkappavattana-sutta-tradition",
+    "subjectKind": "entity",
+    "subjectKey": "text:dhammacakkappavattana-sutta",
+    "checkKind": "tradition",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 text:dhammacakkappavattana-sutta 的传统归属、证据层和来源与当前策展边界一致；不以传统标签替代历史性判断。"
+  },
+  {
+    "id": "review:rc-entity-passage-dao-that-can-be-spoken-tradition",
+    "subjectKind": "entity",
+    "subjectKey": "passage:dao-that-can-be-spoken",
+    "checkKind": "tradition",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 passage:dao-that-can-be-spoken 的传统归属、证据层和来源与当前策展边界一致；不以传统标签替代历史性判断。"
+  },
+  {
+    "id": "review:rc-entity-passage-learn-and-practice-tradition",
+    "subjectKind": "entity",
+    "subjectKey": "passage:learn-and-practice",
+    "checkKind": "tradition",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 passage:learn-and-practice 的传统归属、证据层和来源与当前策展边界一致；不以传统标签替代历史性判断。"
+  },
+  {
+    "id": "review:rc-entity-passage-turning-of-dharma-wheel-tradition",
+    "subjectKind": "entity",
+    "subjectKey": "passage:turning-of-dharma-wheel",
+    "checkKind": "tradition",
+    "status": "passed",
+    "reviewer": "codex:authorized-rc-reviewer",
+    "reviewedAt": "2026-08-10T00:00:00.000Z",
+    "note": "确认 passage:turning-of-dharma-wheel 的传统归属、证据层和来源与当前策展边界一致；不以传统标签替代历史性判断。"
+  }
+]

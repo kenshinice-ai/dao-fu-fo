@@ -1,0 +1,36 @@
+{
+  "id": "33affe77-a0b7-524b-aaab-02bb53abb65b",
+  "locale": "zh-CN",
+  "kind": "text_version",
+  "slug": "analects-received",
+  "title": "《论语》通行本",
+  "tradition": "confucianism",
+  "evidence": "historical_inferred",
+  "timeLabel": "传世本流通",
+  "shortSummary": "《论语》通行篇章的 Alpha 版本记录。",
+  "curatorialDescription": [
+    "版本实体将文本作品、篇章定位和后世注疏连接起来。"
+  ],
+  "researchNote": "正式发布前补充底本、篇章和注疏定位。",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:analects-edition",
+      "title": "《论语》通行本与篇章资料",
+      "locator": "颜渊第十二，第1章（“克己复礼为仁”）",
+      "grade": "A",
+      "role": "儒家 passage 原文和篇章定位的初始依据",
+      "url": "https://ctext.org/wiki.pl?chapter=198285&if=en&remap=gb"
+    }
+  ],
+  "profile": {
+    "textSlug": "analects",
+    "versionKind": "recension",
+    "languageCode": "lzh",
+    "citationLabel": "Analects received text",
+    "rightsStatus": "public_domain"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

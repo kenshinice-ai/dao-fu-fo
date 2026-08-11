@@ -1,43 +1,54 @@
 {
+  "id": "cd7fb9ab-cea1-5e4a-b288-a1e20d568770",
   "locale": "en",
   "kind": "figure",
   "slug": "xuanzang",
   "title": "Xuanzang",
-  "subtitle": "c. 602–664 · monk, traveller and organiser of translation",
+  "subtitle": "Pilgrim, translator and Tripiṭaka master of Great Ci'en Monastery",
   "tradition": "buddhism",
-  "evidence": "Historically documented",
+  "evidence": "historical_documented",
   "timeLabel": "c. 602–664",
-  "shortSummary": "Xuanzang connects pilgrimage, textual versions, court support and Chang'an translation institutions in one traceable chain.",
+  "shortSummary": "Xuanzang connects a pilgrimage for learning with translation and institutional life in Chang'an.",
   "curatorialDescription": [
-    "Xuanzang is often remembered primarily as a pilgrim, but the museum asks how the journey changed the movement of texts. Leaving Tang territory, travelling through Central Asia, studying in South Asia, returning to Chang'an and organising translation each involved places, companions, patrons, versions and terminological choices.",
-    "Translation was not the work of an isolated hero. The Chang'an projects depended on collaborative recitation, checking, recording and institutional support. These relations reveal how a text entered a new language and political setting.",
-    "Traditional accounts and historical research do not always describe every detail of the journey in the same way. The museum separates supportable routes, traditional narration and later literary images."
+    "Xuanzang matters not only because he travelled far, but because he transformed encounters in India and Central Asia into translation, teaching and institutional work in Chang'an.",
+    "The museum separates his journeys, translations, lineages and later narratives instead of compressing biography, legend and historical evidence into one story."
   ],
-  "researchNote": "Sources differ on some dates and route details. The first release uses a commonly cited chronology while retaining approximation and uncertainty in the timeline and map.",
+  "researchNote": "This Alpha content source still needs item-level references to editions, translation projects and route waypoints.",
   "keyFacts": [
-    { "label": "Primary places", "value": "Chang'an · routes through India and Central Asia" },
-    { "label": "Core roles", "value": "pilgrimage, translation, textual organisation" },
-    { "label": "Related institution", "value": "translation network at Great Ci'en Monastery" }
-  ],
-  "related": [
-    { "kind": "text", "slug": "heart-sutra", "title": "Heart Sutra", "relation": "translation tradition" },
-    { "kind": "place", "slug": "great-cien-monastery", "title": "Great Ci'en Monastery", "relation": "translation setting" },
-    { "kind": "concept", "slug": "emptiness", "title": "Emptiness", "relation": "related concept" }
-  ],
-  "sources": [
     {
-      "title": "Encyclopaedia Britannica · Xuanzang",
-      "locator": "biographical overview",
-      "grade": "B",
-      "role": "chronology and historical overview",
-      "url": "https://www.britannica.com/biography/Xuanzang"
+      "label": "Key place",
+      "value": "Chang'an · Great Ci'en Monastery"
     },
     {
-      "title": "The Metropolitan Museum of Art · Buddhism in the Tang",
-      "locator": "Heilbrunn Timeline of Art History",
-      "grade": "C",
-      "role": "Tang Buddhist and visual-cultural context",
-      "url": "https://www.metmuseum.org/toah/hd/chbu/hd_chbu.htm"
+      "label": "Primary role",
+      "value": "Monk, pilgrim and translator"
     }
-  ]
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:xuanzang-records",
+      "title": "Biography of the Tripiṭaka Master of the Great Ci'en Monastery",
+      "locator": "《大唐大慈恩寺三藏法师传》全书（卷一至卷十）；卷一开篇为玄奘本传，后续卷次记录求法与译经活动",
+      "grade": "A",
+      "role": "Primary biographical basis for Xuanzang's travels and translation work",
+      "url": "https://ctext.org/library.pl?if=en&res=112971"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "Curatorial and methodological notes of the Dao–Ru–Fo Digital Museum",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "Curatorial framework and terminology rules"
+    }
+  ],
+  "profile": {
+    "historicity": "documented",
+    "figureClass": "historical_person",
+    "gender": "male",
+    "canonicalNameOriginal": "玄奘",
+    "nameLanguageCode": "lzh"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
 }

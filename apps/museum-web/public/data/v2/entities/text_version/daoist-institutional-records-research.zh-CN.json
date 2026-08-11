@@ -1,0 +1,41 @@
+{
+  "id": "5480a392-6666-5622-8997-f0cd9cf89cce",
+  "locale": "zh-CN",
+  "kind": "text_version",
+  "slug": "daoist-institutional-records-research",
+  "title": "隋唐道教制度研究资料集（待编目）",
+  "subtitle": "研究档案的版本占位",
+  "tradition": "daoism",
+  "evidence": "historical_inferred",
+  "timeLabel": "研究档案；不是古代单一版本",
+  "shortSummary": "该版本是研究资料集合的编目占位，提醒编辑团队未来必须替换成可引用的具体文本或档案。",
+  "curatorialDescription": [
+    "它不会在正式发布中被当作古代原典；版本层的存在本身是为了让研究缺口可见。"
+  ],
+  "researchNote": "必须补充具体古籍、碑刻、研究专著、整理者和访问权限后，才能进入可发布状态。",
+  "keyFacts": [
+    {
+      "label": "版本类型",
+      "value": "研究资料集"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:daoist-historical-record",
+      "title": "隋唐道教人物与制度研究资料",
+      "locator": "人物、宫观与皇室关系专题",
+      "grade": "B",
+      "role": "司马承祯及隋唐道教制度语境的学术参考"
+    }
+  ],
+  "profile": {
+    "textSlug": "daoist-institutional-records",
+    "versionKind": "digital_edition",
+    "languageCode": "zh",
+    "citationLabel": "隋唐道教制度研究资料集（待编目）",
+    "rightsStatus": "external_reference_only"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

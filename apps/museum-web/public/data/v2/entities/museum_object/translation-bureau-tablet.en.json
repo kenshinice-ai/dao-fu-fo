@@ -1,0 +1,46 @@
+{
+  "id": "2051108a-65de-5572-8123-fabd77ffdc36",
+  "locale": "en",
+  "kind": "museum_object",
+  "slug": "translation-bureau-tablet",
+  "title": "Inscription record for a translation institution (object placeholder)",
+  "subtitle": "A material-evidence entry for institutional space",
+  "tradition": "buddhism",
+  "evidence": "historical_inferred",
+  "timeLabel": "Object record pending; Tang translation-institution context",
+  "shortSummary": "The object card separates translation institutions from biography and looks for material carriers in buildings, inscriptions and institutional memory.",
+  "curatorialDescription": [
+    "This is an object-record placeholder; no unlicensed or unconfirmed inscription image will be shown."
+  ],
+  "researchNote": "A specific inscription, rubbing or collection record, date, place, reading and image rights still need to be attached.",
+  "keyFacts": [
+    {
+      "label": "Object type",
+      "value": "Inscription or rubbing record (pending verification)"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:object-records",
+      "title": "Pending catalogue of museum objects and image records",
+      "locator": "对象类型、馆藏机构、图像权利和编号待补",
+      "grade": "C",
+      "role": "Placeholder source for Alpha object cards, not a publishable collection claim"
+    },
+    {
+      "id": "source:buddhist-institutional-records",
+      "title": "Studies of Sui–Tang monasteries, translation bureaux and monastic institutions",
+      "locator": "大慈恩寺、译经场与寺院网络专题；底本待核",
+      "grade": "B",
+      "role": "Institutional context for monasteries, translation sites and Buddhist urban networks"
+    }
+  ],
+  "profile": {
+    "objectType": "inscription_record",
+    "rightsStatus": "unknown",
+    "collectionStatus": "placeholder"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

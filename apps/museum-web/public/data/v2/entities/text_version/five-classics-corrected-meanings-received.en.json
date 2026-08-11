@@ -1,0 +1,41 @@
+{
+  "id": "ab45d427-9666-5b39-9335-a4f6e0d500df",
+  "locale": "en",
+  "kind": "text_version",
+  "slug": "five-classics-corrected-meanings-received",
+  "title": "Received edited version of the Corrected Meanings",
+  "subtitle": "A version-layer entry for classical commentary",
+  "tradition": "confucianism",
+  "evidence": "historical_documented",
+  "timeLabel": "Modern edited version; corresponding to Tang classical commentary",
+  "shortSummary": "The version layer separates the specific edited text, fascicles and citation locator from the general text record.",
+  "curatorialDescription": [
+    "Future passage citations must point to an explicit version rather than only naming the Corrected Meanings in general."
+  ],
+  "researchNote": "Editor, fascicles, base text, pages and citation standard still need to be added.",
+  "keyFacts": [
+    {
+      "label": "Version type",
+      "value": "Edited received edition"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:education-classics-records",
+      "title": "Records on the Tang Guozijian and classical learning institutions",
+      "locator": "国子监、经学与《五经正义》制度语境；底本待核",
+      "grade": "B",
+      "role": "Research reference for state education, classical commentary and knowledge institutions"
+    }
+  ],
+  "profile": {
+    "textSlug": "five-classics-corrected-meanings",
+    "versionKind": "edition",
+    "languageCode": "zh",
+    "citationLabel": "《五经正义》整理本（待补版本信息）",
+    "rightsStatus": "external_reference_only"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

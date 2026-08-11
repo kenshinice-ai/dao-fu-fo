@@ -1,0 +1,56 @@
+{
+  "id": "3a18eab5-4b48-58fb-b7e2-3fbc7782e4c0",
+  "locale": "en",
+  "kind": "place",
+  "slug": "qiuci",
+  "title": "Kucha",
+  "subtitle": "A Silk Road node of language, music and Buddhist exchange",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "Sui–Tang transport and Buddhist exchange context",
+  "shortSummary": "Kucha keeps a pilgrimage route from becoming a straight line from Chang'an to India; it was a region where languages, religions and media intersected.",
+  "curatorialDescription": [
+    "This record uses the real-geography layer for a regional node; specific monasteries, caves, figures and objects require separate records.",
+    "Kucha is a historical name whose modern referent and historical extent cannot be reduced to one point."
+  ],
+  "researchNote": "Historical place-name mapping, archaeological reports, cave sites and linguistic-cultural sources still need precise locators.",
+  "keyFacts": [
+    {
+      "label": "Place type",
+      "value": "Historical regional node"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:historical-geography",
+      "title": "Historical geography and urban gazetteers of the Sui–Tang period",
+      "locator": "长安、洛阳、敦煌历史名称与地理范围",
+      "grade": "A",
+      "role": "Geographic basis for real places, historical names and coordinate approximations"
+    },
+    {
+      "id": "source:unesco-silk-roads-corridor",
+      "title": "UNESCO World Heritage Centre: Silk Roads, Chang'an–Tianshan Corridor",
+      "locator": "World Heritage List no. 1442; component coordinates and corridor description",
+      "grade": "A",
+      "role": "Geographic basis for Chang'an, Luoyang, the Great Wild Goose Pagoda, Kucha-region sites and the transregional corridor",
+      "url": "https://whc.unesco.org/en/list/1442/maps/"
+    },
+    {
+      "id": "source:buddhist-biographical-records",
+      "title": "Biographical and pilgrimage records of Sui–Tang Buddhist monks",
+      "locator": "义净、玄奘及求法僧侣条目；底本与卷页待核",
+      "grade": "B",
+      "role": "Research entry point for Buddhist figures, pilgrimage routes and translation activity"
+    }
+  ],
+  "profile": {
+    "placeReality": "approximate_region",
+    "geometryType": "point",
+    "coordinateConfidence": "not_applicable",
+    "geographicSourceId": "source:unesco-silk-roads-corridor"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

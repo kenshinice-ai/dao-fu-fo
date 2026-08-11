@@ -1,13 +1,13 @@
 {
-  "id": "dao-ru-fo-lean-alpha",
+  "id": "dao-ru-fo-full-alpha",
   "contentVersion": "2026.08.alpha.1",
-  "releaseStage": "lean-alpha",
+  "releaseStage": "alpha",
   "targetSemantics": "minimum",
   "scope": {
-    "exhibition": "chang-an-three-traditions",
-    "timeStart": 581,
-    "timeEnd": 907,
-    "geographies": ["长安", "洛阳", "敦煌"]
+    "exhibition": "full-historical-space-time",
+    "timeStart": -600,
+    "timeEnd": 1200,
+    "geographies": ["中国历史地理", "中亚与南亚区域锚点", "神圣象征空间"]
   },
   "targets": {
     "figure": 9,
@@ -24,17 +24,17 @@
     "exhibitionSection": 4
   },
   "current": {
-    "figure": 9,
-    "text": 6,
+    "figure": 26,
+    "text": 16,
     "concept": 6,
     "schoolOrInstitution": 6,
-    "place": 9,
-    "event": 15,
-    "route": 2,
+    "place": 21,
+    "event": 31,
+    "route": 3,
     "museumObject": 9,
-    "passage": 12,
+    "passage": 14,
     "audio": 3,
-    "relation": 30,
+    "relation": 159,
     "exhibitionSection": 5
   },
   "completionRules": [

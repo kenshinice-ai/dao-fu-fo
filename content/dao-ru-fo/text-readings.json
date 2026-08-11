@@ -1,0 +1,174 @@
+[
+  {
+    "slug": "public-rc-passage-reading",
+    "title": {
+      "zh-CN": "Public RC 原典对读：心经、道德经与论语",
+      "en": "Public RC passage reading: Heart Sutra, Daodejing and Analects"
+    },
+    "question": {
+      "zh-CN": "三段已审核的原典入口如何分别回到文本、版本、定位与传述？",
+      "en": "How do three reviewed passages return to their texts, versions, locators and transmission contexts?"
+    },
+    "disclaimer": {
+      "zh-CN": "这是当前 Public RC 的文本入口，不把三段文字判定为同一命题；每一栏都保留自己的文本、版本、定位和证据边界。",
+      "en": "This is the current Public RC textual gateway, not a claim that the three passages express one proposition; each column retains its own text, version, locator and evidence boundary."
+    },
+    "passageKeys": [
+      "passage:form-is-emptiness",
+      "passage:humans-follow-earth",
+      "passage:return-to-ritual"
+    ],
+    "axes": [
+      {
+        "id": "textual_layer",
+        "label": { "zh-CN": "文本层级", "en": "Textual layer" },
+        "description": { "zh-CN": "把作品、版本和段落放在同一条可追溯链上。", "en": "Keeps work, version and passage on one traceable chain." }
+      },
+      {
+        "id": "locator",
+        "label": { "zh-CN": "定位", "en": "Locator" },
+        "description": { "zh-CN": "显示章次/篇章定位，避免名句脱离文本。", "en": "Shows chapter or section locators so a saying is not detached from its text." }
+      },
+      {
+        "id": "wording",
+        "label": { "zh-CN": "原文与措辞", "en": "Wording" },
+        "description": { "zh-CN": "并排显示当前原文和断句，不把译文冒充原典。", "en": "Places source wording and punctuation side by side without treating translation as source text." }
+      },
+      {
+        "id": "attribution",
+        "label": { "zh-CN": "言说归属", "en": "Attribution" },
+        "description": { "zh-CN": "区分传统归属、文本保存和后世解释。", "en": "Separates traditional attribution, textual preservation and later interpretation." }
+      },
+      {
+        "id": "interpretation",
+        "label": { "zh-CN": "翻译与解释", "en": "Interpretation" },
+        "description": { "zh-CN": "保留现代中文和英文展示，同时明确它们不是原文。", "en": "Keeps modern Chinese and English display layers distinct from the source wording." }
+      },
+      {
+        "id": "time",
+        "label": { "zh-CN": "时间层", "en": "Time layer" },
+        "description": { "zh-CN": "区分文本形成、传述和版本语境的时间。", "en": "Separates textual formation, transmission and version-context time." }
+      },
+      {
+        "id": "evidence",
+        "label": { "zh-CN": "证据与权利", "en": "Evidence and rights" },
+        "description": { "zh-CN": "把来源、定位、证据等级和权利边界放回阅读入口。", "en": "Returns sources, locators, evidence grades and rights boundaries to the reading entry point." }
+      }
+    ]
+  },
+  {
+    "slug": "three-traditions-passage-reading",
+    "title": {
+      "zh-CN": "三传统原典对读：语句、版本与传述",
+      "en": "Three-tradition passage reading: wording, versions and transmission"
+    },
+    "question": {
+      "zh-CN": "当三段言说被并排阅读时，我们能分别看见哪些文本层、归属层和后世解释？",
+      "en": "When three passages are read side by side, which textual, attribution and later-interpretive layers remain visible?"
+    },
+    "disclaimer": {
+      "zh-CN": "这不是把三段文字判定为同一命题，也不是同一文本的异文校勘；每一栏都回到自己的文本、版本、定位和传述证据。",
+      "en": "This is neither a claim that the three passages express one proposition nor a collation of variants within one text; each column returns to its own text, version, locator and transmission evidence."
+    },
+    "passageKeys": [
+      "passage:dao-that-can-be-spoken",
+      "passage:learn-and-practice",
+      "passage:turning-of-dharma-wheel"
+    ],
+    "axes": [
+      {
+        "id": "textual_layer",
+        "label": { "zh-CN": "文本层级", "en": "Textual layer" },
+        "description": { "zh-CN": "把文本、具体版本和段落放在同一条可追溯链上。", "en": "Keeps text, specific version and passage on one traceable chain." }
+      },
+      {
+        "id": "locator",
+        "label": { "zh-CN": "定位", "en": "Locator" },
+        "description": { "zh-CN": "显示原始定位与规范化定位，避免名句脱离篇章。", "en": "Shows original and normalised locators so a saying is not detached from its chapter or work." }
+      },
+      {
+        "id": "wording",
+        "label": { "zh-CN": "原文与措辞", "en": "Wording" },
+        "description": { "zh-CN": "并排显示原文和当前断句；不把译文冒充原典。", "en": "Places source wording and current punctuation side by side without treating translation as the source text." }
+      },
+      {
+        "id": "attribution",
+        "label": { "zh-CN": "言说归属", "en": "Attribution" },
+        "description": { "zh-CN": "区分传统说话者、传述者和复合文本的保存状态。", "en": "Separates traditional speaker attribution from the way a composite text was preserved." }
+      },
+      {
+        "id": "interpretation",
+        "label": { "zh-CN": "翻译与解释", "en": "Interpretation" },
+        "description": { "zh-CN": "同时保留现代汉语和英文解释，并明确它们不是原文。", "en": "Keeps modern Chinese and English interpretation visible while marking them as distinct from the source wording." }
+      },
+      {
+        "id": "time",
+        "label": { "zh-CN": "时间层", "en": "Time layer" },
+        "description": { "zh-CN": "区分人物生平、文本形成和传世版本的时间。", "en": "Separates a figure's lifetime from textual formation and received-version history." }
+      },
+      {
+        "id": "evidence",
+        "label": { "zh-CN": "证据与权利", "en": "Evidence and rights" },
+        "description": { "zh-CN": "把来源、定位、证据等级和版本权利放回阅读入口。", "en": "Returns sources, locators, evidence grades and version rights to the reading entry point." }
+      }
+    ]
+  },
+  {
+    "slug": "dhammacakkappavattana-version-reading",
+    "readingMode": "same_text_versions",
+    "textSlug": "dhammacakkappavattana-sutta",
+    "title": {
+      "zh-CN": "《转法轮经》版本对读：巴利语与 Thanissaro 英译",
+      "en": "Dhammacakkappavattana Sutta version reading: Pāli and Thanissaro English"
+    },
+    "question": {
+      "zh-CN": "同一经文的巴利语短引与现代英译，哪些层面可以对照，哪些差异必须保留？",
+      "en": "What can be compared between a Pāli excerpt and a modern English translation of one discourse, and which differences must remain visible?"
+    },
+    "disclaimer": {
+      "zh-CN": "这是同一文本的语言版本对读，不是巴利语手稿异文校勘；“suffering / stress”只作为译者措辞差异记录，不裁定唯一译法。",
+      "en": "This is a language-version reading within one text, not a collation of Pāli manuscripts; “suffering / stress” records translator wording without declaring a single authorised rendering."
+    },
+    "passageKeys": [
+      "passage:turning-of-dharma-wheel",
+      "passage:turning-of-dharma-wheel-thanissaro-en"
+    ],
+    "axes": [
+      {
+        "id": "textual_layer",
+        "label": { "zh-CN": "同一文本的版本层", "en": "Version layers within one text" },
+        "description": { "zh-CN": "确认两段都回到同一部经文，同时显示各自的 text version。", "en": "Confirms the shared discourse while showing each explicit text version." }
+      },
+      {
+        "id": "locator",
+        "label": { "zh-CN": "共同定位与版本定位", "en": "Shared and version-specific locators" },
+        "description": { "zh-CN": "比较共同的 SN 56.11 定位与各版本的引用界面。", "en": "Compares the shared SN 56.11 locator with each version's citation interface." }
+      },
+      {
+        "id": "wording",
+        "label": { "zh-CN": "原语与译者措辞", "en": "Source wording and translator wording" },
+        "description": { "zh-CN": "把巴利语原文与英译措辞并排，不把译文伪装成原语异文。", "en": "Places Pāli wording beside translation wording without presenting translation as a source-language variant." }
+      },
+      {
+        "id": "attribution",
+        "label": { "zh-CN": "传述与说话者归属", "en": "Transmission and attribution" },
+        "description": { "zh-CN": "两种版本都保留传统说话者与传述保存层。", "en": "Both witnesses retain traditional speaker attribution and mediated preservation." }
+      },
+      {
+        "id": "interpretation",
+        "label": { "zh-CN": "翻译选择", "en": "Translation choice" },
+        "description": { "zh-CN": "显示译者选择如何影响观众接收到的意义，不把一个词译法定为唯一答案。", "en": "Shows how translation choices shape reception without declaring one rendering the only answer." }
+      },
+      {
+        "id": "time",
+        "label": { "zh-CN": "经文与版本时间", "en": "Text and version time" },
+        "description": { "zh-CN": "区分经文传述/文本层与现代英译版本的时间。", "en": "Separates the transmitted textual layer from the modern English version." }
+      },
+      {
+        "id": "evidence",
+        "label": { "zh-CN": "来源、权利与审核", "en": "Sources, rights and review" },
+        "description": { "zh-CN": "每一列都保留来源、权利边界和 reviewer evidence。", "en": "Each column retains sources, rights boundaries and reviewer evidence." }
+      }
+    ]
+  }
+]

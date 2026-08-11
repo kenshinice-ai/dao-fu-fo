@@ -1,0 +1,42 @@
+{
+  "id": "ac2ea706-f0b1-5207-815b-b8d985585615",
+  "locale": "zh-CN",
+  "kind": "event",
+  "slug": "an-lushan-rebellion-begins",
+  "title": "安史之乱爆发",
+  "tradition": "confucianism",
+  "evidence": "historical_documented",
+  "timeLabel": "755",
+  "shortSummary": "755 年开始的战争打断了两京秩序，也改变了人口、财政和宗教机构的资源环境。",
+  "curatorialDescription": [
+    "事件作为结构性转折呈现，不用宗教兴衰的单线叙事替代区域差异。"
+  ],
+  "researchNote": "长安、洛阳与各地寺观和教育机构受到的影响需分区、分时段核定。",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:tang-imperial-records",
+      "title": "隋唐正史人物与制度记录",
+      "locator": "帝王、制度与年代条目；具体版本和卷页待核",
+      "grade": "B",
+      "role": "隋唐人物、都城、制度和事件时间的研究参考"
+    },
+    {
+      "id": "source:met-tang-overview",
+      "title": "大都会艺术博物馆：唐朝（618–907）",
+      "locator": "Heilbrunn Timeline of Art History; Sui reunification, Tang chronology, Chang'an and the An Lushan rebellion",
+      "grade": "B",
+      "role": "隋唐年代、长安国际性与中唐转折的公开概览来源",
+      "url": "https://www.metmuseum.org/essays/tang-dynasty-618-906"
+    }
+  ],
+  "profile": {
+    "eventKind": "conflict",
+    "historicity": "documented",
+    "sequenceOrder": 12,
+    "eventScope": "imperial"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

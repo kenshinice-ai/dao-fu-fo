@@ -1,0 +1,41 @@
+{
+  "id": "903e0e6e-b314-54e2-8ea6-21319a68ca55",
+  "locale": "en",
+  "kind": "event",
+  "slug": "great-wild-goose-pagoda-first-construction",
+  "title": "First construction of the Great Wild Goose Pagoda",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "c. 652",
+  "shortSummary": "The initial phase around 652 linked the preservation of texts and images with translation and visible urban architecture.",
+  "curatorialDescription": [
+    "First construction does not describe the present form; later rebuilding and structural changes require separate records."
+  ],
+  "researchNote": "Initial design, uses and later phases need architectural and conservation sources.",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:buddhist-institutional-records",
+      "title": "Studies of Sui–Tang monasteries, translation bureaux and monastic institutions",
+      "locator": "大慈恩寺、译经场与寺院网络专题；底本待核",
+      "grade": "B",
+      "role": "Institutional context for monasteries, translation sites and Buddhist urban networks"
+    },
+    {
+      "id": "source:historical-geography",
+      "title": "Historical geography and urban gazetteers of the Sui–Tang period",
+      "locator": "长安、洛阳、敦煌历史名称与地理范围",
+      "grade": "A",
+      "role": "Geographic basis for real places, historical names and coordinate approximations"
+    }
+  ],
+  "profile": {
+    "eventKind": "construction",
+    "historicity": "documented",
+    "sequenceOrder": 7,
+    "eventScope": "local"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

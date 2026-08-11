@@ -1,0 +1,52 @@
+{
+  "id": "a067399b-91ee-5c36-abb0-54f050a74dc2",
+  "locale": "en",
+  "kind": "text",
+  "slug": "dhammacakkappavattana-sutta",
+  "title": "Dhammacakkappavattana Sutta",
+  "subtitle": "An early Buddhist discourse in the tradition of the first turning at Sarnath",
+  "tradition": "buddhism",
+  "evidence": "historical_inferred",
+  "timeLabel": "Early Buddhist transmission; textual formation is not the same as the Buddha's lifetime",
+  "shortSummary": "The Dhammacakkappavattana Sutta preserves a transmitted discourse tradition in which the Buddha teaches the five mendicants at Sarnath.",
+  "curatorialDescription": [
+    "The museum presents ‘the Buddha taught’ as a transmitted and compiled textual layer, not as a modern recording or verbatim stenographic transcript."
+  ],
+  "researchNote": "The text, its language, recitation and compilation history must be connected separately to Sarnath's archaeology and later Chinese translation traditions.",
+  "keyFacts": [
+    {
+      "label": "Text kind",
+      "value": "Early Buddhist discourse"
+    },
+    {
+      "label": "Key place",
+      "value": "Sarnath (Isipatana)"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:buddha-early-texts",
+      "title": "Early Buddhist texts in the Pāli canon: MN 26 and SN 56.11",
+      "locator": "MN 26 Ariyapariyesanā：求法与到达鹿野苑；SN 56.11 Dhammacakkappavattana：鹿野苑初转法轮文本",
+      "grade": "A",
+      "role": "Primary-text entry for Buddha biography, early teaching traditions and the Sarnath setting; the transmitted discourse is not treated as a verbatim transcript",
+      "url": "https://suttacentral.net/sn56.11/en/sujato"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "Curatorial and methodological notes of the Dao–Ru–Fo Digital Museum",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "Curatorial framework and terminology rules"
+    }
+  ],
+  "profile": {
+    "textKind": "scripture",
+    "originalLanguageCode": "pli",
+    "canonicalStatus": "canonical",
+    "attributionStatus": "traditional"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

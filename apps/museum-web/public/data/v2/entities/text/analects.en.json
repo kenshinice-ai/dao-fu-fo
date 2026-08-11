@@ -1,0 +1,48 @@
+{
+  "id": "73870aa6-3666-57d4-a5ad-094be551a2cd",
+  "locale": "en",
+  "kind": "text",
+  "slug": "analects",
+  "title": "Analects",
+  "subtitle": "Sayings and actions associated with Confucius and his disciples",
+  "tradition": "confucianism",
+  "evidence": "historical_inferred",
+  "timeLabel": "Compilation and circulation: Warring States to Han ranges",
+  "shortSummary": "The Analects preserves early Confucian discussions of ethics, education and politics through sayings and encounters associated with Confucius and his disciples.",
+  "curatorialDescription": [
+    "The Analects is not a text outside compilation history. Its transmission, commentaries and use in state education gave it new institutional contexts over time."
+  ],
+  "researchNote": "Formation, editions and commentary relationships will be refined through the text-version and commentary data model.",
+  "keyFacts": [
+    {
+      "label": "Text kind",
+      "value": "Confucian classic"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:analects-edition",
+      "title": "Received editions and chapter references for the Analects",
+      "locator": "颜渊第十二，第1章（“克己复礼为仁”）",
+      "grade": "A",
+      "role": "Initial basis for the Confucian passage and chapter locator",
+      "url": "https://ctext.org/wiki.pl?chapter=198285&if=en&remap=gb"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "Curatorial and methodological notes of the Dao–Ru–Fo Digital Museum",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "Curatorial framework and terminology rules"
+    }
+  ],
+  "profile": {
+    "textKind": "classic",
+    "originalLanguageCode": "lzh",
+    "canonicalStatus": "canonical",
+    "attributionStatus": "composite"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

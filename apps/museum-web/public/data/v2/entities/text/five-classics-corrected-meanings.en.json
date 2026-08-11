@@ -1,0 +1,48 @@
+{
+  "id": "021ac145-9453-58ba-ab29-d30893d1b62c",
+  "locale": "en",
+  "kind": "text",
+  "slug": "five-classics-corrected-meanings",
+  "title": "Corrected Meanings of the Five Classics",
+  "subtitle": "Classical commentary, state education and standardised knowledge",
+  "tradition": "confucianism",
+  "evidence": "historical_documented",
+  "timeLabel": "Tang classical-learning focus",
+  "shortSummary": "The Corrected Meanings provides an entry into how Tang classical commentary entered state education and regimes of interpretation.",
+  "curatorialDescription": [
+    "The museum does not treat it as a single embodiment of Confucian thought; it shows the relationships among compilation, commentary, education and institution.",
+    "Together with Kong Yingda, the Guozijian and an Analects passage, it forms a traceable micro-network of classical learning."
+  ],
+  "researchNote": "Compilation, fascicles, textual genealogy, official-school use and Kong Yingda's individual contribution still need precise mapping.",
+  "keyFacts": [
+    {
+      "label": "Text kind",
+      "value": "Classical commentary and institutional text"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:education-classics-records",
+      "title": "Records on the Tang Guozijian and classical learning institutions",
+      "locator": "国子监、经学与《五经正义》制度语境；底本待核",
+      "grade": "B",
+      "role": "Research reference for state education, classical commentary and knowledge institutions"
+    },
+    {
+      "id": "source:confucian-commentarial-record",
+      "title": "The Five Classics Corrected Meanings and Tang classical learning",
+      "locator": "孔颖达与经学注疏制度",
+      "grade": "B",
+      "role": "Reference basis for Kong Yingda and Tang classical learning institutions"
+    }
+  ],
+  "profile": {
+    "textKind": "commentary",
+    "originalLanguageCode": "zh",
+    "canonicalStatus": "influential",
+    "attributionStatus": "composite"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

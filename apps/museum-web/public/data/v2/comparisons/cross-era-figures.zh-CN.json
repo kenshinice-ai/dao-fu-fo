@@ -1,0 +1,574 @@
+{
+  "schemaVersion": "1.0",
+  "locale": "zh-CN",
+  "slug": "cross-era-figures",
+  "title": "跨时代人物：源头、传述与后世接收",
+  "question": "老子、孔子与释迦牟尼如何在不同时间、空间、文本和后世制度中被理解？",
+  "disclaimer": "这是基于当前关系与来源的比较阅读，不把三位人物、三种传统或不同证据层压缩成同一历史事实。",
+  "entities": [
+    {
+      "key": "figure:laozi",
+      "kind": "figure",
+      "slug": "laozi",
+      "title": "老子（李耳）",
+      "tradition": "daoism",
+      "evidence": "traditional_account",
+      "timeLabel": "传统置于春秋晚期；生平年代有争议",
+      "summary": "老子是进入道家经典传统的高识别度入口，但李耳传记、〈老子〉身份、《道德经》成书与后世太上老君形象必须分层处理。",
+      "sourceIds": [
+        "source:shiji-laozi-biography",
+        "source:daodejing-edition",
+        "source:editorial-method"
+      ]
+    },
+    {
+      "key": "figure:confucius",
+      "kind": "figure",
+      "slug": "confucius",
+      "title": "孔子（孔丘）",
+      "tradition": "confucianism",
+      "evidence": "historical_documented",
+      "timeLabel": "约公元前 551–479 年",
+      "summary": "孔子是儒家经典、教育和政治伦理的高识别度入口；《论语》中的孔子言说必须和弟子记录、编纂层及后世经学接受分开。",
+      "sourceIds": [
+        "source:shiji-confucius-biography",
+        "source:analects-edition",
+        "source:editorial-method"
+      ]
+    },
+    {
+      "key": "figure:sakyamuni",
+      "kind": "figure",
+      "slug": "sakyamuni",
+      "title": "释迦牟尼佛（乔达摩·悉达多）",
+      "tradition": "buddhism",
+      "evidence": "traditional_account",
+      "timeLabel": "传统与学术年代有争议；约公元前 5 世纪导航区间",
+      "summary": "释迦牟尼是佛教思想和朝圣地理的核心入口，但早期文本中的片段性生平、后世佛传和神圣叙事必须分层展示。",
+      "sourceIds": [
+        "source:buddha-early-texts",
+        "source:sarnath-site-record",
+        "source:editorial-method"
+      ]
+    }
+  ],
+  "axes": [
+    {
+      "id": "historicity",
+      "label": "历史性与人物类别",
+      "description": "区分历史记录、传统叙事、神圣化和后世文学再现。",
+      "cells": [
+        {
+          "entityKey": "figure:laozi",
+          "status": "recorded",
+          "value": "contested · traditional_sage",
+          "details": [
+            "traditional_account"
+          ],
+          "evidenceLayer": "traditional_account",
+          "sourceIds": [
+            "source:shiji-laozi-biography",
+            "source:daodejing-edition",
+            "source:editorial-method"
+          ]
+        },
+        {
+          "entityKey": "figure:confucius",
+          "status": "recorded",
+          "value": "documented · historical_person",
+          "details": [
+            "historical_documented"
+          ],
+          "evidenceLayer": "historical_documented",
+          "sourceIds": [
+            "source:shiji-confucius-biography",
+            "source:analects-edition",
+            "source:editorial-method"
+          ]
+        },
+        {
+          "entityKey": "figure:sakyamuni",
+          "status": "recorded",
+          "value": "contested · historical_person",
+          "details": [
+            "traditional_account"
+          ],
+          "evidenceLayer": "traditional_account",
+          "sourceIds": [
+            "source:buddha-early-texts",
+            "source:sarnath-site-record",
+            "source:editorial-method"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tradition",
+      "label": "传统归属",
+      "description": "显示主传统、次级关联、证据层和来源，而不预设价值排序。",
+      "cells": [
+        {
+          "entityKey": "figure:laozi",
+          "status": "recorded",
+          "value": "道家与道教传统 · primary",
+          "details": [
+            "道家与道教传统 · primary"
+          ],
+          "evidenceLayer": "traditional_account",
+          "confidence": "medium",
+          "sourceIds": [
+            "source:shiji-laozi-biography"
+          ]
+        },
+        {
+          "entityKey": "figure:confucius",
+          "status": "recorded",
+          "value": "儒家传统 · primary",
+          "details": [
+            "儒家传统 · primary"
+          ],
+          "evidenceLayer": "historical_documented",
+          "confidence": "high",
+          "sourceIds": [
+            "source:shiji-confucius-biography"
+          ]
+        },
+        {
+          "entityKey": "figure:sakyamuni",
+          "status": "recorded",
+          "value": "佛教 · primary",
+          "details": [
+            "佛教 · primary"
+          ],
+          "evidenceLayer": "traditional_account",
+          "confidence": "high",
+          "sourceIds": [
+            "source:buddha-early-texts"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time",
+      "label": "时间层",
+      "description": "把人物源头时间与传统日期、文本传述和后世接受时间分开。",
+      "cells": [
+        {
+          "entityKey": "figure:laozi",
+          "status": "recorded",
+          "value": "传统置于春秋晚期；年代有争议",
+          "details": [
+            "life: 传统置于春秋晚期；年代有争议"
+          ],
+          "evidenceLayer": "traditional_account",
+          "confidence": "low",
+          "sourceIds": [
+            "source:shiji-laozi-biography"
+          ]
+        },
+        {
+          "entityKey": "figure:confucius",
+          "status": "recorded",
+          "value": "约公元前 551–479 年",
+          "details": [
+            "life: 约公元前 551–479 年"
+          ],
+          "evidenceLayer": "historical_documented",
+          "confidence": "medium",
+          "sourceIds": [
+            "source:shiji-confucius-biography"
+          ]
+        },
+        {
+          "entityKey": "figure:sakyamuni",
+          "status": "recorded",
+          "value": "传统与学术年代有争议；约公元前 5 世纪导航区间",
+          "details": [
+            "life: 传统与学术年代有争议；约公元前 5 世纪导航区间"
+          ],
+          "evidenceLayer": "traditional_account",
+          "confidence": "low",
+          "sourceIds": [
+            "source:buddha-early-texts"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "speech",
+      "label": "言说与传述",
+      "description": "追踪言说、段落、文本和说话者归属之间的证据链。",
+      "cells": [
+        {
+          "entityKey": "figure:laozi",
+          "status": "derived",
+          "value": "2 条关系",
+          "details": [
+            "传统上归于老子 → 《道德经》 · attributed_saying",
+            "传统上作为老子言说保存 → 道可道，非常道 · attributed_saying"
+          ],
+          "evidenceLayer": "historical_inferred",
+          "confidence": "low",
+          "sourceIds": [
+            "source:shiji-laozi-biography",
+            "source:daodejing-edition"
+          ]
+        },
+        {
+          "entityKey": "figure:confucius",
+          "status": "derived",
+          "value": "2 条关系",
+          "details": [
+            "保存孔子及弟子言行 → 《论语》 · recorded_by_others",
+            "作为孔子言说由传述保存 → 学而时习之 · recorded_by_others"
+          ],
+          "evidenceLayer": "historical_inferred",
+          "confidence": "medium",
+          "sourceIds": [
+            "source:analects-edition",
+            "source:shiji-confucius-biography"
+          ]
+        },
+        {
+          "entityKey": "figure:sakyamuni",
+          "status": "derived",
+          "value": "3 条关系",
+          "details": [
+            "作为释迦牟尼教法由传述保存 → 这是苦圣谛 · recorded_by_others",
+            "以佛陀形象进入后世般若经典语境 → 《般若波罗蜜多心经》 · later_literary_voice",
+            "作为释迦牟尼教法的英译传述 → 这是苦圣谛（Thanissaro 英译） · recorded_by_others"
+          ],
+          "evidenceLayer": "historical_inferred",
+          "confidence": "medium",
+          "sourceIds": [
+            "source:buddha-early-texts",
+            "source:heart-sutra-edition",
+            "source:sn56-11-thanissaro"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "space",
+      "label": "空间与地点",
+      "description": "列出活动地点、制度空间、路线节点和记忆地点，并保留空间角色。",
+      "cells": [
+        {
+          "entityKey": "figure:laozi",
+          "status": "derived",
+          "value": "1 条关系",
+          "details": [
+            "与周地礼学语境相连 → 洛阳 · context_only"
+          ],
+          "evidenceLayer": "traditional_account",
+          "confidence": "low",
+          "sourceIds": [
+            "source:shiji-laozi-biography",
+            "source:historical-geography"
+          ]
+        },
+        {
+          "entityKey": "figure:confucius",
+          "status": "derived",
+          "value": "1 条关系",
+          "details": [
+            "与周地问礼语境相连 → 洛阳 · context_only"
+          ],
+          "evidenceLayer": "traditional_account",
+          "confidence": "low",
+          "sourceIds": [
+            "source:shiji-confucius-biography",
+            "source:historical-geography"
+          ]
+        },
+        {
+          "entityKey": "figure:sakyamuni",
+          "status": "derived",
+          "value": "1 条关系",
+          "details": [
+            "与鹿野苑说法传统相连 → 鹿野苑（Sarnath） · activity_site"
+          ],
+          "evidenceLayer": "traditional_account",
+          "confidence": "medium",
+          "sourceIds": [
+            "source:buddha-early-texts",
+            "source:sarnath-site-record"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "events",
+      "label": "事件与行动",
+      "description": "区分人物参与的事件与后世把人物接入的分析性事件。",
+      "cells": [
+        {
+          "entityKey": "figure:laozi",
+          "status": "derived",
+          "value": "2 条关系",
+          "details": [
+            "出现在孔子问礼叙事中 → 孔子适周问礼于老子",
+            "作为道家经典源头进入开元语境 → 开元时期的制度扩展 · reinterpreted"
+          ],
+          "evidenceLayer": "traditional_account",
+          "confidence": "low",
+          "sourceIds": [
+            "source:shiji-laozi-biography",
+            "source:shiji-confucius-biography",
+            "source:daoist-historical-record",
+            "source:daodejing-edition",
+            "source:tang-imperial-records"
+          ]
+        },
+        {
+          "entityKey": "figure:confucius",
+          "status": "derived",
+          "value": "2 条关系",
+          "details": [
+            "在周地向老子问礼 → 孔子适周问礼于老子",
+            "作为经典传统源头进入《五经正义》工程 → 《五经正义》编纂工程 · reinterpreted"
+          ],
+          "evidenceLayer": "traditional_account",
+          "confidence": "low",
+          "sourceIds": [
+            "source:shiji-confucius-biography",
+            "source:shiji-laozi-biography",
+            "source:analects-edition",
+            "source:confucian-commentarial-record",
+            "source:education-classics-records"
+          ]
+        },
+        {
+          "entityKey": "figure:sakyamuni",
+          "status": "derived",
+          "value": "2 条关系",
+          "details": [
+            "在鹿野苑初转法轮传统中说法 → 佛陀在鹿野苑初转法轮",
+            "作为佛教教法源头进入大慈恩寺制度语境 → 大慈恩寺建立 · institutionalised"
+          ],
+          "evidenceLayer": "traditional_account",
+          "confidence": "medium",
+          "sourceIds": [
+            "source:buddha-early-texts",
+            "source:sarnath-site-record",
+            "source:buddhist-institutional-records",
+            "source:xuanzang-records"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "texts",
+      "label": "文本与版本",
+      "description": "把经典、版本、段落、注释和后世接收分别显示。",
+      "cells": [
+        {
+          "entityKey": "figure:laozi",
+          "status": "derived",
+          "value": "2 条关系",
+          "details": [
+            "传统上归于老子 → 《道德经》 · attributed_saying",
+            "传统上作为老子言说保存 → 道可道，非常道 · attributed_saying"
+          ],
+          "evidenceLayer": "historical_inferred",
+          "confidence": "low",
+          "sourceIds": [
+            "source:shiji-laozi-biography",
+            "source:daodejing-edition"
+          ]
+        },
+        {
+          "entityKey": "figure:confucius",
+          "status": "derived",
+          "value": "2 条关系",
+          "details": [
+            "保存孔子及弟子言行 → 《论语》 · recorded_by_others",
+            "作为孔子言说由传述保存 → 学而时习之 · recorded_by_others"
+          ],
+          "evidenceLayer": "historical_inferred",
+          "confidence": "medium",
+          "sourceIds": [
+            "source:analects-edition",
+            "source:shiji-confucius-biography"
+          ]
+        },
+        {
+          "entityKey": "figure:sakyamuni",
+          "status": "derived",
+          "value": "3 条关系",
+          "details": [
+            "作为释迦牟尼教法由传述保存 → 这是苦圣谛 · recorded_by_others",
+            "以佛陀形象进入后世般若经典语境 → 《般若波罗蜜多心经》 · later_literary_voice",
+            "作为释迦牟尼教法的英译传述 → 这是苦圣谛（Thanissaro 英译） · recorded_by_others"
+          ],
+          "evidenceLayer": "historical_inferred",
+          "confidence": "medium",
+          "sourceIds": [
+            "source:buddha-early-texts",
+            "source:heart-sutra-edition",
+            "source:sn56-11-thanissaro"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reception",
+      "label": "后世接收与影响",
+      "description": "展示制度化、再解释、纪念、神圣化和文学再现，而不把它们倒写为人物当时的事实。",
+      "cells": [
+        {
+          "entityKey": "figure:laozi",
+          "status": "derived",
+          "value": "2 条关系",
+          "details": [
+            "在唐代道教机构记忆中延续 → 长安道观网络 · memory_site · institutionalised",
+            "作为道家经典源头进入开元语境 → 开元时期的制度扩展 · reinterpreted"
+          ],
+          "evidenceLayer": "historical_inferred",
+          "confidence": "low",
+          "sourceIds": [
+            "source:daoist-historical-record",
+            "source:daodejing-edition",
+            "source:tang-imperial-records"
+          ]
+        },
+        {
+          "entityKey": "figure:confucius",
+          "status": "derived",
+          "value": "2 条关系",
+          "details": [
+            "在国家经学教育记忆中延续 → 国子监 · memory_site · institutionalised",
+            "作为经典传统源头进入《五经正义》工程 → 《五经正义》编纂工程 · reinterpreted"
+          ],
+          "evidenceLayer": "historical_inferred",
+          "confidence": "low",
+          "sourceIds": [
+            "source:education-classics-records",
+            "source:analects-edition",
+            "source:confucian-commentarial-record"
+          ]
+        },
+        {
+          "entityKey": "figure:sakyamuni",
+          "status": "derived",
+          "value": "3 条关系",
+          "details": [
+            "在鹿野苑朝圣与遗址记忆中延续 → 鹿野苑（Sarnath） · memory_site · ritualised",
+            "以佛陀形象进入后世般若经典语境 → 《般若波罗蜜多心经》 · later_literary_voice",
+            "作为佛教教法源头进入大慈恩寺制度语境 → 大慈恩寺建立 · institutionalised"
+          ],
+          "evidenceLayer": "historical_inferred",
+          "confidence": "medium",
+          "sourceIds": [
+            "source:sarnath-site-record",
+            "source:buddha-early-texts",
+            "source:heart-sutra-edition",
+            "source:buddhist-institutional-records",
+            "source:xuanzang-records"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "evidence",
+      "label": "证据与来源",
+      "description": "每一格都能回到来源、定位和证据等级；未记录不等于不存在。",
+      "cells": [
+        {
+          "entityKey": "figure:laozi",
+          "status": "recorded",
+          "value": "3 个来源",
+          "details": [
+            "《史记·老子韩非列传》 · A · 《史记·老子韩非列传》：老子姓李名耳；孔子适周问礼于老子；老子西出函谷关叙事",
+            "《道德经》通行本与章句资料 · A · 第二十五章（“人法地，地法天，天法道，道法自然”）",
+            "道·儒·佛文明数字博物馆策展与方法说明 · B · methodology:content-v2"
+          ],
+          "evidenceLayer": "traditional_account",
+          "sourceIds": [
+            "source:shiji-laozi-biography",
+            "source:daodejing-edition",
+            "source:editorial-method"
+          ]
+        },
+        {
+          "entityKey": "figure:confucius",
+          "status": "recorded",
+          "value": "3 个来源",
+          "details": [
+            "《史记·孔子世家》 · A · 《史记·孔子世家》：孔子问礼于周、修诗书礼乐、以诗书礼乐教弟子等段落",
+            "《论语》通行本与篇章资料 · A · 颜渊第十二，第1章（“克己复礼为仁”）",
+            "道·儒·佛文明数字博物馆策展与方法说明 · B · methodology:content-v2"
+          ],
+          "evidenceLayer": "historical_documented",
+          "sourceIds": [
+            "source:shiji-confucius-biography",
+            "source:analects-edition",
+            "source:editorial-method"
+          ]
+        },
+        {
+          "entityKey": "figure:sakyamuni",
+          "status": "recorded",
+          "value": "3 个来源",
+          "details": [
+            "巴利经藏早期佛教文本：MN 26 与 SN 56.11 · A · MN 26 Ariyapariyesanā：求法与到达鹿野苑；SN 56.11 Dhammacakkappavattana：鹿野苑初转法轮文本",
+            "UNESCO 与印度考古调查局：鹿野苑古佛教遗址 · A · World Heritage List no. 927；鹿野苑遗址、初转法轮传统与遗址保护范围；约 25.381°N, 83.022°E",
+            "道·儒·佛文明数字博物馆策展与方法说明 · B · methodology:content-v2"
+          ],
+          "evidenceLayer": "traditional_account",
+          "sourceIds": [
+            "source:buddha-early-texts",
+            "source:sarnath-site-record",
+            "source:editorial-method"
+          ]
+        }
+      ]
+    }
+  ],
+  "directRelations": [],
+  "bridges": [
+    {
+      "key": "event:confucius-asks-laozi-about-rites",
+      "kind": "event",
+      "slug": "confucius-asks-laozi-about-rites",
+      "title": "孔子适周问礼于老子",
+      "entityKeys": [
+        "figure:confucius",
+        "figure:laozi"
+      ],
+      "relationTypes": [
+        "participated_in"
+      ],
+      "summaries": [
+        "《史记》把老子置于孔子向周地问礼的叙事中；本条保留史传和传统层，不把会见当作独立可证的现场记录。",
+        "孔子问礼故事由《史记》保存为儒道相遇的史传入口；具体年代和对话细节仍标为传统叙事。"
+      ],
+      "sourceIds": [
+        "source:shiji-confucius-biography",
+        "source:shiji-laozi-biography"
+      ]
+    },
+    {
+      "key": "place:luoyang",
+      "kind": "place",
+      "slug": "luoyang",
+      "title": "洛阳",
+      "entityKeys": [
+        "figure:confucius",
+        "figure:laozi"
+      ],
+      "relationTypes": [
+        "active_in"
+      ],
+      "summaries": [
+        "孔子问礼于周的史传叙事可以用洛阳作为城市级空间入口，但不等于复原一条确定的旅行路线。",
+        "老子在史传中与周王室藏室和问礼叙事相连；这里使用洛阳作为城市级传统语境，不把传说行迹写成精确驻留。"
+      ],
+      "sourceIds": [
+        "source:historical-geography",
+        "source:shiji-confucius-biography",
+        "source:shiji-laozi-biography"
+      ]
+    }
+  ]
+}

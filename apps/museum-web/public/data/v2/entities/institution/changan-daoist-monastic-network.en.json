@@ -1,0 +1,39 @@
+{
+  "id": "dca3a5c6-e9ae-5c58-b6c6-0bc876610748",
+  "locale": "en",
+  "kind": "institution",
+  "slug": "changan-daoist-monastic-network",
+  "title": "Chang'an Daoist monastic network",
+  "tradition": "daoism",
+  "evidence": "historical_inferred",
+  "timeLabel": "Sui–Tang; nodes pending",
+  "shortSummary": "Daoist activity in Chang'an relied on multiple institutions, ritual services, ordination records and court connections rather than one building.",
+  "curatorialDescription": [
+    "The network connects figures and city while reserving separate place and institution records for each identified site."
+  ],
+  "researchNote": "Institution names, dates, urban wards and ritual functions still need sourced records.",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:daoist-historical-record",
+      "title": "Studies on Daoist figures and institutions in the Sui–Tang period",
+      "locator": "人物、宫观与皇室关系专题",
+      "grade": "B",
+      "role": "Scholarly context for Sima Chengzhen and Sui–Tang Daoist institutions"
+    },
+    {
+      "id": "source:historical-geography",
+      "title": "Historical geography and urban gazetteers of the Sui–Tang period",
+      "locator": "长安、洛阳、敦煌历史名称与地理范围",
+      "grade": "A",
+      "role": "Geographic basis for real places, historical names and coordinate approximations"
+    }
+  ],
+  "profile": {
+    "institutionKind": "monastic_network",
+    "networkScope": true
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

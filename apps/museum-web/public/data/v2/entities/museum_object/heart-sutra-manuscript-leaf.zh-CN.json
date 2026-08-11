@@ -1,0 +1,47 @@
+{
+  "id": "a62f0f3a-539b-54b4-ad12-6d6bd8c6a381",
+  "locale": "zh-CN",
+  "kind": "museum_object",
+  "slug": "heart-sutra-manuscript-leaf",
+  "title": "《心经》写本残叶（对象记录占位）",
+  "subtitle": "从段落到物质载体",
+  "tradition": "buddhism",
+  "evidence": "historical_inferred",
+  "timeLabel": "对象记录待核；对应隋唐传播语境",
+  "shortSummary": "对象卡把《心经》段落放回纸墨、书写、保存和流通的物质层，但当前尚未绑定具体馆藏。",
+  "curatorialDescription": [
+    "这是对象记录的 Alpha 占位，不代表某一家馆藏机构已经确认该对象或授权图像。"
+  ],
+  "researchNote": "需要补充馆藏机构、编号、年代、材质、尺寸、图像权利和与具体版本的对应关系。",
+  "keyFacts": [
+    {
+      "label": "对象类型",
+      "value": "写本残叶（待核）"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:object-records",
+      "title": "博物馆藏品与图像记录待建档清单",
+      "locator": "对象类型、馆藏机构、图像权利和编号待补",
+      "grade": "C",
+      "role": "Alpha 对象卡片的占位来源；不是可直接发布的藏品断言"
+    },
+    {
+      "id": "source:heart-sutra-edition",
+      "title": "《般若波罗蜜多心经》汉译本与经录资料",
+      "locator": "第2节：舍利子，色不异空，空不异色，色即是空，空即是色",
+      "grade": "A",
+      "role": "passage 原文和版本定位的初始依据",
+      "url": "https://ctext.org/wiki.pl?chapter=412996&if=en"
+    }
+  ],
+  "profile": {
+    "objectType": "manuscript",
+    "rightsStatus": "unknown",
+    "collectionStatus": "placeholder"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

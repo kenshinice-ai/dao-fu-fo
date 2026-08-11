@@ -1,0 +1,50 @@
+{
+  "id": "4837cd93-8615-5c0a-8c82-b96bb81c0d49",
+  "locale": "en",
+  "kind": "event",
+  "slug": "buddha-first-sermon-at-sarnath",
+  "title": "The Buddha's first sermon at Sarnath",
+  "tradition": "buddhism",
+  "evidence": "traditional_account",
+  "timeLabel": "Traditional account: around the fifth century BCE; dates contested",
+  "shortSummary": "Early Buddhist texts and later heritage traditions remember Sarnath as the place where the Buddha taught his first disciples.",
+  "curatorialDescription": [
+    "Event, text and site remain separate: the discourse is a transmitted teaching, Sarnath is a real archaeological place, and later pilgrimage memory is not compressed into one undifferentiated biography."
+  ],
+  "researchNote": "The event uses a broad traditional range. The transmission of SN 56.11, archaeological layers and the modern World Heritage narrative require separate reading.",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:buddha-early-texts",
+      "title": "Early Buddhist texts in the Pāli canon: MN 26 and SN 56.11",
+      "locator": "MN 26 Ariyapariyesanā：求法与到达鹿野苑；SN 56.11 Dhammacakkappavattana：鹿野苑初转法轮文本",
+      "grade": "A",
+      "role": "Primary-text entry for Buddha biography, early teaching traditions and the Sarnath setting; the transmitted discourse is not treated as a verbatim transcript",
+      "url": "https://suttacentral.net/sn56.11/en/sujato"
+    },
+    {
+      "id": "source:sarnath-site-record",
+      "title": "UNESCO and the Archaeological Survey of India: Ancient Buddhist Site of Sarnath",
+      "locator": "World Heritage List no. 927；鹿野苑遗址、初转法轮传统与遗址保护范围；约 25.381°N, 83.022°E",
+      "grade": "A",
+      "role": "Authoritative geographic and heritage entry for Sarnath's real site, archaeological layers and Buddhist pilgrimage memory",
+      "url": "https://whc.unesco.org/en/list/927/"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "Curatorial and methodological notes of the Dao–Ru–Fo Digital Museum",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "Curatorial framework and terminology rules"
+    }
+  ],
+  "profile": {
+    "eventKind": "other",
+    "historicity": "traditional",
+    "sequenceOrder": 2,
+    "eventScope": "regional"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

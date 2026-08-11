@@ -1,0 +1,52 @@
+{
+  "id": "a067399b-91ee-5c36-abb0-54f050a74dc2",
+  "locale": "zh-CN",
+  "kind": "text",
+  "slug": "dhammacakkappavattana-sutta",
+  "title": "《转法轮经》（Dhammacakkappavattana Sutta）",
+  "subtitle": "鹿野苑初转法轮传统中的早期佛教经文",
+  "tradition": "buddhism",
+  "evidence": "historical_inferred",
+  "timeLabel": "早期佛教传述；文本形成与结集年代不等同于佛陀生平",
+  "shortSummary": "《转法轮经》把佛陀在鹿野苑向五比丘说法的传统保存为一组可追溯的经文传承。",
+  "curatorialDescription": [
+    "本馆把‘佛陀说法’作为经文传述和后世编纂层来展示，不把文本当作现代意义上的现场录音或逐字速记。"
+  ],
+  "researchNote": "SN 56.11 的文本、语言、结集和传抄历史需要与鹿野苑考古遗址及后世汉译传统分别连接。",
+  "keyFacts": [
+    {
+      "label": "文本类型",
+      "value": "早期佛教经文"
+    },
+    {
+      "label": "核心地点",
+      "value": "鹿野苑（Isipatana）"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:buddha-early-texts",
+      "title": "巴利经藏早期佛教文本：MN 26 与 SN 56.11",
+      "locator": "MN 26 Ariyapariyesanā：求法与到达鹿野苑；SN 56.11 Dhammacakkappavattana：鹿野苑初转法轮文本",
+      "grade": "A",
+      "role": "释迦牟尼生平叙事、早期教法传述与鹿野苑空间关联的原典入口；不把经文传述等同于逐字现场记录",
+      "url": "https://suttacentral.net/sn56.11/en/sujato"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "道·儒·佛文明数字博物馆策展与方法说明",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "项目的策展框架与术语规则"
+    }
+  ],
+  "profile": {
+    "textKind": "scripture",
+    "originalLanguageCode": "pli",
+    "canonicalStatus": "canonical",
+    "attributionStatus": "traditional"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

@@ -123,6 +123,7 @@ for (const profile of bundle.profiles) {
     case "figure":
       statements.push(upsert("figure_profiles", {
         entity_id: profile.entityId, historicity: value.historicity, gender: value.gender,
+        figure_class: value.figureClass,
         canonical_name_original: value.canonicalNameOriginal, name_language_code: value.nameLanguageCode,
       }, ["entity_id"]));
       break;
@@ -143,7 +144,8 @@ for (const profile of bundle.profiles) {
         entity_id: profile.entityId, text_id: entityId("text", value.textSlug), text_version_id: entityId("text_version", value.textVersionSlug),
         passage_kind: value.passageKind, locator_original: value.locatorOriginal, locator_normalised: value.locatorNormalised,
         original_text: value.originalText, punctuated_text: value.punctuatedText, modern_zh: value.modernZh,
-        translation_en: value.translationEn, ritual_sensitivity: value.ritualSensitivity, rights_status: "unknown", variant_readings: json([]),
+        translation_en: value.translationEn, ritual_sensitivity: value.ritualSensitivity, attribution_status: value.attributionStatus,
+        rights_status: "unknown", variant_readings: json(value.variantReadings),
       }, ["entity_id"]));
       break;
     case "concept":
@@ -229,7 +231,7 @@ for (const relation of bundle.relations) {
     start_year: starts.length ? Math.min(...starts) : undefined, end_year: ends.length ? Math.max(...ends) : undefined,
     evidence_layer: relation.evidenceLayer, confidence: relation.confidence, publication_state: relation.publicationState,
     review_status: relation.reviewStatus, context_zh: relation.summary["zh-CN"], context_en: relation.summary.en,
-    qualifiers: json({ label: relation.label, temporalAssertions: relation.temporalAssertions }),
+    qualifiers: json({ ...relation.qualifiers, label: relation.label, temporalAssertions: relation.temporalAssertions }),
   }, ["id"]));
   for (const relationSourceId of relation.sourceIds) statements.push(upsert("relation_sources", {
     relation_id: relation.id, source_id: relationSourceId,

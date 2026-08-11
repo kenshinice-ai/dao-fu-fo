@@ -1,8 +1,51 @@
 # 道·儒·佛文明数字博物馆｜Cloudflare Pages 上线手册
 
-> 状态：Cloudflare Pages Preview 已部署；production 尚未执行
-> 核对日期：2026-08-09
+> 状态：Cloudflare Pages production-only 连续迭代；旧 Public RC2 / Preview 流程冻结为历史审计记录
+> 核对日期：2026-08-11
 > 适用工程：`digital-museum` 第一版可看静态原型
+
+## 0. 当前发布纪律｜2026-08-11 起
+
+Cloudflare Pages 当前只承担在线测试和阶段复盘，未来站点会迁移，因此日常改动采用简化的 production-only 流程：
+
+- default production：<https://dao-ru-fo-digital-museum.pages.dev>；
+- 完成本地必要验证后直接上传 production branch `main`；
+- 不再为普通内容、地图和 UI 批次创建 Preview alias；
+- 不再要求日常 Alpha 内容通过 Public RC promotion 后才能进入 production；
+- 内容自身的 fact、rights、review、confidence 和 publication 状态继续保留，并在 Research 中如实展示；
+- 每次部署仍记录 unique deployment URL、deployment ID、版本/校验和与 smoke 结果，作为回滚证据；
+- Cloudflare 专有运行时能力不进入核心架构，静态产物必须可以迁移到其他静态托管平台。
+
+按风险选择本地门禁：
+
+| 改动类型 | 部署前最低检查 | 部署后检查 |
+|---|---|---|
+| 内容、人物位置、地点、事件、路线 | compiler + schema/content/map verifier + Web build | default/unique HTTP 与关键 JSON smoke |
+| 首页、地图、时间轴、普通 UI | typecheck + unit + targeted E2E/axe + Web build | production 浏览器关键路径 smoke |
+| schema、compiler、路由、部署脚本 | 完整 `npm run check` + full E2E + build | 完整 HTTP/JSON/browser smoke |
+
+当前 Full Alpha production 上传命令继续使用：
+
+```bash
+CONFIRM_PRODUCTION=dao-ru-fo-digital-museum \
+ALLOW_DIRTY_DEPLOY=1 \
+CF_PAGES_PRODUCTION_VISIBILITY=preview \
+WRANGLER_VERSION=4.120.0 \
+./deploy/cloudflare-pages.sh production
+```
+
+这里的 `visibility=preview` 表示内容仍包含研究 Alpha 和未完成审核项，不表示部署到 Preview branch；命令目标仍是 Cloudflare production。后续代码可把“部署通道”和“内容审核状态”改成两个更清楚的字段。
+
+部署批次要求：
+
+1. 一个批次只交付一个可描述结果；
+2. 部署前记录 Git 状态和上一 production deployment；
+3. 部署后验证 default 与 unique URL；
+4. smoke 失败时恢复上一已知版本，不继续在坏 production 上叠改；
+5. 更新 `docs/HANDOFF.md` 顶部当前记录；
+6. 旧 Public RC2 和 Preview 文档不再随日常迭代更新。
+
+> 本文件下方关于“先 Preview、再 Public RC、最后 production”的内容保留为历史流程和脚本兼容说明；与本节冲突时，以本节 production-only 决策为准。
 
 ## 1. 发布决策
 
@@ -25,6 +68,8 @@ Expected default URL: https://dao-ru-fo-digital-museum.pages.dev
 - 构建在本机/受控 CI 完成；
 - 只上传预先验证的 `apps/museum-web/dist/`；
 - 先发 preview，完成线上 smoke 和浏览器验收后再发 production；
+- production 默认使用 `CF_PAGES_PRODUCTION_VISIBILITY=public`，只上传已 promotion 的 Public RC artifact；
+- 如需按产品负责人明确授权把最新完整研究内容同步到 production，使用 `CF_PAGES_PRODUCTION_VISIBILITY=preview`；该 Full Alpha 模式会把 compiler 的 profile、manifest、audio、traditions 和完整 read models 一起上传，并保留 `releaseStage=alpha`、`visibility=preview` 及质量阻塞状态；
 - 不在 Cloudflare 端重复生成内容包；
 - 第一版不需要 Pages Functions、KV、D1 或运行时 API。
 
@@ -66,17 +111,26 @@ apps/museum-web/dist/
 
 ### 2.2 静态发布资产
 
-2026-08-09 检查到：
+2026-08-11 Full Alpha production preflight 实测：
 
 - `dist/` 已存在；
-- 当前 Preview 构建共 35 个文件，总体积约 544 KiB；该数字会随 hashed bundle 改变，应以 preflight 实测为准；
+- 当前 Full Alpha production 构建共 329 个文件；该数字会随 hashed bundle 与内容批次改变，应以 preflight 实测为准；
 - 没有单文件超过 Cloudflare Pages 的 25 MiB 上限；
 - 文件数远低于 Free plan 的 20,000 文件上限；
 - hashed JS/CSS 位于 `dist/assets/`；
 - production Vite 配置 `sourcemap: false`，`verify:static` 会拒绝任何 `.map` 文件；
 - 静态内容已按 `data/v2/` 拆包，而不是单个大 JSON。
 
-注意：此处 `data/v2` 是已验收的 `2026.08.prototype.1`。Alpha Preview/Public compiler 输出位于 `.artifacts`，不会被 Vite 自动复制进 deployment。
+注意：此处 `data/v2` 是已验收的 `2026.08.prototype.1` 基底。构建前 `prepare-web-public` 会在 iCloud 之外的本机临时 staging 复制基底、过滤冲突副本并叠加 compiler read models；普通构建保持 prototype 边界，Full Alpha production 模式额外叠加 compiler 的 profile 与完整 manifest。Vite 和 Cloudflare 只读取 staging，不读取 iCloud 中的生成目录。
+
+完整 Alpha production 同步命令（必须保留显式确认和 dirty-tree 授权）：
+
+```bash
+CONFIRM_PRODUCTION=dao-ru-fo-digital-museum \
+ALLOW_DIRTY_DEPLOY=1 \
+CF_PAGES_PRODUCTION_VISIBILITY=preview \
+./deploy/cloudflare-pages.sh production
+```
 
 当前主要数据目录：
 
@@ -242,6 +296,14 @@ npx wrangler pages project create dao-ru-fo-digital-museum \
 ./deploy/cloudflare-pages.sh preview first-public-rc
 ```
 
+Public RC 必须使用 fail-closed 的公开 artifact 和独立 branch：
+
+```bash
+./deploy/cloudflare-pages.sh preview-public public-rc
+```
+
+该命令会先运行完整 repository gates，再运行 `build:content:public`、`verify:content:public`、`build:web:public` 和 `verify:static`，避免把 Preview-only 内容混入 Public RC。当前审核记录见 [Public RC 最终审核与 Preview 复盘](./PUBLIC_RC_FINAL_AUDIT_2026-08-09.md)。
+
 等价核心命令：
 
 ```bash
@@ -266,6 +328,14 @@ npx wrangler pages deploy apps/museum-web/dist \
 ```
 
 然后按第 7 节完成真实浏览器验收。Preview 未通过时不得继续 production。
+
+当前 Public RC Preview 记录：
+
+- branch：`public-rc`
+- alias：[https://public-rc.dao-ru-fo-digital-museum.pages.dev](https://public-rc.dao-ru-fo-digital-museum.pages.dev)
+- unique deployment：[https://57cc78db.dao-ru-fo-digital-museum.pages.dev](https://57cc78db.dao-ru-fo-digital-museum.pages.dev)
+- deployment ID：`57cc78db-1970-485d-808b-33f915a9dfc7`
+- HTTP smoke：23/23 passed；production 未发布
 
 ### 5.6 Production 部署
 

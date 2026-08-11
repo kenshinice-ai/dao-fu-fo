@@ -1,0 +1,38 @@
+{
+  "id": "633ef57c-985b-5094-baab-9f1ec05aec54",
+  "locale": "en",
+  "kind": "concept",
+  "slug": "classical-commentary",
+  "title": "Classical commentary",
+  "tradition": "confucianism",
+  "evidence": "scholarly_interpretation",
+  "timeLabel": "Sui–Tang knowledge-system focus",
+  "shortSummary": "Commentary organizes classics, inherited interpretation, textual criticism and teaching into transmissible knowledge structures.",
+  "curatorialDescription": [
+    "The concept treats classical learning as an editorial and educational practice rather than a static list of books."
+  ],
+  "researchNote": "Future records must separate individual classics, editions, commentators and institutional uses.",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:confucian-commentarial-record",
+      "title": "The Five Classics Corrected Meanings and Tang classical learning",
+      "locator": "孔颖达与经学注疏制度",
+      "grade": "B",
+      "role": "Reference basis for Kong Yingda and Tang classical learning institutions"
+    },
+    {
+      "id": "source:education-classics-records",
+      "title": "Records on the Tang Guozijian and classical learning institutions",
+      "locator": "国子监、经学与《五经正义》制度语境；底本待核",
+      "grade": "B",
+      "role": "Research reference for state education, classical commentary and knowledge institutions"
+    }
+  ],
+  "profile": {
+    "conceptKind": "interpretive_method"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

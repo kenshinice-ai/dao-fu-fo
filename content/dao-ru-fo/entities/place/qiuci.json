@@ -1,8 +1,8 @@
 {
   "kind": "place",
   "slug": "qiuci",
-  "publicationState": "preview",
-  "reviewStatus": "bilingual_reviewed",
+  "publicationState": "public",
+  "reviewStatus": "publishable",
   "primaryEvidenceLayer": "historical_documented",
   "importance": 3,
   "isFeatured": false,
@@ -17,7 +17,18 @@
       ],
       "researchNote": "需要补充历史地名对应、考古报告、石窟和语言文化资料的具体定位。",
       "timeLabel": "隋唐交通与佛教交流语境",
-      "keyFacts": [{ "label": { "zh-CN": "地点类型", "en": "Place type" }, "value": { "zh-CN": "历史区域节点", "en": "Historical regional node" } }]
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "地点类型",
+            "en": "Place type"
+          },
+          "value": {
+            "zh-CN": "历史区域节点",
+            "en": "Historical regional node"
+          }
+        }
+      ]
     },
     "en": {
       "title": "Kucha",
@@ -29,11 +40,54 @@
       ],
       "researchNote": "Historical place-name mapping, archaeological reports, cave sites and linguistic-cultural sources still need precise locators.",
       "timeLabel": "Sui–Tang transport and Buddhist exchange context",
-      "keyFacts": [{ "label": { "zh-CN": "地点类型", "en": "Place type" }, "value": { "zh-CN": "历史区域节点", "en": "Historical regional node" } }]
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "地点类型",
+            "en": "Place type"
+          },
+          "value": {
+            "zh-CN": "历史区域节点",
+            "en": "Historical regional node"
+          }
+        }
+      ]
     }
   },
-  "traditions": [{ "tradition": "buddhism", "role": "secondary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:historical-geography" }],
-  "temporalAssertions": [{ "predicate": "regional_exchange", "timeType": "range", "startYear": 581, "endYear": 907, "displayDate": { "zh-CN": "隋唐交通与佛教交流语境", "en": "Sui–Tang transport and Buddhist exchange context" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:historical-geography" }],
-  "sourceIds": ["source:historical-geography", "source:unesco-silk-roads-corridor", "source:buddhist-biographical-records"],
-  "profile": { "placeReality": "approximate_region", "geometryType": "point", "coordinateConfidence": "not_applicable", "geographicSourceId": "source:unesco-silk-roads-corridor" }
+  "traditions": [
+    {
+      "tradition": "buddhism",
+      "role": "secondary",
+      "isPrimary": true,
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:historical-geography"
+    }
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "regional_exchange",
+      "timeType": "range",
+      "startYear": 581,
+      "endYear": 907,
+      "displayDate": {
+        "zh-CN": "隋唐交通与佛教交流语境",
+        "en": "Sui–Tang transport and Buddhist exchange context"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:historical-geography"
+    }
+  ],
+  "sourceIds": [
+    "source:historical-geography",
+    "source:unesco-silk-roads-corridor",
+    "source:buddhist-biographical-records"
+  ],
+  "profile": {
+    "placeReality": "approximate_region",
+    "geometryType": "point",
+    "coordinateConfidence": "not_applicable",
+    "geographicSourceId": "source:unesco-silk-roads-corridor"
+  }
 }

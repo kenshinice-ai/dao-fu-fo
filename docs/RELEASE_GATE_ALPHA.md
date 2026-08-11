@@ -2,8 +2,8 @@
 
 当前项目同时保留两种输出：
 
-- `preview`：`.artifacts/content/v2`，用于内部评审、原型和内容编辑；允许 `preview` 状态，但必须有双语、来源、时间声明和稳定 ID。
-- `public`：`.artifacts/content/public-v2`，只接受 `public + publishable` 的实体和关系；音频还必须有 `ready` 或 `published` asset status。
+- `preview`：本机临时 compiler artifact，用于内部评审、原型和内容编辑；允许 `preview` 状态，但必须有双语、来源、时间声明和稳定 ID。
+- `public`：本机临时 fail-closed compiler artifact，只接受 `public + publishable` 的实体和关系；音频还必须有 `ready` 或 `published` asset status。
 
 常用检查：
 
@@ -20,6 +20,7 @@ npm run verify:public-rc
 npm run test:e2e
 npm run verify:database:integration
 npm run verify:architecture
+npm run verify:generated
 npm run check
 npm run check:release
 ```
@@ -37,4 +38,4 @@ Public subject 的必要条件：
 5. 所需 schema、fact、tradition、bilingual、rights、accessibility、editorial check 全部为 passed 或 waived；
 6. 关系两端都在 Public 集合；音频 asset 为 ready/published。
 
-当前 quality report 有 314 个 blocker，review queue 有 113 个 blocking subject。Public 编译结果仍是 0 entities / 0 sources / 0 relations / 0 audio，并通过 checksum 和内容验证。
+当前 quality report 有 317 个 blocker，review queue 有 173 个 blocking subject。Public 编译结果仍是 0 entities / 0 sources / 0 relations / 0 audio，并通过 checksum 和内容验证。

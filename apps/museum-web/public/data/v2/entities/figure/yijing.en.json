@@ -1,0 +1,53 @@
+{
+  "id": "dfa5a7a3-6389-5a9a-8556-d8996da23c3c",
+  "locale": "en",
+  "kind": "figure",
+  "slug": "yijing",
+  "title": "Yijing",
+  "subtitle": "Pilgrim, translator and witness to maritime exchange",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "635–713",
+  "shortSummary": "Yijing connects maritime pilgrimage, learning in South Asia and the production of Chinese Buddhist translations.",
+  "curatorialDescription": [
+    "Placed beside Xuanzang's overland experience, Yijing shows that Sui–Tang Buddhist knowledge moved through more than one route.",
+    "The museum separates pilgrimage narratives, translation work and later biography instead of treating a travel story as complete history."
+  ],
+  "researchNote": "Alpha entry; specific editions, folio references and route nodes for the Record of Buddhist Pilgrims and translation catalogues remain to be verified.",
+  "keyFacts": [
+    {
+      "label": "Primary role",
+      "value": "Monk, pilgrim and translator"
+    },
+    {
+      "label": "Route perspective",
+      "value": "Maritime and South Asian networks"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:buddhist-biographical-records",
+      "title": "Biographical and pilgrimage records of Sui–Tang Buddhist monks",
+      "locator": "义净、玄奘及求法僧侣条目；底本与卷页待核",
+      "grade": "B",
+      "role": "Research entry point for Buddhist figures, pilgrimage routes and translation activity"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "Curatorial and methodological notes of the Dao–Ru–Fo Digital Museum",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "Curatorial framework and terminology rules"
+    }
+  ],
+  "profile": {
+    "historicity": "documented",
+    "figureClass": "historical_person",
+    "gender": "male",
+    "canonicalNameOriginal": "义净",
+    "nameLanguageCode": "lzh"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

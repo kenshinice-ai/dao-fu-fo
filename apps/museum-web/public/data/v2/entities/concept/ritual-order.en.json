@@ -1,0 +1,52 @@
+{
+  "id": "c49f31f8-a96b-561a-b471-d3608349ab0c",
+  "locale": "en",
+  "kind": "concept",
+  "slug": "ritual-order",
+  "title": "Ritual and order",
+  "subtitle": "Classics, ritual and institutional identity",
+  "tradition": "confucianism",
+  "evidence": "scholarly_interpretation",
+  "timeLabel": "Comparative concept; Sui–Tang focus",
+  "shortSummary": "Li can refer to texts and norms as well as concrete ritual, relational identity and order within state education.",
+  "curatorialDescription": [
+    "A passage from the Analects provides a textual entry point, while Tang classical learning shows how interpretation entered education and state order.",
+    "The concept does not reduce Confucianism to one political ideology; it keeps tensions among text, ritual and institution visible."
+  ],
+  "researchNote": "Different editions of the Corrected Meanings, classical-learning institutions and specific ritual contexts still need item-level citations.",
+  "keyFacts": [
+    {
+      "label": "Comparison entry",
+      "value": "Classics, ritual and institutions"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:editorial-method",
+      "title": "Curatorial and methodological notes of the Dao–Ru–Fo Digital Museum",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "Curatorial framework and terminology rules"
+    },
+    {
+      "id": "source:confucian-commentarial-record",
+      "title": "The Five Classics Corrected Meanings and Tang classical learning",
+      "locator": "孔颖达与经学注疏制度",
+      "grade": "B",
+      "role": "Reference basis for Kong Yingda and Tang classical learning institutions"
+    },
+    {
+      "id": "source:education-classics-records",
+      "title": "Records on the Tang Guozijian and classical learning institutions",
+      "locator": "国子监、经学与《五经正义》制度语境；底本待核",
+      "grade": "B",
+      "role": "Research reference for state education, classical commentary and knowledge institutions"
+    }
+  ],
+  "profile": {
+    "conceptKind": "ethical"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

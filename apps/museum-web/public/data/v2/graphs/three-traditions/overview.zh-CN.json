@@ -1,28 +1,1547 @@
 {
   "locale": "zh-CN",
-  "title": "长安三传统问题图谱",
-  "question": "人物、经典与理念如何进入同一座帝国城市？",
+  "graphType": "three-traditions",
+  "title": "三传统关系网络",
+  "question": "人物、文本、制度与地点如何发生联系？",
   "nodes": [
-    { "id": "changan", "label": "长安", "kind": "place", "tradition": "convergence", "x": 490, "y": 290, "slug": "changan" },
-    { "id": "xuanzang", "label": "玄奘", "kind": "figure", "tradition": "buddhism", "x": 230, "y": 170, "slug": "xuanzang" },
-    { "id": "heart-sutra", "label": "心经", "kind": "text", "tradition": "buddhism", "x": 140, "y": 330, "slug": "heart-sutra" },
-    { "id": "emptiness", "label": "空", "kind": "concept", "tradition": "buddhism", "x": 300, "y": 440, "slug": "emptiness" },
-    { "id": "sima", "label": "司马承祯", "kind": "figure", "tradition": "daoism", "x": 500, "y": 100, "slug": "sima-chengzhen" },
-    { "id": "daodejing", "label": "道德经", "kind": "text", "tradition": "daoism", "x": 680, "y": 160, "slug": "daodejing" },
-    { "id": "naturalness", "label": "自然", "kind": "concept", "tradition": "daoism", "x": 750, "y": 330, "slug": "naturalness" },
-    { "id": "kong", "label": "孔颖达", "kind": "figure", "tradition": "confucianism", "x": 620, "y": 450, "slug": "kong-yingda" },
-    { "id": "five-classics", "label": "五经正义", "kind": "text", "tradition": "confucianism", "x": 830, "y": 460, "slug": "correct-meaning-five-classics" },
-    { "id": "ritual", "label": "礼", "kind": "concept", "tradition": "confucianism", "x": 440, "y": 500, "slug": "ritual" }
+    {
+      "id": "event:buddha-first-sermon-at-sarnath",
+      "kind": "event",
+      "slug": "buddha-first-sermon-at-sarnath",
+      "label": "佛陀在鹿野苑初转法轮",
+      "tradition": "buddhism",
+      "x": 490,
+      "y": 75
+    },
+    {
+      "id": "event:confucius-asks-laozi-about-rites",
+      "kind": "event",
+      "slug": "confucius-asks-laozi-about-rites",
+      "label": "孔子适周问礼于老子",
+      "tradition": "daoism",
+      "x": 516.9466452163255,
+      "y": 76.69533921738724
+    },
+    {
+      "id": "event:daci-en-monastery-established",
+      "kind": "event",
+      "slug": "daci-en-monastery-established",
+      "label": "大慈恩寺建立",
+      "tradition": "buddhism",
+      "x": 543.4683257404438,
+      "y": 81.75462035734432
+    },
+    {
+      "id": "event:five-classics-corrected-meanings-project",
+      "kind": "event",
+      "slug": "five-classics-corrected-meanings-project",
+      "label": "《五经正义》编纂工程",
+      "tradition": "confucianism",
+      "x": 569.1467788272058,
+      "y": 90.09805553402597
+    },
+    {
+      "id": "event:kaiyuan-institutional-expansion",
+      "kind": "event",
+      "slug": "kaiyuan-institutional-expansion",
+      "label": "开元时期的制度扩展",
+      "tradition": "daoism",
+      "x": 593.5770399318689,
+      "y": 101.59406379056932
+    },
+    {
+      "id": "event:xuanzang-departs-changan",
+      "kind": "event",
+      "slug": "xuanzang-departs-changan",
+      "label": "玄奘离开长安西行",
+      "tradition": "buddhism",
+      "x": 616.3738292428817,
+      "y": 116.0613462093863
+    },
+    {
+      "id": "event:xuanzang-return-changan",
+      "kind": "event",
+      "slug": "xuanzang-return-changan",
+      "label": "玄奘回到长安",
+      "tradition": "buddhism",
+      "x": 637.177627774668,
+      "y": 133.27174510439653
+    },
+    {
+      "id": "figure:cheng-xuanying",
+      "kind": "figure",
+      "slug": "cheng-xuanying",
+      "label": "成玄英",
+      "tradition": "daoism",
+      "x": 655.6603471967946,
+      "y": 152.95384220403173
+    },
+    {
+      "id": "figure:confucius",
+      "kind": "figure",
+      "slug": "confucius",
+      "label": "孔子（孔丘）",
+      "tradition": "confucianism",
+      "x": 671.5305039829333,
+      "y": 174.79723907951575
+    },
+    {
+      "id": "figure:jizang",
+      "kind": "figure",
+      "slug": "jizang",
+      "label": "吉藏",
+      "tradition": "buddhism",
+      "x": 684.5378162801942,
+      "y": 198.4574523135094
+    },
+    {
+      "id": "figure:kong-yingda",
+      "kind": "figure",
+      "slug": "kong-yingda",
+      "label": "孔颖达",
+      "tradition": "confucianism",
+      "x": 694.477151003458,
+      "y": 223.56134620938633
+    },
+    {
+      "id": "figure:laozi",
+      "kind": "figure",
+      "slug": "laozi",
+      "label": "老子（李耳）",
+      "tradition": "daoism",
+      "x": 701.191758906668,
+      "y": 249.7130173640692
+    },
+    {
+      "id": "figure:sakyamuni",
+      "kind": "figure",
+      "slug": "sakyamuni",
+      "label": "释迦牟尼佛（乔达摩·悉达多）",
+      "tradition": "buddhism",
+      "x": 704.5757466120783,
+      "y": 276.5000383011976
+    },
+    {
+      "id": "figure:sima-chengzhen",
+      "kind": "figure",
+      "slug": "sima-chengzhen",
+      "label": "司马承祯",
+      "tradition": "daoism",
+      "x": 704.5757466120783,
+      "y": 303.4999616988024
+    },
+    {
+      "id": "figure:xuanzang",
+      "kind": "figure",
+      "slug": "xuanzang",
+      "label": "玄奘",
+      "tradition": "buddhism",
+      "x": 701.191758906668,
+      "y": 330.2869826359308
+    },
+    {
+      "id": "figure:yan-shigu",
+      "kind": "figure",
+      "slug": "yan-shigu",
+      "label": "颜师古",
+      "tradition": "confucianism",
+      "x": 694.477151003458,
+      "y": 356.43865379061367
+    },
+    {
+      "id": "institution:changan-daoist-monastic-network",
+      "kind": "institution",
+      "slug": "changan-daoist-monastic-network",
+      "label": "长安道观网络",
+      "tradition": "daoism",
+      "x": 684.5378162801942,
+      "y": 381.54254768649065
+    },
+    {
+      "id": "institution:changan-translation-bureau",
+      "kind": "institution",
+      "slug": "changan-translation-bureau",
+      "label": "长安译经场网络",
+      "tradition": "buddhism",
+      "x": 671.5305039829332,
+      "y": 405.2027609204843
+    },
+    {
+      "id": "institution:daci-en-monastery",
+      "kind": "institution",
+      "slug": "daci-en-monastery",
+      "label": "大慈恩寺",
+      "tradition": "buddhism",
+      "x": 655.6603471967946,
+      "y": 427.04615779596827
+    },
+    {
+      "id": "institution:guozijian",
+      "kind": "institution",
+      "slug": "guozijian",
+      "label": "国子监",
+      "tradition": "confucianism",
+      "x": 637.177627774668,
+      "y": 446.72825489560347
+    },
+    {
+      "id": "institution:hongwen-institute",
+      "kind": "institution",
+      "slug": "hongwen-institute",
+      "label": "弘文馆",
+      "tradition": "confucianism",
+      "x": 616.3738292428817,
+      "y": 463.93865379061367
+    },
+    {
+      "id": "passage:dao-that-can-be-spoken",
+      "kind": "passage",
+      "slug": "dao-that-can-be-spoken",
+      "label": "道可道，非常道",
+      "tradition": "daoism",
+      "x": 593.5770399318689,
+      "y": 478.40593620943065
+    },
+    {
+      "id": "passage:do-not-impose",
+      "kind": "passage",
+      "slug": "do-not-impose",
+      "label": "己所不欲，勿施于人",
+      "tradition": "confucianism",
+      "x": 569.1467788272058,
+      "y": 489.901944465974
+    },
+    {
+      "id": "passage:form-is-emptiness",
+      "kind": "passage",
+      "slug": "form-is-emptiness",
+      "label": "色不异空，空不异色",
+      "tradition": "buddhism",
+      "x": 543.4683257404438,
+      "y": 498.2453796426557
+    },
+    {
+      "id": "passage:highest-good-like-water",
+      "kind": "passage",
+      "slug": "highest-good-like-water",
+      "label": "上善若水",
+      "tradition": "daoism",
+      "x": 516.9466452163255,
+      "y": 503.3046607826127
+    },
+    {
+      "id": "passage:humans-follow-earth",
+      "kind": "passage",
+      "slug": "humans-follow-earth",
+      "label": "人法地，地法天，天法道，道法自然",
+      "tradition": "daoism",
+      "x": 490,
+      "y": 505
+    },
+    {
+      "id": "passage:learn-and-practice",
+      "kind": "passage",
+      "slug": "learn-and-practice",
+      "label": "学而时习之",
+      "tradition": "confucianism",
+      "x": 463.05335478367454,
+      "y": 503.3046607826127
+    },
+    {
+      "id": "passage:learning-increases-dao-decreases",
+      "kind": "passage",
+      "slug": "learning-increases-dao-decreases",
+      "label": "为学日益，为道日损",
+      "tradition": "daoism",
+      "x": 436.53167425955615,
+      "y": 498.2453796426557
+    },
+    {
+      "id": "passage:return-to-ritual",
+      "kind": "passage",
+      "slug": "return-to-ritual",
+      "label": "克己复礼为仁",
+      "tradition": "confucianism",
+      "x": 410.8532211727942,
+      "y": 489.901944465974
+    },
+    {
+      "id": "passage:three-walk-together",
+      "kind": "passage",
+      "slug": "three-walk-together",
+      "label": "三人行，必有我师焉",
+      "tradition": "confucianism",
+      "x": 386.42296006813126,
+      "y": 478.4059362094307
+    },
+    {
+      "id": "passage:turning-of-dharma-wheel",
+      "kind": "passage",
+      "slug": "turning-of-dharma-wheel",
+      "label": "这是苦圣谛",
+      "tradition": "buddhism",
+      "x": 363.6261707571183,
+      "y": 463.93865379061367
+    },
+    {
+      "id": "passage:turning-of-dharma-wheel-thanissaro-en",
+      "kind": "passage",
+      "slug": "turning-of-dharma-wheel-thanissaro-en",
+      "label": "这是苦圣谛（Thanissaro 英译）",
+      "tradition": "buddhism",
+      "x": 342.82237222533195,
+      "y": 446.72825489560347
+    },
+    {
+      "id": "place:changan",
+      "kind": "place",
+      "slug": "changan",
+      "label": "长安",
+      "tradition": "convergence",
+      "x": 324.3396528032053,
+      "y": 427.04615779596827
+    },
+    {
+      "id": "place:dunhuang",
+      "kind": "place",
+      "slug": "dunhuang",
+      "label": "敦煌",
+      "tradition": "buddhism",
+      "x": 308.4694960170667,
+      "y": 405.2027609204842
+    },
+    {
+      "id": "place:great-wild-goose-pagoda-site",
+      "kind": "place",
+      "slug": "great-wild-goose-pagoda-site",
+      "label": "大雁塔遗址",
+      "tradition": "buddhism",
+      "x": 295.46218371980575,
+      "y": 381.5425476864905
+    },
+    {
+      "id": "place:longmen-grottoes",
+      "kind": "place",
+      "slug": "longmen-grottoes",
+      "label": "龙门石窟",
+      "tradition": "buddhism",
+      "x": 285.522848996542,
+      "y": 356.4386537906137
+    },
+    {
+      "id": "place:luoyang",
+      "kind": "place",
+      "slug": "luoyang",
+      "label": "洛阳",
+      "tradition": "convergence",
+      "x": 278.80824109333196,
+      "y": 330.28698263593077
+    },
+    {
+      "id": "place:sarnath",
+      "kind": "place",
+      "slug": "sarnath",
+      "label": "鹿野苑（Sarnath）",
+      "tradition": "buddhism",
+      "x": 275.4242533879216,
+      "y": 303.49996169880234
+    },
+    {
+      "id": "route:xuanzang-western-pilgrimage",
+      "kind": "route",
+      "slug": "xuanzang-western-pilgrimage",
+      "label": "玄奘西行求法路线",
+      "tradition": "buddhism",
+      "x": 275.4242533879216,
+      "y": 276.5000383011977
+    },
+    {
+      "id": "text:analects",
+      "kind": "text",
+      "slug": "analects",
+      "label": "《论语》",
+      "tradition": "confucianism",
+      "x": 278.80824109333196,
+      "y": 249.7130173640693
+    },
+    {
+      "id": "text:daodejing",
+      "kind": "text",
+      "slug": "daodejing",
+      "label": "《道德经》",
+      "tradition": "daoism",
+      "x": 285.52284899654194,
+      "y": 223.56134620938633
+    },
+    {
+      "id": "text:dhammacakkappavattana-sutta",
+      "kind": "text",
+      "slug": "dhammacakkappavattana-sutta",
+      "label": "《转法轮经》（Dhammacakkappavattana Sutta）",
+      "tradition": "buddhism",
+      "x": 295.4621837198057,
+      "y": 198.45745231350955
+    },
+    {
+      "id": "text:five-classics-corrected-meanings",
+      "kind": "text",
+      "slug": "five-classics-corrected-meanings",
+      "label": "《五经正义》",
+      "tradition": "confucianism",
+      "x": 308.4694960170667,
+      "y": 174.79723907951583
+    },
+    {
+      "id": "text:great-tang-records-western-regions",
+      "kind": "text",
+      "slug": "great-tang-records-western-regions",
+      "label": "《大唐西域记》",
+      "tradition": "buddhism",
+      "x": 324.33965280320524,
+      "y": 152.9538422040318
+    },
+    {
+      "id": "text:heart-sutra",
+      "kind": "text",
+      "slug": "heart-sutra",
+      "label": "《般若波罗蜜多心经》",
+      "tradition": "buddhism",
+      "x": 342.8223722253319,
+      "y": 133.27174510439656
+    },
+    {
+      "id": "text_version:analects-received",
+      "kind": "text_version",
+      "slug": "analects-received",
+      "label": "《论语》通行本",
+      "tradition": "confucianism",
+      "x": 363.62617075711825,
+      "y": 116.06134620938633
+    },
+    {
+      "id": "text_version:daodejing-received",
+      "kind": "text_version",
+      "slug": "daodejing-received",
+      "label": "《道德经》通行本",
+      "tradition": "daoism",
+      "x": 386.4229600681312,
+      "y": 101.59406379056932
+    },
+    {
+      "id": "text_version:dhammacakkappavattana-sutta-pali",
+      "kind": "text_version",
+      "slug": "dhammacakkappavattana-sutta-pali",
+      "label": "《转法轮经》巴利语数字版本",
+      "tradition": "buddhism",
+      "x": 410.8532211727941,
+      "y": 90.098055534026
+    },
+    {
+      "id": "text_version:dhammacakkappavattana-sutta-thanissaro-en",
+      "kind": "text_version",
+      "slug": "dhammacakkappavattana-sutta-thanissaro-en",
+      "label": "《转法轮经》Thanissaro 英译",
+      "tradition": "buddhism",
+      "x": 436.5316742595561,
+      "y": 81.75462035734435
+    },
+    {
+      "id": "text_version:heart-sutra-chinese-received",
+      "kind": "text_version",
+      "slug": "heart-sutra-chinese-received",
+      "label": "《心经》汉译通行版本",
+      "tradition": "buddhism",
+      "x": 463.05335478367454,
+      "y": 76.69533921738727
+    }
   ],
   "edges": [
-    { "id": "e1", "source": "xuanzang", "target": "heart-sutra", "label": "译本传统关联", "evidence": "传统归属与文本版本需分别说明" },
-    { "id": "e2", "source": "heart-sutra", "target": "emptiness", "label": "表达核心概念", "evidence": "原典 passage" },
-    { "id": "e3", "source": "xuanzang", "target": "changan", "label": "归国后活动于", "evidence": "历史记载" },
-    { "id": "e4", "source": "sima", "target": "daodejing", "label": "属于经典解释传统", "evidence": "历史与传统资料" },
-    { "id": "e5", "source": "daodejing", "target": "naturalness", "label": "表达概念", "evidence": "《道德经》第二十五章" },
-    { "id": "e6", "source": "sima", "target": "changan", "label": "与唐代宫廷网络相连", "evidence": "历史记载" },
-    { "id": "e7", "source": "kong", "target": "five-classics", "label": "主持编纂工程", "evidence": "经学史资料" },
-    { "id": "e8", "source": "five-classics", "target": "ritual", "label": "进入礼制与教育解释", "evidence": "文本与制度语境" },
-    { "id": "e9", "source": "kong", "target": "changan", "label": "进入国家教育网络", "evidence": "历史记载" }
+    {
+      "id": "relation:xuanzang-active-changan",
+      "source": "figure:xuanzang",
+      "target": "place:changan",
+      "label": "在长安活动",
+      "summary": "长安是玄奘译经、讲学与制度化工作的主要场所。",
+      "relationType": "active_in",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:xuanzang-records"
+      ]
+    },
+    {
+      "id": "relation:xuanzang-travelled-dunhuang",
+      "source": "figure:xuanzang",
+      "target": "place:dunhuang",
+      "label": "经过敦煌区域",
+      "summary": "敦煌位于跨越河西走廊的求法路线语境中，具体停留节点仍需逐项核定。",
+      "relationType": "travelled_through",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:xuanzang-records",
+        "source:historical-geography"
+      ]
+    },
+    {
+      "id": "relation:xuanzang-active-luoyang",
+      "source": "figure:xuanzang",
+      "target": "place:luoyang",
+      "label": "与洛阳发生联系",
+      "summary": "洛阳是隋唐政治与宗教网络中的重要节点；本条只表达区域联系，不等同于固定驻锡。",
+      "relationType": "active_in",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:xuanzang-records",
+        "source:historical-geography"
+      ]
+    },
+    {
+      "id": "relation:sima-active-changan",
+      "source": "figure:sima-chengzhen",
+      "target": "place:changan",
+      "label": "景云二年入京（长安锚点）",
+      "summary": "《旧唐书》记载景云二年睿宗召司马承祯入京；本条只把当时京师的长安作为城市尺度锚点。开元年间涉及东都洛阳、王屋山的召见与建观另行处理，不由本条推成 713–735 年持续在长安活动。",
+      "relationType": "active_in",
+      "evidence": "historical_documented",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:sima-old-tang-biography",
+        "source:sui-tang-changan-urban-study"
+      ]
+    },
+    {
+      "id": "relation:kong-active-changan",
+      "source": "figure:kong-yingda",
+      "target": "place:changan",
+      "label": "贞观十四年在长安国子学讲学",
+      "summary": "《碑林区志》记载，贞观十四年（640）唐太宗到长安务本坊国子学，命国子祭酒孔颖达讲《孝经》，并撰定《五经正义》为教材；本条只表达这一有具体机构和年份的长安活动。",
+      "relationType": "active_in",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:kong-new-tang-biography",
+        "source:kong-wujing-zhengyi-record",
+        "source:changan-guozijian-gazetteer"
+      ]
+    },
+    {
+      "id": "relation:heart-sutra-has-version",
+      "source": "text:heart-sutra",
+      "target": "text_version:heart-sutra-chinese-received",
+      "label": "对应汉文版本",
+      "summary": "文本条目与具体版本分开，便于段落引用回到版本层。",
+      "relationType": "has_version",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:heart-sutra-edition"
+      ]
+    },
+    {
+      "id": "relation:daodejing-has-version",
+      "source": "text:daodejing",
+      "target": "text_version:daodejing-received",
+      "label": "对应通行本版本",
+      "summary": "《道德经》条目与通行本版本分开记录，避免版本差异被隐藏。",
+      "relationType": "has_version",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:daodejing-edition"
+      ]
+    },
+    {
+      "id": "relation:analects-has-version",
+      "source": "text:analects",
+      "target": "text_version:analects-received",
+      "label": "对应通行本版本",
+      "summary": "《论语》条目与通行本版本分开记录，段落定位保持可追溯。",
+      "relationType": "has_version",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:analects-edition"
+      ]
+    },
+    {
+      "id": "relation:form-passage-heart-sutra",
+      "source": "passage:form-is-emptiness",
+      "target": "text:heart-sutra",
+      "label": "属于文本段落",
+      "summary": "段落条目回指《心经》文本层，并保留版本和定位信息。",
+      "relationType": "passage_of",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:heart-sutra-edition"
+      ]
+    },
+    {
+      "id": "relation:humans-passage-daodejing",
+      "source": "passage:humans-follow-earth",
+      "target": "text:daodejing",
+      "label": "属于文本段落",
+      "summary": "段落条目回指《道德经》文本层，并保留章次定位。",
+      "relationType": "passage_of",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:daodejing-edition"
+      ]
+    },
+    {
+      "id": "relation:return-passage-analects",
+      "source": "passage:return-to-ritual",
+      "target": "text:analects",
+      "label": "属于文本段落",
+      "summary": "段落条目回指《论语》文本层，并保留篇章定位。",
+      "relationType": "passage_of",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:analects-edition"
+      ]
+    },
+    {
+      "id": "relation:form-quoted-heart-version",
+      "source": "passage:form-is-emptiness",
+      "target": "text_version:heart-sutra-chinese-received",
+      "label": "引自具体版本",
+      "summary": "段落的原文与英译必须从明确版本中读取和核对。",
+      "relationType": "quoted_from_version",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:heart-sutra-edition"
+      ]
+    },
+    {
+      "id": "relation:humans-quoted-daodejing-version",
+      "source": "passage:humans-follow-earth",
+      "target": "text_version:daodejing-received",
+      "label": "引自具体版本",
+      "summary": "段落原文回指《道德经》通行本版本。",
+      "relationType": "quoted_from_version",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:daodejing-edition"
+      ]
+    },
+    {
+      "id": "relation:return-quoted-analects-version",
+      "source": "passage:return-to-ritual",
+      "target": "text_version:analects-received",
+      "label": "引自具体版本",
+      "summary": "段落原文回指《论语》通行本版本。",
+      "relationType": "quoted_from_version",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:analects-edition"
+      ]
+    },
+    {
+      "id": "relation:changan-luoyang-corridor",
+      "source": "place:changan",
+      "target": "place:luoyang",
+      "label": "城市走廊相连",
+      "summary": "长安与洛阳是隋唐政治、交通和宗教传播网络中的核心城市。",
+      "relationType": "route_connects",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:historical-geography"
+      ]
+    },
+    {
+      "id": "relation:daodejing-analects-comparative",
+      "source": "text:daodejing",
+      "target": "text:analects",
+      "label": "比较阅读",
+      "summary": "本关系只建立策展比较入口，不声称两个文本具有同一作者、同一传统或直接影响关系。",
+      "relationType": "comparative_parallel",
+      "evidence": "scholarly_interpretation",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:comparative-method",
+        "source:editorial-method"
+      ]
+    },
+    {
+      "id": "relation:heart-sutra-daodejing-comparative",
+      "source": "text:heart-sutra",
+      "target": "text:daodejing",
+      "label": "概念比较入口",
+      "summary": "两部文本可以被并置阅读，但其术语、历史语境和宗教功能必须分别说明。",
+      "relationType": "comparative_parallel",
+      "evidence": "scholarly_interpretation",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:comparative-method",
+        "source:editorial-method"
+      ]
+    },
+    {
+      "id": "relation:cheng-commented-daodejing",
+      "source": "figure:cheng-xuanying",
+      "target": "text:daodejing",
+      "label": "进入《道德经》注释传统",
+      "summary": "成玄英提供唐初道家经典解释活动的案例，具体注本版本仍待目录核定。",
+      "relationType": "commented_on",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:daoist-historical-record",
+        "source:daodejing-edition"
+      ]
+    },
+    {
+      "id": "relation:yan-hongwen-context",
+      "source": "figure:yan-shigu",
+      "target": "institution:hongwen-institute",
+      "label": "宫廷学术制度语境",
+      "summary": "颜师古的文本整理活动被置于唐初宫廷学术机构的背景中；具体职任需继续核定。",
+      "relationType": "institutional_context",
+      "evidence": "historical_inferred",
+      "confidence": "low",
+      "sourceIds": [
+        "source:education-classics-records"
+      ]
+    },
+    {
+      "id": "relation:jizang-active-luoyang",
+      "source": "figure:jizang",
+      "target": "place:luoyang",
+      "label": "与洛阳佛教网络相连",
+      "summary": "本关系记录隋唐之际人物与洛阳宗教网络的研究入口，不代替逐年行迹。",
+      "relationType": "active_in",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:buddhist-biographical-records",
+        "source:historical-geography"
+      ]
+    },
+    {
+      "id": "relation:translation-network-located-changan",
+      "source": "institution:changan-translation-bureau",
+      "target": "place:changan",
+      "label": "以长安为城市范围",
+      "summary": "该网络汇总长安不同时期的译场，具体寺院和建筑位置仍须项目级拆分。",
+      "relationType": "located_in",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:buddhist-institutional-records",
+        "source:historical-geography"
+      ]
+    },
+    {
+      "id": "relation:daoist-network-located-changan",
+      "source": "institution:changan-daoist-monastic-network",
+      "target": "place:changan",
+      "label": "以长安为城市范围",
+      "summary": "网络条目表示城市尺度的宫观联系，不把全部节点归为同一机构。",
+      "relationType": "located_in",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:daoist-historical-record",
+        "source:historical-geography"
+      ]
+    },
+    {
+      "id": "relation:pagoda-site-located-changan",
+      "source": "place:great-wild-goose-pagoda-site",
+      "target": "place:changan",
+      "label": "位于历史长安范围",
+      "summary": "遗址属于长安城市空间；精确历史坊区与保护边界需由权威地理资料补充。",
+      "relationType": "located_in",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:buddhist-institutional-records",
+        "source:historical-geography"
+      ]
+    },
+    {
+      "id": "relation:longmen-located-luoyang",
+      "source": "place:longmen-grottoes",
+      "target": "place:luoyang",
+      "label": "位于洛阳以南",
+      "summary": "UNESCO 遗产资料将龙门石窟定位于古都洛阳以南的伊河两岸。",
+      "relationType": "located_in",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:unesco-longmen"
+      ]
+    },
+    {
+      "id": "relation:dao-spoken-passage-daodejing",
+      "source": "passage:dao-that-can-be-spoken",
+      "target": "text:daodejing",
+      "label": "属于文本段落",
+      "summary": "段落回指《道德经》文本和通行本章次。",
+      "relationType": "passage_of",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:daodejing-edition"
+      ]
+    },
+    {
+      "id": "relation:water-passage-daodejing",
+      "source": "passage:highest-good-like-water",
+      "target": "text:daodejing",
+      "label": "属于文本段落",
+      "summary": "完整句群回指《道德经》第八章。",
+      "relationType": "passage_of",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:daodejing-edition"
+      ]
+    },
+    {
+      "id": "relation:decrease-passage-daodejing",
+      "source": "passage:learning-increases-dao-decreases",
+      "target": "text:daodejing",
+      "label": "属于文本段落",
+      "summary": "段落回指《道德经》第四十八章。",
+      "relationType": "passage_of",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:daodejing-edition"
+      ]
+    },
+    {
+      "id": "relation:practice-passage-analects",
+      "source": "passage:learn-and-practice",
+      "target": "text:analects",
+      "label": "属于文本段落",
+      "summary": "段落回指《论语·学而》及通行本版本。",
+      "relationType": "passage_of",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:analects-edition"
+      ]
+    },
+    {
+      "id": "relation:three-passage-analects",
+      "source": "passage:three-walk-together",
+      "target": "text:analects",
+      "label": "属于文本段落",
+      "summary": "段落回指《论语·述而》及通行本版本。",
+      "relationType": "passage_of",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:analects-edition"
+      ]
+    },
+    {
+      "id": "relation:do-not-impose-passage-analects",
+      "source": "passage:do-not-impose",
+      "target": "text:analects",
+      "label": "属于文本段落",
+      "summary": "段落回指《论语·卫灵公》及通行本版本。",
+      "relationType": "passage_of",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:analects-edition"
+      ]
+    },
+    {
+      "id": "relation:xuanzang-participated-departure",
+      "source": "figure:xuanzang",
+      "target": "event:xuanzang-departs-changan",
+      "label": "参与西行出发",
+      "summary": "玄奘人物记录与“离开长安西行”事件相连；出发月份、许可叙事和初段路线仍保留不确定性。",
+      "relationType": "participated_in",
+      "evidence": "historical_documented",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:xuanzang-records"
+      ]
+    },
+    {
+      "id": "relation:xuanzang-participated-return",
+      "source": "figure:xuanzang",
+      "target": "event:xuanzang-return-changan",
+      "label": "参与归返长安事件",
+      "summary": "玄奘的求法经历在约 645 年回到长安后进入译经、讲学和寺院制度语境。",
+      "relationType": "participated_in",
+      "evidence": "historical_documented",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:xuanzang-records",
+        "source:buddhist-institutional-records"
+      ]
+    },
+    {
+      "id": "relation:xuanzang-departure-occurred-changan",
+      "source": "event:xuanzang-departs-changan",
+      "target": "place:changan",
+      "label": "出发于长安",
+      "summary": "事件以长安为出发地理锚点；路线离开城市后的具体节点不由此关系推定。",
+      "relationType": "occurred_at",
+      "evidence": "historical_documented",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:xuanzang-records",
+        "source:historical-geography"
+      ]
+    },
+    {
+      "id": "relation:xuanzang-return-occurred-changan",
+      "source": "event:xuanzang-return-changan",
+      "target": "place:changan",
+      "label": "归返长安",
+      "summary": "约 645 年的归返事件把跨区域路线接回长安城市和制度空间。",
+      "relationType": "occurred_at",
+      "evidence": "historical_documented",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:xuanzang-records",
+        "source:historical-geography"
+      ]
+    },
+    {
+      "id": "relation:daci-en-foundation-occurred-changan",
+      "source": "event:daci-en-monastery-established",
+      "target": "place:changan",
+      "label": "建立于长安",
+      "summary": "大慈恩寺建立事件以长安为城市尺度地点，并与后续玄奘译经空间分开建模。",
+      "relationType": "occurred_at",
+      "evidence": "historical_documented",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:buddhist-institutional-records",
+        "source:historical-geography"
+      ]
+    },
+    {
+      "id": "relation:xuanzang-active-daci-en",
+      "source": "figure:xuanzang",
+      "target": "institution:daci-en-monastery",
+      "label": "在大慈恩寺译经与讲学",
+      "summary": "大慈恩寺是玄奘回到长安后译经、讲学和制度化工作的核心机构节点；具体译经项目另行连接文本和版本。",
+      "relationType": "active_in",
+      "evidence": "historical_documented",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:xuanzang-records",
+        "source:buddhist-institutional-records"
+      ]
+    },
+    {
+      "id": "relation:xuanzang-institutional-translation-network",
+      "source": "figure:xuanzang",
+      "target": "institution:changan-translation-bureau",
+      "label": "进入长安译经场网络",
+      "summary": "玄奘的译经工作依托寺院、语言分工、校勘和制度支持；这里连接的是网络语境，不把不同项目合并为一处固定建筑。",
+      "relationType": "institutional_context",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:xuanzang-records",
+        "source:buddhist-institutional-records"
+      ]
+    },
+    {
+      "id": "relation:western-regions-attributed-xuanzang",
+      "source": "text:great-tang-records-western-regions",
+      "target": "figure:xuanzang",
+      "label": "见闻与传述关联玄奘",
+      "summary": "《大唐西域记》与玄奘的旅行见闻和口述传统相关，但文本并不因此被简化为玄奘单独写作。",
+      "relationType": "attributed_to",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:xuanzang-records",
+        "source:buddhist-biographical-records"
+      ]
+    },
+    {
+      "id": "relation:xuanzang-remembered-daci-en",
+      "source": "figure:xuanzang",
+      "target": "institution:daci-en-monastery",
+      "label": "在大慈恩寺记忆中延续",
+      "summary": "大慈恩寺作为译经与寺院网络节点承接玄奘的后世机构记忆；本条不等同于神格化或单一纪念仪式。",
+      "relationType": "remembered_in",
+      "evidence": "historical_inferred",
+      "confidence": "low",
+      "sourceIds": [
+        "source:buddhist-institutional-records",
+        "source:xuanzang-records"
+      ]
+    },
+    {
+      "id": "relation:xuanzang-route-dunhuang-context",
+      "source": "route:xuanzang-western-pilgrimage",
+      "target": "place:dunhuang",
+      "label": "路线经过敦煌区域",
+      "summary": "路线把敦煌作为河西走廊的区域锚点，而不是主张已复原逐日行程。",
+      "relationType": "route_connects",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:xuanzang-records",
+        "source:historical-geography",
+        "source:unesco-silk-roads-corridor"
+      ]
+    },
+    {
+      "id": "relation:sima-participated-kaiyuan",
+      "source": "figure:sima-chengzhen",
+      "target": "event:kaiyuan-institutional-expansion",
+      "label": "处于开元制度扩展语境",
+      "summary": "司马承祯与开元时期的宫廷召见、道教制度和知识网络相连；该事件是研究性阶段标签，不是一次单独行程。",
+      "relationType": "participated_in",
+      "evidence": "historical_inferred",
+      "confidence": "low",
+      "sourceIds": [
+        "source:sima-old-tang-biography",
+        "source:daoist-historical-record",
+        "source:tang-imperial-records"
+      ]
+    },
+    {
+      "id": "relation:sima-daoist-institutional-context",
+      "source": "figure:sima-chengzhen",
+      "target": "institution:changan-daoist-monastic-network",
+      "label": "连接长安道教宫观网络",
+      "summary": "司马承祯的道教身份与唐代城市、宫廷和道观制度网络相连，但网络条目不代表一处固定宫观。",
+      "relationType": "institutional_context",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:sima-old-tang-biography",
+        "source:daoist-historical-record"
+      ]
+    },
+    {
+      "id": "relation:daodejing-received-by-sima",
+      "source": "text:daodejing",
+      "target": "figure:sima-chengzhen",
+      "label": "在司马承祯的道教语境中被接收",
+      "summary": "《道德经》与司马承祯所处的上清传统和唐代道教解释语境相连；这不是把文本作者归于司马承祯。",
+      "relationType": "received_by",
+      "evidence": "scholarly_interpretation",
+      "confidence": "low",
+      "sourceIds": [
+        "source:daoist-historical-record",
+        "source:daodejing-edition"
+      ]
+    },
+    {
+      "id": "relation:sima-remembered-daoist-network",
+      "source": "figure:sima-chengzhen",
+      "target": "institution:changan-daoist-monastic-network",
+      "label": "在长安道教机构记忆中延续",
+      "summary": "司马承祯的后世记忆通过道教人物谱系、宫观网络和唐代制度叙事延续；本条不等同于神格化。",
+      "relationType": "remembered_in",
+      "evidence": "historical_inferred",
+      "confidence": "low",
+      "sourceIds": [
+        "source:daoist-historical-record",
+        "source:sima-old-tang-biography"
+      ]
+    },
+    {
+      "id": "relation:kong-participated-five-classics",
+      "source": "figure:kong-yingda",
+      "target": "event:five-classics-corrected-meanings-project",
+      "label": "参与《五经正义》编纂工程",
+      "summary": "孔颖达与《五经正义》的编纂、注疏和国家教育工程相连；编纂并非个人独著行为。",
+      "relationType": "participated_in",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:kong-new-tang-biography",
+        "source:confucian-commentarial-record"
+      ]
+    },
+    {
+      "id": "relation:five-classics-project-occurred-changan",
+      "source": "event:five-classics-corrected-meanings-project",
+      "target": "place:changan",
+      "label": "在长安制度空间中展开",
+      "summary": "《五经正义》编纂工程与长安的国家教育和经学制度空间相连；具体场所和阶段仍需拆分。",
+      "relationType": "occurred_at",
+      "evidence": "historical_inferred",
+      "confidence": "low",
+      "sourceIds": [
+        "source:education-classics-records",
+        "source:historical-geography"
+      ]
+    },
+    {
+      "id": "relation:kong-active-guozijian",
+      "source": "figure:kong-yingda",
+      "target": "institution:guozijian",
+      "label": "连接国子监经学制度",
+      "summary": "孔颖达的人物活动放回国子监和国家教育制度后，才能看见经学注疏如何获得制度作用；具体官职和校舍仍待核定。",
+      "relationType": "active_in",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:kong-new-tang-biography",
+        "source:education-classics-records"
+      ]
+    },
+    {
+      "id": "relation:kong-commented-five-classics",
+      "source": "figure:kong-yingda",
+      "target": "text:five-classics-corrected-meanings",
+      "label": "参与经学注疏",
+      "summary": "孔颖达与《五经正义》的注疏和编纂层相连，但文本条目保留其复合和集体生产性质。",
+      "relationType": "commented_on",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:kong-new-tang-biography",
+        "source:confucian-commentarial-record"
+      ]
+    },
+    {
+      "id": "relation:five-classics-attributed-kong",
+      "source": "text:five-classics-corrected-meanings",
+      "target": "figure:kong-yingda",
+      "label": "编纂与注疏贡献关联孔颖达",
+      "summary": "《五经正义》传统上与孔颖达的编纂和注疏贡献相连，但文本本身是复合的制度性成果，不应简化为个人独著。",
+      "relationType": "attributed_to",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:kong-new-tang-biography",
+        "source:confucian-commentarial-record"
+      ]
+    },
+    {
+      "id": "relation:five-classics-received-guozijian",
+      "source": "text:five-classics-corrected-meanings",
+      "target": "institution:guozijian",
+      "label": "进入国子监教育语境",
+      "summary": "《五经正义》通过经学教学和国家教育制度获得后续传播语境；具体课程和版本使用仍需逐项核对。",
+      "relationType": "received_by",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:education-classics-records",
+        "source:confucian-commentarial-record"
+      ]
+    },
+    {
+      "id": "relation:kong-remembered-guozijian",
+      "source": "figure:kong-yingda",
+      "target": "institution:guozijian",
+      "label": "在国子监经学记忆中延续",
+      "summary": "孔颖达的后世机构记忆与《五经正义》及国家教育叙事相连；本条不把制度记忆等同于个人崇拜。",
+      "relationType": "remembered_in",
+      "evidence": "historical_inferred",
+      "confidence": "low",
+      "sourceIds": [
+        "source:education-classics-records",
+        "source:confucian-commentarial-record"
+      ]
+    },
+    {
+      "id": "relation:laozi-participated-zhou-rites",
+      "source": "figure:laozi",
+      "target": "event:confucius-asks-laozi-about-rites",
+      "label": "出现在孔子问礼叙事中",
+      "summary": "《史记》把老子置于孔子向周地问礼的叙事中；本条保留史传和传统层，不把会见当作独立可证的现场记录。",
+      "relationType": "participated_in",
+      "evidence": "traditional_account",
+      "confidence": "low",
+      "sourceIds": [
+        "source:shiji-laozi-biography",
+        "source:shiji-confucius-biography"
+      ]
+    },
+    {
+      "id": "relation:confucius-participated-zhou-rites",
+      "source": "figure:confucius",
+      "target": "event:confucius-asks-laozi-about-rites",
+      "label": "在周地向老子问礼",
+      "summary": "孔子问礼故事由《史记》保存为儒道相遇的史传入口；具体年代和对话细节仍标为传统叙事。",
+      "relationType": "participated_in",
+      "evidence": "traditional_account",
+      "confidence": "low",
+      "sourceIds": [
+        "source:shiji-confucius-biography",
+        "source:shiji-laozi-biography"
+      ]
+    },
+    {
+      "id": "relation:confucius-laozi-occurred-luoyang",
+      "source": "event:confucius-asks-laozi-about-rites",
+      "target": "place:luoyang",
+      "label": "置于周地洛阳语境",
+      "summary": "事件使用洛阳作为周地礼学和交通语境的城市级锚点，不主张已精确定位会见地点。",
+      "relationType": "occurred_at",
+      "evidence": "historical_inferred",
+      "confidence": "low",
+      "sourceIds": [
+        "source:shiji-laozi-biography",
+        "source:historical-geography"
+      ]
+    },
+    {
+      "id": "relation:laozi-context-luoyang",
+      "source": "figure:laozi",
+      "target": "place:luoyang",
+      "label": "与周地礼学语境相连",
+      "summary": "老子在史传中与周王室藏室和问礼叙事相连；这里使用洛阳作为城市级传统语境，不把传说行迹写成精确驻留。",
+      "relationType": "active_in",
+      "evidence": "traditional_account",
+      "confidence": "low",
+      "sourceIds": [
+        "source:shiji-laozi-biography",
+        "source:historical-geography"
+      ]
+    },
+    {
+      "id": "relation:confucius-context-luoyang",
+      "source": "figure:confucius",
+      "target": "place:luoyang",
+      "label": "与周地问礼语境相连",
+      "summary": "孔子问礼于周的史传叙事可以用洛阳作为城市级空间入口，但不等于复原一条确定的旅行路线。",
+      "relationType": "active_in",
+      "evidence": "traditional_account",
+      "confidence": "low",
+      "sourceIds": [
+        "source:shiji-confucius-biography",
+        "source:historical-geography"
+      ]
+    },
+    {
+      "id": "relation:daodejing-attributed-laozi",
+      "source": "text:daodejing",
+      "target": "figure:laozi",
+      "label": "传统上归于老子",
+      "summary": "《道德经》传统上与老子相连，但文本成书、编纂和作者归属仍有多层历史，不能简化为老子一人独著。",
+      "relationType": "attributed_to",
+      "evidence": "historical_inferred",
+      "confidence": "low",
+      "sourceIds": [
+        "source:shiji-laozi-biography",
+        "source:daodejing-edition"
+      ]
+    },
+    {
+      "id": "relation:dao-passage-attributed-laozi",
+      "source": "passage:dao-that-can-be-spoken",
+      "target": "figure:laozi",
+      "label": "传统上作为老子言说保存",
+      "summary": "《道德经》第一章可作为老子传统的代表性言说入口，但 passage 的版本和传述层优先于直接口述假设。",
+      "relationType": "attributed_to",
+      "evidence": "historical_inferred",
+      "confidence": "low",
+      "sourceIds": [
+        "source:daodejing-edition",
+        "source:shiji-laozi-biography"
+      ]
+    },
+    {
+      "id": "relation:laozi-remembered-daoist-network",
+      "source": "figure:laozi",
+      "target": "institution:changan-daoist-monastic-network",
+      "label": "在唐代道教机构记忆中延续",
+      "summary": "老子作为经典源头和道教传统人物进入唐代宫观、皇室与制度记忆；本条不等同于把李耳直接神格化为同一实体。",
+      "relationType": "remembered_in",
+      "evidence": "historical_inferred",
+      "confidence": "low",
+      "sourceIds": [
+        "source:daoist-historical-record",
+        "source:daodejing-edition"
+      ]
+    },
+    {
+      "id": "relation:laozi-reception-kaiyuan",
+      "source": "figure:laozi",
+      "target": "event:kaiyuan-institutional-expansion",
+      "label": "作为道家经典源头进入开元语境",
+      "summary": "这条关系表达后世经典和制度接受的策展连接，不主张老子本人参与开元时期每一项制度变化。",
+      "relationType": "influenced",
+      "evidence": "scholarly_interpretation",
+      "confidence": "low",
+      "sourceIds": [
+        "source:daoist-historical-record",
+        "source:daodejing-edition",
+        "source:tang-imperial-records"
+      ]
+    },
+    {
+      "id": "relation:analects-attributed-confucius",
+      "source": "text:analects",
+      "target": "figure:confucius",
+      "label": "保存孔子及弟子言行",
+      "summary": "《论语》以孔子及弟子言行为核心，但属于复合传述文本；关系标明由他人记录和编纂，而非单一作者逐字写作。",
+      "relationType": "attributed_to",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:analects-edition",
+        "source:shiji-confucius-biography"
+      ]
+    },
+    {
+      "id": "relation:learn-and-practice-attributed-confucius",
+      "source": "passage:learn-and-practice",
+      "target": "figure:confucius",
+      "label": "作为孔子言说由传述保存",
+      "summary": "《学而》篇的开篇言说以孔子为传统说话者，但其文本保存经过弟子、编纂和传本层。",
+      "relationType": "attributed_to",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:analects-edition",
+        "source:shiji-confucius-biography"
+      ]
+    },
+    {
+      "id": "relation:confucius-remembered-guozijian",
+      "source": "figure:confucius",
+      "target": "institution:guozijian",
+      "label": "在国家经学教育记忆中延续",
+      "summary": "孔子通过经典、注疏和国家教育制度进入唐代经学记忆；这一关系表达后世制度接收，不把孔子写成唐代机构的在场人物。",
+      "relationType": "remembered_in",
+      "evidence": "historical_inferred",
+      "confidence": "low",
+      "sourceIds": [
+        "source:education-classics-records",
+        "source:analects-edition"
+      ]
+    },
+    {
+      "id": "relation:confucius-reception-five-classics",
+      "source": "figure:confucius",
+      "target": "event:five-classics-corrected-meanings-project",
+      "label": "作为经典传统源头进入《五经正义》工程",
+      "summary": "孔子与《五经正义》的关系是后世经典接受和制度化解释的长链，不是孔子本人参与唐代编纂工程。",
+      "relationType": "influenced",
+      "evidence": "scholarly_interpretation",
+      "confidence": "low",
+      "sourceIds": [
+        "source:analects-edition",
+        "source:confucian-commentarial-record",
+        "source:education-classics-records"
+      ]
+    },
+    {
+      "id": "relation:analects-received-kong",
+      "source": "text:analects",
+      "target": "figure:kong-yingda",
+      "label": "在孔颖达的唐代经学语境中被接收",
+      "summary": "《论语》进入孔颖达所处的经学、注疏和国家教育语境；这条关系表达后世解释，不把孔颖达与孔子合并。",
+      "relationType": "received_by",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:analects-edition",
+        "source:confucian-commentarial-record",
+        "source:education-classics-records"
+      ]
+    },
+    {
+      "id": "relation:sakyamuni-participated-first-sermon",
+      "source": "figure:sakyamuni",
+      "target": "event:buddha-first-sermon-at-sarnath",
+      "label": "在鹿野苑初转法轮传统中说法",
+      "summary": "早期佛教文本把佛陀与鹿野苑初转法轮相连；关系保留文本传述和传统年代层，不声称逐字现场记录。",
+      "relationType": "participated_in",
+      "evidence": "traditional_account",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:buddha-early-texts",
+        "source:sarnath-site-record"
+      ]
+    },
+    {
+      "id": "relation:first-sermon-occurred-sarnath",
+      "source": "event:buddha-first-sermon-at-sarnath",
+      "target": "place:sarnath",
+      "label": "发生于鹿野苑传统地点",
+      "summary": "鹿野苑是经文和后世遗产记忆中的初转法轮地点；现实坐标指向遗址级地点，不等于保存了公元前现场。",
+      "relationType": "occurred_at",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:buddha-early-texts",
+        "source:sarnath-site-record"
+      ]
+    },
+    {
+      "id": "relation:sakyamuni-active-sarnath",
+      "source": "figure:sakyamuni",
+      "target": "place:sarnath",
+      "label": "与鹿野苑说法传统相连",
+      "summary": "人物与地点的连接来自初转法轮传述和后世遗产记忆；这里不把鹿野苑写成可完全复原的个人行迹。",
+      "relationType": "active_in",
+      "evidence": "traditional_account",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:buddha-early-texts",
+        "source:sarnath-site-record"
+      ]
+    },
+    {
+      "id": "relation:dhammacakkappavattana-has-version",
+      "source": "text:dhammacakkappavattana-sutta",
+      "target": "text_version:dhammacakkappavattana-sutta-pali",
+      "label": "对应巴利语数字版本",
+      "summary": "文本与版本分开，便于以后加入汉译、异本和不同传承。",
+      "relationType": "has_version",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:buddha-early-texts"
+      ]
+    },
+    {
+      "id": "relation:turning-passage-of-text",
+      "source": "passage:turning-of-dharma-wheel",
+      "target": "text:dhammacakkappavattana-sutta",
+      "label": "属于《转法轮经》段落",
+      "summary": "段落回指经文文本层，同时保留具体版本和说话者归属。",
+      "relationType": "passage_of",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:buddha-early-texts"
+      ]
+    },
+    {
+      "id": "relation:turning-passage-quoted-pali",
+      "source": "passage:turning-of-dharma-wheel",
+      "target": "text_version:dhammacakkappavattana-sutta-pali",
+      "label": "引自 SN 56.11 巴利语版本",
+      "summary": "短引文回指明确的数字版本，避免把译文和原典混为一层。",
+      "relationType": "quoted_from_version",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:buddha-early-texts"
+      ]
+    },
+    {
+      "id": "relation:turning-passage-attributed-sakyamuni",
+      "source": "passage:turning-of-dharma-wheel",
+      "target": "figure:sakyamuni",
+      "label": "作为释迦牟尼教法由传述保存",
+      "summary": "段落传统上由佛陀宣说，但现存文本经由僧团记忆、结集和传本保存，故明确标为 recorded_by_others。",
+      "relationType": "attributed_to",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:buddha-early-texts"
+      ]
+    },
+    {
+      "id": "relation:sakyamuni-remembered-sarnath",
+      "source": "figure:sakyamuni",
+      "target": "place:sarnath",
+      "label": "在鹿野苑朝圣与遗址记忆中延续",
+      "summary": "鹿野苑把佛陀初转法轮的经文传统转化为持续的遗址、朝圣和文化遗产记忆；本条不把后世记忆倒写成同时代事实。",
+      "relationType": "remembered_in",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:sarnath-site-record",
+        "source:buddha-early-texts"
+      ]
+    },
+    {
+      "id": "relation:sakyamuni-represented-heart-sutra",
+      "source": "text:heart-sutra",
+      "target": "figure:sakyamuni",
+      "label": "以佛陀形象进入后世般若经典语境",
+      "summary": "《心经》的后世经典语境把佛陀置于般若教法和菩萨问答框架中；这是文学与宗教传统中的再呈现，不是释迦牟尼的直接作者署名。",
+      "relationType": "represented_by",
+      "evidence": "literary_representation",
+      "confidence": "low",
+      "sourceIds": [
+        "source:heart-sutra-edition",
+        "source:buddha-early-texts"
+      ]
+    },
+    {
+      "id": "relation:sakyamuni-reception-daci-en",
+      "source": "figure:sakyamuni",
+      "target": "event:daci-en-monastery-established",
+      "label": "作为佛教教法源头进入大慈恩寺制度语境",
+      "summary": "这条关系表达唐代寺院和译经制度对佛教源头的后世接收，不主张释迦牟尼本人参与大慈恩寺建立。",
+      "relationType": "influenced",
+      "evidence": "scholarly_interpretation",
+      "confidence": "low",
+      "sourceIds": [
+        "source:buddha-early-texts",
+        "source:buddhist-institutional-records",
+        "source:xuanzang-records"
+      ]
+    },
+    {
+      "id": "relation:turning-text-has-thanissaro-version",
+      "source": "text:dhammacakkappavattana-sutta",
+      "target": "text_version:dhammacakkappavattana-sutta-thanissaro-en",
+      "label": "对应 Thanissaro 英译版本",
+      "summary": "经文作品与现代英译版本分开建模，保留译者和权利边界。",
+      "relationType": "has_version",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:sn56-11-thanissaro"
+      ]
+    },
+    {
+      "id": "relation:turning-translation-quoted-thanissaro",
+      "source": "passage:turning-of-dharma-wheel-thanissaro-en",
+      "target": "text_version:dhammacakkappavattana-sutta-thanissaro-en",
+      "label": "引自 Thanissaro 英译版本",
+      "summary": "英文短引回指具体译本和 SN 56.11 定位，不把英译措辞混入巴利语原文层。",
+      "relationType": "quoted_from_version",
+      "evidence": "historical_documented",
+      "confidence": "high",
+      "sourceIds": [
+        "source:sn56-11-thanissaro"
+      ]
+    },
+    {
+      "id": "relation:turning-passage-parallel-thanissaro",
+      "source": "passage:turning-of-dharma-wheel-thanissaro-en",
+      "target": "passage:turning-of-dharma-wheel",
+      "label": "与 SN 56.11 巴利语短引对照",
+      "summary": "两段共享 SN 56.11 的经文定位，但分属不同语言版本；对照仅用于显示措辞层差异。",
+      "relationType": "comparative_parallel",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:buddha-early-texts",
+        "source:sn56-11-thanissaro"
+      ]
+    },
+    {
+      "id": "relation:turning-translation-attributed-sakyamuni",
+      "source": "passage:turning-of-dharma-wheel-thanissaro-en",
+      "target": "figure:sakyamuni",
+      "label": "作为释迦牟尼教法的英译传述",
+      "summary": "英译版本延续同一经文的传统说话者归属，但文本经由巴利语传承和现代翻译保存。",
+      "relationType": "attributed_to",
+      "evidence": "historical_inferred",
+      "confidence": "medium",
+      "sourceIds": [
+        "source:buddha-early-texts",
+        "source:sn56-11-thanissaro"
+      ]
+    }
   ]
 }

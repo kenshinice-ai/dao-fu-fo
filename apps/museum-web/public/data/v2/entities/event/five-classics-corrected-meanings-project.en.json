@@ -1,0 +1,41 @@
+{
+  "id": "8a7eb613-bf57-59ae-8958-f08d01600abb",
+  "locale": "en",
+  "kind": "event",
+  "slug": "five-classics-corrected-meanings-project",
+  "title": "Compilation project of the Corrected Meanings of the Five Classics",
+  "tradition": "confucianism",
+  "evidence": "historical_inferred",
+  "timeLabel": "c. 630–653",
+  "shortSummary": "A multi-year early Tang editorial project brought commentarial traditions into state education and examination knowledge.",
+  "curatorialDescription": [
+    "A range is used because compilation, revision, presentation and institutional use were not one event."
+  ],
+  "researchNote": "Commission, revision, submission and use must be separated through histories, catalogues and edition studies.",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:confucian-commentarial-record",
+      "title": "The Five Classics Corrected Meanings and Tang classical learning",
+      "locator": "孔颖达与经学注疏制度",
+      "grade": "B",
+      "role": "Reference basis for Kong Yingda and Tang classical learning institutions"
+    },
+    {
+      "id": "source:education-classics-records",
+      "title": "Records on the Tang Guozijian and classical learning institutions",
+      "locator": "国子监、经学与《五经正义》制度语境；底本待核",
+      "grade": "B",
+      "role": "Research reference for state education, classical commentary and knowledge institutions"
+    }
+  ],
+  "profile": {
+    "eventKind": "editorial_project",
+    "historicity": "inferred",
+    "sequenceOrder": 4,
+    "eventScope": "imperial"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

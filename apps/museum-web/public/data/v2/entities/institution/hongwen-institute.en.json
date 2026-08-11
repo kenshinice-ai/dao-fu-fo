@@ -1,0 +1,39 @@
+{
+  "id": "5f45c0de-0fc8-53c1-b977-6a59e0df8616",
+  "locale": "en",
+  "kind": "institution",
+  "slug": "hongwen-institute",
+  "title": "Hongwen Institute",
+  "tradition": "confucianism",
+  "evidence": "historical_documented",
+  "timeLabel": "Tang institutional context",
+  "shortSummary": "The Hongwen Institute offers an institutional entry into Tang court collections, scholarly consultation and education.",
+  "curatorialDescription": [
+    "It remains distinct from the Guozijian, showing that Tang knowledge systems comprised multiple institutions, offices and projects."
+  ],
+  "researchNote": "Institutional changes, functions, location and personnel require period-specific verification.",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:education-classics-records",
+      "title": "Records on the Tang Guozijian and classical learning institutions",
+      "locator": "国子监、经学与《五经正义》制度语境；底本待核",
+      "grade": "B",
+      "role": "Research reference for state education, classical commentary and knowledge institutions"
+    },
+    {
+      "id": "source:tang-imperial-records",
+      "title": "Official histories and institutional records of the Sui–Tang period",
+      "locator": "帝王、制度与年代条目；具体版本和卷页待核",
+      "grade": "B",
+      "role": "Research reference for Sui–Tang figures, capitals, institutions and event dates"
+    }
+  ],
+  "profile": {
+    "institutionKind": "court_institute",
+    "networkScope": false
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

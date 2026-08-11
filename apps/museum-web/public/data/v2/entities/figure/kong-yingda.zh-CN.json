@@ -1,31 +1,69 @@
 {
+  "id": "886f4bbe-70e0-577a-be22-92994e833fe8",
   "locale": "zh-CN",
   "kind": "figure",
   "slug": "kong-yingda",
   "title": "孔颖达",
-  "subtitle": "574—648 · 唐初经学家",
+  "subtitle": "经学家与《五经正义》编纂者",
   "tradition": "confucianism",
-  "evidence": "历史有据",
-  "timeLabel": "574—648",
-  "shortSummary": "孔颖达把经典解释、编纂协作与国家教育联系起来，说明儒家在唐代既是思想传统，也是制度工程。",
+  "evidence": "historical_documented",
+  "timeLabel": "574–648",
+  "shortSummary": "孔颖达代表唐代经学如何进入国家教育、注疏和制度化知识生产。",
   "curatorialDescription": [
-    "孔颖达主持参与的经学整理，让经典解释进入国家工程。它不是简单保存旧文本，而是在选择注释传统、统一解释和服务教育制度之间作出判断。",
-    "在数字博物馆中，人物、文本、注疏和机构分别建模。这样可以看见“谁编纂”“依据什么版本”“进入什么教育场景”，而不是把所有信息塞进一条人物简介。",
-    "他的案例也提示我们，儒家不能只被描述为私人伦理。礼制、学校、官僚与经典解释共同构成其历史影响。"
+    "孔颖达的故事不是简单的‘经典解释者’传记，而是文本、注疏者、编纂工程和国家教育制度共同作用的案例。",
+    "通过他可以看到，儒家传统如何从经典解释进入官学与政治秩序，同时保留内部注释差异和历史语境。"
   ],
-  "researchNote": "《五经正义》的编纂、修订和正式颁行涉及多人和多个阶段。第一版使用约数时间，并避免将复杂工程归为单一作者独著。",
+  "researchNote": "本条目为 Alpha 结构化样本，后续需要补充编纂参与者、版本流传和国子监使用语境的来源。",
   "keyFacts": [
-    { "label": "核心领域", "value": "经学 · 注疏 · 国家教育" },
-    { "label": "相关文本", "value": "《五经正义》" },
-    { "label": "证据纪律", "value": "多人编纂，不标为个人独著" }
+    {
+      "label": "代表工程",
+      "value": "《五经正义》"
+    },
+    {
+      "label": "制度语境",
+      "value": "经学与国家教育"
+    }
   ],
-  "related": [
-    { "kind": "text", "slug": "correct-meaning-five-classics", "title": "《五经正义》", "relation": "主持参与编纂" },
-    { "kind": "concept", "slug": "ritual", "title": "礼", "relation": "经典与制度主题" },
-    { "kind": "place", "slug": "imperial-academy-changan", "title": "长安国子监", "relation": "国家教育语境" }
-  ],
+  "related": [],
   "sources": [
-    { "title": "《旧唐书》", "locator": "孔颖达传", "grade": "A", "role": "人物生平和经学活动" },
-    { "title": "《五经正义》各经序与唐代经学研究", "locator": "编纂与颁行背景", "grade": "B", "role": "文本工程与国家教育；正式版需补完整版本" }
-  ]
+    {
+      "id": "source:kong-new-tang-biography",
+      "title": "《新唐书·儒学上》孔颖达传",
+      "locator": "列传第一百二十三·儒学上：孔颖达传",
+      "grade": "A",
+      "role": "孔颖达生平、经学活动与唐代国家教育语境的一手史料定位",
+      "url": "https://ctext.org/wiki.pl?chapter=451765&if=gb&remap=gb"
+    },
+    {
+      "id": "source:kong-wujing-zhengyi-record",
+      "title": "《新唐书·艺文志》孔颖达奉诏撰经疏记录",
+      "locator": "志第四十七·艺文一：孔颖达任国子祭酒并奉诏参与《尚书正义》等经疏编纂",
+      "grade": "A",
+      "role": "补充孔颖达作品归属、奉诏编纂与官学制度语境的原始文献定位",
+      "url": "https://ctext.org/wiki.pl?chapter=189091&if=en"
+    },
+    {
+      "id": "source:confucian-commentarial-record",
+      "title": "《五经正义》与唐代经学制度资料",
+      "locator": "孔颖达与经学注疏制度",
+      "grade": "B",
+      "role": "孔颖达及唐代经学、教育制度的参考依据"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "道·儒·佛文明数字博物馆策展与方法说明",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "项目的策展框架与术语规则"
+    }
+  ],
+  "profile": {
+    "historicity": "documented",
+    "figureClass": "historical_person",
+    "gender": "male",
+    "canonicalNameOriginal": "孔颖达",
+    "nameLanguageCode": "lzh"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
 }

@@ -1,0 +1,64 @@
+{
+  "id": "d0c4899f-b1df-5b57-aa22-b6f8b1b21a01",
+  "locale": "en",
+  "kind": "passage",
+  "slug": "turning-of-dharma-wheel-thanissaro-en",
+  "title": "This is the noble truth of stress",
+  "subtitle": "A short English witness for the Four Noble Truths section of SN 56.11",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "Modern English translation; corresponding to the SN 56.11 Four Noble Truths section",
+  "shortSummary": "This passage shares the SN 56.11 locator with the Pāli excerpt while preserving Thanissaro's English rendering of dukkha.",
+  "curatorialDescription": [
+    "The comparison is between language witnesses within one transmitted discourse; neither ‘stress’ nor ‘suffering’ is declared the only correct translation."
+  ],
+  "researchNote": "The short quotation comes from an external English translation page; the full translation, rights conditions and other translators require separate review.",
+  "keyFacts": [],
+  "quote": {
+    "original": "This is the noble truth of stress.",
+    "interpretation": "This is the noble truth of stress.",
+    "locator": "SN 56.11"
+  },
+  "related": [
+    {
+      "kind": "text",
+      "slug": "dhammacakkappavattana-sutta",
+      "title": "Dhammacakkappavattana Sutta",
+      "relation": "Excerpt from"
+    }
+  ],
+  "sources": [
+    {
+      "id": "source:sn56-11-thanissaro",
+      "title": "Access to Insight: SN 56.11 translated by Thanissaro Bhikkhu",
+      "locator": "SN 56.11，四圣谛段落；“This is the noble truth of stress.”",
+      "grade": "A",
+      "role": "English translation witness for comparing translator wording with the Pāli passage; excerpts remain subject to the source site's licence",
+      "url": "https://www.accesstoinsight.org/tipitaka/sn/sn56/sn56.011.than.html"
+    },
+    {
+      "id": "source:buddha-early-texts",
+      "title": "Early Buddhist texts in the Pāli canon: MN 26 and SN 56.11",
+      "locator": "MN 26 Ariyapariyesanā：求法与到达鹿野苑；SN 56.11 Dhammacakkappavattana：鹿野苑初转法轮文本",
+      "grade": "A",
+      "role": "Primary-text entry for Buddha biography, early teaching traditions and the Sarnath setting; the transmitted discourse is not treated as a verbatim transcript",
+      "url": "https://suttacentral.net/sn56.11/en/sujato"
+    }
+  ],
+  "profile": {
+    "textSlug": "dhammacakkappavattana-sutta",
+    "textVersionSlug": "dhammacakkappavattana-sutta-thanissaro-en",
+    "passageKind": "scripture_excerpt",
+    "locatorOriginal": "SN 56.11 · 四圣谛段落",
+    "locatorNormalised": "Saṃyutta Nikāya 56.11 · Four Noble Truths section",
+    "originalText": "This is the noble truth of stress.",
+    "punctuatedText": "This is the noble truth of stress.",
+    "modernZh": "这是苦圣谛。",
+    "translationEn": "This is the noble truth of stress.",
+    "ritualSensitivity": "public_textual",
+    "attributionStatus": "recorded_by_others",
+    "variantReadings": []
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

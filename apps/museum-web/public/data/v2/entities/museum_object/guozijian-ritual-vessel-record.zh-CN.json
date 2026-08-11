@@ -1,0 +1,40 @@
+{
+  "id": "c7d7bfe9-78a2-50e5-85d7-de43a7f46d75",
+  "locale": "zh-CN",
+  "kind": "museum_object",
+  "slug": "guozijian-ritual-vessel-record",
+  "title": "国学礼仪器物记录（对象占位）",
+  "tradition": "confucianism",
+  "evidence": "historical_inferred",
+  "timeLabel": "对象记录待核；隋唐教育礼仪语境",
+  "shortSummary": "礼仪器物能把“礼”的概念与学校空间、参与者和具体行动联系起来。",
+  "curatorialDescription": [
+    "现阶段不指定器类或年代，以免把一般制度描述冒充具体藏品。"
+  ],
+  "researchNote": "需以考古报告或馆藏目录确定器类、出土地、年代、用途与权利。",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:object-records",
+      "title": "博物馆藏品与图像记录待建档清单",
+      "locator": "对象类型、馆藏机构、图像权利和编号待补",
+      "grade": "C",
+      "role": "Alpha 对象卡片的占位来源；不是可直接发布的藏品断言"
+    },
+    {
+      "id": "source:education-classics-records",
+      "title": "唐代国子监与经学制度资料",
+      "locator": "国子监、经学与《五经正义》制度语境；底本待核",
+      "grade": "B",
+      "role": "国家教育、经学注疏和知识制度的研究参考"
+    }
+  ],
+  "profile": {
+    "objectType": "ritual_object",
+    "rightsStatus": "unknown",
+    "collectionStatus": "placeholder"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

@@ -2,6 +2,8 @@ import {
   ContentQualityReportSchema,
   ReadModelAudioIndexSchema,
   ReadModelChecksumsSchema,
+  ReadModelComparisonSchema,
+  ReadModelTextReadingSchema,
   ReadModelEntityArtifactSchema,
   ReadModelManifestSchema,
   ReadModelProfileSchema,
@@ -10,6 +12,7 @@ import {
   ReadModelReviewQueueSchema,
   ReadModelRoutesManifestSchema,
   ReadModelSearchIndexSchema,
+  ReadModelSacredCosmosSchema,
   ReadModelSourceIndexSchema,
   ReadModelTimelineSchema,
   ReadModelGraphSchema,
@@ -18,6 +21,8 @@ import {
   type Locale,
   type ReadModelAudioIndex,
   type ReadModelChecksums,
+  type ReadModelComparison,
+  type ReadModelTextReading,
   type ReadModelEntityArtifact,
   type ReadModelManifest,
   type ReadModelProfile,
@@ -26,6 +31,7 @@ import {
   type ReadModelReviewQueue,
   type ReadModelRoutesManifest,
   type ReadModelSearchIndex,
+  type ReadModelSacredCosmos,
   type ReadModelSourceIndex,
   type ReadModelTimeline,
   type ReadModelGraph,
@@ -43,10 +49,13 @@ export interface MuseumDataSource {
   getRealMap(name: string, locale: Locale, signal?: AbortSignal): Promise<ReadModelRealMap>;
   getTimeline(name: string, locale: Locale, signal?: AbortSignal): Promise<ReadModelTimeline>;
   getGraph(graphType: string, name: string, locale: Locale, signal?: AbortSignal): Promise<ReadModelGraph>;
+  getSacredCosmos(name: string, locale: Locale, signal?: AbortSignal): Promise<ReadModelSacredCosmos>;
   getQualityReport(signal?: AbortSignal): Promise<ContentQualityReport>;
   getReviewQueue(signal?: AbortSignal): Promise<ReadModelReviewQueue>;
   getRoutesManifest(signal?: AbortSignal): Promise<ReadModelRoutesManifest>;
   getChecksums(signal?: AbortSignal): Promise<ReadModelChecksums>;
+  getComparison(name: string, locale: Locale, signal?: AbortSignal): Promise<ReadModelComparison>;
+  getTextReading(name: string, locale: Locale, signal?: AbortSignal): Promise<ReadModelTextReading>;
 }
 
 export type JsonRequest = (path: string, signal?: AbortSignal) => Promise<unknown>;
@@ -68,8 +77,11 @@ export class StaticMuseumDataSource implements MuseumDataSource {
   async getRealMap(name: string, locale: Locale, signal?: AbortSignal) { return ReadModelRealMapSchema.parse(await this.request(this.paths.realMap(name, locale), signal)); }
   async getTimeline(name: string, locale: Locale, signal?: AbortSignal) { return ReadModelTimelineSchema.parse(await this.request(this.paths.timeline(name, locale), signal)); }
   async getGraph(graphType: string, name: string, locale: Locale, signal?: AbortSignal) { return ReadModelGraphSchema.parse(await this.request(this.paths.graph(graphType, name, locale), signal)); }
+  async getSacredCosmos(name: string, locale: Locale, signal?: AbortSignal) { return ReadModelSacredCosmosSchema.parse(await this.request(this.paths.sacredCosmos(name, locale), signal)); }
   async getQualityReport(signal?: AbortSignal) { return ContentQualityReportSchema.parse(await this.request(this.paths.manifest("quality-report"), signal)); }
   async getReviewQueue(signal?: AbortSignal) { return ReadModelReviewQueueSchema.parse(await this.request(this.paths.manifest("review-queue"), signal)); }
   async getRoutesManifest(signal?: AbortSignal) { return ReadModelRoutesManifestSchema.parse(await this.request(this.paths.manifest("routes"), signal)); }
   async getChecksums(signal?: AbortSignal) { return ReadModelChecksumsSchema.parse(await this.request(this.paths.manifest("checksums"), signal)); }
+  async getComparison(name: string, locale: Locale, signal?: AbortSignal) { return ReadModelComparisonSchema.parse(await this.request(this.paths.comparison(name, locale), signal)); }
+  async getTextReading(name: string, locale: Locale, signal?: AbortSignal) { return ReadModelTextReadingSchema.parse(await this.request(this.paths.textReading(name, locale), signal)); }
 }

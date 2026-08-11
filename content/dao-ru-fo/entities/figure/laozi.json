@@ -1,0 +1,140 @@
+{
+  "kind": "figure",
+  "slug": "laozi",
+  "publicationState": "public",
+  "reviewStatus": "publishable",
+  "primaryEvidenceLayer": "traditional_account",
+  "importance": 5,
+  "isFeatured": true,
+  "translations": {
+    "zh-CN": {
+      "title": "老子（李耳）",
+      "subtitle": "道家经典传统的源头人物与后世神圣化对象",
+      "shortSummary": "老子是进入道家经典传统的高识别度入口，但李耳传记、〈老子〉身份、《道德经》成书与后世太上老君形象必须分层处理。",
+      "curatorialDescription": [
+        "本馆把‘李耳’作为史传中的人物名字，把‘老子’作为思想与师承传统中的称谓，把《道德经》的作者/编纂问题另行建模。",
+        "老子可以连接先秦源头、唐代道教接受和后世神格化，但不能因为知名度高就把所有道家文本都变成一个人的直接言论。"
+      ],
+      "researchNote": "生平年代与历史性存在争议；《史记》提供早期史传层，具体文本归属、出关叙事和太上老君神格化应分别连接来源。",
+      "timeLabel": "传统置于春秋晚期；生平年代有争议",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "人物类别",
+            "en": "Figure class"
+          },
+          "value": {
+            "zh-CN": "传统圣者／史传人物",
+            "en": "Traditional sage / historiographical figure"
+          }
+        },
+        {
+          "label": {
+            "zh-CN": "关键区分",
+            "en": "Key distinction"
+          },
+          "value": {
+            "zh-CN": "李耳、老子、《道德经》与太上老君不合并",
+            "en": "Li Er, Laozi, the Daodejing and Taishang Laojun remain distinct"
+          }
+        }
+      ]
+    },
+    "en": {
+      "title": "Laozi (Li Er)",
+      "subtitle": "A source figure of Daoist classicism and a later object of sacralisation",
+      "shortSummary": "Laozi is a recognisable gateway into Daoist classicism, but the Li Er biography, the sage-name Laozi, the formation of the Daodejing and the later Taishang Laojun image must remain distinct layers.",
+      "curatorialDescription": [
+        "The museum treats Li Er as a name in early historiographical tradition, Laozi as a figure in intellectual and lineage traditions, and the authorship and formation of the Daodejing as a separate modelled question.",
+        "Laozi can connect an early source horizon with Tang reception and later sacralisation, but fame must not turn every Daoist text into a direct utterance by one person."
+      ],
+      "researchNote": "Life dates and historicity are contested. The Shiji provides an early historiographical layer; textual attribution, the departure through Hangu Pass and later Taishang Laojun sacralisation require separate relations and sources.",
+      "timeLabel": "Traditionally placed in the late Spring and Autumn period; dates contested",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "人物类别",
+            "en": "Figure class"
+          },
+          "value": {
+            "zh-CN": "传统圣者／史传人物",
+            "en": "Traditional sage / historiographical figure"
+          }
+        },
+        {
+          "label": {
+            "zh-CN": "关键区分",
+            "en": "Key distinction"
+          },
+          "value": {
+            "zh-CN": "李耳、老子、《道德经》与太上老君不合并",
+            "en": "Li Er, Laozi, the Daodejing and Taishang Laojun remain distinct"
+          }
+        }
+      ]
+    }
+  },
+  "traditions": [
+    {
+      "tradition": "daoism",
+      "role": "primary",
+      "isPrimary": true,
+      "confidence": "medium",
+      "evidenceLayer": "traditional_account",
+      "sourceId": "source:shiji-laozi-biography"
+    }
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "life",
+      "timeType": "traditional_date",
+      "startYear": -571,
+      "endYear": -471,
+      "displayDate": {
+        "zh-CN": "传统置于春秋晚期；年代有争议",
+        "en": "Traditionally placed in the late Spring and Autumn period; dates contested"
+      },
+      "confidence": "low",
+      "evidenceLayer": "traditional_account",
+      "sourceId": "source:shiji-laozi-biography"
+    }
+  ],
+  "sourceIds": [
+    "source:shiji-laozi-biography",
+    "source:daodejing-edition",
+    "source:editorial-method"
+  ],
+  "related": [
+    {
+      "kind": "text",
+      "slug": "daodejing",
+      "title": {
+        "zh-CN": "《道德经》",
+        "en": "Daodejing"
+      },
+      "relation": {
+        "zh-CN": "传统归属与文本争议",
+        "en": "Traditional attribution and textual debate"
+      }
+    },
+    {
+      "kind": "place",
+      "slug": "luoyang",
+      "title": {
+        "zh-CN": "洛阳",
+        "en": "Luoyang"
+      },
+      "relation": {
+        "zh-CN": "周地问礼叙事语境",
+        "en": "Zhou rites-asking narrative context"
+      }
+    }
+  ],
+  "profile": {
+    "historicity": "contested",
+    "figureClass": "traditional_sage",
+    "gender": "male",
+    "canonicalNameOriginal": "李耳 / 老子",
+    "nameLanguageCode": "lzh"
+  }
+}

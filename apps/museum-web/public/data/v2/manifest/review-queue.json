@@ -1,0 +1,5391 @@
+{
+  "contentVersion": "2026.08.alpha.1",
+  "items": [
+    {
+      "subjectKind": "entity",
+      "subjectKey": "concept:form-and-emptiness",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "concept:naturalness-and-self-so",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "concept:classical-commentary",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "concept:pilgrimage-and-transmission",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "concept:ritual-order",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "concept:translation-as-institution",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "event:confucius-asks-laozi-about-rites",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "event:buddha-first-sermon-at-sarnath",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "event:tang-dynasty-founded",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "event:xuanzang-departs-changan",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "event:five-classics-corrected-meanings-project",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "event:daci-en-monastery-established",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "event:great-wild-goose-pagoda-first-construction",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "event:yijing-departs-by-sea",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "event:wu-zhou-established",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "event:yijing-returns",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "event:kaiyuan-institutional-expansion",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "event:an-lushan-rebellion-begins",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "event:an-lushan-rebellion-ends",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "event:huichang-religious-policies",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "event:sui-unification",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "event:tang-end-transition",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "event:xuanzang-return-changan",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "figure:confucius",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "figure:kong-yingda",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [
+        "schema"
+      ],
+      "missingChecks": [
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [
+        {
+          "id": "review:rc-entity-figure-kong-yingda-schema",
+          "checkKind": "schema",
+          "status": "passed",
+          "reviewer": "automated:content-compiler",
+          "reviewedAt": "2026-08-09T00:00:00.000Z",
+          "note": "Zod domain schema, identity and structural dependency checks passed; this does not replace content review."
+        },
+        {
+          "id": "review:rc-entity-figure-kong-yingda-fact",
+          "checkKind": "fact",
+          "status": "pre_reviewed",
+          "reviewer": "agent:codex-content-audit",
+          "reviewedAt": "2026-08-09T14:00:00.000Z",
+          "note": "Pre-review: source:kong-new-tang-biography and source:kong-wujing-zhengyi-record support the bounded 574–648 biographical, commissioned-commentary and Guozijian-context claims; contributor details, later institutional reception and formal historical/editorial sign-off remain required."
+        },
+        {
+          "id": "review:rc-entity-figure-kong-yingda-bilingual",
+          "checkKind": "bilingual",
+          "status": "pending",
+          "reviewer": "role:bilingual-editor",
+          "note": "Check zh-CN/en parity, terminology, labels and quoted text."
+        },
+        {
+          "id": "review:rc-entity-figure-kong-yingda-rights",
+          "checkKind": "rights",
+          "status": "pending",
+          "reviewer": "role:rights-editor",
+          "note": "Confirm source rights and quotation/translation reuse boundaries for Public."
+        },
+        {
+          "id": "review:rc-entity-figure-kong-yingda-editorial",
+          "checkKind": "editorial",
+          "status": "pending",
+          "reviewer": "role:lead-curator",
+          "note": "Check scope, uncertainty labels, attribution and Public wording."
+        },
+        {
+          "id": "review:rc-entity-figure-kong-yingda-tradition",
+          "checkKind": "tradition",
+          "status": "pending",
+          "reviewer": "role:tradition-reviewer",
+          "note": "Verify tradition assignment, evidence layer and terminology."
+        },
+        {
+          "id": "review:rc-entity-figure-kong-yingda-accessibility",
+          "checkKind": "accessibility",
+          "status": "pending",
+          "reviewer": "role:accessibility-editor",
+          "note": "Check rendered route language, heading order, focus order, keyboard access, contrast, link names and screen-reader reading; automated axe evidence does not replace this review."
+        }
+      ],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "figure:laozi",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "figure:cheng-xuanying",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "figure:yan-shigu",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "figure:jizang",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "figure:li-shimin",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "figure:sakyamuni",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "figure:sima-chengzhen",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [
+        "schema"
+      ],
+      "missingChecks": [
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [
+        {
+          "id": "review:rc-entity-figure-sima-chengzhen-schema",
+          "checkKind": "schema",
+          "status": "passed",
+          "reviewer": "automated:content-compiler",
+          "reviewedAt": "2026-08-09T00:00:00.000Z",
+          "note": "Zod domain schema, identity and structural dependency checks passed; this does not replace content review."
+        },
+        {
+          "id": "review:rc-entity-figure-sima-chengzhen-fact",
+          "checkKind": "fact",
+          "status": "pre_reviewed",
+          "reviewer": "agent:codex-content-audit",
+          "reviewedAt": "2026-08-09T14:00:00.000Z",
+          "note": "Pre-review: source:sima-old-tang-biography and source:sima-chengzhen-full-tang-text support the bounded 647–735 biographical and court-encounter claims; Shangqing lineage, later influence and formal historical/tradition/curatorial sign-off remain required."
+        },
+        {
+          "id": "review:rc-entity-figure-sima-chengzhen-bilingual",
+          "checkKind": "bilingual",
+          "status": "pending",
+          "reviewer": "role:bilingual-editor",
+          "note": "Check zh-CN/en parity, terminology, labels and quoted text."
+        },
+        {
+          "id": "review:rc-entity-figure-sima-chengzhen-rights",
+          "checkKind": "rights",
+          "status": "pending",
+          "reviewer": "role:rights-editor",
+          "note": "Confirm source rights and quotation/translation reuse boundaries for Public."
+        },
+        {
+          "id": "review:rc-entity-figure-sima-chengzhen-editorial",
+          "checkKind": "editorial",
+          "status": "pending",
+          "reviewer": "role:lead-curator",
+          "note": "Check scope, uncertainty labels, attribution and Public wording."
+        },
+        {
+          "id": "review:rc-entity-figure-sima-chengzhen-tradition",
+          "checkKind": "tradition",
+          "status": "pending",
+          "reviewer": "role:tradition-reviewer",
+          "note": "Verify tradition assignment, evidence layer and terminology."
+        },
+        {
+          "id": "review:rc-entity-figure-sima-chengzhen-accessibility",
+          "checkKind": "accessibility",
+          "status": "pending",
+          "reviewer": "role:accessibility-editor",
+          "note": "Check rendered route language, heading order, focus order, keyboard access, contrast, link names and screen-reader reading; automated axe evidence does not replace this review."
+        }
+      ],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "figure:wu-zhao",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "figure:xuanzang",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [
+        "schema"
+      ],
+      "missingChecks": [
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [
+        {
+          "id": "review:rc-entity-figure-xuanzang-schema",
+          "checkKind": "schema",
+          "status": "passed",
+          "reviewer": "automated:content-compiler",
+          "reviewedAt": "2026-08-09T00:00:00.000Z",
+          "note": "Zod domain schema, identity and structural dependency checks passed; this does not replace content review."
+        },
+        {
+          "id": "review:rc-entity-figure-xuanzang-fact",
+          "checkKind": "fact",
+          "status": "pre_reviewed",
+          "reviewer": "agent:codex-content-audit",
+          "reviewedAt": "2026-08-09T13:30:00.000Z",
+          "note": "Pre-review: the linked Xuanzang biography supports the bounded claims about a documented seventh-century monk, pilgrimage and translation work connected with Chang'an; exact edition passages, route chronology and formal historical/curatorial sign-off remain required."
+        },
+        {
+          "id": "review:rc-entity-figure-xuanzang-bilingual",
+          "checkKind": "bilingual",
+          "status": "pending",
+          "reviewer": "role:bilingual-editor",
+          "note": "Check zh-CN/en parity, terminology, labels and quoted text."
+        },
+        {
+          "id": "review:rc-entity-figure-xuanzang-rights",
+          "checkKind": "rights",
+          "status": "pending",
+          "reviewer": "role:rights-editor",
+          "note": "Confirm source rights and quotation/translation reuse boundaries for Public."
+        },
+        {
+          "id": "review:rc-entity-figure-xuanzang-editorial",
+          "checkKind": "editorial",
+          "status": "pending",
+          "reviewer": "role:lead-curator",
+          "note": "Check scope, uncertainty labels, attribution and Public wording."
+        },
+        {
+          "id": "review:rc-entity-figure-xuanzang-tradition",
+          "checkKind": "tradition",
+          "status": "pending",
+          "reviewer": "role:tradition-reviewer",
+          "note": "Verify tradition assignment, evidence layer and terminology."
+        },
+        {
+          "id": "review:rc-entity-figure-xuanzang-accessibility",
+          "checkKind": "accessibility",
+          "status": "pending",
+          "reviewer": "role:accessibility-editor",
+          "note": "Check rendered route language, heading order, focus order, keyboard access, contrast, link names and screen-reader reading; automated axe evidence does not replace this review."
+        }
+      ],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "figure:yijing",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "institution:daci-en-monastery",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "institution:guozijian",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "institution:changan-translation-bureau",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "institution:hongwen-institute",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "institution:changan-daoist-monastic-network",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "institution:louguan",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "museum_object:classics-commentary-manuscript",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "museum_object:heart-sutra-manuscript-leaf",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "museum_object:daodejing-commentary-manuscript-record",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "museum_object:daoist-inscription-rubbing-record",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "museum_object:imperial-classics-scroll-record",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "museum_object:guozijian-ritual-vessel-record",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "museum_object:translation-catalogue-manuscript-record",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "museum_object:longmen-dedication-inscription-record",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "museum_object:translation-bureau-tablet",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "passage:form-is-emptiness",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [
+        "schema"
+      ],
+      "missingChecks": [
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [
+        {
+          "id": "review:rc-entity-passage-form-is-emptiness-schema",
+          "checkKind": "schema",
+          "status": "passed",
+          "reviewer": "automated:content-compiler",
+          "reviewedAt": "2026-08-09T00:00:00.000Z",
+          "note": "Zod domain schema, identity and structural dependency checks passed; this does not replace content review."
+        },
+        {
+          "id": "review:rc-entity-passage-form-is-emptiness-fact",
+          "checkKind": "fact",
+          "status": "pre_reviewed",
+          "reviewer": "agent:codex-content-audit",
+          "reviewedAt": "2026-08-09T12:00:00.000Z",
+          "note": "Pre-review: the quoted text and section locator match the claim boundary in docs/PUBLIC_RC_TEXT_CLAIM_AUDIT_2026-08-09.md; formal historical reviewer and curator sign-off remain required."
+        },
+        {
+          "id": "review:rc-entity-passage-form-is-emptiness-bilingual",
+          "checkKind": "bilingual",
+          "status": "pending",
+          "reviewer": "role:bilingual-editor",
+          "note": "Check zh-CN/en parity, terminology, labels and quoted text."
+        },
+        {
+          "id": "review:rc-entity-passage-form-is-emptiness-rights",
+          "checkKind": "rights",
+          "status": "pending",
+          "reviewer": "role:rights-editor",
+          "note": "Verify that the Chinese quote remains a short bounded excerpt from the cited Heart Sutra locator; keep Ctext page rights separate from the project interpretation and any external English translation, with source credit and link."
+        },
+        {
+          "id": "review:rc-entity-passage-form-is-emptiness-editorial",
+          "checkKind": "editorial",
+          "status": "pending",
+          "reviewer": "role:lead-curator",
+          "note": "Check scope, uncertainty labels, attribution and Public wording."
+        },
+        {
+          "id": "review:rc-entity-passage-form-is-emptiness-tradition",
+          "checkKind": "tradition",
+          "status": "pending",
+          "reviewer": "role:tradition-reviewer",
+          "note": "Verify tradition assignment, evidence layer and terminology."
+        },
+        {
+          "id": "review:rc-entity-passage-form-is-emptiness-accessibility",
+          "checkKind": "accessibility",
+          "status": "pending",
+          "reviewer": "role:accessibility-editor",
+          "note": "Check rendered route language, heading order, focus order, keyboard access, contrast, link names and screen-reader reading; automated axe evidence does not replace this review."
+        }
+      ],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "passage:humans-follow-earth",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [
+        "schema"
+      ],
+      "missingChecks": [
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [
+        {
+          "id": "review:rc-entity-passage-humans-follow-earth-schema",
+          "checkKind": "schema",
+          "status": "passed",
+          "reviewer": "automated:content-compiler",
+          "reviewedAt": "2026-08-09T00:00:00.000Z",
+          "note": "Zod domain schema, identity and structural dependency checks passed; this does not replace content review."
+        },
+        {
+          "id": "review:rc-entity-passage-humans-follow-earth-fact",
+          "checkKind": "fact",
+          "status": "pre_reviewed",
+          "reviewer": "agent:codex-content-audit",
+          "reviewedAt": "2026-08-09T12:00:00.000Z",
+          "note": "Pre-review: the quoted text and chapter locator match the claim boundary in docs/PUBLIC_RC_TEXT_CLAIM_AUDIT_2026-08-09.md; formal historical reviewer and curator sign-off remain required."
+        },
+        {
+          "id": "review:rc-entity-passage-humans-follow-earth-bilingual",
+          "checkKind": "bilingual",
+          "status": "pending",
+          "reviewer": "role:bilingual-editor",
+          "note": "Check zh-CN/en parity, terminology, labels and quoted text."
+        },
+        {
+          "id": "review:rc-entity-passage-humans-follow-earth-rights",
+          "checkKind": "rights",
+          "status": "pending",
+          "reviewer": "role:rights-editor",
+          "note": "Verify that the Chinese quote remains a short bounded excerpt from Daodejing chapter 25; keep Ctext page rights separate from the project interpretation and any external English translation, with source credit and link."
+        },
+        {
+          "id": "review:rc-entity-passage-humans-follow-earth-editorial",
+          "checkKind": "editorial",
+          "status": "pending",
+          "reviewer": "role:lead-curator",
+          "note": "Check scope, uncertainty labels, attribution and Public wording."
+        },
+        {
+          "id": "review:rc-entity-passage-humans-follow-earth-tradition",
+          "checkKind": "tradition",
+          "status": "pending",
+          "reviewer": "role:tradition-reviewer",
+          "note": "Verify tradition assignment, evidence layer and terminology."
+        },
+        {
+          "id": "review:rc-entity-passage-humans-follow-earth-accessibility",
+          "checkKind": "accessibility",
+          "status": "pending",
+          "reviewer": "role:accessibility-editor",
+          "note": "Check rendered route language, heading order, focus order, keyboard access, contrast, link names and screen-reader reading; automated axe evidence does not replace this review."
+        }
+      ],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "passage:dao-that-can-be-spoken",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "passage:highest-good-like-water",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "passage:learning-increases-dao-decreases",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "passage:learn-and-practice",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "passage:three-walk-together",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "passage:do-not-impose",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "passage:prajna-all-dharmas",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "passage:prajna-five-skandhas",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "passage:prajna-no-wisdom",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "passage:return-to-ritual",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [
+        "schema"
+      ],
+      "missingChecks": [
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [
+        {
+          "id": "review:rc-entity-passage-return-to-ritual-schema",
+          "checkKind": "schema",
+          "status": "passed",
+          "reviewer": "automated:content-compiler",
+          "reviewedAt": "2026-08-09T00:00:00.000Z",
+          "note": "Zod domain schema, identity and structural dependency checks passed; this does not replace content review."
+        },
+        {
+          "id": "review:rc-entity-passage-return-to-ritual-fact",
+          "checkKind": "fact",
+          "status": "pre_reviewed",
+          "reviewer": "agent:codex-content-audit",
+          "reviewedAt": "2026-08-09T12:00:00.000Z",
+          "note": "Pre-review: the quoted text and chapter locator match the claim boundary in docs/PUBLIC_RC_TEXT_CLAIM_AUDIT_2026-08-09.md; formal historical reviewer and curator sign-off remain required."
+        },
+        {
+          "id": "review:rc-entity-passage-return-to-ritual-bilingual",
+          "checkKind": "bilingual",
+          "status": "pending",
+          "reviewer": "role:bilingual-editor",
+          "note": "Check zh-CN/en parity, terminology, labels and quoted text."
+        },
+        {
+          "id": "review:rc-entity-passage-return-to-ritual-rights",
+          "checkKind": "rights",
+          "status": "pending",
+          "reviewer": "role:rights-editor",
+          "note": "Verify that the Chinese quote remains a short bounded excerpt from Analects Yan Yuan 12.1; keep Ctext page rights separate from the project interpretation and any external English translation, with source credit and link."
+        },
+        {
+          "id": "review:rc-entity-passage-return-to-ritual-editorial",
+          "checkKind": "editorial",
+          "status": "pending",
+          "reviewer": "role:lead-curator",
+          "note": "Check scope, uncertainty labels, attribution and Public wording."
+        },
+        {
+          "id": "review:rc-entity-passage-return-to-ritual-tradition",
+          "checkKind": "tradition",
+          "status": "pending",
+          "reviewer": "role:tradition-reviewer",
+          "note": "Verify tradition assignment, evidence layer and terminology."
+        },
+        {
+          "id": "review:rc-entity-passage-return-to-ritual-accessibility",
+          "checkKind": "accessibility",
+          "status": "pending",
+          "reviewer": "role:accessibility-editor",
+          "note": "Check rendered route language, heading order, focus order, keyboard access, contrast, link names and screen-reader reading; automated axe evidence does not replace this review."
+        }
+      ],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "passage:turning-of-dharma-wheel-thanissaro-en",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "passage:turning-of-dharma-wheel",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "place:changan",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [
+        "schema"
+      ],
+      "missingChecks": [
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [
+        {
+          "id": "review:rc-entity-place-changan-schema",
+          "checkKind": "schema",
+          "status": "passed",
+          "reviewer": "automated:content-compiler",
+          "reviewedAt": "2026-08-09T00:00:00.000Z",
+          "note": "Zod domain schema, identity and structural dependency checks passed; this does not replace content review."
+        },
+        {
+          "id": "review:rc-entity-place-changan-fact",
+          "checkKind": "fact",
+          "status": "pre_reviewed",
+          "reviewer": "agent:codex-content-audit",
+          "reviewedAt": "2026-08-09T14:00:00.000Z",
+          "note": "Pre-review: source:sui-tang-changan-urban-study and UNESCO source:unesco-silk-roads-corridor support the bounded Sui–Tang Chang'an/Xi'an anchor and selected heritage/map references; the coordinate remains a schematic centroid and formal historical-geography/editorial sign-off remain required."
+        },
+        {
+          "id": "review:rc-entity-place-changan-bilingual",
+          "checkKind": "bilingual",
+          "status": "pending",
+          "reviewer": "role:bilingual-editor",
+          "note": "Check zh-CN/en parity, terminology, labels and quoted text."
+        },
+        {
+          "id": "review:rc-entity-place-changan-rights",
+          "checkKind": "rights",
+          "status": "pending",
+          "reviewer": "role:rights-editor",
+          "note": "Confirm source rights and quotation/translation reuse boundaries for Public."
+        },
+        {
+          "id": "review:rc-entity-place-changan-editorial",
+          "checkKind": "editorial",
+          "status": "pending",
+          "reviewer": "role:lead-curator",
+          "note": "Check scope, uncertainty labels, attribution and Public wording."
+        },
+        {
+          "id": "review:rc-entity-place-changan-tradition",
+          "checkKind": "tradition",
+          "status": "pending",
+          "reviewer": "role:tradition-reviewer",
+          "note": "Verify tradition assignment, evidence layer and terminology."
+        },
+        {
+          "id": "review:rc-entity-place-changan-accessibility",
+          "checkKind": "accessibility",
+          "status": "pending",
+          "reviewer": "role:accessibility-editor",
+          "note": "Check rendered route language, heading order, focus order, keyboard access, contrast, link names and screen-reader reading; automated axe evidence does not replace this review."
+        }
+      ],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "place:dunhuang",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "place:great-wild-goose-pagoda-site",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "place:zhongnan-mountains",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "place:longmen-grottoes",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "place:luoyang",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "place:mount-wutai",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "place:nalanda",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "place:qiuci",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "place:sarnath",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "route:changan-luoyang-imperial-corridor",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "route:xuanzang-western-pilgrimage",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "text:analects",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [
+        "schema"
+      ],
+      "missingChecks": [
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [
+        {
+          "id": "review:rc-entity-text-analects-schema",
+          "checkKind": "schema",
+          "status": "passed",
+          "reviewer": "automated:content-compiler",
+          "reviewedAt": "2026-08-09T00:00:00.000Z",
+          "note": "Zod domain schema, identity and structural dependency checks passed; this does not replace content review."
+        },
+        {
+          "id": "review:rc-entity-text-analects-fact",
+          "checkKind": "fact",
+          "status": "pre_reviewed",
+          "reviewer": "agent:codex-content-audit",
+          "reviewedAt": "2026-08-09T12:00:00.000Z",
+          "note": "Pre-review: the text claim and linked locator match the claim boundary in docs/PUBLIC_RC_TEXT_CLAIM_AUDIT_2026-08-09.md; formal historical reviewer and curator sign-off remain required."
+        },
+        {
+          "id": "review:rc-entity-text-analects-bilingual",
+          "checkKind": "bilingual",
+          "status": "pending",
+          "reviewer": "role:bilingual-editor",
+          "note": "Check zh-CN/en parity, terminology, labels and quoted text."
+        },
+        {
+          "id": "review:rc-entity-text-analects-rights",
+          "checkKind": "rights",
+          "status": "pending",
+          "reviewer": "role:rights-editor",
+          "note": "Ctext source is a locator for a short classical-text excerpt, not a blanket license for the page, transcription, fonts or translations; verify bounded quotation, credit/link and the rights of any English or modern translation before Public."
+        },
+        {
+          "id": "review:rc-entity-text-analects-editorial",
+          "checkKind": "editorial",
+          "status": "pending",
+          "reviewer": "role:lead-curator",
+          "note": "Check scope, uncertainty labels, attribution and Public wording."
+        },
+        {
+          "id": "review:rc-entity-text-analects-tradition",
+          "checkKind": "tradition",
+          "status": "pending",
+          "reviewer": "role:tradition-reviewer",
+          "note": "Verify tradition assignment, evidence layer and terminology."
+        },
+        {
+          "id": "review:rc-entity-text-analects-accessibility",
+          "checkKind": "accessibility",
+          "status": "pending",
+          "reviewer": "role:accessibility-editor",
+          "note": "Check rendered route language, heading order, focus order, keyboard access, contrast, link names and screen-reader reading; automated axe evidence does not replace this review."
+        }
+      ],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "text:daodejing",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [
+        "schema"
+      ],
+      "missingChecks": [
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [
+        {
+          "id": "review:rc-entity-text-daodejing-schema",
+          "checkKind": "schema",
+          "status": "passed",
+          "reviewer": "automated:content-compiler",
+          "reviewedAt": "2026-08-09T00:00:00.000Z",
+          "note": "Zod domain schema, identity and structural dependency checks passed; this does not replace content review."
+        },
+        {
+          "id": "review:rc-entity-text-daodejing-fact",
+          "checkKind": "fact",
+          "status": "pre_reviewed",
+          "reviewer": "agent:codex-content-audit",
+          "reviewedAt": "2026-08-09T12:00:00.000Z",
+          "note": "Pre-review: the text claim and linked locator match the claim boundary in docs/PUBLIC_RC_TEXT_CLAIM_AUDIT_2026-08-09.md; formal historical reviewer and curator sign-off remain required."
+        },
+        {
+          "id": "review:rc-entity-text-daodejing-bilingual",
+          "checkKind": "bilingual",
+          "status": "pending",
+          "reviewer": "role:bilingual-editor",
+          "note": "Check zh-CN/en parity, terminology, labels and quoted text."
+        },
+        {
+          "id": "review:rc-entity-text-daodejing-rights",
+          "checkKind": "rights",
+          "status": "pending",
+          "reviewer": "role:rights-editor",
+          "note": "Ctext source is a locator for a short classical-text excerpt, not a blanket license for the page, transcription, fonts or translations; verify bounded quotation, credit/link and the rights of any English or modern translation before Public."
+        },
+        {
+          "id": "review:rc-entity-text-daodejing-editorial",
+          "checkKind": "editorial",
+          "status": "pending",
+          "reviewer": "role:lead-curator",
+          "note": "Check scope, uncertainty labels, attribution and Public wording."
+        },
+        {
+          "id": "review:rc-entity-text-daodejing-tradition",
+          "checkKind": "tradition",
+          "status": "pending",
+          "reviewer": "role:tradition-reviewer",
+          "note": "Verify tradition assignment, evidence layer and terminology."
+        },
+        {
+          "id": "review:rc-entity-text-daodejing-accessibility",
+          "checkKind": "accessibility",
+          "status": "pending",
+          "reviewer": "role:accessibility-editor",
+          "note": "Check rendered route language, heading order, focus order, keyboard access, contrast, link names and screen-reader reading; automated axe evidence does not replace this review."
+        }
+      ],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "text:daoist-institutional-records",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "text:dhammacakkappavattana-sutta",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "text:five-classics-corrected-meanings",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "text:great-tang-records-western-regions",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "text:heart-sutra",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "completedChecks": [
+        "schema"
+      ],
+      "missingChecks": [
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial",
+        "tradition"
+      ],
+      "failedChecks": [],
+      "checks": [
+        {
+          "id": "review:rc-entity-text-heart-sutra-schema",
+          "checkKind": "schema",
+          "status": "passed",
+          "reviewer": "automated:content-compiler",
+          "reviewedAt": "2026-08-09T00:00:00.000Z",
+          "note": "Zod domain schema, identity and structural dependency checks passed; this does not replace content review."
+        },
+        {
+          "id": "review:rc-entity-text-heart-sutra-fact",
+          "checkKind": "fact",
+          "status": "pre_reviewed",
+          "reviewer": "agent:codex-content-audit",
+          "reviewedAt": "2026-08-09T12:00:00.000Z",
+          "note": "Pre-review: the text claim and linked locator match the claim boundary in docs/PUBLIC_RC_TEXT_CLAIM_AUDIT_2026-08-09.md; formal historical reviewer and curator sign-off remain required."
+        },
+        {
+          "id": "review:rc-entity-text-heart-sutra-bilingual",
+          "checkKind": "bilingual",
+          "status": "pending",
+          "reviewer": "role:bilingual-editor",
+          "note": "Check zh-CN/en parity, terminology, labels and quoted text."
+        },
+        {
+          "id": "review:rc-entity-text-heart-sutra-rights",
+          "checkKind": "rights",
+          "status": "pending",
+          "reviewer": "role:rights-editor",
+          "note": "Ctext source is a locator for a short classical-text excerpt, not a blanket license for the page, transcription, fonts or translations; verify bounded quotation, credit/link and the rights of any English or modern translation before Public."
+        },
+        {
+          "id": "review:rc-entity-text-heart-sutra-editorial",
+          "checkKind": "editorial",
+          "status": "pending",
+          "reviewer": "role:lead-curator",
+          "note": "Check scope, uncertainty labels, attribution and Public wording."
+        },
+        {
+          "id": "review:rc-entity-text-heart-sutra-tradition",
+          "checkKind": "tradition",
+          "status": "pending",
+          "reviewer": "role:tradition-reviewer",
+          "note": "Verify tradition assignment, evidence layer and terminology."
+        },
+        {
+          "id": "review:rc-entity-text-heart-sutra-accessibility",
+          "checkKind": "accessibility",
+          "status": "pending",
+          "reviewer": "role:accessibility-editor",
+          "note": "Check rendered route language, heading order, focus order, keyboard access, contrast, link names and screen-reader reading; automated axe evidence does not replace this review."
+        }
+      ],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "text_version:analects-received",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [
+        "schema"
+      ],
+      "missingChecks": [
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [
+        {
+          "id": "review:rc-entity-text-version-analects-received-schema",
+          "checkKind": "schema",
+          "status": "passed",
+          "reviewer": "automated:content-compiler",
+          "reviewedAt": "2026-08-09T00:00:00.000Z",
+          "note": "Zod domain schema, identity and structural dependency checks passed; this does not replace content review."
+        },
+        {
+          "id": "review:rc-entity-text-version-analects-received-fact",
+          "checkKind": "fact",
+          "status": "pre_reviewed",
+          "reviewer": "agent:codex-content-audit",
+          "reviewedAt": "2026-08-09T12:00:00.000Z",
+          "note": "Pre-review: the version anchor and linked chapter locator match the claim boundary in docs/PUBLIC_RC_TEXT_CLAIM_AUDIT_2026-08-09.md; recension identity and formal historical sign-off remain required."
+        },
+        {
+          "id": "review:rc-entity-text-version-analects-received-bilingual",
+          "checkKind": "bilingual",
+          "status": "pending",
+          "reviewer": "role:bilingual-editor",
+          "note": "Check zh-CN/en parity, terminology, labels and quoted text."
+        },
+        {
+          "id": "review:rc-entity-text-version-analects-received-rights",
+          "checkKind": "rights",
+          "status": "pending",
+          "reviewer": "role:rights-editor",
+          "note": "The version profile is an Alpha received-text placeholder: verify the underlying text, specific edition and digital transcription rights separately; do not treat Ctext page content or later translations as automatically reusable."
+        },
+        {
+          "id": "review:rc-entity-text-version-analects-received-editorial",
+          "checkKind": "editorial",
+          "status": "pending",
+          "reviewer": "role:lead-curator",
+          "note": "Check scope, uncertainty labels, attribution and Public wording."
+        },
+        {
+          "id": "review:rc-entity-text-version-analects-received-accessibility",
+          "checkKind": "accessibility",
+          "status": "pending",
+          "reviewer": "role:accessibility-editor",
+          "note": "Check rendered route language, heading order, focus order, keyboard access, contrast, link names and screen-reader reading; automated axe evidence does not replace this review."
+        }
+      ],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "text_version:daodejing-received",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [
+        "schema"
+      ],
+      "missingChecks": [
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [
+        {
+          "id": "review:rc-entity-text-version-daodejing-received-schema",
+          "checkKind": "schema",
+          "status": "passed",
+          "reviewer": "automated:content-compiler",
+          "reviewedAt": "2026-08-09T00:00:00.000Z",
+          "note": "Zod domain schema, identity and structural dependency checks passed; this does not replace content review."
+        },
+        {
+          "id": "review:rc-entity-text-version-daodejing-received-fact",
+          "checkKind": "fact",
+          "status": "pre_reviewed",
+          "reviewer": "agent:codex-content-audit",
+          "reviewedAt": "2026-08-09T12:00:00.000Z",
+          "note": "Pre-review: the version anchor and linked chapter locator match the claim boundary in docs/PUBLIC_RC_TEXT_CLAIM_AUDIT_2026-08-09.md; recension identity and formal historical sign-off remain required."
+        },
+        {
+          "id": "review:rc-entity-text-version-daodejing-received-bilingual",
+          "checkKind": "bilingual",
+          "status": "pending",
+          "reviewer": "role:bilingual-editor",
+          "note": "Check zh-CN/en parity, terminology, labels and quoted text."
+        },
+        {
+          "id": "review:rc-entity-text-version-daodejing-received-rights",
+          "checkKind": "rights",
+          "status": "pending",
+          "reviewer": "role:rights-editor",
+          "note": "The version profile is an Alpha received-text placeholder: verify the underlying text, specific edition and digital transcription rights separately; do not treat Ctext page content or later translations as automatically reusable."
+        },
+        {
+          "id": "review:rc-entity-text-version-daodejing-received-editorial",
+          "checkKind": "editorial",
+          "status": "pending",
+          "reviewer": "role:lead-curator",
+          "note": "Check scope, uncertainty labels, attribution and Public wording."
+        },
+        {
+          "id": "review:rc-entity-text-version-daodejing-received-accessibility",
+          "checkKind": "accessibility",
+          "status": "pending",
+          "reviewer": "role:accessibility-editor",
+          "note": "Check rendered route language, heading order, focus order, keyboard access, contrast, link names and screen-reader reading; automated axe evidence does not replace this review."
+        }
+      ],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "text_version:daoist-institutional-records-research",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "text_version:dhammacakkappavattana-sutta-pali",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "text_version:dhammacakkappavattana-sutta-thanissaro-en",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "text_version:five-classics-corrected-meanings-received",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "text_version:great-tang-records-western-regions-received",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "entity",
+      "subjectKey": "text_version:heart-sutra-chinese-received",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [
+        "schema"
+      ],
+      "missingChecks": [
+        "fact",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [
+        {
+          "id": "review:rc-entity-text-version-heart-sutra-chinese-received-schema",
+          "checkKind": "schema",
+          "status": "passed",
+          "reviewer": "automated:content-compiler",
+          "reviewedAt": "2026-08-09T00:00:00.000Z",
+          "note": "Zod domain schema, identity and structural dependency checks passed; this does not replace content review."
+        },
+        {
+          "id": "review:rc-entity-text-version-heart-sutra-chinese-received-fact",
+          "checkKind": "fact",
+          "status": "pre_reviewed",
+          "reviewer": "agent:codex-content-audit",
+          "reviewedAt": "2026-08-09T12:00:00.000Z",
+          "note": "Pre-review: the version anchor and linked section locator match the claim boundary in docs/PUBLIC_RC_TEXT_CLAIM_AUDIT_2026-08-09.md; translator, edition and formal historical sign-off remain required."
+        },
+        {
+          "id": "review:rc-entity-text-version-heart-sutra-chinese-received-bilingual",
+          "checkKind": "bilingual",
+          "status": "pending",
+          "reviewer": "role:bilingual-editor",
+          "note": "Check zh-CN/en parity, terminology, labels and quoted text."
+        },
+        {
+          "id": "review:rc-entity-text-version-heart-sutra-chinese-received-rights",
+          "checkKind": "rights",
+          "status": "pending",
+          "reviewer": "role:rights-editor",
+          "note": "The version profile is an Alpha placeholder: verify the underlying text, specific edition/translator and digital transcription rights separately; public-domain status of an ancient work does not license a full Ctext page or an external translation."
+        },
+        {
+          "id": "review:rc-entity-text-version-heart-sutra-chinese-received-editorial",
+          "checkKind": "editorial",
+          "status": "pending",
+          "reviewer": "role:lead-curator",
+          "note": "Check scope, uncertainty labels, attribution and Public wording."
+        },
+        {
+          "id": "review:rc-entity-text-version-heart-sutra-chinese-received-accessibility",
+          "checkKind": "accessibility",
+          "status": "pending",
+          "reviewer": "role:accessibility-editor",
+          "note": "Check rendered route language, heading order, focus order, keyboard access, contrast, link names and screen-reader reading; automated axe evidence does not replace this review."
+        }
+      ],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:xuanzang-active-changan",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [
+        "schema"
+      ],
+      "missingChecks": [
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [
+        {
+          "id": "review:rc-relation-relation-xuanzang-active-changan-schema",
+          "checkKind": "schema",
+          "status": "passed",
+          "reviewer": "automated:content-compiler",
+          "reviewedAt": "2026-08-09T00:00:00.000Z",
+          "note": "Relation schema, endpoint identity and source-reference checks passed; this does not replace relation review."
+        },
+        {
+          "id": "review:rc-relation-relation-xuanzang-active-changan-fact",
+          "checkKind": "fact",
+          "status": "pre_reviewed",
+          "reviewer": "agent:codex-content-audit",
+          "reviewedAt": "2026-08-09T13:30:00.000Z",
+          "note": "Pre-review: the linked Xuanzang record supports his return to Chang'an and the translation-bureau/institutional setting used by this bounded relation; exact biography passages and formal historical/curatorial sign-off remain required."
+        },
+        {
+          "id": "review:rc-relation-relation-xuanzang-active-changan-rights",
+          "checkKind": "rights",
+          "status": "pending",
+          "reviewer": "role:rights-editor",
+          "note": "Confirm source rights and quotation/translation reuse boundaries for Public."
+        },
+        {
+          "id": "review:rc-relation-relation-xuanzang-active-changan-editorial",
+          "checkKind": "editorial",
+          "status": "pending",
+          "reviewer": "role:lead-curator",
+          "note": "Check scope, uncertainty labels, attribution and Public wording."
+        }
+      ],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:xuanzang-travelled-dunhuang",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:xuanzang-active-luoyang",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:sima-active-changan",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [
+        "schema"
+      ],
+      "missingChecks": [
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [
+        {
+          "id": "review:rc-relation-relation-sima-active-changan-schema",
+          "checkKind": "schema",
+          "status": "passed",
+          "reviewer": "automated:content-compiler",
+          "reviewedAt": "2026-08-09T00:00:00.000Z",
+          "note": "Relation schema, endpoint identity and source-reference checks passed; this does not replace relation review."
+        },
+        {
+          "id": "review:rc-relation-relation-sima-active-changan-fact",
+          "checkKind": "fact",
+          "status": "pending",
+          "reviewer": "role:historical-reviewer",
+          "note": "Agent evidence pass narrowed this to the Jingyun 2 (711) summons-to-the-capital episode, using Chang'an only as a city-scale anchor; formally verify the capital mapping and keep later Luoyang/Mount Wangwu episodes separate before approval."
+        },
+        {
+          "id": "review:rc-relation-relation-sima-active-changan-rights",
+          "checkKind": "rights",
+          "status": "pending",
+          "reviewer": "role:rights-editor",
+          "note": "Confirm source rights and quotation/translation reuse boundaries for Public."
+        },
+        {
+          "id": "review:rc-relation-relation-sima-active-changan-editorial",
+          "checkKind": "editorial",
+          "status": "pending",
+          "reviewer": "role:lead-curator",
+          "note": "Check scope, uncertainty labels, attribution and Public wording."
+        }
+      ],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:kong-active-changan",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [
+        "schema"
+      ],
+      "missingChecks": [
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [
+        {
+          "id": "review:rc-relation-relation-kong-active-changan-schema",
+          "checkKind": "schema",
+          "status": "passed",
+          "reviewer": "automated:content-compiler",
+          "reviewedAt": "2026-08-09T00:00:00.000Z",
+          "note": "Relation schema, endpoint identity and source-reference checks passed; this does not replace relation review."
+        },
+        {
+          "id": "review:rc-relation-relation-kong-active-changan-fact",
+          "checkKind": "fact",
+          "status": "pending",
+          "reviewer": "role:historical-reviewer",
+          "note": "Agent evidence pass located a specific 640 Wuben Ward Guozijian episode: Taizong ordered Guozijian libationer Kong Yingda to lecture on the Classic of Filial Piety and help establish the Corrected Meanings; formally verify the gazetteer wording and the bounded 640 relation."
+        },
+        {
+          "id": "review:rc-relation-relation-kong-active-changan-rights",
+          "checkKind": "rights",
+          "status": "pending",
+          "reviewer": "role:rights-editor",
+          "note": "Confirm source rights and quotation/translation reuse boundaries for Public."
+        },
+        {
+          "id": "review:rc-relation-relation-kong-active-changan-editorial",
+          "checkKind": "editorial",
+          "status": "pending",
+          "reviewer": "role:lead-curator",
+          "note": "Check scope, uncertainty labels, attribution and Public wording."
+        }
+      ],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:heart-sutra-has-version",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [
+        "schema"
+      ],
+      "missingChecks": [
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [
+        {
+          "id": "review:rc-relation-relation-heart-sutra-has-version-schema",
+          "checkKind": "schema",
+          "status": "passed",
+          "reviewer": "automated:content-compiler",
+          "reviewedAt": "2026-08-09T00:00:00.000Z",
+          "note": "Relation schema, endpoint identity and source-reference checks passed; this does not replace relation review."
+        },
+        {
+          "id": "review:rc-relation-relation-heart-sutra-has-version-fact",
+          "checkKind": "fact",
+          "status": "pre_reviewed",
+          "reviewer": "agent:codex-content-audit",
+          "reviewedAt": "2026-08-09T12:00:00.000Z",
+          "note": "Pre-review: relation endpoints and source locator match the text/version boundary in docs/PUBLIC_RC_TEXT_CLAIM_AUDIT_2026-08-09.md; formal historical reviewer and curator sign-off remain required."
+        },
+        {
+          "id": "review:rc-relation-relation-heart-sutra-has-version-rights",
+          "checkKind": "rights",
+          "status": "pending",
+          "reviewer": "role:rights-editor",
+          "note": "This is a structural link only; verify that the displayed source credit and version locator do not reproduce a full external page, and that any version wording retains its own rights record."
+        },
+        {
+          "id": "review:rc-relation-relation-heart-sutra-has-version-editorial",
+          "checkKind": "editorial",
+          "status": "pending",
+          "reviewer": "role:lead-curator",
+          "note": "Check scope, uncertainty labels, attribution and Public wording."
+        }
+      ],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:daodejing-has-version",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [
+        "schema"
+      ],
+      "missingChecks": [
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [
+        {
+          "id": "review:rc-relation-relation-daodejing-has-version-schema",
+          "checkKind": "schema",
+          "status": "passed",
+          "reviewer": "automated:content-compiler",
+          "reviewedAt": "2026-08-09T00:00:00.000Z",
+          "note": "Relation schema, endpoint identity and source-reference checks passed; this does not replace relation review."
+        },
+        {
+          "id": "review:rc-relation-relation-daodejing-has-version-fact",
+          "checkKind": "fact",
+          "status": "pre_reviewed",
+          "reviewer": "agent:codex-content-audit",
+          "reviewedAt": "2026-08-09T12:00:00.000Z",
+          "note": "Pre-review: relation endpoints and source locator match the text/version boundary in docs/PUBLIC_RC_TEXT_CLAIM_AUDIT_2026-08-09.md; formal historical reviewer and curator sign-off remain required."
+        },
+        {
+          "id": "review:rc-relation-relation-daodejing-has-version-rights",
+          "checkKind": "rights",
+          "status": "pending",
+          "reviewer": "role:rights-editor",
+          "note": "This is a structural link only; verify that the displayed source credit and chapter locator do not reproduce a full external page, and that any received-text wording retains its own rights record."
+        },
+        {
+          "id": "review:rc-relation-relation-daodejing-has-version-editorial",
+          "checkKind": "editorial",
+          "status": "pending",
+          "reviewer": "role:lead-curator",
+          "note": "Check scope, uncertainty labels, attribution and Public wording."
+        }
+      ],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:analects-has-version",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [
+        "schema"
+      ],
+      "missingChecks": [
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [
+        {
+          "id": "review:rc-relation-relation-analects-has-version-schema",
+          "checkKind": "schema",
+          "status": "passed",
+          "reviewer": "automated:content-compiler",
+          "reviewedAt": "2026-08-09T00:00:00.000Z",
+          "note": "Relation schema, endpoint identity and source-reference checks passed; this does not replace relation review."
+        },
+        {
+          "id": "review:rc-relation-relation-analects-has-version-fact",
+          "checkKind": "fact",
+          "status": "pre_reviewed",
+          "reviewer": "agent:codex-content-audit",
+          "reviewedAt": "2026-08-09T12:00:00.000Z",
+          "note": "Pre-review: relation endpoints and source locator match the text/version boundary in docs/PUBLIC_RC_TEXT_CLAIM_AUDIT_2026-08-09.md; formal historical reviewer and curator sign-off remain required."
+        },
+        {
+          "id": "review:rc-relation-relation-analects-has-version-rights",
+          "checkKind": "rights",
+          "status": "pending",
+          "reviewer": "role:rights-editor",
+          "note": "This is a structural link only; verify that the displayed source credit and chapter locator do not reproduce a full external page, and that any received-text wording retains its own rights record."
+        },
+        {
+          "id": "review:rc-relation-relation-analects-has-version-editorial",
+          "checkKind": "editorial",
+          "status": "pending",
+          "reviewer": "role:lead-curator",
+          "note": "Check scope, uncertainty labels, attribution and Public wording."
+        }
+      ],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:form-passage-heart-sutra",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [
+        "schema"
+      ],
+      "missingChecks": [
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [
+        {
+          "id": "review:rc-relation-relation-form-passage-heart-sutra-schema",
+          "checkKind": "schema",
+          "status": "passed",
+          "reviewer": "automated:content-compiler",
+          "reviewedAt": "2026-08-09T00:00:00.000Z",
+          "note": "Relation schema, endpoint identity and source-reference checks passed; this does not replace relation review."
+        },
+        {
+          "id": "review:rc-relation-relation-form-passage-heart-sutra-fact",
+          "checkKind": "fact",
+          "status": "pre_reviewed",
+          "reviewer": "agent:codex-content-audit",
+          "reviewedAt": "2026-08-09T12:00:00.000Z",
+          "note": "Pre-review: relation endpoints and source locator match the passage/text boundary in docs/PUBLIC_RC_TEXT_CLAIM_AUDIT_2026-08-09.md; formal historical reviewer and curator sign-off remain required."
+        },
+        {
+          "id": "review:rc-relation-relation-form-passage-heart-sutra-rights",
+          "checkKind": "rights",
+          "status": "pending",
+          "reviewer": "role:rights-editor",
+          "note": "Verify the passage-to-text relation exposes only the bounded Heart Sutra excerpt, source credit and locator; it must not imply a license to republish the Ctext page or an external translation."
+        },
+        {
+          "id": "review:rc-relation-relation-form-passage-heart-sutra-editorial",
+          "checkKind": "editorial",
+          "status": "pending",
+          "reviewer": "role:lead-curator",
+          "note": "Check scope, uncertainty labels, attribution and Public wording."
+        }
+      ],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:humans-passage-daodejing",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [
+        "schema"
+      ],
+      "missingChecks": [
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [
+        {
+          "id": "review:rc-relation-relation-humans-passage-daodejing-schema",
+          "checkKind": "schema",
+          "status": "passed",
+          "reviewer": "automated:content-compiler",
+          "reviewedAt": "2026-08-09T00:00:00.000Z",
+          "note": "Relation schema, endpoint identity and source-reference checks passed; this does not replace relation review."
+        },
+        {
+          "id": "review:rc-relation-relation-humans-passage-daodejing-fact",
+          "checkKind": "fact",
+          "status": "pre_reviewed",
+          "reviewer": "agent:codex-content-audit",
+          "reviewedAt": "2026-08-09T12:00:00.000Z",
+          "note": "Pre-review: relation endpoints and source locator match the passage/text boundary in docs/PUBLIC_RC_TEXT_CLAIM_AUDIT_2026-08-09.md; formal historical reviewer and curator sign-off remain required."
+        },
+        {
+          "id": "review:rc-relation-relation-humans-passage-daodejing-rights",
+          "checkKind": "rights",
+          "status": "pending",
+          "reviewer": "role:rights-editor",
+          "note": "Verify the passage-to-text relation exposes only the bounded Daodejing chapter-25 excerpt, source credit and locator; it must not imply a license to republish the Ctext page or an external translation."
+        },
+        {
+          "id": "review:rc-relation-relation-humans-passage-daodejing-editorial",
+          "checkKind": "editorial",
+          "status": "pending",
+          "reviewer": "role:lead-curator",
+          "note": "Check scope, uncertainty labels, attribution and Public wording."
+        }
+      ],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:return-passage-analects",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [
+        "schema"
+      ],
+      "missingChecks": [
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [
+        {
+          "id": "review:rc-relation-relation-return-passage-analects-schema",
+          "checkKind": "schema",
+          "status": "passed",
+          "reviewer": "automated:content-compiler",
+          "reviewedAt": "2026-08-09T00:00:00.000Z",
+          "note": "Relation schema, endpoint identity and source-reference checks passed; this does not replace relation review."
+        },
+        {
+          "id": "review:rc-relation-relation-return-passage-analects-fact",
+          "checkKind": "fact",
+          "status": "pre_reviewed",
+          "reviewer": "agent:codex-content-audit",
+          "reviewedAt": "2026-08-09T12:00:00.000Z",
+          "note": "Pre-review: relation endpoints and source locator match the passage/text boundary in docs/PUBLIC_RC_TEXT_CLAIM_AUDIT_2026-08-09.md; formal historical reviewer and curator sign-off remain required."
+        },
+        {
+          "id": "review:rc-relation-relation-return-passage-analects-rights",
+          "checkKind": "rights",
+          "status": "pending",
+          "reviewer": "role:rights-editor",
+          "note": "Verify the passage-to-text relation exposes only the bounded Analects Yan Yuan excerpt, source credit and locator; it must not imply a license to republish the Ctext page or an external translation."
+        },
+        {
+          "id": "review:rc-relation-relation-return-passage-analects-editorial",
+          "checkKind": "editorial",
+          "status": "pending",
+          "reviewer": "role:lead-curator",
+          "note": "Check scope, uncertainty labels, attribution and Public wording."
+        }
+      ],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:form-quoted-heart-version",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [
+        "schema"
+      ],
+      "missingChecks": [
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [
+        {
+          "id": "review:rc-relation-relation-form-quoted-heart-version-schema",
+          "checkKind": "schema",
+          "status": "passed",
+          "reviewer": "automated:content-compiler",
+          "reviewedAt": "2026-08-09T00:00:00.000Z",
+          "note": "Relation schema, endpoint identity and source-reference checks passed; this does not replace relation review."
+        },
+        {
+          "id": "review:rc-relation-relation-form-quoted-heart-version-fact",
+          "checkKind": "fact",
+          "status": "pre_reviewed",
+          "reviewer": "agent:codex-content-audit",
+          "reviewedAt": "2026-08-09T12:00:00.000Z",
+          "note": "Pre-review: relation endpoints and source locator match the passage/version boundary in docs/PUBLIC_RC_TEXT_CLAIM_AUDIT_2026-08-09.md; formal historical reviewer and curator sign-off remain required."
+        },
+        {
+          "id": "review:rc-relation-relation-form-quoted-heart-version-rights",
+          "checkKind": "rights",
+          "status": "pending",
+          "reviewer": "role:rights-editor",
+          "note": "Verify this quote-to-version link preserves the short-excerpt boundary, Ctext credit/link and the separate rights status of the project interpretation and any external translation."
+        },
+        {
+          "id": "review:rc-relation-relation-form-quoted-heart-version-editorial",
+          "checkKind": "editorial",
+          "status": "pending",
+          "reviewer": "role:lead-curator",
+          "note": "Check scope, uncertainty labels, attribution and Public wording."
+        }
+      ],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:humans-quoted-daodejing-version",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [
+        "schema"
+      ],
+      "missingChecks": [
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [
+        {
+          "id": "review:rc-relation-relation-humans-quoted-daodejing-version-schema",
+          "checkKind": "schema",
+          "status": "passed",
+          "reviewer": "automated:content-compiler",
+          "reviewedAt": "2026-08-09T00:00:00.000Z",
+          "note": "Relation schema, endpoint identity and source-reference checks passed; this does not replace relation review."
+        },
+        {
+          "id": "review:rc-relation-relation-humans-quoted-daodejing-version-fact",
+          "checkKind": "fact",
+          "status": "pre_reviewed",
+          "reviewer": "agent:codex-content-audit",
+          "reviewedAt": "2026-08-09T12:00:00.000Z",
+          "note": "Pre-review: relation endpoints and source locator match the passage/version boundary in docs/PUBLIC_RC_TEXT_CLAIM_AUDIT_2026-08-09.md; formal historical reviewer and curator sign-off remain required."
+        },
+        {
+          "id": "review:rc-relation-relation-humans-quoted-daodejing-version-rights",
+          "checkKind": "rights",
+          "status": "pending",
+          "reviewer": "role:rights-editor",
+          "note": "Verify this quote-to-version link preserves the short-excerpt boundary, Ctext credit/link and the separate rights status of the project interpretation and any external translation."
+        },
+        {
+          "id": "review:rc-relation-relation-humans-quoted-daodejing-version-editorial",
+          "checkKind": "editorial",
+          "status": "pending",
+          "reviewer": "role:lead-curator",
+          "note": "Check scope, uncertainty labels, attribution and Public wording."
+        }
+      ],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:return-quoted-analects-version",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [
+        "schema"
+      ],
+      "missingChecks": [
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [
+        {
+          "id": "review:rc-relation-relation-return-quoted-analects-version-schema",
+          "checkKind": "schema",
+          "status": "passed",
+          "reviewer": "automated:content-compiler",
+          "reviewedAt": "2026-08-09T00:00:00.000Z",
+          "note": "Relation schema, endpoint identity and source-reference checks passed; this does not replace relation review."
+        },
+        {
+          "id": "review:rc-relation-relation-return-quoted-analects-version-fact",
+          "checkKind": "fact",
+          "status": "pre_reviewed",
+          "reviewer": "agent:codex-content-audit",
+          "reviewedAt": "2026-08-09T12:00:00.000Z",
+          "note": "Pre-review: relation endpoints and source locator match the passage/version boundary in docs/PUBLIC_RC_TEXT_CLAIM_AUDIT_2026-08-09.md; formal historical reviewer and curator sign-off remain required."
+        },
+        {
+          "id": "review:rc-relation-relation-return-quoted-analects-version-rights",
+          "checkKind": "rights",
+          "status": "pending",
+          "reviewer": "role:rights-editor",
+          "note": "Verify this quote-to-version link preserves the short-excerpt boundary, Ctext credit/link and the separate rights status of the project interpretation and any external translation."
+        },
+        {
+          "id": "review:rc-relation-relation-return-quoted-analects-version-editorial",
+          "checkKind": "editorial",
+          "status": "pending",
+          "reviewer": "role:lead-curator",
+          "note": "Check scope, uncertainty labels, attribution and Public wording."
+        }
+      ],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:changan-luoyang-corridor",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:daodejing-analects-comparative",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [
+        "schema"
+      ],
+      "missingChecks": [
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [
+        {
+          "id": "review:rc-relation-relation-daodejing-analects-comparative-schema",
+          "checkKind": "schema",
+          "status": "passed",
+          "reviewer": "automated:content-compiler",
+          "reviewedAt": "2026-08-09T00:00:00.000Z",
+          "note": "Relation schema, endpoint identity and source-reference checks passed; this does not replace relation review."
+        },
+        {
+          "id": "review:rc-relation-relation-daodejing-analects-comparative-fact",
+          "checkKind": "fact",
+          "status": "pre_reviewed",
+          "reviewer": "agent:codex-content-audit",
+          "reviewedAt": "2026-08-09T13:30:00.000Z",
+          "note": "Pre-review: the cited comparative-method source and relation wording support a bounded curatorial comparison only; they do not claim common authorship, direct influence or shared religious function. Formal historical and lead-curator sign-off remain required."
+        },
+        {
+          "id": "review:rc-relation-relation-daodejing-analects-comparative-rights",
+          "checkKind": "rights",
+          "status": "pending",
+          "reviewer": "role:rights-editor",
+          "note": "The comparative-method source is quotation-only: verify that Public uses only a short citation/link and project-authored comparison, with no copied Cambridge chapter text."
+        },
+        {
+          "id": "review:rc-relation-relation-daodejing-analects-comparative-editorial",
+          "checkKind": "editorial",
+          "status": "pending",
+          "reviewer": "role:lead-curator",
+          "note": "Check scope, uncertainty labels, attribution and Public wording."
+        }
+      ],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:heart-sutra-daodejing-comparative",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [
+        "schema"
+      ],
+      "missingChecks": [
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [
+        {
+          "id": "review:rc-relation-relation-heart-sutra-daodejing-comparative-schema",
+          "checkKind": "schema",
+          "status": "passed",
+          "reviewer": "automated:content-compiler",
+          "reviewedAt": "2026-08-09T00:00:00.000Z",
+          "note": "Relation schema, endpoint identity and source-reference checks passed; this does not replace relation review."
+        },
+        {
+          "id": "review:rc-relation-relation-heart-sutra-daodejing-comparative-fact",
+          "checkKind": "fact",
+          "status": "pre_reviewed",
+          "reviewer": "agent:codex-content-audit",
+          "reviewedAt": "2026-08-09T13:30:00.000Z",
+          "note": "Pre-review: the cited comparative-method source and relation wording support a bounded conceptual juxtaposition while preserving distinct terms, contexts and functions; formal historical and lead-curator sign-off remain required."
+        },
+        {
+          "id": "review:rc-relation-relation-heart-sutra-daodejing-comparative-rights",
+          "checkKind": "rights",
+          "status": "pending",
+          "reviewer": "role:rights-editor",
+          "note": "The comparative-method source is quotation-only: verify that Public uses only a short citation/link and project-authored comparison, with no copied Cambridge chapter text."
+        },
+        {
+          "id": "review:rc-relation-relation-heart-sutra-daodejing-comparative-editorial",
+          "checkKind": "editorial",
+          "status": "pending",
+          "reviewer": "role:lead-curator",
+          "note": "Check scope, uncertainty labels, attribution and Public wording."
+        }
+      ],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:cheng-commented-daodejing",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:yan-hongwen-context",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:jizang-active-luoyang",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:translation-network-located-changan",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:daoist-network-located-changan",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:pagoda-site-located-changan",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:longmen-located-luoyang",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:dao-spoken-passage-daodejing",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:water-passage-daodejing",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:decrease-passage-daodejing",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:practice-passage-analects",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:three-passage-analects",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:do-not-impose-passage-analects",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:xuanzang-participated-departure",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:xuanzang-participated-return",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:xuanzang-departure-occurred-changan",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:xuanzang-return-occurred-changan",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:daci-en-foundation-occurred-changan",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:xuanzang-active-daci-en",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:xuanzang-institutional-translation-network",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:western-regions-attributed-xuanzang",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:xuanzang-remembered-daci-en",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:xuanzang-route-dunhuang-context",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:sima-participated-kaiyuan",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:sima-daoist-institutional-context",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:daodejing-received-by-sima",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:sima-remembered-daoist-network",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:kong-participated-five-classics",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:five-classics-project-occurred-changan",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:kong-active-guozijian",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:kong-commented-five-classics",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:five-classics-attributed-kong",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:five-classics-received-guozijian",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:kong-remembered-guozijian",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:laozi-participated-zhou-rites",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:confucius-participated-zhou-rites",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:confucius-laozi-occurred-luoyang",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:laozi-context-luoyang",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:confucius-context-luoyang",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:daodejing-attributed-laozi",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:dao-passage-attributed-laozi",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:laozi-remembered-daoist-network",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:laozi-reception-kaiyuan",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:analects-attributed-confucius",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:learn-and-practice-attributed-confucius",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:confucius-remembered-guozijian",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:confucius-reception-five-classics",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:analects-received-kong",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:sakyamuni-participated-first-sermon",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:first-sermon-occurred-sarnath",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:sakyamuni-active-sarnath",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:dhammacakkappavattana-has-version",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:turning-passage-of-text",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:turning-passage-quoted-pali",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:turning-passage-attributed-sakyamuni",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:sakyamuni-remembered-sarnath",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:sakyamuni-represented-heart-sutra",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:sakyamuni-reception-daci-en",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:turning-text-has-thanissaro-version",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:turning-translation-quoted-thanissaro",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:turning-passage-parallel-thanissaro",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "relation",
+      "subjectKey": "relation:turning-translation-attributed-sakyamuni",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "fact",
+        "rights",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "audio",
+      "subjectKey": "audio:welcome-to-changan",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "audio",
+      "subjectKey": "audio:reading-form-and-emptiness",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    },
+    {
+      "subjectKind": "audio",
+      "subjectKey": "audio:how-to-read-evidence",
+      "publicationState": "preview",
+      "reviewStatus": "bilingual_reviewed",
+      "requiredChecks": [
+        "schema",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "completedChecks": [],
+      "missingChecks": [
+        "schema",
+        "bilingual",
+        "rights",
+        "accessibility",
+        "editorial"
+      ],
+      "failedChecks": [],
+      "checks": [],
+      "blocking": true
+    }
+  ]
+}

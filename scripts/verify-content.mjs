@@ -1,8 +1,9 @@
 import { readFile, readdir } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import { relative, resolve } from "node:path";
+import { getContentArtifactRoot } from "./artifact-roots.mjs";
 
-const root = resolve(process.env.DRF_CONTENT_ARTIFACT_ROOT ?? ".artifacts/content/v2");
+const root = resolve(process.env.DRF_CONTENT_ARTIFACT_ROOT ?? getContentArtifactRoot("preview", process.cwd()));
 const manifestPath = resolve(root, "manifest/content-version.json");
 const reportPath = resolve(root, "manifest/content-report.json");
 
@@ -115,14 +116,58 @@ for (const locale of manifest.locales) {
   if (realMap.locale !== locale || realMap.features.some((feature) => feature.properties.placeReality === "sacred_symbolic" || feature.geometry.type !== "Point")) {
     throw new Error(`Real map contains invalid or sacred geometry for ${locale}`);
   }
-  const timeline = await readJson(resolve(root, "timeline", `suitang.${locale}.json`));
-  if (timeline.locale !== locale || timeline.startYear !== 581 || timeline.endYear !== 907 || timeline.events.some((event) => event.year === 0)) {
-    throw new Error(`Timeline contract is invalid for ${locale}`);
+  const sacredCosmos = await readJson(resolve(root, "maps", "cosmos", `overview.${locale}.json`));
+  const cosmosNodeIds = new Set(sacredCosmos.nodes.map((node) => node.id));
+  if (sacredCosmos.locale !== locale || sacredCosmos.layer !== "sacred_symbolic" || sacredCosmos.nodes.length < 4 || sacredCosmos.nodes.some((node) => "coordinates" in node) || sacredCosmos.edges.some((edge) => !cosmosNodeIds.has(edge.source) || !cosmosNodeIds.has(edge.target))) {
+    throw new Error(`Sacred cosmos read model is invalid for ${locale}`);
+  }
+  const historicalTimeline = await readJson(resolve(root, "timeline", `overview.${locale}.json`));
+  if (
+    historicalTimeline.locale !== locale ||
+    historicalTimeline.startYear >= 581 ||
+    historicalTimeline.endYear <= 907 ||
+    historicalTimeline.events.length === 0 ||
+    historicalTimeline.events.some((event) => event.year === 0)
+  ) {
+    throw new Error(`Historical timeline contract is invalid for ${locale}`);
+  }
+  const suitangTimeline = await readJson(resolve(root, "timeline", `suitang.${locale}.json`));
+  if (suitangTimeline.locale !== locale || suitangTimeline.startYear !== 581 || suitangTimeline.endYear !== 907 || suitangTimeline.events.some((event) => event.year === 0)) {
+    throw new Error(`Sui–Tang timeline contract is invalid for ${locale}`);
   }
   const graph = await readJson(resolve(root, "graphs", "three-traditions", `overview.${locale}.json`));
   const graphNodeIds = new Set(graph.nodes.map((node) => node.id));
   if (graph.locale !== locale || graph.edges.some((edge) => !graphNodeIds.has(edge.source) || !graphNodeIds.has(edge.target))) {
     throw new Error(`Graph contains a missing endpoint for ${locale}`);
+  }
+  if (manifest.visibility === "preview") {
+    const comparison = await readJson(resolve(root, "comparisons", `cross-era-figures.${locale}.json`));
+    const comparisonKeys = new Set(comparison.entities.map((entity) => entity.key));
+    if (comparison.schemaVersion !== "1.0" || comparison.locale !== locale || comparison.entities.length !== 3 || comparison.axes.length < 8 || comparison.axes.some((axis) => axis.cells.some((cell) => !comparisonKeys.has(cell.entityKey)))) {
+      throw new Error(`Comparison read model is invalid for ${locale}`);
+    }
+    const textReading = await readJson(resolve(root, "text-readings", `three-traditions-passage-reading.${locale}.json`));
+    const readingKeys = new Set(textReading.readings.map((reading) => reading.key));
+    if (textReading.schemaVersion !== "1.0" || textReading.locale !== locale || textReading.readings.length !== 3 || textReading.axes.length < 6 || textReading.axes.some((axis) => axis.cells.some((cell) => !readingKeys.has(cell.passageKey)))) {
+      throw new Error(`Text reading model is invalid for ${locale}`);
+    }
+    const versionReading = await readJson(resolve(root, "text-readings", `dhammacakkappavattana-version-reading.${locale}.json`));
+    const versionKeys = new Set(versionReading.readings.map((reading) => reading.version.key));
+    if (
+      versionReading.schemaVersion !== "1.0" ||
+      versionReading.locale !== locale ||
+      versionReading.readingMode !== "same_text_versions" ||
+      versionReading.textSlug !== "dhammacakkappavattana-sutta" ||
+      versionReading.readings.length !== 2 ||
+      versionKeys.size !== 2 ||
+      versionReading.axes.length < 6 ||
+      versionReading.axes.some((axis) => axis.cells.some((cell) => !cell.reviewEvidence || !Array.isArray(cell.reviewEvidence)))
+    ) {
+      throw new Error(`Same-text version reading model is invalid for ${locale}`);
+    }
+    if (!versionReading.readings.some((reading) => reading.passage.variantReadings.some((variant) => variant.kind === "translation"))) {
+      throw new Error(`Same-text version reading has no explicit translation wording record for ${locale}`);
+    }
   }
 }
 

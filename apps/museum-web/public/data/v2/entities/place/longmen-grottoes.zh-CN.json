@@ -1,0 +1,46 @@
+{
+  "id": "36de50b4-d018-5999-a605-c8ce790af2f5",
+  "locale": "zh-CN",
+  "kind": "place",
+  "slug": "longmen-grottoes",
+  "title": "龙门石窟",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "北魏晚期至唐代重点",
+  "shortSummary": "龙门石窟把洛阳、皇室赞助、佛教造像与石刻题记置于同一物质场域。",
+  "curatorialDescription": [
+    "条目依据遗产地层级建模；洞窟、造像、题记和营造阶段仍需拆成可引用对象。"
+  ],
+  "researchNote": "下一批应接入 UNESCO 遗产资料与具体洞窟、造像和题记目录。",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:unesco-longmen",
+      "title": "UNESCO 世界遗产中心：龙门石窟",
+      "locator": "World Heritage List no. 1003; site history, location and significance",
+      "grade": "A",
+      "role": "龙门石窟遗产地范围、年代与唐代造像语境的权威入口",
+      "url": "https://whc.unesco.org/en/list/1003/"
+    },
+    {
+      "id": "source:historical-geography",
+      "title": "隋唐历史地理与城市沿革资料",
+      "locator": "长安、洛阳、敦煌历史名称与地理范围",
+      "grade": "A",
+      "role": "真实地点、历史名称和坐标示意的地理依据"
+    }
+  ],
+  "profile": {
+    "placeReality": "real_historical",
+    "geometryType": "point",
+    "coordinates": [
+      112.466667,
+      34.466667
+    ],
+    "coordinateConfidence": "exact",
+    "geographicSourceId": "source:unesco-longmen"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

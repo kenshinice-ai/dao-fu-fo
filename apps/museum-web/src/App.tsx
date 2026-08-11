@@ -1,6 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { MuseumLayout } from "./layout/MuseumLayout";
 import { EntityPage } from "./pages/EntityPage";
+import { ComparePage } from "./pages/ComparePage";
+import { TextReadingPage } from "./pages/TextReadingPage";
 import { ExhibitionPage } from "./pages/ExhibitionPage";
 import { ExplorePage } from "./pages/ExplorePage";
 import { HomePage } from "./pages/HomePage";
@@ -19,6 +21,8 @@ export default function App() {
           <Route path="museum" element={<MuseumIndexPage />} />
           <Route path="museum/:exhibitionSlug" element={<ExhibitionPage />} />
           <Route path="explore" element={<ExplorePage />} />
+          <Route path="compare" element={<ComparePage />} />
+          <Route path="text-readings" element={<TextReadingPage />} />
           <Route path="search" element={<SearchPage />} />
           <Route path="research" element={<ResearchPage />} />
           <Route path="methodology" element={<MethodologyPage />} />

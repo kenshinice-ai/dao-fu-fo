@@ -1,0 +1,47 @@
+{
+  "id": "aa91d726-1e82-5955-afaf-3d582603ee20",
+  "locale": "zh-CN",
+  "kind": "event",
+  "slug": "sui-unification",
+  "title": "隋朝建立与统一进程",
+  "subtitle": "时间切片的起点之一",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "581 起",
+  "shortSummary": "隋朝建立和统一进程为隋唐制度、都城和知识网络的时间轴提供政治背景。",
+  "curatorialDescription": [
+    "事件条目只提供年代和制度背景，不把政治统一直接解释为三教融合或城市生活的单一原因。"
+  ],
+  "researchNote": "需要分拆建国、统一、都城变迁和制度改革等事件，并分别绑定正史与考古地理来源。",
+  "keyFacts": [
+    {
+      "label": "事件类型",
+      "value": "政权建立与统一进程"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:tang-imperial-records",
+      "title": "隋唐正史人物与制度记录",
+      "locator": "帝王、制度与年代条目；具体版本和卷页待核",
+      "grade": "B",
+      "role": "隋唐人物、都城、制度和事件时间的研究参考"
+    },
+    {
+      "id": "source:historical-geography",
+      "title": "隋唐历史地理与城市沿革资料",
+      "locator": "长安、洛阳、敦煌历史名称与地理范围",
+      "grade": "A",
+      "role": "真实地点、历史名称和坐标示意的地理依据"
+    }
+  ],
+  "profile": {
+    "eventKind": "dynastic_transition",
+    "historicity": "documented",
+    "sequenceOrder": 1,
+    "eventScope": "imperial"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

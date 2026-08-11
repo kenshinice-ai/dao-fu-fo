@@ -1,0 +1,59 @@
+{
+  "id": "7f7e88ba-4e06-5257-b398-36ce485188f6",
+  "locale": "zh-CN",
+  "kind": "place",
+  "slug": "luoyang",
+  "title": "洛阳",
+  "subtitle": "东都、交通节点与宗教文化城市",
+  "tradition": "convergence",
+  "evidence": "historical_documented",
+  "timeLabel": "隋唐重点：581–907",
+  "shortSummary": "洛阳连接都城政治、交通网络、佛教传播和经典文化，是长安展厅的关键对照地点。",
+  "curatorialDescription": [
+    "在隋唐叙事中，洛阳不是长安的附属城市。它承担东都、交通和文化传播等不同角色，帮助观众看到三教网络并不只围绕一个中心运转。"
+  ],
+  "researchNote": "当前为城市级 Alpha 地点，后续补充龙门石窟、寺院、宫观和路线节点。",
+  "keyFacts": [
+    {
+      "label": "地点类型",
+      "value": "东都与交通节点"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:historical-geography",
+      "title": "隋唐历史地理与城市沿革资料",
+      "locator": "长安、洛阳、敦煌历史名称与地理范围",
+      "grade": "A",
+      "role": "真实地点、历史名称和坐标示意的地理依据"
+    },
+    {
+      "id": "source:unesco-silk-roads-corridor",
+      "title": "UNESCO 世界遗产中心：丝绸之路长安—天山廊道路网",
+      "locator": "World Heritage List no. 1442; component coordinates and corridor description",
+      "grade": "A",
+      "role": "长安、洛阳、大雁塔、龟兹区域遗址及跨区域廊道的地理依据",
+      "url": "https://whc.unesco.org/en/list/1442/maps/"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "道·儒·佛文明数字博物馆策展与方法说明",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "项目的策展框架与术语规则"
+    }
+  ],
+  "profile": {
+    "placeReality": "real_historical",
+    "geometryType": "point",
+    "coordinates": [
+      112.454,
+      34.62
+    ],
+    "coordinateConfidence": "centroid",
+    "geographicSourceId": "source:historical-geography"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

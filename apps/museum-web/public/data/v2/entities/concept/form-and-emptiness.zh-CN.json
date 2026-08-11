@@ -1,0 +1,46 @@
+{
+  "id": "98f243b5-4044-5ca0-a2c0-12b8388bd3d0",
+  "locale": "zh-CN",
+  "kind": "concept",
+  "slug": "form-and-emptiness",
+  "title": "色与空",
+  "subtitle": "短句、经文结构与解释史",
+  "tradition": "buddhism",
+  "evidence": "scholarly_interpretation",
+  "timeLabel": "经文概念；隋唐传播重点",
+  "shortSummary": "“色与空”是《心经》最常被引用的表达之一，但它必须放回具体版本、段落结构和般若语境中理解。",
+  "curatorialDescription": [
+    "本馆把概念卡、段落卡和版本卡分开，让观众先看到原文与定位，再进入比较和解释。",
+    "不同传统可以被并置讨论，但不能因为都有“空”“道”或“礼”等翻译词就被当作同一套思想。"
+  ],
+  "researchNote": "需要补充异本、译者归属、汉译术语史和不同传统之间比较的学术出处。",
+  "keyFacts": [
+    {
+      "label": "文本入口",
+      "value": "《心经》段落与版本"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:heart-sutra-edition",
+      "title": "《般若波罗蜜多心经》汉译本与经录资料",
+      "locator": "第2节：舍利子，色不异空，空不异色，色即是空，空即是色",
+      "grade": "A",
+      "role": "passage 原文和版本定位的初始依据",
+      "url": "https://ctext.org/wiki.pl?chapter=412996&if=en"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "道·儒·佛文明数字博物馆策展与方法说明",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "项目的策展框架与术语规则"
+    }
+  ],
+  "profile": {
+    "conceptKind": "doctrinal"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

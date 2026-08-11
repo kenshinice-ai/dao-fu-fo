@@ -1,8 +1,8 @@
 {
   "kind": "passage",
   "slug": "humans-follow-earth",
-  "publicationState": "preview",
-  "reviewStatus": "bilingual_reviewed",
+  "publicationState": "public",
+  "reviewStatus": "publishable",
   "primaryEvidenceLayer": "historical_inferred",
   "importance": 5,
   "isFeatured": true,
@@ -11,29 +11,128 @@
       "title": "人法地，地法天，天法道，道法自然",
       "subtitle": "《道德经》第二十五章",
       "shortSummary": "这句章句把人、地、天、道和自然排列为层层相应的秩序，需要结合传世文本语境理解。",
-      "curatorialDescription": ["‘道法自然’常被单独引用为生活格言；在《道德经》第二十五章中，它位于关于道的命名与秩序关系的连续论述中。"],
+      "curatorialDescription": [
+        "‘道法自然’常被单独引用为生活格言；在《道德经》第二十五章中，它位于关于道的命名与秩序关系的连续论述中。"
+      ],
       "researchNote": "Alpha 条目暂以通行章次为定位，后续补充出土本、传世本和主要注本差异。",
       "timeLabel": "传世本章句语境",
-      "keyFacts": [{ "label": { "zh-CN": "敏感等级", "en": "Sensitivity" }, "value": { "zh-CN": "公开文本", "en": "Public textual" } }],
-      "quote": { "original": "人法地，地法天，天法道，道法自然。", "interpretation": { "zh-CN": "章句以层层相应的关系说明道的秩序，不等同于现代语境中的‘顺其自然’口号。", "en": "The chapter describes a layered relation of correspondence; it should not be reduced to the modern slogan ‘go with the flow’." }, "locator": "《道德经》第二十五章" }
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "敏感等级",
+            "en": "Sensitivity"
+          },
+          "value": {
+            "zh-CN": "公开文本",
+            "en": "Public textual"
+          }
+        }
+      ],
+      "quote": {
+        "original": "人法地，地法天，天法道，道法自然。",
+        "interpretation": {
+          "zh-CN": "章句以层层相应的关系说明道的秩序，不等同于现代语境中的‘顺其自然’口号。",
+          "en": "The chapter describes a layered relation of correspondence; it should not be reduced to the modern slogan ‘go with the flow’."
+        },
+        "locator": "《道德经》第二十五章"
+      }
     },
     "en": {
       "title": "Humans follow earth; earth follows heaven",
       "subtitle": "Daodejing, chapter 25",
       "shortSummary": "The line arranges humans, earth, heaven, the Dao and naturalness in a layered order that must be read in its received-text context.",
-      "curatorialDescription": ["‘Dao follows naturalness’ is often detached as a lifestyle maxim. In chapter 25 of the Daodejing it belongs to a sustained discussion of naming and order."],
+      "curatorialDescription": [
+        "‘Dao follows naturalness’ is often detached as a lifestyle maxim. In chapter 25 of the Daodejing it belongs to a sustained discussion of naming and order."
+      ],
       "researchNote": "The Alpha entry uses the received chapter locator; excavated texts, received editions and major commentaries remain to be compared.",
       "timeLabel": "Received-text chapter context",
-      "keyFacts": [{ "label": { "zh-CN": "敏感等级", "en": "Sensitivity" }, "value": { "zh-CN": "公开文本", "en": "Public textual" } }],
-      "quote": { "original": "人法地，地法天，天法道，道法自然。", "interpretation": { "zh-CN": "章句以层层相应的关系说明道的秩序，不等同于现代语境中的‘顺其自然’口号。", "en": "The chapter describes a layered relation of correspondence; it should not be reduced to the modern slogan ‘go with the flow’." }, "locator": "Daodejing, chapter 25" }
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "敏感等级",
+            "en": "Sensitivity"
+          },
+          "value": {
+            "zh-CN": "公开文本",
+            "en": "Public textual"
+          }
+        }
+      ],
+      "quote": {
+        "original": "人法地，地法天，天法道，道法自然。",
+        "interpretation": {
+          "zh-CN": "章句以层层相应的关系说明道的秩序，不等同于现代语境中的‘顺其自然’口号。",
+          "en": "The chapter describes a layered relation of correspondence; it should not be reduced to the modern slogan ‘go with the flow’."
+        },
+        "locator": "Daodejing, chapter 25"
+      }
     }
   },
-  "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:daodejing-edition" }],
-  "temporalAssertions": [{ "predicate": "textual_attestation", "timeType": "range", "startYear": -200, "endYear": 220, "displayDate": { "zh-CN": "传世本章句语境", "en": "Received-text chapter context" }, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:daodejing-edition" }],
-  "sourceIds": ["source:daodejing-edition", "source:editorial-method"],
-  "related": [
-    { "kind": "figure", "slug": "sima-chengzhen", "title": { "zh-CN": "司马承祯", "en": "Sima Chengzhen" }, "relation": { "zh-CN": "后世道教解释语境", "en": "Later Daoist interpretive context" } },
-    { "kind": "text", "slug": "daodejing", "title": { "zh-CN": "《道德经》", "en": "Daodejing" }, "relation": { "zh-CN": "摘录自", "en": "Excerpt from" } }
+  "traditions": [
+    {
+      "tradition": "daoism",
+      "role": "primary",
+      "isPrimary": true,
+      "confidence": "medium",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:daodejing-edition"
+    }
   ],
-  "profile": { "textSlug": "daodejing", "textVersionSlug": "daodejing-received", "passageKind": "classic_saying", "locatorOriginal": "第二十五章", "locatorNormalised": "Daodejing 25", "originalText": "人法地，地法天，天法道，道法自然。", "punctuatedText": "人法地，地法天，天法道，道法自然。", "modernZh": "人取法于地，地取法于天，天取法于道，而道以自身如此为法。", "translationEn": "Humans follow earth, earth follows heaven, heaven follows the Dao, and the Dao follows naturalness.", "ritualSensitivity": "public_textual" }
+  "temporalAssertions": [
+    {
+      "predicate": "textual_attestation",
+      "timeType": "range",
+      "startYear": -200,
+      "endYear": 220,
+      "displayDate": {
+        "zh-CN": "传世本章句语境",
+        "en": "Received-text chapter context"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:daodejing-edition"
+    }
+  ],
+  "sourceIds": [
+    "source:daodejing-edition",
+    "source:editorial-method"
+  ],
+  "related": [
+    {
+      "kind": "figure",
+      "slug": "sima-chengzhen",
+      "title": {
+        "zh-CN": "司马承祯",
+        "en": "Sima Chengzhen"
+      },
+      "relation": {
+        "zh-CN": "后世道教解释语境",
+        "en": "Later Daoist interpretive context"
+      }
+    },
+    {
+      "kind": "text",
+      "slug": "daodejing",
+      "title": {
+        "zh-CN": "《道德经》",
+        "en": "Daodejing"
+      },
+      "relation": {
+        "zh-CN": "摘录自",
+        "en": "Excerpt from"
+      }
+    }
+  ],
+  "profile": {
+    "textSlug": "daodejing",
+    "textVersionSlug": "daodejing-received",
+    "passageKind": "classic_saying",
+    "locatorOriginal": "第二十五章",
+    "locatorNormalised": "Daodejing 25",
+    "originalText": "人法地，地法天，天法道，道法自然。",
+    "punctuatedText": "人法地，地法天，天法道，道法自然。",
+    "modernZh": "人取法于地，地取法于天，天取法于道，而道以自身如此为法。",
+    "translationEn": "Humans follow earth, earth follows heaven, heaven follows the Dao, and the Dao follows naturalness.",
+    "ritualSensitivity": "public_textual"
+  }
 }

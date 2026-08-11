@@ -1,26 +1,733 @@
 {
   "locale": "zh-CN",
   "items": [
-    { "kind": "figure", "slug": "xuanzang", "title": "玄奘", "context": "唐代佛教僧侣、求法旅行者与译经组织核心人物。", "tradition": "buddhism" },
-    { "kind": "figure", "slug": "sima-chengzhen", "title": "司马承祯", "context": "连接山林修持、道教传统与唐代宫廷网络的人物。", "tradition": "daoism" },
-    { "kind": "figure", "slug": "kong-yingda", "title": "孔颖达", "context": "唐初经学家，与《五经正义》编纂和国家教育相关。", "tradition": "confucianism" },
-    { "kind": "text", "slug": "heart-sutra", "title": "《般若波罗蜜多心经》", "context": "以极简篇幅表达般若与空义的重要佛教文本。", "tradition": "buddhism" },
-    { "kind": "text", "slug": "daodejing", "title": "《道德经》", "context": "围绕道、德、无为与自然展开的基础经典。", "tradition": "daoism" },
-    { "kind": "text", "slug": "correct-meaning-five-classics", "title": "《五经正义》", "context": "唐代国家经学与经典注疏工程的重要成果。", "tradition": "confucianism" },
-    { "kind": "text", "slug": "analects", "title": "《论语》", "context": "记录孔子及弟子言行、后世儒家不断重释的经典。", "tradition": "confucianism" },
-    { "kind": "passage", "slug": "form-is-emptiness", "title": "色不异空，空不异色", "context": "《心经》中关于色与空关系的代表性句子。", "tradition": "buddhism" },
-    { "kind": "passage", "slug": "humans-follow-earth", "title": "道法自然", "context": "《道德经》第二十五章关于人、地、天、道与自然的层级表达。", "tradition": "daoism" },
-    { "kind": "passage", "slug": "return-to-ritual", "title": "克己复礼为仁", "context": "《论语·颜渊》中将自我约束、礼与仁联系起来的语句。", "tradition": "confucianism" },
-    { "kind": "concept", "slug": "emptiness", "title": "空", "context": "佛教语境中对固定自性与缘起关系的关键讨论。", "tradition": "buddhism" },
-    { "kind": "concept", "slug": "naturalness", "title": "自然", "context": "道家语境中的“自然而然、自己如此”，不等同现代自然界。", "tradition": "daoism" },
-    { "kind": "concept", "slug": "ritual", "title": "礼", "context": "连接人格修养、社会秩序、制度和经典解释的儒家核心概念。", "tradition": "confucianism" },
-    { "kind": "place", "slug": "changan", "title": "长安", "context": "唐代帝国都城，政治、教育、翻译与宗教机构的交汇地。", "tradition": "convergence" },
-    { "kind": "place", "slug": "great-cien-monastery", "title": "大慈恩寺", "context": "与玄奘译经事业和大雁塔历史密切相关的佛教地点。", "tradition": "buddhism" },
-    { "kind": "place", "slug": "louguantai", "title": "楼观台", "context": "终南山北麓的重要道教历史地点。", "tradition": "daoism" },
-    { "kind": "place", "slug": "imperial-academy-changan", "title": "长安国子监", "context": "呈现经典、教育与国家制度关系的历史地点。", "tradition": "confucianism" },
-    { "kind": "place", "slug": "luoyang", "title": "洛阳", "context": "隋唐政治、宗教与交通网络中的关键城市。", "tradition": "convergence" },
-    { "kind": "place", "slug": "dunhuang", "title": "敦煌", "context": "连接中原、中亚交通和佛教视觉文化的重要节点。", "tradition": "buddhism" },
-    { "kind": "place", "slug": "mount-wutai", "title": "五台山", "context": "现实山岳、佛教朝圣与文殊信仰交汇的地点。", "tradition": "buddhism" },
-    { "kind": "museum_object", "slug": "great-wild-goose-pagoda", "title": "大雁塔", "context": "与玄奘、文本保存和长安佛教记忆相连的建筑遗产。", "tradition": "buddhism" }
+    {
+      "id": "633ef57c-985b-5094-baab-9f1ec05aec54",
+      "kind": "concept",
+      "slug": "classical-commentary",
+      "title": "经典注疏",
+      "context": "注疏把经典、历代解释、校勘与教育实践组织成可传递的知识结构。",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "98f243b5-4044-5ca0-a2c0-12b8388bd3d0",
+      "kind": "concept",
+      "slug": "form-and-emptiness",
+      "title": "色与空",
+      "context": "“色与空”是《心经》最常被引用的表达之一，但它必须放回具体版本、段落结构和般若语境中理解。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "d3143aba-3e62-5d1b-997d-9321cfa5ebb3",
+      "kind": "concept",
+      "slug": "naturalness-and-self-so",
+      "title": "自然与自然而然",
+      "context": "“自然”在道家文本中首先指事物自身如此，不宜直接等同于现代的自然环境概念。",
+      "tradition": "daoism"
+    },
+    {
+      "id": "96bac993-09c8-5a34-b48d-0ae74ab24e61",
+      "kind": "concept",
+      "slug": "pilgrimage-and-transmission",
+      "title": "求法与传译",
+      "context": "求法旅程只有进入译经、目录、讲学与机构协作后，才成为持续的知识传播。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "c49f31f8-a96b-561a-b471-d3608349ab0c",
+      "kind": "concept",
+      "slug": "ritual-order",
+      "title": "礼与秩序",
+      "context": "“礼”既可以指文本和规范，也可以指具体仪式、身份关系与国家教育制度中的秩序实践。",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "f5a85754-8fa3-5f1a-a4e0-d576b6d3ed4f",
+      "kind": "concept",
+      "slug": "translation-as-institution",
+      "title": "翻译作为制度",
+      "context": "翻译不只是把词语换成另一种语言，也需要场所、人员、版本、审校和权力关系共同支撑。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "ac2ea706-f0b1-5207-815b-b8d985585615",
+      "kind": "event",
+      "slug": "an-lushan-rebellion-begins",
+      "title": "安史之乱爆发",
+      "context": "755 年开始的战争打断了两京秩序，也改变了人口、财政和宗教机构的资源环境。",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "db9bc3d8-e82d-5ecb-96f4-cf1d220ba214",
+      "kind": "event",
+      "slug": "an-lushan-rebellion-ends",
+      "title": "安史之乱结束",
+      "context": "763 年前后的战争结束没有恢复战前结构，而开启了财政、地方权力和机构网络重组的长期阶段。",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "4837cd93-8615-5c0a-8c82-b96bb81c0d49",
+      "kind": "event",
+      "slug": "buddha-first-sermon-at-sarnath",
+      "title": "佛陀在鹿野苑初转法轮",
+      "context": "早期佛教文本和后世遗产传统把鹿野苑记为佛陀向最初弟子说法的重要地点。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "9599aa6a-7f94-535a-a8bc-ba832eb1120f",
+      "kind": "event",
+      "slug": "confucius-asks-laozi-about-rites",
+      "title": "孔子适周问礼于老子",
+      "context": "《史记》把孔子向周地老子问礼的叙事保存为儒道相遇的早期史传入口。",
+      "tradition": "daoism"
+    },
+    {
+      "id": "60e3e832-3bca-55ee-a45a-2d7412ff3e16",
+      "kind": "event",
+      "slug": "daci-en-monastery-established",
+      "title": "大慈恩寺建立",
+      "context": "大慈恩寺的建立为长安佛教、译经和皇室支持提供了新的制度空间。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "8a7eb613-bf57-59ae-8958-f08d01600abb",
+      "kind": "event",
+      "slug": "five-classics-corrected-meanings-project",
+      "title": "《五经正义》编纂工程",
+      "context": "唐初持续多年的经典整理，把不同注释传统汇入国家教育与考试知识体系。",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "903e0e6e-b314-54e2-8ea6-21319a68ca55",
+      "kind": "event",
+      "slug": "great-wild-goose-pagoda-first-construction",
+      "title": "大雁塔初建",
+      "context": "约 652 年的初建阶段把经像保存、译经事业与可见的城市建筑联系起来。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "bab56698-ef14-54f2-992a-679db900dc25",
+      "kind": "event",
+      "slug": "huichang-religious-policies",
+      "title": "会昌宗教政策",
+      "context": "845 年前后的政策集中改变了佛教等宗教机构的财产、人员与公共地位。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "a3e6c417-f8ac-5987-baba-59e595a8912e",
+      "kind": "event",
+      "slug": "kaiyuan-institutional-expansion",
+      "title": "开元时期的制度扩展",
+      "context": "开元时期为观察宫廷、教育、寺观与跨区域交流的资源扩展提供时间范围。",
+      "tradition": "daoism"
+    },
+    {
+      "id": "aa91d726-1e82-5955-afaf-3d582603ee20",
+      "kind": "event",
+      "slug": "sui-unification",
+      "title": "隋朝建立与统一进程",
+      "context": "隋朝建立和统一进程为隋唐制度、都城和知识网络的时间轴提供政治背景。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "d175913d-5ff5-5e40-b7e2-e4b6b3489b70",
+      "kind": "event",
+      "slug": "tang-dynasty-founded",
+      "title": "唐朝建立",
+      "context": "618 年的王朝更替重组了长安及其政治、教育与宗教制度的资源环境。",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "77797f57-d25b-5e57-909b-a5c57722ffc7",
+      "kind": "event",
+      "slug": "tang-end-transition",
+      "title": "唐末政权转折",
+      "context": "907 年的政权转折为本展览的隋唐时间切片提供边界，也提醒观众制度和文本网络不会在同一年突然消失。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "614ae18a-ac30-55e1-8eca-7661bdc7f0ee",
+      "kind": "event",
+      "slug": "wu-zhou-established",
+      "title": "武周建立",
+      "context": "690 年的政治转型改变了皇权表达、两京格局与宗教资源配置。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "7d3417c2-0fc9-5dd1-9b0b-7f0108c11759",
+      "kind": "event",
+      "slug": "xuanzang-departs-changan",
+      "title": "玄奘离开长安西行",
+      "context": "约 629 年，玄奘的西行把长安与河西、中亚及南亚的求法网络连接起来。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "124cdd89-c62d-5d15-85d0-3dbfec725a67",
+      "kind": "event",
+      "slug": "xuanzang-return-changan",
+      "title": "玄奘回到长安",
+      "context": "玄奘回到长安后，求法旅行被转化为译经、讲学和寺院制度中的长期工作。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "9134ebc2-a3e4-5d54-8d09-016b2ea529c6",
+      "kind": "event",
+      "slug": "yijing-departs-by-sea",
+      "title": "义净由海路出发求法",
+      "context": "约 671 年，义净由海路南行，提示求法与知识传播并不只有长安以西的陆路模型。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "1c4ba68f-cb32-5ca9-bc69-251b1d4639dd",
+      "kind": "event",
+      "slug": "yijing-returns",
+      "title": "义净携经回到唐境",
+      "context": "约 695 年，义净归来后，海路旅行经验进入翻译、著述与制度网络。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "076f9c85-6e57-517b-afa7-215006ac47c4",
+      "kind": "figure",
+      "slug": "cheng-xuanying",
+      "title": "成玄英",
+      "context": "成玄英提供了观察唐初《道德经》《庄子》解释活动与道教知识网络的入口。",
+      "tradition": "daoism"
+    },
+    {
+      "id": "037a6b08-f97f-5a13-92dc-15dce8431b0c",
+      "kind": "figure",
+      "slug": "confucius",
+      "title": "孔子（孔丘）",
+      "context": "孔子是儒家经典、教育和政治伦理的高识别度入口；《论语》中的孔子言说必须和弟子记录、编纂层及后世经学接受分开。",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "297168a1-9dc6-5132-a9ff-38aebc1f2f33",
+      "kind": "figure",
+      "slug": "jizang",
+      "title": "吉藏",
+      "context": "吉藏的讲学与注疏活动为隋唐之际佛教思想、文本解释和城市网络提供案例。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "886f4bbe-70e0-577a-be22-92994e833fe8",
+      "kind": "figure",
+      "slug": "kong-yingda",
+      "title": "孔颖达",
+      "context": "孔颖达代表唐代经学如何进入国家教育、注疏和制度化知识生产。",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "82f8072e-ce53-5b91-92fc-9c0d66b64f6c",
+      "kind": "figure",
+      "slug": "laozi",
+      "title": "老子（李耳）",
+      "context": "老子是进入道家经典传统的高识别度入口，但李耳传记、〈老子〉身份、《道德经》成书与后世太上老君形象必须分层处理。",
+      "tradition": "daoism"
+    },
+    {
+      "id": "a2459e74-0e7a-5283-9804-0af27ea459cc",
+      "kind": "figure",
+      "slug": "li-shimin",
+      "title": "李世民",
+      "context": "李世民所处的宫廷、教育和宗教制度语境，帮助解释长安为何成为多种知识与信仰网络的汇聚点。",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "18a70214-56c9-528b-a22c-bf1279bf76ed",
+      "kind": "figure",
+      "slug": "sakyamuni",
+      "title": "释迦牟尼佛（乔达摩·悉达多）",
+      "context": "释迦牟尼是佛教思想和朝圣地理的核心入口，但早期文本中的片段性生平、后世佛传和神圣叙事必须分层展示。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "5bf99d90-4c5a-575b-8a79-7957a33ef9eb",
+      "kind": "figure",
+      "slug": "sima-chengzhen",
+      "title": "司马承祯",
+      "context": "司马承祯连接山林修炼、道教法脉与唐代皇室对宗教人物的吸纳。",
+      "tradition": "daoism"
+    },
+    {
+      "id": "8f021f4b-2fec-5986-95b5-4a7a802c77aa",
+      "kind": "figure",
+      "slug": "wu-zhao",
+      "title": "武曌（武则天）",
+      "context": "武曌的政治实践与宗教赞助，使长安和洛阳的制度、仪式与后世记忆成为可以并置研究的场域。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "cd7fb9ab-cea1-5e4a-b288-a1e20d568770",
+      "kind": "figure",
+      "slug": "xuanzang",
+      "title": "玄奘",
+      "context": "玄奘把求法旅行、文本翻译与长安的国家和寺院制度连接起来。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "b6d2701c-2848-587f-9aaa-718c1b3feaae",
+      "kind": "figure",
+      "slug": "yan-shigu",
+      "title": "颜师古",
+      "context": "颜师古连接唐初经典校订、注释实践与国家知识工程。",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "dfa5a7a3-6389-5a9a-8556-d8996da23c3c",
+      "kind": "figure",
+      "slug": "yijing",
+      "title": "义净",
+      "context": "义净把海上求法、印度学习和汉译佛典的生产联系起来，是理解跨区域知识流动的重要人物。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "dca3a5c6-e9ae-5c58-b6c6-0bc876610748",
+      "kind": "institution",
+      "slug": "changan-daoist-monastic-network",
+      "title": "长安道观网络",
+      "context": "长安的道教活动依托多处宫观、斋醮、度牒与宫廷联系，不能压缩成单一建筑。",
+      "tradition": "daoism"
+    },
+    {
+      "id": "79e8a237-c2d3-5d9a-91be-0b776fbf448b",
+      "kind": "institution",
+      "slug": "changan-translation-bureau",
+      "title": "长安译经场网络",
+      "context": "译经并非单人写作，而是依托寺院空间、语言分工、校勘和帝国支持的协作网络。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "49f7230b-02ee-5c86-817e-682f81037303",
+      "kind": "institution",
+      "slug": "daci-en-monastery",
+      "title": "大慈恩寺",
+      "context": "大慈恩寺是理解玄奘、译经、寺院网络和长安城市空间之间关系的核心机构条目。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "ff7c6f90-a1bd-5998-acb3-bcdd30ff7672",
+      "kind": "institution",
+      "slug": "guozijian",
+      "title": "国子监",
+      "context": "国子监使《五经》、经学注疏、考试和国家教育制度进入同一条可追踪的机构线索。",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "5f45c0de-0fc8-53c1-b977-6a59e0df8616",
+      "kind": "institution",
+      "slug": "hongwen-institute",
+      "title": "弘文馆",
+      "context": "弘文馆为理解唐代宫廷藏书、学术咨询与教育活动提供机构入口。",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "e64798e8-36e1-5385-8469-38922b87584c",
+      "kind": "institution",
+      "slug": "louguan",
+      "title": "楼观道院",
+      "context": "楼观道院作为机构条目，帮助把老子传说、道教人物、宫观空间和后世圣迹叙述区分开来。",
+      "tradition": "daoism"
+    },
+    {
+      "id": "0e0c02cf-f54c-5aae-b13c-cbd7665f41ca",
+      "kind": "museum_object",
+      "slug": "classics-commentary-manuscript",
+      "title": "经学注疏写本记录（对象记录占位）",
+      "context": "对象卡将《五经正义》和国子监的制度线索连接到写本、册页和阅读实践。",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "23c8800c-019b-59bf-ac4d-336f2aa49420",
+      "kind": "museum_object",
+      "slug": "daodejing-commentary-manuscript-record",
+      "title": "《道德经》注本写本记录（对象占位）",
+      "context": "对象卡为唐代《道德经》注释的写本形态、书写层和流传史预留档案入口。",
+      "tradition": "daoism"
+    },
+    {
+      "id": "e57dbe03-6c89-5fd1-8e37-60b572b2cb62",
+      "kind": "museum_object",
+      "slug": "daoist-inscription-rubbing-record",
+      "title": "道教宫观碑刻拓片记录（对象占位）",
+      "context": "碑刻与拓片可把宫观、人物、时间和赞助关系落到可校验的文字对象。",
+      "tradition": "daoism"
+    },
+    {
+      "id": "c7d7bfe9-78a2-50e5-85d7-de43a7f46d75",
+      "kind": "museum_object",
+      "slug": "guozijian-ritual-vessel-record",
+      "title": "国学礼仪器物记录（对象占位）",
+      "context": "礼仪器物能把“礼”的概念与学校空间、参与者和具体行动联系起来。",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "a62f0f3a-539b-54b4-ad12-6d6bd8c6a381",
+      "kind": "museum_object",
+      "slug": "heart-sutra-manuscript-leaf",
+      "title": "《心经》写本残叶（对象记录占位）",
+      "context": "对象卡把《心经》段落放回纸墨、书写、保存和流通的物质层，但当前尚未绑定具体馆藏。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "ff77ea03-e426-57ba-94da-8fbd0e88bc65",
+      "kind": "museum_object",
+      "slug": "imperial-classics-scroll-record",
+      "title": "官学经典卷子记录（对象占位）",
+      "context": "卷子对象可呈现经典文本如何通过抄写、校勘和教学进入官学实践。",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "dc10efc6-18db-5ff8-99f5-a51cbbcceadc",
+      "kind": "museum_object",
+      "slug": "longmen-dedication-inscription-record",
+      "title": "龙门造像题记记录（对象占位）",
+      "context": "造像题记可把图像、供养人、愿文、年代与洞窟位置连接为可追溯对象。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "2051108a-65de-5572-8123-fabd77ffdc36",
+      "kind": "museum_object",
+      "slug": "translation-bureau-tablet",
+      "title": "译经机构碑刻记录（对象记录占位）",
+      "context": "对象卡尝试把译经制度从人物传记中拆出来，寻找建筑、碑刻和机构记忆的物质载体。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "a1be51e1-f85d-5104-9c71-a2d56685be71",
+      "kind": "museum_object",
+      "slug": "translation-catalogue-manuscript-record",
+      "title": "译经目录写本记录（对象占位）",
+      "context": "经录与目录对象可记录译名、版本、译者归属和经典流通的制度化整理。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "b5bf26aa-b611-5a8c-bdfa-3c6686360275",
+      "kind": "passage",
+      "slug": "dao-that-can-be-spoken",
+      "title": "道可道，非常道",
+      "context": "《道德经》开篇以语言、命名与恒常之间的张力建立阅读问题。",
+      "tradition": "daoism"
+    },
+    {
+      "id": "894119ab-ff24-5cad-a21f-bd4b9998e36e",
+      "kind": "passage",
+      "slug": "do-not-impose",
+      "title": "己所不欲，勿施于人",
+      "context": "这句回答把“恕”表达为从自身不愿承受之事出发约束对待他人的方式。",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "08c09a75-a9b6-5cd1-b167-41025b7bb298",
+      "kind": "passage",
+      "slug": "form-is-emptiness",
+      "title": "色不异空，空不异色",
+      "context": "这句经文在汉传佛教中传播极广，但需要回到完整段落和具体版本理解。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "af0bf57a-5a39-5b0e-8b18-3adf052bc8e6",
+      "kind": "passage",
+      "slug": "highest-good-like-water",
+      "title": "上善若水",
+      "context": "水的比喻把利物、不争与处下联系起来，是一组关系性描述。",
+      "tradition": "daoism"
+    },
+    {
+      "id": "49104720-7747-5ab4-8aec-be1e3ed88957",
+      "kind": "passage",
+      "slug": "humans-follow-earth",
+      "title": "人法地，地法天，天法道，道法自然",
+      "context": "这句章句把人、地、天、道和自然排列为层层相应的秩序，需要结合传世文本语境理解。",
+      "tradition": "daoism"
+    },
+    {
+      "id": "6870c0fd-b027-54de-912c-cd1b805beddc",
+      "kind": "passage",
+      "slug": "learn-and-practice",
+      "title": "学而时习之",
+      "context": "《论语》开篇把学习、按时践习与愉悦联系起来。",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "f5d20c94-a228-5498-9c9a-5abf34bbfc7a",
+      "kind": "passage",
+      "slug": "learning-increases-dao-decreases",
+      "title": "为学日益，为道日损",
+      "context": "章句以“益”与“损”对照学习积累和趋向无为的实践方向。",
+      "tradition": "daoism"
+    },
+    {
+      "id": "5a7e473d-5322-5ff9-a0d7-8f102a05a6a9",
+      "kind": "passage",
+      "slug": "prajna-all-dharmas",
+      "title": "是诸法空相",
+      "context": "这句经文把“空”放在诸法的描述中，适合用于展示概念、段落和版本三层之间的关系。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "fcba224c-175f-570c-b658-d5efe3de9fcc",
+      "kind": "passage",
+      "slug": "prajna-five-skandhas",
+      "title": "照见五蕴皆空",
+      "context": "这句经文将观照、五蕴和空的关系压缩在一个短句中，必须回到具体版本和上下文阅读。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "4aed2dd6-0e94-5df4-b879-e3687db04297",
+      "kind": "passage",
+      "slug": "prajna-no-wisdom",
+      "title": "无智亦无得",
+      "context": "这句经文适合引导观众区分“无所得”的经文语境与现代语境中的知识否定。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "67fadcb7-a43e-51c4-afb4-f05d19cbc16e",
+      "kind": "passage",
+      "slug": "return-to-ritual",
+      "title": "克己复礼为仁",
+      "context": "这句经文把仁与自我约束、礼制实践连接起来，后来在政治和教育语境中不断被重新解释。",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "5f0cd94e-98d9-5c38-9516-54659ae1d839",
+      "kind": "passage",
+      "slug": "three-walk-together",
+      "title": "三人行，必有我师焉",
+      "context": "章句把学习置于与他人同行、辨别优点并反省自身的关系中。",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "00d53b72-86d2-5115-99eb-ba9ffceca80f",
+      "kind": "passage",
+      "slug": "turning-of-dharma-wheel",
+      "title": "这是苦圣谛",
+      "context": "这一短句把佛教教法放回鹿野苑初转法轮的经文语境，而不是抽离成一条现代格言。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "d0c4899f-b1df-5b57-aa22-b6f8b1b21a01",
+      "kind": "passage",
+      "slug": "turning-of-dharma-wheel-thanissaro-en",
+      "title": "这是苦圣谛（Thanissaro 英译）",
+      "context": "这一段落与巴利语短引共享 SN 56.11 定位，但保留 Thanissaro 对 dukkha 的英文措辞选择。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "570841a0-1645-59a3-bea7-a47bc84c1630",
+      "kind": "place",
+      "slug": "changan",
+      "title": "长安",
+      "context": "长安把宫廷、国家教育、寺院、道观、市场和国际旅行者压缩在同一座城市中。",
+      "tradition": "convergence"
+    },
+    {
+      "id": "0dafc415-232a-5e18-b63b-4044a09e519f",
+      "kind": "place",
+      "slug": "dunhuang",
+      "title": "敦煌",
+      "context": "敦煌把佛教艺术、文本保存、交通路线和多语文化连接起来。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "7e7d7d0d-8007-59c5-ac23-2ca12194d28b",
+      "kind": "place",
+      "slug": "great-wild-goose-pagoda-site",
+      "title": "大雁塔遗址",
+      "context": "大雁塔遗址把玄奘、译经、经典保存和长安城市空间连接起来。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "36de50b4-d018-5999-a605-c8ce790af2f5",
+      "kind": "place",
+      "slug": "longmen-grottoes",
+      "title": "龙门石窟",
+      "context": "龙门石窟把洛阳、皇室赞助、佛教造像与石刻题记置于同一物质场域。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "7f7e88ba-4e06-5257-b398-36ce485188f6",
+      "kind": "place",
+      "slug": "luoyang",
+      "title": "洛阳",
+      "context": "洛阳连接都城政治、交通网络、佛教传播和经典文化，是长安展厅的关键对照地点。",
+      "tradition": "convergence"
+    },
+    {
+      "id": "8865370b-6cb4-5aa6-b3e8-3d72fbad9b0e",
+      "kind": "place",
+      "slug": "mount-wutai",
+      "title": "五台山",
+      "context": "五台山同时具有现实山地、寺院网络和佛教圣迹叙事的层次，适合展示双层地理如何并存。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "fa8e031e-ec10-5e1b-a9d2-8d2247ea61b5",
+      "kind": "place",
+      "slug": "nalanda",
+      "title": "那烂陀",
+      "context": "那烂陀让玄奘、义净等人的求法故事进入具体学习机构和跨区域知识网络，而不是停留在抽象的“印度”。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "3a18eab5-4b48-58fb-b7e2-3fbc7782e4c0",
+      "kind": "place",
+      "slug": "qiuci",
+      "title": "龟兹",
+      "context": "龟兹使求法路线不再只是从长安指向印度的直线，而成为多语言、多宗教和多种媒介交错的区域。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "e3c88298-e03c-5f1d-ad68-a8fcdc99b934",
+      "kind": "place",
+      "slug": "sarnath",
+      "title": "鹿野苑（Sarnath）",
+      "context": "鹿野苑把释迦牟尼、初转法轮、早期僧团记忆和后世朝圣连接到一个真实的考古地点。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "8876cdf2-593a-5416-b379-290a1f71f6c9",
+      "kind": "place",
+      "slug": "zhongnan-mountains",
+      "title": "终南山",
+      "context": "终南山是长安近郊的真实山地，也是修行、隐逸与宗教叙事叠加的文化空间。",
+      "tradition": "daoism"
+    },
+    {
+      "id": "b587cd4f-49d2-585b-84bb-93b8bc6aa59e",
+      "kind": "route",
+      "slug": "changan-luoyang-imperial-corridor",
+      "title": "长安—洛阳帝国走廊",
+      "context": "这条路线把两京之间的政治、教育、宗教与人员流动组织为可研究的空间骨架。",
+      "tradition": "convergence"
+    },
+    {
+      "id": "a8b3ffa4-3ad8-5cf8-a8d4-18bf4ab53530",
+      "kind": "route",
+      "slug": "xuanzang-western-pilgrimage",
+      "title": "玄奘西行求法路线",
+      "context": "这条路线把长安、河西走廊、中亚和南亚放入同一研究视野，但不把所有节点都当作已证实的逐日行程。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "33affe77-a0b7-524b-aaab-02bb53abb65b",
+      "kind": "text_version",
+      "slug": "analects-received",
+      "title": "《论语》通行本",
+      "context": "《论语》通行篇章的 Alpha 版本记录。",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "91f95e39-fba6-5ae3-89dc-0ef2532de566",
+      "kind": "text_version",
+      "slug": "daodejing-received",
+      "title": "《道德经》通行本",
+      "context": "《道德经》传世章句的 Alpha 版本记录。",
+      "tradition": "daoism"
+    },
+    {
+      "id": "5480a392-6666-5622-8997-f0cd9cf89cce",
+      "kind": "text_version",
+      "slug": "daoist-institutional-records-research",
+      "title": "隋唐道教制度研究资料集（待编目）",
+      "context": "该版本是研究资料集合的编目占位，提醒编辑团队未来必须替换成可引用的具体文本或档案。",
+      "tradition": "daoism"
+    },
+    {
+      "id": "91cd610a-3340-5c98-bcfd-84b631ef4733",
+      "kind": "text_version",
+      "slug": "dhammacakkappavattana-sutta-pali",
+      "title": "《转法轮经》巴利语数字版本",
+      "context": "版本层保留巴利语经文的出处、语言和数字编辑信息。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "d1fab361-2d92-5c25-a277-2a59e087fd64",
+      "kind": "text_version",
+      "slug": "dhammacakkappavattana-sutta-thanissaro-en",
+      "title": "《转法轮经》Thanissaro 英译",
+      "context": "这一版本把同一经文的英译措辞与巴利语版本分开保存，便于比较译者选择而不把译文当作原典。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "ab45d427-9666-5b39-9335-a4f6e0d500df",
+      "kind": "text_version",
+      "slug": "five-classics-corrected-meanings-received",
+      "title": "《五经正义》通行整理本",
+      "context": "版本层把《五经正义》的具体整理本、卷次和引文定位从文本总条目中分离出来。",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "aa1275ad-261f-5616-bd4c-b4e4ce6cf333",
+      "kind": "text_version",
+      "slug": "great-tang-records-western-regions-received",
+      "title": "《大唐西域记》通行整理本",
+      "context": "该版本条目为《大唐西域记》的段落定位、翻译和异文比较提供入口。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "d4b76e84-7163-5031-aa34-1f1c5580f4df",
+      "kind": "text_version",
+      "slug": "heart-sutra-chinese-received",
+      "title": "《心经》汉译通行版本",
+      "context": "用于首批 passage 展示的汉译版本占位，具体底本仍需审校。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "73870aa6-3666-57d4-a5ad-094be551a2cd",
+      "kind": "text",
+      "slug": "analects",
+      "title": "《论语》",
+      "context": "《论语》通过孔子及其弟子言行保存早期儒家伦理、教育和政治讨论。",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "4869f9d9-f4b2-5604-85f4-0d22ad79004c",
+      "kind": "text",
+      "slug": "daodejing",
+      "title": "《道德经》",
+      "context": "《道德经》的成书、编纂和作者归属具有复杂层次，后世道教与哲学传统不断重新解释它。",
+      "tradition": "daoism"
+    },
+    {
+      "id": "155a8f30-dcd8-5a55-8bd0-2f8a23c3f595",
+      "kind": "text",
+      "slug": "daoist-institutional-records",
+      "title": "隋唐道教人物与制度资料",
+      "context": "这组资料条目作为研究层文本，帮助观众区分道教人物传记、宫观制度和后世道教谱系叙述。",
+      "tradition": "daoism"
+    },
+    {
+      "id": "a067399b-91ee-5c36-abb0-54f050a74dc2",
+      "kind": "text",
+      "slug": "dhammacakkappavattana-sutta",
+      "title": "《转法轮经》（Dhammacakkappavattana Sutta）",
+      "context": "《转法轮经》把佛陀在鹿野苑向五比丘说法的传统保存为一组可追溯的经文传承。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "021ac145-9453-58ba-ab29-d30893d1b62c",
+      "kind": "text",
+      "slug": "five-classics-corrected-meanings",
+      "title": "《五经正义》",
+      "context": "《五经正义》是观察唐代经学注疏如何进入国家教育和经典解释秩序的重要文本入口。",
+      "tradition": "confucianism"
+    },
+    {
+      "id": "4626d893-15ef-5eb3-9d10-b5806a8128a4",
+      "kind": "text",
+      "slug": "great-tang-records-western-regions",
+      "title": "《大唐西域记》",
+      "context": "《大唐西域记》把求法者的旅行经验转化为关于地理、制度、城市和宗教场所的文本记录。",
+      "tradition": "buddhism"
+    },
+    {
+      "id": "5584e8c1-f35d-5f06-b59b-a800e5145793",
+      "kind": "text",
+      "slug": "heart-sutra",
+      "title": "《般若波罗蜜多心经》",
+      "context": "《心经》以高度凝练的形式呈现般若思想，是汉传佛教中传播最广的经典之一。",
+      "tradition": "buddhism"
+    }
   ]
 }

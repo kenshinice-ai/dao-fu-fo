@@ -3,12 +3,14 @@ import { mkdir, readFile, readdir, rm, writeFile } from "node:fs/promises";
 import { join, relative, resolve } from "node:path";
 import {
   AudioRecordSchema,
+  ComparisonSetSchema,
   ContentProfileSchema,
   ContentQualityReportSchema,
   ContentReportSchema,
   ContentVisibilitySchema,
   DatabaseImportBundleSchema,
   EntityContentSchema,
+  FigureProfileSchema,
   InstitutionProfileSchema,
   PassageProfileSchema,
   PlaceProfileSchema,
@@ -22,18 +24,24 @@ import {
   ReadModelManifestSchema,
   ReadModelProfileSchema,
   ReadModelChecksumsSchema,
+  ReadModelComparisonSchema,
+  ReadModelTextReadingSchema,
   ReadModelRoutesManifestSchema,
   ReadModelReviewQueueSchema,
+  ReadModelSacredCosmosSchema,
   ReadModelSourceIndexSchema,
   ReviewCheckRecordSchema,
   ReadModelSearchIndexSchema,
   SourceRecordSchema,
   TextVersionProfileSchema,
+  TextReadingSetSchema,
   TraditionContentSchema,
   RelationRecordSchema,
   RouteProfileSchema,
   type ContentProfile,
   type ContentVisibility,
+  type ComparisonSet,
+  type TextReadingSet,
   type EntityContent,
   type AudioRecord,
   type PublicReleaseCandidate,
@@ -42,6 +50,7 @@ import {
   type RelationRecord,
   type ReviewCheckKind,
   type ReviewCheckRecord,
+  type ReviewStatus,
   type SourceRecord,
   type TraditionContent,
 } from "@drf-museum/domain-schema";
@@ -107,7 +116,7 @@ function isVerifiedClaimSource(source: SourceRecord): boolean {
     source.citationStatus === "verified";
 }
 
-const ENTITY_REVIEW_CHECKS: ReviewCheckKind[] = ["schema", "fact", "bilingual", "rights", "editorial"];
+const ENTITY_REVIEW_CHECKS: ReviewCheckKind[] = ["schema", "fact", "bilingual", "rights", "accessibility", "editorial"];
 const RELATION_REVIEW_CHECKS: ReviewCheckKind[] = ["schema", "fact", "rights", "editorial"];
 const AUDIO_REVIEW_CHECKS: ReviewCheckKind[] = ["schema", "bilingual", "rights", "accessibility", "editorial"];
 
@@ -127,15 +136,25 @@ function primaryTradition(entity: EntityContent): EntityArtifact["tradition"] {
 }
 
 function sourceIdsFor(entity: EntityContent): string[] {
+  const variantSourceIds = entity.kind === "passage"
+    ? PassageProfileSchema.parse(entity.profile).variantReadings.flatMap((variant) => variant.sourceIds)
+    : [];
   return [...new Set([
     ...entity.sourceIds,
     ...entity.traditions.map((item) => item.sourceId),
     ...entity.temporalAssertions.map((item) => item.sourceId),
+    ...variantSourceIds,
   ])];
 }
 
 function entityKey(kind: string, slug: string): string {
   return `${kind}:${slug}`;
+}
+
+function normalisedProfile(entity: EntityContent): Record<string, unknown> {
+  if (entity.kind === "figure") return FigureProfileSchema.parse(entity.profile);
+  if (entity.kind === "passage") return PassageProfileSchema.parse(entity.profile);
+  return entity.profile;
 }
 
 function structuralDependencies(entity: EntityContent): string[] {
@@ -164,6 +183,7 @@ function toArtifact(entity: EntityContent, locale: Locale, sourceMap: Map<string
     const source = sourceMap.get(id);
     if (!source) throw new Error(`Missing source ${id} for ${entity.kind}/${entity.slug}`);
     return {
+      id: source.id,
       title: source.title[locale],
       locator: source.locator,
       grade: source.evidenceGrade,
@@ -208,7 +228,7 @@ function toArtifact(entity: EntityContent, locale: Locale, sourceMap: Map<string
       : {}),
     related,
     sources,
-    profile: entity.profile,
+    profile: normalisedProfile(entity),
     publicationState: entity.publicationState,
     reviewStatus: entity.reviewStatus,
   });
@@ -221,6 +241,8 @@ export async function compileContent(options: CompileOptions = {}) {
   const traditionsPath = resolve(contentRoot, "dao-ru-fo/traditions.json");
   const relationsPath = resolve(contentRoot, "dao-ru-fo/relations.json");
   const audioPath = resolve(contentRoot, "dao-ru-fo/audio.json");
+  const textReadingsPath = resolve(contentRoot, "dao-ru-fo/text-readings.json");
+  const comparisonsPath = resolve(contentRoot, "dao-ru-fo/comparisons.json");
   const reviewsPath = resolve(contentRoot, "dao-ru-fo/reviews.json");
   const releaseCandidatePath = resolve(contentRoot, "dao-ru-fo/public-rc.json");
   const sourcesPath = resolve(contentRoot, "common/sources.json");
@@ -261,6 +283,20 @@ export async function compileContent(options: CompileOptions = {}) {
   if (!audioResult.success) throw new Error(validationMessage(audioPath, audioResult.error.issues));
   const audio: AudioRecord[] = audioResult.data;
 
+  const comparisonsResult = ComparisonSetSchema.array().safeParse(await readJson(comparisonsPath));
+  if (!comparisonsResult.success) throw new Error(validationMessage(comparisonsPath, comparisonsResult.error.issues));
+  const comparisons: ComparisonSet[] = comparisonsResult.data;
+  if (new Set(comparisons.map((comparison) => comparison.slug)).size !== comparisons.length) {
+    throw new Error("Duplicate comparison set slugs are not allowed");
+  }
+
+  const textReadingsResult = TextReadingSetSchema.array().safeParse(await readJson(textReadingsPath));
+  if (!textReadingsResult.success) throw new Error(validationMessage(textReadingsPath, textReadingsResult.error.issues));
+  const textReadings: TextReadingSet[] = textReadingsResult.data;
+  if (new Set(textReadings.map((reading) => reading.slug)).size !== textReadings.length) {
+    throw new Error("Duplicate text reading set slugs are not allowed");
+  }
+
   const reviewResult = ReviewCheckRecordSchema.array().safeParse(await readJson(reviewsPath));
   if (!reviewResult.success) throw new Error(validationMessage(reviewsPath, reviewResult.error.issues));
   const reviews: ReviewCheckRecord[] = reviewResult.data;
@@ -275,6 +311,36 @@ export async function compileContent(options: CompileOptions = {}) {
   const missingChecks = (required: ReviewCheckKind[], completed: ReviewCheckRecord[]) => {
     const done = new Set(completed.filter((review) => ["passed", "waived"].includes(review.status)).map((review) => review.checkKind));
     return required.filter((check) => !done.has(check));
+  };
+  const readModelReviewCheck = (review: ReviewCheckRecord) => ({
+    id: review.id,
+    checkKind: review.checkKind,
+    status: review.status,
+    reviewer: review.reviewer,
+    ...(review.reviewedAt ? { reviewedAt: review.reviewedAt } : {}),
+    ...(review.note ? { note: review.note } : {}),
+  });
+  const reviewEvidenceFor = (
+    subjectKind: ReviewCheckRecord["subjectKind"],
+    subjectKey: string,
+    reviewStatus: ReviewStatus,
+    requiredChecks: ReviewCheckKind[],
+  ) => {
+    const checks = reviewsFor(subjectKind, subjectKey);
+    const completedChecks = [...new Set(checks.filter((review) => ["passed", "waived"].includes(review.status)).map((review) => review.checkKind))];
+    const failedChecks = [...new Set(checks.filter((review) => review.status === "failed").map((review) => review.checkKind))];
+    const missingChecksForSubject = missingChecks(requiredChecks, checks);
+    return {
+      subjectKind,
+      subjectKey,
+      reviewStatus,
+      requiredChecks,
+      completedChecks,
+      missingChecks: missingChecksForSubject,
+      failedChecks,
+      blocking: missingChecksForSubject.length > 0 || failedChecks.length > 0,
+      checks: checks.map(readModelReviewCheck),
+    };
   };
 
   const entityFiles = await listJsonFiles(entitiesRoot);
@@ -332,6 +398,11 @@ export async function compileContent(options: CompileOptions = {}) {
       if (!entityMap.has(`text_version:${profile.textVersionSlug}`)) {
         errors.push(`${key}: passage points to missing text_version:${profile.textVersionSlug}`);
       }
+      for (const variant of profile.variantReadings) {
+        for (const sourceId of variant.sourceIds) {
+          if (!sourceMap.has(sourceId)) errors.push(`${key}: variant ${variant.id} points to unknown source ${sourceId}`);
+        }
+      }
     }
     if (entity.kind === "place") {
       const place = PlaceProfileSchema.parse(entity.profile);
@@ -347,6 +418,29 @@ export async function compileContent(options: CompileOptions = {}) {
   }
 
   const allEntityKeys = new Set(entities.map((entity) => entityKey(entity.kind, entity.slug)));
+  for (const comparison of comparisons) {
+    for (const key of comparison.entityKeys) {
+      if (!allEntityKeys.has(key)) errors.push(`${comparison.slug}: comparison entity ${key} is not in the content batch`);
+    }
+  }
+  for (const reading of textReadings) {
+    for (const key of reading.passageKeys) {
+      if (!allEntityKeys.has(key)) errors.push(`${reading.slug}: text reading passage ${key} is not in the content batch`);
+    }
+    if (reading.readingMode === "same_text_versions") {
+      const selectedPassages = reading.passageKeys
+        .map((key) => entityMap.get(key))
+        .filter((entity): entity is EntityContent => Boolean(entity && entity.kind === "passage"));
+      const textSlugs = [...new Set(selectedPassages.map((passage) => PassageProfileSchema.parse(passage.profile).textSlug))];
+      const versionSlugs = new Set(selectedPassages.map((passage) => PassageProfileSchema.parse(passage.profile).textVersionSlug));
+      if (reading.textSlug && textSlugs.some((textSlug) => textSlug !== reading.textSlug)) {
+        errors.push(`${reading.slug}: same-text reading passages must all point to text:${reading.textSlug}`);
+      }
+      if (versionSlugs.size < 2) {
+        errors.push(`${reading.slug}: same-text reading must include at least two distinct text versions`);
+      }
+    }
+  }
   const selectedEntityKeys = new Set([...releaseCandidate.coreEntities, ...releaseCandidate.dependencyEntities]);
   for (const key of selectedEntityKeys) {
     if (!allEntityKeys.has(key)) errors.push(`${releaseCandidate.id}: selected entity ${key} is not in the content batch`);
@@ -536,7 +630,7 @@ export async function compileContent(options: CompileOptions = {}) {
       translations,
       profiles: [
         ...traditions.map((tradition) => ({ entityId: entityUuid("tradition", tradition.slug), kind: "tradition" as const, value: { traditionLevel: 0, traditionKind: "top_level", sortOrder: tradition.sortOrder } })),
-        ...entities.map((entity) => ({ entityId: entityUuid(entity.kind, entity.slug), kind: entity.kind, value: entity.profile })),
+        ...entities.map((entity) => ({ entityId: entityUuid(entity.kind, entity.slug), kind: entity.kind, value: normalisedProfile(entity) })),
       ],
       entitySources,
       entityTraditions: entities.flatMap((entity) => entity.traditions.map((assignment) => ({
@@ -555,7 +649,7 @@ export async function compileContent(options: CompileOptions = {}) {
         sourceEntityId: entityUuid(relation.source.kind, relation.source.slug), targetEntityId: entityUuid(relation.target.kind, relation.target.slug),
         relationType: relation.relationType, label: relation.label, summary: relation.summary, confidence: relation.confidence,
         evidenceLayer: relation.evidenceLayer, publicationState: relation.publicationState, reviewStatus: relation.reviewStatus,
-        temporalAssertions: relation.temporalAssertions,
+        temporalAssertions: relation.temporalAssertions, qualifiers: relation.qualifiers,
         sourceIds: relation.sourceIds.map((sourceId) => sourceUuidMap.get(sourceId)!),
       })),
       reviews,
@@ -583,6 +677,8 @@ export async function compileContent(options: CompileOptions = {}) {
     ? entities.filter((entity) => entity.publicationState === "public" && entity.reviewStatus === "publishable")
     : entities;
   const visibleEntityMap = new Map(visibleEntities.map((entity) => [`${entity.kind}:${entity.slug}`, entity]));
+  const visibleComparisons = comparisons.filter((comparison) => comparison.entityKeys.every((key) => visibleEntityMap.has(key)));
+  const visibleTextReadings = textReadings.filter((reading) => reading.passageKeys.every((key) => visibleEntityMap.has(key)));
   if (visibility === "public") {
     for (const entity of visibleEntities) {
       for (const dependency of structuralDependencies(entity)) {
@@ -629,7 +725,7 @@ export async function compileContent(options: CompileOptions = {}) {
       const completedChecks = [...new Set(completed.filter((review) => ["passed", "waived"].includes(review.status)).map((review) => review.checkKind))];
       const failedChecks = [...new Set(completed.filter((review) => review.status === "failed").map((review) => review.checkKind))];
       const missing = missingChecks(subject.requiredChecks, completed);
-      return { ...subject, completedChecks, missingChecks: missing, failedChecks, blocking: missing.length > 0 || failedChecks.length > 0 };
+      return { ...subject, completedChecks, missingChecks: missing, failedChecks, checks: completed.map(readModelReviewCheck), blocking: missing.length > 0 || failedChecks.length > 0 };
     }),
   });
 
@@ -638,6 +734,8 @@ export async function compileContent(options: CompileOptions = {}) {
   await mkdir(join(outputDirectory, "entities"), { recursive: true });
   await mkdir(join(outputDirectory, "relations"), { recursive: true });
   await mkdir(join(outputDirectory, "audio"), { recursive: true });
+  await mkdir(join(outputDirectory, "comparisons"), { recursive: true });
+  await mkdir(join(outputDirectory, "text-readings"), { recursive: true });
 
   const publicationStates: Record<string, number> = {};
   const reviewStatuses: Record<string, number> = {};
@@ -720,6 +818,17 @@ export async function compileContent(options: CompileOptions = {}) {
         confidence: relation.confidence,
         evidenceLayer: relation.evidenceLayer,
         sourceIds: relation.sourceIds,
+        temporalAssertions: relation.temporalAssertions.map((assertion) => ({
+          predicate: assertion.predicate,
+          timeType: assertion.timeType,
+          ...(assertion.startYear !== undefined ? { startYear: assertion.startYear } : {}),
+          ...(assertion.endYear !== undefined ? { endYear: assertion.endYear } : {}),
+          displayDate: assertion.displayDate[locale],
+          confidence: assertion.confidence,
+          evidenceLayer: assertion.evidenceLayer,
+          sourceId: assertion.sourceId,
+        })),
+        qualifiers: relation.qualifiers,
         publicationState: relation.publicationState,
         reviewStatus: relation.reviewStatus,
       })),
@@ -768,6 +877,13 @@ export async function compileContent(options: CompileOptions = {}) {
     const mapFeatures = visibleEntities.filter((entity) => entity.kind === "place").flatMap((entity) => {
       const place = PlaceProfileSchema.parse(entity.profile);
       if (!place.coordinates || place.placeReality === "sacred_symbolic") return [];
+      const temporalAssertions = entity.temporalAssertions.filter((assertion) => assertion.startYear !== undefined && assertion.endYear !== undefined);
+      const temporalRange = temporalAssertions.length > 0
+        ? {
+            startYear: Math.min(...temporalAssertions.map((assertion) => assertion.startYear!)),
+            endYear: Math.max(...temporalAssertions.map((assertion) => assertion.endYear!)),
+          }
+        : undefined;
       return [{
         type: "Feature" as const,
         id: uuidV5(namespace, `${entity.kind}:${entity.slug}`),
@@ -777,6 +893,7 @@ export async function compileContent(options: CompileOptions = {}) {
           summary: entity.translations[locale].shortSummary, tradition: primaryTradition(entity),
           placeReality: place.placeReality, coordinateConfidence: place.coordinateConfidence,
           evidenceLayer: entity.primaryEvidenceLayer, sourceId: place.geographicSourceId ?? entity.sourceIds[0],
+          ...(temporalRange ? { temporalRange } : {}),
         },
       }];
     });
@@ -789,8 +906,6 @@ export async function compileContent(options: CompileOptions = {}) {
 
     const timelineEvents = visibleEntities.flatMap((entity) => entity.temporalAssertions.flatMap((assertion, index) => {
       if (assertion.startYear === undefined) return [];
-      const assertionEnd = assertion.endYear ?? assertion.startYear;
-      if (assertionEnd < 581 || assertion.startYear > 907) return [];
       return [{
         id: uuidV5(namespace, `timeline:${entity.kind}:${entity.slug}:${index}`), kind: entity.kind, slug: entity.slug,
         title: entity.translations[locale].title, summary: entity.translations[locale].shortSummary,
@@ -799,10 +914,27 @@ export async function compileContent(options: CompileOptions = {}) {
         displayDate: assertion.displayDate[locale], confidence: assertion.confidence, evidenceLayer: assertion.evidenceLayer, sourceId: assertion.sourceId,
       }];
     })).sort((a, b) => a.year - b.year || a.title.localeCompare(b.title));
-    await writeJson(join(outputDirectory, "timeline", `suitang.${locale}.json`), ReadModelTimelineSchema.parse({
-      locale, title: locale === "zh-CN" ? "隋唐三传统时间切片" : "Sui–Tang timeline across three traditions",
-      startYear: 581, endYear: 907, events: timelineEvents,
-    }));
+    const historicalStartYear = timelineEvents[0]?.year ?? 1;
+    const historicalEndYear = timelineEvents.reduce((latest, event) => Math.max(latest, event.endYear ?? event.year), historicalStartYear);
+    const writeTimeline = (name: string, title: string, startYear: number, endYear: number, events: typeof timelineEvents) =>
+      writeJson(join(outputDirectory, "timeline", `${name}.${locale}.json`), ReadModelTimelineSchema.parse({
+        locale, title, startYear, endYear, events,
+      }));
+    await writeTimeline(
+      "overview",
+      locale === "zh-CN" ? "道·儒·佛全历史时间轴" : "Dao–Ru–Fo historical space-time",
+      historicalStartYear,
+      historicalEndYear,
+      timelineEvents,
+    );
+    const suitangEvents = timelineEvents.filter((event) => (event.endYear ?? event.year) >= 581 && event.year <= 907);
+    await writeTimeline(
+      "suitang",
+      locale === "zh-CN" ? "隋唐三传统时间切片" : "Sui–Tang timeline across three traditions",
+      581,
+      907,
+      suitangEvents,
+    );
 
     const graphKeys = [...new Set(visibleRelations.flatMap((relation) => [
       `${relation.source.kind}:${relation.source.slug}`, `${relation.target.kind}:${relation.target.slug}`,
@@ -825,6 +957,594 @@ export async function compileContent(options: CompileOptions = {}) {
         evidence: relation.evidenceLayer, confidence: relation.confidence, sourceIds: relation.sourceIds,
       })),
     }));
+
+    const cosmosLayout = {
+      daoism: { x: 300, y: 190, zone: "daoist_tradition" },
+      confucianism: { x: 510, y: 330, zone: "confucian_tradition" },
+      buddhism: { x: 720, y: 190, zone: "buddhist_tradition" },
+    } as const;
+    const symbolicPlaceEntities = visibleEntities.filter((entity) => {
+      if (entity.kind !== "place") return false;
+      const place = PlaceProfileSchema.parse(entity.profile);
+      return place.placeReality === "sacred_symbolic" && place.canvasX !== undefined && place.canvasY !== undefined && place.cosmosZone;
+    });
+    const symbolicPlaceNodes = symbolicPlaceEntities.map((entity) => {
+      const place = PlaceProfileSchema.parse(entity.profile);
+      return {
+        id: entityKey(entity.kind, entity.slug),
+        kind: "place" as const,
+        slug: entity.slug,
+        label: entity.translations[locale].title,
+        shortLabel: entity.translations[locale].title.slice(0, 6),
+        summary: entity.translations[locale].shortSummary,
+        tradition: primaryTradition(entity),
+        zone: place.cosmosZone!,
+        x: place.canvasX!,
+        y: place.canvasY!,
+        evidenceLayer: entity.primaryEvidenceLayer,
+        sourceIds: sourceIdsFor(entity),
+      };
+    });
+    const symbolicPlaceIds = new Set(symbolicPlaceNodes.map((node) => node.id));
+    const symbolicFigureEntities = visibleEntities.filter((entity) => {
+      if (entity.kind !== "figure") return false;
+      const figure = FigureProfileSchema.parse(entity.profile);
+      return ["traditional_sage", "sacred_figure", "mythic_persona"].includes(figure.figureClass);
+    });
+    const symbolicFigureNodes = symbolicFigureEntities.map((entity, index) => {
+      const anchorRelation = visibleRelations.find((relation) =>
+        relation.source.kind === "figure" && relation.source.slug === entity.slug &&
+        ["remembered_in", "deified_as"].includes(relation.relationType) &&
+        relation.target.kind === "place" && symbolicPlaceIds.has(entityKey(relation.target.kind, relation.target.slug)),
+      );
+      const anchor = anchorRelation
+        ? symbolicPlaceNodes.find((node) => node.id === entityKey(anchorRelation.target.kind, anchorRelation.target.slug))
+        : undefined;
+      const fallbackX = 110 + (index % 7) * 126;
+      const fallbackY = 478 + Math.floor(index / 7) * 52;
+      return {
+        id: entityKey(entity.kind, entity.slug),
+        kind: "figure" as const,
+        slug: entity.slug,
+        label: entity.translations[locale].title,
+        shortLabel: entity.translations[locale].title.slice(0, 5),
+        summary: entity.translations[locale].shortSummary,
+        tradition: primaryTradition(entity),
+        zone: anchor?.zone ?? "symbolic_figure",
+        x: anchor ? anchor.x : fallbackX,
+        y: anchor ? Math.min(540, anchor.y + 64) : fallbackY,
+        evidenceLayer: entity.primaryEvidenceLayer,
+        sourceIds: sourceIdsFor(entity),
+      };
+    });
+    const cosmosNodes = [
+      ...traditions.slice().sort((a, b) => a.sortOrder - b.sortOrder).map((tradition) => {
+        const layout = cosmosLayout[tradition.slug];
+        return {
+          id: `tradition:${tradition.slug}`,
+          kind: "tradition" as const,
+          slug: tradition.slug,
+          label: tradition.translations[locale],
+          shortLabel: tradition.slug === "daoism" ? (locale === "zh-CN" ? "道" : "Dao") : tradition.slug === "confucianism" ? (locale === "zh-CN" ? "儒" : "Ru") : (locale === "zh-CN" ? "佛" : "Fo"),
+          summary: locale === "zh-CN"
+            ? "传统名称节点；不把不同传统压缩成一套统一神学。"
+            : "A tradition node; distinct traditions are not collapsed into one theology.",
+          tradition: tradition.slug,
+          zone: layout.zone,
+          x: layout.x,
+          y: layout.y,
+          evidenceLayer: "scholarly_interpretation" as const,
+          sourceIds: tradition.sourceIds,
+        };
+      }),
+      {
+        id: "symbolic:encounter",
+        kind: "symbolic_node" as const,
+        slug: "encounter",
+        label: locale === "zh-CN" ? "相遇" : "Encounter",
+        shortLabel: locale === "zh-CN" ? "相遇" : "Encounter",
+        summary: locale === "zh-CN" ? "策展比较节点，不是共同神学实体。" : "A curatorial comparison node, not a shared theological entity.",
+        tradition: "convergence" as const,
+        zone: "comparative_encounter",
+        x: 510,
+        y: 260,
+        evidenceLayer: "scholarly_interpretation" as const,
+        sourceIds: ["source:editorial-method"],
+      },
+      ...symbolicPlaceNodes,
+      ...symbolicFigureNodes,
+    ];
+    const cosmosNodeIds = new Set(cosmosNodes.map((node) => node.id));
+    const traditionEdgeIds = new Set(cosmosNodes.filter((node) => node.kind === "tradition").map((node) => node.id));
+    const cosmosEdges = [
+      ...traditions.map((tradition) => ({
+        id: `cosmos:frame:${tradition.slug}`,
+        source: "symbolic:encounter",
+        target: `tradition:${tradition.slug}`,
+        relationType: "comparative_parallel" as const,
+        label: locale === "zh-CN" ? "比较框架" : "Comparative frame",
+        summary: locale === "zh-CN" ? "表示相遇与并置，不表示教义等同。" : "Marks encounter and juxtaposition, not doctrinal equivalence.",
+        confidence: "high" as const,
+        evidenceLayer: "scholarly_interpretation" as const,
+        sourceIds: ["source:editorial-method"],
+      })),
+      ...visibleRelations.flatMap((relation) => {
+        if (relation.relationType !== "comparative_parallel") return [];
+        const sourceEntity = visibleEntityMap.get(entityKey(relation.source.kind, relation.source.slug));
+        const targetEntity = visibleEntityMap.get(entityKey(relation.target.kind, relation.target.slug));
+        if (!sourceEntity || !targetEntity) return [];
+        const sourceTradition = primaryTradition(sourceEntity);
+        const targetTradition = primaryTradition(targetEntity);
+        const sourceNode = `tradition:${sourceTradition}`;
+        const targetNode = `tradition:${targetTradition}`;
+        if (sourceTradition === "convergence" || targetTradition === "convergence" || sourceTradition === targetTradition || !traditionEdgeIds.has(sourceNode) || !traditionEdgeIds.has(targetNode)) return [];
+        return [{
+          id: relation.id,
+          source: sourceNode,
+          target: targetNode,
+          relationType: relation.relationType,
+          label: relation.label[locale],
+          summary: relation.summary[locale],
+          confidence: relation.confidence,
+          evidenceLayer: relation.evidenceLayer,
+          sourceIds: relation.sourceIds,
+        }];
+      }),
+      ...visibleRelations.flatMap((relation) => {
+        if (!["remembered_in", "deified_as", "received_by", "represented_by"].includes(relation.relationType)) return [];
+        const source = entityKey(relation.source.kind, relation.source.slug);
+        const target = entityKey(relation.target.kind, relation.target.slug);
+        if (!cosmosNodeIds.has(source) || !cosmosNodeIds.has(target)) return [];
+        return [{
+          id: relation.id,
+          source,
+          target,
+          relationType: relation.relationType,
+          label: relation.label[locale],
+          summary: relation.summary[locale],
+          confidence: relation.confidence,
+          evidenceLayer: relation.evidenceLayer,
+          sourceIds: relation.sourceIds,
+        }];
+      }),
+    ];
+    await writeJson(join(outputDirectory, "maps", "cosmos", `overview.${locale}.json`), ReadModelSacredCosmosSchema.parse({
+      locale,
+      layer: "sacred_symbolic",
+      title: locale === "zh-CN" ? "道·儒·佛象征空间" : "Dao–Ru–Fo symbolic space",
+      description: locale === "zh-CN"
+        ? "以传统节点、比较关系和策展相遇点呈现象征空间；它不使用现实经纬度。"
+        : "A symbolic space of tradition nodes, comparative relations and a curatorial encounter point; it uses no real-world coordinates.",
+      disclaimer: locale === "zh-CN"
+        ? "象征空间不是现实地图，也不把道、儒、佛压缩成同一套宇宙观。"
+        : "Symbolic space is not a real map and does not collapse Daoist, Confucian and Buddhist cosmologies into one system.",
+      nodes: cosmosNodes,
+      edges: cosmosEdges,
+    }));
+
+    const relationTypesForAxis = {
+      speech: new Set(["attributed_to", "represented_by"]),
+      space: new Set(["located_in", "active_in", "travelled_through", "occurred_at", "route_connects", "institutional_context"]),
+      events: new Set(["participated_in", "influenced"]),
+      texts: new Set(["has_version", "passage_of", "quoted_from_version", "commented_on", "translated_or_transmitted", "attributed_to", "received_by", "represented_by"]),
+      reception: new Set(["received_by", "remembered_in", "deified_as", "represented_by", "influenced"]),
+    } as const;
+    const unique = (values: string[]) => [...new Set(values.filter(Boolean))];
+    const keyForRelationEndpoint = (endpoint: RelationRecord["source"]) => entityKey(endpoint.kind, endpoint.slug);
+    const relationForKey = (relation: RelationRecord, key: string) => {
+      const sourceKey = keyForRelationEndpoint(relation.source);
+      const targetKey = keyForRelationEndpoint(relation.target);
+      return sourceKey === key || targetKey === key;
+    };
+    const otherKeyForRelation = (relation: RelationRecord, key: string) => {
+      const sourceKey = keyForRelationEndpoint(relation.source);
+      const targetKey = keyForRelationEndpoint(relation.target);
+      return sourceKey === key ? targetKey : sourceKey;
+    };
+
+    for (const comparison of visibleComparisons) {
+      const selectedKeys = new Set(comparison.entityKeys);
+      const selectedEntities = comparison.entityKeys.map((key) => visibleEntityMap.get(key)).filter((entity): entity is EntityContent => Boolean(entity));
+      const selectedRelationSet = visibleRelations.filter((relation) => {
+        const sourceKey = keyForRelationEndpoint(relation.source);
+        const targetKey = keyForRelationEndpoint(relation.target);
+        return selectedKeys.has(sourceKey) && selectedKeys.has(targetKey);
+      });
+      const relationDescription = (relation: RelationRecord, selectedKey: string) => {
+        const otherKey = otherKeyForRelation(relation, selectedKey);
+        const other = visibleEntityMap.get(otherKey);
+        const qualifier = [
+          relation.qualifiers.spatialRole,
+          relation.qualifiers.attributionStatus,
+          relation.qualifiers.receptionMode,
+        ].filter(Boolean).join(" · ");
+        return `${relation.label[locale]} → ${other?.translations[locale].title ?? otherKey}${qualifier ? ` · ${qualifier}` : ""}`;
+      };
+      const notRecorded = (entity: EntityContent, value: string) => ({
+        entityKey: entityKey(entity.kind, entity.slug),
+        status: "not_recorded" as const,
+        value,
+        details: [],
+        sourceIds: [],
+      });
+      const relationCell = (
+        entity: EntityContent,
+        axis: keyof typeof relationTypesForAxis,
+        emptyValue: string,
+        relationFilter?: (relation: RelationRecord, other: EntityContent | undefined) => boolean,
+      ) => {
+        const key = entityKey(entity.kind, entity.slug);
+        const matches = visibleRelations.filter((relation) => {
+          if (!relationForKey(relation, key)) return false;
+          if (!relationTypesForAxis[axis].has(relation.relationType)) return false;
+          const other = visibleEntityMap.get(otherKeyForRelation(relation, key));
+          return relationFilter ? relationFilter(relation, other) : true;
+        });
+        if (matches.length === 0) return notRecorded(entity, emptyValue);
+        return {
+          entityKey: key,
+          status: "derived" as const,
+          value: locale === "zh-CN" ? `${matches.length} 条关系` : `${matches.length} relation${matches.length === 1 ? "" : "s"}`,
+          details: unique(matches.map((relation) => relationDescription(relation, key))),
+          evidenceLayer: matches[0].evidenceLayer,
+          confidence: matches[0].confidence,
+          sourceIds: unique(matches.flatMap((relation) => relation.sourceIds)),
+        };
+      };
+      const axisCells = (axis: (typeof comparison.axes)[number]["id"]) => selectedEntities.map((entity) => {
+        const key = entityKey(entity.kind, entity.slug);
+        if (axis === "historicity") {
+          const profile = entity.kind === "figure" ? FigureProfileSchema.parse(entity.profile) : undefined;
+          const values = [
+            typeof profile?.historicity === "string" ? profile.historicity : undefined,
+            typeof profile?.figureClass === "string" ? profile.figureClass : undefined,
+          ].filter((value): value is Exclude<typeof value, undefined> => Boolean(value));
+          if (values.length === 0) return notRecorded(entity, locale === "zh-CN" ? "当前档案未声明人物历史性" : "This record does not state a figure historicity");
+          return {
+            entityKey: key,
+            status: "recorded" as const,
+            value: values.join(" · "),
+            details: [entity.primaryEvidenceLayer],
+            evidenceLayer: entity.primaryEvidenceLayer,
+            sourceIds: sourceIdsFor(entity),
+          };
+        }
+        if (axis === "tradition") {
+          const details = entity.traditions.map((assignment) => {
+            const tradition = traditions.find((candidate) => candidate.slug === assignment.tradition);
+            const note = assignment.note?.[locale];
+            return `${tradition?.translations[locale] ?? assignment.tradition} · ${assignment.role}${note ? ` · ${note}` : ""}`;
+          });
+          return {
+            entityKey: key,
+            status: "recorded" as const,
+            value: unique(details).join(" / "),
+            details: unique(details),
+            evidenceLayer: entity.traditions[0].evidenceLayer,
+            confidence: entity.traditions[0].confidence,
+            sourceIds: unique(entity.traditions.map((assignment) => assignment.sourceId)),
+          };
+        }
+        if (axis === "time") {
+          const assertions = entity.temporalAssertions;
+          if (assertions.length === 0) return notRecorded(entity, locale === "zh-CN" ? "当前档案没有时间断言" : "This record has no temporal assertion");
+          const details = unique(assertions.map((assertion) => `${assertion.predicate}: ${assertion.displayDate[locale]}`));
+          return {
+            entityKey: key,
+            status: "recorded" as const,
+            value: unique(assertions.map((assertion) => assertion.displayDate[locale])).join("；"),
+            details,
+            evidenceLayer: assertions[0].evidenceLayer,
+            confidence: assertions[0].confidence,
+            sourceIds: unique(assertions.map((assertion) => assertion.sourceId)),
+          };
+        }
+        if (axis === "speech") return relationCell(entity, "speech", locale === "zh-CN" ? "当前关系集中未记录言说归属" : "No speech-attribution link is recorded in the current relation set");
+        if (axis === "space") return relationCell(entity, "space", locale === "zh-CN" ? "当前关系集中未记录空间节点" : "No spatial node is recorded in the current relation set", (_relation, other) => Boolean(other && ["place", "institution", "route"].includes(other.kind)));
+        if (axis === "events") return relationCell(entity, "events", locale === "zh-CN" ? "当前关系集中未记录事件连接" : "No event connection is recorded in the current relation set", (_relation, other) => other?.kind === "event");
+        if (axis === "texts") return relationCell(entity, "texts", locale === "zh-CN" ? "当前关系集中未记录文本连接" : "No text connection is recorded in the current relation set", (_relation, other) => Boolean(other && ["text", "text_version", "passage"].includes(other.kind)));
+        if (axis === "reception") return relationCell(entity, "reception", locale === "zh-CN" ? "当前关系集中未记录后世接收" : "No later-reception link is recorded in the current relation set");
+        const sourceDetails = unique(sourceIdsFor(entity).map((sourceId) => {
+          const source = sourceMap.get(sourceId);
+          return source ? `${source.title[locale]} · ${source.evidenceGrade} · ${source.locator}` : sourceId;
+        }));
+        return {
+          entityKey: key,
+          status: "recorded" as const,
+          value: locale === "zh-CN" ? `${sourceDetails.length} 个来源` : `${sourceDetails.length} source${sourceDetails.length === 1 ? "" : "s"}`,
+          details: sourceDetails,
+          evidenceLayer: entity.primaryEvidenceLayer,
+          sourceIds: sourceIdsFor(entity),
+        };
+      });
+
+      const bridgeMap = new Map<string, { entityKeys: Set<string>; relationTypes: Set<RelationRecord["relationType"]>; summaries: Set<string>; sourceIds: Set<string> }>();
+      for (const relation of visibleRelations) {
+        const sourceKey = keyForRelationEndpoint(relation.source);
+        const targetKey = keyForRelationEndpoint(relation.target);
+        const selectedEndpoint = selectedKeys.has(sourceKey) ? sourceKey : selectedKeys.has(targetKey) ? targetKey : undefined;
+        const bridgeKey = selectedEndpoint === sourceKey ? targetKey : selectedEndpoint === targetKey ? sourceKey : undefined;
+        if (!selectedEndpoint || !bridgeKey || selectedKeys.has(bridgeKey)) continue;
+        const bridge = bridgeMap.get(bridgeKey) ?? { entityKeys: new Set<string>(), relationTypes: new Set<RelationRecord["relationType"]>(), summaries: new Set<string>(), sourceIds: new Set<string>() };
+        bridge.entityKeys.add(selectedEndpoint);
+        bridge.relationTypes.add(relation.relationType);
+        bridge.summaries.add(relation.summary[locale]);
+        relation.sourceIds.forEach((sourceId) => bridge.sourceIds.add(sourceId));
+        bridgeMap.set(bridgeKey, bridge);
+      }
+      const bridges = [...bridgeMap.entries()]
+        .filter(([, bridge]) => bridge.entityKeys.size >= 2)
+        .map(([key, bridge]) => {
+          const entity = visibleEntityMap.get(key);
+          if (!entity) return undefined;
+          return {
+            key,
+            kind: entity.kind,
+            slug: entity.slug,
+            title: entity.translations[locale].title,
+            entityKeys: [...bridge.entityKeys].sort(),
+            relationTypes: [...bridge.relationTypes].sort(),
+            summaries: [...bridge.summaries].sort(),
+            sourceIds: [...bridge.sourceIds].sort(),
+          };
+        })
+        .filter((bridge): bridge is NonNullable<typeof bridge> => Boolean(bridge));
+
+      await writeJson(join(outputDirectory, "comparisons", `${comparison.slug}.${locale}.json`), ReadModelComparisonSchema.parse({
+        schemaVersion: "1.0",
+        locale,
+        slug: comparison.slug,
+        title: comparison.title[locale],
+        question: comparison.question[locale],
+        disclaimer: comparison.disclaimer[locale],
+        entities: selectedEntities.map((entity) => ({
+          key: entityKey(entity.kind, entity.slug),
+          kind: entity.kind,
+          slug: entity.slug,
+          title: entity.translations[locale].title,
+          tradition: primaryTradition(entity),
+          evidence: entity.primaryEvidenceLayer,
+          timeLabel: entity.translations[locale].timeLabel,
+          summary: entity.translations[locale].shortSummary,
+          sourceIds: sourceIdsFor(entity),
+        })),
+        axes: comparison.axes.map((axis) => ({
+          id: axis.id,
+          label: axis.label[locale],
+          description: axis.description[locale],
+          cells: axisCells(axis.id),
+        })),
+        directRelations: selectedRelationSet.map((relation) => ({
+          id: relation.id,
+          source: relation.source,
+          target: relation.target,
+          relationType: relation.relationType,
+          label: relation.label[locale],
+          summary: relation.summary[locale],
+          confidence: relation.confidence,
+          evidenceLayer: relation.evidenceLayer,
+          sourceIds: relation.sourceIds,
+        })),
+        bridges,
+      }));
+    }
+
+    for (const reading of visibleTextReadings) {
+      const uniqueReadingValues = (values: string[]) => [...new Set(values.filter(Boolean))];
+      const selectedPassages = reading.passageKeys
+        .map((key) => visibleEntityMap.get(key))
+        .filter((entity): entity is EntityContent => Boolean(entity && entity.kind === "passage"));
+      const readingItems = selectedPassages.map((passage) => {
+        const passageProfile = PassageProfileSchema.parse(passage.profile);
+        const text = visibleEntityMap.get(entityKey("text", passageProfile.textSlug));
+        const version = visibleEntityMap.get(entityKey("text_version", passageProfile.textVersionSlug));
+        if (!text || !version) throw new Error(`${reading.slug}: passage ${entityKey(passage.kind, passage.slug)} has an unresolved text/version dependency`);
+        const versionProfile = TextVersionProfileSchema.parse(version.profile);
+        const passageKey = entityKey(passage.kind, passage.slug);
+        const sourceIds = uniqueReadingValues([
+          ...sourceIdsFor(passage),
+          ...sourceIdsFor(text),
+          ...sourceIdsFor(version),
+        ]);
+        const contextKeys = new Set([
+          passageKey,
+          entityKey(text.kind, text.slug),
+          entityKey(version.kind, version.slug),
+        ]);
+        const contextReviewRelations = visibleRelations.filter((relation) =>
+          contextKeys.has(keyForRelationEndpoint(relation.source)) || contextKeys.has(keyForRelationEndpoint(relation.target))
+        );
+        const reviewEvidence = [
+          reviewEvidenceFor("entity", passageKey, passage.reviewStatus, requiredEntityChecks(passage)),
+          reviewEvidenceFor("entity", entityKey(text.kind, text.slug), text.reviewStatus, requiredEntityChecks(text)),
+          reviewEvidenceFor("entity", entityKey(version.kind, version.slug), version.reviewStatus, requiredEntityChecks(version)),
+          ...contextReviewRelations.map((relation) => reviewEvidenceFor("relation", relation.id, relation.reviewStatus, RELATION_REVIEW_CHECKS)),
+        ];
+        return {
+          key: passageKey,
+          kind: "passage" as const,
+          slug: passage.slug,
+          title: passage.translations[locale].title,
+          ...(passage.translations[locale].subtitle ? { subtitle: passage.translations[locale].subtitle } : {}),
+          tradition: primaryTradition(passage),
+          evidence: passage.primaryEvidenceLayer,
+          timeLabel: passage.translations[locale].timeLabel,
+          sourceIds,
+          text: {
+            key: entityKey(text.kind, text.slug),
+            slug: text.slug,
+            title: text.translations[locale].title,
+            summary: text.translations[locale].shortSummary,
+          },
+          version: {
+            key: entityKey(version.kind, version.slug),
+            slug: version.slug,
+            title: version.translations[locale].title,
+            versionKind: versionProfile.versionKind,
+            languageCode: versionProfile.languageCode,
+            citationLabel: versionProfile.citationLabel,
+            rightsStatus: versionProfile.rightsStatus,
+          },
+          passage: {
+            title: passage.translations[locale].title,
+            passageKind: passageProfile.passageKind,
+            locatorOriginal: passageProfile.locatorOriginal,
+            locatorNormalised: passageProfile.locatorNormalised,
+            originalText: passageProfile.originalText,
+            punctuatedText: passageProfile.punctuatedText,
+            modernZh: passageProfile.modernZh,
+            translationEn: passageProfile.translationEn,
+            ritualSensitivity: passageProfile.ritualSensitivity,
+            attributionStatus: passageProfile.attributionStatus,
+            variantReadings: passageProfile.variantReadings.map((variant) => ({
+              id: variant.id,
+              kind: variant.kind,
+              status: variant.status,
+              label: variant.label[locale],
+              form: variant.form,
+              note: variant.note[locale],
+              sourceIds: variant.sourceIds,
+            })),
+          },
+          reviewEvidence,
+        };
+      });
+      const cellFor = (item: (typeof readingItems)[number], axis: (typeof reading.axes)[number]["id"]) => {
+        const passage = selectedPassages.find((candidate) => entityKey(candidate.kind, candidate.slug) === item.key)!;
+        const sourceIds = item.sourceIds;
+        const withReviewEvidence = (cell: Record<string, unknown>) => ({ ...cell, reviewEvidence: item.reviewEvidence });
+        const attributionRelations = visibleRelations.filter((relation) => (
+          relation.relationType === "attributed_to" && (
+            keyForRelationEndpoint(relation.source) === item.key || keyForRelationEndpoint(relation.target) === item.key
+          )
+        ));
+        if (axis === "textual_layer") {
+          return withReviewEvidence({
+            passageKey: item.key,
+            status: "recorded" as const,
+            value: `${item.text.title} → ${item.version.title} → ${item.title}`,
+            details: [
+              locale === "zh-CN" ? `文本：${item.text.title}` : `Text: ${item.text.title}`,
+              locale === "zh-CN" ? `版本：${item.version.title}` : `Version: ${item.version.title}`,
+              locale === "zh-CN" ? `段落：${item.title}` : `Passage: ${item.title}`,
+            ],
+            evidenceLayer: passage.primaryEvidenceLayer,
+            sourceIds,
+          });
+        }
+        if (axis === "locator") {
+          return withReviewEvidence({
+            passageKey: item.key,
+            status: "recorded" as const,
+            value: item.passage.locatorNormalised,
+            details: [item.passage.locatorOriginal],
+            evidenceLayer: passage.primaryEvidenceLayer,
+            sourceIds: uniqueReadingValues(sourceIdsFor(passage)),
+          });
+        }
+        if (axis === "wording") {
+          return withReviewEvidence({
+            passageKey: item.key,
+            status: "recorded" as const,
+            value: item.passage.originalText,
+            details: [locale === "zh-CN" ? `当前断句：${item.passage.punctuatedText}` : `Punctuation: ${item.passage.punctuatedText}`],
+            evidenceLayer: passage.primaryEvidenceLayer,
+            sourceIds: uniqueReadingValues(sourceIdsFor(passage)),
+          });
+        }
+        if (axis === "attribution") {
+          const relationDetails = attributionRelations.map((relation) => {
+            const otherKey = keyForRelationEndpoint(relation.source) === item.key ? keyForRelationEndpoint(relation.target) : keyForRelationEndpoint(relation.source);
+            const other = visibleEntityMap.get(otherKey);
+            return `${relation.label[locale]} → ${other?.translations[locale].title ?? otherKey}`;
+          });
+          return withReviewEvidence({
+            passageKey: item.key,
+            status: relationDetails.length > 0 ? "derived" as const : "recorded" as const,
+            value: item.passage.attributionStatus,
+            details: relationDetails.length > 0 ? relationDetails : [locale === "zh-CN" ? "段落档案中的归属状态" : "Attribution status recorded in the passage profile"],
+            evidenceLayer: attributionRelations[0]?.evidenceLayer ?? passage.primaryEvidenceLayer,
+            confidence: attributionRelations[0]?.confidence,
+            sourceIds: uniqueReadingValues([...sourceIdsFor(passage), ...attributionRelations.flatMap((relation) => relation.sourceIds)]),
+          });
+        }
+        if (axis === "interpretation") {
+          return withReviewEvidence({
+            passageKey: item.key,
+            status: "recorded" as const,
+            value: locale === "zh-CN" ? item.passage.modernZh : item.passage.translationEn,
+            details: [locale === "zh-CN" ? `English: ${item.passage.translationEn}` : `现代汉语：${item.passage.modernZh}`],
+            evidenceLayer: passage.primaryEvidenceLayer,
+            sourceIds,
+          });
+        }
+        if (axis === "time") {
+          const assertions = passage.temporalAssertions;
+          if (assertions.length === 0) {
+            return withReviewEvidence({
+              passageKey: item.key,
+              status: "not_recorded" as const,
+              value: locale === "zh-CN" ? "当前段落没有时间断言" : "This passage has no temporal assertion",
+              details: [],
+              sourceIds: [],
+            });
+          }
+          return withReviewEvidence({
+            passageKey: item.key,
+            status: "recorded" as const,
+            value: uniqueReadingValues(assertions.map((assertion) => assertion.displayDate[locale])).join("；"),
+            details: uniqueReadingValues(assertions.map((assertion) => `${assertion.predicate}: ${assertion.displayDate[locale]}`)),
+            evidenceLayer: assertions[0].evidenceLayer,
+            confidence: assertions[0].confidence,
+            sourceIds: uniqueReadingValues(assertions.map((assertion) => assertion.sourceId)),
+          });
+        }
+        const evidenceDetails = uniqueReadingValues(sourceIds.map((sourceId) => {
+          const source = sourceMap.get(sourceId);
+          return source ? `${source.title[locale]} · ${source.evidenceGrade} · ${source.locator}` : sourceId;
+        }));
+        return withReviewEvidence({
+          passageKey: item.key,
+          status: "recorded" as const,
+          value: locale === "zh-CN" ? `${evidenceDetails.length} 个来源` : `${evidenceDetails.length} source${evidenceDetails.length === 1 ? "" : "s"}`,
+          details: [...evidenceDetails, `${locale === "zh-CN" ? "版本权利" : "Version rights"}: ${item.version.rightsStatus}`],
+          evidenceLayer: passage.primaryEvidenceLayer,
+          sourceIds,
+        });
+      };
+      const contextKeys = new Set(readingItems.flatMap((item) => [item.key, item.text.key, item.version.key]));
+      const contextRelations = visibleRelations
+        .filter((relation) => contextKeys.has(keyForRelationEndpoint(relation.source)) || contextKeys.has(keyForRelationEndpoint(relation.target)))
+        .map((relation) => ({
+          id: relation.id,
+          source: relation.source,
+          target: relation.target,
+          relationType: relation.relationType,
+          label: relation.label[locale],
+          summary: relation.summary[locale],
+          confidence: relation.confidence,
+          evidenceLayer: relation.evidenceLayer,
+          sourceIds: relation.sourceIds,
+        }));
+      await writeJson(join(outputDirectory, "text-readings", `${reading.slug}.${locale}.json`), ReadModelTextReadingSchema.parse({
+        schemaVersion: "1.0",
+        locale,
+        slug: reading.slug,
+        readingMode: reading.readingMode,
+        ...(reading.textSlug ? { textSlug: reading.textSlug } : {}),
+        title: reading.title[locale],
+        question: reading.question[locale],
+        disclaimer: reading.disclaimer[locale],
+        readings: readingItems,
+        axes: reading.axes.map((axis) => ({
+          id: axis.id,
+          label: axis.label[locale],
+          description: axis.description[locale],
+          cells: readingItems.map((item) => cellFor(item, axis.id)),
+        })),
+        contextRelations,
+      }));
+    }
   }
   await writeJson(join(outputDirectory, "traditions.json"), traditions);
 

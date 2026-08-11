@@ -1,0 +1,53 @@
+{
+  "id": "a2459e74-0e7a-5283-9804-0af27ea459cc",
+  "locale": "en",
+  "kind": "figure",
+  "slug": "li-shimin",
+  "title": "Li Shimin",
+  "subtitle": "Taizong of Tang and a shaper of capital institutions",
+  "tradition": "confucianism",
+  "evidence": "historical_documented",
+  "timeLabel": "598–649",
+  "shortSummary": "Li Shimin's courtly, educational and religious institutional context helps explain why Chang'an became a meeting point for different networks of knowledge and belief.",
+  "curatorialDescription": [
+    "The museum does not make the emperor the sole protagonist of a three-tradition story; it places him within institutional resources, urban space and negotiation among traditions.",
+    "This figure record provides historical context. Specific edicts, institutional ties and later images require separate citations."
+  ],
+  "researchNote": "Alpha entry; official-history editions, edict locators and evidence for ties among monasteries, Daoist institutions and schools remain to be itemised.",
+  "keyFacts": [
+    {
+      "label": "Role",
+      "value": "Emperor Taizong of Tang"
+    },
+    {
+      "label": "Curatorial use",
+      "value": "Institutional and urban context"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:tang-imperial-records",
+      "title": "Official histories and institutional records of the Sui–Tang period",
+      "locator": "帝王、制度与年代条目；具体版本和卷页待核",
+      "grade": "B",
+      "role": "Research reference for Sui–Tang figures, capitals, institutions and event dates"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "Curatorial and methodological notes of the Dao–Ru–Fo Digital Museum",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "Curatorial framework and terminology rules"
+    }
+  ],
+  "profile": {
+    "historicity": "documented",
+    "figureClass": "historical_person",
+    "gender": "male",
+    "canonicalNameOriginal": "李世民",
+    "nameLanguageCode": "lzh"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

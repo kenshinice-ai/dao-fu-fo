@@ -1,0 +1,39 @@
+{
+  "id": "dca3a5c6-e9ae-5c58-b6c6-0bc876610748",
+  "locale": "zh-CN",
+  "kind": "institution",
+  "slug": "changan-daoist-monastic-network",
+  "title": "长安道观网络",
+  "tradition": "daoism",
+  "evidence": "historical_inferred",
+  "timeLabel": "隋唐；节点待拆",
+  "shortSummary": "长安的道教活动依托多处宫观、斋醮、度牒与宫廷联系，不能压缩成单一建筑。",
+  "curatorialDescription": [
+    "网络条目承接人物与城市，但每一处宫观仍须建立独立的地点和机构记录。"
+  ],
+  "researchNote": "需补充宫观名录、存续年代、城市坊区和仪式功能来源。",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:daoist-historical-record",
+      "title": "隋唐道教人物与制度研究资料",
+      "locator": "人物、宫观与皇室关系专题",
+      "grade": "B",
+      "role": "司马承祯及隋唐道教制度语境的学术参考"
+    },
+    {
+      "id": "source:historical-geography",
+      "title": "隋唐历史地理与城市沿革资料",
+      "locator": "长安、洛阳、敦煌历史名称与地理范围",
+      "grade": "A",
+      "role": "真实地点、历史名称和坐标示意的地理依据"
+    }
+  ],
+  "profile": {
+    "institutionKind": "monastic_network",
+    "networkScope": true
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

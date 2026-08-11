@@ -1,0 +1,41 @@
+{
+  "id": "1c4ba68f-cb32-5ca9-bc69-251b1d4639dd",
+  "locale": "en",
+  "kind": "event",
+  "slug": "yijing-returns",
+  "title": "Yijing returns to Tang territory",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "c. 695",
+  "shortSummary": "Around 695, Yijing's return brought maritime travel experience into translation, writing and institutional networks.",
+  "curatorialDescription": [
+    "The return links route and textual production; arrival city and subsequent itinerary remain to be separated."
+  ],
+  "researchNote": "Arrival place, entry into Luoyang and translation projects require biographical and catalogue verification.",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:buddhist-biographical-records",
+      "title": "Biographical and pilgrimage records of Sui–Tang Buddhist monks",
+      "locator": "义净、玄奘及求法僧侣条目；底本与卷页待核",
+      "grade": "B",
+      "role": "Research entry point for Buddhist figures, pilgrimage routes and translation activity"
+    },
+    {
+      "id": "source:buddhist-institutional-records",
+      "title": "Studies of Sui–Tang monasteries, translation bureaux and monastic institutions",
+      "locator": "大慈恩寺、译经场与寺院网络专题；底本待核",
+      "grade": "B",
+      "role": "Institutional context for monasteries, translation sites and Buddhist urban networks"
+    }
+  ],
+  "profile": {
+    "eventKind": "journey",
+    "historicity": "documented",
+    "sequenceOrder": 10,
+    "eventScope": "transregional"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

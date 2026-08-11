@@ -1,0 +1,37 @@
+{
+  "id": "91cd610a-3340-5c98-bcfd-84b631ef4733",
+  "locale": "zh-CN",
+  "kind": "text_version",
+  "slug": "dhammacakkappavattana-sutta-pali",
+  "title": "《转法轮经》巴利语数字版本",
+  "subtitle": "SN 56.11 数字版",
+  "tradition": "buddhism",
+  "evidence": "historical_inferred",
+  "timeLabel": "SN 56.11；早期佛教传承层",
+  "shortSummary": "版本层保留巴利语经文的出处、语言和数字编辑信息。",
+  "curatorialDescription": [
+    "版本层与文本主题、段落摘录和人物归属分开，便于以后加入汉译本与异本。"
+  ],
+  "researchNote": "当前只作为研究层版本入口，版权和译文使用条件以原站说明为准。",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:buddha-early-texts",
+      "title": "巴利经藏早期佛教文本：MN 26 与 SN 56.11",
+      "locator": "MN 26 Ariyapariyesanā：求法与到达鹿野苑；SN 56.11 Dhammacakkappavattana：鹿野苑初转法轮文本",
+      "grade": "A",
+      "role": "释迦牟尼生平叙事、早期教法传述与鹿野苑空间关联的原典入口；不把经文传述等同于逐字现场记录",
+      "url": "https://suttacentral.net/sn56.11/en/sujato"
+    }
+  ],
+  "profile": {
+    "textSlug": "dhammacakkappavattana-sutta",
+    "versionKind": "digital_edition",
+    "languageCode": "pli",
+    "citationLabel": "SuttaCentral, SN 56.11, Pāli/English digital edition",
+    "rightsStatus": "external_reference_only"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

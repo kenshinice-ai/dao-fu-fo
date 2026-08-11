@@ -1,0 +1,1728 @@
+{
+  "schemaVersion": "1.0",
+  "profile": "dao-ru-fo",
+  "contentVersion": "2026.08.alpha.1",
+  "visibility": "preview",
+  "counts": {
+    "entities": 91,
+    "relations": 79,
+    "audio": 3,
+    "sources": 30
+  },
+  "publicationStates": {
+    "preview": 91
+  },
+  "reviewStatuses": {
+    "bilingual_reviewed": 91
+  },
+  "evidenceLayers": {
+    "scholarly_interpretation": 7,
+    "traditional_account": 4,
+    "historical_documented": 48,
+    "historical_inferred": 32
+  },
+  "traditions": {
+    "buddhism": 51,
+    "daoism": 27,
+    "confucianism": 30
+  },
+  "sourceRights": {
+    "quotation_only": 6,
+    "public_domain": 10,
+    "open_licensed": 6,
+    "external_reference_only": 7,
+    "unknown": 1
+  },
+  "sourceLocatorLevels": {
+    "precise": 14,
+    "item": 7,
+    "topic": 7,
+    "edition": 1,
+    "collection": 1
+  },
+  "placeholderEntities": [
+    "museum_object:classics-commentary-manuscript",
+    "museum_object:daodejing-commentary-manuscript-record",
+    "museum_object:daoist-inscription-rubbing-record",
+    "museum_object:guozijian-ritual-vessel-record",
+    "museum_object:heart-sutra-manuscript-leaf",
+    "museum_object:imperial-classics-scroll-record",
+    "museum_object:longmen-dedication-inscription-record",
+    "museum_object:translation-bureau-tablet",
+    "museum_object:translation-catalogue-manuscript-record"
+  ],
+  "publicBlockers": [
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "concept:form-and-emptiness",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "concept:form-and-emptiness",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "concept:form-and-emptiness",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "concept:naturalness-and-self-so",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "concept:naturalness-and-self-so",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "concept:naturalness-and-self-so",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "concept:classical-commentary",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "concept:classical-commentary",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "NO_VERIFIED_LOCATOR",
+      "subject": "concept:classical-commentary",
+      "detail": "No verified edition/item/precise source locator"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "concept:classical-commentary",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "concept:pilgrimage-and-transmission",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "concept:pilgrimage-and-transmission",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "NO_VERIFIED_LOCATOR",
+      "subject": "concept:pilgrimage-and-transmission",
+      "detail": "No verified edition/item/precise source locator"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "concept:pilgrimage-and-transmission",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "concept:ritual-order",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "concept:ritual-order",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "NO_VERIFIED_LOCATOR",
+      "subject": "concept:ritual-order",
+      "detail": "No verified edition/item/precise source locator"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "concept:ritual-order",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "concept:translation-as-institution",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "concept:translation-as-institution",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "NO_VERIFIED_LOCATOR",
+      "subject": "concept:translation-as-institution",
+      "detail": "No verified edition/item/precise source locator"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "concept:translation-as-institution",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "event:confucius-asks-laozi-about-rites",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "event:confucius-asks-laozi-about-rites",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "event:confucius-asks-laozi-about-rites",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "event:buddha-first-sermon-at-sarnath",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "event:buddha-first-sermon-at-sarnath",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "event:buddha-first-sermon-at-sarnath",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "event:tang-dynasty-founded",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "event:tang-dynasty-founded",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "event:tang-dynasty-founded",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "event:xuanzang-departs-changan",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "event:xuanzang-departs-changan",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "event:xuanzang-departs-changan",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "event:five-classics-corrected-meanings-project",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "event:five-classics-corrected-meanings-project",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "NO_VERIFIED_LOCATOR",
+      "subject": "event:five-classics-corrected-meanings-project",
+      "detail": "No verified edition/item/precise source locator"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "event:five-classics-corrected-meanings-project",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "event:daci-en-monastery-established",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "event:daci-en-monastery-established",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "event:daci-en-monastery-established",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "event:great-wild-goose-pagoda-first-construction",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "event:great-wild-goose-pagoda-first-construction",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "NO_VERIFIED_LOCATOR",
+      "subject": "event:great-wild-goose-pagoda-first-construction",
+      "detail": "No verified edition/item/precise source locator"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "event:great-wild-goose-pagoda-first-construction",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "event:yijing-departs-by-sea",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "event:yijing-departs-by-sea",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "NO_VERIFIED_LOCATOR",
+      "subject": "event:yijing-departs-by-sea",
+      "detail": "No verified edition/item/precise source locator"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "event:yijing-departs-by-sea",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "event:wu-zhou-established",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "event:wu-zhou-established",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "NO_VERIFIED_LOCATOR",
+      "subject": "event:wu-zhou-established",
+      "detail": "No verified edition/item/precise source locator"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "event:wu-zhou-established",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "event:yijing-returns",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "event:yijing-returns",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "NO_VERIFIED_LOCATOR",
+      "subject": "event:yijing-returns",
+      "detail": "No verified edition/item/precise source locator"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "event:yijing-returns",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "event:kaiyuan-institutional-expansion",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "event:kaiyuan-institutional-expansion",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "event:kaiyuan-institutional-expansion",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "event:an-lushan-rebellion-begins",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "event:an-lushan-rebellion-begins",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "event:an-lushan-rebellion-begins",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "event:an-lushan-rebellion-ends",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "event:an-lushan-rebellion-ends",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "event:an-lushan-rebellion-ends",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "event:huichang-religious-policies",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "event:huichang-religious-policies",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "NO_VERIFIED_LOCATOR",
+      "subject": "event:huichang-religious-policies",
+      "detail": "No verified edition/item/precise source locator"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "event:huichang-religious-policies",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "event:sui-unification",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "event:sui-unification",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "NO_VERIFIED_LOCATOR",
+      "subject": "event:sui-unification",
+      "detail": "No verified edition/item/precise source locator"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "event:sui-unification",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "event:tang-end-transition",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "event:tang-end-transition",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "NO_VERIFIED_LOCATOR",
+      "subject": "event:tang-end-transition",
+      "detail": "No verified edition/item/precise source locator"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "event:tang-end-transition",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "event:xuanzang-return-changan",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "event:xuanzang-return-changan",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "event:xuanzang-return-changan",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "figure:confucius",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "figure:confucius",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "figure:confucius",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "figure:kong-yingda",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "figure:kong-yingda",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "figure:kong-yingda",
+      "detail": "missing=fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "figure:laozi",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "figure:laozi",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "figure:laozi",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "figure:cheng-xuanying",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "figure:cheng-xuanying",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "NO_VERIFIED_LOCATOR",
+      "subject": "figure:cheng-xuanying",
+      "detail": "No verified edition/item/precise source locator"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "figure:cheng-xuanying",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "figure:yan-shigu",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "figure:yan-shigu",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "NO_VERIFIED_LOCATOR",
+      "subject": "figure:yan-shigu",
+      "detail": "No verified edition/item/precise source locator"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "figure:yan-shigu",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "figure:jizang",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "figure:jizang",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "NO_VERIFIED_LOCATOR",
+      "subject": "figure:jizang",
+      "detail": "No verified edition/item/precise source locator"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "figure:jizang",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "figure:li-shimin",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "figure:li-shimin",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "NO_VERIFIED_LOCATOR",
+      "subject": "figure:li-shimin",
+      "detail": "No verified edition/item/precise source locator"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "figure:li-shimin",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "figure:sakyamuni",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "figure:sakyamuni",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "figure:sakyamuni",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "figure:sima-chengzhen",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "figure:sima-chengzhen",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "figure:sima-chengzhen",
+      "detail": "missing=fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "figure:wu-zhao",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "figure:wu-zhao",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "NO_VERIFIED_LOCATOR",
+      "subject": "figure:wu-zhao",
+      "detail": "No verified edition/item/precise source locator"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "figure:wu-zhao",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "figure:xuanzang",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "figure:xuanzang",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "figure:xuanzang",
+      "detail": "missing=fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "figure:yijing",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "figure:yijing",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "NO_VERIFIED_LOCATOR",
+      "subject": "figure:yijing",
+      "detail": "No verified edition/item/precise source locator"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "figure:yijing",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "institution:daci-en-monastery",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "institution:daci-en-monastery",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "institution:daci-en-monastery",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "institution:guozijian",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "institution:guozijian",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "NO_VERIFIED_LOCATOR",
+      "subject": "institution:guozijian",
+      "detail": "No verified edition/item/precise source locator"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "institution:guozijian",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "institution:changan-translation-bureau",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "institution:changan-translation-bureau",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "institution:changan-translation-bureau",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "institution:hongwen-institute",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "institution:hongwen-institute",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "NO_VERIFIED_LOCATOR",
+      "subject": "institution:hongwen-institute",
+      "detail": "No verified edition/item/precise source locator"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "institution:hongwen-institute",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "institution:changan-daoist-monastic-network",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "institution:changan-daoist-monastic-network",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "NO_VERIFIED_LOCATOR",
+      "subject": "institution:changan-daoist-monastic-network",
+      "detail": "No verified edition/item/precise source locator"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "institution:changan-daoist-monastic-network",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "institution:louguan",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "institution:louguan",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "NO_VERIFIED_LOCATOR",
+      "subject": "institution:louguan",
+      "detail": "No verified edition/item/precise source locator"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "institution:louguan",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "museum_object:classics-commentary-manuscript",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "museum_object:classics-commentary-manuscript",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "NO_VERIFIED_LOCATOR",
+      "subject": "museum_object:classics-commentary-manuscript",
+      "detail": "No verified edition/item/precise source locator"
+    },
+    {
+      "code": "SOURCE_RIGHTS_BLOCKED",
+      "subject": "museum_object:classics-commentary-manuscript",
+      "detail": "At least one linked source has unknown or restricted rights"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "museum_object:classics-commentary-manuscript",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "museum_object:heart-sutra-manuscript-leaf",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "museum_object:heart-sutra-manuscript-leaf",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "SOURCE_RIGHTS_BLOCKED",
+      "subject": "museum_object:heart-sutra-manuscript-leaf",
+      "detail": "At least one linked source has unknown or restricted rights"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "museum_object:heart-sutra-manuscript-leaf",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "museum_object:daodejing-commentary-manuscript-record",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "museum_object:daodejing-commentary-manuscript-record",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "SOURCE_RIGHTS_BLOCKED",
+      "subject": "museum_object:daodejing-commentary-manuscript-record",
+      "detail": "At least one linked source has unknown or restricted rights"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "museum_object:daodejing-commentary-manuscript-record",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "museum_object:daoist-inscription-rubbing-record",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "museum_object:daoist-inscription-rubbing-record",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "NO_VERIFIED_LOCATOR",
+      "subject": "museum_object:daoist-inscription-rubbing-record",
+      "detail": "No verified edition/item/precise source locator"
+    },
+    {
+      "code": "SOURCE_RIGHTS_BLOCKED",
+      "subject": "museum_object:daoist-inscription-rubbing-record",
+      "detail": "At least one linked source has unknown or restricted rights"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "museum_object:daoist-inscription-rubbing-record",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "museum_object:imperial-classics-scroll-record",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "museum_object:imperial-classics-scroll-record",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "NO_VERIFIED_LOCATOR",
+      "subject": "museum_object:imperial-classics-scroll-record",
+      "detail": "No verified edition/item/precise source locator"
+    },
+    {
+      "code": "SOURCE_RIGHTS_BLOCKED",
+      "subject": "museum_object:imperial-classics-scroll-record",
+      "detail": "At least one linked source has unknown or restricted rights"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "museum_object:imperial-classics-scroll-record",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "museum_object:guozijian-ritual-vessel-record",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "museum_object:guozijian-ritual-vessel-record",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "NO_VERIFIED_LOCATOR",
+      "subject": "museum_object:guozijian-ritual-vessel-record",
+      "detail": "No verified edition/item/precise source locator"
+    },
+    {
+      "code": "SOURCE_RIGHTS_BLOCKED",
+      "subject": "museum_object:guozijian-ritual-vessel-record",
+      "detail": "At least one linked source has unknown or restricted rights"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "museum_object:guozijian-ritual-vessel-record",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "museum_object:translation-catalogue-manuscript-record",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "museum_object:translation-catalogue-manuscript-record",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "NO_VERIFIED_LOCATOR",
+      "subject": "museum_object:translation-catalogue-manuscript-record",
+      "detail": "No verified edition/item/precise source locator"
+    },
+    {
+      "code": "SOURCE_RIGHTS_BLOCKED",
+      "subject": "museum_object:translation-catalogue-manuscript-record",
+      "detail": "At least one linked source has unknown or restricted rights"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "museum_object:translation-catalogue-manuscript-record",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "museum_object:longmen-dedication-inscription-record",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "museum_object:longmen-dedication-inscription-record",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "SOURCE_RIGHTS_BLOCKED",
+      "subject": "museum_object:longmen-dedication-inscription-record",
+      "detail": "At least one linked source has unknown or restricted rights"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "museum_object:longmen-dedication-inscription-record",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "museum_object:translation-bureau-tablet",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "museum_object:translation-bureau-tablet",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "NO_VERIFIED_LOCATOR",
+      "subject": "museum_object:translation-bureau-tablet",
+      "detail": "No verified edition/item/precise source locator"
+    },
+    {
+      "code": "SOURCE_RIGHTS_BLOCKED",
+      "subject": "museum_object:translation-bureau-tablet",
+      "detail": "At least one linked source has unknown or restricted rights"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "museum_object:translation-bureau-tablet",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "passage:form-is-emptiness",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "passage:form-is-emptiness",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "passage:form-is-emptiness",
+      "detail": "missing=fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "passage:humans-follow-earth",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "passage:humans-follow-earth",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "passage:humans-follow-earth",
+      "detail": "missing=fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "passage:dao-that-can-be-spoken",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "passage:dao-that-can-be-spoken",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "passage:dao-that-can-be-spoken",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "passage:highest-good-like-water",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "passage:highest-good-like-water",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "passage:highest-good-like-water",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "passage:learning-increases-dao-decreases",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "passage:learning-increases-dao-decreases",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "passage:learning-increases-dao-decreases",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "passage:learn-and-practice",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "passage:learn-and-practice",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "passage:learn-and-practice",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "passage:three-walk-together",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "passage:three-walk-together",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "passage:three-walk-together",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "passage:do-not-impose",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "passage:do-not-impose",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "passage:do-not-impose",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "passage:prajna-all-dharmas",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "passage:prajna-all-dharmas",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "passage:prajna-all-dharmas",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "passage:prajna-five-skandhas",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "passage:prajna-five-skandhas",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "passage:prajna-five-skandhas",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "passage:prajna-no-wisdom",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "passage:prajna-no-wisdom",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "passage:prajna-no-wisdom",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "passage:return-to-ritual",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "passage:return-to-ritual",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "passage:return-to-ritual",
+      "detail": "missing=fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "passage:turning-of-dharma-wheel-thanissaro-en",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "passage:turning-of-dharma-wheel-thanissaro-en",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "passage:turning-of-dharma-wheel-thanissaro-en",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "passage:turning-of-dharma-wheel",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "passage:turning-of-dharma-wheel",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "passage:turning-of-dharma-wheel",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "place:changan",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "place:changan",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "place:changan",
+      "detail": "missing=fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "place:dunhuang",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "place:dunhuang",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "place:dunhuang",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "place:great-wild-goose-pagoda-site",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "place:great-wild-goose-pagoda-site",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "place:great-wild-goose-pagoda-site",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "place:zhongnan-mountains",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "place:zhongnan-mountains",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "NO_VERIFIED_LOCATOR",
+      "subject": "place:zhongnan-mountains",
+      "detail": "No verified edition/item/precise source locator"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "place:zhongnan-mountains",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "place:longmen-grottoes",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "place:longmen-grottoes",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "place:longmen-grottoes",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "place:luoyang",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "place:luoyang",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "place:luoyang",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "place:mount-wutai",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "place:mount-wutai",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "place:mount-wutai",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "place:nalanda",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "place:nalanda",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "place:nalanda",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "place:qiuci",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "place:qiuci",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "place:qiuci",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "place:sarnath",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "place:sarnath",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "place:sarnath",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "route:changan-luoyang-imperial-corridor",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "route:changan-luoyang-imperial-corridor",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "route:changan-luoyang-imperial-corridor",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "route:xuanzang-western-pilgrimage",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "route:xuanzang-western-pilgrimage",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "route:xuanzang-western-pilgrimage",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "text:analects",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "text:analects",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "text:analects",
+      "detail": "missing=fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "text:daodejing",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "text:daodejing",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "text:daodejing",
+      "detail": "missing=fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "text:daoist-institutional-records",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "text:daoist-institutional-records",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "NO_VERIFIED_LOCATOR",
+      "subject": "text:daoist-institutional-records",
+      "detail": "No verified edition/item/precise source locator"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "text:daoist-institutional-records",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "text:dhammacakkappavattana-sutta",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "text:dhammacakkappavattana-sutta",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "text:dhammacakkappavattana-sutta",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "text:five-classics-corrected-meanings",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "text:five-classics-corrected-meanings",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "NO_VERIFIED_LOCATOR",
+      "subject": "text:five-classics-corrected-meanings",
+      "detail": "No verified edition/item/precise source locator"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "text:five-classics-corrected-meanings",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "text:great-tang-records-western-regions",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "text:great-tang-records-western-regions",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "NO_VERIFIED_LOCATOR",
+      "subject": "text:great-tang-records-western-regions",
+      "detail": "No verified edition/item/precise source locator"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "text:great-tang-records-western-regions",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "text:heart-sutra",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "text:heart-sutra",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "text:heart-sutra",
+      "detail": "missing=fact,bilingual,rights,accessibility,editorial,tradition; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "text_version:analects-received",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "text_version:analects-received",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "text_version:analects-received",
+      "detail": "missing=fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "text_version:daodejing-received",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "text_version:daodejing-received",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "text_version:daodejing-received",
+      "detail": "missing=fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "text_version:daoist-institutional-records-research",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "text_version:daoist-institutional-records-research",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "NO_VERIFIED_LOCATOR",
+      "subject": "text_version:daoist-institutional-records-research",
+      "detail": "No verified edition/item/precise source locator"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "text_version:daoist-institutional-records-research",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "text_version:dhammacakkappavattana-sutta-pali",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "text_version:dhammacakkappavattana-sutta-pali",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "text_version:dhammacakkappavattana-sutta-pali",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "text_version:dhammacakkappavattana-sutta-thanissaro-en",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "text_version:dhammacakkappavattana-sutta-thanissaro-en",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "text_version:dhammacakkappavattana-sutta-thanissaro-en",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "text_version:five-classics-corrected-meanings-received",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "text_version:five-classics-corrected-meanings-received",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "NO_VERIFIED_LOCATOR",
+      "subject": "text_version:five-classics-corrected-meanings-received",
+      "detail": "No verified edition/item/precise source locator"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "text_version:five-classics-corrected-meanings-received",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "text_version:great-tang-records-western-regions-received",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "text_version:great-tang-records-western-regions-received",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "NO_VERIFIED_LOCATOR",
+      "subject": "text_version:great-tang-records-western-regions-received",
+      "detail": "No verified edition/item/precise source locator"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "text_version:great-tang-records-western-regions-received",
+      "detail": "missing=schema,fact,bilingual,rights,accessibility,editorial; failed="
+    },
+    {
+      "code": "NOT_PUBLIC",
+      "subject": "text_version:heart-sutra-chinese-received",
+      "detail": "publicationState=preview"
+    },
+    {
+      "code": "NOT_PUBLISHABLE",
+      "subject": "text_version:heart-sutra-chinese-received",
+      "detail": "reviewStatus=bilingual_reviewed"
+    },
+    {
+      "code": "REVIEW_CHECKS_INCOMPLETE",
+      "subject": "text_version:heart-sutra-chinese-received",
+      "detail": "missing=fact,bilingual,rights,accessibility,editorial; failed="
+    }
+  ],
+  "warnings": [
+    {
+      "code": "OBJECT_PLACEHOLDER",
+      "subject": "museum_object:classics-commentary-manuscript",
+      "detail": "Collection, accession, provenance and media rights are incomplete"
+    },
+    {
+      "code": "OBJECT_PLACEHOLDER",
+      "subject": "museum_object:daodejing-commentary-manuscript-record",
+      "detail": "Collection, accession, provenance and media rights are incomplete"
+    },
+    {
+      "code": "OBJECT_PLACEHOLDER",
+      "subject": "museum_object:daoist-inscription-rubbing-record",
+      "detail": "Collection, accession, provenance and media rights are incomplete"
+    },
+    {
+      "code": "OBJECT_PLACEHOLDER",
+      "subject": "museum_object:guozijian-ritual-vessel-record",
+      "detail": "Collection, accession, provenance and media rights are incomplete"
+    },
+    {
+      "code": "OBJECT_PLACEHOLDER",
+      "subject": "museum_object:heart-sutra-manuscript-leaf",
+      "detail": "Collection, accession, provenance and media rights are incomplete"
+    },
+    {
+      "code": "OBJECT_PLACEHOLDER",
+      "subject": "museum_object:imperial-classics-scroll-record",
+      "detail": "Collection, accession, provenance and media rights are incomplete"
+    },
+    {
+      "code": "OBJECT_PLACEHOLDER",
+      "subject": "museum_object:longmen-dedication-inscription-record",
+      "detail": "Collection, accession, provenance and media rights are incomplete"
+    },
+    {
+      "code": "OBJECT_PLACEHOLDER",
+      "subject": "museum_object:translation-bureau-tablet",
+      "detail": "Collection, accession, provenance and media rights are incomplete"
+    },
+    {
+      "code": "OBJECT_PLACEHOLDER",
+      "subject": "museum_object:translation-catalogue-manuscript-record",
+      "detail": "Collection, accession, provenance and media rights are incomplete"
+    },
+    {
+      "code": "SOURCE_LOCATOR_DRAFT",
+      "subject": "source:daoist-historical-record",
+      "detail": "locatorLevel=topic; citationStatus=draft"
+    },
+    {
+      "code": "SOURCE_LOCATOR_DRAFT",
+      "subject": "source:confucian-commentarial-record",
+      "detail": "locatorLevel=topic; citationStatus=draft"
+    },
+    {
+      "code": "SOURCE_LOCATOR_DRAFT",
+      "subject": "source:historical-geography",
+      "detail": "locatorLevel=topic; citationStatus=draft"
+    },
+    {
+      "code": "SOURCE_LOCATOR_DRAFT",
+      "subject": "source:buddhist-biographical-records",
+      "detail": "locatorLevel=topic; citationStatus=draft"
+    },
+    {
+      "code": "SOURCE_LOCATOR_DRAFT",
+      "subject": "source:tang-imperial-records",
+      "detail": "locatorLevel=topic; citationStatus=draft"
+    },
+    {
+      "code": "SOURCE_LOCATOR_DRAFT",
+      "subject": "source:buddhist-institutional-records",
+      "detail": "locatorLevel=topic; citationStatus=draft"
+    },
+    {
+      "code": "SOURCE_LOCATOR_DRAFT",
+      "subject": "source:education-classics-records",
+      "detail": "locatorLevel=topic; citationStatus=draft"
+    },
+    {
+      "code": "SOURCE_LOCATOR_DRAFT",
+      "subject": "source:object-records",
+      "detail": "locatorLevel=collection; citationStatus=draft"
+    }
+  ]
+}

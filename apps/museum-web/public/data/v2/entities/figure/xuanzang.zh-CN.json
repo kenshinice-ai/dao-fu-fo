@@ -1,43 +1,54 @@
 {
+  "id": "cd7fb9ab-cea1-5e4a-b288-a1e20d568770",
   "locale": "zh-CN",
   "kind": "figure",
   "slug": "xuanzang",
   "title": "玄奘",
-  "subtitle": "602—664 · 僧侣、旅行者、译经组织者",
+  "subtitle": "求法者、译经家与大慈恩寺三藏",
   "tradition": "buddhism",
-  "evidence": "历史有据",
-  "timeLabel": "约 602—664",
-  "shortSummary": "玄奘把求法旅行、文本版本、宫廷支持与长安译经机构连接成一条可追踪的知识链。",
+  "evidence": "historical_documented",
+  "timeLabel": "约 602–664",
+  "shortSummary": "玄奘把求法旅行、文本翻译与长安的国家和寺院制度连接起来。",
   "curatorialDescription": [
-    "玄奘通常以“取经者”的形象被记住，但数字博物馆更关心这段旅程如何改变文本的流动。离开唐境、经过中亚、在南亚学习、返回长安，再组织翻译，每一个阶段都涉及地点、同行者、赞助者、版本和术语选择。",
-    "他不是孤立完成译经的个人英雄。长安的译经工作依赖僧团协作、校勘、口述、记录和国家资源。把这些关系展开，才能看见一部经典如何进入新的语言和制度。",
-    "传统叙事与历史研究对部分旅程细节可能有不同表达。本馆将可考路线、传统记载和后世文学形象分开标示。"
+    "玄奘的意义不只在于一次远行，而在于他如何把印度与中亚的求法经历转化为长安的翻译、讲学和制度实践。",
+    "博物馆将他的旅行、译经、师承和后世叙述分开呈现，避免把传记、传奇和历史事实压成单一故事。"
   ],
-  "researchNote": "出生年份、出行日期和路线细节在不同资料中可能存在差异。第一版采用常见历史年表，并把约数和路线不确定性保留在时间与地图说明中。",
+  "researchNote": "本条目是 Alpha 内容源，后续需要补充具体底本、译经项目和路线节点的逐项来源。",
   "keyFacts": [
-    { "label": "主要地点", "value": "长安 · 印度与中亚求法路线" },
-    { "label": "核心角色", "value": "求法、翻译、文本组织" },
-    { "label": "相关机构", "value": "大慈恩寺译经网络" }
-  ],
-  "related": [
-    { "kind": "text", "slug": "heart-sutra", "title": "《般若波罗蜜多心经》", "relation": "译本传统关联" },
-    { "kind": "place", "slug": "great-cien-monastery", "title": "大慈恩寺", "relation": "译经活动地点" },
-    { "kind": "concept", "slug": "emptiness", "title": "空", "relation": "相关概念" }
-  ],
-  "sources": [
     {
-      "title": "Encyclopaedia Britannica · Xuanzang",
-      "locator": "biographical overview",
-      "grade": "B",
-      "role": "生平年表和历史概述",
-      "url": "https://www.britannica.com/biography/Xuanzang"
+      "label": "核心地点",
+      "value": "长安·大慈恩寺"
     },
     {
-      "title": "The Metropolitan Museum of Art · Buddhism in the Tang",
-      "locator": "Heilbrunn Timeline of Art History",
-      "grade": "C",
-      "role": "唐代佛教与视觉文化背景",
-      "url": "https://www.metmuseum.org/toah/hd/chbu/hd_chbu.htm"
+      "label": "主要身份",
+      "value": "僧侣、求法者、译经家"
     }
-  ]
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:xuanzang-records",
+      "title": "《大唐大慈恩寺三藏法师传》",
+      "locator": "《大唐大慈恩寺三藏法师传》全书（卷一至卷十）；卷一开篇为玄奘本传，后续卷次记录求法与译经活动",
+      "grade": "A",
+      "role": "玄奘生平、求法与译经活动的原始传记依据",
+      "url": "https://ctext.org/library.pl?if=en&res=112971"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "道·儒·佛文明数字博物馆策展与方法说明",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "项目的策展框架与术语规则"
+    }
+  ],
+  "profile": {
+    "historicity": "documented",
+    "figureClass": "historical_person",
+    "gender": "male",
+    "canonicalNameOriginal": "玄奘",
+    "nameLanguageCode": "lzh"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
 }

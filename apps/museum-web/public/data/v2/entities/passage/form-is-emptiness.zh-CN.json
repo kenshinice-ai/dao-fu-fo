@@ -1,41 +1,74 @@
 {
+  "id": "08c09a75-a9b6-5cd1-b167-41025b7bb298",
   "locale": "zh-CN",
   "kind": "passage",
   "slug": "form-is-emptiness",
   "title": "色不异空，空不异色",
   "subtitle": "《般若波罗蜜多心经》",
   "tradition": "buddhism",
-  "evidence": "公开原典 · 精确版本定位",
-  "timeLabel": "玄奘译本传统 · 唐",
-  "shortSummary": "《心经》中最常被引用的句子之一，以“色”和“空”的互不分离挑战固定自性的理解。",
+  "evidence": "historical_documented",
+  "timeLabel": "隋唐汉译与流通语境",
+  "shortSummary": "这句经文在汉传佛教中传播极广，但需要回到完整段落和具体版本理解。",
   "curatorialDescription": [
-    "“色”在这里不只是颜色，而指有形、有质碍的现象；“空”也不是虚无。两者“不异”，意味着现象不能被理解成独立、固定和永恒不变的实体。",
-    "脱离上下文时，这句话容易被改写成“什么都不存在”。研究层因此同时显示版本、定位和解释边界。",
-    "第一版使用短引文与原创释义，不复制现代版权译注。"
+    "‘色不异空，空不异色’不是脱离上下文的抽象口号。它出现在对色、空关系的连续论述中，展现般若思想如何通过汉译经典进入中国佛教语境。"
   ],
-  "researchNote": "《心经》的文本形成与译本归属存在复杂研究讨论。第一版展示 CBETA 所收 T0251 文本及其传统归属，同时保留进一步版本研究入口。",
+  "researchNote": "Alpha 条目已连接文本与版本实体；正式发布前需补充译者、底本、异文和更精确 locator。",
   "keyFacts": [
-    { "label": "类型", "value": "经文摘录" },
-    { "label": "版本", "value": "CBETA T0251" },
-    { "label": "敏感等级", "value": "公开文本" }
+    {
+      "label": "敏感等级",
+      "value": "公开文本"
+    }
   ],
   "quote": {
-    "original": "色不异空，空不异色；色即是空，空即是色。",
-    "interpretation": "现象与空性不是两个互相排斥的世界。事物正因为依赖条件而出现，所以没有固定不变的独立自性。",
-    "locator": "《般若波罗蜜多心经》T0251, 001"
+    "original": "色不异空，空不异色。色即是空，空即是色。",
+    "interpretation": "可见的形色与空性并非两个彼此隔绝的实体；经文随后继续从受、想、行、识展开说明。",
+    "locator": "《心经》：色不异空，空不异色"
   },
   "related": [
-    { "kind": "text", "slug": "heart-sutra", "title": "《般若波罗蜜多心经》", "relation": "所属经典" },
-    { "kind": "concept", "slug": "emptiness", "title": "空", "relation": "核心概念" },
-    { "kind": "figure", "slug": "xuanzang", "title": "玄奘", "relation": "译本传统关联" }
+    {
+      "kind": "figure",
+      "slug": "xuanzang",
+      "title": "玄奘",
+      "relation": "译经与传播语境"
+    },
+    {
+      "kind": "text",
+      "slug": "heart-sutra",
+      "title": "《心经》",
+      "relation": "摘录自"
+    }
   ],
   "sources": [
     {
-      "title": "CBETA Online · T0251",
-      "locator": "T08, no. 251",
+      "id": "source:heart-sutra-edition",
+      "title": "《般若波罗蜜多心经》汉译本与经录资料",
+      "locator": "第2节：舍利子，色不异空，空不异色，色即是空，空即是色",
       "grade": "A",
-      "role": "原文和版本定位",
-      "url": "https://cbetaonline.dila.edu.tw/zh/T0251"
+      "role": "passage 原文和版本定位的初始依据",
+      "url": "https://ctext.org/wiki.pl?chapter=412996&if=en"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "道·儒·佛文明数字博物馆策展与方法说明",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "项目的策展框架与术语规则"
     }
-  ]
+  ],
+  "profile": {
+    "textSlug": "heart-sutra",
+    "textVersionSlug": "heart-sutra-chinese-received",
+    "passageKind": "scripture_excerpt",
+    "locatorOriginal": "色不异空，空不异色",
+    "locatorNormalised": "Heart Sutra: form and emptiness",
+    "originalText": "色不异空，空不异色。色即是空，空即是色。",
+    "punctuatedText": "色不异空，空不异色。色即是空，空即是色。",
+    "modernZh": "形色与空性并非彼此分离。",
+    "translationEn": "Form is not different from emptiness; emptiness is not different from form.",
+    "ritualSensitivity": "public_textual",
+    "attributionStatus": "anonymous_or_composite",
+    "variantReadings": []
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
 }

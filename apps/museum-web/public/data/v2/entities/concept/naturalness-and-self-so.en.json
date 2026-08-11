@@ -1,0 +1,39 @@
+{
+  "id": "d3143aba-3e62-5d1b-997d-9321cfa5ebb3",
+  "locale": "en",
+  "kind": "concept",
+  "slug": "naturalness-and-self-so",
+  "title": "Naturalness and self-so",
+  "tradition": "daoism",
+  "evidence": "scholarly_interpretation",
+  "timeLabel": "Comparative concept; Tang commentary focus",
+  "shortSummary": "In early Daoist texts, ziran first concerns being so of itself and should not be equated directly with the modern category of nature.",
+  "curatorialDescription": [
+    "The concept layer separates passages, commentaries and modern interpretations so that one translation does not erase historical meanings."
+  ],
+  "researchNote": "Variants of the Daodejing and Tang commentaries on ziran still need to be added.",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:daodejing-edition",
+      "title": "Received editions and chapter references for the Daodejing",
+      "locator": "第二十五章（“人法地，地法天，天法道，道法自然”）",
+      "grade": "A",
+      "role": "Initial basis for the Daoist passage and chapter locator",
+      "url": "https://ctext.org/text.pl?if=en&node=11616&show=parallel"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "Curatorial and methodological notes of the Dao–Ru–Fo Digital Museum",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "Curatorial framework and terminology rules"
+    }
+  ],
+  "profile": {
+    "conceptKind": "doctrinal"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

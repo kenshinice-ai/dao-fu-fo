@@ -2,8 +2,8 @@
   {
     "kind": "institution",
     "slug": "changan-translation-bureau",
-    "publicationState": "preview",
-    "reviewStatus": "bilingual_reviewed",
+    "publicationState": "public",
+    "reviewStatus": "publishable",
     "primaryEvidenceLayer": "historical_inferred",
     "importance": 4,
     "isFeatured": false,

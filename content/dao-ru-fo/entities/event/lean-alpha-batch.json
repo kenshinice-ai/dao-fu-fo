@@ -56,7 +56,8 @@
     ],
     "sourceIds": [
       "source:tang-imperial-records",
-      "source:met-tang-overview"
+      "source:met-tang-overview",
+      "source:tang-taizong-ctext"
     ],
     "profile": {
       "eventKind": "dynastic_transition",
@@ -188,7 +189,8 @@
     ],
     "sourceIds": [
       "source:confucian-commentarial-record",
-      "source:education-classics-records"
+      "source:education-classics-records",
+      "source:zhenguan-governance-records"
     ],
     "profile": {
       "eventKind": "editorial_project",
@@ -200,8 +202,8 @@
   {
     "kind": "event",
     "slug": "daci-en-monastery-established",
-    "publicationState": "preview",
-    "reviewStatus": "bilingual_reviewed",
+    "publicationState": "public",
+    "reviewStatus": "publishable",
     "primaryEvidenceLayer": "historical_documented",
     "importance": 4,
     "isFeatured": false,
@@ -386,7 +388,8 @@
     ],
     "sourceIds": [
       "source:buddhist-biographical-records",
-      "source:historical-geography"
+      "source:historical-geography",
+      "source:yijing-biography-ctext"
     ],
     "profile": {
       "eventKind": "journey",
@@ -452,7 +455,8 @@
     ],
     "sourceIds": [
       "source:tang-imperial-records",
-      "source:historical-geography"
+      "source:historical-geography",
+      "source:wu-zhou-chronology"
     ],
     "profile": {
       "eventKind": "dynastic_transition",
@@ -518,7 +522,8 @@
     ],
     "sourceIds": [
       "source:buddhist-biographical-records",
-      "source:buddhist-institutional-records"
+      "source:buddhist-institutional-records",
+      "source:yijing-biography-ctext"
     ],
     "profile": {
       "eventKind": "journey",

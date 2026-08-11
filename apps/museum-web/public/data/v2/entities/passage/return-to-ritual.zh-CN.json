@@ -1,41 +1,74 @@
 {
+  "id": "67fadcb7-a43e-51c4-afb4-f05d19cbc16e",
   "locale": "zh-CN",
   "kind": "passage",
   "slug": "return-to-ritual",
   "title": "克己复礼为仁",
-  "subtitle": "《论语·颜渊》12.1",
+  "subtitle": "《论语》颜渊篇",
   "tradition": "confucianism",
-  "evidence": "公开原典 · 章句定位",
-  "timeLabel": "先秦语录传统 · 隋唐经学持续解释",
-  "shortSummary": "这句话把自我约束、礼和仁连接起来，是理解儒家修身与社会秩序关系的重要入口。",
+  "evidence": "historical_inferred",
+  "timeLabel": "《论语》篇章与唐代经学语境",
+  "shortSummary": "这句经文把仁与自我约束、礼制实践连接起来，后来在政治和教育语境中不断被重新解释。",
   "curatorialDescription": [
-    "“礼”不只是仪式表面，也涉及关系、角色、节度和共同秩序。“克己”则不能简单理解为压抑个体，而需要放回“仁”的问题中阅读。",
-    "在国家制度中，礼可以进入教育和政治；在个人实践中，礼又与日常行为和自我修养相连。二者既相关，也不能互相替代。",
-    "隋唐经学把先秦经典纳入新的注疏和教育体系，因此本条同时连接《论语》原典与唐代经学语境。"
+    "‘克己复礼’不能只被读成个人道德训诫；它还连接身体、礼仪、教育和政治秩序，是儒家概念进入制度生活的一个入口。"
   ],
-  "researchNote": "第一版使用《论语·颜渊》12.1 的通行章句定位。现代中文与英文解释为本馆原创概述。",
+  "researchNote": "Alpha 条目以篇章定位为起点，后续补充注疏、异文和唐代经学使用语境。",
   "keyFacts": [
-    { "label": "类型", "value": "经典名句" },
-    { "label": "定位", "value": "《论语·颜渊》12.1" },
-    { "label": "关键词", "value": "克己 · 礼 · 仁" }
+    {
+      "label": "敏感等级",
+      "value": "公开文本"
+    }
   ],
   "quote": {
-    "original": "克己复礼为仁。一日克己复礼，天下归仁焉。",
-    "interpretation": "约束只顾自身欲求的倾向，并回到使人与人关系得以成立的礼，是仁的一种实践方式。",
-    "locator": "《论语·颜渊》12.1"
+    "original": "克己复礼为仁。",
+    "interpretation": "在颜渊篇的语境中，仁与约束自我、实践礼相连；它不是脱离关系和制度的抽象善意。",
+    "locator": "《论语·颜渊》"
   },
   "related": [
-    { "kind": "text", "slug": "analects", "title": "《论语》", "relation": "所属经典" },
-    { "kind": "concept", "slug": "ritual", "title": "礼", "relation": "核心概念" },
-    { "kind": "figure", "slug": "kong-yingda", "title": "孔颖达", "relation": "唐代经学语境" }
+    {
+      "kind": "figure",
+      "slug": "kong-yingda",
+      "title": "孔颖达",
+      "relation": "唐代经学解释语境"
+    },
+    {
+      "kind": "text",
+      "slug": "analects",
+      "title": "《论语》",
+      "relation": "摘录自"
+    }
   ],
   "sources": [
     {
-      "title": "Chinese Text Project · 论语",
-      "locator": "颜渊 12.1",
+      "id": "source:analects-edition",
+      "title": "《论语》通行本与篇章资料",
+      "locator": "颜渊第十二，第1章（“克己复礼为仁”）",
       "grade": "A",
-      "role": "原文章句定位",
-      "url": "https://ctext.org/analects/yan-yuan"
+      "role": "儒家 passage 原文和篇章定位的初始依据",
+      "url": "https://ctext.org/wiki.pl?chapter=198285&if=en&remap=gb"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "道·儒·佛文明数字博物馆策展与方法说明",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "项目的策展框架与术语规则"
     }
-  ]
+  ],
+  "profile": {
+    "textSlug": "analects",
+    "textVersionSlug": "analects-received",
+    "passageKind": "classic_saying",
+    "locatorOriginal": "颜渊篇",
+    "locatorNormalised": "Analects Yan Yuan",
+    "originalText": "克己复礼为仁。",
+    "punctuatedText": "克己复礼为仁。",
+    "modernZh": "约束自己，使行为回到礼的规范，就是仁。",
+    "translationEn": "To restrain the self and return to ritual is humaneness.",
+    "ritualSensitivity": "public_textual",
+    "attributionStatus": "anonymous_or_composite",
+    "variantReadings": []
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
 }

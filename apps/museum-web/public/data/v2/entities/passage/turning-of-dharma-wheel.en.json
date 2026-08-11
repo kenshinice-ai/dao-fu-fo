@@ -1,0 +1,83 @@
+{
+  "id": "00d53b72-86d2-5115-99eb-ba9ffceca80f",
+  "locale": "en",
+  "kind": "passage",
+  "slug": "turning-of-dharma-wheel",
+  "title": "This is the noble truth of suffering",
+  "subtitle": "A Four Noble Truths saying in the Dhammacakkappavattana Sutta",
+  "tradition": "buddhism",
+  "evidence": "historical_inferred",
+  "timeLabel": "SN 56.11; transmitted first-teaching context at Sarnath",
+  "shortSummary": "The short line keeps Buddhist teaching within the textual setting of the first turning at Sarnath rather than turning it into a context-free modern maxim.",
+  "curatorialDescription": [
+    "Original text, version, speaker attribution and the Sarnath event are modelled separately; the Buddha's saying is marked as preserved through transmission."
+  ],
+  "researchNote": "The Pāli digital edition is the research entry point. Chinese translations, parallels and a fuller passage will be added in a later textual-review batch.",
+  "keyFacts": [],
+  "quote": {
+    "original": "Idaṃ dukkhaṃ ariyasaccaṃ.",
+    "interpretation": "This is the noble truth of suffering.",
+    "locator": "SN 56.11"
+  },
+  "related": [
+    {
+      "kind": "text",
+      "slug": "dhammacakkappavattana-sutta",
+      "title": "Dhammacakkappavattana Sutta",
+      "relation": "Excerpt from"
+    }
+  ],
+  "sources": [
+    {
+      "id": "source:buddha-early-texts",
+      "title": "Early Buddhist texts in the Pāli canon: MN 26 and SN 56.11",
+      "locator": "MN 26 Ariyapariyesanā：求法与到达鹿野苑；SN 56.11 Dhammacakkappavattana：鹿野苑初转法轮文本",
+      "grade": "A",
+      "role": "Primary-text entry for Buddha biography, early teaching traditions and the Sarnath setting; the transmitted discourse is not treated as a verbatim transcript",
+      "url": "https://suttacentral.net/sn56.11/en/sujato"
+    },
+    {
+      "id": "source:sn56-11-thanissaro",
+      "title": "Access to Insight: SN 56.11 translated by Thanissaro Bhikkhu",
+      "locator": "SN 56.11，四圣谛段落；“This is the noble truth of stress.”",
+      "grade": "A",
+      "role": "English translation witness for comparing translator wording with the Pāli passage; excerpts remain subject to the source site's licence",
+      "url": "https://www.accesstoinsight.org/tipitaka/sn/sn56/sn56.011.than.html"
+    }
+  ],
+  "profile": {
+    "textSlug": "dhammacakkappavattana-sutta",
+    "textVersionSlug": "dhammacakkappavattana-sutta-pali",
+    "passageKind": "scripture_excerpt",
+    "locatorOriginal": "相应部 56.11",
+    "locatorNormalised": "Saṃyutta Nikāya 56.11",
+    "originalText": "Idaṃ dukkhaṃ ariyasaccaṃ.",
+    "punctuatedText": "Idaṃ dukkhaṃ ariyasaccaṃ.",
+    "modernZh": "这是苦圣谛。",
+    "translationEn": "This is the noble truth of suffering.",
+    "ritualSensitivity": "public_textual",
+    "attributionStatus": "recorded_by_others",
+    "variantReadings": [
+      {
+        "id": "variant:turning-dukkha-english-renderings",
+        "kind": "translation",
+        "status": "attested",
+        "label": {
+          "zh-CN": "dukkha 的英译措辞",
+          "en": "English renderings of dukkha"
+        },
+        "form": "suffering / stress",
+        "note": {
+          "zh-CN": "当前巴利语段落的英译字段使用 suffering；同一经文的 Thanissaro 英译版本使用 stress。本条只记录译者措辞差异，不把它当作巴利语底本异文或唯一释义。",
+          "en": "The current Pāli passage uses suffering in its English field; the Thanissaro English witness uses stress. This records a translator-wording difference, not a manuscript variant or a single authorised interpretation of the Pāli."
+        },
+        "sourceIds": [
+          "source:buddha-early-texts",
+          "source:sn56-11-thanissaro"
+        ]
+      }
+    ]
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "9134ebc2-a3e4-5d54-8d09-016b2ea529c6",
+  "locale": "en",
+  "kind": "event",
+  "slug": "yijing-departs-by-sea",
+  "title": "Yijing departs by sea",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "c. 671",
+  "shortSummary": "Around 671, Yijing travelled south by sea, showing that pilgrimage and transmission were not limited to an overland route west of Chang'an.",
+  "curatorialDescription": [
+    "The event opens a route comparison without merging different travellers' itineraries."
+  ],
+  "researchNote": "Port of departure, stops and dates should be modelled from Yijing's writings and biographies.",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:buddhist-biographical-records",
+      "title": "Biographical and pilgrimage records of Sui–Tang Buddhist monks",
+      "locator": "义净、玄奘及求法僧侣条目；底本与卷页待核",
+      "grade": "B",
+      "role": "Research entry point for Buddhist figures, pilgrimage routes and translation activity"
+    },
+    {
+      "id": "source:historical-geography",
+      "title": "Historical geography and urban gazetteers of the Sui–Tang period",
+      "locator": "长安、洛阳、敦煌历史名称与地理范围",
+      "grade": "A",
+      "role": "Geographic basis for real places, historical names and coordinate approximations"
+    }
+  ],
+  "profile": {
+    "eventKind": "journey",
+    "historicity": "documented",
+    "sequenceOrder": 8,
+    "eventScope": "transregional"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

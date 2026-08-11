@@ -1,0 +1,42 @@
+{
+  "id": "d175913d-5ff5-5e40-b7e2-e4b6b3489b70",
+  "locale": "zh-CN",
+  "kind": "event",
+  "slug": "tang-dynasty-founded",
+  "title": "唐朝建立",
+  "tradition": "confucianism",
+  "evidence": "historical_documented",
+  "timeLabel": "618",
+  "shortSummary": "618 年的王朝更替重组了长安及其政治、教育与宗教制度的资源环境。",
+  "curatorialDescription": [
+    "时间轴以制度环境变化为重点，不把王朝建立简化为单一人物瞬间。"
+  ],
+  "researchNote": "都城控制、制度承接和不同机构转型仍需拆成后续事件。",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:tang-imperial-records",
+      "title": "隋唐正史人物与制度记录",
+      "locator": "帝王、制度与年代条目；具体版本和卷页待核",
+      "grade": "B",
+      "role": "隋唐人物、都城、制度和事件时间的研究参考"
+    },
+    {
+      "id": "source:met-tang-overview",
+      "title": "大都会艺术博物馆：唐朝（618–907）",
+      "locator": "Heilbrunn Timeline of Art History; Sui reunification, Tang chronology, Chang'an and the An Lushan rebellion",
+      "grade": "B",
+      "role": "隋唐年代、长安国际性与中唐转折的公开概览来源",
+      "url": "https://www.metmuseum.org/essays/tang-dynasty-618-906"
+    }
+  ],
+  "profile": {
+    "eventKind": "dynastic_transition",
+    "historicity": "documented",
+    "sequenceOrder": 2,
+    "eventScope": "imperial"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

@@ -1,0 +1,140 @@
+{
+  "kind": "figure",
+  "slug": "sakyamuni",
+  "publicationState": "public",
+  "reviewStatus": "publishable",
+  "primaryEvidenceLayer": "traditional_account",
+  "importance": 5,
+  "isFeatured": true,
+  "translations": {
+    "zh-CN": {
+      "title": "释迦牟尼佛（乔达摩·悉达多）",
+      "subtitle": "佛教教法源头、僧团记忆与跨区域传播的核心人物",
+      "shortSummary": "释迦牟尼是佛教思想和朝圣地理的核心入口，但早期文本中的片段性生平、后世佛传和神圣叙事必须分层展示。",
+      "curatorialDescription": [
+        "本馆把释迦牟尼的历史性问题、早期佛教文本中的传述、鹿野苑的教法记忆和后世经典中的佛陀形象连接起来，但不把后世完整佛传倒写成一份同时代传记。",
+        "鹿野苑可以成为‘人物—事件—地点—言说—后世朝圣’的完整样本；现实地图显示遗址，神圣意义和佛教记忆则标注为传统与后世层。"
+      ],
+      "researchNote": "早期佛教文本并不提供一份连贯的现代传记；年代采用宽泛导航区间，初转法轮与鹿野苑关系分别标记为早期传述、遗产记忆和后世朝圣层。",
+      "timeLabel": "传统与学术年代有争议；约公元前 5 世纪导航区间",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "人物类别",
+            "en": "Figure class"
+          },
+          "value": {
+            "zh-CN": "历史人物／传统圣者",
+            "en": "Historical person / traditional sage"
+          }
+        },
+        {
+          "label": {
+            "zh-CN": "关键区分",
+            "en": "Key distinction"
+          },
+          "value": {
+            "zh-CN": "早期教法传述不等于逐字现场记录",
+            "en": "Early teaching traditions are not treated as verbatim transcripts"
+          }
+        }
+      ]
+    },
+    "en": {
+      "title": "Śākyamuni Buddha (Gautama)",
+      "subtitle": "A source figure of Buddhist teaching, monastic memory and transregional transmission",
+      "shortSummary": "Śākyamuni is a central gateway into Buddhist thought and pilgrimage geography, but fragmentary early-text biographies, later Buddha legends and sacred narratives must remain layered.",
+      "curatorialDescription": [
+        "The museum connects the historical question, transmitted accounts in early Buddhist texts, the teaching memory of Sarnath and later scriptural representations of the Buddha without projecting a complete later biography into the same period.",
+        "Sarnath becomes a full person–event–place–speech–later pilgrimage sample: the real map shows the archaeological site, while sacred meaning and Buddhist memory remain marked as traditional and later layers."
+      ],
+      "researchNote": "Early Buddhist texts do not provide one coherent modern biography. Dates use a broad navigational range; the Sarnath connection is separated into early transmission, heritage memory and later pilgrimage layers.",
+      "timeLabel": "Traditional and scholarly dates contested; broad fifth-century BCE navigation range",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "人物类别",
+            "en": "Figure class"
+          },
+          "value": {
+            "zh-CN": "历史人物／传统圣者",
+            "en": "Historical person / traditional sage"
+          }
+        },
+        {
+          "label": {
+            "zh-CN": "关键区分",
+            "en": "Key distinction"
+          },
+          "value": {
+            "zh-CN": "早期教法传述不等于逐字现场记录",
+            "en": "Early teaching traditions are not treated as verbatim transcripts"
+          }
+        }
+      ]
+    }
+  },
+  "traditions": [
+    {
+      "tradition": "buddhism",
+      "role": "primary",
+      "isPrimary": true,
+      "confidence": "high",
+      "evidenceLayer": "traditional_account",
+      "sourceId": "source:buddha-early-texts"
+    }
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "life",
+      "timeType": "traditional_date",
+      "startYear": -500,
+      "endYear": -400,
+      "displayDate": {
+        "zh-CN": "传统与学术年代有争议；约公元前 5 世纪导航区间",
+        "en": "Traditional and scholarly dates contested; broad fifth-century BCE navigation range"
+      },
+      "confidence": "low",
+      "evidenceLayer": "traditional_account",
+      "sourceId": "source:buddha-early-texts"
+    }
+  ],
+  "sourceIds": [
+    "source:buddha-early-texts",
+    "source:sarnath-site-record",
+    "source:editorial-method"
+  ],
+  "related": [
+    {
+      "kind": "place",
+      "slug": "sarnath",
+      "title": {
+        "zh-CN": "鹿野苑",
+        "en": "Sarnath"
+      },
+      "relation": {
+        "zh-CN": "初转法轮与后世朝圣记忆",
+        "en": "First-teaching tradition and later pilgrimage memory"
+      }
+    },
+    {
+      "kind": "text",
+      "slug": "dhammacakkappavattana-sutta",
+      "title": {
+        "zh-CN": "《转法轮经》",
+        "en": "Dhammacakkappavattana Sutta"
+      },
+      "relation": {
+        "zh-CN": "早期教法传述文本",
+        "en": "Early transmitted teaching text"
+      }
+    }
+  ],
+  "profile": {
+    "historicity": "contested",
+    "figureClass": "historical_person",
+    "gender": "male",
+    "canonicalNameOriginal": "Siddhattha Gotama / Śākyamuni",
+    "nameLanguageCode": "pli-sa"
+  }
+}

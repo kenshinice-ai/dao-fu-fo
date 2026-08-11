@@ -1,0 +1,39 @@
+{
+  "id": "5f45c0de-0fc8-53c1-b977-6a59e0df8616",
+  "locale": "zh-CN",
+  "kind": "institution",
+  "slug": "hongwen-institute",
+  "title": "弘文馆",
+  "tradition": "confucianism",
+  "evidence": "historical_documented",
+  "timeLabel": "唐代机构语境",
+  "shortSummary": "弘文馆为理解唐代宫廷藏书、学术咨询与教育活动提供机构入口。",
+  "curatorialDescription": [
+    "条目与国子监区分，提示唐代知识制度由多种机构、职官和项目共同构成。"
+  ],
+  "researchNote": "机构沿革、职掌、位置和人员名录需按时期核定。",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:education-classics-records",
+      "title": "唐代国子监与经学制度资料",
+      "locator": "国子监、经学与《五经正义》制度语境；底本待核",
+      "grade": "B",
+      "role": "国家教育、经学注疏和知识制度的研究参考"
+    },
+    {
+      "id": "source:tang-imperial-records",
+      "title": "隋唐正史人物与制度记录",
+      "locator": "帝王、制度与年代条目；具体版本和卷页待核",
+      "grade": "B",
+      "role": "隋唐人物、都城、制度和事件时间的研究参考"
+    }
+  ],
+  "profile": {
+    "institutionKind": "court_institute",
+    "networkScope": false
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

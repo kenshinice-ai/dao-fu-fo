@@ -1,0 +1,50 @@
+{
+  "id": "5f0cd94e-98d9-5c38-9516-54659ae1d839",
+  "locale": "zh-CN",
+  "kind": "passage",
+  "slug": "three-walk-together",
+  "title": "三人行，必有我师焉",
+  "tradition": "confucianism",
+  "evidence": "historical_inferred",
+  "timeLabel": "传世本《述而》篇",
+  "shortSummary": "章句把学习置于与他人同行、辨别优点并反省自身的关系中。",
+  "curatorialDescription": [
+    "完整句群同时包含效法与自我修正，不只是一句赞美谦逊的格言。"
+  ],
+  "researchNote": "篇章编号、古注和唐代解释需进一步核对。",
+  "keyFacts": [],
+  "related": [
+    {
+      "kind": "text",
+      "slug": "analects",
+      "title": "《论语》",
+      "relation": "摘录自"
+    }
+  ],
+  "sources": [
+    {
+      "id": "source:analects-edition",
+      "title": "《论语》通行本与篇章资料",
+      "locator": "颜渊第十二，第1章（“克己复礼为仁”）",
+      "grade": "A",
+      "role": "儒家 passage 原文和篇章定位的初始依据",
+      "url": "https://ctext.org/wiki.pl?chapter=198285&if=en&remap=gb"
+    }
+  ],
+  "profile": {
+    "textSlug": "analects",
+    "textVersionSlug": "analects-received",
+    "passageKind": "classic_saying",
+    "locatorOriginal": "述而篇",
+    "locatorNormalised": "Analects 7.22",
+    "originalText": "三人行，必有我师焉。择其善者而从之，其不善者而改之。",
+    "punctuatedText": "三人行，必有我师焉。择其善者而从之，其不善者而改之。",
+    "modernZh": "多人同行，其中一定有可作为我老师的人；选择其优点学习，见到不足则反省并改正自己。",
+    "translationEn": "When three walk together, there is surely a teacher for me: I follow what is good in them and correct in myself what is not.",
+    "ritualSensitivity": "public_textual",
+    "attributionStatus": "anonymous_or_composite",
+    "variantReadings": []
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

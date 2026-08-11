@@ -1,0 +1,42 @@
+{
+  "id": "60e3e832-3bca-55ee-a45a-2d7412ff3e16",
+  "locale": "en",
+  "kind": "event",
+  "slug": "daci-en-monastery-established",
+  "title": "Establishment of the Great Ci'en Monastery",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "c. 648",
+  "shortSummary": "The monastery created a new institutional setting for Buddhism, translation and imperial patronage in Chang'an.",
+  "curatorialDescription": [
+    "Foundation is separated from later translation bureaux, pagoda phases and biographies so a long institutional history is not compressed into one date."
+  ],
+  "researchNote": "Foundation account, precinct, early offices and project relationships require further verification.",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:buddhist-institutional-records",
+      "title": "Studies of Sui–Tang monasteries, translation bureaux and monastic institutions",
+      "locator": "大慈恩寺、译经场与寺院网络专题；底本待核",
+      "grade": "B",
+      "role": "Institutional context for monasteries, translation sites and Buddhist urban networks"
+    },
+    {
+      "id": "source:xuanzang-records",
+      "title": "Biography of the Tripiṭaka Master of the Great Ci'en Monastery",
+      "locator": "《大唐大慈恩寺三藏法师传》全书（卷一至卷十）；卷一开篇为玄奘本传，后续卷次记录求法与译经活动",
+      "grade": "A",
+      "role": "Primary biographical basis for Xuanzang's travels and translation work",
+      "url": "https://ctext.org/library.pl?if=en&res=112971"
+    }
+  ],
+  "profile": {
+    "eventKind": "foundation",
+    "historicity": "documented",
+    "sequenceOrder": 6,
+    "eventScope": "local"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

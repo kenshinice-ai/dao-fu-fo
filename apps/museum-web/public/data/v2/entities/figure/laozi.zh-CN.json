@@ -1,0 +1,75 @@
+{
+  "id": "82f8072e-ce53-5b91-92fc-9c0d66b64f6c",
+  "locale": "zh-CN",
+  "kind": "figure",
+  "slug": "laozi",
+  "title": "老子（李耳）",
+  "subtitle": "道家经典传统的源头人物与后世神圣化对象",
+  "tradition": "daoism",
+  "evidence": "traditional_account",
+  "timeLabel": "传统置于春秋晚期；生平年代有争议",
+  "shortSummary": "老子是进入道家经典传统的高识别度入口，但李耳传记、〈老子〉身份、《道德经》成书与后世太上老君形象必须分层处理。",
+  "curatorialDescription": [
+    "本馆把‘李耳’作为史传中的人物名字，把‘老子’作为思想与师承传统中的称谓，把《道德经》的作者/编纂问题另行建模。",
+    "老子可以连接先秦源头、唐代道教接受和后世神格化，但不能因为知名度高就把所有道家文本都变成一个人的直接言论。"
+  ],
+  "researchNote": "生平年代与历史性存在争议；《史记》提供早期史传层，具体文本归属、出关叙事和太上老君神格化应分别连接来源。",
+  "keyFacts": [
+    {
+      "label": "人物类别",
+      "value": "传统圣者／史传人物"
+    },
+    {
+      "label": "关键区分",
+      "value": "李耳、老子、《道德经》与太上老君不合并"
+    }
+  ],
+  "related": [
+    {
+      "kind": "text",
+      "slug": "daodejing",
+      "title": "《道德经》",
+      "relation": "传统归属与文本争议"
+    },
+    {
+      "kind": "place",
+      "slug": "luoyang",
+      "title": "洛阳",
+      "relation": "周地问礼叙事语境"
+    }
+  ],
+  "sources": [
+    {
+      "id": "source:shiji-laozi-biography",
+      "title": "《史记·老子韩非列传》",
+      "locator": "《史记·老子韩非列传》：老子姓李名耳；孔子适周问礼于老子；老子西出函谷关叙事",
+      "grade": "A",
+      "role": "李耳身份、孔子问礼叙事与老子传统形成层的早期史传依据",
+      "url": "https://ctext.org/shiji/lao-zi-han-fei-lie-zhuan/zhs"
+    },
+    {
+      "id": "source:daodejing-edition",
+      "title": "《道德经》通行本与章句资料",
+      "locator": "第二十五章（“人法地，地法天，天法道，道法自然”）",
+      "grade": "A",
+      "role": "道家 passage 原文和章次定位的初始依据",
+      "url": "https://ctext.org/text.pl?if=en&node=11616&show=parallel"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "道·儒·佛文明数字博物馆策展与方法说明",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "项目的策展框架与术语规则"
+    }
+  ],
+  "profile": {
+    "historicity": "contested",
+    "figureClass": "traditional_sage",
+    "gender": "male",
+    "canonicalNameOriginal": "李耳 / 老子",
+    "nameLanguageCode": "lzh"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

@@ -1,7 +1,52 @@
 # 项目现状与实施路线图
 
-> 基线日期：2026-08-09
-> 当前判断：工程和 Lean Alpha 内容骨架已经成立，但公开站仍是 first-viewable prototype；Alpha 研究内容尚未达到 Public 发布标准。
+> 基线日期：2026-08-11
+> 当前判断：工程、全历史 map-first 入口与 A1+A2 内容批次已成立；production 继续作为线上唯一事实基准。当前停在“内容扩充后可复盘”的收口节点，Public RC 边界保持独立；Museum / Explore / Research 保留为深度层。
+
+## 2026-08-11 A1+A2 production 收口点
+
+- **产品方向已校正**：首页以互动现实地图为核心；人物是入口，时间、空间、事件、地点、路线、关系、经典、言论与后世影响共同组成网络；不再用隋唐 MVP 限制全历史范围；
+- **当前可用交互**：Leaflet 底图、缩放、拖动、双击、键盘、全境、popup、地点 dossier、路线 polyline、路线账本、人物关系 focus、可访问地点索引；首页与 Explore 共用 `CivilisationMap`；
+- **全历史读模型**：地图和时间轴优先读 `overview`；时间轴 `-600—1200 / 84 events`，`suitang` 保留为 `581—907 / 63 events` 兼容切片；已有地图点带时间范围，并与共享 URL 时间窗口联动；
+- **人物地图状态**：当前 26 位人物入口全部通过回归；A1 人物进入现实地图或明确位置状态，A2 神话/神圣人物进入 symbolic cosmos；没有把神话人物伪造为现实经纬度；
+- **共享语境入口**：人物选择器动态读取 search read model，首页提供 26 位人物的地图/Cosmos 或 dossier 入口；每位新增人物都连接时间、地点/空间、事件、文本/传承、关系与来源；
+- **当前内容规模**：140 个实体、26 位人物、21 个地点、31 个事件、3 条路线、159 条关系、54 个来源、3 条音频；现实地图索引显示 14 个地点，symbolic cosmos 显示 16 个节点与 12 条边；
+- **内容审核状态**：Full Alpha quality report 为 352 blockers；review queue 为 302 subjects（227 blocking / 75 non-blocking）；这保持为 Research 中的透明审核队列，不等同于 Public RC 批准；
+- **线上基线**：默认 <https://dao-ru-fo-digital-museum.pages.dev>；最新 unique <https://23c99acc.dao-ru-fo-digital-museum.pages.dev>；deployment ID `23c99acc-a45d-48d3-92fd-8d7b4a69438a`；`main` / `cc734ca`；manifest `2026.08.alpha.1 / alpha / preview`；Cloudflare production-only；上一版 `c4ae1eb6-61a0-42cc-9e17-94323fa197cb` 可回滚；
+- **验收证据**：production 脚本内置 `npm run check` 全部通过；unit 17/17；Playwright + axe `48 passed / 1 skipped`（49 tests）；unique/default HTTP smoke 各 `25/25`；线上浏览器确认首页 26 人物、真实地图/缩放、Cosmos 3/7/5/12 结构、人物聚焦、庄子 dossier 与 0 控制台错误；
+- **本轮暂停**：暂不继续扩大人物、地点、神话空间或接受史范围。下一步以线上复盘和事实/来源/权利/可访问性审核为主；重新进入内容批次前，沿用 [下一批内容审核闸门](./NEXT_CONTENT_REVIEW_GATE_2026-08-11.md) 的 A/B/C/D 规则并重新授权。
+
+### 下一步执行顺序（当前暂停点）
+
+1. 先复盘 production 首页、真实地图、人物入口和 symbolic cosmos，不继续加内容数量；
+2. 对本轮 A1/A2 人物补做事实、来源 locator、rights、accessibility 与后世影响审核；
+3. 若用户授权下一批，再按“人物—时间—地点/空间—事件—文本—关系—历史地位—后世影响”完整闭环扩展，不接受孤立人物卡；
+4. 每批继续走：本地 schema/content/compiler 门禁 → production 部署 → default/unique smoke → 线上浏览器复盘 → handoff；遇到神话定位、身份合并、接受地选择立即暂停请用户判断。
+
+## 2026-08-11 全历史时空人物地图战略调整（上一阶段）
+
+- 产品范围不再以隋唐 MVP 为边界。隋唐是默认精选场景之一；总体覆盖神话与传统起源、印度佛教源流、先秦、秦汉、魏晋南北朝、隋唐、宋元、明清与近现代传播；
+- 人物是第一入口，时间和空间是共同骨架。所有人物都必须拥有现实活动地、传统关联地、后世记忆地、路线、象征空间或明确 `position_pending`，不能点击后得到空地图；
+- 现实地图与神圣地理继续隔离坐标，但共享当前人物、时代和关系。历史人物与神格化身份建立独立节点；神话人物通过传统顺序、文献见证和现实接受地点进入系统；
+- 下一执行主线：状态/位置契约 → 复用 previous project Leaflet 工作台 → 地图进入首页 → 当前 12 人位置补齐 → 全历史三轨时间联动 → 持续扩充著名人物、城市和路线；
+- 日常迭代改为 production-only。按改动风险完成必要本地检查后直接部署 Cloudflare production；不再重复维护 Preview alias 和 Public RC promotion。旧 RC/Preview 只作历史审计记录；
+- 详细人物清单、位置分层、首页结构、read model、组件复用、执行 checklist、简化发布与验收标准见 [全历史时空人物地图战略](./STRATEGIC_REALIGNMENT_MAP_FIRST_2026-08-11.md)；
+- 当前切片已完成并上线：Leaflet 真实地图进入首页，Explore 与首页共用地图工作台，已有 8 个现实地图点、2 条路线和 12 位人物索引可进入；default/unique production smoke 均 23/23，现停在可复盘节点。
+
+### 2026-08-11 当前执行状态
+
+- 交互：缩放、拖动、双击、键盘地图、全境、popup、地点 dossier、路线 polyline、路线账本和可访问地点索引已成立；
+- 共享状态：已有关系 focus 会过滤地图地点；首页人物索引提供地图/档案双入口；
+- 内容边界：没有新增未经审核的人物、神话坐标或历史断言；当前空间层仍是既有 Alpha read model；
+- 验证：`npm run check` 全部通过；Web unit 4/4；地图/首页/人物 focus targeted E2E 4/4；唯一一次完整 axe 异常为导航时序，独立重跑 1/1 通过；
+- 下一停点已达到：等待用户线上复盘地图首屏、人物地图入口和待核位置呈现；下一批神话/历史人物、现实记忆地点和时间层扩展遇到策展判断时暂停确认。
+
+## 2026-08-10 完整 Alpha production 同步
+
+- production 当前同步最新完整 Alpha：91 个实体、90 条关系、3 个音频读模型、38 个来源；人物 12、地点 10、事件 17；manifest 为 `2026.08.alpha.1 / alpha / preview`；最新 map-first unique deployment 为 `e0e235b0-abea-4be2-bcfc-8bf0a91cc127`；
+- 当前 Alpha 质量状态为 205 blockers、17 warnings、184 review subjects（109 blocking）；这些内容可用于线上研究和复盘，但不等同于 Public RC 已批准；
+- Public RC2 已 promotion：34 个 Public entities、41 条 Public relations、25 个来源、0 blocker；它仍作为下一次 Public 发布时的审核基准；
+- Cloudflare Preview：[public-rc](https://public-rc.dao-ru-fo-digital-museum.pages.dev)；production：[dao-ru-fo-digital-museum.pages.dev](https://dao-ru-fo-digital-museum.pages.dev)；production 后续作为线上运行时事实基准，authoring/compiler 作为可追溯修改源；
 
 ## 1. 项目现在是什么
 
@@ -16,13 +61,15 @@
 ```text
 content/*.json
     ↓ Zod domain schema + compiler
-    ├─ .artifacts/content/v2          内部 Preview read models
-    ├─ .artifacts/content/public-v2   fail-closed Public read models
+    ├─ 本机临时 preview artifact       内部 Preview read models
+    ├─ 本机临时 public artifact        fail-closed Public read models
     └─ .artifacts/database/import-v1.json
              ↓ transaction importer + state verifier
        PostgreSQL + PostGIS authoring store
 
-apps/museum-web/public/data/v2        当前已验收的 first-viewable prototype
+apps/museum-web/public/data/v2        first-viewable prototype 基底（只读）
+    ↓ prepare-web-public
+本机临时 Web public staging           过滤 iCloud 冲突并叠加 compiler read models
     ↓ Vite
 Cloudflare Pages static dist          不含数据库连接
 ```
@@ -31,24 +78,26 @@ Cloudflare Pages static dist          不含数据库连接
 
 | 领域 | 当前状态 | 核验结果 |
 | --- | --- | --- |
-| Web 原型 | 可运行、可构建、可自动回归 | 中英文、Museum/Explore/Research、桌面与 390px 验收已完成；19 个 Playwright 测试通过，含 14 条核心路由 axe WCAG A/AA 扫描；当前公开数据版本 `2026.08.prototype.1` |
-| Alpha 内容 | 最低数量完成 | 80 个实体、30 条关系、3 条音频脚本、18 个来源；双语实体 artifact 共 160 个 |
-| 数据库导入契约 | 已生成并验证 | 83 个 canonical entities（含 3 个顶级传统）、166 条翻译、164 条 entity-source、96 条 tradition assignment、80 条时间断言；另有 1 个 Public RC、27 个候选 subject 和 0 个 promotion record |
-| Explore 派生模型 | 已生成并验证 | 每种语言 7 个现实地图点、62 个时间项、29 个图节点、30 条图边 |
-| 内容治理 | 机器可读 | quality report、review queue、source index、route manifest、SHA-256 manifest 均由 compiler 生成 |
-| 数据库 schema | 真实集成通过 | 001–013 migration、checksum-aware runner、事务 importer、state verifier、PostGIS/pg_trgm、领域 profile、Public 只读视图和 release/promotion 留痕；fresh/repeat 结果一致 |
-| 发布隔离 | 已固化 | Public Alpha artifact 当前为 0 entities / 0 sources / 0 relations / 0 audio；`verify:architecture` 阻止 Web/部署连接数据库或直读 Alpha 源内容 |
-| 总门禁 | 通过 | typecheck、9 unit tests（含 Public 子集编译）、19 E2E/a11y tests、migration/import integration、architecture、Preview/Public compiler、RC blocker report、bundle、content、quota、Vite build、static release 全通过 |
+| Web 原型 | 可运行、可构建、可自动回归；production 已同步 A1+A2 Full Alpha | 中英文、Museum/Explore/Research、桌面与 390px 验收已完成；Full Alpha 浏览器套件 48 passed / 1 skipped（49 tests），含首页 26 人物入口、人物比较、文本对读、地图交互、Cosmos 和 axe WCAG A/AA 扫描；production manifest 为 `2026.08.alpha.1 / alpha / preview` |
+| Alpha 内容 | 最低数量完成并扩展跨时代与神话入口 | 140 个内容实体、159 条关系、3 条音频脚本、54 个来源；双语实体 artifact 共 280 个；人物 26、事件 31、地点 21、路线 3 |
+| 数据库导入契约 | 已生成并验证 | 143 个 canonical entities（含 3 个顶级传统）、54 个来源、286 条翻译、319 条 entity-source、157 条 tradition assignment、140 条时间断言；1 个 Public RC2、56 个候选 subject、391 条 review records 和 1 个 promotion record |
+| Explore 派生模型 | 已生成、同步并验证 | Full Alpha 自动同步 compiler 的 280 个双语实体 artifact、26 位人物搜索入口、54 个来源、14 个现实地图地点索引、16 节点/12 边 symbolic-cosmos 模型、全历史 overview 时间轴、48 个图节点/159 条关系；比较页提供 3 人物 × 9 维度并排矩阵及桥接节点；文本对读提供跨文本与同一文本版本对读、译文措辞记录和 reviewer evidence；focus projection 会把关系时间断言加入聚焦时间轴并过滤空间节点；时间范围、路线廊道、人物 map/Cosmos 入口和来源跳转已接入；首页提供 26 位人物 spotlight，传统入口计数为 12/5/9 |
+| 内容治理 | 完整 Alpha 已进入 production；Public RC2 仍保留独立审核边界 | quality report、review queue、source index、route manifest、SHA-256 manifest 均由 compiler 生成；production 当前为 352 blockers、302 个 review subjects（227 个 blocking）；Public RC2 56 个 subject 的 checks 已 passed，Public artifact 为 0 blocker，Research 与文本阅读卡保留审核证据 |
+| 数据库 schema | 真实集成通过 | 001–015 migration、checksum-aware runner、事务 importer、state verifier、PostGIS/pg_trgm、领域 profile、Public 只读视图和 release/promotion 留痕；fresh/repeat 结果一致 |
+| 发布隔离 | 已固化 | Public artifact 当前为 34 entities / 41 relations / 0 audio / 0 blocker；Full Alpha production 为 140 entities / 159 relations / 3 audio；compiler 与 Web staging 位于 iCloud 之外的本机临时目录；`verify:architecture` 阻止 Web/部署连接数据库或直读 Alpha 源内容；production 默认 public，只有显式 `CF_PAGES_PRODUCTION_VISIBILITY=preview` 才进入 Full Alpha 模式 |
+| 总门禁 | 通过 | `npm run check`、unit tests 17/17、Full Alpha 浏览器 48 passed / 1 skipped、migration/import plan、architecture、Preview/Public compiler、RC ready gate、bundle、content、quota、Vite build、static release、线上 default/unique HTTP smoke 各 25/25 和线上浏览器关键路径全通过 |
 
-当前 Preview quality report 有 314 个 Public 阻塞项：
+> 以下是此前更大 Preview 的历史快照，不是当前 production Alpha；当前线上基线以本文件顶部和 [最新 production handoff](./HANDOFF.md) 为准。
 
-- `NOT_PUBLIC`：80；
-- `NOT_PUBLISHABLE`：80；
-- `NO_VERIFIED_LOCATOR`：65；
-- `REVIEW_CHECKS_INCOMPLETE`：80；
+此前更大 Preview quality report 有 278 个 Public 阻塞项：
+
+- `NOT_PUBLIC`：78；
+- `NOT_PUBLISHABLE`：78；
+- `NO_VERIFIED_LOCATOR`：35；
+- `REVIEW_CHECKS_INCOMPLETE`：78；
 - `SOURCE_RIGHTS_BLOCKED`：9。
 
-另有 21 个警告：9 个 museum object 占位记录，以及 12 个仍处于 draft 的 source locator。Review queue 有 113 个 subject，当前全部 blocking。这些数字是内容工作队列，不是程序错误。
+另有 17 个警告：9 个 museum object 占位记录，以及 8 个仍处于 draft 的 source locator。Review queue 有 173 个 subject，其中 146 个仍是更大 Preview 的 blocking 工作项；Public RC 独立 artifact 已为 0 blocker。这些数字是内容工作队列，不是程序错误。
 
 ## 3. 已经成立的关键能力
 
@@ -57,6 +106,7 @@ Cloudflare Pages static dist          不含数据库连接
 - 统一 EntityKind、RelationType、TemporalPredicate、Capability registry；
 - 稳定 UUIDv5，以 `{kind}:{slug}` 为 canonical identity；
 - 双语、来源、时间、传统归属、证据层、发布状态和审核状态均为 schema 必填或受控字段；
+- 关系已开始承载人物—事件、事件—地点、言论归属、后世接收/记忆/神格化语义；`qualifiers` 和关系时间断言会进入 read model；
 - passage 强制关联 text 与 text version；真实地理与神圣象征地理有互斥硬约束。
 
 ### 3.2 发布质量控制
@@ -70,56 +120,69 @@ Cloudflare Pages static dist          不含数据库连接
 
 - `MuseumDataSource` 抽象了 static/API 同构读取；
 - `StaticMuseumDataSource` 在适配器边界使用 Zod 验证返回数据；
-- path contract 覆盖 profile、entity、search、relations、audio、sources、地图、时间、图、quality、review、routes 和 checksums；
+- path contract 覆盖 profile、entity、search、relations、audio、sources、地图、时间、图、comparisons、text-readings、quality、review、routes 和 checksums；
 - 当前 Web 原型尚未切换到 Alpha schema，避免把 Preview 内容误发布。
 
 ## 4. 下一阶段实施顺序
 
-### P0：完成第一批可公开内容
+### A：全历史状态与位置契约
 
-1. 使用已冻结的 `release:alpha-public-rc-1`，先完成 10 个核心实体、3 个 text version 依赖和 14 条关系的审核，不一次性审核全部 80 个；
-2. 把事实来源深化到 edition/item/precise locator，补标准 citation；
-3. 完成 schema、fact、tradition、bilingual、rights、accessibility、editorial checks；
-4. 为 9 个 museum object 落实真实馆藏、编号、provenance、图像许可、裁切和色彩策略，无法落实的对象不进入 Public；
-5. 完成 3 条音频的录制、字幕/转录、响度、许可和无障碍复核；
-6. 将候选状态推进到 `ready` 后，只通过显式 promotion 将审核完成的对象改为 Public，不批量复制 Preview 目录。
+1. 扩展 RouteState：当前实体标签、时代、历史/传统/接受时间模式、地图图层、LOD 和可分享视口；
+2. 定义 exact site、城市尺度、推定地区、传统关联、后世记忆、路线走廊和 symbolic cosmos 七类位置；
+3. 历史人物、传统人物、神话/神圣人物和后世神格化身份分层；
+4. compiler 生成按时代、区域、人物、路线、城市和神圣空间拆分的地图 read models。
 
-### P1：把新 read model 接入产品
+### B：previous project 地图工作台复用
 
-1. 用 `MuseumDataSource` 替换 Web 中的原型专用数据对象；
-2. 实现来源索引、质量面板和审核状态的 Research UI；
-3. 将 compiler 生成的现实地图、时间轴和关系图接入 Explore；
-4. 新增 route corridor 显示，但重建路线默认禁止伪精确动画；
-5. 实现 sacred cosmos compiler read model，使象征空间也来自 source of truth；
-6. 增加实体比较、文本版本对读、passage 并排阅读与来源跳转。
+1. 提取 Leaflet、底图、聚合、路线、fit-all、fly-to、popup 和键盘/触控交互；
+2. 提取时代 rail、全局搜索、统一详情 drawer、底部时间轴和 URL 恢复；
+3. 改为消费本项目 `MuseumDataSource`，不复制旧 profile、seed、品牌和 full-atlas 数据包；
+4. 当前 SVG 地图降为 fallback，真实地图与神圣地理继续使用两个坐标系统。
 
-### P1：发布工程化
+### C：地图进入首页
 
-1. 把 `check:release` 和临时 PostGIS 集成加入 CI；
-2. 冻结 Node、PostgreSQL/PostGIS 和 Wrangler 版本；
-3. 发布 Cloudflare Pages preview，执行 HTTP smoke 和真实浏览器复验；
-4. preview 通过后再发布 production，并记录 deployment ID、URL、commit 和 hashes。
+1. 首页第一屏调整为全历史时代轨道、地图、实体浏览器和时间轴；
+2. 当前 12 张人物卡移入人物标签；
+3. 人物、事件、地点、路线、关系和经典共享同一筛选与 focus；
+4. `/explore` 与首页共用工作台；Museum、Research 和 dossier 保留独立路由。
 
-### P2：长期能力
+### D：当前人物位置与全历史内容
 
-- PostgreSQL 全文检索、别名与中文检索策略；
+1. 先确保当前 12 人全部有现实活动地、传统关联地、后世记忆地、路线、symbolic position 或明确 `position_pending`；
+2. 再按文明原型、道家/道教、儒家、佛教和制度桥梁人物持续扩展，不设最终数量上限；
+3. 内容建设单位改为人物—时间—地点—事件—路线—文本—历史地位—后世影响的完整语境；
+4. 城市、机构、路线和三教交汇事件与人物同步扩展，避免再次形成只有人物卡、没有空间网络的内容结构。
+
+### E：production-only 连续发布
+
+1. 内容、普通 UI、schema/部署改动按三种风险执行不同强度的本地门禁；
+2. 必要验证通过后直接部署 Cloudflare production，不再维护日常 Preview alias 或 Public RC promotion；
+3. 每次记录 default/unique URL、deployment ID、版本/校验和、线上 smoke 和 handoff；
+4. smoke 失败恢复上一已知版本；Cloudflare 保持纯静态、可迁移，不引入平台专有运行时依赖。
+
+### F：长期能力
+
+- 城市/区域/机构三级 LOD、关系网络和无障碍邻接表；
 - IIIF、馆藏媒体、3D 模型与可追溯 asset pipeline；
-- 内容修订历史、diff、撤回与版本发布记录；
-- curator/admin 工作台和 review queue 操作界面；
-- 多 profile、多时期展览和可复用专题包；
-- 可观测性、匿名使用分析和内容发现指标，前提是完成隐私评审。
+- 内容修订历史、diff、撤回和策展/研究工作台；
+- 中文别名、异体字、法号、梵巴藏文转写和全球搜索；
+- 多时期专题展览、学习路径和可复用内容包；
+- 可观测性与匿名内容发现指标，前提是完成隐私评审。
 
 ## 5. 近期完成标准
 
-下一里程碑不是“80 个条目全部上线”，而是一个可审计的 Public RC：
+下一阶段完成标准是“全历史人物地图首页成立”：
 
-- 至少一个完整展览切片；
-- 核心实体、关系、地图点、时间项和 passage 均有 verified locator；
-- Public quality report 无 blocker；
-- Public review queue 无 blocking item；
-- fresh/repeat database 测试通过；
-- E2E、a11y、build、static smoke 全绿；
-- Preview 和 Public 的差异有明确 promotion 记录。
+- 打开 production 即可看到并操作地图；
+- 当前 12 人点击后都有位置、路线、象征空间或明确待核说明；
+- 地图、时代、时间范围、人物列表和详情 focus 联动；
+- 历史、传统、神话、神圣身份和接受史不混写；
+- 真实地图具备底图、缩放、平移、聚合、图层、图例、路线、弹窗和详情聚焦；
+- 神圣地理没有伪经纬度，但能连接现实世界的接受和记忆地点；
+- 刷新、返回和分享恢复当前场景；
+- 桌面、390px、键盘、触控、reduced-motion 和 axe 基线通过；
+- production 部署完成 default/unique HTTP、JSON 和关键浏览器 smoke；
+- `HANDOFF.md` 顶部记录唯一当前版本与回滚证据。
 
 ## 6. 常用证据命令
 

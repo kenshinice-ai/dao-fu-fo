@@ -1,0 +1,75 @@
+{
+  "id": "037a6b08-f97f-5a13-92dc-15dce8431b0c",
+  "locale": "zh-CN",
+  "kind": "figure",
+  "slug": "confucius",
+  "title": "孔子（孔丘）",
+  "subtitle": "经典教育、礼与政治伦理的历史人物",
+  "tradition": "confucianism",
+  "evidence": "historical_documented",
+  "timeLabel": "约公元前 551–479 年",
+  "shortSummary": "孔子是儒家经典、教育和政治伦理的高识别度入口；《论语》中的孔子言说必须和弟子记录、编纂层及后世经学接受分开。",
+  "curatorialDescription": [
+    "孔子的历史人物层可以与《史记·孔子世家》、周礼问学叙事和教学活动相连，但《论语》不是脱离传述历史的单一作者文本。",
+    "从孔子到孔颖达，博物馆呈现的是‘人物—言说—编纂—制度接受’的长链，而不是把唐代经学倒推成孔子本人直接参与。"
+  ],
+  "researchNote": "孔子生平有早期史传依据；《论语》为复合性传述文本，具体言说关系以 recorded_by_others 标注，唐代制度接受另行连接。",
+  "keyFacts": [
+    {
+      "label": "人物类别",
+      "value": "历史人物"
+    },
+    {
+      "label": "关键区分",
+      "value": "孔子言说经由弟子与编纂传统保存"
+    }
+  ],
+  "related": [
+    {
+      "kind": "text",
+      "slug": "analects",
+      "title": "《论语》",
+      "relation": "言行传述文本"
+    },
+    {
+      "kind": "figure",
+      "slug": "kong-yingda",
+      "title": "孔颖达",
+      "relation": "后世经学接受与编纂"
+    }
+  ],
+  "sources": [
+    {
+      "id": "source:shiji-confucius-biography",
+      "title": "《史记·孔子世家》",
+      "locator": "《史记·孔子世家》：孔子问礼于周、修诗书礼乐、以诗书礼乐教弟子等段落",
+      "grade": "A",
+      "role": "孔子生平、周游、教学与后世史传形象的早期史传依据",
+      "url": "https://ctext.org/shiji/kong-zi-shi-jia/zhs"
+    },
+    {
+      "id": "source:analects-edition",
+      "title": "《论语》通行本与篇章资料",
+      "locator": "颜渊第十二，第1章（“克己复礼为仁”）",
+      "grade": "A",
+      "role": "儒家 passage 原文和篇章定位的初始依据",
+      "url": "https://ctext.org/wiki.pl?chapter=198285&if=en&remap=gb"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "道·儒·佛文明数字博物馆策展与方法说明",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "项目的策展框架与术语规则"
+    }
+  ],
+  "profile": {
+    "historicity": "documented",
+    "figureClass": "historical_person",
+    "gender": "male",
+    "canonicalNameOriginal": "孔丘",
+    "nameLanguageCode": "lzh"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

@@ -1,31 +1,72 @@
 {
+  "id": "570841a0-1645-59a3-bea7-a47bc84c1630",
   "locale": "en",
   "kind": "place",
   "slug": "changan",
   "title": "Chang'an",
-  "subtitle": "Imperial capital of the Tang",
+  "subtitle": "Imperial capital and meeting point of the three traditions",
   "tradition": "convergence",
-  "evidence": "Real historical place · urban extent",
-  "timeLabel": "Sui–Tang focus, 581–907",
-  "shortSummary": "Chang'an compressed court, state learning, monasteries, Daoist institutions, markets and international travellers into one city, making it the core space for observing encounters among three traditions.",
+  "evidence": "historical_documented",
+  "timeLabel": "Sui–Tang focus: 581–907",
+  "shortSummary": "Chang'an compressed court, state education, monasteries, Daoist institutions, markets and international travellers into one city.",
   "curatorialDescription": [
-    "The museum treats Chang'an not as a single map point but as a dense field of institutions and relations. Figures entered the city, texts were translated or taught in institutions, and religious sites received patronage or restriction.",
-    "Modern Xi'an has geographic continuity with Tang Chang'an, but modern administrative boundaries cannot simply stand in for the historical city. The first release uses an approximate centre and selected site nodes; later versions will add ward and historical-name layers.",
-    "Chang'an belongs to Buddhist, Daoist and Confucian historical networks. Its convergence label does not imply that their urban roles were identical."
+    "Chang'an was not an abstract setting for harmonious coexistence. It was an urban space where institutions, resources, authority and religious networks competed and borrowed from one another.",
+    "The map uses a real geographic referent as a schematic. Historical names, institutional identities and building-level locations still require further source-based refinement."
   ],
-  "researchNote": "The current map is a real-coordinate historical schematic, not an archaeological reconstruction of every ward. Specific temples, academies and palatial sites carry their own coordinate confidence.",
+  "researchNote": "This is an Alpha city-level place. Monasteries, Daoist institutions, the Guozijian and translation sites have not yet been modelled as complete institution/place pairs.",
   "keyFacts": [
-    { "label": "Place reality", "value": "real historical city" },
-    { "label": "Coordinate accuracy", "value": "approximate urban centre" },
-    { "label": "Tradition role", "value": "Buddhist · Daoist · Confucian convergence" }
+    {
+      "label": "Place type",
+      "value": "Imperial capital"
+    },
+    {
+      "label": "Modern referent",
+      "value": "Area of present-day Xi'an"
+    }
   ],
-  "related": [
-    { "kind": "place", "slug": "great-cien-monastery", "title": "Great Ci'en Monastery", "relation": "Buddhist institutional site" },
-    { "kind": "place", "slug": "imperial-academy-changan", "title": "Imperial Academy, Chang'an", "relation": "state educational site" },
-    { "kind": "figure", "slug": "xuanzang", "title": "Xuanzang", "relation": "active figure" }
-  ],
+  "related": [],
   "sources": [
-    { "title": "Historical-geographical studies of Tang Chang'an", "locator": "urban plan and ward studies", "grade": "B", "role": "historical urban extent; full bibliography pending" },
-    { "title": "Modern geographic coordinate", "locator": "approximate centre of Xi'an", "grade": "C", "role": "map focus only; not proof of an exact Tang site" }
-  ]
+    {
+      "id": "source:historical-geography",
+      "title": "Historical geography and urban gazetteers of the Sui–Tang period",
+      "locator": "长安、洛阳、敦煌历史名称与地理范围",
+      "grade": "A",
+      "role": "Geographic basis for real places, historical names and coordinate approximations"
+    },
+    {
+      "id": "source:sui-tang-changan-urban-study",
+      "title": "New Archaeological Discoveries Based on Spatial Information Technology and Cultural Analysis",
+      "locator": "Remote Sensing 14 (2022), 3298：隋唐都城研究、长安城市图与坐标化空间范围",
+      "grade": "B",
+      "role": "Peer-reviewed geographic basis for Sui–Tang Chang'an, its Xi'an referent and coordinate bounds",
+      "url": "https://doi.org/10.3390/rs14143298"
+    },
+    {
+      "id": "source:unesco-silk-roads-corridor",
+      "title": "UNESCO World Heritage Centre: Silk Roads, Chang'an–Tianshan Corridor",
+      "locator": "World Heritage List no. 1442; component coordinates and corridor description",
+      "grade": "A",
+      "role": "Geographic basis for Chang'an, Luoyang, the Great Wild Goose Pagoda, Kucha-region sites and the transregional corridor",
+      "url": "https://whc.unesco.org/en/list/1442/maps/"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "Curatorial and methodological notes of the Dao–Ru–Fo Digital Museum",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "Curatorial framework and terminology rules"
+    }
+  ],
+  "profile": {
+    "placeReality": "real_historical",
+    "geometryType": "point",
+    "coordinates": [
+      108.942,
+      34.261
+    ],
+    "coordinateConfidence": "centroid",
+    "geographicSourceId": "source:sui-tang-changan-urban-study"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
 }

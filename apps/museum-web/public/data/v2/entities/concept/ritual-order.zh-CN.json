@@ -1,0 +1,52 @@
+{
+  "id": "c49f31f8-a96b-561a-b471-d3608349ab0c",
+  "locale": "zh-CN",
+  "kind": "concept",
+  "slug": "ritual-order",
+  "title": "礼与秩序",
+  "subtitle": "经典、仪式与制度化身份",
+  "tradition": "confucianism",
+  "evidence": "scholarly_interpretation",
+  "timeLabel": "比较概念；隋唐重点",
+  "shortSummary": "“礼”既可以指文本和规范，也可以指具体仪式、身份关系与国家教育制度中的秩序实践。",
+  "curatorialDescription": [
+    "《论语》段落提供了文本入口；唐代经学制度则显示经典解释如何进入教育和国家秩序。",
+    "本概念不把儒家等同于单一政治意识形态，而是保留文本、仪式和制度之间的张力。"
+  ],
+  "researchNote": "需要补充《五经正义》不同版本、经学制度和具体仪式语境的逐条出处。",
+  "keyFacts": [
+    {
+      "label": "比较入口",
+      "value": "经典、仪式、制度"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:editorial-method",
+      "title": "道·儒·佛文明数字博物馆策展与方法说明",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "项目的策展框架与术语规则"
+    },
+    {
+      "id": "source:confucian-commentarial-record",
+      "title": "《五经正义》与唐代经学制度资料",
+      "locator": "孔颖达与经学注疏制度",
+      "grade": "B",
+      "role": "孔颖达及唐代经学、教育制度的参考依据"
+    },
+    {
+      "id": "source:education-classics-records",
+      "title": "唐代国子监与经学制度资料",
+      "locator": "国子监、经学与《五经正义》制度语境；底本待核",
+      "grade": "B",
+      "role": "国家教育、经学注疏和知识制度的研究参考"
+    }
+  ],
+  "profile": {
+    "conceptKind": "ethical"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

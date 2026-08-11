@@ -1,8 +1,8 @@
 {
   "kind": "place",
   "slug": "luoyang",
-  "publicationState": "preview",
-  "reviewStatus": "bilingual_reviewed",
+  "publicationState": "public",
+  "reviewStatus": "publishable",
   "primaryEvidenceLayer": "historical_documented",
   "importance": 4,
   "isFeatured": false,
@@ -17,7 +17,16 @@
       "researchNote": "当前为城市级 Alpha 地点，后续补充龙门石窟、寺院、宫观和路线节点。",
       "timeLabel": "隋唐重点：581–907",
       "keyFacts": [
-        { "label": { "zh-CN": "地点类型", "en": "Place type" }, "value": { "zh-CN": "东都与交通节点", "en": "Eastern capital and transport node" } }
+        {
+          "label": {
+            "zh-CN": "地点类型",
+            "en": "Place type"
+          },
+          "value": {
+            "zh-CN": "东都与交通节点",
+            "en": "Eastern capital and transport node"
+          }
+        }
       ]
     },
     "en": {
@@ -30,18 +39,73 @@
       "researchNote": "This is an Alpha city-level place. Longmen, monasteries, Daoist institutions and route waypoints will be added in the next content batch.",
       "timeLabel": "Sui–Tang focus: 581–907",
       "keyFacts": [
-        { "label": { "zh-CN": "地点类型", "en": "Place type" }, "value": { "zh-CN": "东都与交通节点", "en": "Eastern capital and transport node" } }
+        {
+          "label": {
+            "zh-CN": "地点类型",
+            "en": "Place type"
+          },
+          "value": {
+            "zh-CN": "东都与交通节点",
+            "en": "Eastern capital and transport node"
+          }
+        }
       ]
     }
   },
   "traditions": [
-    { "tradition": "buddhism", "role": "syncretic", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:historical-geography" },
-    { "tradition": "daoism", "role": "syncretic", "isPrimary": false, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:historical-geography" },
-    { "tradition": "confucianism", "role": "syncretic", "isPrimary": false, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:historical-geography" }
+    {
+      "tradition": "buddhism",
+      "role": "syncretic",
+      "isPrimary": true,
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:historical-geography"
+    },
+    {
+      "tradition": "daoism",
+      "role": "syncretic",
+      "isPrimary": false,
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:historical-geography"
+    },
+    {
+      "tradition": "confucianism",
+      "role": "syncretic",
+      "isPrimary": false,
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:historical-geography"
+    }
   ],
   "temporalAssertions": [
-    { "predicate": "activity", "timeType": "range", "startYear": 581, "endYear": 907, "displayDate": { "zh-CN": "隋唐重点：581–907", "en": "Sui–Tang focus: 581–907" }, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:historical-geography" }
+    {
+      "predicate": "activity",
+      "timeType": "range",
+      "startYear": 581,
+      "endYear": 907,
+      "displayDate": {
+        "zh-CN": "隋唐重点：581–907",
+        "en": "Sui–Tang focus: 581–907"
+      },
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:historical-geography"
+    }
   ],
-  "sourceIds": ["source:historical-geography", "source:unesco-silk-roads-corridor", "source:editorial-method"],
-  "profile": { "placeReality": "real_historical", "geometryType": "point", "coordinates": [112.454, 34.62], "coordinateConfidence": "centroid", "geographicSourceId": "source:historical-geography" }
+  "sourceIds": [
+    "source:historical-geography",
+    "source:unesco-silk-roads-corridor",
+    "source:editorial-method"
+  ],
+  "profile": {
+    "placeReality": "real_historical",
+    "geometryType": "point",
+    "coordinates": [
+      112.454,
+      34.62
+    ],
+    "coordinateConfidence": "centroid",
+    "geographicSourceId": "source:historical-geography"
+  }
 }

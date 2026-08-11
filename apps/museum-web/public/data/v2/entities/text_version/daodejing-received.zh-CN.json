@@ -1,0 +1,36 @@
+{
+  "id": "91f95e39-fba6-5ae3-89dc-0ef2532de566",
+  "locale": "zh-CN",
+  "kind": "text_version",
+  "slug": "daodejing-received",
+  "title": "《道德经》通行本",
+  "tradition": "daoism",
+  "evidence": "historical_inferred",
+  "timeLabel": "传世本流通",
+  "shortSummary": "《道德经》传世章句的 Alpha 版本记录。",
+  "curatorialDescription": [
+    "通行本不是唯一文本形态，版本实体将为异文和注本提供稳定定位。"
+  ],
+  "researchNote": "正式发布前补充底本、章次和版本差异。",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:daodejing-edition",
+      "title": "《道德经》通行本与章句资料",
+      "locator": "第二十五章（“人法地，地法天，天法道，道法自然”）",
+      "grade": "A",
+      "role": "道家 passage 原文和章次定位的初始依据",
+      "url": "https://ctext.org/text.pl?if=en&node=11616&show=parallel"
+    }
+  ],
+  "profile": {
+    "textSlug": "daodejing",
+    "versionKind": "recension",
+    "languageCode": "lzh",
+    "citationLabel": "Daodejing received text",
+    "rightsStatus": "public_domain"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

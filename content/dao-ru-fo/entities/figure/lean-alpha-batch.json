@@ -56,10 +56,13 @@
     ],
     "sourceIds": [
       "source:daoist-historical-record",
-      "source:editorial-method"
+      "source:editorial-method",
+      "source:cheng-xuanying-datawiki",
+      "source:daodejing-xuande-ctext"
     ],
     "profile": {
       "historicity": "inferred",
+      "figureClass": "historical_person",
       "gender": "male",
       "canonicalNameOriginal": "成玄英",
       "nameLanguageCode": "lzh"
@@ -122,10 +125,12 @@
     ],
     "sourceIds": [
       "source:education-classics-records",
-      "source:tang-imperial-records"
+      "source:tang-imperial-records",
+      "source:zhenguan-governance-records"
     ],
     "profile": {
       "historicity": "documented",
+      "figureClass": "historical_person",
       "gender": "male",
       "canonicalNameOriginal": "颜师古",
       "nameLanguageCode": "lzh"
@@ -188,10 +193,12 @@
     ],
     "sourceIds": [
       "source:buddhist-biographical-records",
-      "source:buddhist-institutional-records"
+      "source:buddhist-institutional-records",
+      "source:jizang-xugaosengzhuan"
     ],
     "profile": {
       "historicity": "documented",
+      "figureClass": "historical_person",
       "gender": "male",
       "canonicalNameOriginal": "吉藏",
       "nameLanguageCode": "lzh"

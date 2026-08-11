@@ -1,41 +1,74 @@
 {
+  "id": "49104720-7747-5ab4-8aec-be1e3ed88957",
   "locale": "en",
   "kind": "passage",
   "slug": "humans-follow-earth",
-  "title": "Humans follow earth; the Dao follows what is naturally so",
+  "title": "Humans follow earth; earth follows heaven",
   "subtitle": "Daodejing, chapter 25",
   "tradition": "daoism",
-  "evidence": "Public primary text · chapter located",
-  "timeLabel": "Pre-Qin text · continuously commented on through the Tang",
-  "shortSummary": "The line orders humans, earth, heaven, Dao and naturalness in a chain of following, opening a path into the classical meaning of ziran.",
+  "evidence": "historical_inferred",
+  "timeLabel": "Received-text chapter context",
+  "shortSummary": "The line arranges humans, earth, heaven, the Dao and naturalness in a layered order that must be read in its received-text context.",
   "curatorialDescription": [
-    "Ziran here is closer to “being so of itself” than to the modern scientific category of nature.",
-    "Tang readers encountered the Daodejing within a long commentarial history. The museum separates primary text, commentators and later institutions instead of assuming that one sentence had a single unchanged meaning.",
-    "The passage can connect with mountains, cultivation and political non-coercion, but each relation requires a specific context."
+    "‘Dao follows naturalness’ is often detached as a lifestyle maxim. In chapter 25 of the Daodejing it belongs to a sustained discussion of naming and order."
   ],
-  "researchNote": "The first release locates the line in chapter 25 of the received text. Future versions will add manuscript and major commentarial variants.",
+  "researchNote": "The Alpha entry uses the received chapter locator; excavated texts, received editions and major commentaries remain to be compared.",
   "keyFacts": [
-    { "label": "Kind", "value": "classic saying" },
-    { "label": "Locator", "value": "chapter 25" },
-    { "label": "Keywords", "value": "following · Dao · naturalness" }
+    {
+      "label": "Sensitivity",
+      "value": "Public textual"
+    }
   ],
   "quote": {
     "original": "人法地，地法天，天法道，道法自然。",
-    "interpretation": "Human order follows earth, earth follows heaven, and heaven follows the Dao; the Dao unfolds not by an external command but in a way that is so of itself.",
+    "interpretation": "The chapter describes a layered relation of correspondence; it should not be reduced to the modern slogan ‘go with the flow’.",
     "locator": "Daodejing, chapter 25"
   },
   "related": [
-    { "kind": "text", "slug": "daodejing", "title": "Daodejing", "relation": "source text" },
-    { "kind": "concept", "slug": "naturalness", "title": "Naturalness", "relation": "central concept" },
-    { "kind": "figure", "slug": "sima-chengzhen", "title": "Sima Chengzhen", "relation": "Tang Daoist interpretive context" }
+    {
+      "kind": "figure",
+      "slug": "sima-chengzhen",
+      "title": "Sima Chengzhen",
+      "relation": "Later Daoist interpretive context"
+    },
+    {
+      "kind": "text",
+      "slug": "daodejing",
+      "title": "Daodejing",
+      "relation": "Excerpt from"
+    }
   ],
   "sources": [
     {
-      "title": "Chinese Text Project · Daodejing",
-      "locator": "chapter 25",
+      "id": "source:daodejing-edition",
+      "title": "Received editions and chapter references for the Daodejing",
+      "locator": "第二十五章（“人法地，地法天，天法道，道法自然”）",
       "grade": "A",
-      "role": "primary text locator",
-      "url": "https://ctext.org/dao-de-jing"
+      "role": "Initial basis for the Daoist passage and chapter locator",
+      "url": "https://ctext.org/text.pl?if=en&node=11616&show=parallel"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "Curatorial and methodological notes of the Dao–Ru–Fo Digital Museum",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "Curatorial framework and terminology rules"
     }
-  ]
+  ],
+  "profile": {
+    "textSlug": "daodejing",
+    "textVersionSlug": "daodejing-received",
+    "passageKind": "classic_saying",
+    "locatorOriginal": "第二十五章",
+    "locatorNormalised": "Daodejing 25",
+    "originalText": "人法地，地法天，天法道，道法自然。",
+    "punctuatedText": "人法地，地法天，天法道，道法自然。",
+    "modernZh": "人取法于地，地取法于天，天取法于道，而道以自身如此为法。",
+    "translationEn": "Humans follow earth, earth follows heaven, heaven follows the Dao, and the Dao follows naturalness.",
+    "ritualSensitivity": "public_textual",
+    "attributionStatus": "anonymous_or_composite",
+    "variantReadings": []
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
 }

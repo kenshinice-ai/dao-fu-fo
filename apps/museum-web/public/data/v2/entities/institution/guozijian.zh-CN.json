@@ -1,0 +1,53 @@
+{
+  "id": "ff7c6f90-a1bd-5998-acb3-bcdd30ff7672",
+  "locale": "zh-CN",
+  "kind": "institution",
+  "slug": "guozijian",
+  "title": "国子监",
+  "subtitle": "经典教育与国家知识制度的机构入口",
+  "tradition": "confucianism",
+  "evidence": "historical_documented",
+  "timeLabel": "隋唐教育制度重点：581–907",
+  "shortSummary": "国子监使《五经》、经学注疏、考试和国家教育制度进入同一条可追踪的机构线索。",
+  "curatorialDescription": [
+    "从国子监出发，观众可以把孔颖达和《五经正义》放回制度环境，而不是只看成个人学术成就。",
+    "机构条目保留教育与政治功能的双重性，具体校舍、官职和制度沿革需要按时期拆分。"
+  ],
+  "researchNote": "需要核对唐代国子监的制度沿革、具体地点、课程和《五经正义》的编纂与传播关系。",
+  "keyFacts": [
+    {
+      "label": "机构类型",
+      "value": "国家教育机构"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:education-classics-records",
+      "title": "唐代国子监与经学制度资料",
+      "locator": "国子监、经学与《五经正义》制度语境；底本待核",
+      "grade": "B",
+      "role": "国家教育、经学注疏和知识制度的研究参考"
+    },
+    {
+      "id": "source:confucian-commentarial-record",
+      "title": "《五经正义》与唐代经学制度资料",
+      "locator": "孔颖达与经学注疏制度",
+      "grade": "B",
+      "role": "孔颖达及唐代经学、教育制度的参考依据"
+    },
+    {
+      "id": "source:historical-geography",
+      "title": "隋唐历史地理与城市沿革资料",
+      "locator": "长安、洛阳、敦煌历史名称与地理范围",
+      "grade": "A",
+      "role": "真实地点、历史名称和坐标示意的地理依据"
+    }
+  ],
+  "profile": {
+    "institutionKind": "state_academy",
+    "networkScope": false
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

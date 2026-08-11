@@ -1,0 +1,53 @@
+{
+  "id": "ff7c6f90-a1bd-5998-acb3-bcdd30ff7672",
+  "locale": "en",
+  "kind": "institution",
+  "slug": "guozijian",
+  "title": "Guozijian",
+  "subtitle": "An institutional entry into classical education and state knowledge",
+  "tradition": "confucianism",
+  "evidence": "historical_documented",
+  "timeLabel": "Sui–Tang educational focus: 581–907",
+  "shortSummary": "The Guozijian connects the Five Classics, commentary, examination and state education within a traceable institutional line.",
+  "curatorialDescription": [
+    "Starting from the Guozijian places Kong Yingda and the Corrected Meanings within an institutional setting rather than presenting them only as individual scholarship.",
+    "The record keeps the institution's educational and political functions visible; buildings, offices and reforms require period-specific records."
+  ],
+  "researchNote": "Tang institutional changes, exact location, curriculum and the compilation and circulation of the Corrected Meanings still need verification.",
+  "keyFacts": [
+    {
+      "label": "Institution type",
+      "value": "State educational institution"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:education-classics-records",
+      "title": "Records on the Tang Guozijian and classical learning institutions",
+      "locator": "国子监、经学与《五经正义》制度语境；底本待核",
+      "grade": "B",
+      "role": "Research reference for state education, classical commentary and knowledge institutions"
+    },
+    {
+      "id": "source:confucian-commentarial-record",
+      "title": "The Five Classics Corrected Meanings and Tang classical learning",
+      "locator": "孔颖达与经学注疏制度",
+      "grade": "B",
+      "role": "Reference basis for Kong Yingda and Tang classical learning institutions"
+    },
+    {
+      "id": "source:historical-geography",
+      "title": "Historical geography and urban gazetteers of the Sui–Tang period",
+      "locator": "长安、洛阳、敦煌历史名称与地理范围",
+      "grade": "A",
+      "role": "Geographic basis for real places, historical names and coordinate approximations"
+    }
+  ],
+  "profile": {
+    "institutionKind": "state_academy",
+    "networkScope": false
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

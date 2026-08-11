@@ -1,8 +1,8 @@
 {
   "kind": "institution",
   "slug": "daci-en-monastery",
-  "publicationState": "preview",
-  "reviewStatus": "bilingual_reviewed",
+  "publicationState": "public",
+  "reviewStatus": "publishable",
   "primaryEvidenceLayer": "historical_documented",
   "importance": 5,
   "isFeatured": true,

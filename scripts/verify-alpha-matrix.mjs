@@ -1,9 +1,10 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
+import { getContentArtifactRoot } from "./artifact-roots.mjs";
 
 const root = process.cwd();
 const matrixPath = path.join(root, "content/dao-ru-fo/mvp-alpha-matrix.json");
-const reportPath = path.join(root, ".artifacts/content/v2/manifest/content-report.json");
+const reportPath = path.join(getContentArtifactRoot("preview", root), "manifest/content-report.json");
 
 const matrix = JSON.parse(await readFile(matrixPath, "utf8"));
 const report = JSON.parse(await readFile(reportPath, "utf8"));

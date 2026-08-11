@@ -1,0 +1,89 @@
+{
+  "kind": "passage",
+  "slug": "turning-of-dharma-wheel-thanissaro-en",
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed",
+  "primaryEvidenceLayer": "historical_documented",
+  "importance": 3,
+  "isFeatured": false,
+  "translations": {
+    "zh-CN": {
+      "title": "这是苦圣谛（Thanissaro 英译）",
+      "subtitle": "SN 56.11 四圣谛段落的英文短引",
+      "shortSummary": "这一段落与巴利语短引共享 SN 56.11 定位，但保留 Thanissaro 对 dukkha 的英文措辞选择。",
+      "curatorialDescription": [
+        "这里比较的是同一经文传承中的语言版本，不把“stress”或“suffering”任一译法宣布为唯一标准。"
+      ],
+      "researchNote": "短引文来自外部英译页面；完整译文、版权条件和其他译者版本仍需单独审核。",
+      "timeLabel": "现代英译；对应 SN 56.11 四圣谛段落",
+      "keyFacts": []
+    },
+    "en": {
+      "title": "This is the noble truth of stress",
+      "subtitle": "A short English witness for the Four Noble Truths section of SN 56.11",
+      "shortSummary": "This passage shares the SN 56.11 locator with the Pāli excerpt while preserving Thanissaro's English rendering of dukkha.",
+      "curatorialDescription": [
+        "The comparison is between language witnesses within one transmitted discourse; neither ‘stress’ nor ‘suffering’ is declared the only correct translation."
+      ],
+      "researchNote": "The short quotation comes from an external English translation page; the full translation, rights conditions and other translators require separate review.",
+      "timeLabel": "Modern English translation; corresponding to the SN 56.11 Four Noble Truths section",
+      "keyFacts": [],
+      "quote": {
+        "original": "This is the noble truth of stress.",
+        "interpretation": {
+          "zh-CN": "这是苦圣谛。",
+          "en": "This is the noble truth of stress."
+        },
+        "locator": "SN 56.11"
+      }
+    }
+  },
+  "traditions": [
+    {
+      "tradition": "buddhism",
+      "role": "primary",
+      "isPrimary": true,
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:sn56-11-thanissaro"
+    }
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "textual_attestation",
+      "timeType": "range",
+      "startYear": -300,
+      "endYear": 200,
+      "displayDate": {
+        "zh-CN": "对应 SN 56.11 传述与文本层；英译本为现代版本",
+        "en": "Corresponding to the transmitted and textual layer of SN 56.11; the English witness is modern"
+      },
+      "confidence": "low",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:buddha-early-texts"
+    }
+  ],
+  "sourceIds": ["source:sn56-11-thanissaro"],
+  "related": [
+    {
+      "kind": "text",
+      "slug": "dhammacakkappavattana-sutta",
+      "title": { "zh-CN": "《转法轮经》", "en": "Dhammacakkappavattana Sutta" },
+      "relation": { "zh-CN": "摘录自", "en": "Excerpt from" }
+    }
+  ],
+  "profile": {
+    "textSlug": "dhammacakkappavattana-sutta",
+    "textVersionSlug": "dhammacakkappavattana-sutta-thanissaro-en",
+    "passageKind": "scripture_excerpt",
+    "locatorOriginal": "SN 56.11 · 四圣谛段落",
+    "locatorNormalised": "Saṃyutta Nikāya 56.11 · Four Noble Truths section",
+    "originalText": "This is the noble truth of stress.",
+    "punctuatedText": "This is the noble truth of stress.",
+    "modernZh": "这是苦圣谛。",
+    "translationEn": "This is the noble truth of stress.",
+    "ritualSensitivity": "public_textual",
+    "attributionStatus": "recorded_by_others",
+    "variantReadings": []
+  }
+}

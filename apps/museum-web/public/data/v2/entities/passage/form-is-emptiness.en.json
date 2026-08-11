@@ -1,41 +1,74 @@
 {
+  "id": "08c09a75-a9b6-5cd1-b167-41025b7bb298",
   "locale": "en",
   "kind": "passage",
   "slug": "form-is-emptiness",
   "title": "Form is not different from emptiness",
   "subtitle": "Heart Sutra",
   "tradition": "buddhism",
-  "evidence": "Public primary text · version located",
-  "timeLabel": "Translation tradition associated with Xuanzang · Tang",
-  "shortSummary": "One of the most frequently cited lines of the Heart Sutra, using the inseparability of form and emptiness to challenge fixed self-existence.",
+  "evidence": "historical_documented",
+  "timeLabel": "Sui–Tang Chinese translation and circulation context",
+  "shortSummary": "This line circulated widely in Chinese Buddhism, but it must be read within its paragraph and textual version.",
   "curatorialDescription": [
-    "Form here is not merely colour; it points to material and perceptible phenomena. Emptiness is not nothingness. Their non-difference means that phenomena cannot be understood as isolated, fixed and eternally self-existing.",
-    "Removed from context, the line is easily paraphrased as “nothing exists.” The research layer therefore keeps version, locator and interpretive limits visible.",
-    "The first release provides a short source text and an original explanatory translation rather than copying a modern copyrighted commentary."
+    "‘Form is not different from emptiness’ is not a context-free slogan. It belongs to a sustained discussion of the relation between form and emptiness and shows how Prajñāpāramitā thought entered Chinese Buddhist contexts through translated scripture."
   ],
-  "researchNote": "The formation and attribution of Heart Sutra versions are subjects of textual research. The first release displays the CBETA T0251 text and its traditional attribution while leaving room for fuller version analysis.",
+  "researchNote": "The Alpha entry is linked to text and version entities; translator, base edition, variants and a more precise locator remain to be added.",
   "keyFacts": [
-    { "label": "Kind", "value": "scripture excerpt" },
-    { "label": "Version", "value": "CBETA T0251" },
-    { "label": "Sensitivity", "value": "public text" }
+    {
+      "label": "Sensitivity",
+      "value": "Public textual"
+    }
   ],
   "quote": {
-    "original": "色不異空，空不異色；色即是空，空即是色。",
-    "interpretation": "Phenomena and emptiness are not two opposing worlds. Things appear through conditions and therefore lack an unchanging, independent essence.",
-    "locator": "Heart Sutra, T0251, 001"
+    "original": "色不异空，空不异色。色即是空，空即是色。",
+    "interpretation": "Form and emptiness are not isolated realities; the passage continues by extending the discussion to feeling, perception, formations and consciousness.",
+    "locator": "Heart Sutra: form is not different from emptiness"
   },
   "related": [
-    { "kind": "text", "slug": "heart-sutra", "title": "Heart Sutra", "relation": "source text" },
-    { "kind": "concept", "slug": "emptiness", "title": "Emptiness", "relation": "central concept" },
-    { "kind": "figure", "slug": "xuanzang", "title": "Xuanzang", "relation": "translation tradition" }
+    {
+      "kind": "figure",
+      "slug": "xuanzang",
+      "title": "Xuanzang",
+      "relation": "Translation and transmission context"
+    },
+    {
+      "kind": "text",
+      "slug": "heart-sutra",
+      "title": "Heart Sutra",
+      "relation": "Excerpt from"
+    }
   ],
   "sources": [
     {
-      "title": "CBETA Online · T0251",
-      "locator": "T08, no. 251",
+      "id": "source:heart-sutra-edition",
+      "title": "Chinese editions and catalogues of the Heart Sutra",
+      "locator": "第2节：舍利子，色不异空，空不异色，色即是空，空即是色",
       "grade": "A",
-      "role": "primary text and version locator",
-      "url": "https://cbetaonline.dila.edu.tw/zh/T0251"
+      "role": "Initial basis for the passage text and version locator",
+      "url": "https://ctext.org/wiki.pl?chapter=412996&if=en"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "Curatorial and methodological notes of the Dao–Ru–Fo Digital Museum",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "Curatorial framework and terminology rules"
     }
-  ]
+  ],
+  "profile": {
+    "textSlug": "heart-sutra",
+    "textVersionSlug": "heart-sutra-chinese-received",
+    "passageKind": "scripture_excerpt",
+    "locatorOriginal": "色不异空，空不异色",
+    "locatorNormalised": "Heart Sutra: form and emptiness",
+    "originalText": "色不异空，空不异色。色即是空，空即是色。",
+    "punctuatedText": "色不异空，空不异色。色即是空，空即是色。",
+    "modernZh": "形色与空性并非彼此分离。",
+    "translationEn": "Form is not different from emptiness; emptiness is not different from form.",
+    "ritualSensitivity": "public_textual",
+    "attributionStatus": "anonymous_or_composite",
+    "variantReadings": []
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
 }

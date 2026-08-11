@@ -1,0 +1,45 @@
+{
+  "id": "f5a85754-8fa3-5f1a-a4e0-d576b6d3ed4f",
+  "locale": "en",
+  "kind": "concept",
+  "slug": "translation-as-institution",
+  "title": "Translation as institution",
+  "subtitle": "From individual language ability to urban knowledge production",
+  "tradition": "buddhism",
+  "evidence": "scholarly_interpretation",
+  "timeLabel": "Comparative concept; Sui–Tang focus",
+  "shortSummary": "Translation is not only the exchange of words; it depends on sites, people, versions, review and relations of power.",
+  "curatorialDescription": [
+    "The Xuanzang and Yijing records show how pilgrimage and translation entered the monasteries, court and knowledge institutions of Chang'an.",
+    "This is a curatorial analytic tool, not a claim that every translation practice followed one institutional model."
+  ],
+  "researchNote": "Translation bureaux, participants, base texts, catalogues and passages still need item-level links to verifiable sources.",
+  "keyFacts": [
+    {
+      "label": "Concept layer",
+      "value": "Knowledge production and institutions"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:editorial-method",
+      "title": "Curatorial and methodological notes of the Dao–Ru–Fo Digital Museum",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "Curatorial framework and terminology rules"
+    },
+    {
+      "id": "source:buddhist-institutional-records",
+      "title": "Studies of Sui–Tang monasteries, translation bureaux and monastic institutions",
+      "locator": "大慈恩寺、译经场与寺院网络专题；底本待核",
+      "grade": "B",
+      "role": "Institutional context for monasteries, translation sites and Buddhist urban networks"
+    }
+  ],
+  "profile": {
+    "conceptKind": "institutional_process"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

@@ -1,8 +1,8 @@
 {
   "locale": "zh-CN",
   "eyebrow": "数字展览 · 时空知识图谱",
-  "heroTitle": "三条道路，一座文明博物馆",
-  "heroLead": "从隋唐长安出发，看道教如何连接山岳、宫观与皇室，儒家如何塑造礼制与教育，佛教如何翻译与传播；再回到经典、人物和证据。",
+  "heroTitle": "三条道路，交错的历史时空",
+  "heroLead": "从神话与传统起源，到先秦思想、印度佛教源流及历代传播，在地图、时间与关系中追踪道、儒、佛的人物、事件、地点、经典与后世影响。",
   "primaryAction": "进入长安展览",
   "secondaryAction": "自由探索",
   "todayLabel": "今日原典",
@@ -27,9 +27,9 @@
       "subtitle": "Daoist traditions",
       "statement": "从经典、宫观、山岳和法脉，看道家思想与组织化道教如何并行发展。",
       "counts": {
-        "figures": 1,
-        "texts": 1,
-        "passages": 1
+        "figures": 12,
+        "texts": 6,
+        "passages": 4
       },
       "focusEntity": {
         "kind": "figure",
@@ -42,9 +42,9 @@
       "subtitle": "Confucian traditions",
       "statement": "从礼、经学和国家教育，看儒家如何成为帝国制度与社会伦理的一部分。",
       "counts": {
-        "figures": 1,
-        "texts": 2,
-        "passages": 1
+        "figures": 5,
+        "texts": 3,
+        "passages": 4
       },
       "focusEntity": {
         "kind": "figure",
@@ -57,14 +57,308 @@
       "subtitle": "Buddhism",
       "statement": "从求法、译经和寺院网络，看一种外来传统如何在中国重新表达自己。",
       "counts": {
-        "figures": 1,
-        "texts": 1,
-        "passages": 1
+        "figures": 9,
+        "texts": 7,
+        "passages": 6
       },
       "focusEntity": {
         "kind": "figure",
         "slug": "xuanzang"
       }
+    }
+  ],
+  "featuredFigures": [
+    {
+      "kind": "figure",
+      "slug": "laozi",
+      "tradition": "daoism",
+      "traditionLabel": "道",
+      "title": "老子（李耳）",
+      "role": "源头人物 · 传统与史传分层",
+      "summary": "进入道家经典传统的高识别度入口；人物、文本归属与后世神格化保持分层。",
+      "timeLabel": "春秋晚期（年代有争议）",
+      "placeLabel": "洛阳 · 问礼与记忆层"
+    },
+    {
+      "kind": "figure",
+      "slug": "sima-chengzhen",
+      "tradition": "daoism",
+      "traditionLabel": "道",
+      "title": "司马承祯",
+      "role": "唐代道士 · 山岳与制度",
+      "summary": "连接山林修炼、道教法脉与唐代皇室对宗教人物的吸纳。",
+      "timeLabel": "647–735",
+      "placeLabel": "长安 · 入京锚点"
+    },
+    {
+      "kind": "figure",
+      "slug": "confucius",
+      "tradition": "confucianism",
+      "traditionLabel": "儒",
+      "title": "孔子（孔丘）",
+      "role": "源头人物 · 言说与传述",
+      "summary": "进入儒家经典、教育与政治伦理；《论语》记录层与后世经学保持分开。",
+      "timeLabel": "约公元前 551–479 年",
+      "placeLabel": "洛阳 · 问礼叙事"
+    },
+    {
+      "kind": "figure",
+      "slug": "kong-yingda",
+      "tradition": "confucianism",
+      "traditionLabel": "儒",
+      "title": "孔颖达",
+      "role": "唐代经学家 · 教育与注疏",
+      "summary": "代表唐代经学如何进入国家教育、注疏和制度化知识生产。",
+      "timeLabel": "574–648",
+      "placeLabel": "长安 · 国子学锚点"
+    },
+    {
+      "kind": "figure",
+      "slug": "sakyamuni",
+      "tradition": "buddhism",
+      "traditionLabel": "佛",
+      "title": "释迦牟尼佛（乔达摩·悉达多）",
+      "role": "源头人物 · 早期文本与圣地",
+      "summary": "连接佛教思想、早期经文传述与朝圣地理；历史性与神圣叙事不混同。",
+      "timeLabel": "传统与学术年代有争议",
+      "placeLabel": "鹿野苑 · 初转法轮"
+    },
+    {
+      "kind": "figure",
+      "slug": "xuanzang",
+      "tradition": "buddhism",
+      "traditionLabel": "佛",
+      "title": "玄奘",
+      "role": "求法与译经 · 长安网络",
+      "summary": "把求法旅行、文本翻译与长安的国家和寺院制度连接起来。",
+      "timeLabel": "约 602–664",
+      "placeLabel": "长安 · 译经与制度"
+    },
+    {
+      "kind": "figure",
+      "slug": "cheng-xuanying",
+      "tradition": "daoism",
+      "traditionLabel": "道",
+      "title": "成玄英",
+      "role": "唐初解释者 · 文本与知识网络",
+      "summary": "进入《道德经》《庄子》解释活动与道教知识网络；生平与注本传承仍待逐项核定。",
+      "timeLabel": "约 7 世纪",
+      "placeLabel": "空间待核 · 注疏与制度网络"
+    },
+    {
+      "kind": "figure",
+      "slug": "jizang",
+      "tradition": "buddhism",
+      "traditionLabel": "佛",
+      "title": "吉藏",
+      "role": "隋唐佛教思想家 · 讲学与注疏",
+      "summary": "以讲学、著述和机构环境切入隋唐佛教思想与文本解释；宗派标签保持历史层次。",
+      "timeLabel": "549–623",
+      "placeLabel": "城市网络 · 行迹待核"
+    },
+    {
+      "kind": "figure",
+      "slug": "li-shimin",
+      "tradition": "confucianism",
+      "traditionLabel": "儒",
+      "title": "李世民",
+      "role": "唐太宗 · 制度与城市语境",
+      "summary": "从宫廷、教育和宗教制度语境理解长安如何成为多种知识与信仰网络的汇聚点。",
+      "timeLabel": "598–649",
+      "placeLabel": "长安—洛阳 · 制度语境"
+    },
+    {
+      "kind": "figure",
+      "slug": "wu-zhao",
+      "tradition": "buddhism",
+      "traditionLabel": "佛",
+      "title": "武曌（武则天）",
+      "role": "武周统治者 · 仪式与记忆",
+      "summary": "并置政治权力、宗教赞助和后世记忆，观察同一人物如何被不同传统书写。",
+      "timeLabel": "624–705",
+      "placeLabel": "长安—洛阳 · 仪式与记忆"
+    },
+    {
+      "kind": "figure",
+      "slug": "yan-shigu",
+      "tradition": "confucianism",
+      "traditionLabel": "儒",
+      "title": "颜师古",
+      "role": "唐初经典校订者 · 官学与注释",
+      "summary": "连接经典校订、注释实践与国家知识工程，具体项目和任职仍待卷页级核对。",
+      "timeLabel": "581–645",
+      "placeLabel": "空间待核 · 国家知识工程"
+    },
+    {
+      "kind": "figure",
+      "slug": "yijing",
+      "tradition": "buddhism",
+      "traditionLabel": "佛",
+      "title": "义净",
+      "role": "求法者与译经家 · 海上网络",
+      "summary": "把海上求法、南亚学习和汉译佛典生产连接起来，补充玄奘之外的知识流动路线。",
+      "timeLabel": "635–713",
+      "placeLabel": "海上—南亚 · 路线节点待核"
+    },
+    {
+      "kind": "figure",
+      "slug": "zhuangzi",
+      "tradition": "daoism",
+      "traditionLabel": "道",
+      "title": "庄子（庄周）",
+      "role": "战国思想家 · 复合文本传统",
+      "summary": "连接寓言式哲学、人物传述与《庄子》篇章层；区域地图锚点不替代精确行迹。",
+      "timeLabel": "约公元前 4 世纪；文本层有争议",
+      "placeLabel": "孟城 · 区域传统锚点"
+    },
+    {
+      "kind": "figure",
+      "slug": "mengzi",
+      "tradition": "confucianism",
+      "traditionLabel": "儒",
+      "title": "孟子（孟轲）",
+      "role": "游说诸侯 · 性善论与经典化",
+      "summary": "把先秦游说、政治伦理和《孟子》的传述编纂层连接起来。",
+      "timeLabel": "约公元前 4 世纪",
+      "placeLabel": "邹城 · 地域传统入口"
+    },
+    {
+      "kind": "figure",
+      "slug": "zhang-daoling",
+      "tradition": "daoism",
+      "traditionLabel": "道",
+      "title": "张道陵",
+      "role": "天师道源流 · 历史人物与神圣化祖师",
+      "summary": "把东汉人物线索、天师谱系和后世神圣化放入不同关系层。",
+      "timeLabel": "传统置于东汉；年代有争议",
+      "placeLabel": "鹤鸣山 · 传统与记忆空间"
+    },
+    {
+      "kind": "figure",
+      "slug": "ge-hong",
+      "tradition": "daoism",
+      "traditionLabel": "道",
+      "title": "葛洪",
+      "role": "东晋思想家 · 《抱朴子》与炼养知识",
+      "summary": "连接文本活动、道教知识和后世罗浮山记忆，人物史与神仙叙事保持分层。",
+      "timeLabel": "约 283–343；生平区间待细化",
+      "placeLabel": "罗浮山 · 区域与记忆锚点"
+    },
+    {
+      "kind": "figure",
+      "slug": "ashoka",
+      "tradition": "buddhism",
+      "traditionLabel": "佛",
+      "title": "阿育王（Aśoka）",
+      "role": "孔雀帝国统治者 · 敕诏与法政策",
+      "summary": "通过铭刻、治理和佛教遗产观察跨区域传播，不把后世传记等同于敕诏物证。",
+      "timeLabel": "约公元前 268–232 年",
+      "placeLabel": "桑奇 · 现实遗址与物质记忆"
+    },
+    {
+      "kind": "figure",
+      "slug": "nagarjuna",
+      "tradition": "buddhism",
+      "traditionLabel": "佛",
+      "title": "龙树（Nāgārjuna）",
+      "role": "中观思想家 · 文本归属与接受史",
+      "summary": "把中观论辩、〈中论〉和后世汉译传播连接起来，年代与作品归属保留争议。",
+      "timeLabel": "约公元 150–250 年；年代有争议",
+      "placeLabel": "那伽朱那康达 · 区域锚点"
+    },
+    {
+      "kind": "figure",
+      "slug": "kumarajiva",
+      "tradition": "buddhism",
+      "traditionLabel": "佛",
+      "title": "鸠摩罗什",
+      "role": "译经家 · 龟兹—长安知识流动",
+      "summary": "连接跨区域迁徙、长安译场和汉译经典生产，译经成果保留团队层。",
+      "timeLabel": "344–413",
+      "placeLabel": "长安 · 译经制度锚点"
+    },
+    {
+      "kind": "figure",
+      "slug": "faxian",
+      "tradition": "buddhism",
+      "traditionLabel": "佛",
+      "title": "法显",
+      "role": "求法者与记录者 · 跨区域路线",
+      "summary": "把求法、僧团见闻和《佛国记》连接起来，补充玄奘之外的知识流动线路。",
+      "timeLabel": "约 337–422；路线约 399–414",
+      "placeLabel": "长安—南亚 · 法显路线"
+    },
+    {
+      "kind": "figure",
+      "slug": "pangu",
+      "tradition": "daoism",
+      "traditionLabel": "道",
+      "title": "盘古",
+      "role": "神话人物 · 宇宙开辟",
+      "summary": "进入天地开辟与宇宙秩序的神话叙事；不映射到现实历史地图。",
+      "timeLabel": "神话时间：无单一历史纪年",
+      "placeLabel": "原初宇宙 · 象征空间",
+      "spaceView": "cosmos"
+    },
+    {
+      "kind": "figure",
+      "slug": "nuwa",
+      "tradition": "daoism",
+      "traditionLabel": "道",
+      "title": "女娲",
+      "role": "神话人物 · 创生与补天",
+      "summary": "连接造人、修复和秩序重建的神话层，后世图像与祭祀另行标注。",
+      "timeLabel": "神话时间：无单一历史纪年",
+      "placeLabel": "女娲创生 · 象征空间",
+      "spaceView": "cosmos"
+    },
+    {
+      "kind": "figure",
+      "slug": "fuxi",
+      "tradition": "daoism",
+      "traditionLabel": "道",
+      "title": "伏羲",
+      "role": "神话人物 · 八卦与秩序",
+      "summary": "从符号、分类和宇宙秩序进入伏羲传统，不把传说写成可考的个人发明史。",
+      "timeLabel": "神话时间：无单一历史纪年",
+      "placeLabel": "八卦秩序 · 象征空间",
+      "spaceView": "cosmos"
+    },
+    {
+      "kind": "figure",
+      "slug": "huangdi",
+      "tradition": "daoism",
+      "traditionLabel": "道",
+      "title": "黄帝（轩辕）",
+      "role": "传说人物 · 祖先谱系与秩序",
+      "summary": "并置五帝传说、政治象征和后世国家记忆，不分配伪精确生年。",
+      "timeLabel": "传说时代：无可考生年",
+      "placeLabel": "祖先与秩序 · 象征空间",
+      "spaceView": "cosmos"
+    },
+    {
+      "kind": "figure",
+      "slug": "xi-wangmu",
+      "tradition": "daoism",
+      "traditionLabel": "道",
+      "title": "西王母",
+      "role": "神圣人物 · 昆仑与仙境",
+      "summary": "连接昆仑、长生和神圣女性形象，现实地理与神话空间严格分开。",
+      "timeLabel": "神话与神圣传统时间：无单一历史纪年",
+      "placeLabel": "昆仑 · 象征空间",
+      "spaceView": "cosmos"
+    },
+    {
+      "kind": "figure",
+      "slug": "taishang-laojun",
+      "tradition": "daoism",
+      "traditionLabel": "道",
+      "title": "太上老君",
+      "role": "神圣人物 · 老子神格化层",
+      "summary": "与老子保持独立身份，通过神格化关系进入道教神圣谱系与天界空间。",
+      "timeLabel": "后世神格化层：约 200–700",
+      "placeLabel": "道教天界 · 象征空间",
+      "spaceView": "cosmos"
     }
   ],
   "methodologyTitle": "历史、传统与神话，不放在同一个标签里",

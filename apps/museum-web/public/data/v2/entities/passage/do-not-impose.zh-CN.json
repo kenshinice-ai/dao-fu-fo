@@ -1,0 +1,50 @@
+{
+  "id": "894119ab-ff24-5cad-a21f-bd4b9998e36e",
+  "locale": "zh-CN",
+  "kind": "passage",
+  "slug": "do-not-impose",
+  "title": "己所不欲，勿施于人",
+  "tradition": "confucianism",
+  "evidence": "historical_inferred",
+  "timeLabel": "传世本《卫灵公》篇",
+  "shortSummary": "这句回答把“恕”表达为从自身不愿承受之事出发约束对待他人的方式。",
+  "curatorialDescription": [
+    "段落保留问答和德目语境，不把它脱离关系伦理改写为孤立口号。"
+  ],
+  "researchNote": "需补《卫灵公》篇语境、古注和唐代注疏。",
+  "keyFacts": [],
+  "related": [
+    {
+      "kind": "text",
+      "slug": "analects",
+      "title": "《论语》",
+      "relation": "摘录自"
+    }
+  ],
+  "sources": [
+    {
+      "id": "source:analects-edition",
+      "title": "《论语》通行本与篇章资料",
+      "locator": "颜渊第十二，第1章（“克己复礼为仁”）",
+      "grade": "A",
+      "role": "儒家 passage 原文和篇章定位的初始依据",
+      "url": "https://ctext.org/wiki.pl?chapter=198285&if=en&remap=gb"
+    }
+  ],
+  "profile": {
+    "textSlug": "analects",
+    "textVersionSlug": "analects-received",
+    "passageKind": "classic_saying",
+    "locatorOriginal": "卫灵公篇",
+    "locatorNormalised": "Analects 15.24",
+    "originalText": "己所不欲，勿施于人。",
+    "punctuatedText": "己所不欲，勿施于人。",
+    "modernZh": "自己不愿承受的事情，不要加在别人身上。",
+    "translationEn": "Do not impose on others what you do not desire for yourself.",
+    "ritualSensitivity": "public_textual",
+    "attributionStatus": "anonymous_or_composite",
+    "variantReadings": []
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

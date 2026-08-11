@@ -1,0 +1,48 @@
+{
+  "id": "155a8f30-dcd8-5a55-8bd0-2f8a23c3f595",
+  "locale": "en",
+  "kind": "text",
+  "slug": "daoist-institutional-records",
+  "title": "Sui–Tang Daoist institutional records",
+  "subtitle": "A research archive of figures, institutions and court relations",
+  "tradition": "daoism",
+  "evidence": "historical_inferred",
+  "timeLabel": "Scope of Sui–Tang Daoist institutional research",
+  "shortSummary": "This research-layer text collection helps distinguish Daoist biographies, institutional history and later genealogical narratives.",
+  "curatorialDescription": [
+    "It is not one ancient classic but a pending research archive; the page will show its evidence grade and review state.",
+    "Through Sima Chengzhen, Louguan and Chang'an, visitors can ask how figures, institutions and regional traditions shaped one another."
+  ],
+  "researchNote": "Specific primary texts, inscriptions, studies and edition locators must replace this record before public scholarly release.",
+  "keyFacts": [
+    {
+      "label": "Text kind",
+      "value": "Research record collection"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:daoist-historical-record",
+      "title": "Studies on Daoist figures and institutions in the Sui–Tang period",
+      "locator": "人物、宫观与皇室关系专题",
+      "grade": "B",
+      "role": "Scholarly context for Sima Chengzhen and Sui–Tang Daoist institutions"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "Curatorial and methodological notes of the Dao–Ru–Fo Digital Museum",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "Curatorial framework and terminology rules"
+    }
+  ],
+  "profile": {
+    "textKind": "historical_record",
+    "originalLanguageCode": "zh",
+    "canonicalStatus": "not_applicable",
+    "attributionStatus": "composite"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

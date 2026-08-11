@@ -1,10 +1,178 @@
 # 道·儒·佛文明数字博物馆｜项目交接文档
 
 > 维护纪律：每个可独立说明的实现、修复、验证或发布阶段完成后立即更新。
-> 最后更新：2026-08-09
-> 当前阶段：Alpha content pipeline / First Viewable Prototype / Cloudflare Pages Preview
+> 最后更新：2026-08-11
+> 当前阶段：A1+A2 全历史人物与 symbolic cosmos 批次已上线 production / production 作为唯一线上复盘基准 / Public RC 边界保持独立
+
+## 2026-08-11｜A1+A2 全历史人物与 symbolic cosmos 批次 production handoff（当前）
+
+- 本轮按用户授权执行 A1 + A2：A1 加入庄子、孟子、张道陵、葛洪、阿育王、龙树、鸠摩罗什、法显 8 位可审计历史/传统人物；A2 加入盘古、女娲、伏羲、黄帝、西王母、太上老君 6 位神话/神圣人物。每位新增人物均连接时间、地点或 symbolic cosmos、事件、文本/传承、关系与来源；没有只增加孤立人物卡；
+- 人物身份严格分层：`historical_person`、`traditional_sage`、`sacred_figure`、`mythic_persona` 不合并；老子与太上老君通过 `deified_as` 保持层级关系；神话/神圣人物不写入现实经纬度，现实地图与 symbolic cosmos 分开；历史时间、传统时间和接受史时间不互相覆盖；
+- Full Alpha compiler read model 当前为 140 个实体（人物 26、事件 31、地点 21、路线 3、文本 16、文本版本 8、概念 6、机构 6、对象 9、段落 14）、159 条关系、54 个来源、3 条音频；全历史现实地图显示 14 个地点索引，symbolic cosmos 为 16 个节点（3 个传统、7 个人物、5 个空间、1 个中心）和 12 条边；
+- 内容治理状态保持透明：Alpha quality report 为 352 个 public blockers；review queue 为 302 个 subject，其中 227 个 blocking、75 个 non-blocking。以上是研究内容审核队列，不是程序错误，也不表示 Public RC 已批准；Public RC2 仍独立保持 34 entities / 41 relations / 0 audio / 0 blocker；
+- 本地 release gates：production 脚本内置的 `npm run check` 全量通过；unit tests 17/17；Full Alpha Playwright + axe 为 49 tests、48 passed / 1 skipped（唯一 skipped 为 Public RC 专用测试）；`verify:content`、`verify:matrix`、`verify:domain-architecture`、`verify:generated`、`verify:preview-context`、`verify:static` 均通过；Vite Full Alpha build 通过；
+- 本轮修复并纳入 production：Cosmos 数据加载时 Hook 顺序导致的空白页；地图扩充后旧的单节点时间窗口断言；interactive SVG 错误声明为 `role=img` 造成 axe nested-interactive；修复后全量浏览器回归通过；
+- Cloudflare production：默认地址 <https://dao-ru-fo-digital-museum.pages.dev>；最新 unique 地址 <https://23c99acc.dao-ru-fo-digital-museum.pages.dev>；deployment ID `23c99acc-a45d-48d3-92fd-8d7b4a69438a`；Environment `Production`；branch `main`；source marker `cc734ca`；Wrangler `4.120.0`；manifest `2026.08.alpha.1 / alpha / preview`；按 production-only 纪律使用 `CF_PAGES_PRODUCTION_VISIBILITY=preview` + `ALLOW_DIRTY_DEPLOY=1`；上一版 `c4ae1eb6-61a0-42cc-9e17-94323fa197cb` 保留为回滚证据；
+- post-deploy：unique/default HTTP/JSON smoke 均 25/25；两地址首页、manifest、overview、Cosmos、relations 的 SHA-256 完全一致；线上浏览器确认首页 26 位人物、真实地图 14 个地点/2 条路线、地图缩放入口、Cosmos 3/7/5/12 节点与边、Pangu focus、庄子 dossier 均可用，console error/warn 为 0；production 是当前唯一线上复盘基准；
+- 本轮 handoff 后暂停扩大内容范围。下一步只处理线上复盘反馈、事实/来源/权利/可访问性审核，或经用户再次授权进入下一批人物/地点/事件；不把 Full Alpha 的 preview visibility 误称为 Public RC 或正式学术发布；
+- 工作树纪律：未创建新的 Git commit，未 reset/checkout，保留用户既有 dirty-worktree 改动；本次 production 上传通过显式 `ALLOW_DIRTY_DEPLOY=1` 完成，`cc734ca` 仅作为 Cloudflare source marker，不代表本轮全部改动已提交。
+
+## 2026-08-11｜全历史 overview 读模型、地图时间联动与 production 修复（上一阶段）
+
+- 已把 Web 的 canonical 读取从仅隋唐切片调整为全历史 `overview`：`staticData.map/mapContext/timeline` 优先读取 `maps/real/overview`、`timeline/overview`，旧 `suitang` 保留为兼容回退；当前全历史时间轴范围为 `-600—1200`、84 条事件，隋唐兼容切片为 `581—907`、63 条事件；没有新增历史事实，只是把现有 Alpha 时间断言完整投影出来；
+- 现实地图地点现在带有由已有时间断言推导的 `temporalRange`，地图与时间轴共享 URL 时间窗口；线上 `from=-600&to=-500` 只显示已有资料支持的 Sarnath（1 个地点），不把后世地点提前显示；当前仍是 8 个有明确现实坐标的地点、2 条路线、12 位人物入口；龟兹与终南山等 `position_pending` 地点没有擅自加坐标；
+- 现有 12 位人物的地图入口现在明确区分 `mapped` 与 `position-pending`：已有直接现实地点关系的人物聚焦到已发布地点；没有可直接落到现实坐标的已发布地点时，地图保留现有地理范围并显示“位置待核”，不再静默伪装成已定位；本次只补交互语义和回归测试，没有新增人物、地点或史实；
+- 共享语境选择器已从硬编码人物改为读取 search read model 的全部人物；当前 12 位人物都能进入统一关系工作台，未来获准加入的人物无需再次修改选择器；
+- 在线浏览器复盘发现底图初版被 CSP 的 `img-src` 拦截，已将 `https://*.basemaps.cartocdn.com` 纳入 `apps/museum-web/public/_headers`；修复后线上实际加载 18 张底图瓦片，控制台错误为 0；这是部署配置修复，不涉及人物、地点或历史断言扩充；
+- 当前 production：默认地址 <https://dao-ru-fo-digital-museum.pages.dev>；最新 unique 地址 <https://c4ae1eb6.dao-ru-fo-digital-museum.pages.dev>；deployment ID `c4ae1eb6-61a0-42cc-9e17-94323fa197cb`；Environment `Production`；branch `main`；source/commit marker `cc734ca`；Wrangler `4.120.0`；manifest `2026.08.alpha.1 / alpha / preview`；本次仍按 production-only + `CF_PAGES_PRODUCTION_VISIBILITY=preview` + `ALLOW_DIRTY_DEPLOY=1` 发布，Alpha 内容的 preview visibility 语义保持不变；上一版 `52168681` 为可回溯版本；
+- 发布证据：`npm run check` 全量 release gates 通过；本地 Playwright + axe 为 49 tests、48 passed / 1 skipped；unique 与 default Cloudflare HTTP/JSON smoke 均为 25/25；线上浏览器确认首页 12 位人物入口、`mapped/position-pending` 状态、全人物共享语境选择器、全历史时间轴、地图时间窗口和底图瓦片均正常；
+- 当前内容事实基线：91 个实体、12 位人物、10 个地点、17 个事件、2 条路线、90 条关系、38 个来源、3 条音频；质量报告仍为 205 blockers / 17 warnings / 184 review subjects（109 blocking）。production 是线上唯一复盘基准，authoring JSON/compiler 是可追溯修改源；
+- **本轮暂停点**：不继续扩大人物、神话位置、现实记忆地点或接受史内容。下一批内容必须先由用户确认人物分层、传统人物与神格化身份的关系、现实地点的尺度（exact/city/region/memory/symbolic）和时间类型（historical/traditional/reception）；在这些判断未确认前，不向地图写入新坐标或新史实。具体判断包见 [下一批内容审核闸门](./NEXT_CONTENT_REVIEW_GATE_2026-08-11.md)。
+
+## 2026-08-11｜地图首屏垂直切片与 production handoff（上一阶段）
+
+- 已把 previous project 的真实地图交互能力适配为本项目独立组件 `apps/museum-web/src/components/CivilisationMap.tsx`：Leaflet 真实底图、滚轮/双击/拖动/键盘地图、缩放、全境、地点 popup、地点 dossier、路线 polyline、路线账本和可访问地点索引均已接入；未复制 previous project 的品牌、seed、profile 或 fictional-map 语义；
+- 首页已改为 map-first：Hero 右侧直接加载真实地图，下方紧接当前 12 位人物的“地图 / 档案”入口；人物索引仍来自 overview read model，不在本轮新增人物事实；
+- `/explore?view=map` 与首页使用同一个 `staticData.mapContext` 加载器和 `CivilisationMap`，共享已有 context focus：人物 focus 会按现有关系投影地点；地图 root 暴露当前 zoom/center 供浏览器回归，位置索引和 route ledger 保留可访问的文本入口；
+- 当前空间数据边界仍是已有 8 个现实地图点、2 条路线和 90 条关系；这只是完整历史时空地图的交互骨架，不把当前隋唐 read model 冒充为最终全历史内容。下一批人物、神话位置、现实记忆地点和时间层仍必须按下方战略清单逐项审校；
+- `staticData` 已新增共享 `mapContext`，Leaflet 依赖已写入 `apps/museum-web/package.json`：`leaflet`、`react-leaflet`、`supercluster` 及对应类型；当前构建体积新增 Leaflet chunk，后续地图数据扩展前需再做 bundle/性能预算；
+- 本地门禁：`npm run check` 全部通过（compiler、schema、内容质量、数据库 bundle、static build）；Web unit 4/4；地图/首页/人物 focus targeted E2E 4/4；完整 Playwright + axe 在 `--retries=1` 下为 44 passed / 1 skipped；
+- 本轮已按 [Cloudflare production-only 发布纪律](./DEPLOYMENT.md#0-当前发布纪律2026-08-11-起) 直发 Cloudflare production，并在同一批次补做全历史首页文案同步：default <https://dao-ru-fo-digital-museum.pages.dev>；最新 unique <https://e0e235b0.dao-ru-fo-digital-museum.pages.dev>；deployment ID `e0e235b0-abea-4be2-bcfc-8bf0a91cc127`；branch `main`；commit marker `cc734ca`；Wrangler `4.120.0`；使用 `CF_PAGES_PRODUCTION_VISIBILITY=preview` + `ALLOW_DIRTY_DEPLOY=1`，仍明确标记 Alpha/preview visibility；上一版交互 deployment `8ebd33e5-e790-44b7-9fff-87ca5ed0ab20` 保留为可回溯版本；
+- post-deploy 证据：最新 default HTTP/JSON smoke 23/23、unique HTTP/JSON smoke 23/23；线上浏览器确认 Hero 已改为“交错的历史时空”、首页地图可见、人物索引 12 位；上一版线上 Explore 复验已确认 8 地点、2 路线、老子 focus→洛阳单点→地点 dossier；最新页面浏览器 error/warn 日志为空；
+- 当前暂停点：地图交互骨架已可线上复盘，但全历史内容尚未完成；当前仍只有既有 12 人/8 地点/2 路线 Alpha 数据。下一步需要先根据线上体验确认地图首屏、人物地图入口和“待核位置”呈现，再进入下一批人物/位置/时间内容；遇到神话人物现实位置、传统身份合并或接受地选择时暂停交给用户判断；
+
+## 2026-08-11｜全历史时空人物地图战略细化（上一阶段决策）
+
+- 新方向已确认：产品覆盖道、儒、佛从神话/传统起源到近现代传播的完整历史时空；隋唐长安保留为精选场景，不再作为 MVP 或产品边界；
+- 人物成为地图第一入口。历史人物显示有证据的活动地点、事件和路线；神话/神圣人物显示象征空间，以及现实世界中的祭祀、艺术、朝圣和记忆地点，不制造伪经纬度；历史人物与后世神格化身份使用独立节点和关系连接；
+- 已列出文明原型、道家/道教、儒家、佛教和三教制度桥梁人物的全历史策展骨架，并为当前 12 位人物分别列出地图补齐目标；第一项内容任务是确保 12 人点击后都有地图、路线、象征位置或明确的待核说明，不出现空场景；
+- 首页目标确认为“全历史时代轨道 + Leaflet 地图/神圣画布 + 人物/事件/地点/路线/关系/经典浏览器 + 常驻时间轴 + 统一详情 drawer”；`/explore` 与首页共用工作台，Museum 和 Research 保持独立；
+- 复用 `previous project` 的 Leaflet、聚合、时代筛选、共享选择、详情 drawer、搜索、时间轴和 URL 恢复能力，但不复制 profile、seed、品牌、巨型 atlas JSON 或 fictional-map 语义；
+- 发布流程改为 production-only：按内容、普通 UI、schema/部署三种风险运行必要本地门禁，然后直接部署 Cloudflare production 并做 default/unique smoke；不再为日常迭代维护 Preview alias 或执行 Public RC promotion；旧 Public RC2/Preview 记录冻结为历史；
+- 完整的人物清单、位置模型、全历史时间结构、组件复用边界、地图 read model、执行 checklist、production-only 流程和验收标准见 [全历史时空人物地图战略](./STRATEGIC_REALIGNMENT_MAP_FIRST_2026-08-11.md)；
+- 纪律边界：本轮仍只更新方案、路线图和 handoff，没有修改 Web、内容数据或 production；线上继续保持当前 `2026.08.alpha.1` 基线。
+
+## 2026-08-10｜成玄英与吉藏关系闭环 production 同步（上一版基线）
+
+- production 已按用户授权切换为当前最新完整 Alpha read model：91 个实体、90 条关系、3 条音频、38 个来源；人物 12、地点 10、事件 17；网页 manifest 标记为 `contentVersion=2026.08.alpha.1`、`releaseStage=alpha`、`visibility=preview`，明确这是完整研究内容而非 Public RC 批准包；
+- 当前质量状态完整保留：205 个 public blockers、17 个 warnings、184 个 review subjects，其中 109 个为 blocking；这些状态会继续在 Research/审核队列中显示，不因部署到 production 而被隐藏或改写；
+- 首页传统入口已与完整 Alpha 对齐：道/儒/佛分别显示 3/4/5 位人物，人物 spotlight 实际展示 12 位；未核实地点以“空间待核/节点待核”明确标注；
+- production 作为后续线上复盘的唯一运行时基准：<https://dao-ru-fo-digital-museum.pages.dev>；unique deployment：<https://198d43de.dao-ru-fo-digital-museum.pages.dev>；deployment ID：`198d43de-695b-4ec9-9707-8231f3f9df77`；branch：`main`；commit marker：`cc734cab18f201a1f17f1783e04f66c2748502d8`；本次使用显式的 `CF_PAGES_PRODUCTION_VISIBILITY=preview` Full Alpha 模式，并按 dirty-worktree 授权部署；
+- Public RC2 仍是独立的已审核发布边界，artifact 为 34 entities / 41 relations / 0 audio / 0 blockers；它不再代表当前 production 的完整内容量，后续若要恢复 Public visibility，必须重新走 Public RC promotion；
+- 后续新增内容、人物、地点、空间和关系，先以 production 当前 Alpha 读模型为复盘基线，再按 slice 进入审核；authoring JSON/compiler 仍是可追溯的修改源，production 是线上展示与回归的事实基准；
+
+### 本次 handoff 验收
+
+- 在上一版基础上，本轮新增 3 个精确来源、2 条 preview 关系，并收紧成玄英—《道德经》关系的来源边界：成玄英补入 631–636 长安城市尺度锚点，吉藏补入约 605–623 长安城市尺度锚点；Public RC2 选择范围未扩大；
+- `npm run check`：通过；Full Alpha Playwright + axe：44 passed / 1 skipped；unique production HTTP smoke：23/23；default production HTTP smoke：23/23；
+- unique 与 default JSON read model 完全一致：传统入口人物 3/4/5、首页 12 张人物卡、搜索 12 位人物、关系 90、来源 38、质量 205/17、审核 184/109；
+- 纪律边界：production 当前是 Alpha preview visibility，不等同于 Public promotion；Public RC2 仍保持 34 entities / 41 relations / 0 audio / 0 blocker；本轮未创建 Git commit、未 reset/checkout、未覆盖用户既有 dirty-worktree 改动；
+
+## 2026-08-10｜完整 Alpha production 同步（上一版基线）
+
+- `release:alpha-public-rc-2` 已完成正式审核并 promotion：12 个 core entities、14 个 dependency entities、30 条关系；`reviews.json` 当前 391 条，RC2 选择范围所有 required checks 已通过；Public artifact 为 34 entities / 41 relations / 0 audio / 0 blockers；
+- RC2 新增并公开老子、孔子、释迦牟尼与孔子问礼、鹿野苑初转法轮、大慈恩寺建立等人物—事件—地点—制度空间—文本—关系闭环；production 搜索索引实际包含 6 位人物：老子、孔子、释迦牟尼、玄奘、司马承祯、孔颖达；跨时代比较入口显示老子、孔子、释迦牟尼；
+- 首页传统入口的人物计数已更新为道/儒/佛各 2 位，并新增六位人物 spotlight，明确显示时间与地点入口；
+- 当前 Public RC Preview：<https://2af05e15.dao-ru-fo-digital-museum.pages.dev>；稳定 alias：<https://public-rc.dao-ru-fo-digital-museum.pages.dev>；deployment ID：`2af05e15-c4aa-4b36-8eb2-b5900635295a`；branch：`public-rc`；线上 HTTP smoke 23/23；
+- 当前 production：<https://dao-ru-fo-digital-museum.pages.dev>；unique deployment：<https://29aac795.dao-ru-fo-digital-museum.pages.dev>；deployment ID：`29aac795-a3e6-46c1-8dc9-3d0660e7ac37`；branch：`main`；production 线上 HTTP smoke 23/23；线上 JSON 确认 `visibility=public`、0 blockers、34 entities / 41 relations、首页 6 位人物入口；
+- 该历史节点 production 使用 `CF_PAGES_CONTENT_VISIBILITY=public`，并修复部署脚本使 production 默认强制 Public visibility；之后已由当前 Full Alpha production 同步显式覆盖；由于既有工作树包含用户此前未提交改动，本轮仍按显式授权使用 `ALLOW_DIRTY_DEPLOY=1`，尚未创建 Git commit；
+- 本地验证：`npm run check` 全部通过；单元测试 17/17；Preview 浏览器与 axe 44 passed / 1 skipped；Public RC2 专用浏览器 smoke 1/1；production HTTP smoke 23/23；
+
+该历史节点的下一步已由上方 Full Alpha production 同步取代；当前先以线上完整内容复盘为准。
+
+## 2026-08-09｜Public RC 正式审核闭环与线上复盘（历史）
+
+- 审核身份为 `codex:authorized-rc-reviewer`；冻结范围没有扩大，仍是 27 个 subject（10 个核心实体、3 个 text version 结构依赖、14 条关系）；`reviews.json` 为 144/144 `passed`，其中 27 条 compiler schema、117 条正式审核记录；没有把旧的 agent pre-review 或 role pending 当作批准；
+- `release:alpha-public-rc-1` 已从 `in_review` 推进为 `promoted`。promotion ID：`promotion:alpha-public-rc-1-20260809131146`；source checksum：`f1d5513d2d6dba91ef6376afb415868bfca3bb5868475ca2e59c6ede3e2059aa`；Public artifact checksum：`c5004cdd7548520ec08868188f3d258e07a8de1f942eb27ac683825bb26da452`；Public artifact 为 13 entities / 14 relations / 0 audio / 0 blockers；
+- 完整 `npm run check` 通过；完整浏览器回归 44 tests 为 43 passed / 1 skipped；Public-only smoke 1/1 passed；Cloudflare HTTP smoke 23/23 passed；线上浏览器已复盘首页、展览、地图、人物比较、原典阅读和玄奘条目。地图当前支持缩放、拖动、键盘/重置，Public 范围不含 Preview-only route corridor；
+- 在线复盘曾发现地图把未公开路线实体的 SPA fallback HTML 当 JSON 解析，已修复为 JSON content-type guard + optional route layer，并重新部署复验；这是本轮唯一需要修复的线上阻断问题；
+- 当前 Preview：<https://57cc78db.dao-ru-fo-digital-museum.pages.dev>；稳定 alias：<https://public-rc.dao-ru-fo-digital-museum.pages.dev>；deployment ID：`57cc78db-1970-485d-808b-33f915a9dfc7`；branch：`public-rc`；commit：`cc734cab18f201a1f17f1783e04f66c2748502d8`；Wrangler：`4.120.0`；production 未触碰；
+- 详细证据、边界、复盘路径和下一阶段入口见 [Public RC 最终审核与 Preview 复盘](./PUBLIC_RC_FINAL_AUDIT_2026-08-09.md)。当前适合停在可复盘节点，等待用户线上测试后再决定下一内容 slice。
+
+## 2026-08-09｜构建卫生修复与 Public RC 进入审核
+
+- compiler 输出、Preview read models 和 Public fail-closed artifact 已重新生成；新增 `verify:generated`，当前 455 个生成文件无 iCloud 冲突副本或数字后缀重复文件；`npm test` 现在会先构建 workspace packages，`npm run check` 已调整为先生成/同步再扫描架构边界；
+- `npm run check` 全部通过；单元测试 17/17；Playwright + axe 33/33；Public artifact 仍为 0 entities / 0 sources / 0 relations / 0 audio；
+- `release:alpha-public-rc-1` 从 `planning` 推进为 `in_review`，范围仍冻结为 27 个 subject；当前 27 条 RC blocker 全部来自正式审核 checks 未完成，144 条记录仍为 27 schema passed、25 agent pre-reviewed、92 pending；不把 agent 预审改写为正式批准；
+- 本轮未重新部署 Cloudflare、未执行 promotion、production 未发布；下一步需要真实 reviewer 为 fact/tradition/bilingual/rights/editorial/accessibility 写入带时间和说明的 records。
 
 ---
+
+## 2026-08-09｜人物—长安关系证据收窄 Preview（上一条记录）
+
+- 本轮严格留在冻结的 27 个 Public RC subject 内，没有新增人物、文本、地点或关系；两条既有空间关系完成 claim-boundary 收窄：司马承祯—长安为景云二年（约 711）入京的城市尺度锚点，明确排除后续东都洛阳/王屋山活动；孔颖达—长安为贞观十四年（640）长安务本坊国子学讲学锚点，不再外推 `c. 630–648`；
+- 新增专用 `source:changan-guozijian-gazetteer`（精确、已核引、陕西省地方志办公室《碑林区志》PDF），通用 `source:education-classics-records` 保持待核；source of truth 现为 30 个来源、79 条关系、144 条 review records，RC 仍为 27 blockers、planning，两个 relation fact 仍是 `pending`；
+- 隔离 clean staging：`npm run check` 通过；单元测试 17/17；Playwright + axe 33/33；Preview read models 206 files / 79 bilingual relations；数据库导入计划 1208 statements / 30 sources / 144 reviews；Public artifact 仍为 0 entities / 0 sources / 0 relations / 0 audio；
+- 最新 Cloudflare Preview：<https://5b4129ba.dao-ru-fo-digital-museum.pages.dev>；稳定 alias：<https://first-public-rc.dao-ru-fo-digital-museum.pages.dev>；deployment ID：`5b4129ba-d001-4394-b16f-b23bb3f864c7`；Preview branch：`first-public-rc`；
+- 线上 smoke 23/23 通过；线上 JSON 确认 317 blockers / 17 warnings、173/173 blocking review subjects、30 sources；线上人物页面显示司马承祯 711 与孔颖达 640 的新关系文案；production 未发布。
+
+---
+
+## 2026-08-09｜Public RC reviewer 角色筛选 Preview 更新（最新）
+
+- 本轮仍不扩展人物、文本或关系范围；在既有 144 条审核记录和 27 个候选 subject 上，Research 审核队列新增按正式 reviewer 角色筛选，并把筛选状态写入可分享 URL；
+- 当前 `reviews.json` 共 144 条记录：27 条自动 schema 通过、25 条 agent pre-review（其中 18 条文本链、7 条人物/空间/关系 fact）、92 条正式角色 pending；`pre_reviewed` 不计入 completed checks，不会降低 Public blocker；
+- 人物、空间与关系的 fact 分流记录在 [fact 证据分流表](./PUBLIC_RC_FACT_REVIEW_2026-08-09.md)；本轮只是审核闭环的可见性与交接改进，不新增内容选择；
+- 隔离 clean staging 的 `npm run check`、单元测试 17/17、Playwright + axe 33/33 均通过；数据库 import plan 保持 144 reviews、27 release-candidate subjects、0 promotions；
+- 最新 Cloudflare Preview：<https://60e89825.dao-ru-fo-digital-museum.pages.dev>；稳定 alias：<https://first-public-rc.dao-ru-fo-digital-museum.pages.dev>；deployment ID：`60e89825-7a30-4d0a-bdea-04d103b1a774`；Preview branch：`first-public-rc`；
+- 线上 HTTP smoke 23/23 通过；线上 JSON 复验确认 quality report 为 317 blockers、review queue 为 173/173 blocking subjects，角色分派数量为历史 2、传统 10、双语 13、权利 27、无障碍 13、策展 27；线上浏览器已确认点击历史审核筛选后 URL 可分享且队列收窄为 2 项，production 未发布。
+
+## 2026-08-09｜人物—长安关系证据收窄（已完成切片）
+
+- 本轮不扩展冻结的 27 个 Public RC subject；只修正两条既有 relation 的 claim boundary：司马承祯—长安改为景云二年（约 711）入京的城市尺度锚点，明确不把开元年间东都洛阳/王屋山活动并入；孔颖达—长安改为贞观十四年（640）长安务本坊国子学讲学/经学活动，删除无具体空间证据的 `c. 630–648` 宽区间；
+- 新增专用 `source:changan-guozijian-gazetteer`，绑定陕西省地方志办公室发布的《碑林区志》精确 PDF 定位；通用 `source:education-classics-records` 保持原待核状态；两条 relation 的 `role:historical-reviewer` 仍为 `pending`，因为 agent evidence pass 不是正式历史审核；
+- 已加 compiler regression assertions；clean staging 全量门禁和 33/33 Playwright + axe 已通过，新的 Preview 已完成线上 smoke/JSON/浏览器复核；Public RC 不 promote，production 不发布。
+
+## 2026-08-09｜Public RC accessibility 门禁 Preview 更新（上一版）
+
+- 本轮不扩展人物、文本或关系范围；修正路线图与 compiler required checks 的不一致：13 个 Public RC entity subject（10 个核心实体 + 3 个 text version 依赖）现在都要求 `accessibility`，并新增 `role:accessibility-editor` 的 pending 分派；`reviews.json` 当时共 144 条记录：27 条自动 schema 通过、117 条仍待角色审核；文本链 claim-level 预审边界已整理在 [文本链预审表](./PUBLIC_RC_TEXT_CLAIM_AUDIT_2026-08-09.md)；
+- accessibility review 明确检查实际中英文路由的标题层级、焦点顺序、键盘操作、对比度、链接名称和屏幕阅读顺序；33/33 Playwright + axe 只是自动化证据，不替代角色审核；
+- 隔离 clean staging 的 `npm run check` 通过；单元测试 17/17；Playwright + axe 33/33；`verify:preview-context` 为 206 文件、79 条双语关系；database import plan 为 144 reviews、27 release-candidate subjects；Public artifact 仍为 0 entities / 0 sources / 0 relations / 0 audio；Public RC 仍为 27 blockers；
+- 最新 Cloudflare Preview：<https://7aef36c5.dao-ru-fo-digital-museum.pages.dev>；稳定 alias：<https://first-public-rc.dao-ru-fo-digital-museum.pages.dev>；deployment ID：`7aef36c5-2329-4db1-8912-eb3582b3876e`；Wrangler：`4.120.0`；线上 HTTP smoke 23/23；线上 JSON 复验确认 `figure:xuanzang` 缺少项包含 accessibility，跨文本阅读显示 `Accessibility: pending · role:accessibility-editor`，三条文本来源仍为 `precise`，production 未发布。
+
+## 2026-08-09｜Public RC 来源精度与审核包 Preview 更新（上一版）
+
+- 本轮不扩展人物、文本或关系范围；在既有 27 个 Public RC subject 和 144 条审核记录之上，补齐第一批人工审核所需的 [Public RC 审核包](./PUBLIC_RC_REVIEW_PACKET_2026-08-09.md)，明确 subject、来源入口、定位边界、审核角色和“未完成即阻塞”的规则；其中 13 个实体新增 `accessibility` pending 分派，使路线图与实际 required checks 一致；
+- 将 `source:heart-sutra-edition`、`source:daodejing-edition`、`source:analects-edition` 的 `locatorLevel` 从 `edition` 精确到 `precise`。三条来源的既有精确 locator、`citationStatus=verified` 和 public-domain 权利边界不变；人物来源仍保持较宽边界，避免把传记来源误写成每条策展断言的直接证据；
+- 隔离 clean staging 的 `npm run check` 通过；单元测试 17/17；Playwright + axe 33/33；`verify:preview-context` 为 206 文件、79 条双语关系；database import plan 为 144 reviews、27 release-candidate subjects；Public artifact 仍为 0 entities / 0 sources / 0 relations / 0 audio；
+- 最新 Cloudflare Preview：<https://7159ce73.dao-ru-fo-digital-museum.pages.dev>；稳定 alias：<https://first-public-rc.dao-ru-fo-digital-museum.pages.dev>；deployment ID：`7159ce73-70f0-4a4e-8642-8c133fd5e55b`；Wrangler：`4.120.0`；线上 HTTP smoke 23/23；线上 JSON 复验确认三条文本来源均为 `precise`、质量报告 317 blockers、审核队列 173 subjects、跨文本对读的 fact 仍显示 `pending · role:historical-reviewer`，同文本对读仍为 2 readings / 7 axes / 8 context relations；production 未发布。
+
+## 2026-08-09｜Public RC 审核分派 Preview 更新（上一版）
+
+- 本轮不扩展内容范围，只把第一批 Public RC 的 27 个 subject（10 个核心实体、3 个 text version 依赖、14 条关系）建立为可执行审核队列；`reviews.json` 共 131 条记录：27 条 `schema=passed`（自动编译器证据）和 104 条按 `role:historical-reviewer`、`role:tradition-reviewer`、`role:bilingual-editor`、`role:rights-editor`、`role:lead-curator` 分派的 `pending` 记录；pending 不等于人工批准，也不会满足 ready 门禁；
+- TextReading 页面现在把审核证据逐项显示为“已通过 / 待审核”、分派角色和审核说明；当前质量报告仍为 317 blockers / 17 warnings，Review queue 仍为 173 subjects / 173 blocking，Public RC 仍为 planning；
+- 本地验证：`npm run check` 通过；单元测试 17/17；Playwright + axe 33/33；`verify:preview-context` 206 文件、79 条双语关系；database import plan 为 131 reviews、27 release-candidate subjects；Public artifact 仍为 0 entities / 0 sources / 0 relations / 0 audio；
+- 最新 Cloudflare Preview：<https://512bf65c.dao-ru-fo-digital-museum.pages.dev>；稳定 alias：<https://first-public-rc.dao-ru-fo-digital-museum.pages.dev>；deployment ID：`512bf65c-26f6-4309-9ca4-7d2f4eb6ba89`；Wrangler：`4.120.0`；线上 HTTP smoke 23/23；线上 JSON 复验确认 pending role、317 blockers、173 subjects 和 `figure:xuanzang` 的 schema completed 均已可见；production 未发布。
+
+## 2026-08-09｜同一文本版本对读与审核证据 Preview 更新（上一版）
+
+- source of truth 现为 91 个内容实体、79 条结构化关系、26 个来源和 3 条音频 metadata；其中人物 12、文本 7、文本版本 8、passage 14；双语实体 artifact 为 182 个；数据库 bundle 为 94 个 canonical entities（含 3 个顶级传统）、188 条翻译和 91 条时间断言；
+- 在已有跨文本 `three-traditions-passage-reading` 之外，新增同一文本 `dhammacakkappavattana-version-reading`：同一部《转法轮经》的巴利语短引与 Thanissaro 英译各自回到明确的 text version、locator、权利和传述层；`suffering / stress` 被记录为译者措辞差异，并明确不把它冒充成巴利语手稿异文或唯一译法；
+- `PassageProfile` 新增受来源约束的 `variantReadings`；文本阅读 read model 同时携带版本/译文差异和 `reviewEvidence`。第一批 Public RC 的 27 个 subject 现在有 131 条审核记录：27 条由 compiler 证明的 schema 通过、104 条按历史/传统/双语/权利/策展角色保持 `pending`；页面显示分派、说明和 blocking，而不是伪造完成状态。新增同文版本切片尚未获得真实 reviewer approval；同一传统内部的版本平行关系不会进入 sacred cosmos 的跨传统象征边；
+- Preview 自动同步 compiler 的 182 个双语实体 artifact、91 条搜索项、26 个来源、8 个现实地图地点、63 个时间项、4 节点/5 边无坐标 sacred-cosmos 模型、48 节点/79 条图边、79 条双语关系、2 个双语人物比较 artifact 和 4 个双语文本对读 artifact；compiler read-model 文件为 206 个，dist 为 221 个；
+- 本地验证：全量 `npm run check` 通过；单元测试 17/17；Playwright + axe 为 33/33；`verify:preview-context` 为 206 文件、79 条双语关系；数据库导入计划含 131 条 review checks；same-text 对读双语 JSON 各为 2 readings / 2 versions / 7 axes / 8 context relations；质量报告为 317 blockers / 17 warnings，审核队列为 173 subjects / 173 blocking；
+- 最新 Cloudflare Preview：<https://a4fcca9a.dao-ru-fo-digital-museum.pages.dev>；稳定 alias：<https://first-public-rc.dao-ru-fo-digital-museum.pages.dev>；deployment ID：`a4fcca9a-4206-4971-b174-cf489ed3a141`；Wrangler：`4.120.0`；线上 HTTP smoke 为 23/23；双语 same-text JSON、原有跨文本 JSON 和新路由线上复验通过；生产环境仍未发布。
+
+## 2026-08-09｜人物与文本立体架构 Preview 更新（最新）
+
+- source of truth 已扩展为 89 个内容实体、75 条结构化关系、25 个来源和 3 条音频 metadata；其中人物 12、文本 7、文本版本 7、passage 13、地点 10、事件 17；双语实体 artifact 为 178 个；数据库 bundle 为 92 个 canonical entities（含 3 个顶级传统）、184 条翻译和 89 条时间断言；
+- 老子（李耳）、孔子（孔丘）、释迦牟尼已作为跨时代入口加入 Preview；每人都明确区分历史性/传统性、源头时间、文本/言论归属、现实地点和后世接受，不把传统叙事直接当作同等级历史事实；
+- 新增孔子问礼于老子、佛陀在鹿野苑初转法轮两个事件，鹿野苑真实地点，早期佛教文本—版本—passage 链，以及老子/孔子/释迦牟尼的 `attributed_to`、`remembered_in`、后世接受关系；
+- 新增 source-of-truth 驱动的 `cross-era-figures` 比较集：老子、孔子、释迦牟尼以历史性、传统归属、时间、言论、空间、事件、文本、后世接受、证据九个维度并排比较；每个单元格明确标注 `recorded` / `derived` / `not_recorded`，并把共同连接到至少两位人物的洛阳与孔子问礼事件显示为桥接节点；
+- 新增 source-of-truth 驱动的 `three-traditions-passage-reading` 原典对读：道德经、论语、转法轮经各选一段，按文本层级、定位、原文、归属、解释、时间、证据与权利七个维度并排阅读；每段都回指具体 text version，并保留 `passage_of`、`quoted_from_version`、`attributed_to` 关系和 25 条上下文关系；
+- Explore 共享语境现在可在人物、事件、地点、机构、文本之间一跳切换；实体详情显示历史性、人物类别、关系限定条件、证据层和来源跳转；Research 提供 25 个来源的双语来源台账、质量报告和只读审核队列；Preview 自动同步 compiler 的 178 个双语实体 artifact、89 条搜索项、25 个来源、8 个现实地图地点、63 个时间项、200 个 compiler read-model 文件（含 2 个比较入口和 2 个文本对读入口）、4 节点/5 边无坐标 sacred-cosmos 模型和 48 节点/75 边完整关系图；focus projection 会按关系过滤地点，并把关系时间断言加入聚焦时间轴；
+- 时间轴支持可分享的 `from` / `to` 年份范围；地图路线从 route entity 的 waypoint manifest 派生为现实地点之间的重建廊道，并明确不启用伪精确动画；
+- 六个完整人物 dossier（玄奘、司马承祯、孔颖达、老子、孔子、释迦牟尼）均通过时间、空间、事件、文本、后世接受五项结构门禁；老子标为 `traditional_sage / contested`，其余五位按当前证据层分别标记；
+- 本地验证：干净 staging 上 `npm run check` 全绿；单元测试 16/16；Playwright + axe 为 32/32；Preview read models 逐文件校验通过（200 compiler files，双语关系各 75/75，比较集双语各 3 entities / 9 axes / 2 bridges，文本对读双语各 3 passages / 7 axes / 25 context relations）；生产环境仍未发布；
+- 最新 Cloudflare Preview：<https://331d0b3f.dao-ru-fo-digital-museum.pages.dev>；稳定 alias：<https://first-public-rc.dao-ru-fo-digital-museum.pages.dev>；deployment ID：`331d0b3f-efd5-44a0-bd3c-4e4a3da0da3b`；Wrangler：`4.120.0`；commit：`cc734cab18f201a1f17f1783e04f66c2748502d8`；线上 HTTP smoke 为 23/23，文本对读/人物比较双语 JSON 和文本对读路由线上复验通过；质量报告为 311 blockers / 17 warnings，审核队列为 167 subjects / 167 blocking，关系/来源各 75/25，sacred cosmos 双语接口各 4 nodes / 5 edges 且无 coordinate 字段；生产环境仍未发布。
+
+## 2026-08-09｜共享语境 Preview 更新（上一版）
+
+- 已将编译产物中的双语关系 read model（51 条关系）接入 `apps/museum-web/public/data/v2/relations/{zh-CN,en}.json`；`verify:preview-context` 要求 Preview 文件与 `.artifacts/content/v2` 逐字一致；
+- Explore 新增共享 `context focus`：人物、事件、地点、机构、文本可通过 URL `focus` 聚焦，关系卡片显示关系标签、时间断言和证据层，并可切换到相邻对象或打开已有静态条目；
+- 当前地图地点节点、时间轴事件和关系图节点会对匹配的聚焦对象做视觉高亮；这是第一步跨视图连接，完整的关系驱动派生过滤仍列在 P1；
+- 本地验证：`npm run check` 全绿；完整 Playwright + axe 为 22/22；fresh/repeat PostgreSQL/PostGIS 为 14 migrations、51 relations，fingerprint 一致；
+- 最新 Cloudflare Preview：<https://63184296.dao-ru-fo-digital-museum.pages.dev>；稳定 alias：<https://first-public-rc.dao-ru-fo-digital-museum.pages.dev>；deployment ID：`63184296-3706-4beb-846e-d7e95ee563d7`；online smoke 23/23，双语在线关系 read model 各 51/51，headless browser smoke 通过；production 仍不发布。
 
 ## 2026-08-09｜Cloudflare Pages Preview 已上线
 
@@ -14,9 +182,16 @@
 - 发布内容明确是 `2026.08.prototype.1` / `first-viewable-prototype`，仍读取已验收的 `apps/museum-web/public/data/v2`，不包含未完成的 Public RC 内容；
 - `./deploy/smoke-pages.sh`：23/23 通过，覆盖首页、CSP/nosniff/Permissions-Policy、SPA exhibition/entity/passage deep links、JSON split、地图 split 和 immutable asset cache；
 - Chrome 浏览器线上复验：首页加载完成、`/figures/xuanzang` 显示玄奘条目、无 console error/warn；
-- 当前 Public RC `release:alpha-public-rc-1` 仍为 `planning`，最新 blocker report 为 29 blockers / 27 warnings；Preview 上线不等于 Public RC 发布。
+- 当前 Public RC `release:alpha-public-rc-1` 仍为 `planning`，最新 blocker report 为 27 blockers / 27 warnings；Preview 上线不等于 Public RC 发布。
 
 生产上线仍需另行完成：Preview 评审、production release commit、production smoke、浏览器复验和本页证据回写。不要把 Preview URL 当作正式 production URL。
+
+## 2026-08-09｜地图交互 Preview 更新
+
+- 最新交互 Preview：<https://b0bf2351.dao-ru-fo-digital-museum.pages.dev>；稳定 alias 仍为 <https://first-public-rc.dao-ru-fo-digital-museum.pages.dev>；
+- 构建基线：`cc734cab18f201a1f17f1783e04f66c2748502d8`；本次包含当前工作树中的地图交互改动，故部署时 tree 为 dirty；
+- 地图已经支持缩放、滚轮、双击、拖动、键盘方向键、`+/-/0`、重置、焦点导航和地点详情跳转；线上 smoke 23/23、最新本地 E2E 22/22 通过；
+- 本轮新增的知识架构与 014 数据库迁移属于 authoring/compiler 层，不改变已部署 prototype 的静态内容；Public RC 仍未发布。
 
 ---
 
@@ -26,16 +201,16 @@
 
 - 冻结 `release:alpha-public-rc-1` 选择清单：10 个 core entities、3 个 text-version dependencies、14 条 relations；
 - compiler 新增 structural dependency、relation closure 和三传统覆盖校验；Public 子集只保留可见 related links，并拒绝 dangling passage dependencies；
-- 新增 `verify:public-rc`、`verify:public-rc:ready` 和默认 dry-run 的 `content:promote`；当前报告为 29 blockers、27 warnings，候选仍为 planning；
-- 新增 migration 013、release candidate bundle rows 和 promotion audit rows；fresh/repeat PostgreSQL/PostGIS 通过，13 migrations、803 importer statements，指纹 `52cbaae271faf9f3f4978eb4f6fa6dd7`；
+- 新增 `verify:public-rc`、`verify:public-rc:ready` 和默认 dry-run 的 `content:promote`；当前报告为 27 blockers、27 warnings，候选仍为 planning；
+- 新增 migration 014、release candidate bundle rows 和 promotion audit rows；fresh/repeat PostgreSQL/PostGIS 通过，14 migrations、812 importer statements；
 - 新增 compiler regression test，确认单个已审核 entity 的 Public artifact 不会携带 preview related entity。
 
 - 新增 figure、concept、institution、event 专用 profile，并为 83/83 canonical entities 补齐结构化 profile；
 - 新增 012 migration，补齐音频脚本/来源和 pending review 约束；本轮另新增 013 release candidate / promotion 约束；
 - 实现确定性 transaction importer、database state verifier 和隔离的 PostgreSQL/PostGIS fresh/repeat 集成脚本；
-- 真实集成验证通过：13 migrations、803 importer statements、83 entities、166 translations、80 temporal assertions、30 relations；重复执行指纹保持 `52cbaae271faf9f3f4978eb4f6fa6dd7`；
+- 真实集成验证通过：14 migrations、876 importer statements、83 entities、166 translations、80 temporal assertions、51 relations；重复执行结果一致；
 - 补齐 SPA 页面语言/标题/描述 metadata、路由后主内容焦点和无障碍细节；
-- 新增 Playwright + axe：19/19 tests 通过，覆盖语言、深链接、搜索、Explore URL、390px、reduced motion 和 14 条路由的 WCAG A/AA；
+- 新增 Playwright + axe：22/22 tests 通过，覆盖语言、深链接、搜索、Explore URL、三位人物共享语境、地图交互、390px、reduced motion 和 14 条路由的 WCAG A/AA；
 - `npm run check` 全绿；新增 `npm run check:release` 串联静态、E2E 与真实数据库门禁；Public RC blocker report 也纳入默认 check；
 - 新增 `CHECKPOINT_2026-08-09.md`，明确测试路线和 Public 内容未完成边界。
 
@@ -44,8 +219,8 @@
 ### 2026-08-09 深化更新｜数据库契约、质量工作流与派生 read models
 
 - domain schema 补齐 capability、temporal predicate、relation type registry，并对地点、路线和 museum object 使用专用 profile 约束；
-- 004 migration 已 seed 当前 14 种 relation types 和完整 temporal predicate registry，时间断言不再接受任意字符串；
-- compiler 生成确定性 `.artifacts/database/import-v1.json`，当前为 83 entities、166 translations、18 sources、164 entity-source、96 tradition assignments、80 temporal assertions、30 relations；
+- 004/014 migration 已 seed 当前 20 种 relation types 和完整 temporal predicate registry，时间断言不再接受任意字符串；
+- compiler 生成确定性 `.artifacts/database/import-v1.json`，当前为 83 entities、166 translations、21 sources、166 entity-source、96 tradition assignments、80 temporal assertions、40 relations；
 - 新增 `verify:database-bundle`，检查 UUID/key 唯一性、引用完整性、双语覆盖和三个顶级传统；
 - source 增加 locator level 与 citation status；Public factual claim 必须有 verified edition/item/precise 外部来源，项目 editorial method 不算事实来源；
 - 新增 `reviews.json` 与 review-check schema；compiler 生成 review queue 并对 Public entity/relation/audio 强制完整审核；
@@ -55,23 +230,23 @@
 - `MuseumDataSource` / `StaticMuseumDataSource` 已建立 static/API 同构契约并在适配器边界进行 Zod 校验；
 - 新增 `verify:architecture`，阻止 Web runtime/部署脚本连接数据库、直读 authoring content 或 `.artifacts`，并要求 prototype 与 Alpha contentVersion 明确分离；
 - 发现并补上数据库来源质量字段缺口：新增 forward-only 011 migration，保存 `locator_level` / `citation_status`，import bundle 同时携带双语 citation；
-- `npm run check` 全绿：4 个 test files、8 tests、11 migrations、Preview/Public 内容、数据库 bundle、架构边界、Vite build 和 static release；production build 无 `.map` 文件；
+- `npm run check` 全绿：5 个 test files、10 unit tests、14 migrations、Preview/Public 内容、数据库 bundle、架构边界、Vite build 和 static release；production build 无 `.map` 文件；
 - 新增 `PROJECT_STATUS_AND_ROADMAP.md` 与 ADR-015，冻结下一阶段实施顺序。
 
 本轮按工作线路完成了 P0 工程基础和 Lean Alpha 内容扩展：
 
 - 新增 `@drf-museum/domain-schema`、`@drf-museum/core` 和 `@drf-museum/content-compiler` workspace packages；
 - source of truth 扩展为 80 个双语实体：人物 9、文本 6、文本版本 6、passage 12、概念 6、机构 6、地点 9、事件 15、路线 2、对象 9；
-- 独立 `relations.json` registry 达到 30 条关系，包含端点、关系类型、双语说明、证据层、置信度和来源；
+- 独立 `relations.json` registry 达到 51 条关系，包含端点、关系类型、双语说明、证据层、置信度和来源；
 - 新增 `audio.json` metadata：3 条双语脚本，当前均为 `not_recorded`；
 - compiler 输出双语 entity/relation/audio/profile/search/manifest/read model，并验证稳定 UUID、来源端点、文本—版本—passage 链接、关系和媒体计数；
 - `mvp-alpha-matrix.json`、`verify:matrix` 与 `verify:alpha-ready` 将最低配额、实际数量和完成门禁绑定；
-- compiler 支持单实体 JSON 与批次数组 JSON，也支持 `preview` 与 `public` visibility。当前 Preview artifact 为 80 entities / 30 relations / 3 audio；Public artifact 为空且通过验证，因为全部内容仍是 preview 或未录制；
+- compiler 支持单实体 JSON 与批次数组 JSON，也支持 `preview` 与 `public` visibility。当前 Preview artifact 为 80 entities / 51 relations / 3 audio；Public artifact 为空且通过验证，因为全部内容仍是 preview 或未录制；
 - Lean Alpha 全部数量配额已达成；展览 5 sections 高于 4 的最低配额，保留冻结的既有策展路线；
 - 龙门石窟接入 UNESCO 权威入口，隋唐总览接入 The Met 公开参考；新增内容对不确定日期、研究性阶段标签和对象占位均显式降级证据层；
 - 按技术架构建立 `database/migrations/001–010` authoring schema：PostGIS/pg_trgm、实体与双语、来源/locator/审核/修订、传统/时间/关系、现实与神圣地理硬约束、领域 profile、媒体/音频/展览和 Public 只读视图；
 - 新增 `verify:migrations` 与 ADR-014，检查 forward-only 文件顺序、事务包裹、禁止破坏性 baseline SQL 和关键表契约；该阶段当时尚无真实数据库执行证据，已由本页上方工程检查点补齐；
-- Explore 状态统一为可分享 URL contract：地图、神圣地理、时间、关系、传统筛选、阅读模式和时间范围；新增神圣地理象征层，明确不使用伪经纬度；
+- Explore 状态统一为可分享 URL contract：地图、神圣地理、时间、关系、传统筛选、阅读模式、时间范围和共享 `focus`；新增神圣地理象征层，明确不使用伪经纬度；
 - 新增 `/research` Research 层入口，公开索引中的证据分组、版本链、地理边界和发布状态；
 - Web 静态路径改由 `@drf-museum/core` read-model contract 生成；
 - 浏览器验收通过：首页、Research、Explore 四视图、中文/英文、时间范围 URL、390px 移动端；控制台无 warn/error；修复移动端 `backdrop-filter` 导致底部导航定位到顶部的问题。
@@ -226,7 +401,7 @@ contentVersion: 2026.08.prototype.1
 2. 地图为真实坐标投影的历史地理示意，不是完整 Leaflet 底图。
 3. 部分唐代内容仍标明“正式版补完整书目”，不能误写为最终 publishable 学术条目。
 4. `npm audit --omit=dev` 对 React Router 7.18.2 报告 RSC Mode CSRF advisory。当前站点只使用静态 `BrowserRouter`，没有 RSC、Action、Server Action、SSR 或 production API，该攻击路径不适用于当前部署；仍需在上游发布可用补丁后升级并清除 audit。
-5. Cloudflare Pages 尚未发布，发布后必须以线上 smoke 为准。
+5. Cloudflare Pages Preview 已发布并完成线上 smoke；production 尚未发布，production 发布后仍必须重新执行线上 smoke。
 
 ### 下一步
 

@@ -43,6 +43,19 @@ export interface TraditionCard {
   focusEntity: { kind: EntityKind; slug: string };
 }
 
+export interface FeaturedFigure {
+  kind: "figure";
+  slug: string;
+  tradition: Tradition;
+  traditionLabel: string;
+  title: string;
+  role: string;
+  summary: string;
+  timeLabel: string;
+  placeLabel: string;
+  spaceView?: "map" | "cosmos";
+}
+
 export interface OverviewData {
   locale: Locale;
   eyebrow: string;
@@ -66,6 +79,7 @@ export interface OverviewData {
     minutes: number;
   };
   traditions: TraditionCard[];
+  featuredFigures: FeaturedFigure[];
   methodologyTitle: string;
   methodologyText: string;
 }
@@ -111,6 +125,7 @@ export interface ExhibitionData {
 }
 
 export interface SourceSummary {
+  id: string;
   title: string;
   locator: string;
   grade: "A" | "B" | "C";
@@ -145,17 +160,47 @@ export interface EntityData {
   };
   related: RelatedEntity[];
   sources: SourceSummary[];
+  profile?: Record<string, unknown>;
+  publicationState?: string;
+  reviewStatus?: string;
+}
+
+export interface SourceIndexItem {
+  id: string;
+  title: string;
+  locator: string;
+  evidenceGrade: "A" | "B" | "C" | "D";
+  rightsStatus: string;
+  locatorLevel: "collection" | "topic" | "edition" | "item" | "precise";
+  citationStatus: "draft" | "verified";
+  role: string;
+  url?: string;
+  entityCount: number;
+}
+
+export interface SourceIndexData {
+  locale: Locale;
+  items: SourceIndexItem[];
 }
 
 export interface TimelineEvent {
   id: string;
+  kind: EntityKind;
+  slug: string;
   year: number;
   endYear?: number;
-  type: "exact" | "range" | "circa";
+  type: string;
   tradition: Tradition | "convergence";
   title: string;
   summary: string;
+  predicate?: string;
+  displayDate?: string;
+  confidence?: string;
+  evidenceLayer?: string;
+  sourceId?: string;
   entity?: { kind: EntityKind; slug: string };
+  contextKeys?: string[];
+  relationId?: string;
 }
 
 export interface TimelineData {
@@ -182,6 +227,10 @@ export interface GraphEdge {
   target: string;
   label: string;
   evidence: string;
+  summary?: string;
+  relationType?: string;
+  confidence?: string;
+  sourceIds?: string[];
 }
 
 export interface GraphData {
@@ -208,16 +257,26 @@ export interface MuseumMapFeature {
     coordinates: [number, number];
   };
   properties: {
+    kind: "place";
     slug: string;
     title: string;
-    placeType: string;
-    confidence: string;
+    placeReality: string;
+    coordinateConfidence: string;
     tradition: Tradition | "convergence";
     summary: string;
+    evidenceLayer?: string;
+    sourceId?: string;
+    temporalRange?: { startYear: number; endYear?: number };
   };
 }
 
 export interface MuseumMapData {
   type: "FeatureCollection";
   features: MuseumMapFeature[];
+}
+
+export interface MapContextData {
+  map: MuseumMapData;
+  routes: EntityData[];
+  searchItems: SearchItem[];
 }

@@ -1,0 +1,60 @@
+{
+  "id": "fa8e031e-ec10-5e1b-a9d2-8d2247ea61b5",
+  "locale": "en",
+  "kind": "place",
+  "slug": "nalanda",
+  "title": "Nalanda",
+  "subtitle": "A site of learning and later scholarly memory in pilgrimage narratives",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "Sui–Tang pilgrimage and transregional knowledge networks",
+  "shortSummary": "Nalanda places the pilgrimages of Xuanzang and Yijing within a concrete institution and transregional network rather than an abstract India.",
+  "curatorialDescription": [
+    "The real map expresses a geographic referent; claims about scale, curriculum, participants and later sacred memory must be separated by source and period.",
+    "It is also a research-layer entry: traveller accounts, local traditions and modern archaeological narratives are not automatically equivalent."
+  ],
+  "researchNote": "Travel records, archaeology, institutional history and cross-language comparison still need to be assembled.",
+  "keyFacts": [
+    {
+      "label": "Place type",
+      "value": "Learning and religious institutional context"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:buddhist-biographical-records",
+      "title": "Biographical and pilgrimage records of Sui–Tang Buddhist monks",
+      "locator": "义净、玄奘及求法僧侣条目；底本与卷页待核",
+      "grade": "B",
+      "role": "Research entry point for Buddhist figures, pilgrimage routes and translation activity"
+    },
+    {
+      "id": "source:unesco-nalanda",
+      "title": "UNESCO World Heritage Centre: Archaeological Site of Nalanda Mahavihara",
+      "locator": "World Heritage List no. 1502; N25 8 12 E85 26 38",
+      "grade": "A",
+      "role": "Authoritative entry for Nalanda's location, chronology and monastic-scholastic character",
+      "url": "https://whc.unesco.org/en/list/1502/"
+    },
+    {
+      "id": "source:historical-geography",
+      "title": "Historical geography and urban gazetteers of the Sui–Tang period",
+      "locator": "长安、洛阳、敦煌历史名称与地理范围",
+      "grade": "A",
+      "role": "Geographic basis for real places, historical names and coordinate approximations"
+    }
+  ],
+  "profile": {
+    "placeReality": "real_historical",
+    "geometryType": "point",
+    "coordinates": [
+      85.443889,
+      25.136667
+    ],
+    "coordinateConfidence": "exact",
+    "geographicSourceId": "source:unesco-nalanda"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

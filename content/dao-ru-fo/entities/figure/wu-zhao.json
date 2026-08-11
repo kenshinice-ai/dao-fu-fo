@@ -117,10 +117,12 @@
   ],
   "sourceIds": [
     "source:tang-imperial-records",
-    "source:editorial-method"
+    "source:editorial-method",
+    "source:wu-zhou-chronology"
   ],
   "profile": {
     "historicity": "documented",
+    "figureClass": "historical_person",
     "gender": "female",
     "canonicalNameOriginal": "武曌",
     "nameLanguageCode": "lzh"

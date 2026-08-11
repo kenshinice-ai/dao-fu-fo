@@ -1,0 +1,37 @@
+{
+  "id": "91cd610a-3340-5c98-bcfd-84b631ef4733",
+  "locale": "en",
+  "kind": "text_version",
+  "slug": "dhammacakkappavattana-sutta-pali",
+  "title": "Pāli digital version of the Dhammacakkappavattana Sutta",
+  "subtitle": "Digital edition of SN 56.11",
+  "tradition": "buddhism",
+  "evidence": "historical_inferred",
+  "timeLabel": "SN 56.11; early Buddhist transmission layer",
+  "shortSummary": "The version layer records the Pāli text's reference, language and digital-edition context.",
+  "curatorialDescription": [
+    "The version is kept separate from the text theme, passage excerpt and figure attribution so Chinese translations and recensions can be added later."
+  ],
+  "researchNote": "This is a research-layer version entry; rights and translation-use conditions follow the original site's terms.",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:buddha-early-texts",
+      "title": "Early Buddhist texts in the Pāli canon: MN 26 and SN 56.11",
+      "locator": "MN 26 Ariyapariyesanā：求法与到达鹿野苑；SN 56.11 Dhammacakkappavattana：鹿野苑初转法轮文本",
+      "grade": "A",
+      "role": "Primary-text entry for Buddha biography, early teaching traditions and the Sarnath setting; the transmitted discourse is not treated as a verbatim transcript",
+      "url": "https://suttacentral.net/sn56.11/en/sujato"
+    }
+  ],
+  "profile": {
+    "textSlug": "dhammacakkappavattana-sutta",
+    "versionKind": "digital_edition",
+    "languageCode": "pli",
+    "citationLabel": "SuttaCentral, SN 56.11, Pāli/English digital edition",
+    "rightsStatus": "external_reference_only"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

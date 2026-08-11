@@ -1,0 +1,42 @@
+{
+  "id": "076f9c85-6e57-517b-afa7-215006ac47c4",
+  "locale": "en",
+  "kind": "figure",
+  "slug": "cheng-xuanying",
+  "title": "Cheng Xuanying",
+  "tradition": "daoism",
+  "evidence": "historical_inferred",
+  "timeLabel": "c. seventh century",
+  "shortSummary": "Cheng Xuanying offers an entry into early Tang interpretation of the Daodejing and Zhuangzi and its Daoist knowledge networks.",
+  "curatorialDescription": [
+    "The record places commentary among text versions, Daoist institutions and imperial knowledge systems without treating later summaries as direct biography."
+  ],
+  "researchNote": "Life dates, offices and commentary transmission still require item-level verification against catalogues and biographical records.",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:daoist-historical-record",
+      "title": "Studies on Daoist figures and institutions in the Sui–Tang period",
+      "locator": "人物、宫观与皇室关系专题",
+      "grade": "B",
+      "role": "Scholarly context for Sima Chengzhen and Sui–Tang Daoist institutions"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "Curatorial and methodological notes of the Dao–Ru–Fo Digital Museum",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "Curatorial framework and terminology rules"
+    }
+  ],
+  "profile": {
+    "historicity": "inferred",
+    "figureClass": "historical_person",
+    "gender": "male",
+    "canonicalNameOriginal": "成玄英",
+    "nameLanguageCode": "lzh"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

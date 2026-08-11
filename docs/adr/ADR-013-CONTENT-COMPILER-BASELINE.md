@@ -6,7 +6,7 @@
 
 首批内容以 JSON source files 保存于 `content/`，使用 `@drf-museum/domain-schema` 的 Zod schema 校验，再由 `@drf-museum/content-compiler` 生成双语 entity、relation、audio artifacts、搜索索引、manifest 和 content report。
 
-Alpha 编译产物写入 `.artifacts/content/v2/`，不直接进入当前 first-viewable prototype 的 `public/` 目录。只有通过来源、关系、版权和 `publishable` 门禁后，才允许切换到 production static artifacts。
+Alpha 编译产物写入 iCloud worktree 之外的本机临时 artifact root，不直接进入当前 first-viewable prototype 的 `public/` 目录。Web 通过独立的临时 public staging 读取这些产物；只有通过来源、关系、版权和 `publishable` 门禁后，才允许切换到 production static artifacts。
 
 Compiler 支持 `preview` 和 `public` visibility。Public 输出只包含 `publicationState=public` 且 `reviewStatus=publishable` 的内容；音频还必须有 `ready` 或 `published` asset status。
 

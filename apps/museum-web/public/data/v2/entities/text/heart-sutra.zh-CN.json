@@ -1,0 +1,48 @@
+{
+  "id": "5584e8c1-f35d-5f06-b59b-a800e5145793",
+  "locale": "zh-CN",
+  "kind": "text",
+  "slug": "heart-sutra",
+  "title": "《般若波罗蜜多心经》",
+  "subtitle": "般若类佛教经典",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "汉译与流通：隋唐重点",
+  "shortSummary": "《心经》以高度凝练的形式呈现般若思想，是汉传佛教中传播最广的经典之一。",
+  "curatorialDescription": [
+    "本馆把《心经》的原文、译本、传播和后世诵读分开记录，避免把流行名句当成脱离文本版本的格言。"
+  ],
+  "researchNote": "文本的具体译者、版本和异文将在 passage 审校批次中逐项补齐。",
+  "keyFacts": [
+    {
+      "label": "文本类型",
+      "value": "佛教经文"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:heart-sutra-edition",
+      "title": "《般若波罗蜜多心经》汉译本与经录资料",
+      "locator": "第2节：舍利子，色不异空，空不异色，色即是空，空即是色",
+      "grade": "A",
+      "role": "passage 原文和版本定位的初始依据",
+      "url": "https://ctext.org/wiki.pl?chapter=412996&if=en"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "道·儒·佛文明数字博物馆策展与方法说明",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "项目的策展框架与术语规则"
+    }
+  ],
+  "profile": {
+    "textKind": "sutra",
+    "originalLanguageCode": "sa",
+    "canonicalStatus": "influential",
+    "attributionStatus": "contested"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

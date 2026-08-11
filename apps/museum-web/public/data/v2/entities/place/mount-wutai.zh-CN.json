@@ -1,0 +1,60 @@
+{
+  "id": "8865370b-6cb4-5aa6-b3e8-3d72fbad9b0e",
+  "locale": "zh-CN",
+  "kind": "place",
+  "slug": "mount-wutai",
+  "title": "五台山",
+  "subtitle": "现实山地与佛教圣迹叙事的双重地点",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "隋唐佛教地理与后世圣迹叙事",
+  "shortSummary": "五台山同时具有现实山地、寺院网络和佛教圣迹叙事的层次，适合展示双层地理如何并存。",
+  "curatorialDescription": [
+    "现实地图只承载山地的真实地理指向；圣迹、感应和文殊信仰等内容进入神圣地理或传统叙事层。",
+    "地点条目不把后世朝圣网络直接倒推为隋唐时期的完整机构地图。"
+  ],
+  "researchNote": "需要按寺院、碑刻、朝圣路线和不同历史时期补齐地点级来源与时间范围。",
+  "keyFacts": [
+    {
+      "label": "地点层",
+      "value": "现实山地 + 神圣地理"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:historical-geography",
+      "title": "隋唐历史地理与城市沿革资料",
+      "locator": "长安、洛阳、敦煌历史名称与地理范围",
+      "grade": "A",
+      "role": "真实地点、历史名称和坐标示意的地理依据"
+    },
+    {
+      "id": "source:unesco-mount-wutai",
+      "title": "UNESCO 世界遗产中心：五台山",
+      "locator": "World Heritage property no. 1279; Taihuai component centroid 39.031 / 113.563",
+      "grade": "A",
+      "role": "五台山遗产地现实地理范围与中心点的权威入口",
+      "url": "https://whc.unesco.org/en/list/1279/"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "道·儒·佛文明数字博物馆策展与方法说明",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "项目的策展框架与术语规则"
+    }
+  ],
+  "profile": {
+    "placeReality": "real_historical",
+    "geometryType": "point",
+    "coordinates": [
+      113.563,
+      39.031
+    ],
+    "coordinateConfidence": "centroid",
+    "geographicSourceId": "source:unesco-mount-wutai"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

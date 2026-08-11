@@ -1,0 +1,50 @@
+{
+  "id": "4837cd93-8615-5c0a-8c82-b96bb81c0d49",
+  "locale": "zh-CN",
+  "kind": "event",
+  "slug": "buddha-first-sermon-at-sarnath",
+  "title": "佛陀在鹿野苑初转法轮",
+  "tradition": "buddhism",
+  "evidence": "traditional_account",
+  "timeLabel": "传统叙事：约公元前 5 世纪；年代有争议",
+  "shortSummary": "早期佛教文本和后世遗产传统把鹿野苑记为佛陀向最初弟子说法的重要地点。",
+  "curatorialDescription": [
+    "事件、文本和遗址分别建模：经文保存的是教法传述，鹿野苑保存的是现实遗址和后世朝圣记忆，三者不压缩成一条无层次的传记事实。"
+  ],
+  "researchNote": "事件年代采用宽泛传统区间；SN 56.11 的文本传承、遗址考古层和现代世界遗产叙事需要分别阅读。",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:buddha-early-texts",
+      "title": "巴利经藏早期佛教文本：MN 26 与 SN 56.11",
+      "locator": "MN 26 Ariyapariyesanā：求法与到达鹿野苑；SN 56.11 Dhammacakkappavattana：鹿野苑初转法轮文本",
+      "grade": "A",
+      "role": "释迦牟尼生平叙事、早期教法传述与鹿野苑空间关联的原典入口；不把经文传述等同于逐字现场记录",
+      "url": "https://suttacentral.net/sn56.11/en/sujato"
+    },
+    {
+      "id": "source:sarnath-site-record",
+      "title": "UNESCO 与印度考古调查局：鹿野苑古佛教遗址",
+      "locator": "World Heritage List no. 927；鹿野苑遗址、初转法轮传统与遗址保护范围；约 25.381°N, 83.022°E",
+      "grade": "A",
+      "role": "鹿野苑现实地点、遗址层与佛教朝圣记忆的权威地理和遗产入口",
+      "url": "https://whc.unesco.org/en/list/927/"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "道·儒·佛文明数字博物馆策展与方法说明",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "项目的策展框架与术语规则"
+    }
+  ],
+  "profile": {
+    "eventKind": "other",
+    "historicity": "traditional",
+    "sequenceOrder": 2,
+    "eventScope": "regional"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

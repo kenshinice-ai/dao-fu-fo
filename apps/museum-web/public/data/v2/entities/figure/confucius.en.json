@@ -1,0 +1,75 @@
+{
+  "id": "037a6b08-f97f-5a13-92dc-15dce8431b0c",
+  "locale": "en",
+  "kind": "figure",
+  "slug": "confucius",
+  "title": "Confucius (Kong Qiu)",
+  "subtitle": "A historical figure of classical education, ritual and political ethics",
+  "tradition": "confucianism",
+  "evidence": "historical_documented",
+  "timeLabel": "c. 551–479 BCE",
+  "shortSummary": "Confucius is a recognisable gateway into Confucian classics, education and political ethics; sayings in the Analects must be separated from disciple records, compilation layers and later classical reception.",
+  "curatorialDescription": [
+    "The historical-person layer can connect Confucius with the House of Confucius in the Shiji, the Zhou rites-asking narrative and teaching activity, while the Analects remains a composite text of transmitted sayings.",
+    "From Confucius to Kong Yingda, the museum presents a long chain of person, speech, compilation and institutional reception rather than projecting Tang classical learning back onto Confucius as direct participation."
+  ],
+  "researchNote": "Confucius has an early historiographical record. The Analects is a composite transmitted text; saying relations are marked recorded_by_others, while Tang institutional reception is modelled separately.",
+  "keyFacts": [
+    {
+      "label": "Figure class",
+      "value": "Historical person"
+    },
+    {
+      "label": "Key distinction",
+      "value": "Confucius's sayings survive through disciples and compilation traditions"
+    }
+  ],
+  "related": [
+    {
+      "kind": "text",
+      "slug": "analects",
+      "title": "Analects",
+      "relation": "Text of transmitted sayings and actions"
+    },
+    {
+      "kind": "figure",
+      "slug": "kong-yingda",
+      "title": "Kong Yingda",
+      "relation": "Later classical reception and compilation"
+    }
+  ],
+  "sources": [
+    {
+      "id": "source:shiji-confucius-biography",
+      "title": "Records of the Historian: The House of Confucius",
+      "locator": "《史记·孔子世家》：孔子问礼于周、修诗书礼乐、以诗书礼乐教弟子等段落",
+      "grade": "A",
+      "role": "Early historiographical basis for Confucius's life, travels, teaching and later biographical image",
+      "url": "https://ctext.org/shiji/kong-zi-shi-jia/zhs"
+    },
+    {
+      "id": "source:analects-edition",
+      "title": "Received editions and chapter references for the Analects",
+      "locator": "颜渊第十二，第1章（“克己复礼为仁”）",
+      "grade": "A",
+      "role": "Initial basis for the Confucian passage and chapter locator",
+      "url": "https://ctext.org/wiki.pl?chapter=198285&if=en&remap=gb"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "Curatorial and methodological notes of the Dao–Ru–Fo Digital Museum",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "Curatorial framework and terminology rules"
+    }
+  ],
+  "profile": {
+    "historicity": "documented",
+    "figureClass": "historical_person",
+    "gender": "male",
+    "canonicalNameOriginal": "孔丘",
+    "nameLanguageCode": "lzh"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

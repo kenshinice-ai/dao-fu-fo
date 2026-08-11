@@ -1,0 +1,124 @@
+{
+  "kind": "passage",
+  "slug": "turning-of-dharma-wheel",
+  "publicationState": "public",
+  "reviewStatus": "publishable",
+  "primaryEvidenceLayer": "historical_inferred",
+  "importance": 5,
+  "isFeatured": true,
+  "translations": {
+    "zh-CN": {
+      "title": "这是苦圣谛",
+      "subtitle": "《转法轮经》中的四圣谛言说",
+      "shortSummary": "这一短句把佛教教法放回鹿野苑初转法轮的经文语境，而不是抽离成一条现代格言。",
+      "curatorialDescription": [
+        "原文、版本、说话者归属和鹿野苑事件分别建模；佛陀的言说关系标记为经由传述者保存。"
+      ],
+      "researchNote": "原典使用巴利语数字版本作为研究入口；汉译、异本和更完整段落将在后续校勘批次补齐。",
+      "timeLabel": "SN 56.11；鹿野苑初转法轮传述",
+      "keyFacts": [],
+      "quote": {
+        "original": "Idaṃ dukkhaṃ ariyasaccaṃ.",
+        "interpretation": {
+          "zh-CN": "这是苦圣谛。",
+          "en": "This is the noble truth of suffering."
+        },
+        "locator": "SN 56.11"
+      }
+    },
+    "en": {
+      "title": "This is the noble truth of suffering",
+      "subtitle": "A Four Noble Truths saying in the Dhammacakkappavattana Sutta",
+      "shortSummary": "The short line keeps Buddhist teaching within the textual setting of the first turning at Sarnath rather than turning it into a context-free modern maxim.",
+      "curatorialDescription": [
+        "Original text, version, speaker attribution and the Sarnath event are modelled separately; the Buddha's saying is marked as preserved through transmission."
+      ],
+      "researchNote": "The Pāli digital edition is the research entry point. Chinese translations, parallels and a fuller passage will be added in a later textual-review batch.",
+      "timeLabel": "SN 56.11; transmitted first-teaching context at Sarnath",
+      "keyFacts": [],
+      "quote": {
+        "original": "Idaṃ dukkhaṃ ariyasaccaṃ.",
+        "interpretation": {
+          "zh-CN": "这是苦圣谛。",
+          "en": "This is the noble truth of suffering."
+        },
+        "locator": "SN 56.11"
+      }
+    }
+  },
+  "traditions": [
+    {
+      "tradition": "buddhism",
+      "role": "primary",
+      "isPrimary": true,
+      "confidence": "high",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:buddha-early-texts"
+    }
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "textual_attestation",
+      "timeType": "range",
+      "startYear": -300,
+      "endYear": 200,
+      "displayDate": {
+        "zh-CN": "SN 56.11 传述与文本层",
+        "en": "Transmission and textual layer of SN 56.11"
+      },
+      "confidence": "low",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:buddha-early-texts"
+    }
+  ],
+  "sourceIds": [
+    "source:buddha-early-texts"
+  ],
+  "related": [
+    {
+      "kind": "text",
+      "slug": "dhammacakkappavattana-sutta",
+      "title": {
+        "zh-CN": "《转法轮经》",
+        "en": "Dhammacakkappavattana Sutta"
+      },
+      "relation": {
+        "zh-CN": "摘录自",
+        "en": "Excerpt from"
+      }
+    }
+  ],
+  "profile": {
+    "textSlug": "dhammacakkappavattana-sutta",
+    "textVersionSlug": "dhammacakkappavattana-sutta-pali",
+    "passageKind": "scripture_excerpt",
+    "locatorOriginal": "相应部 56.11",
+    "locatorNormalised": "Saṃyutta Nikāya 56.11",
+    "originalText": "Idaṃ dukkhaṃ ariyasaccaṃ.",
+    "punctuatedText": "Idaṃ dukkhaṃ ariyasaccaṃ.",
+    "modernZh": "这是苦圣谛。",
+    "translationEn": "This is the noble truth of suffering.",
+    "ritualSensitivity": "public_textual",
+    "attributionStatus": "recorded_by_others",
+    "variantReadings": [
+      {
+        "id": "variant:turning-dukkha-english-renderings",
+        "kind": "translation",
+        "status": "attested",
+        "label": {
+          "zh-CN": "dukkha 的英译措辞",
+          "en": "English renderings of dukkha"
+        },
+        "form": "suffering / stress",
+        "note": {
+          "zh-CN": "当前巴利语段落的英译字段使用 suffering；同一经文的 Thanissaro 英译版本使用 stress。本条只记录译者措辞差异，不把它当作巴利语底本异文或唯一释义。",
+          "en": "The current Pāli passage uses suffering in its English field; the Thanissaro English witness uses stress. This records a translator-wording difference, not a manuscript variant or a single authorised interpretation of the Pāli."
+        },
+        "sourceIds": [
+          "source:buddha-early-texts",
+          "source:sn56-11-thanissaro"
+        ]
+      }
+    ]
+  }
+}

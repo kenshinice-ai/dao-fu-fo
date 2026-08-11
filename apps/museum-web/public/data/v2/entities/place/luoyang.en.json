@@ -1,0 +1,59 @@
+{
+  "id": "7f7e88ba-4e06-5257-b398-36ce485188f6",
+  "locale": "en",
+  "kind": "place",
+  "slug": "luoyang",
+  "title": "Luoyang",
+  "subtitle": "Eastern capital, transport node and religious-cultural city",
+  "tradition": "convergence",
+  "evidence": "historical_documented",
+  "timeLabel": "Sui–Tang focus: 581–907",
+  "shortSummary": "Luoyang connects imperial politics, transport networks, Buddhist transmission and classical culture as a counterpoint to Chang'an.",
+  "curatorialDescription": [
+    "In a Sui–Tang narrative, Luoyang is not merely a secondary city to Chang'an. Its roles as eastern capital, transport node and cultural centre show that the three-tradition network did not revolve around one centre alone."
+  ],
+  "researchNote": "This is an Alpha city-level place. Longmen, monasteries, Daoist institutions and route waypoints will be added in the next content batch.",
+  "keyFacts": [
+    {
+      "label": "Place type",
+      "value": "Eastern capital and transport node"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:historical-geography",
+      "title": "Historical geography and urban gazetteers of the Sui–Tang period",
+      "locator": "长安、洛阳、敦煌历史名称与地理范围",
+      "grade": "A",
+      "role": "Geographic basis for real places, historical names and coordinate approximations"
+    },
+    {
+      "id": "source:unesco-silk-roads-corridor",
+      "title": "UNESCO World Heritage Centre: Silk Roads, Chang'an–Tianshan Corridor",
+      "locator": "World Heritage List no. 1442; component coordinates and corridor description",
+      "grade": "A",
+      "role": "Geographic basis for Chang'an, Luoyang, the Great Wild Goose Pagoda, Kucha-region sites and the transregional corridor",
+      "url": "https://whc.unesco.org/en/list/1442/maps/"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "Curatorial and methodological notes of the Dao–Ru–Fo Digital Museum",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "Curatorial framework and terminology rules"
+    }
+  ],
+  "profile": {
+    "placeReality": "real_historical",
+    "geometryType": "point",
+    "coordinates": [
+      112.454,
+      34.62
+    ],
+    "coordinateConfidence": "centroid",
+    "geographicSourceId": "source:historical-geography"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "dc10efc6-18db-5ff8-99f5-a51cbbcceadc",
+  "locale": "zh-CN",
+  "kind": "museum_object",
+  "slug": "longmen-dedication-inscription-record",
+  "title": "龙门造像题记记录（对象占位）",
+  "tradition": "buddhism",
+  "evidence": "historical_inferred",
+  "timeLabel": "对象记录待核；北魏晚期至唐代",
+  "shortSummary": "造像题记可把图像、供养人、愿文、年代与洞窟位置连接为可追溯对象。",
+  "curatorialDescription": [
+    "遗产地存在大量题记，但本条尚未指向其中任何一件，不使用未经许可图像。"
+  ],
+  "researchNote": "需从权威目录选择具体题记，补编号、释文、位置、年代与授权。",
+  "keyFacts": [],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:object-records",
+      "title": "博物馆藏品与图像记录待建档清单",
+      "locator": "对象类型、馆藏机构、图像权利和编号待补",
+      "grade": "C",
+      "role": "Alpha 对象卡片的占位来源；不是可直接发布的藏品断言"
+    },
+    {
+      "id": "source:unesco-longmen",
+      "title": "UNESCO 世界遗产中心：龙门石窟",
+      "locator": "World Heritage List no. 1003; site history, location and significance",
+      "grade": "A",
+      "role": "龙门石窟遗产地范围、年代与唐代造像语境的权威入口",
+      "url": "https://whc.unesco.org/en/list/1003/"
+    }
+  ],
+  "profile": {
+    "objectType": "inscription",
+    "rightsStatus": "unknown",
+    "collectionStatus": "placeholder"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

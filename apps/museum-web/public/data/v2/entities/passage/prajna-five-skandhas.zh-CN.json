@@ -1,0 +1,49 @@
+{
+  "id": "fcba224c-175f-570c-b658-d5efe3de9fcc",
+  "locale": "zh-CN",
+  "kind": "passage",
+  "slug": "prajna-five-skandhas",
+  "title": "照见五蕴皆空",
+  "subtitle": "《心经》段落卡",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "《心经》汉译与流通语境",
+  "shortSummary": "这句经文将观照、五蕴和空的关系压缩在一个短句中，必须回到具体版本和上下文阅读。",
+  "curatorialDescription": [
+    "段落卡先展示原文、版本和定位，再提供现代汉语与英文解释；解释不代替经文。"
+  ],
+  "researchNote": "需要核定版本、断句、异文和不同英译传统；当前为 Alpha 译文。",
+  "keyFacts": [
+    {
+      "label": "段落类型",
+      "value": "经文摘录"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:heart-sutra-edition",
+      "title": "《般若波罗蜜多心经》汉译本与经录资料",
+      "locator": "第2节：舍利子，色不异空，空不异色，色即是空，空即是色",
+      "grade": "A",
+      "role": "passage 原文和版本定位的初始依据",
+      "url": "https://ctext.org/wiki.pl?chapter=412996&if=en"
+    }
+  ],
+  "profile": {
+    "textSlug": "heart-sutra",
+    "textVersionSlug": "heart-sutra-chinese-received",
+    "passageKind": "scripture_excerpt",
+    "locatorOriginal": "观自在菩萨章；具体行号待核",
+    "locatorNormalised": "heart-sutra:five-aggregates",
+    "originalText": "照见五蕴皆空。",
+    "punctuatedText": "照见五蕴皆空。",
+    "modernZh": "照见五种身心经验都不是固定不变、独立自存的实体。",
+    "translationEn": "Seeing that the five aggregates are empty.",
+    "ritualSensitivity": "public_textual",
+    "attributionStatus": "anonymous_or_composite",
+    "variantReadings": []
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

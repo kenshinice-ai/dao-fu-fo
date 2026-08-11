@@ -1,0 +1,59 @@
+{
+  "id": "0dafc415-232a-5e18-b63b-4044a09e519f",
+  "locale": "en",
+  "kind": "place",
+  "slug": "dunhuang",
+  "title": "Dunhuang",
+  "subtitle": "A religious and textual crossroads on the Silk Road",
+  "tradition": "buddhism",
+  "evidence": "historical_documented",
+  "timeLabel": "Sui–Tang focus: 581–907",
+  "shortSummary": "Dunhuang connects Buddhist art, textual preservation, travel routes and multilingual culture.",
+  "curatorialDescription": [
+    "Dunhuang keeps the Chang'an exhibition from becoming a story of an imperial centre alone. Texts, images and travellers preserved, translated and reorganised knowledge at a frontier crossroads."
+  ],
+  "researchNote": "This is an Alpha city-and-region place. Caves, the Library Cave, routes and multilingual sources will be added in the next content batch.",
+  "keyFacts": [
+    {
+      "label": "Place type",
+      "value": "Silk Road node and cave-temple region"
+    }
+  ],
+  "related": [],
+  "sources": [
+    {
+      "id": "source:historical-geography",
+      "title": "Historical geography and urban gazetteers of the Sui–Tang period",
+      "locator": "长安、洛阳、敦煌历史名称与地理范围",
+      "grade": "A",
+      "role": "Geographic basis for real places, historical names and coordinate approximations"
+    },
+    {
+      "id": "source:unesco-silk-roads-corridor",
+      "title": "UNESCO World Heritage Centre: Silk Roads, Chang'an–Tianshan Corridor",
+      "locator": "World Heritage List no. 1442; component coordinates and corridor description",
+      "grade": "A",
+      "role": "Geographic basis for Chang'an, Luoyang, the Great Wild Goose Pagoda, Kucha-region sites and the transregional corridor",
+      "url": "https://whc.unesco.org/en/list/1442/maps/"
+    },
+    {
+      "id": "source:editorial-method",
+      "title": "Curatorial and methodological notes of the Dao–Ru–Fo Digital Museum",
+      "locator": "methodology:content-v2",
+      "grade": "B",
+      "role": "Curatorial framework and terminology rules"
+    }
+  ],
+  "profile": {
+    "placeReality": "approximate_region",
+    "geometryType": "point",
+    "coordinates": [
+      94.662,
+      40.142
+    ],
+    "coordinateConfidence": "centroid",
+    "geographicSourceId": "source:historical-geography"
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}

@@ -1,8 +1,8 @@
 {
   "kind": "figure",
   "slug": "kong-yingda",
-  "publicationState": "preview",
-  "reviewStatus": "bilingual_reviewed",
+  "publicationState": "public",
+  "reviewStatus": "publishable",
   "primaryEvidenceLayer": "historical_documented",
   "importance": 4,
   "isFeatured": true,
@@ -101,11 +101,13 @@
   ],
   "sourceIds": [
     "source:kong-new-tang-biography",
+    "source:kong-wujing-zhengyi-record",
     "source:confucian-commentarial-record",
     "source:editorial-method"
   ],
   "profile": {
     "historicity": "documented",
+    "figureClass": "historical_person",
     "gender": "male",
     "canonicalNameOriginal": "孔颖达",
     "nameLanguageCode": "lzh"
