@@ -5,10 +5,12 @@ export {
   serializeRouteState,
 } from "@drf-museum/core";
 export type {
+  AtlasTab,
   ExploreView,
   GraphType,
   MapLayer,
   RouteState,
+  TimelineMode,
   ViewMode,
 } from "@drf-museum/core";
 

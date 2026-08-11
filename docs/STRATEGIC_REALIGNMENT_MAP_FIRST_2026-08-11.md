@@ -1,12 +1,23 @@
 # 道·儒·佛文明数字博物馆｜全历史时空人物地图战略
 
 日期：2026-08-11
-状态：Direction confirmed / 第一条 map-first 垂直切片与全历史 overview 读模型已上线，当前暂停内容扩充等待复盘
+状态：Direction confirmed / P0–P3 map-first interaction slice implemented，等待 production handoff；内容扩充仍按审核闸门执行
 线上基线：Cloudflare Pages production `2026.08.alpha.1 / alpha / preview`；最新 deployment `c4ae1eb6-61a0-42cc-9e17-94323fa197cb`（<https://c4ae1eb6.dao-ru-fo-digital-museum.pages.dev>）
 参考体验：
 
 - <https://european-classical-music-history-atlas.pages.dev/>
 - <https://bible-atlas-6h7.pages.dev/>
+
+## 0.1｜P0–P3 交互执行检查点（2026-08-11）
+
+本轮已把本战略的第一条完整交互垂直切片落到代码，地图不再只是首页预览，而是首页与 Explore 共用的工作台。以下为执行结果，内容数量仍以 Full Alpha read model 为准，未把未审核内容误标为 Public RC：
+
+- **P0：首页地图核心**：首页使用 38.2% 叙事区 / 61.8% 地图区的宏观比例；主导航调整为“展览 / 地图 / 研究 / 介绍”；长安入口移入导览卡；地图、时间轴和对象面板首屏形成连续入口；加入复制当前视图、深链接和回到顶部。
+- **P1：联动工作台**：`AtlasWorkspace` 同时承载人物、事件、地点、路线、著作、言论、关系七类对象；城市/人物/事件可连续切换；人物详情显示空间、事件、文本、言论、关系和来源；时代预设、历史/传统时间模式、年份范围和 `focus` / `detail` / `tab` / `timeline` URL 状态可恢复。
+- **P2：证据与关系**：关系标签严格只显示现实人物—现实人物的 `influenced` / `contemporary_with`；接受史、神格化、比较关系保留在关联语境；人物详情显示名言原文、解释、出处定位和来源层，不把传统归属写成可核实的逐字发言。
+- **P3：体验与可访问性**：对象面板列表限制首批 80 项并使用 `content-visibility`；面板标签栏固定不被列表压缩；地图保留 Leaflet 缩放/拖动/键盘；详情 drawer 支持 Escape、焦点回收与 Tab 循环；移动端地图先于 Hero 叙事；44px 触控目标、无横向溢出、reduced-motion、空/错/加载状态与 axe WCAG 回归已覆盖。
+- 当前工作台 read model 为 32 位人物、37 个事件、28 个地点、3 条路线、16 部著作、14 条言论、4 条现实人物关系；`npm run check`、54 条 Playwright + axe（另 1 条 Public RC 专用 skip）和 fresh/repeat 数据库集成门禁均已通过。Vite 仍有既有的单 JS bundle >500 kB 非阻断提示，后续内容扩充前按性能预算继续拆分。
+- 本检查点只交付交互骨架与现有 Full Alpha 内容的统一入口，不扩大未审核事实；Full Alpha 的 `preview` visibility、410 个 public blockers 与 Public RC2 的独立边界继续如实保留。
 
 ## 0. 已确认的新方向
 

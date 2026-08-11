@@ -41,6 +41,9 @@ interface CivilisationMapProps {
   searchItems?: SearchItem[];
   onFocus?: (focus: string) => void;
   className?: string;
+  showContext?: boolean;
+  showIndex?: boolean;
+  showRouteLedger?: boolean;
 }
 
 const TRADITION_COLORS: Record<Tradition | "convergence", string> = {
@@ -190,11 +193,14 @@ export function CivilisationMap({
   searchItems = [],
   onFocus,
   className = "",
+  showContext = true,
+  showIndex = true,
+  showRouteLedger = true,
 }: CivilisationMapProps) {
   const focusedFigureSlug = focus?.startsWith("figure:") ? focus.slice("figure:".length) : undefined;
   const loadFocusedFigure = useCallback(
-    (signal: AbortSignal) => focusedFigureSlug ? staticData.entity("figure", focusedFigureSlug, locale, signal) : Promise.resolve(null),
-    [focusedFigureSlug, locale],
+    (signal: AbortSignal) => showContext && focusedFigureSlug ? staticData.entity("figure", focusedFigureSlug, locale, signal) : Promise.resolve(null),
+    [focusedFigureSlug, locale, showContext],
   );
   const { data: focusedFigure } = useStaticData(loadFocusedFigure);
   const connectedKeys = useMemo(() => connectedContextKeys(relations, focus), [focus, relations]);
@@ -297,6 +303,8 @@ export function CivilisationMap({
       id="historical-map"
       className={`civilisation-map ${className}`.trim()}
       data-map-focus-state={focusMapState}
+      data-map-visible-places={visibleFeatures.length}
+      data-map-visible-routes={visibleRoutes.length}
     >
       <MapContainer
         className="civilisation-map-leaflet"
@@ -392,7 +400,7 @@ export function CivilisationMap({
           );
         })}
       </MapContainer>
-      {focusPlace ? (
+      {showContext ? (focusPlace ? (
         <section className="map-context-panel" data-city-people aria-labelledby="map-context-title">
           <div className="map-context-heading">
             <div>
@@ -537,7 +545,7 @@ export function CivilisationMap({
             ? "点击城市查看对应人物；点击人物后，地图会显示其空间节点与一层关系网。"
             : "Select a city to see its figures; select a figure to reveal spatial stops and one-hop relationships."}
         </p>
-      )}
+      )) : null}
       <div className="civilisation-map-caption" aria-live="polite">
         <span>{locale === "zh-CN" ? "历史地理 · 现实坐标" : "Historical geography · real coordinates"}</span>
         <span>{visibleFeatures.length} {locale === "zh-CN" ? "个地点" : "places"} · {visibleRoutes.length} {locale === "zh-CN" ? "条路线" : "routes"}{from !== undefined || to !== undefined ? ` · ${from ?? "…"}–${to ?? "…"}` : ""}</span>
@@ -549,7 +557,7 @@ export function CivilisationMap({
             : "This figure has no published place that can be placed on real coordinates yet; the available geography remains visible and no pending position is fabricated."}
         </p>
       ) : null}
-      <nav className="civilisation-map-node-index" aria-label={locale === "zh-CN" ? "地图地点索引" : "Map place index"}>
+      {showIndex ? <nav className="civilisation-map-node-index" aria-label={locale === "zh-CN" ? "地图地点索引" : "Map place index"}>
         {visibleFeatures.map((feature) => (
           <span className="civilisation-map-node-index-item" key={feature.properties.slug}>
             <button
@@ -567,8 +575,8 @@ export function CivilisationMap({
             </Link>
           </span>
           ))}
-      </nav>
-      {routes.length > 0 ? (
+      </nav> : null}
+      {showRouteLedger && routes.length > 0 ? (
         <section className="map-route-ledger" aria-labelledby="map-route-ledger-title">
           <p className="eyebrow">{locale === "zh-CN" ? "路线廊道" : "Route corridors"}</p>
           <h3 id="map-route-ledger-title">{locale === "zh-CN" ? "由路线实体派生的空间连接" : "Spatial links derived from route entities"}</h3>

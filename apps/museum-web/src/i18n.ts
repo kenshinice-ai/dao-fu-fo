@@ -2,8 +2,8 @@ import type { Locale } from "./types";
 
 const UI = {
   museum: ["展览", "Museum"],
-  explore: ["探索", "Explore"],
-  methodology: ["方法", "Method"],
+  explore: ["地图", "Atlas"],
+  methodology: ["介绍", "About"],
   research: ["研究", "Research"],
   enterMuseum: ["进入展览", "Enter exhibition"],
   exploreCivilisation: ["探索文明", "Explore civilisation"],

@@ -5,6 +5,7 @@ import { useStaticData } from "../data/useStaticData";
 import { t } from "../i18n";
 import type { Locale } from "../types";
 import { Icon } from "../components/Icon";
+import { BackToTopButton } from "../components/BackToTopButton";
 import { ErrorState, LoadingState } from "../components/LoadingState";
 import { withLang } from "../routing";
 
@@ -92,6 +93,7 @@ export function MuseumLayout() {
           <span>{profile.contentVersion}</span>
         </div>
       </footer>
+      <BackToTopButton locale={locale} />
     </div>
   );
 }

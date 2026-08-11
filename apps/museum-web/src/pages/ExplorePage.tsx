@@ -1,6 +1,7 @@
 import { useCallback, useMemo, useRef, useState, type KeyboardEvent, type MouseEvent, type PointerEvent, type WheelEvent } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { CivilisationMap } from "../components/CivilisationMap";
+import { AtlasWorkspace } from "../components/AtlasWorkspace";
 import { Icon } from "../components/Icon";
 import { ErrorState, LoadingState } from "../components/LoadingState";
 import { RelationNetwork } from "../components/RelationNetwork";
@@ -126,9 +127,8 @@ export function ExplorePage() {
           </button>
         </div>
       </header>
-      <ExploreControls locale={locale} state={routeState} onChange={updateRouteState} />
-      <ContextFocus locale={locale} focus={routeState.focus} data={contextState.data} error={contextState.error} onFocus={(focus) => updateRouteState({ focus })} />
-      {routeState.view === "map" ? <MapView locale={locale} traditions={routeState.traditions} from={routeState.from} to={routeState.to} focus={routeState.focus} relations={contextState.data?.relations} onFocus={(focus) => updateRouteState({ focus })} /> : null}
+      {routeState.view !== "map" ? <ExploreControls locale={locale} state={routeState} onChange={updateRouteState} /> : null}
+      {routeState.view === "map" ? <AtlasWorkspace locale={locale} state={routeState} onChange={updateRouteState} /> : <ContextFocus locale={locale} focus={routeState.focus} data={contextState.data} error={contextState.error} onFocus={(focus) => updateRouteState({ focus })} />}
       {routeState.view === "cosmos" ? <CosmosView locale={locale} traditions={routeState.traditions} focus={routeState.focus} relations={contextState.data?.relations} /> : null}
       {routeState.view === "timeline" ? <TimelineView locale={locale} traditions={routeState.traditions} from={routeState.from} to={routeState.to} focus={routeState.focus} relations={contextState.data?.relations} searchItems={contextState.data?.search.items ?? []} onFocus={(nextFocus) => updateRouteState({ focus: nextFocus, view: "map", mapLayer: "real" })} /> : null}
       {routeState.view === "graph" ? <GraphView locale={locale} traditions={routeState.traditions} focus={routeState.focus} relations={contextState.data?.relations} searchItems={contextState.data?.search.items ?? []} onFocus={(nextFocus) => updateRouteState({ focus: nextFocus })} /> : null}

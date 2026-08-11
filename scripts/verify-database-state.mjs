@@ -99,19 +99,19 @@ for (const [key, value] of Object.entries(expected)) {
 }
 
 const expectedEntityIdentity = bundle.entities.map((entity) => `${entity.kind}:${entity.slug}:${entity.id}`).sort();
-const actualEntityIdentity = JSON.parse(await psql("SELECT coalesce(json_agg(kind || ':' || slug || ':' || id ORDER BY kind, slug), '[]'::json)::text FROM museum.entities;"));
+const actualEntityIdentity = JSON.parse(await psql("SELECT coalesce(json_agg(identity ORDER BY identity COLLATE \"C\"), '[]'::json)::text FROM (SELECT kind || ':' || slug || ':' || id AS identity FROM museum.entities) identities;"));
 if (JSON.stringify(actualEntityIdentity) !== JSON.stringify(expectedEntityIdentity)) throw new Error("Database entity identities differ from import bundle");
 
 const expectedSourceIdentity = bundle.sources.map((source) => `${source.canonicalKey}:${source.id}`).sort();
-const actualSourceIdentity = JSON.parse(await psql("SELECT coalesce(json_agg(canonical_key || ':' || id ORDER BY canonical_key), '[]'::json)::text FROM museum.sources;"));
+const actualSourceIdentity = JSON.parse(await psql("SELECT coalesce(json_agg(identity ORDER BY identity COLLATE \"C\"), '[]'::json)::text FROM (SELECT canonical_key || ':' || id AS identity FROM museum.sources) identities;"));
 if (JSON.stringify(actualSourceIdentity) !== JSON.stringify(expectedSourceIdentity)) throw new Error("Database source identities differ from import bundle");
 
 const expectedRelationIdentity = bundle.relations.map((relation) => `${relation.canonicalKey}:${relation.id}`).sort();
-const actualRelationIdentity = JSON.parse(await psql("SELECT coalesce(json_agg(canonical_key || ':' || id ORDER BY canonical_key), '[]'::json)::text FROM museum.entity_relations;"));
+const actualRelationIdentity = JSON.parse(await psql("SELECT coalesce(json_agg(identity ORDER BY identity COLLATE \"C\"), '[]'::json)::text FROM (SELECT canonical_key || ':' || id AS identity FROM museum.entity_relations) identities;"));
 if (JSON.stringify(actualRelationIdentity) !== JSON.stringify(expectedRelationIdentity)) throw new Error("Database relation identities differ from import bundle");
 
 const expectedReleaseIdentity = bundle.releaseCandidates.map((candidate) => `${candidate.canonicalKey}:${candidate.id}`).sort();
-const actualReleaseIdentity = JSON.parse(await psql("SELECT coalesce(json_agg(canonical_key || ':' || id ORDER BY canonical_key), '[]'::json)::text FROM museum.release_candidates;"));
+const actualReleaseIdentity = JSON.parse(await psql("SELECT coalesce(json_agg(identity ORDER BY identity COLLATE \"C\"), '[]'::json)::text FROM (SELECT canonical_key || ':' || id AS identity FROM museum.release_candidates) identities;"));
 if (JSON.stringify(actualReleaseIdentity) !== JSON.stringify(expectedReleaseIdentity)) throw new Error("Database release candidate identities differ from import bundle");
 
 const placeGeometryCount = Number(await psql("SELECT count(*) FROM museum.place_profiles WHERE geom IS NOT NULL;"));

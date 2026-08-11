@@ -1,87 +1,35 @@
-import { useCallback, useState } from "react";
-import { Link } from "react-router-dom";
-import { CivilisationMap } from "../components/CivilisationMap";
+import { useCallback } from "react";
+import { Link, useSearchParams } from "react-router-dom";
+import { AtlasWorkspace } from "../components/AtlasWorkspace";
 import { ErrorState, LoadingState } from "../components/LoadingState";
 import { Icon } from "../components/Icon";
 import { TraditionMark } from "../components/TraditionMark";
 import { useMuseumContext } from "../context";
 import { staticData } from "../data/staticData";
 import { useStaticData } from "../data/useStaticData";
-import { entityPath, withLang } from "../routing";
-import type { ReadModelRelationIndex } from "@drf-museum/domain-schema";
-import type { MapContextData, Locale, OverviewData, Tradition } from "../types";
+import { entityPath, parseRouteState, serializeRouteState, withLang } from "../routing";
+import type { Locale } from "../types";
+import type { RouteState } from "../routing";
 
-interface HomeAtlasData extends MapContextData {
-  relations: ReadModelRelationIndex;
-}
-
-function HomeAtlasPreview({ data, locale }: { data: OverviewData; locale: Locale }) {
-  const loader = useCallback(async (signal: AbortSignal): Promise<HomeAtlasData> => {
-    const [mapContext, relations] = await Promise.all([
-      staticData.mapContext(locale, signal),
-      staticData.relations(locale, signal),
-    ]);
-    return { ...mapContext, relations };
-  }, [locale]);
-  const { data: atlas, error } = useStaticData(loader);
-  const [focus, setFocus] = useState<string>();
-  const traditions: Tradition[] = ["daoism", "confucianism", "buddhism"];
+function HomeAtlasPreview({ locale }: { locale: Locale }) {
+  const [params, setParams] = useSearchParams();
+  const parsedState = parseRouteState(params);
+  const state = parsedState.view === "map" ? parsedState : { ...parsedState, view: "map" as const, mapLayer: "real" as const };
+  const updateState = useCallback((changes: Partial<RouteState>) => {
+    const nextState = { ...state, ...changes, view: "map" as const, mapLayer: "real" as const };
+    setParams(serializeRouteState(nextState));
+  }, [setParams, state]);
 
   return (
-    <div className="home-atlas-panel">
-      <div className="home-atlas-panel-header">
-        <div>
-          <p className="eyebrow">Atlas / {locale === "zh-CN" ? "全历史时空" : "Full historical space-time"}</p>
-          <h2>{locale === "zh-CN" ? "先从地图进入" : "Begin with the map"}</h2>
-        </div>
-        <Link className="text-link" to={withLang("/explore?view=map", locale)}>
-          {locale === "zh-CN" ? "打开完整地图" : "Open full map"} <Icon name="arrow" />
-        </Link>
-      </div>
-      {error ? <ErrorState locale={locale} error={error} /> : null}
-      {!error && !atlas ? <LoadingState locale={locale} /> : null}
-      {atlas ? <CivilisationMap
-        className="home-atlas-map"
-        data={atlas.map}
-        routes={atlas.routes}
-        locale={locale}
-        traditions={traditions}
-        focus={focus}
-        relations={atlas.relations}
-        searchItems={atlas.searchItems}
-        onFocus={setFocus}
-      /> : null}
-      <div className="home-atlas-index">
-        <div className="home-atlas-index-heading">
-          <div>
-            <span className="control-label">{locale === "zh-CN" ? "人物索引" : "Figure index"}</span>
-            <strong>{locale === "zh-CN" ? "选择人物，沿着他的时空关系继续" : "Choose a figure and follow their space-time relations"}</strong>
-          </div>
-          <span>{data.featuredFigures.length} {locale === "zh-CN" ? "位当前人物" : "figures indexed"}</span>
-        </div>
-        <div className="home-atlas-figure-list">
-          {data.featuredFigures.map((figure) => (
-            <article className={`home-atlas-figure-card tradition-card-${figure.tradition}`} key={figure.slug}>
-              <div className="home-atlas-figure-title">
-                <TraditionMark tradition={figure.tradition} size="sm" />
-                <strong>{figure.title}</strong>
-              </div>
-              <span>{figure.timeLabel} · {figure.placeLabel}</span>
-              <div className="home-atlas-figure-actions">
-                <Link to={withLang(`/explore?view=${figure.spaceView ?? "map"}&focus=figure:${figure.slug}`, locale)}>
-                  {figure.spaceView === "cosmos"
-                    ? (locale === "zh-CN" ? "象征空间" : "Cosmos")
-                    : (locale === "zh-CN" ? "地图" : "Map")}
-                </Link>
-                <Link to={entityPath(figure.kind, figure.slug, locale)}>
-                  {locale === "zh-CN" ? "档案" : "Dossier"}
-                </Link>
-              </div>
-            </article>
-          ))}
-        </div>
-      </div>
-    </div>
+    <AtlasWorkspace
+      locale={locale}
+      state={state}
+      onChange={updateState}
+      className="home-atlas-panel"
+      compact
+      heading={locale === "zh-CN" ? "先从地图进入" : "Begin with the map"}
+      description={locale === "zh-CN" ? "点击城市查看人物与事件；点击人物，沿着地点、著作、言论、关系和时间继续探索。" : "Select a city for figures and events; select a figure to follow places, works, sayings, relationships and time."}
+    />
   );
 }
 
@@ -110,13 +58,16 @@ export function HomePage() {
               {data.secondaryAction}
             </Link>
           </div>
-          <div className="hero-index" aria-label={locale === "zh-CN" ? "当前展览信息" : "Current exhibition details"}>
+          <div className="hero-index hero-guide" aria-label={locale === "zh-CN" ? "导览入口" : "Guided entry"}>
             <span>01</span>
-            <strong>{data.exhibition.title}</strong>
-            <small>{data.exhibition.sections} / {data.exhibition.minutes} min</small>
+            <div>
+              <small>{locale === "zh-CN" ? "从一座城市开始" : "Begin with one city"}</small>
+              <strong>{data.exhibition.title}</strong>
+            </div>
+            <Link className="text-link" to={withLang(`/museum/${data.exhibition.slug}`, locale)}>{locale === "zh-CN" ? "进入展览" : "Enter"} <Icon name="arrow" /></Link>
           </div>
         </div>
-        <HomeAtlasPreview data={data} locale={locale} />
+        <HomeAtlasPreview locale={locale} />
       </section>
 
       <section className="tradition-section section-shell" aria-labelledby="tradition-heading">

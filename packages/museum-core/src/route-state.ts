@@ -10,6 +10,12 @@ import { z } from "zod";
 export const ExploreViewSchema = z.enum(["map", "cosmos", "timeline", "graph"]);
 export type ExploreView = z.infer<typeof ExploreViewSchema>;
 
+export const AtlasTabSchema = z.enum(["figures", "events", "places", "routes", "texts", "sayings", "relations"]);
+export type AtlasTab = z.infer<typeof AtlasTabSchema>;
+
+export const TimelineModeSchema = z.enum(["history", "tradition"]);
+export type TimelineMode = z.infer<typeof TimelineModeSchema>;
+
 export const ViewModeSchema = z.enum(["museum", "historical", "traditional", "conceptual", "research"]);
 export type ViewMode = z.infer<typeof ViewModeSchema>;
 
@@ -28,6 +34,8 @@ export type MapLayer = z.infer<typeof MapLayerSchema>;
 export const RouteStateSchema = z.object({
   lang: LocaleSchema,
   view: ExploreViewSchema,
+  atlasTab: AtlasTabSchema,
+  timelineMode: TimelineModeSchema,
   mode: ViewModeSchema,
   from: z.number().int().optional(),
   to: z.number().int().optional(),
@@ -36,6 +44,7 @@ export const RouteStateSchema = z.object({
   evidence: z.array(EvidenceLayerSchema),
   certainty: z.array(ConfidenceSchema),
   focus: z.string().trim().min(1).optional(),
+  detail: z.string().trim().min(1).optional(),
   compare: z.array(z.string().trim().min(1)).max(3),
   graphType: GraphTypeSchema,
   depth: z.number().int().min(1).max(2),
@@ -59,6 +68,8 @@ export type RouteState = z.infer<typeof RouteStateSchema>;
 export const DEFAULT_ROUTE_STATE: RouteState = {
   lang: "zh-CN",
   view: "map",
+  atlasTab: "figures",
+  timelineMode: "history",
   mode: "historical",
   traditions: ["daoism", "confucianism", "buddhism"],
   entityTypes: [],
@@ -98,6 +109,8 @@ export function parseRouteState(search: string | URLSearchParams): RouteState {
     ...DEFAULT_ROUTE_STATE,
     lang: firstEnum(params.get("lang"), LocaleSchema, DEFAULT_ROUTE_STATE.lang),
     view,
+    atlasTab: firstEnum(params.get("tab"), AtlasTabSchema, DEFAULT_ROUTE_STATE.atlasTab),
+    timelineMode: firstEnum(params.get("timeline"), TimelineModeSchema, DEFAULT_ROUTE_STATE.timelineMode),
     mode: firstEnum(params.get("mode"), ViewModeSchema, DEFAULT_ROUTE_STATE.mode),
     from: parseNumber(params.get("from")),
     to: parseNumber(params.get("to")),
@@ -106,6 +119,7 @@ export function parseRouteState(search: string | URLSearchParams): RouteState {
     evidence: parseList(params.get("evidence"), EvidenceLayerSchema),
     certainty: parseList(params.get("certainty"), ConfidenceSchema),
     focus: params.get("focus")?.trim() || undefined,
+    detail: params.get("detail")?.trim() || undefined,
     compare: params.get("compare") ? params.get("compare")!.split(",").map((item) => item.trim()).filter(Boolean).slice(0, 3) : [],
     graphType: firstEnum(params.get("graphType"), GraphTypeSchema, DEFAULT_ROUTE_STATE.graphType),
     depth: Math.min(2, Math.max(1, Number(params.get("depth")) || DEFAULT_ROUTE_STATE.depth)),
@@ -123,6 +137,8 @@ export function serializeRouteState(state: RouteState): string {
   const params = new URLSearchParams();
   params.set("lang", parsed.lang);
   if (parsed.view !== DEFAULT_ROUTE_STATE.view) params.set("view", parsed.view);
+  if (parsed.atlasTab !== DEFAULT_ROUTE_STATE.atlasTab) params.set("tab", parsed.atlasTab);
+  if (parsed.timelineMode !== DEFAULT_ROUTE_STATE.timelineMode) params.set("timeline", parsed.timelineMode);
   if (parsed.mode !== DEFAULT_ROUTE_STATE.mode) params.set("mode", parsed.mode);
   if (parsed.from !== undefined) params.set("from", String(parsed.from));
   if (parsed.to !== undefined) params.set("to", String(parsed.to));
@@ -131,6 +147,7 @@ export function serializeRouteState(state: RouteState): string {
   if (parsed.evidence.length > 0) params.set("evidence", parsed.evidence.join(","));
   if (parsed.certainty.length > 0) params.set("certainty", parsed.certainty.join(","));
   if (parsed.focus) params.set("focus", parsed.focus);
+  if (parsed.detail) params.set("detail", parsed.detail);
   if (parsed.compare.length > 0) params.set("compare", parsed.compare.join(","));
   if (parsed.graphType !== DEFAULT_ROUTE_STATE.graphType) params.set("graphType", parsed.graphType);
   if (parsed.depth !== DEFAULT_ROUTE_STATE.depth) params.set("depth", String(parsed.depth));
