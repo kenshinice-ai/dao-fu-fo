@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { ReadModelRelationIndex } from "@drf-museum/domain-schema";
-import { connectedContextKeys, figurePlaceContexts, isPersonToPersonRelation, placeFigureContexts, projectTimelineEvents } from "./data/contextProjection";
+import { connectedContextKeys, figurePlaceContexts, isPersonToPersonRelation, placeFigureContexts, projectTimelineEvents, relationConnector } from "./data/contextProjection";
 import type { SearchItem, TimelineData } from "./types";
 
 const timeline: TimelineData = {
@@ -124,5 +124,11 @@ describe("context projections", () => {
     expect(isPersonToPersonRelation({ ...base, source: { kind: "figure", slug: "laozi" }, target: { kind: "figure", slug: "confucius" }, relationType: "received_by" })).toBe(false);
     expect(isPersonToPersonRelation({ ...base, source: { kind: "figure", slug: "laozi" }, target: { kind: "figure", slug: "confucius" }, relationType: "deified_as" })).toBe(false);
     expect(isPersonToPersonRelation({ ...base, source: { kind: "figure", slug: "laozi" }, target: { kind: "figure", slug: "confucius" }, relationType: "comparative_parallel" })).toBe(false);
+  });
+
+  it("keeps directional influence distinct from reciprocal contemporaneity", () => {
+    const base = relations.items[0];
+    expect(relationConnector({ ...base, relationType: "influenced" })).toBe("→");
+    expect(relationConnector({ ...base, relationType: "contemporary_with" })).toBe("↔");
   });
 });

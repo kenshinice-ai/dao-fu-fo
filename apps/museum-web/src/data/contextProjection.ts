@@ -63,6 +63,16 @@ export function isPersonToPersonRelation(relation: ReadModelRelation): boolean {
     && ["influenced", "contemporary_with"].includes(relation.relationType);
 }
 
+/**
+ * Keep the display connector faithful to the relation semantics. An influence
+ * has a source and a target; a contemporary relation is intentionally
+ * non-directional. The endpoints remain the canonical source/target pair in
+ * both cases, so this is presentation only and cannot rewrite the read model.
+ */
+export function relationConnector(relation: ReadModelRelation): "→" | "↔" {
+  return relation.relationType === "influenced" ? "→" : "↔";
+}
+
 function isFigurePlaceRelation(relation: ReadModelRelation, figureKey: string, placeKey: string): boolean {
   return (contextEndpointKey(relation.source) === figureKey && contextEndpointKey(relation.target) === placeKey)
     || (contextEndpointKey(relation.source) === placeKey && contextEndpointKey(relation.target) === figureKey);

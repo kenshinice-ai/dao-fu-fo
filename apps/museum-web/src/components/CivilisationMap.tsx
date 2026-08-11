@@ -140,6 +140,10 @@ function MapViewport({
       }
       return;
     }
+    // A place popup belongs to the place selection. When the visitor moves to
+    // a figure/event context, close the old Leaflet popup so it cannot claim
+    // to be the current object after the URL has changed.
+    map.closePopup();
     previousTarget.current = undefined;
     if (!bounds) return;
     const key = JSON.stringify(bounds);

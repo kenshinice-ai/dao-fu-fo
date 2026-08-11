@@ -242,6 +242,31 @@ test("map timeline rail, city people and scoped relations stay linked", async ({
   await expect(page.locator("[data-figure-trajectory]")).toBeVisible();
 });
 
+test("place-to-person selection keeps the place scope in the URL and relation tab", async ({ page }) => {
+  await page.goto("/explore?lang=en&view=map&focus=place%3Aqufu");
+  await waitForMuseum(page);
+  await waitForAtlas(page);
+
+  const confuciusCard = page.locator(".atlas-object-card").filter({ hasText: "Confucius (Kong Qiu)" }).first();
+  await confuciusCard.locator(".atlas-object-card-main").click();
+  await expect(page).toHaveURL(/focus=figure%3Aconfucius&scope=place%3Aqufu/);
+  await expect(page.locator(".atlas-object-panel .atlas-tab-nav button.active")).toContainText("Figures");
+  await expect(page.locator("[data-atlas-scope-note]")).toContainText("Qufu · Connected figures · 1");
+  await expect(page.locator(".atlas-object-panel .atlas-panel-toolbar > span")).toHaveText("1 items");
+
+  await page.locator(".atlas-tab-nav button").filter({ hasText: "Relations" }).click();
+  await expect(page).toHaveURL(/tab=relations&focus=figure%3Aconfucius&scope=place%3Aqufu/);
+  await expect(page.locator("[data-atlas-scope-note]")).toContainText("Qufu · Person relations in this place · 0");
+  await expect(page.locator(".atlas-relation-card")).toHaveCount(0);
+  await expect(page.locator(".atlas-empty-state")).toContainText("No entities match");
+
+  await page.locator("[data-atlas-scope-note] button").click();
+  await expect(page).toHaveURL(/focus=place%3Aqufu/);
+  await expect(page).not.toHaveURL(/scope=/);
+  await expect(page).not.toHaveURL(/tab=relations/);
+  await expect(page.locator("[data-city-people]")).toBeVisible();
+});
+
 test("figure focus presents an elegant saying card and only real person relations", async ({ page }) => {
   await page.goto("/explore?lang=en&view=map&focus=figure%3Aconfucius");
   await waitForMuseum(page);
@@ -337,8 +362,15 @@ test("relation focus filters the map and adds relation-time context", async ({ p
   await expect(page.locator("#historical-map")).toHaveAttribute("data-map-focus-state", /mapped|position-pending/);
   await expect(page.locator("#historical-map")).toHaveAttribute("data-map-visible-routes", "3");
   await page.locator(".atlas-tab-nav button").filter({ hasText: "Relations" }).click();
+  await expect(page.locator(".atlas-relation-card")).toHaveCount(0);
+  await expect(page.locator(".atlas-empty-state")).toContainText("No entities match");
+
+  await page.goto("/explore?lang=en&view=map");
+  await waitForAtlas(page);
+  await page.locator(".atlas-tab-nav button").filter({ hasText: "Relations" }).click();
   await expect(page.locator(".atlas-relation-card")).toHaveCount(4);
-  await expect(page.locator(".atlas-relation-card").first()).toContainText("↔");
+  await expect(page.locator(".atlas-relation-card").filter({ hasText: "Dao'an" }).first()).toContainText("→");
+  await expect(page.locator(".atlas-relation-card").filter({ hasText: "Huiyuan" }).filter({ hasText: "Kumārajīva" }).first()).toContainText("↔");
 
   await page.goto("/explore?lang=en&view=timeline&focus=figure%3Alaozi");
   await waitForMuseum(page);

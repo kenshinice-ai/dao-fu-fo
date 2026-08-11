@@ -5,7 +5,7 @@ import type { AtlasTab, MapContentLayer, RouteState, TimelineMode, ZoomLevel } f
 import { entityPath, withLang } from "../routing";
 import { staticData } from "../data/staticData";
 import { useStaticData } from "../data/useStaticData";
-import { contextEndpointKey, eventFigureContexts, isPersonToPersonRelation, placeEventContexts, placeFigureContexts, projectTimelineEvents } from "../data/contextProjection";
+import { contextEndpointKey, eventFigureContexts, isPersonToPersonRelation, placeEventContexts, placeFigureContexts, projectTimelineEvents, relationConnector } from "../data/contextProjection";
 import { CivilisationMap } from "./CivilisationMap";
 import { ErrorState, LoadingState } from "./LoadingState";
 import { Icon } from "./Icon";
@@ -131,6 +131,26 @@ function scopeKeyForState(state: RouteState): string | undefined {
   return undefined;
 }
 
+/**
+ * A selection made inside a place/event dossier inherits that dossier as its
+ * explicit scope. This is the URL contract that keeps map, object panel and
+ * returned links on the same question. Map actions may pass null deliberately
+ * when they are leaving the dossier (for example a trajectory stop).
+ */
+function scopeForSelection(state: RouteState, focus: string, explicitScope?: string | null): string | undefined {
+  if (explicitScope !== undefined) return explicitScope === null ? undefined : explicitScope;
+  // A scope is context for a figure/event selection, never a second parent
+  // for a newly selected place. This prevents URLs such as
+  // focus=place:qufu&scope=place:qufu when switching panels from a scoped
+  // figure back to a place.
+  if (state.scope) return /^(figure|event):/.test(focus) ? state.scope : undefined;
+  const derivedScope = scopeKeyForState(state);
+  const currentKind = state.focus?.split(":")[0];
+  return derivedScope && derivedScope !== focus && /^(figure|event):/.test(focus) && (currentKind === "place" || currentKind === "event")
+    ? derivedScope
+    : undefined;
+}
+
 function scopeLabelFor(state: RouteState, locale: Locale): string | undefined {
   const scope = scopeKeyForState(state);
   if (scope?.startsWith("place:") && state.atlasTab === "figures") return locale === "zh-CN" ? "关联人物" : "Connected figures";
@@ -251,8 +271,10 @@ export function AtlasWorkspace({ locale, state, onChange, className = "", headin
     return new Set(placeEventContexts(data.relations, scopeKey).map((context) => context.eventKey));
   }, [data, scopeKey]);
   const scopedRelationKeys = useMemo(() => {
-    if (!data || !scopeKey?.startsWith("place:")) return undefined;
-    return new Set([...scopedFigureKeys ?? []]);
+    if (!data || !scopeKey) return undefined;
+    if (scopeKey.startsWith("place:")) return new Set([...scopedFigureKeys ?? []]);
+    if (scopeKey.startsWith("event:")) return new Set(eventFigureContexts(data.relations, scopeKey).map((context) => context.figureKey));
+    return undefined;
   }, [data, scopedFigureKeys, scopeKey]);
 
   const filteredItems = useMemo(() => {
@@ -291,12 +313,21 @@ export function AtlasWorkspace({ locale, state, onChange, className = "", headin
         return scopedRelationKeys.has(sourceKey) && scopedRelationKeys.has(targetKey);
       })
       .filter((relation) => {
+        // A focused figure is a question, not a decoration. If there is no
+        // place/event scope, only show person relations touching that figure;
+        // the un-focused Relations tab remains the global relation index.
+        if (scopedRelationKeys || !state.focus?.startsWith("figure:")) return true;
+        const sourceKey = keyFor(relation.source.kind, relation.source.slug);
+        const targetKey = keyFor(relation.target.kind, relation.target.slug);
+        return sourceKey === state.focus || targetKey === state.focus;
+      })
+      .filter((relation) => {
         const sourceItem = data.searchItems.find((item) => keyFor(item.kind, item.slug) === keyFor(relation.source.kind, relation.source.slug));
         const targetItem = data.searchItems.find((item) => keyFor(item.kind, item.slug) === keyFor(relation.target.kind, relation.target.slug));
         return Boolean((sourceItem?.tradition === "convergence" || !sourceItem?.tradition || state.traditions.includes(sourceItem.tradition))
           && (targetItem?.tradition === "convergence" || !targetItem?.tradition || state.traditions.includes(targetItem.tradition)));
       });
-  }, [data, query, scopedRelationKeys, searchMap, state.atlasTab, state.traditions]);
+  }, [data, query, scopedRelationKeys, searchMap, state.atlasTab, state.focus, state.traditions]);
 
   const tabCounts = useMemo(() => {
     const counts = {} as Record<AtlasTab, number>;
@@ -307,9 +338,31 @@ export function AtlasWorkspace({ locale, state, onChange, className = "", headin
     return counts;
   }, [data]);
 
-  const setFocus = (focus: string) => updateState({ focus, detail: undefined, view: "map", mapLayer: "real" });
-  const setMapFocus = (focus: string, scope?: string | null) => updateState({ focus, scope: scope === null ? undefined : scope ?? state.scope, detail: undefined, atlasTab: tabForFocus(focus, state.atlasTab), view: "map", mapLayer: "real" });
-  const openDetail = (detail: string) => updateState({ focus: detail.startsWith("relation:") ? state.focus : detail, detail, view: "map", mapLayer: "real" });
+  const selectFocus = (focus: string, explicitScope?: string | null, syncTab = true) => updateState({
+    focus,
+    scope: scopeForSelection(state, focus, explicitScope),
+    detail: undefined,
+    ...(syncTab ? { atlasTab: tabForFocus(focus, state.atlasTab) } : {}),
+    view: "map",
+    mapLayer: "real",
+  });
+  // Object-card selection stays in the active panel so its adjacent Inspect
+  // action remains available. Map/network selection explicitly changes the
+  // panel because it is a cross-context navigation gesture.
+  const setFocus = (focus: string) => selectFocus(focus, undefined, false);
+  const setMapFocus = (focus: string, scope?: string | null) => selectFocus(focus, scope);
+  const openDetail = (detail: string) => {
+    const relationDetail = detail.startsWith("relation:");
+    const focus = relationDetail ? state.focus : detail;
+    updateState({
+      focus,
+      scope: relationDetail ? state.scope : scopeForSelection(state, focus ?? detail),
+      detail,
+      atlasTab: relationDetail ? state.atlasTab : tabForFocus(detail, state.atlasTab),
+      view: "map",
+      mapLayer: "real",
+    });
+  };
   const clearFocus = () => updateState({ focus: undefined, scope: undefined, detail: undefined });
 
   const detailCandidates = useMemo(
@@ -545,7 +598,7 @@ function AtlasObjectPanel({
       {scopeLabel && scopeTitle ? (
         <div className="atlas-panel-scope-note" data-atlas-scope-note>
           <span>{scopeTitle} · {scopeLabel} · {state.atlasTab === "relations" ? relationItems.length : items.length}</span>
-          <button type="button" onClick={() => onChange({ focus: scopeKey, scope: undefined, detail: undefined, view: "map", mapLayer: "real" })}>
+          <button type="button" onClick={() => onChange({ focus: scopeKey, scope: undefined, detail: undefined, atlasTab: tabForFocus(scopeKey ?? "", state.atlasTab), view: "map", mapLayer: "real" })}>
             {locale === "zh-CN" ? `回到${scopeTitle}` : `Return to ${scopeTitle}`}
           </button>
         </div>
@@ -558,7 +611,7 @@ function AtlasObjectPanel({
           return (
             <article className={`atlas-relation-card ${state.detail === detailKey ? "is-selected" : ""}`} key={relation.id}>
               <button type="button" className="atlas-object-card-main" onClick={() => onFocus(sourceKey)} aria-pressed={state.focus === sourceKey}>
-                <strong>{titleMap.get(sourceKey) ?? sourceKey} <span aria-hidden="true">↔</span> {titleMap.get(targetKey) ?? targetKey}</strong>
+                <strong>{titleMap.get(sourceKey) ?? sourceKey} <span aria-hidden="true">{relationConnector(relation)}</span> {titleMap.get(targetKey) ?? targetKey}</strong>
                 <span>{relation.label}</span>
                 <small>{relation.temporalAssertions.map((assertion) => assertion.displayDate).join(" · ") || formatEvidence(relation.evidenceLayer, locale)} · {formatConfidence(relation.confidence, locale)}</small>
               </button>

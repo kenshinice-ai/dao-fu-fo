@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import type { ReadModelRelationIndex } from "@drf-museum/domain-schema";
-import { contextEndpointKey, isPersonToPersonRelation, relationClass, relationNeighbors } from "../data/contextProjection";
+import { contextEndpointKey, isPersonToPersonRelation, relationClass, relationConnector, relationNeighbors } from "../data/contextProjection";
 import { formatConfidence, formatEvidence, formatRelationType } from "../data/labels";
 import type { ZoomLevel } from "../routing";
 import type { Locale, SearchItem } from "../types";
@@ -155,7 +155,7 @@ export function RelationNetwork({ locale, focus, relations, searchItems, onFocus
             const date = relation.temporalAssertions.map((assertion) => assertion.displayDate).join(" · ");
             return (
               <li key={relation.id}>
-                <button type="button" onClick={() => onFocus(source)}>{titleFor(source, searchItems, locale)} <span aria-hidden="true">↔</span> {titleFor(target, searchItems, locale)}</button>
+                <button type="button" onClick={() => onFocus(source)}>{titleFor(source, searchItems, locale)} <span aria-hidden="true">{relationConnector(relation)}</span> {titleFor(target, searchItems, locale)}</button>
                 <span>{relation.label}</span>
                 <small>{date || formatEvidence(relation.evidenceLayer, locale)} · {formatConfidence(relation.confidence, locale)} · {formatRelationType(relation.relationType, locale)}</small>
               </li>
