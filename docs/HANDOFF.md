@@ -2,9 +2,21 @@
 
 > 维护纪律：每个可独立说明的实现、修复、验证或发布阶段完成后立即更新。
 > 最后更新：2026-08-11
-> 当前阶段：人物—城市—事件—关系网扩展已完成并已直发最终 production / production 作为唯一线上复盘基准 / Public RC 边界保持独立
+> 当前阶段：人物关系审计、出生地核实与语境卡已完成并已直发最终 production / production 作为唯一线上复盘基准 / Public RC 边界保持独立
 
-## 2026-08-11｜人物—城市—事件关系扩展与连续切换 release handoff（当前）
+## 2026-08-11｜人物关系审计、出生地核实与语境卡 release handoff（当前）
+
+- 本轮按“人物关系只指现实人物与现实人物”的语义重新审计：人物关系工作台只展示两个 `figure` 之间的 `influenced` 与 `contemporary_with`；`received_by`、`deified_as`、`comparative_parallel` 等接受史、神格化或比较关系保留在独立的关联语境层，不再混入人物—人物关系列表；地图人物聚焦、Explore 人物聚焦与人物 dossier 均使用同一投影规则；
+- 新增 `born_in` 关系类型与 migration 016，并将出生地作为可追溯的地点事实单独呈现：孔子 → 曲阜、释迦牟尼 → 蓝毗尼、鸠摩罗什 → 龟兹；曲阜与蓝毗尼加入现实地图坐标锚点，地点关系保留 approximate / historical 语义，不把传统叙事或神圣空间伪装成精确现代坐标；曲阜与蓝毗尼的地点核实分别关联 UNESCO 世界遗产条目；
+- 新增优雅的 figure context card：在地图人物聚焦时展示“名言入口 / 思想入口”、原文、解释、出处定位与 dossier 入口；老子、孔子、释迦牟尼已补入带谨慎 provenance 的名言/理论上下文；人物页新增出生地事实，并把“现实人物—人物关系”和“地点、事件、经典及后世接受”等语境分成两个区块；
+- Full Alpha compiler read model 当前为 159 个实体（人物 32、事件 37、地点 28、路线 3、文本 16、文本版本 8、概念 6、机构 6、对象 9、段落 14）、191 条关系、64 个来源、3 条音频；本轮新增 2 个出生地实体、3 条出生地关系，并同步更新首页/地图/人物 dossier 的 read model；
+- 本地门禁：`npm run check` 全量通过；workspace unit tests 分组为 core 8/8、compiler 5/5、web 7/7；`DRF_WEB_DEPLOYMENT_MODE=full-alpha npm run test:e2e` 为 53 passed / 1 skipped（唯一 skipped 为 Public RC 专用用例）；`git diff --check` 与 diff-check skill 均无问题；Full Alpha Vite build、静态验证、迁移与架构验证通过；bundle >500 kB 仍只是既有非阻断提示；
+- Cloudflare production：默认地址 <https://dao-ru-fo-digital-museum.pages.dev>；本轮 unique deployment <https://5ff72060.dao-ru-fo-digital-museum.pages.dev>；deployment ID `5ff72060-4c75-4ff4-b376-5e8736ac1c54`；Environment `Production`；branch `main`；source marker `85ab927`（`85ab9278fef09265a8529fcb7da54e69be04be9d`）；Wrangler `4.120.1`；manifest `2026.08.alpha.1 / alpha / preview`；上传时为 clean `main`，并使用 `--commit-dirty=false`；上一版 `c6330738-b9e9-451b-abc9-99f0f5a99b58` 保留为回滚证据；
+- post-deploy HTTP/JSON smoke：unique 与默认地址均 25/25；两者均确认 HTTP 200、CSP/安全响应头、SPA 深链、manifest identity、map/timeline/profile 与 immutable asset；浏览器线上回归继续以默认地址为唯一复盘基准，重点确认人物上下文卡、出生地 dossier、人物关系边界与不同城市之间的连续切换；
+- Public RC2 继续独立保持 34 entities / 41 relations / 0 audio / 0 blocker；本轮新增内容全部属于 Full Alpha `preview`，不会因为直发 production 而被误称为 Public RC 或正式学术发布；Research 中的 410 public blockers / 353 review subjects 是内容审核状态，不是运行时错误；
+- release commit：`85ab927 feat: refine person relations and birthplace context`；本 handoff 文档将在浏览器线上回归完成后单独补录提交，不改变已上传应用产物的 source marker；
+
+## 2026-08-11｜人物—城市—事件关系扩展与连续切换 release handoff（上一阶段）
 
 - 本轮按用户确认的地图核心方向继续扩展 Full Alpha：新增 6 位人物（道安、慧远、陶弘景、梁武帝、一行、朱熹）、5 个现实地点（襄阳、庐山、茅山、建康、武夷山）、6 个事件和 29 条人物—地点—事件—人物关系；新人物全部进入双语 authoring、来源、时间、地点或事件关系链，没有增加孤立人物卡；
 - 内容边界保持可审计：道安—慧远以师承/影响表达，慧远—鸠摩罗什以同时代交流表达，陶弘景—梁武帝以书信/咨询表达，一行—司马承祯以同时代并置表达，朱熹—慧远以庐山跨时代比较表达；关系 qualifiers 明确写出“不等同于直接会面/长期同处/完整路线”；神话/神圣人物仍不写入现实经纬度；

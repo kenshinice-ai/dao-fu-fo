@@ -13,6 +13,7 @@ Cloudflare Pages 当前只承担在线测试和阶段复盘，未来站点会迁
 - 不再为普通内容、地图和 UI 批次创建 Preview alias；
 - 不再要求日常 Alpha 内容通过 Public RC promotion 后才能进入 production；
 - 内容自身的 fact、rights、review、confidence 和 publication 状态继续保留，并在 Research 中如实展示；
+- `/data/v2/*` 使用 `max-age=0, must-revalidate`，Web read-model 请求使用 `cache: no-store`，避免内容发布后浏览器继续持有旧人物、地点或关系数据；
 - 每次部署仍记录 unique deployment URL、deployment ID、版本/校验和与 smoke 结果，作为回滚证据；
 - Cloudflare 专有运行时能力不进入核心架构，静态产物必须可以迁移到其他静态托管平台。
 
@@ -544,7 +545,7 @@ curl --fail-with-body --request POST \
 2. production build 已关闭 source maps，`verify:static` 也会拦截 `.map`；未来若为错误监控重新启用，应上传到受控服务而不是随 Pages 公开。
 3. `_redirects` 会把未知 URL rewrite 到 SPA；应用内部 NotFound 页面必须通过浏览器验收。
 4. CSP 当前只允许同源资源。未来加入外部字体、地图瓦片、音频/CDN 或分析脚本时，必须先最小化扩展 CSP 并复验。
-5. `data/v2` 使用一小时 browser cache。紧急内容勘误发布后需要确认新 deployment 与浏览器缓存行为。
+5. `data/v2` 已改为强制重新验证；若未来在 Cloudflare 侧增加缓存规则，必须重新验证默认域名与 unique deployment 的 read-model 一致性。
 6. Direct Upload 项目不能原地转成 Git integration；未来若改变发布模式，需要新项目迁移。
 7. 自定义域名、Web Analytics、访问日志与监控不属于第一版发布阻断项，但进入 Public MVP 前应形成单独 ADR。
 

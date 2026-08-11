@@ -32,14 +32,14 @@ function isJsonResponse(response: Response): boolean {
 
 async function request<T>(path: string, signal?: AbortSignal): Promise<T> {
   const url = path.startsWith(root) ? path : `${root}/${path}`;
-  const response = await fetch(url, { signal });
+  const response = await fetch(url, { signal, cache: "no-store" });
   if (!response.ok || !isJsonResponse(response)) throw new Error(`Static data ${response.status}: ${url}`);
   return (await response.json()) as T;
 }
 
 async function requestWithFallback<T>(primaryPath: string, fallbackPath: string, signal?: AbortSignal): Promise<T> {
   const primaryUrl = primaryPath.startsWith(root) ? primaryPath : `${root}/${primaryPath}`;
-  const response = await fetch(primaryUrl, { signal });
+  const response = await fetch(primaryUrl, { signal, cache: "no-store" });
   if (response.ok && isJsonResponse(response)) return (await response.json()) as T;
   if (!response.ok && response.status !== 404) throw new Error(`Static data ${response.status}: ${primaryUrl}`);
   return request<T>(fallbackPath, signal);
@@ -47,7 +47,7 @@ async function requestWithFallback<T>(primaryPath: string, fallbackPath: string,
 
 async function requestEntity(kind: EntityKind, slug: string, locale: Locale, signal?: AbortSignal): Promise<EntityData> {
   const path = readModelPaths.entity(kind, slug, locale);
-  const response = await fetch(path, { signal });
+  const response = await fetch(path, { signal, cache: "no-store" });
   if (response.ok && isJsonResponse(response)) return (await response.json()) as EntityData;
   if (!response.ok && response.status !== 404) throw new Error(`Static data ${response.status}: ${path}`);
 

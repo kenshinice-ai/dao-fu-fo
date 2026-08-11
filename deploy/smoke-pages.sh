@@ -81,7 +81,7 @@ expect_body "passage" '<div id="root"></div>' "passage deep link returns the app
 
 fetch "/data/v2/manifest/content-version.json" "manifest"
 expect_header "manifest" '^content-type:[[:space:]]*(application/json|text/json)' "manifest is served as JSON"
-expect_header "manifest" '^cache-control:.*max-age=3600' "data cache policy is active"
+expect_header "manifest" '^cache-control:.*max-age=0.*must-revalidate' "data cache policy forces release revalidation"
 
 node - "${TMP_DIR}/manifest.body" <<'NODE'
 const { readFileSync } = require("node:fs");
