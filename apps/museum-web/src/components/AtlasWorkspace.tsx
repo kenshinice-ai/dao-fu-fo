@@ -10,6 +10,7 @@ import { CivilisationMap } from "./CivilisationMap";
 import { ErrorState, LoadingState } from "./LoadingState";
 import { Icon } from "./Icon";
 import { RelationNetwork } from "./RelationNetwork";
+import { ERA_CONTEXTS } from "../data/eraContexts";
 import type { EntityData, EntityKind, Locale, MapContextData, SearchItem, TimelineData, TimelineEvent, Tradition } from "../types";
 
 interface AtlasData extends MapContextData {
@@ -63,6 +64,10 @@ const ERA_PRESETS: { id: string; zh: string; en: string; from?: number; to?: num
   { id: "modern", zh: "近现代", en: "Modern", from: 1911 },
 ];
 
+function eraIdForState(state: RouteState): string {
+  return ERA_PRESETS.find((era) => (state.from ?? undefined) === era.from && (state.to ?? undefined) === era.to)?.id ?? "all";
+}
+
 function keyFor(kind: string, slug: string): string {
   return `${kind}:${slug}`;
 }
@@ -110,11 +115,18 @@ function tabForFocus(focus: string, fallback: AtlasTab): AtlasTab {
   return fallback;
 }
 
+function scopeKeyForState(state: RouteState): string | undefined {
+  if (state.scope) return state.scope;
+  if (state.focus?.startsWith("place:") || state.focus?.startsWith("event:")) return state.focus;
+  return undefined;
+}
+
 function scopeLabelFor(state: RouteState, locale: Locale): string | undefined {
-  if (state.focus?.startsWith("place:") && state.atlasTab === "figures") return locale === "zh-CN" ? "关联人物" : "Connected figures";
-  if (state.focus?.startsWith("place:") && state.atlasTab === "events") return locale === "zh-CN" ? "城市事件" : "Events in this place";
-  if (state.focus?.startsWith("place:") && state.atlasTab === "relations") return locale === "zh-CN" ? "城市人物关系" : "Person relations in this place";
-  if (state.focus?.startsWith("event:") && state.atlasTab === "figures") return locale === "zh-CN" ? "事件人物" : "Figures in this event";
+  const scope = scopeKeyForState(state);
+  if (scope?.startsWith("place:") && state.atlasTab === "figures") return locale === "zh-CN" ? "关联人物" : "Connected figures";
+  if (scope?.startsWith("place:") && state.atlasTab === "events") return locale === "zh-CN" ? "城市事件" : "Events in this place";
+  if (scope?.startsWith("place:") && state.atlasTab === "relations") return locale === "zh-CN" ? "城市人物关系" : "Person relations in this place";
+  if (scope?.startsWith("event:") && state.atlasTab === "figures") return locale === "zh-CN" ? "事件人物" : "Figures in this event";
   return undefined;
 }
 
@@ -148,19 +160,21 @@ export function AtlasWorkspace({ locale, state, onChange, className = "", headin
 
   const searchMap = useMemo(() => new Map((data?.searchItems ?? []).map((item) => [keyFor(item.kind, item.slug), item.title])), [data?.searchItems]);
   const focusTitle = titleFor(state.focus, data?.searchItems ?? [], locale);
+  const scopeKey = scopeKeyForState(state);
+  const eraContext = ERA_CONTEXTS[eraIdForState(state)] ?? ERA_CONTEXTS.all;
 
   const scopedFigureKeys = useMemo(() => {
-    if (!data || !state.focus?.startsWith("place:")) return undefined;
-    return new Set(placeFigureContexts(data.relations, state.focus).map((context) => context.figureKey));
-  }, [data, state.focus]);
+    if (!data || !scopeKey?.startsWith("place:")) return undefined;
+    return new Set(placeFigureContexts(data.relations, scopeKey).map((context) => context.figureKey));
+  }, [data, scopeKey]);
   const scopedEventKeys = useMemo(() => {
-    if (!data || !state.focus?.startsWith("place:")) return undefined;
-    return new Set(placeEventContexts(data.relations, state.focus).map((context) => context.eventKey));
-  }, [data, state.focus]);
+    if (!data || !scopeKey?.startsWith("place:")) return undefined;
+    return new Set(placeEventContexts(data.relations, scopeKey).map((context) => context.eventKey));
+  }, [data, scopeKey]);
   const scopedRelationKeys = useMemo(() => {
-    if (!data || !state.focus?.startsWith("place:")) return undefined;
+    if (!data || !scopeKey?.startsWith("place:")) return undefined;
     return new Set([...scopedFigureKeys ?? []]);
-  }, [data, scopedFigureKeys, state.focus]);
+  }, [data, scopedFigureKeys, scopeKey]);
 
   const filteredItems = useMemo(() => {
     if (!data || state.atlasTab === "relations") return [];
@@ -170,14 +184,14 @@ export function AtlasWorkspace({ locale, state, onChange, className = "", headin
       .filter((item) => item.kind === definition.kind)
       .filter((item) => item.tradition === "convergence" || state.traditions.includes(item.tradition))
       .filter((item) => {
-        if (state.focus?.startsWith("place:") && state.atlasTab === "figures") return scopedFigureKeys?.has(keyFor(item.kind, item.slug)) ?? false;
-        if (state.focus?.startsWith("place:") && state.atlasTab === "events") return scopedEventKeys?.has(keyFor(item.kind, item.slug)) ?? false;
+        if (scopeKey?.startsWith("place:") && state.atlasTab === "figures") return scopedFigureKeys?.has(keyFor(item.kind, item.slug)) ?? false;
+        if (scopeKey?.startsWith("place:") && state.atlasTab === "events") return scopedEventKeys?.has(keyFor(item.kind, item.slug)) ?? false;
         if (state.focus?.startsWith("event:") && state.atlasTab === "figures") return eventFigureContexts(data.relations, state.focus).some((context) => context.figureKey === keyFor(item.kind, item.slug));
         return true;
       })
       .filter((item) => !normalisedQuery || `${item.title} ${item.context}`.toLocaleLowerCase().includes(normalisedQuery))
       .sort((a, b) => a.title.localeCompare(b.title, locale === "zh-CN" ? "zh-Hans" : "en"));
-  }, [data, locale, query, scopedEventKeys, scopedFigureKeys, state.atlasTab, state.focus, state.traditions]);
+  }, [data, locale, query, scopeKey, scopedEventKeys, scopedFigureKeys, state.atlasTab, state.focus, state.traditions]);
 
   const relationItems = useMemo(() => {
     if (!data || state.atlasTab !== "relations") return [];
@@ -215,9 +229,9 @@ export function AtlasWorkspace({ locale, state, onChange, className = "", headin
   }, [data]);
 
   const setFocus = (focus: string) => onChange({ focus, detail: undefined, view: "map", mapLayer: "real" });
-  const setMapFocus = (focus: string) => onChange({ focus, detail: undefined, atlasTab: tabForFocus(focus, state.atlasTab), view: "map", mapLayer: "real" });
+  const setMapFocus = (focus: string, scope?: string | null) => onChange({ focus, scope: scope === null ? undefined : scope ?? state.scope, detail: undefined, atlasTab: tabForFocus(focus, state.atlasTab), view: "map", mapLayer: "real" });
   const openDetail = (detail: string) => onChange({ focus: detail.startsWith("relation:") ? state.focus : detail, detail, view: "map", mapLayer: "real" });
-  const clearFocus = () => onChange({ focus: undefined, detail: undefined });
+  const clearFocus = () => onChange({ focus: undefined, scope: undefined, detail: undefined });
 
   const shareState = async () => {
     try {
@@ -258,7 +272,7 @@ export function AtlasWorkspace({ locale, state, onChange, className = "", headin
           <span aria-hidden="true"> → </span>
           <strong>{focusTitle}</strong>
         </div>
-        {state.focus ? <button className="atlas-clear-focus" type="button" onClick={clearFocus}>{locale === "zh-CN" ? "清除焦点" : "Clear focus"}</button> : null}
+        {state.focus || state.scope ? <button className="atlas-clear-focus" type="button" onClick={clearFocus}>{locale === "zh-CN" ? "清除焦点" : "Clear focus"}</button> : null}
       </div>
 
       <div className="atlas-tradition-bar" aria-label={locale === "zh-CN" ? "传统筛选" : "Tradition filters"}>
@@ -293,6 +307,21 @@ export function AtlasWorkspace({ locale, state, onChange, className = "", headin
           );
         })}
       </div>
+
+      <section className={`atlas-era-context atlas-era-context-${eraContext.tone}`} data-era-context data-era-context-id={eraIdForState(state)} aria-live="polite">
+        <div className="atlas-era-context-heading">
+          <p className="eyebrow">{locale === "zh-CN" ? "时代语境" : "Era resonance"}</p>
+          <h3>{locale === "zh-CN" ? eraContext.titleZh : eraContext.titleEn}</h3>
+        </div>
+        <blockquote>{locale === "zh-CN" ? eraContext.quoteZh : eraContext.quoteEn}</blockquote>
+        <div className="atlas-era-context-meta">
+          <cite>{locale === "zh-CN" ? eraContext.attributionZh : eraContext.attributionEn}</cite>
+          <span>{locale === "zh-CN" ? eraContext.noteZh : eraContext.noteEn}</span>
+          <Link className="atlas-era-context-link" to={entityPath("passage", eraContext.passageSlug, locale)}>
+            {locale === "zh-CN" ? "打开原文" : "Open passage"} <Icon name="arrow" />
+          </Link>
+        </div>
+      </section>
 
       <div className="atlas-main-grid">
         <div className="atlas-map-column">
@@ -370,7 +399,8 @@ function AtlasObjectPanel({
 }) {
   const titleMap = new Map(data.searchItems.map((item) => [keyFor(item.kind, item.slug), item.title]));
   const visibleItems = items.slice(0, 80);
-  const scopeTitle = state.focus ? titleMap.get(state.focus) : undefined;
+  const scopeKey = scopeKeyForState(state);
+  const scopeTitle = scopeKey ? titleMap.get(scopeKey) : undefined;
   const scopeLabel = scopeLabelFor(state, locale);
   return (
     <aside className="atlas-object-panel" aria-label={locale === "zh-CN" ? "地图对象面板" : "Atlas entity panel"}>
@@ -387,7 +417,14 @@ function AtlasObjectPanel({
         <input id="atlas-object-search" type="search" value={query} onChange={(event) => onQuery(event.target.value)} placeholder={locale === "zh-CN" ? "搜索人物、事件、地点……" : "Search figures, events, places…"} />
         <span>{state.atlasTab === "relations" ? relationItems.length : items.length} {locale === "zh-CN" ? "项" : "items"}</span>
       </div>
-      {scopeLabel && scopeTitle ? <p className="atlas-panel-scope-note" data-atlas-scope-note>{scopeTitle} · {scopeLabel} · {items.length}</p> : null}
+      {scopeLabel && scopeTitle ? (
+        <div className="atlas-panel-scope-note" data-atlas-scope-note>
+          <span>{scopeTitle} · {scopeLabel} · {state.atlasTab === "relations" ? relationItems.length : items.length}</span>
+          <button type="button" onClick={() => onChange({ focus: scopeKey, scope: undefined, detail: undefined, view: "map", mapLayer: "real" })}>
+            {locale === "zh-CN" ? `回到${scopeTitle}` : `Return to ${scopeTitle}`}
+          </button>
+        </div>
+      ) : null}
       <div className="atlas-object-list" aria-live="polite">
         {state.atlasTab === "relations" ? relationItems.slice(0, 80).map((relation) => {
           const sourceKey = contextEndpointKey(relation.source);
@@ -440,7 +477,7 @@ function AtlasTimelineRail({ locale, data, relations, searchItems, state, onChan
   const trackTicks = Array.from({ length: 5 }, (_, index) => start + ((end - start) * index) / 4);
   const focusTimelineEvent = (event: TimelineEvent) => {
     const focus = eventFocus(event);
-    onChange({ focus, atlasTab: tabForFocus(focus, state.atlasTab), detail: undefined, view: "map", mapLayer: "real" });
+    onChange({ focus, scope: undefined, atlasTab: tabForFocus(focus, state.atlasTab), detail: undefined, view: "map", mapLayer: "real" });
   };
   return (
     <section className="atlas-timeline-rail" aria-labelledby="atlas-timeline-title" data-atlas-timeline>

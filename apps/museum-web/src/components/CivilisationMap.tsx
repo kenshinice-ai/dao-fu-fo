@@ -39,7 +39,7 @@ interface CivilisationMapProps {
   focus?: string;
   relations?: ReadModelRelationIndex;
   searchItems?: SearchItem[];
-  onFocus?: (focus: string) => void;
+  onFocus?: (focus: string, scope?: string | null) => void;
   className?: string;
   showContext?: boolean;
   showIndex?: boolean;
@@ -356,7 +356,7 @@ export function CivilisationMap({
               fillOpacity: 1,
               weight: 3,
             }}
-            eventHandlers={{ click: () => onFocus?.(featureKey(feature)) }}
+            eventHandlers={{ click: () => onFocus?.(featureKey(feature), null) }}
           >
             <Tooltip direction="top" offset={[0, -7]} opacity={0.98}>
               {(index + 1) + ". " + feature.properties.title}
@@ -382,7 +382,7 @@ export function CivilisationMap({
                 weight: selected ? 4 : 2,
                 className: selected ? "is-selected" : undefined,
               }}
-              eventHandlers={{ click: () => onFocus?.(key) }}
+              eventHandlers={{ click: () => onFocus?.(key, null) }}
             >
               <Tooltip direction="top" offset={[0, -radius]} opacity={0.95}>
                 {feature.properties.title}
@@ -418,7 +418,7 @@ export function CivilisationMap({
               {placePeople.map((person) => (
                 <li key={person.figureKey}>
                   <div>
-                    <button type="button" onClick={() => onFocus?.(person.figureKey)}>{contextTitle(person.figureKey)}</button>
+                    <button type="button" onClick={() => onFocus?.(person.figureKey, featureKey(focusPlace))}>{contextTitle(person.figureKey)}</button>
                     <span>{person.relation.label}</span>
                     <small>
                       {person.connection === "direct"
@@ -445,7 +445,7 @@ export function CivilisationMap({
               <ul className="map-context-event-list">
                 {placeEvents.map((event) => (
                   <li key={event.eventKey}>
-                    <button type="button" onClick={() => onFocus?.(event.eventKey)}>{contextTitle(event.eventKey)}</button>
+                    <button type="button" onClick={() => onFocus?.(event.eventKey, null)}>{contextTitle(event.eventKey)}</button>
                     <span>{event.relation.label}</span>
                     <small>{event.relation.evidenceLayer} · {event.relation.confidence}</small>
                   </li>
@@ -458,7 +458,7 @@ export function CivilisationMap({
             focus={featureKey(focusPlace)}
             relations={relations}
             searchItems={searchItems}
-            onFocus={(key) => onFocus?.(key)}
+            onFocus={(key) => onFocus?.(key, featureKey(focusPlace))}
             compact
             peopleOnly
             scopeKeys={placeFigureKeys}
@@ -481,7 +481,7 @@ export function CivilisationMap({
                 <ul className="map-context-event-list">
                   {focusEventPlaces.map((place) => (
                     <li key={place.placeKey}>
-                      <button type="button" onClick={() => onFocus?.(place.placeKey)}>{contextTitle(place.placeKey)}</button>
+                      <button type="button" onClick={() => onFocus?.(place.placeKey, null)}>{contextTitle(place.placeKey)}</button>
                       <span>{place.relation.label}</span>
                       <small>{place.relation.evidenceLayer} · {place.relation.confidence}</small>
                     </li>
@@ -543,7 +543,7 @@ export function CivilisationMap({
           <ol className="map-trajectory-list">
             {trajectoryStops.map((feature, index) => (
               <li key={feature.id}>
-                <button type="button" onClick={() => onFocus?.(featureKey(feature))}>{index + 1}. {feature.properties.title}</button>
+                <button type="button" onClick={() => onFocus?.(featureKey(feature), null)}>{index + 1}. {feature.properties.title}</button>
                 <span>{feature.properties.placeReality} · {feature.properties.coordinateConfidence}</span>
               </li>
             ))}
@@ -574,7 +574,7 @@ export function CivilisationMap({
             <button
               data-map-focus="true"
               type="button"
-              onClick={() => onFocus?.(featureKey(feature))}
+              onClick={() => onFocus?.(featureKey(feature), null)}
             >
               {locale === "zh-CN" ? "聚焦地点：" : "Focus place: "}{feature.properties.title}
             </button>

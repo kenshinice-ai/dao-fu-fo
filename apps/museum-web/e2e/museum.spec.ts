@@ -64,6 +64,9 @@ test("atlas controls serialize a shareable state", async ({ page }) => {
   await page.getByRole("button", { name: "Sui–Tang", exact: true }).click();
   await expect(page).toHaveURL(/from=581/);
   await expect(page).toHaveURL(/to=907/);
+  await expect(page.locator("[data-era-context]")).toHaveAttribute("data-era-context-id", "sui-tang");
+  await expect(page.locator("[data-era-context]")).toContainText("Form is not different from emptiness");
+  await expect(page.locator("[data-era-context]").getByRole("link", { name: "Open passage" })).toHaveAttribute("href", /passages\/form-is-emptiness/);
   await page.getByRole("button", { name: "Traditional", exact: true }).click();
   await expect(page).toHaveURL(/timeline=tradition/);
   await expect(page.getByRole("button", { name: "Traditional", exact: true })).toHaveAttribute("aria-pressed", "true");
@@ -220,8 +223,22 @@ test("map timeline rail, city people and scoped relations stay linked", async ({
   await expect(cityRelations).toContainText("Yixing");
   await expect(cityRelations).toContainText("Sima Chengzhen");
 
-  await cityRelations.locator(".relation-network-node").first().click();
-  await expect(page).toHaveURL(/focus=figure%3A/);
+  const firstCityPerson = page.locator("[data-city-people] .map-context-figure-list li").first().getByRole("button").first();
+  await firstCityPerson.click();
+  await expect(page).toHaveURL(/focus=figure%3A.*scope=place%3Achangan/);
+  await expect(page.locator("[data-atlas-scope-note]")).toContainText("Connected figures");
+  await expect(page.locator(".atlas-object-panel .atlas-panel-toolbar > span")).toHaveText("13 items");
+  await expect(page.locator(".atlas-object-panel .atlas-object-card")).toHaveCount(13);
+
+  await page.locator("[data-atlas-scope-note] button").click();
+  await expect(page).toHaveURL(/focus=place%3Achangan/);
+  await expect(page).not.toHaveURL(/scope=/);
+  await expect(page.locator("[data-city-people]")).toBeVisible();
+
+  const cityRelationsAfterReturn = page.locator('[data-relation-scope="true"]');
+  await cityRelationsAfterReturn.locator(".relation-network-node").first().click();
+  await expect(page).toHaveURL(/focus=figure%3A.*scope=place%3Achangan/);
+  await expect(page.locator(".atlas-object-panel .atlas-panel-toolbar > span")).toHaveText("13 items");
   await expect(page.locator("[data-figure-trajectory]")).toBeVisible();
 });
 
