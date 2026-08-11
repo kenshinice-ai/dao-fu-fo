@@ -2,7 +2,7 @@
 
 > 维护纪律：每个可独立说明的实现、修复、验证或发布阶段完成后立即更新。
 > 最后更新：2026-08-11
-> 当前阶段：人物—城市—事件—关系网扩展已完成，等待本次 release commit 后直发最终 production / production 作为唯一线上复盘基准 / Public RC 边界保持独立
+> 当前阶段：人物—城市—事件—关系网扩展已完成并已直发最终 production / production 作为唯一线上复盘基准 / Public RC 边界保持独立
 
 ## 2026-08-11｜人物—城市—事件关系扩展与连续切换 release handoff（当前）
 
@@ -13,7 +13,8 @@
 - 首页人物入口已从 26 张同步为 32 张中英文卡片，道/儒/佛人物计数为 13/6/13；首页与 Explore 共用真实地图和关系数据，新增人物可从人物索引、共享 context picker、地图地点和事件面板进入；
 - ui-ux-pro-max skill 已从 canonical GitHub `nextlevelbuilder/ui-ux-pro-max-skill` 安装到本机，并实际用于本轮 map dossier、连续切换、44px 触控目标、SVG 关系图语义、移动端两栏折叠和键盘/屏幕阅读器检查；没有复制 reference project 的品牌、seed 或内容；
 - 本地门禁：`npm run check` 全量通过；workspace unit tests 19/19；Playwright + axe 全套回归通过（52 tests，Public RC 专用用例保持 skip）；preview context verified 为 344 文件 / 188 条双语关系；database bundle verified 为 160 entities / 188 relations；Full Alpha Vite build 与 `DRF_WEB_DEPLOYMENT_MODE=full-alpha npm run verify:static` 通过；bundle >500 kB 仅为既有非阻断警告；
-- 当前 release commit 尚未上传时，production 仍保持上一条 handoff 的 deployment，待本次 clean `main` release commit 完成后，直接按 production-only 纪律上传最终地址；部署目标固定为默认地址 <https://dao-ru-fo-digital-museum.pages.dev>，unique deployment URL 只作为发布证据，不取代默认地址；
+- Cloudflare production：默认地址 <https://dao-ru-fo-digital-museum.pages.dev>；本轮 unique deployment 地址 <https://c6330738.dao-ru-fo-digital-museum.pages.dev>；deployment ID `c6330738-b9e9-451b-abc9-99f0f5a99b58`；Environment `Production`；branch `main`；source marker `86c100f`（`86c100ff7e7473decbed74ddc5a96c3fc0328858`）；Wrangler `4.120.0`；manifest `2026.08.alpha.1 / alpha / preview`；production 上传时为 clean `main`、`--commit-dirty=false`；上一版 `f6692404-283d-4497-8354-52978cb6f2a1` 保留为回滚证据；unique URL 只作为发布证据，不取代默认地址；
+- post-deploy：最终默认地址首页 clean-tab smoke 已确认中英文新增人物可见、首页 manifest 为 `2026.08.alpha.1`；默认地址地图完成“长安 → 洛阳”连续切换，洛阳 dossier 保留人物与事件，事件可进入事件上下文并返回地点；unique 地址进一步确认朱熹 → 慧远关系聚焦可恢复；线上浏览器 console error 为 0；
 - Public RC2 继续独立保持 34 entities / 41 relations / 0 audio / 0 blocker；本轮新增内容全部是 Full Alpha `preview`，不会借 production 上传把研究预览内容伪装成 Public RC；
 - 工作树纪律：本轮只保留与上述闭环直接相关的代码、authoring、read-model 首页入口、测试和 handoff；未 reset/checkout，未把 iCloud 生成的同内容数字后缀副本纳入提交；
 
