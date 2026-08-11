@@ -27,7 +27,7 @@
       "subtitle": "Daoist traditions",
       "statement": "从经典、宫观、山岳和法脉，看道家思想与组织化道教如何并行发展。",
       "counts": {
-        "figures": 12,
+        "figures": 13,
         "texts": 6,
         "passages": 4
       },
@@ -42,7 +42,7 @@
       "subtitle": "Confucian traditions",
       "statement": "从礼、经学和国家教育，看儒家如何成为帝国制度与社会伦理的一部分。",
       "counts": {
-        "figures": 5,
+        "figures": 6,
         "texts": 3,
         "passages": 4
       },
@@ -57,7 +57,7 @@
       "subtitle": "Buddhism",
       "statement": "从求法、译经和寺院网络，看一种外来传统如何在中国重新表达自己。",
       "counts": {
-        "figures": 9,
+        "figures": 13,
         "texts": 7,
         "passages": 6
       },
@@ -359,6 +359,72 @@
       "timeLabel": "后世神格化层：约 200–700",
       "placeLabel": "道教天界 · 象征空间",
       "spaceView": "cosmos"
+    },
+    {
+      "kind": "figure",
+      "slug": "dao-an",
+      "tradition": "buddhism",
+      "traditionLabel": "佛",
+      "title": "道安",
+      "role": "译经与组织者 · 襄阳—长安网络",
+      "summary": "连接译经制度、僧团组织与东晋佛教传播，同时把城市锚点与完整行程明确分开。",
+      "timeLabel": "约 312–385 年",
+      "placeLabel": "襄阳—长安 · 译经网络"
+    },
+    {
+      "kind": "figure",
+      "slug": "huiyuan",
+      "tradition": "buddhism",
+      "traditionLabel": "佛",
+      "title": "慧远",
+      "role": "僧团组织者 · 庐山与东林寺",
+      "summary": "连接东林寺、山地文化景观与佛教交流，不把后世净土接受史压缩为人物生平。",
+      "timeLabel": "334–416 年",
+      "placeLabel": "庐山 · 东林僧团"
+    },
+    {
+      "kind": "figure",
+      "slug": "tao-hongjing",
+      "tradition": "daoism",
+      "traditionLabel": "道",
+      "title": "陶弘景",
+      "role": "道教知识人物 · 茅山与宫廷咨询",
+      "summary": "连接茅山隐居、道教知识与梁廷书信往来，同时把咨询关系与正式官职分开。",
+      "timeLabel": "456–536 年",
+      "placeLabel": "茅山—建康 · 咨询网络"
+    },
+    {
+      "kind": "figure",
+      "slug": "liang-wudi",
+      "tradition": "buddhism",
+      "traditionLabel": "佛",
+      "title": "梁武帝（萧衍）",
+      "role": "统治者 · 宫廷佛教与制度赞助",
+      "summary": "把建康宫廷政策、佛教制度与三教交涉放进同一南朝政治空间。",
+      "timeLabel": "464–549 年；在位 502–549",
+      "placeLabel": "建康 · 宫廷与寺院制度"
+    },
+    {
+      "kind": "figure",
+      "slug": "yixing",
+      "tradition": "buddhism",
+      "traditionLabel": "佛",
+      "title": "一行（张遂）",
+      "role": "僧侣与天文学家 · 历法与长安制度",
+      "summary": "连接佛教身份、天文计算与大衍历，不把团队工程简化为单一人物成果。",
+      "timeLabel": "约 683–727 年",
+      "placeLabel": "长安 · 历法制度"
+    },
+    {
+      "kind": "figure",
+      "slug": "zhu-xi",
+      "tradition": "confucianism",
+      "traditionLabel": "儒",
+      "title": "朱熹",
+      "role": "理学家 · 书院与经典接受",
+      "summary": "连接庐山、书院复兴与经典解释，同时明确他与慧远相隔数百年的关系。",
+      "timeLabel": "1130–1200 年",
+      "placeLabel": "庐山—武夷山 · 书院景观"
     }
   ],
   "methodologyTitle": "历史、传统与神话，不放在同一个标签里",

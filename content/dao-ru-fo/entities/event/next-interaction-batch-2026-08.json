@@ -1,0 +1,194 @@
+[
+  {
+    "kind": "event",
+    "slug": "daoan-translation-network",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "道安组织译经与僧团网络",
+        "shortSummary": "约 365–385 年，道安在襄阳及长安语境中组织译经、讲学与僧团规范，形成佛教知识传播的制度节点。",
+        "curatorialDescription": ["事件把人物、译场和城市分开建模；襄阳与长安是两个空间锚点，不是一条未经核实的逐站路线。"],
+        "researchNote": "译场参与者、具体译本和道安迁徙顺序需要传记与目录级来源继续拆分。",
+        "timeLabel": "约 365–385 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Dao'an organises a translation and monastic network",
+        "shortSummary": "Around 365–385, Dao'an's translation, teaching and monastic organisation in the Xiangyang and Chang'an contexts formed an institutional node in Buddhist transmission.",
+        "curatorialDescription": ["The event keeps figure, translation setting and city distinct; Xiangyang and Chang'an are two spatial anchors, not an unverified stop-by-stop route."],
+        "researchNote": "Translation personnel, individual works and the sequence of Dao'an's movements require further biographical and catalogue-level separation.",
+        "timeLabel": "c. 365–385 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:daoan-gaoseng-biographies" }],
+    "temporalAssertions": [{ "predicate": "institutional_activity", "timeType": "range", "startYear": 365, "endYear": 385, "displayDate": { "zh-CN": "约 365–385 年", "en": "c. 365–385 CE" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:daoan-gaoseng-biographies" }],
+    "sourceIds": ["source:daoan-gaoseng-biographies", "source:buddhist-institutional-records", "source:editorial-method"],
+    "related": [],
+    "profile": { "eventKind": "editorial_project", "historicity": "documented", "sequenceOrder": 15, "eventScope": "transregional" }
+  },
+  {
+    "kind": "event",
+    "slug": "huiyuan-donglin-monastery",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "慧远与庐山东林寺僧团",
+        "shortSummary": "约 386 年，慧远在庐山组织东林寺僧团，使山地成为佛教制度、修行和跨区域交流的空间。",
+        "curatorialDescription": ["东林寺的创建是地点、人物与僧团制度的交汇事件；后世净土叙事另作为接受层处理。"],
+        "researchNote": "寺院初期组织、参与者与书信网络需继续按传记和遗产资料细化。",
+        "timeLabel": "约 386 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Huiyuan and the Donglin community at Mount Lu",
+        "shortSummary": "Around 386, Huiyuan organised the Donglin community at Mount Lu, making the mountain a setting for Buddhist institutions, practice and transregional exchange.",
+        "curatorialDescription": ["Donglin's foundation is an event at the intersection of place, figure and monastic organisation; later Pure Land narratives remain a reception layer."],
+        "researchNote": "The early community, participants and correspondence network require further biographical and heritage-level detail.",
+        "timeLabel": "c. 386 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:unesco-lushan" }],
+    "temporalAssertions": [{ "predicate": "foundation", "timeType": "circa", "startYear": 386, "endYear": 386, "displayDate": { "zh-CN": "约 386 年", "en": "c. 386 CE" }, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:unesco-lushan" }],
+    "sourceIds": ["source:unesco-lushan", "source:buddhist-biographical-records"],
+    "related": [],
+    "profile": { "eventKind": "foundation", "historicity": "documented", "sequenceOrder": 16, "eventScope": "local" }
+  },
+  {
+    "kind": "event",
+    "slug": "tao-hongjing-maoshan-consultation",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "陶弘景隐居茅山与梁廷咨询",
+        "shortSummary": "约 500–536 年，陶弘景以茅山为活动空间，并与梁武帝保持书信和知识咨询往来。",
+        "curatorialDescription": ["事件不把陶弘景写成持续驻守建康的宫廷官员；茅山和建康分别承担隐居与制度联系两种空间角色。"],
+        "researchNote": "书信时间、咨询主题和茅山宫观沿革需要继续按文本与地方资料核对。",
+        "timeLabel": "约 500–536 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Tao Hongjing at Mount Mao and in consultation with the Liang court",
+        "shortSummary": "Around 500–536, Tao Hongjing worked from the Mount Mao setting while maintaining correspondence and knowledge consultation with Liang Wudi.",
+        "curatorialDescription": ["The event does not turn Tao Hongjing into a continuously resident court official in Jiankang; Mount Mao and Jiankang carry reclusion and institutional-connection roles respectively."],
+        "researchNote": "Letter dates, consultation topics and the history of Mount Mao monasteries require further textual and local-gazetteer review.",
+        "timeLabel": "c. 500–536 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:tao-hongjing-liang-wudi-letters" }],
+    "temporalAssertions": [{ "predicate": "institutional_and_memory_scope", "timeType": "range", "startYear": 500, "endYear": 536, "displayDate": { "zh-CN": "约 500–536 年", "en": "c. 500–536 CE" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:tao-hongjing-liang-wudi-letters" }],
+    "sourceIds": ["source:tao-hongjing-liang-wudi-letters", "source:maoshan-cultural-record", "source:editorial-method"],
+    "related": [],
+    "profile": { "eventKind": "other", "historicity": "documented", "sequenceOrder": 17, "eventScope": "regional" }
+  },
+  {
+    "kind": "event",
+    "slug": "liang-wudi-buddhist-patronage",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "梁武帝的佛教制度与宫廷赞助",
+        "shortSummary": "502–549 年，梁武帝的宫廷政策把建康、寺院制度、仪式与佛教赞助放在同一国家空间。",
+        "curatorialDescription": ["事件呈现制度和赞助层，不把‘菩萨皇帝’的后世称号直接等同于单一政策或个人信仰。"],
+        "researchNote": "寺院数量、度僧制度、宫廷仪式和三教互动需继续按正史与制度史材料拆分。",
+        "timeLabel": "502–549 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Liang Wudi's Buddhist institutions and court patronage",
+        "shortSummary": "From 502–549, Liang Wudi's court policy placed Jiankang, monastery institutions, ritual and Buddhist patronage within one state space.",
+        "curatorialDescription": ["The event presents institutions and patronage without equating the later ‘Bodhisattva Emperor’ title with one policy or undifferentiated personal belief."],
+        "researchNote": "Monastery numbers, ordination policy, court ritual and Three Teachings interaction require further separation in histories and institutional sources.",
+        "timeLabel": "502–549 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:liang-wudi-liang-shu" }],
+    "temporalAssertions": [{ "predicate": "policy", "timeType": "range", "startYear": 502, "endYear": 549, "displayDate": { "zh-CN": "502–549 年", "en": "502–549 CE" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:liang-wudi-liang-shu" }],
+    "sourceIds": ["source:liang-wudi-liang-shu", "source:buddhist-institutional-records", "source:editorial-method"],
+    "related": [],
+    "profile": { "eventKind": "policy", "historicity": "documented", "sequenceOrder": 18, "eventScope": "imperial" }
+  },
+  {
+    "kind": "event",
+    "slug": "yixing-dayan-calendar",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "一行与大衍历编纂",
+        "shortSummary": "约 721–725 年，一行参与大衍历相关的天文计算与历法工程，把僧侣知识与长安国家制度连接起来。",
+        "curatorialDescription": ["事件把历法工程、天文计算和人物身份分层；长安是制度锚点，不代表所有观测都发生在同一处。"],
+        "researchNote": "历法版本、观测设备、参与者与颁行过程需继续按历志和唐代史料核对。",
+        "timeLabel": "约 721–725 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Yixing and the Dayan calendar",
+        "shortSummary": "Around 721–725, Yixing contributed to astronomical calculation and calendrical work associated with the Dayan calendar, connecting monastic knowledge with Chang'an institutions.",
+        "curatorialDescription": ["The event separates calendrical work, astronomical calculation and figure identity; Chang'an is an institutional anchor and not the location of every observation."],
+        "researchNote": "Calendar versions, instruments, participants and promulgation require further checking against calendrical treatises and Tang records.",
+        "timeLabel": "c. 721–725 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:yixing-old-tang" }],
+    "temporalAssertions": [{ "predicate": "institutional_activity", "timeType": "range", "startYear": 721, "endYear": 725, "displayDate": { "zh-CN": "约 721–725 年", "en": "c. 721–725 CE" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:yixing-old-tang" }],
+    "sourceIds": ["source:yixing-old-tang", "source:buddhist-institutional-records", "source:editorial-method"],
+    "related": [],
+    "profile": { "eventKind": "editorial_project", "historicity": "documented", "sequenceOrder": 19, "eventScope": "imperial" }
+  },
+  {
+    "kind": "event",
+    "slug": "zhuxi-white-deer-academy",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "朱熹复兴白鹿洞书院",
+        "shortSummary": "约 1179–1191 年，朱熹在庐山推动白鹿洞书院复兴，使山地文化景观成为儒学教育与经典解释空间。",
+        "curatorialDescription": ["书院复兴是教育制度、地点和人物活动的交汇事件；它与慧远的东晋僧团相隔数百年。"],
+        "researchNote": "书院章程、讲学文本和地方空间需要继续绑定文集、碑刻与遗产资料。",
+        "timeLabel": "约 1179–1191 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Zhu Xi revives the White Deer Grotto Academy",
+        "shortSummary": "Around 1179–1191, Zhu Xi promoted the revival of the White Deer Grotto Academy at Mount Lu, turning the landscape into a setting for Confucian education and classical interpretation.",
+        "curatorialDescription": ["The academy revival is an event at the intersection of educational institution, place and figure activity; it is separated from Huiyuan's Eastern Jin monastic community by centuries."],
+        "researchNote": "Academy regulations, teaching texts and the local site require continued linking to collected writings, inscriptions and heritage records.",
+        "timeLabel": "c. 1179–1191 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [{ "tradition": "confucianism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:unesco-lushan" }],
+    "temporalAssertions": [{ "predicate": "institutional_scope", "timeType": "range", "startYear": 1179, "endYear": 1191, "displayDate": { "zh-CN": "约 1179–1191 年", "en": "c. 1179–1191 CE" }, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:unesco-lushan" }],
+    "sourceIds": ["source:unesco-lushan", "source:zhuxi-ctext", "source:editorial-method"],
+    "related": [],
+    "profile": { "eventKind": "foundation", "historicity": "documented", "sequenceOrder": 20, "eventScope": "local" }
+  }
+]

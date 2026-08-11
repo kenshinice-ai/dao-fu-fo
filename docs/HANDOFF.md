@@ -2,9 +2,22 @@
 
 > 维护纪律：每个可独立说明的实现、修复、验证或发布阶段完成后立即更新。
 > 最后更新：2026-08-11
-> 当前阶段：城市—人物—轨迹—时间轴—关系网互动闭环已上线 production / production 作为唯一线上复盘基准 / Public RC 边界保持独立
+> 当前阶段：人物—城市—事件—关系网扩展已完成，等待本次 release commit 后直发最终 production / production 作为唯一线上复盘基准 / Public RC 边界保持独立
 
-## 2026-08-11｜城市—人物—轨迹—时间轴—关系网互动闭环 production handoff（当前）
+## 2026-08-11｜人物—城市—事件关系扩展与连续切换 release handoff（当前）
+
+- 本轮按用户确认的地图核心方向继续扩展 Full Alpha：新增 6 位人物（道安、慧远、陶弘景、梁武帝、一行、朱熹）、5 个现实地点（襄阳、庐山、茅山、建康、武夷山）、6 个事件和 29 条人物—地点—事件—人物关系；新人物全部进入双语 authoring、来源、时间、地点或事件关系链，没有增加孤立人物卡；
+- 内容边界保持可审计：道安—慧远以师承/影响表达，慧远—鸠摩罗什以同时代交流表达，陶弘景—梁武帝以书信/咨询表达，一行—司马承祯以同时代并置表达，朱熹—慧远以庐山跨时代比较表达；关系 qualifiers 明确写出“不等同于直接会面/长期同处/完整路线”；神话/神圣人物仍不写入现实经纬度；
+- Full Alpha compiler read model 当前为 157 个实体（人物 32、事件 37、地点 26、路线 3、文本 16、文本版本 8、概念 6、机构 6、对象 9、段落 14）、188 条关系、62 个来源、3 条音频；真实地图新增 5 个坐标锚点，地图地点索引保持全部可见；质量报告为 404 个 public blockers，review queue 为 348 个 subject，其中 273 个 blocking；这些是研究内容审核状态，不是程序错误，也不等于 Public RC；
+- 地图交互已按 Bible Atlas 的连续探索模式微调：选中城市不再过滤掉其他城市，地点索引和地图 marker 仍可继续切换；城市 dossier 同时列人物和事件；点击事件可进入事件地点、事件人物和一跳关系网，再切回任意地点；事件首个现实地点用于地图定位，URL `focus=place:* / event:* / figure:*` 可恢复；
+- 首页人物入口已从 26 张同步为 32 张中英文卡片，道/儒/佛人物计数为 13/6/13；首页与 Explore 共用真实地图和关系数据，新增人物可从人物索引、共享 context picker、地图地点和事件面板进入；
+- ui-ux-pro-max skill 已从 canonical GitHub `nextlevelbuilder/ui-ux-pro-max-skill` 安装到本机，并实际用于本轮 map dossier、连续切换、44px 触控目标、SVG 关系图语义、移动端两栏折叠和键盘/屏幕阅读器检查；没有复制 reference project 的品牌、seed 或内容；
+- 本地门禁：`npm run check` 全量通过；workspace unit tests 19/19；Playwright + axe 全套回归通过（52 tests，Public RC 专用用例保持 skip）；preview context verified 为 344 文件 / 188 条双语关系；database bundle verified 为 160 entities / 188 relations；Full Alpha Vite build 与 `DRF_WEB_DEPLOYMENT_MODE=full-alpha npm run verify:static` 通过；bundle >500 kB 仅为既有非阻断警告；
+- 当前 release commit 尚未上传时，production 仍保持上一条 handoff 的 deployment，待本次 clean `main` release commit 完成后，直接按 production-only 纪律上传最终地址；部署目标固定为默认地址 <https://dao-ru-fo-digital-museum.pages.dev>，unique deployment URL 只作为发布证据，不取代默认地址；
+- Public RC2 继续独立保持 34 entities / 41 relations / 0 audio / 0 blocker；本轮新增内容全部是 Full Alpha `preview`，不会借 production 上传把研究预览内容伪装成 Public RC；
+- 工作树纪律：本轮只保留与上述闭环直接相关的代码、authoring、read-model 首页入口、测试和 handoff；未 reset/checkout，未把 iCloud 生成的同内容数字后缀副本纳入提交；
+
+## 2026-08-11｜城市—人物—轨迹—时间轴—关系网互动闭环 production handoff（上一阶段）
 
 - 本轮按用户明确授权把当前完整工作树创建 release commit 并 fast-forward 合并到 `main`：主 release 为 `95cd75b`（`release: interactive historical atlas production`），随后补入 `80dbf2d`（地图回归/对比度修复）和 `aaa450b`（timeline SVG 无障碍语义修复）；当前 `main` 工作树在 handoff 前保持干净；
 - 目标闭环已实际验证：点击长安展开 11 位人物，点击洛阳展开 5 位人物；从长安人物列表点击玄奘进入 `focus=figure:xuanzang`，地图与面板显示 3 个空间节点；点击时间轴节点“玄奘出发长安”进入 `focus=event:xuanzang-departs-changan` 并反向显示地图；点击人物关系网节点可回到城市或其他关系对象；刷新 figure focus URL 后轨迹场景恢复；

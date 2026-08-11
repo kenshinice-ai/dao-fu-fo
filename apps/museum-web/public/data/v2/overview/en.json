@@ -27,7 +27,7 @@
       "subtitle": "道",
       "statement": "Follow texts, mountains, institutions and lineages to distinguish Daoist thought from organised Daoism.",
       "counts": {
-        "figures": 12,
+        "figures": 13,
         "texts": 6,
         "passages": 4
       },
@@ -42,7 +42,7 @@
       "subtitle": "儒",
       "statement": "Follow ritual, classical learning and state education to see Confucian traditions embedded in imperial institutions.",
       "counts": {
-        "figures": 5,
+        "figures": 6,
         "texts": 3,
         "passages": 4
       },
@@ -57,7 +57,7 @@
       "subtitle": "佛",
       "statement": "Follow pilgrimage, translation and monasteries to see how an imported tradition found new forms in China.",
       "counts": {
-        "figures": 9,
+        "figures": 13,
         "texts": 7,
         "passages": 6
       },
@@ -359,6 +359,72 @@
       "timeLabel": "Later deification layer: c. 200–700",
       "placeLabel": "Daoist celestial realm · symbolic space",
       "spaceView": "cosmos"
+    },
+    {
+      "kind": "figure",
+      "slug": "dao-an",
+      "tradition": "buddhism",
+      "traditionLabel": "Buddhism",
+      "title": "Dao'an",
+      "role": "Translator and organiser · Xiangyang–Chang'an network",
+      "summary": "Connects translation institutions, monastic organisation and Eastern Jin Buddhist transmission while keeping city anchors distinct from a full itinerary.",
+      "timeLabel": "c. 312–385 CE",
+      "placeLabel": "Xiangyang–Chang'an · translation network"
+    },
+    {
+      "kind": "figure",
+      "slug": "huiyuan",
+      "tradition": "buddhism",
+      "traditionLabel": "Buddhism",
+      "title": "Huiyuan",
+      "role": "Monastic organiser · Mount Lu and Donglin",
+      "summary": "Connects Donglin Monastery, mountain cultural landscape and Buddhist exchange without collapsing later Pure Land reception into biography.",
+      "timeLabel": "334–416 CE",
+      "placeLabel": "Mount Lu · Donglin community"
+    },
+    {
+      "kind": "figure",
+      "slug": "tao-hongjing",
+      "tradition": "daoism",
+      "traditionLabel": "Dao",
+      "title": "Tao Hongjing",
+      "role": "Daoist knowledge figure · Mount Mao and court consultation",
+      "summary": "Connects Mount Mao reclusion, Daoist knowledge and correspondence with the Liang court while keeping consultation distinct from office.",
+      "timeLabel": "456–536 CE",
+      "placeLabel": "Mount Mao–Jiankang · consultation network"
+    },
+    {
+      "kind": "figure",
+      "slug": "liang-wudi",
+      "tradition": "buddhism",
+      "traditionLabel": "Buddhism",
+      "title": "Liang Wudi (Xiao Yan)",
+      "role": "Ruler · court Buddhism and institutional patronage",
+      "summary": "Places Jiankang court policy, Buddhist institutions and Three Teachings negotiation in one Southern Dynasties political space.",
+      "timeLabel": "464–549 CE; reign 502–549",
+      "placeLabel": "Jiankang · court and monastery institutions"
+    },
+    {
+      "kind": "figure",
+      "slug": "yixing",
+      "tradition": "buddhism",
+      "traditionLabel": "Buddhism",
+      "title": "Yixing (Zhang Sui)",
+      "role": "Monk and astronomer · calendar and Chang'an institutions",
+      "summary": "Connects Buddhist identity, astronomical calculation and the Dayan calendar without reducing a team project to one person.",
+      "timeLabel": "c. 683–727 CE",
+      "placeLabel": "Chang'an · calendrical institution"
+    },
+    {
+      "kind": "figure",
+      "slug": "zhu-xi",
+      "tradition": "confucianism",
+      "traditionLabel": "Ru",
+      "title": "Zhu Xi",
+      "role": "Neo-Confucian scholar · academy and classical reception",
+      "summary": "Connects Mount Lu, academy revival and classical interpretation while keeping his centuries-later relation to Huiyuan explicit.",
+      "timeLabel": "1130–1200 CE",
+      "placeLabel": "Mount Lu–Wuyi · academy landscape"
     }
   ],
   "methodologyTitle": "History, tradition and myth do not share one label",

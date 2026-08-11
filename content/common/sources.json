@@ -947,5 +947,149 @@
     "locatorLevel": "precise",
     "citationStatus": "verified",
     "url": "https://whc.unesco.org/en/list/524/"
+  },
+  {
+    "id": "source:daoan-gaoseng-biographies",
+    "sourceType": "primary_text",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "《高僧传》道安、慧远传记资料",
+      "en": "Biographical materials on Dao'an and Huiyuan in the Gaoseng zhuan"
+    },
+    "locator": "《高僧传》相关传记：道安的译经与僧团组织、慧远的师承与东林网络；人物关系与后世宗派叙述分层",
+    "role": {
+      "zh-CN": "道安、慧远人物年代、译经网络与传记关系的主要文本入口",
+      "en": "Primary textual entry for Dao'an and Huiyuan's dates, translation networks and biographical relations"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://zh.wikisource.org/wiki/%E9%AB%98%E5%83%A7%E5%82%B3"
+  },
+  {
+    "id": "source:unesco-lushan",
+    "sourceType": "archaeological_report",
+    "evidenceGrade": "A",
+    "title": {
+      "zh-CN": "UNESCO 世界遗产：庐山国家公园",
+      "en": "UNESCO World Heritage: Mount Lu National Park"
+    },
+    "locator": "庐山遗产资料：慧远于 386 年创建东林寺、白鹿洞书院及朱熹复兴书院的文化景观叙述；不把跨时代人物写成同时代关系",
+    "role": {
+      "zh-CN": "庐山现实文化景观、东林寺与白鹿洞书院跨时代节点的遗产来源",
+      "en": "Heritage source for Mount Lu's real cultural landscape and the cross-era Donglin and White Deer Grotto Academy nodes"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://whc.unesco.org/en/list/778"
+  },
+  {
+    "id": "source:tao-hongjing-liang-wudi-letters",
+    "sourceType": "primary_text",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "陶弘景《与梁武帝启》及相关书信",
+      "en": "Tao Hongjing's letters to Liang Wudi"
+    },
+    "locator": "《与梁武帝启》及书信材料：茅山隐居、梁廷咨询和陶弘景—梁武帝关系；书信往来不等同于宫廷常驻",
+    "role": {
+      "zh-CN": "陶弘景与梁武帝书信、咨询关系及茅山空间边界的原典入口",
+      "en": "Primary-text entry for Tao Hongjing and Liang Wudi's correspondence, consultation and Mount Mao boundary"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://zh.wikisource.org/zh-hans/%E8%88%87%E6%A2%81%E6%AD%A6%E5%B8%9D%E5%95%9F"
+  },
+  {
+    "id": "source:maoshan-cultural-record",
+    "sourceType": "institutional_record",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "茅山地方文化与道教遗产资料",
+      "en": "Maoshan local cultural and Daoist heritage record"
+    },
+    "locator": "茅山文化资料：陶弘景隐居、梁武帝咨询与茅山道教文化景观；地点坐标仅作山地尺度锚点",
+    "role": {
+      "zh-CN": "茅山现实文化景观、陶弘景记忆与南朝宗教联系的地方资料",
+      "en": "Local documentation for Mount Mao's real cultural landscape, Tao Hongjing memory and Southern Dynasties religious connections"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "item",
+    "citationStatus": "verified",
+    "url": "https://www.maoshanchina.com.cn/news/1370.html"
+  },
+  {
+    "id": "source:liang-wudi-liang-shu",
+    "sourceType": "primary_text",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "《梁书》武帝本纪与相关制度记载",
+      "en": "The Liang shu biography and institutional records of Liang Wudi"
+    },
+    "locator": "《梁书》武帝本纪及梁代佛教制度线索：在位年代、建康宫廷与宗教政策；后世称号与制度事实分开",
+    "role": {
+      "zh-CN": "梁武帝年代、建康宫廷与佛教政策的正史入口",
+      "en": "Primary historical entry for Liang Wudi's dates, Jiankang court and Buddhist policy"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://zh.wikisource.org/wiki/%E6%A2%81%E6%9B%B8"
+  },
+  {
+    "id": "source:yixing-old-tang",
+    "sourceType": "primary_text",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "《旧唐书》一行传与历法资料",
+      "en": "Yixing biography and calendrical materials in the Old Tang History"
+    },
+    "locator": "《旧唐书》一行传及历志相关材料：一行年代、僧侣身份与大衍历工程；人物、观测与制度层保持区分",
+    "role": {
+      "zh-CN": "一行人物年代、长安制度联系与大衍历工程的史料入口",
+      "en": "Historical entry for Yixing's dates, Chang'an institutional connection and Dayan calendar work"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://zh.wikisource.org/wiki/%E8%88%8A%E5%94%90%E6%9B%B8"
+  },
+  {
+    "id": "source:zhuxi-ctext",
+    "sourceType": "reference_work",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "中国哲学书电子化计划：朱熹资料页",
+      "en": "Chinese Text Project: Zhu Xi materials"
+    },
+    "locator": "朱熹人物与文本资料：1130–1200 年、理学解释与经典传承；不替代地方书院与碑刻来源",
+    "role": {
+      "zh-CN": "朱熹人物年代、文本与儒家接受层的参考入口",
+      "en": "Reference entry for Zhu Xi's dates, texts and Confucian reception layer"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://ctext.org/dictionary.pl?char=%E6%9C%B1%E7%86%B9&if=en"
+  },
+  {
+    "id": "source:a2-map-anchors",
+    "sourceType": "map_or_gazetteer",
+    "evidenceGrade": "C",
+    "title": {
+      "zh-CN": "A2 地图城市与山地锚点登记（策展草案）",
+      "en": "A2 city and mountain map-anchor register (curatorial draft)"
+    },
+    "locator": "襄阳、庐山、茅山、建康、武夷山的城市中心或山地近似坐标；坐标表达地理参照，不证明人物到访",
+    "role": {
+      "zh-CN": "本批次新增现实地点的坐标与空间尺度登记，等待逐点地理来源复核",
+      "en": "Coordinate and scale register for this batch's new real places, pending point-by-point geographic review"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "topic",
+    "citationStatus": "draft",
+    "url": "https://www.openstreetmap.org/"
   }
 ]

@@ -1,0 +1,284 @@
+[
+  {
+    "kind": "figure",
+    "slug": "dao-an",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "道安",
+        "subtitle": "译经制度、僧团组织与东晋佛教网络的关键人物",
+        "shortSummary": "道安把佛教译经、僧团规范与区域流动连接起来，是理解襄阳—长安传播网络的重要入口。",
+        "curatorialDescription": [
+          "本条把道安的译经组织和僧团规范放入东晋城市与交通网络，不把后世宗派谱系直接回写成单一师承事实。",
+          "襄阳与长安分别作为活动和译经制度的城市尺度锚点；地图点位不等同于逐日行迹。"
+        ],
+        "researchNote": "道安与慧远、鸠摩罗什的网络关系仍需按传记、书信和译场记录分层核对；当前使用保守的活动区间。",
+        "timeLabel": "约 312–385 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Dao'an",
+        "subtitle": "A key figure in translation institutions, monastic organisation and the Eastern Jin Buddhist network",
+        "shortSummary": "Dao'an connects Buddhist translation, monastic rules and regional movement, offering an entry into the Xiangyang–Chang'an transmission network.",
+        "curatorialDescription": [
+          "The record places Dao'an's translation organisation and monastic discipline within Eastern Jin urban and travel networks without projecting later school genealogies back into one simple lineage claim.",
+          "Xiangyang and Chang'an are city-scale anchors for activity and translation institutions; the map does not claim a day-by-day itinerary."
+        ],
+        "researchNote": "Dao'an's network with Huiyuan and Kumarajiva requires layered checking across biographies, letters and translation records; this release uses a conservative activity range.",
+        "timeLabel": "c. 312–385 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      { "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:daoan-gaoseng-biographies" }
+    ],
+    "temporalAssertions": [
+      { "predicate": "life", "timeType": "circa", "startYear": 312, "endYear": 385, "displayDate": { "zh-CN": "约 312–385 年", "en": "c. 312–385 CE" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:daoan-gaoseng-biographies" }
+    ],
+    "sourceIds": ["source:daoan-gaoseng-biographies", "source:buddhist-biographical-records", "source:editorial-method"],
+    "related": [
+      { "kind": "place", "slug": "xiangyang", "title": { "zh-CN": "襄阳", "en": "Xiangyang" }, "relation": { "zh-CN": "活动与僧团网络锚点", "en": "Anchor for activity and monastic networks" } },
+      { "kind": "place", "slug": "changan", "title": { "zh-CN": "长安", "en": "Chang'an" }, "relation": { "zh-CN": "译经制度空间", "en": "Translation-institution setting" } }
+    ],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "釋道安", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure",
+    "slug": "huiyuan",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "慧远",
+        "subtitle": "庐山东林寺、僧团组织与中国佛教地方化的入口",
+        "shortSummary": "慧远在庐山组织东林寺僧团，把山地文化景观、僧团制度与佛教跨区域交流连接起来。",
+        "curatorialDescription": [
+          "庐山既是现实山地也是制度与记忆叠加的文化景观；本条把慧远的东林寺活动与后世净土叙事分层。",
+          "慧远与鸠摩罗什的关系在本版以同时代交流和思想网络呈现，不断言二人有未被来源支持的直接会面。"
+        ],
+        "researchNote": "东林寺创建年代与慧远活动有遗产和传记入口；僧团规模、书信往来与后世净土地位仍需逐条细化。",
+        "timeLabel": "334–416 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Huiyuan",
+        "subtitle": "A gateway into Mount Lu, Donglin Monastery and the localisation of Chinese Buddhism",
+        "shortSummary": "Huiyuan organised the Donglin community at Mount Lu, connecting a mountain cultural landscape with monastic institutions and transregional Buddhist exchange.",
+        "curatorialDescription": [
+          "Mount Lu is both a real landscape and a layered institutional-memory site; Huiyuan's Donglin activity is kept distinct from later Pure Land narratives.",
+          "Huiyuan's relation to Kumarajiva is modelled as contemporary exchange and an intellectual network, without claiming an unsupported direct meeting."
+        ],
+        "researchNote": "Donglin's foundation and Huiyuan's activity have heritage and biographical entry points; community scale, correspondence and later Pure Land status require further separation.",
+        "timeLabel": "334–416 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      { "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:buddhist-biographical-records" }
+    ],
+    "temporalAssertions": [
+      { "predicate": "life", "timeType": "exact", "startYear": 334, "endYear": 416, "displayDate": { "zh-CN": "334–416 年", "en": "334–416 CE" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:buddhist-biographical-records" }
+    ],
+    "sourceIds": ["source:buddhist-biographical-records", "source:unesco-lushan", "source:editorial-method"],
+    "related": [
+      { "kind": "place", "slug": "lushan", "title": { "zh-CN": "庐山", "en": "Mount Lu" }, "relation": { "zh-CN": "东林寺与僧团空间", "en": "Donglin and monastic setting" } }
+    ],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "慧遠", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure",
+    "slug": "tao-hongjing",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "陶弘景",
+        "subtitle": "茅山隐居、道教知识与南朝宫廷咨询的交汇人物",
+        "shortSummary": "陶弘景把茅山山地、道教知识生产与梁武帝的宫廷咨询连接起来，是观察宗教与政治互动的关键节点。",
+        "curatorialDescription": [
+          "本条把陶弘景的隐居、著述和宫廷咨询分成不同关系；‘山中宰相’作为后世称谓不替代具体史料。",
+          "茅山是主要空间锚点，建康只表达与梁廷的区域和制度联系。"
+        ],
+        "researchNote": "陶弘景与梁武帝的书信和咨询往来有文本入口；具体居止、术数实践和后世仙传仍需单独审核。",
+        "timeLabel": "456–536 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Tao Hongjing",
+        "subtitle": "Mount Mao reclusion, Daoist knowledge and court consultation in the Southern Dynasties",
+        "shortSummary": "Tao Hongjing connects the Mount Mao landscape, Daoist knowledge production and Liang Wudi's court consultations, making him a key node for religion–politics interaction.",
+        "curatorialDescription": [
+          "The record separates Tao Hongjing's reclusion, writings and court consultation; the later title ‘mountain premier’ does not replace specific historical evidence.",
+          "Mount Mao is the primary spatial anchor, while Jiankang records a regional and institutional connection with the Liang court."
+        ],
+        "researchNote": "Letters and consultation records provide an entry into Tao Hongjing's relation with Liang Wudi; residences, technical practice and later immortal biographies require separate review.",
+        "timeLabel": "456–536 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      { "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:tao-hongjing-liang-wudi-letters" }
+    ],
+    "temporalAssertions": [
+      { "predicate": "life", "timeType": "exact", "startYear": 456, "endYear": 536, "displayDate": { "zh-CN": "456–536 年", "en": "456–536 CE" }, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:tao-hongjing-liang-wudi-letters" }
+    ],
+    "sourceIds": ["source:tao-hongjing-liang-wudi-letters", "source:maoshan-cultural-record", "source:editorial-method"],
+    "related": [
+      { "kind": "place", "slug": "mount-mao", "title": { "zh-CN": "茅山", "en": "Mount Mao" }, "relation": { "zh-CN": "隐居与知识空间", "en": "Reclusion and knowledge setting" } },
+      { "kind": "figure", "slug": "liang-wudi", "title": { "zh-CN": "梁武帝", "en": "Liang Wudi" }, "relation": { "zh-CN": "宫廷咨询与同时代联系", "en": "Court consultation and contemporary connection" } }
+    ],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "陶弘景", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure",
+    "slug": "liang-wudi",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "梁武帝（萧衍）",
+        "subtitle": "南朝宫廷佛教、制度赞助与三教交涉的统治者",
+        "shortSummary": "梁武帝把建康宫廷、佛教制度化赞助与道教知识咨询置于同一政治空间。",
+        "curatorialDescription": [
+          "本条呈现皇帝的制度赞助与宗教政策，不把后世‘菩萨皇帝’称号当作未经区分的个人信仰事实。",
+          "陶弘景关系以书信与咨询往来表达；人物之间保持时间和身份层次。"
+        ],
+        "researchNote": "梁代寺院制度、宫廷仪式与三教互动需要继续接入正史、碑刻和制度史材料。",
+        "timeLabel": "464–549 年；在位 502–549",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Liang Wudi (Xiao Yan)",
+        "subtitle": "A ruler of court Buddhism, institutional patronage and Three Teachings negotiation",
+        "shortSummary": "Liang Wudi places the Jiankang court, institutional Buddhist patronage and Daoist consultation in one political space.",
+        "curatorialDescription": [
+          "The record presents imperial patronage and religious policy without treating the later title ‘Bodhisattva Emperor’ as an undifferentiated statement of personal belief.",
+          "The Tao Hongjing relation is expressed through letters and consultation, while temporal and identity layers remain separate."
+        ],
+        "researchNote": "Liang institutional Buddhism, court ritual and Three Teachings interaction require further work with histories, inscriptions and institutional sources.",
+        "timeLabel": "464–549 CE; reign 502–549",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      { "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:liang-wudi-liang-shu" },
+      { "tradition": "daoism", "role": "secondary", "isPrimary": false, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:tao-hongjing-liang-wudi-letters" }
+    ],
+    "temporalAssertions": [
+      { "predicate": "life", "timeType": "exact", "startYear": 464, "endYear": 549, "displayDate": { "zh-CN": "464–549 年；在位 502–549", "en": "464–549 CE; reign 502–549" }, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:liang-wudi-liang-shu" }
+    ],
+    "sourceIds": ["source:liang-wudi-liang-shu", "source:tao-hongjing-liang-wudi-letters", "source:editorial-method"],
+    "related": [
+      { "kind": "place", "slug": "jiankang", "title": { "zh-CN": "建康", "en": "Jiankang" }, "relation": { "zh-CN": "南朝宫廷空间", "en": "Southern Dynasties court setting" } },
+      { "kind": "figure", "slug": "tao-hongjing", "title": { "zh-CN": "陶弘景", "en": "Tao Hongjing" }, "relation": { "zh-CN": "咨询与书信往来", "en": "Consultation and correspondence" } }
+    ],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "蕭衍", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure",
+    "slug": "yixing",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "一行（张遂）",
+        "subtitle": "长安译经、天文计算与国家历法工程的交汇人物",
+        "shortSummary": "一行把佛教僧侣身份、长安知识网络和大衍历编纂连接起来，显示宗教人物如何进入国家技术制度。",
+        "curatorialDescription": [
+          "本条把一行的佛教身份、天文计算和历法制度分层；地图只保留长安的制度锚点，不虚构完整行程。",
+          "一行与司马承祯在本版作为同时代人物并列，不暗示二人有直接会面。"
+        ],
+        "researchNote": "一行的历法、天文观测和译经活动需继续按《旧唐书》、历志和佛教传记拆分。",
+        "timeLabel": "约 683–727 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Yixing (Zhang Sui)",
+        "subtitle": "A figure at the intersection of Chang'an translation, astronomy and state calendrical work",
+        "shortSummary": "Yixing connects Buddhist monastic identity, Chang'an knowledge networks and the Dayan calendar, showing how a religious figure entered state technical institutions.",
+        "curatorialDescription": [
+          "The record separates Yixing's Buddhist identity, astronomical calculation and calendrical institution; the map retains Chang'an as an institutional anchor without inventing a complete itinerary.",
+          "Yixing and Sima Chengzhen are presented as contemporaries, not as evidence of an unverified direct meeting."
+        ],
+        "researchNote": "Yixing's calendar, observations and translation activity require separation across the Old Tang History, calendrical records and Buddhist biographies.",
+        "timeLabel": "c. 683–727 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      { "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:yixing-old-tang" }
+    ],
+    "temporalAssertions": [
+      { "predicate": "life", "timeType": "circa", "startYear": 683, "endYear": 727, "displayDate": { "zh-CN": "约 683–727 年", "en": "c. 683–727 CE" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:yixing-old-tang" }
+    ],
+    "sourceIds": ["source:yixing-old-tang", "source:buddhist-institutional-records", "source:editorial-method"],
+    "related": [
+      { "kind": "place", "slug": "changan", "title": { "zh-CN": "长安", "en": "Chang'an" }, "relation": { "zh-CN": "译经与历法制度空间", "en": "Translation and calendrical institution setting" } },
+      { "kind": "figure", "slug": "sima-chengzhen", "title": { "zh-CN": "司马承祯", "en": "Sima Chengzhen" }, "relation": { "zh-CN": "同时代知识网络并置", "en": "Contemporary knowledge-network parallel" } }
+    ],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "一行／張遂", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure",
+    "slug": "zhu-xi",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "朱熹",
+        "subtitle": "白鹿洞书院、理学解释与儒家经典化的后世节点",
+        "shortSummary": "朱熹把庐山书院、经典解释与宋代理学组织起来，是观察儒家传统如何重返历史空间的重要人物。",
+        "curatorialDescription": [
+          "朱熹与慧远相隔数百年，本馆以同一庐山文化景观中的比较关系呈现，不把二人并置误写为同时代交往。",
+          "白鹿洞书院是制度与教育空间；人物影响关系指向后世儒家经典化，不替代朱熹自身文本。"
+        ],
+        "researchNote": "朱熹生平、书院复兴和理学文本已有较多入口；庐山与武夷山的具体活动节点仍需接入版本和地方志资料。",
+        "timeLabel": "1130–1200 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Zhu Xi",
+        "subtitle": "White Deer Grotto Academy, Neo-Confucian interpretation and a later node of Confucian canonisation",
+        "shortSummary": "Zhu Xi connects the Mount Lu academy landscape, classical interpretation and Song Neo-Confucian learning, offering a later historical-space entry into the Confucian tradition.",
+        "curatorialDescription": [
+          "Zhu Xi lived centuries after Huiyuan; the museum uses a comparative relation within the same Mount Lu cultural landscape without implying contemporary contact.",
+          "The White Deer Grotto Academy is an institutional and educational space; reception relations point to later Confucian canonisation rather than replacing Zhu Xi's own texts."
+        ],
+        "researchNote": "Zhu Xi's life, academy revival and Neo-Confucian texts have substantial entry points; specific Mount Lu and Wuyi activity nodes still require editions and local records.",
+        "timeLabel": "1130–1200 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      { "tradition": "confucianism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:zhuxi-ctext" }
+    ],
+    "temporalAssertions": [
+      { "predicate": "life", "timeType": "exact", "startYear": 1130, "endYear": 1200, "displayDate": { "zh-CN": "1130–1200 年", "en": "1130–1200 CE" }, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:zhuxi-ctext" }
+    ],
+    "sourceIds": ["source:zhuxi-ctext", "source:unesco-lushan", "source:editorial-method"],
+    "related": [
+      { "kind": "place", "slug": "lushan", "title": { "zh-CN": "庐山", "en": "Mount Lu" }, "relation": { "zh-CN": "白鹿洞书院文化景观", "en": "White Deer Grotto Academy landscape" } },
+      { "kind": "place", "slug": "wuyi-mountains", "title": { "zh-CN": "武夷山", "en": "Wuyi Mountains" }, "relation": { "zh-CN": "讲学与书院区域", "en": "Teaching and academy region" } }
+    ],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "朱熹", "nameLanguageCode": "lzh" }
+  }
+]

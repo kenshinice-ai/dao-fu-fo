@@ -33,6 +33,21 @@ export interface FigurePlaceContext {
   connection: "direct" | "event";
 }
 
+export interface PlaceEventContext {
+  eventKey: string;
+  relation: ReadModelRelation;
+}
+
+export interface EventPlaceContext {
+  placeKey: string;
+  relation: ReadModelRelation;
+}
+
+export interface EventFigureContext {
+  figureKey: string;
+  relation: ReadModelRelation;
+}
+
 function relationTouches(relation: ReadModelRelation, key: string): boolean {
   return contextEndpointKey(relation.source) === key || contextEndpointKey(relation.target) === key;
 }
@@ -120,6 +135,61 @@ export function figurePlaceContexts(
     }
   }
   return [...contexts.values()];
+}
+
+export function placeEventContexts(
+  relations: ReadModelRelationIndex | undefined,
+  placeKey: string,
+): PlaceEventContext[] {
+  if (!relations) return [];
+  return relations.items
+    .filter((relation) => {
+      const sourceKey = contextEndpointKey(relation.source);
+      const targetKey = contextEndpointKey(relation.target);
+      return (sourceKey === placeKey && relation.target.kind === "event")
+        || (targetKey === placeKey && relation.source.kind === "event");
+    })
+    .map((relation) => ({
+      eventKey: contextEndpointKey(relation.source.kind === "event" ? relation.source : relation.target),
+      relation,
+    }))
+    .sort((a, b) => (relationStartYear(a.relation) ?? Number.MAX_SAFE_INTEGER) - (relationStartYear(b.relation) ?? Number.MAX_SAFE_INTEGER));
+}
+
+export function eventPlaceContexts(
+  relations: ReadModelRelationIndex | undefined,
+  eventKey: string,
+): EventPlaceContext[] {
+  if (!relations) return [];
+  return relations.items
+    .filter((relation) => {
+      const sourceKey = contextEndpointKey(relation.source);
+      const targetKey = contextEndpointKey(relation.target);
+      return (sourceKey === eventKey && relation.target.kind === "place")
+        || (targetKey === eventKey && relation.source.kind === "place");
+    })
+    .map((relation) => ({
+      placeKey: contextEndpointKey(relation.source.kind === "place" ? relation.source : relation.target),
+      relation,
+    }));
+}
+
+export function eventFigureContexts(
+  relations: ReadModelRelationIndex | undefined,
+  eventKey: string,
+): EventFigureContext[] {
+  if (!relations) return [];
+  return relations.items
+    .filter((relation) => {
+      const sourceKey = contextEndpointKey(relation.source);
+      const targetKey = contextEndpointKey(relation.target);
+      return (sourceKey === eventKey && relation.target.kind === "figure")
+        || (targetKey === eventKey && relation.source.kind === "figure");
+    })
+    .map((relation) => ({
+      figureKey: contextEndpointKey(relation.source.kind === "figure" ? relation.source : relation.target),
+      relation,
+    }));
 }
 
 export function relationStartYear(relation: ReadModelRelation): number | undefined {

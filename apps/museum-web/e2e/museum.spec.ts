@@ -110,6 +110,7 @@ test("shared context picker follows all indexed figures", async ({ page }) => {
     "Ashoka",
     "Cheng Xuanying",
     "Confucius (Kong Qiu)",
+    "Dao'an",
     "Faxian",
     "Fu Xi",
     "Ge Hong",
@@ -119,6 +120,7 @@ test("shared context picker follows all indexed figures", async ({ page }) => {
     "Kumārajīva",
     "Laozi (Li Er)",
     "Li Shimin",
+    "Liang Wudi (Xiao Yan)",
     "Mencius (Meng Ke)",
     "Nāgārjuna",
     "Nüwa",
@@ -126,13 +128,17 @@ test("shared context picker follows all indexed figures", async ({ page }) => {
     "Śākyamuni Buddha (Gautama)",
     "Sima Chengzhen",
     "Taishang Laojun",
+    "Tao Hongjing",
+    "Huiyuan",
     "Xi Wangmu (Queen Mother of the West)",
     "Wu Zhao (Wu Zetian)",
+    "Yixing (Zhang Sui)",
     "Zhang Daoling",
     "Zhuangzi (Zhuang Zhou)",
     "Xuanzang",
     "Yan Shigu",
     "Yijing",
+    "Zhu Xi",
   ];
   for (const title of figureTitles) {
     await expect(page.getByRole("button", { name: title, exact: true })).toBeVisible();
@@ -208,6 +214,33 @@ test("map city selection opens figures, trajectories and a restorable relation n
   await expect(page.locator("[data-city-people]")).toBeVisible();
 });
 
+test("map keeps city switching and event context available after a selection", async ({ page }) => {
+  await page.goto("/explore?lang=en&view=map");
+  await waitForMuseum(page);
+
+  await page.getByRole("button", { name: "Focus place: Chang'an", exact: true }).click();
+  await expect(page.locator("[data-city-people]")).toBeVisible();
+
+  // The full place index stays available, so a second city can be selected
+  // without clearing the first city's dossier state.
+  await page.getByRole("button", { name: "Focus place: Luoyang", exact: true }).click();
+  await expect(page).toHaveURL(/focus=place%3Aluoyang/);
+  const luoyangPanel = page.locator("[data-city-people]");
+  await expect(luoyangPanel.getByRole("heading", { name: "Luoyang", exact: true })).toBeVisible();
+  const cityEvents = luoyangPanel.locator("[data-city-events]");
+  await expect(cityEvents).toBeVisible();
+
+  await cityEvents.locator("button").first().click();
+  await expect(page).toHaveURL(/focus=event%3A/);
+  const eventPanel = page.locator("[data-event-context]");
+  await expect(eventPanel).toBeVisible();
+  await expect(eventPanel.locator(".relation-network")).toBeVisible();
+
+  await eventPanel.locator(".map-context-event-list button").first().click();
+  await expect(page).toHaveURL(/focus=place%3A/);
+  await expect(page.locator("[data-city-people]")).toBeVisible();
+});
+
 test("timeline event nodes reverse-focus the map and preserve the target in the URL", async ({ page }) => {
   await page.goto("/explore?lang=en&view=timeline");
   await waitForMuseum(page);
@@ -229,8 +262,8 @@ test("sacred cosmos is loaded from the compiler read model", async ({ page }) =>
   await expect(page.locator(".cosmos-node")).toHaveCount(3);
   await expect(page.locator(".cosmos-figure-node")).toHaveCount(7);
   await expect(page.locator(".cosmos-place-node")).toHaveCount(5);
-  await expect(page.locator(".cosmos-thread")).toHaveCount(12);
-  await expect(page.getByText("3 tradition nodes, 7 symbolic figure nodes, 5 sacred-space nodes and 12 symbolic/comparative edges are shown from the compiler read model.", { exact: true })).toBeVisible();
+  await expect(page.locator(".cosmos-thread")).toHaveCount(13);
+  await expect(page.getByText("3 tradition nodes, 7 symbolic figure nodes, 5 sacred-space nodes and 13 symbolic/comparative edges are shown from the compiler read model.", { exact: true })).toBeVisible();
   await expect(page.getByText("A symbolic space of tradition nodes, comparative relations and a curatorial encounter point; it uses no real-world coordinates.", { exact: true })).toBeVisible();
 });
 
@@ -238,7 +271,7 @@ test("relation focus filters the map and adds relation-time context", async ({ p
   await page.goto("/explore?lang=en&view=map&focus=figure%3Alaozi");
   await waitForMuseum(page);
 
-  await expect(page.locator("[data-map-node]")).toHaveCount(1);
+  await expect.poll(() => page.locator("[data-map-node]").count()).toBeGreaterThan(1);
   await expect(page.getByRole("link", { name: "Open place: Luoyang", exact: true })).toBeVisible();
 
   await page.goto("/explore?lang=en&view=timeline&focus=figure%3Alaozi");
@@ -263,11 +296,11 @@ test("homepage exposes the expanded figure gateways", async ({ page }) => {
   await expect(page.getByRole("button", { name: "放大地图", exact: true })).toBeVisible();
   await expect(page.getByRole("link", { name: "打开完整地图", exact: true })).toBeVisible();
   await expect(page.getByRole("heading", { name: "人物、空间与时间" })).toBeVisible();
-  await expect(page.locator(".figure-spotlight-card")).toHaveCount(26);
+  await expect(page.locator(".figure-spotlight-card")).toHaveCount(32);
   await expect(page.locator(".figure-spotlight-card").filter({ hasText: "老子（李耳）" })).toBeVisible();
   await expect(page.locator(".figure-spotlight-card").filter({ hasText: "孔子（孔丘）" })).toBeVisible();
   await expect(page.locator(".figure-spotlight-card").filter({ hasText: "释迦牟尼佛" })).toBeVisible();
-  await expect(page.getByText("当前收录 26 位人物，三种传统；空间待核处明确保留证据边界。", { exact: true })).toBeVisible();
+  await expect(page.getByText("当前收录 32 位人物，三种传统；空间待核处明确保留证据边界。", { exact: true })).toBeVisible();
 });
 
 test("every current figure map gateway resolves to mapped or explicitly pending geography", async ({ page }) => {
@@ -277,7 +310,7 @@ test("every current figure map gateway resolves to mapped or explicitly pending 
   const gatewayHrefs = await page.locator(".home-atlas-figure-card a[href*='focus=figure:']").evaluateAll((anchors) =>
     anchors.map((anchor) => anchor.getAttribute("href")).filter((href): href is string => Boolean(href)),
   );
-  expect(gatewayHrefs).toHaveLength(26);
+  expect(gatewayHrefs).toHaveLength(32);
   for (let index = 0; index < gatewayHrefs.length; index += 1) {
     const href = gatewayHrefs[index];
     if (href.includes("view=cosmos")) {
@@ -383,17 +416,17 @@ test("Research exposes the quality audit and review queue filters", async ({ pag
   await waitForMuseum(page);
 
   await expect(page.getByRole("heading", { name: "See what still blocks publication" })).toBeVisible();
-  await expect(page.locator(".research-governance-status strong")).toHaveText("352");
+  await expect(page.locator(".research-governance-status strong")).toHaveText("404");
   await expect(page.getByRole("heading", { name: "Review queue" })).toBeVisible();
-  await expect(page.getByText("227 subjects shown; all statuses are read-only.", { exact: true })).toBeVisible();
-  await expect(page.locator(".research-review-queue li")).toHaveCount(227);
+  await expect(page.getByText("273 subjects shown; all statuses are read-only.", { exact: true })).toBeVisible();
+  await expect(page.locator(".research-review-queue li")).toHaveCount(273);
   await expect(page.getByRole("link", { name: "Historical reviewer (0)", exact: true })).toBeVisible();
   await expect(page.getByRole("link", { name: "Accessibility editor (0)", exact: true })).toBeVisible();
 
   await page.getByRole("link", { name: "Show all", exact: true }).click();
   await expect(page).toHaveURL(/audit=all/);
-  await expect(page.getByText("302 subjects shown; all statuses are read-only.", { exact: true })).toBeVisible();
-  await expect(page.locator(".research-review-queue li")).toHaveCount(302);
+  await expect(page.getByText("348 subjects shown; all statuses are read-only.", { exact: true })).toBeVisible();
+  await expect(page.locator(".research-review-queue li")).toHaveCount(348);
   await expect(page.getByText("figure:xuanzang", { exact: true })).toBeVisible();
 });
 

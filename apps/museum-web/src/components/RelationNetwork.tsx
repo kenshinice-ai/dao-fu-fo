@@ -35,6 +35,7 @@ export function RelationNetwork({ locale, focus, relations, searchItems, onFocus
     }).slice(0, compact ? 8 : 16);
   }, [compact, focus, relations]);
   const title = titleFor(focus, searchItems, locale);
+  const networkTitleId = "relation-network-title-" + focus.replace(/[^a-z0-9]+/gi, "-");
   const center = { x: 360, y: compact ? 135 : 190 };
   const radius = compact ? 92 : 145;
   const positions = useMemo(() => new Map(neighbours.map((relation, index) => {
@@ -58,7 +59,8 @@ export function RelationNetwork({ locale, focus, relations, searchItems, onFocus
         </div>
         <span>{neighbours.length} {locale === "zh-CN" ? "个邻接对象" : "neighbours"}</span>
       </div>
-      <svg className="relation-network-canvas" viewBox={"0 0 720 " + (compact ? 280 : 390)} role="img" aria-label={locale === "zh-CN" ? title + " 一层关系图" : title + " one-hop relationship network"}>
+      <svg className="relation-network-canvas" viewBox={"0 0 720 " + (compact ? 280 : 390)} role="group" aria-labelledby={networkTitleId}>
+        <title id={networkTitleId}>{locale === "zh-CN" ? title + " 一层关系图" : title + " one-hop relationship network"}</title>
         {neighbours.map((relation) => {
           const other = contextEndpointKey(relation.source) === focus
             ? contextEndpointKey(relation.target)

@@ -1843,9 +1843,29 @@ h3 {
   font-size: var(--text-xs);
 }
 
+.map-context-subsections {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 var(--s-5);
+}
+
+.map-context-subsection {
+  margin-top: var(--s-4);
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--line-strong);
+}
+
+.map-context-subsection-heading h3,
+.map-context-subsection > h3 {
+  margin: var(--s-1) 0 0;
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+}
+
 .map-context-figure-list,
 .map-trajectory-list,
-.relation-network-list {
+.relation-network-list,
+.map-context-event-list {
   display: grid;
   gap: 0;
   padding: 0;
@@ -1855,7 +1875,8 @@ h3 {
 
 .map-context-figure-list li,
 .map-trajectory-list li,
-.relation-network-list li {
+.relation-network-list li,
+.map-context-event-list li {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -1872,9 +1893,11 @@ h3 {
 
 .map-context-figure-list button,
 .map-trajectory-list button,
-.relation-network-list button {
+.relation-network-list button,
+.map-context-event-list button {
   display: block;
-  padding: 0;
+  min-height: 44px;
+  padding: 8px 0;
   border: 0;
   color: var(--ink);
   background: transparent;
@@ -1890,7 +1913,9 @@ h3 {
 .map-trajectory-list button:hover,
 .map-trajectory-list button:focus-visible,
 .relation-network-list button:hover,
-.relation-network-list button:focus-visible {
+.relation-network-list button:focus-visible,
+.map-context-event-list button:hover,
+.map-context-event-list button:focus-visible {
   color: var(--gold);
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -1900,7 +1925,9 @@ h3 {
 .map-context-figure-list small,
 .map-trajectory-list span,
 .relation-network-list span,
-.relation-network-list small {
+.relation-network-list small,
+.map-context-event-list span,
+.map-context-event-list small {
   display: block;
   margin-top: 3px;
   color: var(--ink-soft);
@@ -1909,12 +1936,17 @@ h3 {
 }
 
 .map-context-figure-list small,
-.relation-network-list small {
+.relation-network-list small,
+.map-context-event-list small {
   color: var(--ink-muted);
   font-size: 0.68rem;
 }
 
-.map-context-figure-list a {
+.map-context-figure-list a,
+.map-context-event-list a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   flex-shrink: 0;
   color: var(--ink-soft);
   font-size: var(--text-xs);
@@ -4688,6 +4720,10 @@ h3 {
   }
 
   .relation-network-list {
+    grid-template-columns: 1fr;
+  }
+
+  .map-context-subsections {
     grid-template-columns: 1fr;
   }
 

@@ -1,0 +1,168 @@
+[
+  {
+    "kind": "place",
+    "slug": "xiangyang",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "襄阳",
+        "shortSummary": "襄阳是东晋佛教僧团、译经组织与长江中游交通网络的城市尺度入口。",
+        "curatorialDescription": ["地图以现代城市中心作为历史区域锚点；坐标不证明道安或其他人物的每一次活动。"],
+        "researchNote": "城址变迁、具体寺院和道安活动节点仍需接入地方志与传记的段落级来源。",
+        "timeLabel": "东晋佛教网络重点；历史城市锚点",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Xiangyang",
+        "shortSummary": "Xiangyang is a city-scale entry into Eastern Jin Buddhist communities, translation organisation and the middle Yangtze travel network.",
+        "curatorialDescription": ["The map uses the modern city centre as a historical regional anchor; the coordinate does not prove every activity of Dao'an or any other figure."],
+        "researchNote": "City-site changes, specific monasteries and Dao'an activity nodes require paragraph-level local and biographical sources.",
+        "timeLabel": "Eastern Jin Buddhist-network focus; historical city anchor",
+        "keyFacts": []
+      }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:a2-map-anchors" }],
+    "temporalAssertions": [{ "predicate": "regional_exchange", "timeType": "range", "startYear": 300, "endYear": 420, "displayDate": { "zh-CN": "约 3–5 世纪的历史城市网络", "en": "Historical urban network, c. third–fifth centuries" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:buddhist-biographical-records" }],
+    "sourceIds": ["source:a2-map-anchors", "source:buddhist-biographical-records"],
+    "related": [],
+    "profile": { "placeReality": "real_historical", "geometryType": "point", "coordinates": [112.122, 32.009], "coordinateConfidence": "centroid", "geographicSourceId": "source:a2-map-anchors" }
+  },
+  {
+    "kind": "place",
+    "slug": "lushan",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "庐山",
+        "shortSummary": "庐山把慧远的东林寺僧团、白鹿洞书院与跨时代宗教和教育记忆叠加在同一文化景观。",
+        "curatorialDescription": ["庐山是现实山地，不是纯粹象征空间；慧远与朱熹的不同年代将在关系层明确区分。"],
+        "researchNote": "东林寺、白鹿洞书院和山地范围需继续拆分为可引用的遗产、制度与人物节点。",
+        "timeLabel": "东晋至宋代持续文化景观",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Mount Lu",
+        "shortSummary": "Mount Lu layers Huiyuan's Donglin community, the White Deer Grotto Academy and cross-era religious and educational memory in one cultural landscape.",
+        "curatorialDescription": ["Mount Lu is a real mountain landscape rather than symbolic space; the different dates of Huiyuan and Zhu Xi remain explicit in the relation layer."],
+        "researchNote": "Donglin, the White Deer Grotto Academy and the mountain's extent require further heritage, institutional and figure-level separation.",
+        "timeLabel": "A continuous cultural landscape from the Eastern Jin to Song",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      { "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:unesco-lushan" },
+      { "tradition": "confucianism", "role": "secondary", "isPrimary": false, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:unesco-lushan" }
+    ],
+    "temporalAssertions": [{ "predicate": "cultural_landscape", "timeType": "range", "startYear": 386, "endYear": 1191, "displayDate": { "zh-CN": "约 386–1191 年的文化景观层", "en": "Cultural-landscape layer, c. 386–1191 CE" }, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:unesco-lushan" }],
+    "sourceIds": ["source:unesco-lushan", "source:historical-geography"],
+    "related": [],
+    "profile": { "placeReality": "real_historical", "geometryType": "point", "coordinates": [115.99, 29.56], "coordinateConfidence": "approximate", "geographicSourceId": "source:unesco-lushan" }
+  },
+  {
+    "kind": "place",
+    "slug": "mount-mao",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "茅山",
+        "shortSummary": "茅山是陶弘景隐居、道教知识生产与南朝山地宗教记忆交汇的现实文化景观。",
+        "curatorialDescription": ["地图显示山地范围的近似锚点；后世宫观谱系和神仙叙事不被压缩成单一历史坐标。"],
+        "researchNote": "茅山宫观沿革、陶弘景居止和梁代书信节点需继续按地方与文本来源分层。",
+        "timeLabel": "南朝至后世道教文化景观",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Mount Mao",
+        "shortSummary": "Mount Mao is a real cultural landscape where Tao Hongjing's reclusion, Daoist knowledge production and Southern Dynasties religious memory meet.",
+        "curatorialDescription": ["The map shows an approximate mountain anchor; later monastery genealogies and immortal narratives are not compressed into one historical coordinate."],
+        "researchNote": "Monastery history, Tao Hongjing's residence and Liang-period correspondence require layered local and textual sources.",
+        "timeLabel": "Southern Dynasties and later Daoist cultural landscape",
+        "keyFacts": []
+      }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:maoshan-cultural-record" }],
+    "temporalAssertions": [{ "predicate": "cultural_landscape", "timeType": "range", "startYear": 450, "endYear": 900, "displayDate": { "zh-CN": "约 5–10 世纪的道教文化景观", "en": "Daoist cultural landscape, c. fifth–tenth centuries" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:maoshan-cultural-record" }],
+    "sourceIds": ["source:maoshan-cultural-record", "source:a2-map-anchors"],
+    "related": [],
+    "profile": { "placeReality": "real_historical", "geometryType": "point", "coordinates": [119.32, 31.81], "coordinateConfidence": "approximate", "geographicSourceId": "source:maoshan-cultural-record" }
+  },
+  {
+    "kind": "place",
+    "slug": "jiankang",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "建康",
+        "shortSummary": "建康是南朝宫廷、佛教制度与山地宗教网络发生联系的历史城市空间。",
+        "curatorialDescription": ["建康以南京历史城市中心作为空间锚点；坐标表达城市尺度，不等同于梁廷全部活动范围。"],
+        "researchNote": "宫寺制度、都城范围与陶弘景—梁武帝关系需要继续接入正史和考古城市史资料。",
+        "timeLabel": "南朝都城；历史城市锚点",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Jiankang",
+        "shortSummary": "Jiankang is the historical urban setting where the Southern Dynasties court, institutional Buddhism and mountain religious networks intersected.",
+        "curatorialDescription": ["Jiankang uses the historic city centre of Nanjing as a spatial anchor; the coordinate is city-scale and does not cover every activity of the Liang court."],
+        "researchNote": "Court–monastery institutions, city extent and the Tao Hongjing–Liang Wudi relation require histories and archaeological urban sources.",
+        "timeLabel": "Southern Dynasties capital; historical city anchor",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      { "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:liang-wudi-liang-shu" },
+      { "tradition": "daoism", "role": "secondary", "isPrimary": false, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:maoshan-cultural-record" }
+    ],
+    "temporalAssertions": [{ "predicate": "institutional_scope", "timeType": "range", "startYear": 420, "endYear": 589, "displayDate": { "zh-CN": "约 420–589 年的南朝城市制度层", "en": "Southern Dynasties urban-institutional layer, c. 420–589 CE" }, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:liang-wudi-liang-shu" }],
+    "sourceIds": ["source:liang-wudi-liang-shu", "source:a2-map-anchors"],
+    "related": [],
+    "profile": { "placeReality": "real_historical", "geometryType": "point", "coordinates": [118.796, 32.06], "coordinateConfidence": "centroid", "geographicSourceId": "source:a2-map-anchors" }
+  },
+  {
+    "kind": "place",
+    "slug": "wuyi-mountains",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "武夷山",
+        "shortSummary": "武夷山是朱熹讲学、书院网络与宋代理学地方化的重要山地文化景观。",
+        "curatorialDescription": ["地图采用山地近似点位；朱熹的讲学与居止节点仍需按地方志和文集进一步细化。"],
+        "researchNote": "书院、精舍和具体讲学地点需要接入可定位的地方文献与遗产资料。",
+        "timeLabel": "宋代以来的儒学文化景观",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Wuyi Mountains",
+        "shortSummary": "The Wuyi Mountains are a key landscape for Zhu Xi's teaching, academy networks and the local formation of Song Neo-Confucian learning.",
+        "curatorialDescription": ["The map uses an approximate mountain point; Zhu Xi's teaching and residence nodes require further local-gazetteer and collected-writings work."],
+        "researchNote": "Academies, studios and specific teaching sites need locatable local and heritage documentation.",
+        "timeLabel": "Confucian cultural landscape from the Song onward",
+        "keyFacts": []
+      }
+    },
+    "traditions": [{ "tradition": "confucianism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:a2-map-anchors" }],
+    "temporalAssertions": [{ "predicate": "cultural_landscape", "timeType": "range", "startYear": 1100, "endYear": 1200, "displayDate": { "zh-CN": "约 12 世纪的儒学文化景观", "en": "Confucian cultural landscape, c. twelfth century" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:zhuxi-ctext" }],
+    "sourceIds": ["source:a2-map-anchors", "source:zhuxi-ctext"],
+    "related": [],
+    "profile": { "placeReality": "real_historical", "geometryType": "point", "coordinates": [117.97, 27.75], "coordinateConfidence": "approximate", "geographicSourceId": "source:a2-map-anchors" }
+  }
+]

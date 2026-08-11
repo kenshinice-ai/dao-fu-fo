@@ -12,7 +12,17 @@ import {
 import type { LatLngBoundsExpression, LatLngExpression } from "leaflet";
 import "leaflet/dist/leaflet.css";
 import type { ReadModelRelationIndex } from "@drf-museum/domain-schema";
-import { connectedContextKeys, contextEndpointKey, figurePlaceContexts, matchesContextFocus, placeFigureContexts, relationStartYear } from "../data/contextProjection";
+import {
+  connectedContextKeys,
+  contextEndpointKey,
+  eventFigureContexts,
+  eventPlaceContexts,
+  figurePlaceContexts,
+  matchesContextFocus,
+  placeEventContexts,
+  placeFigureContexts,
+  relationStartYear,
+} from "../data/contextProjection";
 import { RelationNetwork } from "./RelationNetwork";
 import { entityPath } from "../routing";
 import type { EntityData, Locale, MuseumMapData, SearchItem, Tradition } from "../types";
@@ -184,6 +194,10 @@ export function CivilisationMap({
     () => focus?.startsWith("figure:") ? figurePlaceContexts(relations, focus).sort((a, b) => (relationStartYear(a.relation) ?? Number.MAX_SAFE_INTEGER) - (relationStartYear(b.relation) ?? Number.MAX_SAFE_INTEGER)) : [],
     [focus, relations],
   );
+  const focusEventPlaces = useMemo(
+    () => focus?.startsWith("event:") ? eventPlaceContexts(relations, focus) : [],
+    [focus, relations],
+  );
   const traditionFeatures = useMemo(() => data.features.filter((feature) =>
     (feature.properties.tradition === "convergence" || traditions.includes(feature.properties.tradition)) && matchesTimeRange(feature, from, to),
   ), [data.features, from, to, traditions]);
@@ -213,20 +227,17 @@ export function CivilisationMap({
   const mapContextKeys = useMemo(() => {
     const keys = new Set(connectedKeys);
     for (const place of figurePlaces) keys.add(place.placeKey);
+    for (const place of focusEventPlaces) keys.add(place.placeKey);
     for (const entry of routeEntries) {
       if (selectedRouteKeys.has("route:" + entry.route.slug)) {
         for (const feature of entry.waypointFeatures) keys.add(featureKey(feature));
       }
     }
     return keys;
-  }, [connectedKeys, figurePlaces, routeEntries, selectedRouteKeys]);
-  const visibleFeatures = useMemo(() => {
-    if (!focus) return traditionFeatures;
-    const contextual = traditionFeatures.filter((feature) =>
-      matchesContextFocus([featureKey(feature)], focus, mapContextKeys),
-    );
-    return contextual.length > 0 ? contextual : traditionFeatures;
-  }, [focus, mapContextKeys, traditionFeatures]);
+  }, [connectedKeys, figurePlaces, focusEventPlaces, routeEntries, selectedRouteKeys]);
+  // Keep the full real-place index visible after a selection. This makes a focused
+  // city a dossier state, not a filter that hides the next city the visitor may choose.
+  const visibleFeatures = traditionFeatures;
   const relatedPlaceSlugs = useMemo(
     () => [...mapContextKeys].filter((key) => key.startsWith("place:")).map((key) => key.slice("place:".length)),
     [mapContextKeys],
@@ -253,13 +264,25 @@ export function CivilisationMap({
     () => focusPlace ? placeFigureContexts(relations, featureKey(focusPlace)) : [],
     [focusPlace, relations],
   );
+  const placeEvents = useMemo(
+    () => focusPlace ? placeEventContexts(relations, featureKey(focusPlace)) : [],
+    [focusPlace, relations],
+  );
+  const focusEventFigures = useMemo(
+    () => focus?.startsWith("event:") ? eventFigureContexts(relations, focus) : [],
+    [focus, relations],
+  );
   const contextTitle = (key: string) => searchItems.find((item) => item.kind + ":" + item.slug === key)?.title
     ?? key.split(":").slice(1).join(":").replaceAll("-", " ");
   const bounds = useMemo(() => mapBounds(visibleFeatures), [visibleFeatures]);
   const target = useMemo(() => {
-    if (!focus?.startsWith("place:")) return undefined;
-    return featuresBySlug.get(focus.slice("place:".length));
-  }, [featuresBySlug, focus]);
+    if (focus?.startsWith("place:")) return featuresBySlug.get(focus.slice("place:".length));
+    if (focus?.startsWith("event:")) {
+      const placeKey = focusEventPlaces[0]?.placeKey;
+      return placeKey ? featuresBySlug.get(placeKey.slice("place:".length)) : undefined;
+    }
+    return undefined;
+  }, [featuresBySlug, focus, focusEventPlaces]);
 
   return (
     <div
@@ -368,7 +391,10 @@ export function CivilisationMap({
               <p className="eyebrow">{locale === "zh-CN" ? "城市人物" : "Figures in this place"}</p>
               <h2 id="map-context-title">{focusPlace.properties.title}</h2>
             </div>
-            <span>{placePeople.length} {locale === "zh-CN" ? "位关联人物" : "figures connected"}</span>
+            <span>
+              {placePeople.length} {locale === "zh-CN" ? "位关联人物" : "figures connected"}
+              {placeEvents.length > 0 ? ` · ${placeEvents.length} ${locale === "zh-CN" ? "个事件" : "events"}` : ""}
+            </span>
           </div>
           {placePeople.length > 0 ? (
             <ul className="map-context-figure-list">
@@ -393,6 +419,66 @@ export function CivilisationMap({
           ) : (
             <p className="map-context-empty">{locale === "zh-CN" ? "当前地点还没有可展开的人物关系。" : "No figure context is available for this place yet."}</p>
           )}
+          {placeEvents.length > 0 ? (
+            <section className="map-context-subsection" data-city-events aria-labelledby="map-context-events-title">
+              <div className="map-context-subsection-heading">
+                <p className="eyebrow">{locale === "zh-CN" ? "城市事件" : "Events in this place"}</p>
+                <h3 id="map-context-events-title">{locale === "zh-CN" ? "从地点进入时间轴" : "Move from place to timeline"}</h3>
+              </div>
+              <ul className="map-context-event-list">
+                {placeEvents.map((event) => (
+                  <li key={event.eventKey}>
+                    <button type="button" onClick={() => onFocus?.(event.eventKey)}>{contextTitle(event.eventKey)}</button>
+                    <span>{event.relation.label}</span>
+                    <small>{event.relation.evidenceLayer} · {event.relation.confidence}</small>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ) : null}
+        </section>
+      ) : focus?.startsWith("event:") ? (
+        <section className="map-context-panel" data-event-context aria-labelledby="event-map-context-title">
+          <div className="map-context-heading">
+            <div>
+              <p className="eyebrow">{locale === "zh-CN" ? "事件空间" : "Event context"}</p>
+              <h2 id="event-map-context-title">{contextTitle(focus)}</h2>
+            </div>
+            <span>{focusEventPlaces.length} {locale === "zh-CN" ? "个地点" : "places"} · {focusEventFigures.length} {locale === "zh-CN" ? "位人物" : "figures"}</span>
+          </div>
+          <div className="map-context-subsections">
+            <section className="map-context-subsection" aria-labelledby="event-map-places-title">
+              <p className="eyebrow">{locale === "zh-CN" ? "地点" : "Places"}</p>
+              <h3 id="event-map-places-title">{locale === "zh-CN" ? "事件发生在哪里" : "Where the event is located"}</h3>
+              {focusEventPlaces.length > 0 ? (
+                <ul className="map-context-event-list">
+                  {focusEventPlaces.map((place) => (
+                    <li key={place.placeKey}>
+                      <button type="button" onClick={() => onFocus?.(place.placeKey)}>{contextTitle(place.placeKey)}</button>
+                      <span>{place.relation.label}</span>
+                      <small>{place.relation.evidenceLayer} · {place.relation.confidence}</small>
+                    </li>
+                  ))}
+                </ul>
+              ) : <p className="map-context-empty">{locale === "zh-CN" ? "当前事件还没有现实地点锚点。" : "This event has no real-place anchor yet."}</p>}
+            </section>
+            <section className="map-context-subsection" aria-labelledby="event-map-figures-title">
+              <p className="eyebrow">{locale === "zh-CN" ? "人物" : "Figures"}</p>
+              <h3 id="event-map-figures-title">{locale === "zh-CN" ? "谁参与或关联此事件" : "Who participates or connects here"}</h3>
+              {focusEventFigures.length > 0 ? (
+                <ul className="map-context-event-list">
+                  {focusEventFigures.map((person) => (
+                    <li key={person.figureKey}>
+                      <button type="button" onClick={() => onFocus?.(person.figureKey)}>{contextTitle(person.figureKey)}</button>
+                      <span>{person.relation.label}</span>
+                      <small>{person.relation.evidenceLayer} · {person.relation.confidence}</small>
+                    </li>
+                  ))}
+                </ul>
+              ) : <p className="map-context-empty">{locale === "zh-CN" ? "当前事件还没有人物关系。" : "No figure relations are available for this event yet."}</p>}
+            </section>
+          </div>
+          <RelationNetwork locale={locale} focus={focus} relations={relations} searchItems={searchItems} onFocus={(key) => onFocus?.(key)} compact />
         </section>
       ) : focus?.startsWith("figure:") ? (
         <section className="map-context-panel" data-figure-trajectory aria-labelledby="figure-map-context-title">
