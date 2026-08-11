@@ -28,6 +28,7 @@ const generatedGroups = [
   "text-readings",
   "manifest/quality-report.json",
   "manifest/review-queue.json",
+  "manifest/routes.json",
 ];
 
 if (deploymentMode === "full-alpha") {

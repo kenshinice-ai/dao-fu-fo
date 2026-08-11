@@ -1976,9 +1976,17 @@ h3 {
 }
 
 .map-context-figure-list li > div,
+.map-trajectory-list li > div,
 .map-trajectory-list li > button,
 .relation-network-list li {
   min-width: 0;
+}
+
+.map-trajectory-list li > div > strong {
+  display: block;
+  padding: 8px 0;
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
 }
 
 .map-context-figure-list button,

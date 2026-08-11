@@ -31,6 +31,7 @@ const requiredBase = [
   "dist/data/v2/relations/en.json",
   "dist/data/v2/manifest/quality-report.json",
   "dist/data/v2/manifest/review-queue.json",
+  "dist/data/v2/manifest/routes.json",
   "dist/_redirects",
   "dist/_headers",
 ];

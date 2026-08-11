@@ -36,7 +36,13 @@ export function EntityPage({ kind }: { kind: EntityKind }) {
   });
   const searchMap = new Map(contextData.search.items.map((item) => [`${item.kind}:${item.slug}`, item.title]));
   const birthplaceRelations = data.kind === "figure"
-    ? connectedRelations.filter((relation) => relation.relationType === "born_in" && relation.target.kind === "place")
+    ? connectedRelations.filter((relation) => {
+        if (relation.relationType !== "born_in") return false;
+        const sourceKey = `${relation.source.kind}:${relation.source.slug}`;
+        const targetKey = `${relation.target.kind}:${relation.target.slug}`;
+        return (sourceKey === currentKey && relation.target.kind === "place")
+          || (targetKey === currentKey && relation.source.kind === "place");
+      })
     : [];
 
   return (
@@ -58,7 +64,7 @@ export function EntityPage({ kind }: { kind: EntityKind }) {
               <dt>{locale === "zh-CN" ? "出生地" : "Birthplace"}</dt>
               <dd>
                 {birthplaceRelations.map((relation, index) => {
-                  const place = relation.target;
+                  const place = relation.source.kind === "place" ? relation.source : relation.target;
                   return (
                     <span key={relation.id}>
                       {index > 0 ? ", " : null}

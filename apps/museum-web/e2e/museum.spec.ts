@@ -216,7 +216,7 @@ test("map timeline rail, city people and scoped relations stay linked", async ({
 
   await page.goto("/explore?lang=en&view=map&focus=place%3Achangan");
   await waitForAtlas(page);
-  await expect(page.locator("[data-city-people] .map-context-figure-list li")).toHaveCount(13);
+  await expect(page.locator("[data-city-people] .map-context-figure-list li")).toHaveCount(11);
   const cityRelations = page.locator('[data-relation-scope="true"]');
   await expect(cityRelations).toBeVisible();
   await expect(cityRelations.locator(".relation-network-edge")).toHaveCount(1);
@@ -227,8 +227,8 @@ test("map timeline rail, city people and scoped relations stay linked", async ({
   await firstCityPerson.click();
   await expect(page).toHaveURL(/focus=figure%3A.*scope=place%3Achangan/);
   await expect(page.locator("[data-atlas-scope-note]")).toContainText("Connected figures");
-  await expect(page.locator(".atlas-object-panel .atlas-panel-toolbar > span")).toHaveText("13 items");
-  await expect(page.locator(".atlas-object-panel .atlas-object-card")).toHaveCount(13);
+  await expect(page.locator(".atlas-object-panel .atlas-panel-toolbar > span")).toHaveText("11 items");
+  await expect(page.locator(".atlas-object-panel .atlas-object-card")).toHaveCount(11);
 
   await page.locator("[data-atlas-scope-note] button").click();
   await expect(page).toHaveURL(/focus=place%3Achangan/);
@@ -238,7 +238,7 @@ test("map timeline rail, city people and scoped relations stay linked", async ({
   const cityRelationsAfterReturn = page.locator('[data-relation-scope="true"]');
   await cityRelationsAfterReturn.locator(".relation-network-node").first().click();
   await expect(page).toHaveURL(/focus=figure%3A.*scope=place%3Achangan/);
-  await expect(page.locator(".atlas-object-panel .atlas-panel-toolbar > span")).toHaveText("13 items");
+  await expect(page.locator(".atlas-object-panel .atlas-panel-toolbar > span")).toHaveText("11 items");
   await expect(page.locator("[data-figure-trajectory]")).toBeVisible();
 });
 
@@ -262,6 +262,16 @@ test("figure focus presents an elegant saying card and only real person relation
   const peopleRelations = page.getByRole("dialog").locator("[data-person-relations]").last();
   await expect(peopleRelations).toContainText("Huiyuan");
   await expect(peopleRelations).not.toContainText("Mount Lu");
+});
+
+test("figure place context keeps coordinate-pending places visible", async ({ page }) => {
+  await page.goto("/explore?lang=en&view=map&focus=figure%3Akumarajiva");
+  await waitForMuseum(page);
+  await waitForAtlas(page);
+
+  await expect(page.locator("[data-figure-trajectory]")).toContainText("1 mapped stops · 1 pending places");
+  await expect(page.locator("[data-map-pending-places]")).toContainText("Kucha");
+  await expect(page.locator("[data-map-pending-places]")).toContainText("no drawable real-world coordinate");
 });
 
 test("map keeps city switching and event selection available after a selection", async ({ page }) => {
@@ -325,6 +335,7 @@ test("relation focus filters the map and adds relation-time context", async ({ p
 
   await expect.poll(() => page.locator("#historical-map").getAttribute("data-map-visible-places")).not.toBe("0");
   await expect(page.locator("#historical-map")).toHaveAttribute("data-map-focus-state", /mapped|position-pending/);
+  await expect(page.locator("#historical-map")).toHaveAttribute("data-map-visible-routes", "3");
   await page.locator(".atlas-tab-nav button").filter({ hasText: "Relations" }).click();
   await expect(page.locator(".atlas-relation-card")).toHaveCount(4);
   await expect(page.locator(".atlas-relation-card").first()).toContainText("↔");

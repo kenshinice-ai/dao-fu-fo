@@ -67,14 +67,53 @@ describe("context projections", () => {
   });
 
   it("projects a city into its directly related figures", () => {
-    expect(placeFigureContexts(relations, "place:luoyang")).toMatchObject([
+    const activeRelation = {
+      ...relations.items[0],
+      id: "relation:laozi-active-luoyang",
+      relationType: "active_in",
+      label: "Active in Luoyang",
+    } as (typeof relations.items)[number];
+    expect(placeFigureContexts({ ...relations, items: [activeRelation] }, "place:luoyang")).toMatchObject([
       { figureKey: "figure:laozi", connection: "direct" },
     ]);
+    expect(placeFigureContexts(relations, "place:luoyang")).toEqual([]);
   });
 
   it("projects a figure into map-ready place stops", () => {
-    expect(figurePlaceContexts(relations, "figure:laozi")).toMatchObject([
+    const activeRelation = {
+      ...relations.items[0],
+      id: "relation:laozi-active-luoyang",
+      relationType: "active_in",
+      label: "Active in Luoyang",
+    } as (typeof relations.items)[number];
+    expect(figurePlaceContexts({ ...relations, items: [activeRelation] }, "figure:laozi")).toMatchObject([
       { placeKey: "place:luoyang", connection: "direct" },
+    ]);
+    expect(figurePlaceContexts(relations, "figure:laozi")).toEqual([]);
+  });
+
+  it("bridges only participation events to event locations", () => {
+    const eventPlace = {
+      ...relations.items[0],
+      id: "relation:event-occurred-luoyang",
+      source: { kind: "event", slug: "kaiyuan-institutional-expansion" },
+      target: { kind: "place", slug: "luoyang" },
+      relationType: "occurred_at",
+      label: "Occurred at Luoyang",
+    } as (typeof relations.items)[number];
+    const influencedEvent = {
+      ...relations.items[0],
+      id: "relation:laozi-influenced-kaiyuan",
+      source: { kind: "figure", slug: "laozi" },
+      target: { kind: "event", slug: "kaiyuan-institutional-expansion" },
+      relationType: "influenced",
+      label: "Influenced the event",
+    } as (typeof relations.items)[number];
+    expect(placeFigureContexts({ ...relations, items: [influencedEvent, eventPlace] }, "place:luoyang")).toEqual([]);
+
+    const participatedEvent = { ...influencedEvent, id: "relation:laozi-participated-kaiyuan", relationType: "participated_in" } as (typeof relations.items)[number];
+    expect(placeFigureContexts({ ...relations, items: [participatedEvent, eventPlace] }, "place:luoyang")).toMatchObject([
+      { figureKey: "figure:laozi", connection: "event", bridge: { id: "relation:event-occurred-luoyang" } },
     ]);
   });
 

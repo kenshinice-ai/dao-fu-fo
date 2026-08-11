@@ -68,14 +68,39 @@ function isFigurePlaceRelation(relation: ReadModelRelation, figureKey: string, p
     || (contextEndpointKey(relation.source) === placeKey && contextEndpointKey(relation.target) === figureKey);
 }
 
-function isFigureEventRelation(relation: ReadModelRelation, figureKey: string): boolean {
-  return relationTouches(relation, figureKey)
+const FIGURE_PLACE_LOCATION_RELATIONS = new Set(["active_in", "travelled_through", "born_in", "located_in"]);
+const FIGURE_EVENT_PARTICIPATION_RELATIONS = new Set(["participated_in"]);
+const EVENT_PLACE_LOCATION_RELATIONS = new Set(["occurred_at"]);
+
+/**
+ * A map stop must describe a person's physical, travel, or birthplace link to
+ * a place. Reception and memory edges remain visible in the relation network,
+ * but must not become a geographic stop or a claim that the person was in the
+ * city.
+ */
+export function isFigurePlaceLocationRelation(relation: ReadModelRelation): boolean {
+  return FIGURE_PLACE_LOCATION_RELATIONS.has(relation.relationType)
+    && ((relation.source.kind === "figure" && relation.target.kind === "place")
+      || (relation.source.kind === "place" && relation.target.kind === "figure"));
+}
+
+function isFigureEventParticipationRelation(relation: ReadModelRelation): boolean {
+  return FIGURE_EVENT_PARTICIPATION_RELATIONS.has(relation.relationType)
     && ((relation.source.kind === "figure" && relation.target.kind === "event")
       || (relation.source.kind === "event" && relation.target.kind === "figure"));
 }
 
+function isFigureEventRelation(relation: ReadModelRelation, figureKey: string): boolean {
+  return relationTouches(relation, figureKey)
+    && isFigureEventParticipationRelation(relation);
+}
+
 function isEventPlaceRelation(relation: ReadModelRelation, eventKey: string): boolean {
-  return relationTouches(relation, eventKey)
+  return isEventPlacePair(relation) && relationTouches(relation, eventKey);
+}
+
+function isEventPlacePair(relation: ReadModelRelation): boolean {
+  return EVENT_PLACE_LOCATION_RELATIONS.has(relation.relationType)
     && ((relation.source.kind === "event" && relation.target.kind === "place")
       || (relation.source.kind === "place" && relation.target.kind === "event"));
 }
@@ -89,6 +114,7 @@ export function placeFigureContexts(
   for (const relation of relations.items) {
     const sourceKey = contextEndpointKey(relation.source);
     const targetKey = contextEndpointKey(relation.target);
+    if (!isFigurePlaceLocationRelation(relation)) continue;
     if (sourceKey === placeKey && relation.target.kind === "figure") {
       contexts.set(targetKey, { figureKey: targetKey, relation, connection: "direct" });
     } else if (targetKey === placeKey && relation.source.kind === "figure") {
@@ -128,7 +154,7 @@ export function figurePlaceContexts(
         : undefined;
     if (!placeEndpoint) continue;
     const placeKey = contextEndpointKey(placeEndpoint);
-    if (isFigurePlaceRelation(relation, figureKey, placeKey)) {
+    if (isFigurePlaceLocationRelation(relation) && isFigurePlaceRelation(relation, figureKey, placeKey)) {
       contexts.set(placeKey, { placeKey, relation, connection: "direct" });
     }
   }
@@ -154,12 +180,8 @@ export function placeEventContexts(
 ): PlaceEventContext[] {
   if (!relations) return [];
   return relations.items
-    .filter((relation) => {
-      const sourceKey = contextEndpointKey(relation.source);
-      const targetKey = contextEndpointKey(relation.target);
-      return (sourceKey === placeKey && relation.target.kind === "event")
-        || (targetKey === placeKey && relation.source.kind === "event");
-    })
+    .filter((relation) => isEventPlacePair(relation)
+      && (contextEndpointKey(relation.source) === placeKey || contextEndpointKey(relation.target) === placeKey))
     .map((relation) => ({
       eventKey: contextEndpointKey(relation.source.kind === "event" ? relation.source : relation.target),
       relation,
@@ -173,12 +195,7 @@ export function eventPlaceContexts(
 ): EventPlaceContext[] {
   if (!relations) return [];
   return relations.items
-    .filter((relation) => {
-      const sourceKey = contextEndpointKey(relation.source);
-      const targetKey = contextEndpointKey(relation.target);
-      return (sourceKey === eventKey && relation.target.kind === "place")
-        || (targetKey === eventKey && relation.source.kind === "place");
-    })
+    .filter((relation) => isEventPlaceRelation(relation, eventKey))
     .map((relation) => ({
       placeKey: contextEndpointKey(relation.source.kind === "place" ? relation.source : relation.target),
       relation,

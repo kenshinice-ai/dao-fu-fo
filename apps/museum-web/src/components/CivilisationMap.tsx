@@ -66,12 +66,15 @@ function featureKey(feature: MuseumMapData["features"][number]): string {
   return `place:${feature.properties.slug}`;
 }
 
-function routeWaypoints(route: EntityData, features: Map<string, MuseumMapData["features"][number]>): LatLngExpression[] {
+function routeWaypointSlugs(route: EntityData): string[] {
   const profile = route.profile ?? {};
-  const waypointSlugs = Array.isArray(profile.waypointSlugs)
+  return Array.isArray(profile.waypointSlugs)
     ? profile.waypointSlugs.filter((slug): slug is string => typeof slug === "string")
     : [];
-  return waypointSlugs.flatMap((slug) => {
+}
+
+function routeWaypoints(route: EntityData, features: Map<string, MuseumMapData["features"][number]>): LatLngExpression[] {
+  return routeWaypointSlugs(route).flatMap((slug) => {
     const feature = features.get(slug);
     if (!feature) return [];
     const [longitude, latitude] = feature.geometry.coordinates;
@@ -80,11 +83,7 @@ function routeWaypoints(route: EntityData, features: Map<string, MuseumMapData["
 }
 
 function routeWaypointFeatures(route: EntityData, features: Map<string, MuseumMapData["features"][number]>): MuseumMapData["features"] {
-  const profile = route.profile ?? {};
-  const waypointSlugs = Array.isArray(profile.waypointSlugs)
-    ? profile.waypointSlugs.filter((slug): slug is string => typeof slug === "string")
-    : [];
-  return waypointSlugs.flatMap((slug) => {
+  return routeWaypointSlugs(route).flatMap((slug) => {
     const feature = features.get(slug);
     return feature ? [feature] : [];
   });
@@ -279,6 +278,7 @@ export function CivilisationMap({
     route,
     points: routeWaypoints(route, featuresBySlug),
     waypointFeatures: routeWaypointFeatures(route, featuresBySlug),
+    pendingWaypointSlugs: routeWaypointSlugs(route).filter((slug) => !featuresBySlug.has(slug)),
   })), [featuresBySlug, routes]);
   const mapContextKeys = useMemo(() => {
     const keys = new Set(connectedKeys);
@@ -302,12 +302,12 @@ export function CivilisationMap({
     return anchors.length > 0 ? anchors : traditionFeatures.slice(0, Math.max(1, Math.ceil(traditionFeatures.length / 3)));
   }, [traditionFeatures, zoomLevel]);
   const visibleFeatures = mapLayers.includes("places") ? visiblePlaceFeatures : [];
-  const relatedPlaceSlugs = useMemo(
-    () => [...mapContextKeys].filter((key) => key.startsWith("place:")).map((key) => key.slice("place:".length)),
-    [mapContextKeys],
+  const figurePlaceSlugs = useMemo(
+    () => figurePlaces.map((place) => place.placeKey.slice("place:".length)),
+    [figurePlaces],
   );
   const focusMapState = focus?.startsWith("figure:")
-    ? relatedPlaceSlugs.some((slug) => featuresBySlug.has(slug)) ? "mapped" : "position-pending"
+    ? figurePlaceSlugs.some((slug) => featuresBySlug.has(slug)) ? "mapped" : figurePlaceSlugs.length > 0 ? "position-pending" : undefined
     : undefined;
   const visibleRoutes = useMemo(() => mapLayers.includes("routes") ? routeEntries
     .filter(({ points }) => points.length > 1 && points.some((point) => {
@@ -322,6 +322,10 @@ export function CivilisationMap({
       .map((place) => featuresBySlug.get(place.placeKey.slice("place:".length)))
       .filter((feature): feature is MuseumMapData["features"][number] => Boolean(feature));
   }, [featuresBySlug, figurePlaces, mapLayers, selectedRouteKeys, visibleRoutes]);
+  const pendingFigurePlaces = useMemo(
+    () => figurePlaces.filter((place) => !featuresBySlug.has(place.placeKey.slice("place:".length))),
+    [featuresBySlug, figurePlaces],
+  );
   useEffect(() => {
     setTrajectoryIndex((index) => Math.min(index, Math.max(0, trajectoryStops.length - 1)));
   }, [trajectoryStops.length]);
@@ -583,7 +587,10 @@ export function CivilisationMap({
               <p className="eyebrow">{locale === "zh-CN" ? "人物轨迹" : "Figure trajectory"}</p>
               <h2 id="figure-map-context-title">{contextTitle(focus)}</h2>
             </div>
-            <span>{trajectoryStops.length} {locale === "zh-CN" ? "个空间节点" : "spatial stops"}</span>
+            <span>
+              {trajectoryStops.length} {locale === "zh-CN" ? "个可定位节点" : "mapped stops"}
+              {pendingFigurePlaces.length > 0 ? ` · ${pendingFigurePlaces.length} ${locale === "zh-CN" ? "个地点待核" : "pending places"}` : ""}
+            </span>
           </div>
           {focusedFigure ? (
             <section className="figure-context-card" data-figure-context data-figure-context-kind={focusedFigure.quote ? "quote" : "theory"} aria-labelledby="figure-context-card-title">
@@ -626,6 +633,24 @@ export function CivilisationMap({
               </li>
             ))}
           </ol>
+          {pendingFigurePlaces.length > 0 ? (
+            <section className="map-context-subsection map-pending-place-list" data-map-pending-places aria-labelledby="map-pending-place-title">
+              <p className="eyebrow">{locale === "zh-CN" ? "未落到现实坐标的关联地点" : "Related places without a map coordinate"}</p>
+              <h3 id="map-pending-place-title">{locale === "zh-CN" ? "保留关系，不伪造位置" : "Keep the relation, do not fabricate a point"}</h3>
+              <ul className="map-trajectory-list">
+                {pendingFigurePlaces.map((place) => (
+                  <li key={place.placeKey}>
+                    <div>
+                      <strong>{contextTitle(place.placeKey)}</strong>
+                      <span>{place.relation.label}</span>
+                      <small>{locale === "zh-CN" ? "地点实体存在，但当前没有可绘制的现实坐标" : "The place entity exists, but no drawable real-world coordinate is published yet"}{" · "}{formatEvidenceLine(place.relation.evidenceLayer, place.relation.confidence, locale)}</small>
+                    </div>
+                    <Link to={entityPath("place", place.placeKey.slice("place:".length), locale)}>{locale === "zh-CN" ? "地点档案" : "Dossier"}</Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ) : null}
           <RelationNetwork locale={locale} focus={focus} relations={relations} searchItems={searchItems} onFocus={(key) => onFocus?.(key)} compact peopleOnly zoomLevel={zoomLevel} />
         </section>
       ) : (
@@ -670,11 +695,12 @@ export function CivilisationMap({
           <p className="eyebrow">{locale === "zh-CN" ? "路线廊道" : "Route corridors"}</p>
           <h3 id="map-route-ledger-title">{locale === "zh-CN" ? "由路线实体派生的空间连接" : "Spatial links derived from route entities"}</h3>
           <ul>
-            {routes.map((route) => (
+            {routeEntries.map(({ route, pendingWaypointSlugs }) => (
               <li key={route.slug}>
                 <Link to={entityPath("route", route.slug, locale)}>{route.title}</Link>
                 <span>{route.timeLabel}</span>
                 <p>{route.shortSummary}</p>
+                {pendingWaypointSlugs.length > 0 ? <small>{locale === "zh-CN" ? `另有 ${pendingWaypointSlugs.length} 个路线节点待坐标核定。` : `${pendingWaypointSlugs.length} route waypoint${pendingWaypointSlugs.length === 1 ? "" : "s"} still need coordinate review.`}</small> : null}
               </li>
             ))}
           </ul>
