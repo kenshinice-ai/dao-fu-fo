@@ -29,6 +29,7 @@ function relation(id: string, source: ReadModelRelation["source"], target: ReadM
 const aa = relation("aa", { kind: "figure", slug: "a" }, { kind: "figure", slug: "b" }, "influenced");
 const bc = relation("bc", { kind: "figure", slug: "b" }, { kind: "figure", slug: "c" }, "contemporary_with");
 const cd = relation("cd", { kind: "figure", slug: "c" }, { kind: "figure", slug: "d" }, "comparative_parallel");
+const received = relation("received", { kind: "figure", slug: "a" }, { kind: "figure", slug: "c" }, "received_by");
 const aPlace = relation("a-place", { kind: "figure", slug: "a" }, { kind: "place", slug: "luoyang" }, "active_in");
 const cPlace = relation("c-place", { kind: "figure", slug: "c" }, { kind: "place", slug: "luoyang" }, "active_in");
 
@@ -63,6 +64,19 @@ describe("relationship graph projection", () => {
     expect(model.scopedPeople).toBe(2);
     expect(model.nodes.map((node) => node.id).sort()).toEqual(["figure:a", "figure:c"]);
     expect(model.edges).toHaveLength(0);
+  });
+
+  it("renders later reception as its own edge semantic", () => {
+    const model = buildRelationshipGraph({
+      relations: [received],
+      scopeRelations: [received],
+      searchItems,
+      traditions: ["daoism", "confucianism", "buddhism"],
+      tier: "all",
+      locale: "zh-CN",
+    });
+
+    expect(model.edges[0]?.tone).toBe("reception");
   });
 
   it("maps the existing URL zoom state to graph tiers without adding a second route state", () => {

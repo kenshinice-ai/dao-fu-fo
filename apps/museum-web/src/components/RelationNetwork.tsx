@@ -89,12 +89,12 @@ export function RelationNetwork({ locale, focus, relations, searchItems, onFocus
           <div className="relation-network-heading">
             <div>
               <p className="eyebrow">{locale === "zh-CN" ? "人物关系" : "Person-to-person"}</p>
-              <h3>{title} · {locale === "zh-CN" ? "现实人物关系" : "real person relations"}</h3>
+              <h3>{title} · {locale === "zh-CN" ? "人物—人物关系" : "figure-to-figure relations"}</h3>
             </div>
             <span>0 {locale === "zh-CN" ? "条关系" : "relations"}</span>
           </div>
           <p className="relation-network-empty">
-            {locale === "zh-CN" ? "当前城市人物之间还没有可核实的现实人物关系；地点、事件、文本与后世接受另列。" : "No verified real person-to-person relation is available among this city's figures yet; places, events, texts and later reception remain separate."}
+            {locale === "zh-CN" ? "当前城市人物之间还没有可核实的人物—人物关系；地点、事件、文本与其他接受层另列。" : "No verified figure-to-figure relation is available among this city's figures yet; places, events, texts and other reception layers remain separate."}
           </p>
         </div>
       );
@@ -105,7 +105,7 @@ export function RelationNetwork({ locale, focus, relations, searchItems, onFocus
         <div className="relation-network-heading">
           <div>
             <p className="eyebrow">{locale === "zh-CN" ? "人物关系" : "Person-to-person"}</p>
-            <h3>{title} · {locale === "zh-CN" ? "现实人物关系" : "real person relations"}</h3>
+            <h3>{title} · {locale === "zh-CN" ? "人物—人物关系" : "figure-to-figure relations"}</h3>
           </div>
           <span>{scopeNodeKeys.length} {locale === "zh-CN" ? "位人物" : "figures"} · {scopeRelationItems.length} {locale === "zh-CN" ? "条关系" : "relations"}</span>
         </div>
@@ -114,7 +114,7 @@ export function RelationNetwork({ locale, focus, relations, searchItems, onFocus
           <button type="button" className={presentation === "map" ? "active" : ""} aria-pressed={presentation === "map"} onClick={() => setPresentation("map")}>{locale === "zh-CN" ? "图" : "Graph"}</button>
           <button type="button" className={presentation === "list" ? "active" : ""} aria-pressed={presentation === "list"} onClick={() => setPresentation("list")}>{locale === "zh-CN" ? "列表" : "List"}</button>
         </div>
-        <p className="relation-network-note">{locale === "zh-CN" ? "只显示当前地点人物之间可核实的师承、同时代往来或影响；地点、事件、文本与后世接受另列。点击节点或下方关系，可继续进入人物语境。" : "Only verified teacher–student, contemporary-exchange or influence relations among this place's figures are shown. Click a node or relation to continue into a figure context."}</p>
+        <p className="relation-network-note">{locale === "zh-CN" ? "只显示当前地点人物之间可核实的同时代往来、思想影响或后世接受；图例会把这些语义分开。点击节点或下方关系，可继续进入人物语境。" : "Only verified contemporaneity, intellectual influence or later-reception relations among this place's figures are shown; the legend keeps those meanings distinct. Click a node or relation to continue into a figure context."}</p>
         {presentation === "map" ? <svg className="relation-network-canvas" viewBox={"0 0 720 " + (compact ? 300 : 390)} role="group" aria-labelledby={networkTitleId}>
           <title id={networkTitleId}>{title + (locale === "zh-CN" ? " 人物关系图" : " person relation network")}</title>
           {visibleScopeRelations.map((relation) => {
@@ -171,7 +171,7 @@ export function RelationNetwork({ locale, focus, relations, searchItems, onFocus
       <div className="relation-network relation-network-empty-state" data-person-relations={peopleOnly ? "true" : undefined}>
         <p className="relation-network-empty">
           {peopleOnly
-            ? (locale === "zh-CN" ? "当前没有可核实的现实人物之间关系；地点、事件、文本与后世接受另列。" : "No verified person-to-person relation is available here yet; places, events, texts and later reception remain separate context layers.")
+            ? (locale === "zh-CN" ? "当前没有可核实的人物—人物关系；地点、事件、文本与其他接受层另列。" : "No verified figure-to-figure relation is available here yet; places, events, texts and other reception layers remain separate context layers.")
             : (locale === "zh-CN" ? "当前对象暂时没有可展开的一跳关系。" : "No one-hop relations are available for this object yet.")}
         </p>
       </div>
@@ -183,7 +183,7 @@ export function RelationNetwork({ locale, focus, relations, searchItems, onFocus
       <div className="relation-network-heading">
         <div>
           <p className="eyebrow">{peopleOnly ? (locale === "zh-CN" ? "人物关系" : "Person-to-person") : (locale === "zh-CN" ? "一层关系网" : "One-hop network")}</p>
-          <h3>{peopleOnly ? (locale === "zh-CN" ? title + " 的现实人物关系" : title + " · real person-to-person relations") : (locale === "zh-CN" ? title + " 的关系" : title + " · relationships")}</h3>
+          <h3>{peopleOnly ? (locale === "zh-CN" ? title + " 的人物—人物关系" : title + " · figure-to-figure relations") : (locale === "zh-CN" ? title + " 的关系" : title + " · relationships")}</h3>
         </div>
         <span>{neighbours.length} {locale === "zh-CN" ? "个邻接对象" : "neighbours"}</span>
       </div>
@@ -192,7 +192,7 @@ export function RelationNetwork({ locale, focus, relations, searchItems, onFocus
         <button type="button" className={presentation === "map" ? "active" : ""} aria-pressed={presentation === "map"} onClick={() => setPresentation("map")}>{locale === "zh-CN" ? "图" : "Graph"}</button>
         <button type="button" className={presentation === "list" ? "active" : ""} aria-pressed={presentation === "list"} onClick={() => setPresentation("list")}>{locale === "zh-CN" ? "列表" : "List"}</button>
       </div>
-      {peopleOnly ? <p className="relation-network-note">{locale === "zh-CN" ? "只显示现实人物之间的师承、同时代往来或影响；地点、事件、文本与后世接受另列。" : "Only teacher–student, contemporary-exchange or influence relations between real figures are shown here; places, events, texts and later reception stay separate."}</p> : null}
+      {peopleOnly ? <p className="relation-network-note">{locale === "zh-CN" ? "只显示人物之间可核实的同时代往来、思想影响或后世接受；地点、事件与文本关系另列，后世接受不表示同时代会面。" : "Only verified contemporaneity, intellectual influence or later-reception relations between figures are shown here; places, events and text relations stay separate, and later reception does not imply contemporaneous contact."}</p> : null}
       {presentation === "map" ? <svg className="relation-network-canvas" viewBox={"0 0 720 " + (compact ? 280 : 390)} role="group" aria-labelledby={networkTitleId}>
         <title id={networkTitleId}>{locale === "zh-CN" ? title + " 一层关系图" : title + " one-hop relationship network"}</title>
         {neighbours.map((relation) => {

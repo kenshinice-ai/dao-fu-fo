@@ -65,7 +65,8 @@ function endpointIsFigure(relation: ReadModelRelation, key: string): boolean {
 }
 
 function relationTone(relationType: string): RelationshipGraphTone {
-  if (["influenced", "received_by"].includes(relationType)) return "influence";
+  if (relationType === "influenced") return "influence";
+  if (relationType === "received_by") return "reception";
   if (relationType === "contemporary_with") return "contemporary";
   if (["deified_as", "remembered_in"].includes(relationType)) return "reception";
   if (relationType === "comparative_parallel") return "comparison";
@@ -286,7 +287,7 @@ export function zoomLevelForGraphTier(tier: RelationshipGraphTier): "era" | "reg
 
 export function relationToneLabel(tone: RelationshipGraphTone, locale: "zh-CN" | "en"): string {
   const labels: Record<RelationshipGraphTone, { zh: string; en: string }> = {
-    influence: { zh: "影响／接受", en: "Influence / reception" },
+    influence: { zh: "思想影响", en: "Intellectual influence" },
     contemporary: { zh: "同时代往来", en: "Contemporary" },
     reception: { zh: "后世接受", en: "Later reception" },
     comparison: { zh: "比较并置", en: "Comparison" },

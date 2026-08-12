@@ -276,7 +276,7 @@ export function InteractiveRelationshipGraph({
         <div>
           <p className="eyebrow">{locale === "zh-CN" ? "人物关系图" : "Relationship graph"}</p>
           <h3 id="relationship-graph-title">{graphHeading}</h3>
-          <p>{locale === "zh-CN" ? "人物互动只取人物—人物读模型关系；地点、事件和文本仍沿用右侧关系清单与地图上下文。" : "Personal interaction edges come only from the figure-to-figure read model; places, events and texts remain in the contextual list and map."}</p>
+          <p>{locale === "zh-CN" ? "图中只取人物—人物读模型关系，并把思想影响、同时代往来与后世接受分开标注；地点、事件和文本仍沿用右侧关系清单与地图上下文。" : "The graph uses only figure-to-figure read-model relations and separates intellectual influence, contemporaneity and later reception; places, events and texts remain in the contextual list and map."}</p>
         </div>
         <div className="relationship-graph-count" aria-live="polite">
           <strong>{laidOutModel.nodes.length}</strong> {locale === "zh-CN" ? "节点" : "nodes"} · <strong>{laidOutModel.edges.length}</strong> {locale === "zh-CN" ? "条人物边" : "people edges"}

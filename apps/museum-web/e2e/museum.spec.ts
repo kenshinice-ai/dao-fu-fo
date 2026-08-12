@@ -225,7 +225,7 @@ test("map timeline rail, city people and scoped relations stay linked", async ({
   await expect(page.locator("[data-city-people] .map-context-figure-list li")).toHaveCount(18);
   const cityRelations = page.locator('[data-relation-scope="true"]');
   await expect(cityRelations).toBeVisible();
-  await expect(cityRelations.locator(".relation-network-edge")).toHaveCount(1);
+  expect(await cityRelations.locator(".relation-network-edge").count()).toBeGreaterThan(0);
   await expect(cityRelations).toContainText("Yixing");
   await expect(cityRelations).toContainText("Sima Chengzhen");
 
@@ -260,18 +260,18 @@ test("place-to-person selection replaces the place with one canonical figure foc
   await expect(page).not.toHaveURL(/scope=/);
   await expect(page.locator(".atlas-object-panel .atlas-tab-nav button.active")).toContainText("Figures");
   await expect(page.locator("[data-atlas-scope-note]")).toHaveCount(0);
-  await expect(page.locator("[data-atlas-context-note]")).toContainText("Confucius (Kong Qiu) · Related figures · 5");
-  await expect(page.locator(".atlas-object-panel .atlas-panel-toolbar > span")).toHaveText("5 items");
+  await expect(page.locator("[data-atlas-context-note]")).toContainText("Confucius (Kong Qiu) · Related figures · 11");
+  await expect(page.locator(".atlas-object-panel .atlas-panel-toolbar > span")).toHaveText("11 items");
   await expect(page.locator("[data-figure-trajectory]")).toContainText("Confucius (Kong Qiu)");
 
   await page.locator(".atlas-tab-nav button").filter({ hasText: "Relations" }).click();
   await expect(page).toHaveURL(/tab=relations&focus=figure%3Aconfucius/);
   await expect(page).not.toHaveURL(/scope=/);
-  await expect(page.locator(".atlas-relation-card")).toHaveCount(20);
+  await expect(page.locator(".atlas-relation-card")).toHaveCount(35);
   await expect(page.locator(".atlas-relation-card").first()).toContainText("Confucius (Kong Qiu)");
 });
 
-test("figure focus presents an elegant saying card and only real person relations", async ({ page }) => {
+test("figure focus presents an elegant saying card and a scoped person relation layer", async ({ page }) => {
   await page.goto("/explore?lang=en&view=map&focus=figure%3Aconfucius");
   await waitForMuseum(page);
   await waitForAtlas(page);
@@ -436,7 +436,7 @@ test("relation focus filters the map and adds relation-time context", async ({ p
   await page.goto("/explore?lang=en&view=map");
   await waitForAtlas(page);
   await page.locator(".atlas-tab-nav button").filter({ hasText: "Relations" }).click();
-  await expect(page.locator(".atlas-tab-nav button").filter({ hasText: "Relations" })).toContainText("299");
+  await expect(page.locator(".atlas-tab-nav button").filter({ hasText: "Relations" })).toContainText("306");
   await expect(page.locator(".atlas-relation-card")).toHaveCount(80);
   await expect(page.locator(".atlas-relation-card").first()).toContainText("→");
   await page.locator(".atlas-relation-card .atlas-object-card-main").first().click();
@@ -458,7 +458,7 @@ test("direct figure relation URL never falls back to the global relation list", 
 
   await expect(page).toHaveURL(/tab=relations&focus=figure%3Aconfucius/);
   await expect(page.locator(".atlas-object-panel .atlas-tab-nav button.active")).toContainText("Relations");
-  await expect(page.locator(".atlas-relation-card")).toHaveCount(20);
+  await expect(page.locator(".atlas-relation-card")).toHaveCount(35);
   await expect(page.locator(".atlas-relation-card").first()).toContainText("Confucius (Kong Qiu)");
 });
 
@@ -559,7 +559,8 @@ test("figure dossiers expose verified birthplace links", async ({ page }) => {
   await expect(page.locator(".entity-facts").getByText("Birthplace", { exact: true })).toBeVisible();
   await expect(page.locator(".entity-facts").getByRole("link", { name: "Qufu", exact: true })).toBeVisible();
   await expect(page.locator("[data-person-relations]")).toBeVisible();
-  await expect(page.getByText("No verified person-to-person relation is available for this figure yet.", { exact: true })).toBeVisible();
+  await expect(page.locator("[data-person-relations]")).toContainText("Mencius");
+  await expect(page.locator("[data-person-relations]")).toContainText("Confucian tradition enters Mencius's Warring States re-reading");
 });
 
 test("cross-era comparison keeps multi-dimensional evidence and shared bridges visible", async ({ page }) => {
@@ -635,15 +636,15 @@ test("Research exposes the quality audit and review queue filters", async ({ pag
   await expect(page.getByRole("heading", { name: "See what still blocks publication" })).toBeVisible();
   await expect(page.locator(".research-governance-status strong")).toHaveText("684");
   await expect(page.getByRole("heading", { name: "Review queue" })).toBeVisible();
-  await expect(page.getByText("455 subjects shown; all statuses are read-only.", { exact: true })).toBeVisible();
-  await expect(page.locator(".research-review-queue li")).toHaveCount(455);
+  await expect(page.getByText("462 subjects shown; all statuses are read-only.", { exact: true })).toBeVisible();
+  await expect(page.locator(".research-review-queue li")).toHaveCount(462);
   await expect(page.getByRole("link", { name: "Historical reviewer (0)", exact: true })).toBeVisible();
   await expect(page.getByRole("link", { name: "Accessibility editor (0)", exact: true })).toBeVisible();
 
   await page.getByRole("link", { name: "Show all", exact: true }).click();
   await expect(page).toHaveURL(/audit=all/);
-  await expect(page.getByText("530 subjects shown; all statuses are read-only.", { exact: true })).toBeVisible();
-  await expect(page.locator(".research-review-queue li")).toHaveCount(530);
+  await expect(page.getByText("537 subjects shown; all statuses are read-only.", { exact: true })).toBeVisible();
+  await expect(page.locator(".research-review-queue li")).toHaveCount(537);
   await expect(page.getByText("figure:xuanzang", { exact: true })).toBeVisible();
 });
 

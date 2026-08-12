@@ -175,10 +175,10 @@ function EntityRelations({
         <section className="entity-network entity-person-network" data-person-relations aria-labelledby="entity-person-relations-title">
           <div className="entity-network-heading">
             <p className="eyebrow">{locale === "zh-CN" ? "人物关系" : "Person-to-person"}</p>
-            <h2 id="entity-person-relations-title">{locale === "zh-CN" ? "现实人物之间的关系" : "Real person-to-person relations"}</h2>
-            <p>{locale === "zh-CN" ? "这里只显示人物之间的师承、同时代往来或影响；地点、事件、文本与后世接受另列。" : "Only teacher–student, contemporary-exchange or influence relations appear here; places, events, texts and later reception stay separate."}</p>
+            <h2 id="entity-person-relations-title">{locale === "zh-CN" ? "人物—人物关系层" : "Figure-to-figure relation layer"}</h2>
+            <p>{locale === "zh-CN" ? "同时代往来、思想影响与后世接受分层显示；后世接受不表示两位人物同时代交往。地点、事件与文本关系另列。" : "Contemporaneity, intellectual influence and later reception are shown as distinct layers; later reception does not imply contemporaneous contact. Places, events and text relations stay separate."}</p>
           </div>
-          <RelationList locale={locale} entity={entity} relations={personRelations} searchMap={searchMap} emptyText={locale === "zh-CN" ? "当前没有可核实的现实人物之间关系。" : "No verified person-to-person relation is available for this figure yet."} />
+          <RelationList locale={locale} entity={entity} relations={personRelations} searchMap={searchMap} emptyText={locale === "zh-CN" ? "当前没有可核实的人物—人物关系。" : "No verified figure-to-figure relation is available for this figure yet."} />
         </section>
       ) : null}
       <section className="entity-network" aria-labelledby="entity-network-title">

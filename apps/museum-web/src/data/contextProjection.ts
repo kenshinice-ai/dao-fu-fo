@@ -115,14 +115,14 @@ function relationTouches(relation: ReadModelRelation, key: string): boolean {
 }
 
 /**
- * Keep person-to-person language narrower than the full figure graph. Later
- * reception, deification and comparative parallels remain available as context
- * edges, but are not presented as real-world personal relations.
+ * Keep figure-to-figure edges together for person pages and the atlas network,
+ * while the UI labels later reception separately from direct influence or
+ * contemporaneity. Deification and comparative parallels remain context edges.
  */
 export function isPersonToPersonRelation(relation: ReadModelRelation): boolean {
   return relation.source.kind === "figure"
     && relation.target.kind === "figure"
-    && ["influenced", "contemporary_with"].includes(relation.relationType);
+    && ["influenced", "contemporary_with", "received_by"].includes(relation.relationType);
 }
 
 /**

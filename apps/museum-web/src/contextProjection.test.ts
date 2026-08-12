@@ -157,11 +157,11 @@ describe("context projections", () => {
     ]);
   });
 
-  it("keeps real figure relations separate from reception and comparison edges", () => {
+  it("keeps figure relations together while excluding deification and comparison edges", () => {
     const base = relations.items[0];
     expect(isPersonToPersonRelation({ ...base, source: { kind: "figure", slug: "laozi" }, target: { kind: "figure", slug: "confucius" }, relationType: "influenced" })).toBe(true);
     expect(isPersonToPersonRelation({ ...base, source: { kind: "figure", slug: "laozi" }, target: { kind: "figure", slug: "confucius" }, relationType: "contemporary_with" })).toBe(true);
-    expect(isPersonToPersonRelation({ ...base, source: { kind: "figure", slug: "laozi" }, target: { kind: "figure", slug: "confucius" }, relationType: "received_by" })).toBe(false);
+    expect(isPersonToPersonRelation({ ...base, source: { kind: "figure", slug: "laozi" }, target: { kind: "figure", slug: "confucius" }, relationType: "received_by" })).toBe(true);
     expect(isPersonToPersonRelation({ ...base, source: { kind: "figure", slug: "laozi" }, target: { kind: "figure", slug: "confucius" }, relationType: "deified_as" })).toBe(false);
     expect(isPersonToPersonRelation({ ...base, source: { kind: "figure", slug: "laozi" }, target: { kind: "figure", slug: "confucius" }, relationType: "comparative_parallel" })).toBe(false);
   });
