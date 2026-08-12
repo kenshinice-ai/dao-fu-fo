@@ -112,7 +112,7 @@ test("shared context offers the second and third featured figure dossiers", asyn
 });
 
 test("atlas figure index keeps all major and mythic figures focusable", async ({ page }) => {
-  await page.goto("/explore?lang=en&view=map&focus=figure%3Ayan-shigu");
+  await page.goto("/explore?lang=en&view=map");
   await waitForMuseum(page);
   await waitForAtlas(page);
   await expect(page.locator(".atlas-tab-nav button").filter({ hasText: "Figures" })).toContainText("60");
@@ -125,6 +125,10 @@ test("atlas figure index keeps all major and mythic figures focusable", async ({
     await expect(card).toBeVisible();
     await card.locator(".atlas-object-card-main").click();
     await expect(page).toHaveURL(/focus=figure%3A/);
+    await page.getByRole("button", { name: "Clear focus", exact: true }).click();
+    await expect(page).not.toHaveURL(/focus=/);
+    await expect(page.getByRole("button", { name: "Clear focus", exact: true })).toHaveCount(0);
+    await expect(page.locator(".atlas-tab-nav button").filter({ hasText: "Figures" })).toContainText("60");
   }
 });
 
@@ -230,7 +234,8 @@ test("map timeline rail, city people and scoped relations stay linked", async ({
   await expect(page).toHaveURL(/focus=figure%3A/);
   await expect(page).not.toHaveURL(/scope=/);
   await expect(page.locator(".atlas-object-panel .atlas-tab-nav button.active")).toContainText("Figures");
-  await expect(page.locator(".atlas-object-panel .atlas-panel-toolbar > span")).toHaveText("60 items");
+  await expect(page.locator("[data-atlas-context-note]")).toBeVisible();
+  await expect(page.locator(".atlas-object-panel .atlas-panel-toolbar > span")).not.toHaveText("60 items");
   await expect(page.locator("[data-figure-trajectory]")).toBeVisible();
 
   await page.goto("/explore?lang=en&view=map&focus=place%3Achangan");
@@ -239,7 +244,8 @@ test("map timeline rail, city people and scoped relations stay linked", async ({
   await cityRelationsAfterReturn.locator(".relation-network-node").first().click();
   await expect(page).toHaveURL(/focus=figure%3A/);
   await expect(page).not.toHaveURL(/scope=/);
-  await expect(page.locator(".atlas-object-panel .atlas-panel-toolbar > span")).toHaveText("60 items");
+  await expect(page.locator("[data-atlas-context-note]")).toBeVisible();
+  await expect(page.locator(".atlas-object-panel .atlas-panel-toolbar > span")).not.toHaveText("60 items");
   await expect(page.locator("[data-figure-trajectory]")).toBeVisible();
 });
 
@@ -254,14 +260,15 @@ test("place-to-person selection replaces the place with one canonical figure foc
   await expect(page).not.toHaveURL(/scope=/);
   await expect(page.locator(".atlas-object-panel .atlas-tab-nav button.active")).toContainText("Figures");
   await expect(page.locator("[data-atlas-scope-note]")).toHaveCount(0);
-  await expect(page.locator(".atlas-object-panel .atlas-panel-toolbar > span")).toHaveText("60 items");
+  await expect(page.locator("[data-atlas-context-note]")).toContainText("Confucius (Kong Qiu) · Related figures · 5");
+  await expect(page.locator(".atlas-object-panel .atlas-panel-toolbar > span")).toHaveText("5 items");
   await expect(page.locator("[data-figure-trajectory]")).toContainText("Confucius (Kong Qiu)");
 
   await page.locator(".atlas-tab-nav button").filter({ hasText: "Relations" }).click();
   await expect(page).toHaveURL(/tab=relations&focus=figure%3Aconfucius/);
   await expect(page).not.toHaveURL(/scope=/);
-  await expect(page.locator(".atlas-relation-card")).toHaveCount(0);
-  await expect(page.locator(".atlas-empty-state")).toContainText("No entities match");
+  await expect(page.locator(".atlas-relation-card")).toHaveCount(20);
+  await expect(page.locator(".atlas-relation-card").first()).toContainText("Confucius (Kong Qiu)");
 });
 
 test("figure focus presents an elegant saying card and only real person relations", async ({ page }) => {
@@ -381,8 +388,10 @@ test("map keeps city switching and event selection available after a selection",
   await expect(page.getByRole("dialog")).toBeVisible();
   await page.getByRole("dialog").getByRole("button", { name: "Close detail", exact: true }).click();
 
+  await page.locator("[data-atlas-context-note]").getByRole("button", { name: "Show all", exact: true }).click();
+  await expect(page).not.toHaveURL(/focus=/);
   await page.locator(".atlas-tab-nav button").filter({ hasText: "Places" }).click();
-  await changanCard.locator(".atlas-object-card-main").click();
+  await page.locator(".atlas-object-card").filter({ hasText: /^Chang'an/ }).first().locator(".atlas-object-card-main").click();
   await expect(page).toHaveURL(/focus=place%3Achangan/);
 });
 
@@ -421,19 +430,20 @@ test("relation focus filters the map and adds relation-time context", async ({ p
   await expect(page.locator("#historical-map")).toHaveAttribute("data-map-focus-state", /mapped|position-pending/);
   await expect(page.locator("#historical-map")).toHaveAttribute("data-map-visible-routes", "4");
   await page.locator(".atlas-tab-nav button").filter({ hasText: "Relations" }).click();
-  await expect(page.locator(".atlas-relation-card")).toHaveCount(0);
-  await expect(page.locator(".atlas-empty-state")).toContainText("No entities match");
+  await expect(page.locator(".atlas-relation-card").filter({ hasText: "Laozi (Li Er)" }).first()).toBeVisible();
+  expect(await page.locator(".atlas-relation-card").count()).toBeGreaterThan(0);
 
   await page.goto("/explore?lang=en&view=map");
   await waitForAtlas(page);
   await page.locator(".atlas-tab-nav button").filter({ hasText: "Relations" }).click();
-  await expect(page.locator(".atlas-relation-card")).toHaveCount(16);
-  await expect(page.locator(".atlas-relation-card").filter({ hasText: "Dao'an" }).first()).toContainText("→");
-  await expect(page.locator(".atlas-relation-card").filter({ hasText: "Huiyuan" }).filter({ hasText: "Kumārajīva" }).first()).toContainText("↔");
+  await expect(page.locator(".atlas-tab-nav button").filter({ hasText: "Relations" })).toContainText("299");
+  await expect(page.locator(".atlas-relation-card")).toHaveCount(80);
+  await expect(page.locator(".atlas-relation-card").first()).toContainText("→");
   await page.locator(".atlas-relation-card .atlas-object-card-main").first().click();
-  await expect(page.locator(".atlas-object-panel .atlas-tab-nav button.active")).toContainText("Figures");
+  await expect(page.getByRole("dialog")).toBeVisible();
+  await expect(page).toHaveURL(/detail=relation%3A(?!relation%3A)/);
+  await page.getByRole("dialog").locator(".atlas-drawer-actions button").first().click();
   await expect(page).toHaveURL(/focus=figure%3A/);
-  await expect(page).not.toHaveURL(/tab=relations/);
   await expect(page).not.toHaveURL(/scope=/);
 
   await page.goto("/explore?lang=en&view=timeline&focus=figure%3Alaozi");
@@ -448,8 +458,8 @@ test("direct figure relation URL never falls back to the global relation list", 
 
   await expect(page).toHaveURL(/tab=relations&focus=figure%3Aconfucius/);
   await expect(page.locator(".atlas-object-panel .atlas-tab-nav button.active")).toContainText("Relations");
-  await expect(page.locator(".atlas-relation-card")).toHaveCount(0);
-  await expect(page.locator(".atlas-empty-state")).toContainText("No entities match");
+  await expect(page.locator(".atlas-relation-card")).toHaveCount(20);
+  await expect(page.locator(".atlas-relation-card").first()).toContainText("Confucius (Kong Qiu)");
 });
 
 test("map shares the historical time window with the timeline", async ({ page }) => {
@@ -493,6 +503,10 @@ test("representative historical, traditional and mythic figures resolve through 
     await card.locator(".atlas-object-card-main").click();
     await expect(page).toHaveURL(/focus=figure%3A/);
     await expect(page.locator(".atlas-focus-bar")).toContainText(title);
+    await page.getByRole("button", { name: "Clear focus", exact: true }).click();
+    await expect(page).not.toHaveURL(/focus=/);
+    await expect(page.getByRole("button", { name: "Clear focus", exact: true })).toHaveCount(0);
+    await expect(page.locator(".atlas-tab-nav button").filter({ hasText: "Figures" })).toContainText("60");
   }
 });
 

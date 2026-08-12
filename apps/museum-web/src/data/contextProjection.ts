@@ -19,6 +19,68 @@ export function connectedContextKeys(relations: ReadModelRelationIndex | undefin
   return keys;
 }
 
+/**
+ * Build the entity set used by the atlas object panel and contextual timeline.
+ *
+ * Direct read-model edges are always included. A second hop is only allowed
+ * through an event or institution when it completes a figure-place context or
+ * reveals another figure in the same documented event/institutional setting.
+ * That mirrors the Bible Atlas' entity arrays without turning the whole graph
+ * into an unbounded "related to related" search.
+ */
+export function contextEntityKeys(relations: ReadModelRelationIndex | undefined, focus: string | undefined): Set<string> {
+  const keys = connectedContextKeys(relations, focus);
+  if (!relations || !focus) return keys;
+  keys.add(focus);
+
+  const [focusKind] = focus.split(":");
+  const bridgeKinds = focusKind === "figure"
+    ? new Set(["event", "institution"])
+    : focusKind === "place"
+      ? new Set(["event", "institution"])
+      : new Set<string>();
+  if (bridgeKinds.size === 0) return keys;
+
+  const bridgeKeys = [...keys].filter((key) => bridgeKinds.has(key.split(":")[0] ?? ""));
+  for (const bridgeKey of bridgeKeys) {
+    for (const relation of relations.items) {
+      const sourceKey = contextEndpointKey(relation.source);
+      const targetKey = contextEndpointKey(relation.target);
+      if (sourceKey !== bridgeKey && targetKey !== bridgeKey) continue;
+      const otherKey = sourceKey === bridgeKey ? targetKey : sourceKey;
+      const otherKind = otherKey.split(":")[0];
+      if ((focusKind === "figure" && (otherKind === "place" || otherKind === "figure"))
+        || (focusKind === "place" && otherKind === "figure")) {
+        keys.add(otherKey);
+      }
+    }
+  }
+  return keys;
+}
+
+/**
+ * Relations shown for a focus include every direct edge plus edges that explain
+ * the bounded contextual entity set. This is intentionally broader than the
+ * person-only network: the object panel must expose person-place, person-event,
+ * text and reception links instead of silently discarding them.
+ */
+export function contextRelations(relations: ReadModelRelationIndex | undefined, focus: string | undefined): ReadModelRelation[] {
+  if (!relations) return [];
+  if (!focus) return relations.items;
+  const keys = contextEntityKeys(relations, focus);
+  return relations.items
+    .filter((relation) => {
+      const sourceKey = contextEndpointKey(relation.source);
+      const targetKey = contextEndpointKey(relation.target);
+      return (sourceKey === focus || targetKey === focus) || (keys.has(sourceKey) && keys.has(targetKey));
+    })
+    .sort((left, right) => {
+      const leftDirect = relationTouches(left, focus) ? 0 : 1;
+      const rightDirect = relationTouches(right, focus) ? 0 : 1;
+      return leftDirect - rightDirect;
+    });
+}
+
 export interface PlaceFigureContext {
   figureKey: string;
   relation: ReadModelRelation;
@@ -70,7 +132,7 @@ export function isPersonToPersonRelation(relation: ReadModelRelation): boolean {
  * both cases, so this is presentation only and cannot rewrite the read model.
  */
 export function relationConnector(relation: ReadModelRelation): "→" | "↔" {
-  return relation.relationType === "influenced" ? "→" : "↔";
+  return ["contemporary_with", "comparative_parallel", "route_connects"].includes(relation.relationType) ? "↔" : "→";
 }
 
 function isFigurePlaceRelation(relation: ReadModelRelation, figureKey: string, placeKey: string): boolean {
@@ -320,6 +382,10 @@ export function projectTimelineEvents(
   searchItems: SearchItem[],
   focus: string | undefined,
 ): TimelineEvent[] {
-  return [...data.events, ...relationTimelineEvents(data, relations, searchItems, focus)]
+  const contextKeys = contextEntityKeys(relations, focus);
+  const entityEvents = focus
+    ? data.events.filter((event) => contextKeys.has(`${event.kind}:${event.slug}`))
+    : data.events;
+  return [...entityEvents, ...relationTimelineEvents(data, relations, searchItems, focus)]
     .sort((a, b) => a.year - b.year || a.title.localeCompare(b.title));
 }

@@ -5472,6 +5472,33 @@ h3 {
   font-size: var(--text-base);
 }
 
+.atlas-relation-card-actions {
+  display: grid;
+  gap: var(--s-1);
+  align-content: center;
+}
+
+.atlas-relation-card-actions button {
+  max-width: 10rem;
+  min-height: 32px;
+  overflow: hidden;
+  padding: 0 var(--s-2);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink-soft);
+  font-size: 0.68rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.atlas-relation-card-actions button:hover,
+.atlas-relation-card-actions button:focus-visible {
+  border-color: var(--ink);
+  color: var(--ink);
+  background: rgba(177, 138, 69, 0.1);
+}
+
 .atlas-empty-state,
 .atlas-list-note {
   padding: var(--s-4);
@@ -5965,6 +5992,14 @@ h3 {
 
   .atlas-object-card-detail {
     justify-self: start;
+  }
+
+  .atlas-relation-card-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .atlas-relation-card-actions button {
+    max-width: none;
   }
 
   .atlas-time-inputs {

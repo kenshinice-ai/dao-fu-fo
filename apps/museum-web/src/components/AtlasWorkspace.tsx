@@ -5,7 +5,7 @@ import type { AtlasTab, MapContentLayer, RouteState, TimelineMode, ZoomLevel } f
 import { entityPath, withLang } from "../routing";
 import { staticData } from "../data/staticData";
 import { useStaticData } from "../data/useStaticData";
-import { contextEndpointKey, eventFigureContexts, isPersonToPersonRelation, placeEventContexts, placeFigureContexts, projectTimelineEvents, relationConnector } from "../data/contextProjection";
+import { contextEndpointKey, contextEntityKeys, contextRelations, projectTimelineEvents, relationConnector } from "../data/contextProjection";
 import { CivilisationMap } from "./CivilisationMap";
 import { ErrorState, LoadingState } from "./LoadingState";
 import { Icon } from "./Icon";
@@ -99,12 +99,13 @@ function kindLabel(kind: string, locale: Locale): string {
 }
 
 function relationDetailKey(id: string): string {
-  return `relation:${id}`;
+  return id.startsWith("relation:") ? id : `relation:${id}`;
 }
 
 function relationFromDetail(detail: string | undefined, relations: ReadModelRelationIndex | undefined): ReadModelRelation | undefined {
   if (!detail?.startsWith("relation:") || !relations) return undefined;
-  return relations.items.find((relation) => relation.id === detail.slice("relation:".length));
+  const canonicalDetail = detail.replace(/^relation:relation:/, "relation:");
+  return relations.items.find((relation) => relation.id === canonicalDetail || relation.id === canonicalDetail.slice("relation:".length));
 }
 
 function eventFocus(event: TimelineEvent): string {
@@ -124,32 +125,6 @@ function tabForFocus(focus: string, fallback: AtlasTab): AtlasTab {
   if (kind === "text") return "texts";
   if (kind === "passage") return "sayings";
   return fallback;
-}
-
-function scopeKeyForState(state: RouteState): string | undefined {
-  if (state.scope) return state.scope;
-  if (state.focus?.startsWith("place:") || state.focus?.startsWith("event:")) return state.focus;
-  return undefined;
-}
-
-/**
- * Entity selection has one canonical subject. Place/event scope is useful while
- * that place/event remains selected, but must not leak into the next entity.
- * This keeps the URL, active tab, map projection and detail panel on the same
- * question instead of encoding a hidden second focus.
- */
-function scopeForSelection(explicitScope?: string | null): string | undefined {
-  if (explicitScope !== undefined) return explicitScope === null ? undefined : explicitScope;
-  return undefined;
-}
-
-function scopeLabelFor(state: RouteState, locale: Locale): string | undefined {
-  const scope = scopeKeyForState(state);
-  if (scope?.startsWith("place:") && state.atlasTab === "figures") return locale === "zh-CN" ? "关联人物" : "Connected figures";
-  if (scope?.startsWith("place:") && state.atlasTab === "events") return locale === "zh-CN" ? "城市事件" : "Events in this place";
-  if (scope?.startsWith("place:") && state.atlasTab === "relations") return locale === "zh-CN" ? "城市人物关系" : "Person relations in this place";
-  if (scope?.startsWith("event:") && state.atlasTab === "figures") return locale === "zh-CN" ? "事件人物" : "Figures in this event";
-  return undefined;
 }
 
 function timelinePosition(year: number, start: number, end: number, index: number, count: number, traditionMode: boolean): number {
@@ -213,6 +188,10 @@ export function AtlasWorkspace({ locale, state, onChange, className = "", headin
   onChangeRef.current = onChange;
   const query = state.query ?? "";
 
+  useEffect(() => {
+    if (state.scope) onChangeRef.current({ scope: undefined });
+  }, [state.scope]);
+
   const stopPlayback = useCallback(() => {
     setIsPlaying(false);
     setPlaybackYear(undefined);
@@ -247,92 +226,72 @@ export function AtlasWorkspace({ locale, state, onChange, className = "", headin
 
   const searchMap = useMemo(() => new Map((data?.searchItems ?? []).map((item) => [keyFor(item.kind, item.slug), item.title])), [data?.searchItems]);
   const focusTitle = titleFor(state.focus, data?.searchItems ?? [], locale);
-  const scopeKey = scopeKeyForState(state);
   const eraContext = ERA_CONTEXTS[eraIdForState(state)] ?? ERA_CONTEXTS.all;
   const effectiveState = useMemo(() => {
     if (playbackYear === undefined || !data) return state;
     return { ...state, from: state.from ?? data.timeline.startYear, to: playbackYear };
   }, [data, playbackYear, state]);
 
-  const scopedFigureKeys = useMemo(() => {
-    if (!data || !scopeKey?.startsWith("place:")) return undefined;
-    return new Set(placeFigureContexts(data.relations, scopeKey).map((context) => context.figureKey));
-  }, [data, scopeKey]);
-  const scopedEventKeys = useMemo(() => {
-    if (!data || !scopeKey?.startsWith("place:")) return undefined;
-    return new Set(placeEventContexts(data.relations, scopeKey).map((context) => context.eventKey));
-  }, [data, scopeKey]);
-  const scopedRelationKeys = useMemo(() => {
-    if (!data || !scopeKey) return undefined;
-    if (scopeKey.startsWith("place:")) return new Set([...scopedFigureKeys ?? []]);
-    if (scopeKey.startsWith("event:")) return new Set(eventFigureContexts(data.relations, scopeKey).map((context) => context.figureKey));
-    return undefined;
-  }, [data, scopedFigureKeys, scopeKey]);
+  const contextualKeys = useMemo(
+    () => contextEntityKeys(data?.relations, state.focus),
+    [data?.relations, state.focus],
+  );
+  const matchesTraditions = useCallback((item: SearchItem | undefined) => Boolean(
+    item && (item.tradition === "convergence" || state.traditions.includes(item.tradition)),
+  ), [state.traditions]);
+  const contextualItems = useMemo(() => {
+    if (!data) return [];
+    return data.searchItems
+      .filter((item) => matchesTraditions(item))
+      .filter((item) => !state.focus || contextualKeys.has(keyFor(item.kind, item.slug)));
+  }, [contextualKeys, data, matchesTraditions, state.focus]);
 
   const filteredItems = useMemo(() => {
     if (!data || state.atlasTab === "relations") return [];
     const definition = TAB_DEFINITIONS[state.atlasTab];
     const normalisedQuery = query.trim().toLocaleLowerCase();
-    return data.searchItems
+    return contextualItems
       .filter((item) => item.kind === definition.kind)
-      .filter((item) => item.tradition === "convergence" || state.traditions.includes(item.tradition))
-      .filter((item) => {
-        if (scopeKey?.startsWith("place:") && state.atlasTab === "figures") return scopedFigureKeys?.has(keyFor(item.kind, item.slug)) ?? false;
-        if (scopeKey?.startsWith("place:") && state.atlasTab === "events") return scopedEventKeys?.has(keyFor(item.kind, item.slug)) ?? false;
-        if (state.focus?.startsWith("event:") && state.atlasTab === "figures") return eventFigureContexts(data.relations, state.focus).some((context) => context.figureKey === keyFor(item.kind, item.slug));
-        return true;
-      })
       .filter((item) => !normalisedQuery || `${item.title} ${item.context}`.toLocaleLowerCase().includes(normalisedQuery))
       .sort((a, b) => a.title.localeCompare(b.title, locale === "zh-CN" ? "zh-Hans" : "en"));
-  }, [data, locale, query, scopeKey, scopedEventKeys, scopedFigureKeys, state.atlasTab, state.focus, state.traditions]);
+  }, [contextualItems, data, locale, query, state.atlasTab]);
+
+  const contextualRelationItems = useMemo(() => {
+    if (!data) return [];
+    return contextRelations(data.relations, state.focus).filter((relation) => {
+      const sourceItem = data.searchItems.find((item) => keyFor(item.kind, item.slug) === keyFor(relation.source.kind, relation.source.slug));
+      const targetItem = data.searchItems.find((item) => keyFor(item.kind, item.slug) === keyFor(relation.target.kind, relation.target.slug));
+      const sourceVisible = !sourceItem || matchesTraditions(sourceItem);
+      const targetVisible = !targetItem || matchesTraditions(targetItem);
+      return sourceVisible && targetVisible;
+    });
+  }, [data, matchesTraditions, state.focus]);
 
   const relationItems = useMemo(() => {
     if (!data || state.atlasTab !== "relations") return [];
     const normalisedQuery = query.trim().toLocaleLowerCase();
-    return data.relations.items
-      .filter(isPersonToPersonRelation)
+    return contextualRelationItems
       .filter((relation) => {
         const source = keyFor(relation.source.kind, relation.source.slug);
         const target = keyFor(relation.target.kind, relation.target.slug);
         const sourceTitle = searchMap.get(source) ?? source;
         const targetTitle = searchMap.get(target) ?? target;
         return !normalisedQuery || `${sourceTitle} ${targetTitle} ${relation.label}`.toLocaleLowerCase().includes(normalisedQuery);
-      })
-      .filter((relation) => {
-        if (!scopedRelationKeys) return true;
-        const sourceKey = keyFor(relation.source.kind, relation.source.slug);
-        const targetKey = keyFor(relation.target.kind, relation.target.slug);
-        return scopedRelationKeys.has(sourceKey) && scopedRelationKeys.has(targetKey);
-      })
-      .filter((relation) => {
-        // A focused figure is a question, not a decoration. If there is no
-        // place/event scope, only show person relations touching that figure;
-        // the un-focused Relations tab remains the global relation index.
-        if (scopedRelationKeys || !state.focus?.startsWith("figure:")) return true;
-        const sourceKey = keyFor(relation.source.kind, relation.source.slug);
-        const targetKey = keyFor(relation.target.kind, relation.target.slug);
-        return sourceKey === state.focus || targetKey === state.focus;
-      })
-      .filter((relation) => {
-        const sourceItem = data.searchItems.find((item) => keyFor(item.kind, item.slug) === keyFor(relation.source.kind, relation.source.slug));
-        const targetItem = data.searchItems.find((item) => keyFor(item.kind, item.slug) === keyFor(relation.target.kind, relation.target.slug));
-        return Boolean((sourceItem?.tradition === "convergence" || !sourceItem?.tradition || state.traditions.includes(sourceItem.tradition))
-          && (targetItem?.tradition === "convergence" || !targetItem?.tradition || state.traditions.includes(targetItem.tradition)));
       });
-  }, [data, query, scopedRelationKeys, searchMap, state.atlasTab, state.focus, state.traditions]);
+  }, [contextualRelationItems, data, query, searchMap, state.atlasTab]);
 
   const tabCounts = useMemo(() => {
     const counts = {} as Record<AtlasTab, number>;
     for (const tab of TAB_ORDER) {
-      if (tab === "relations") counts[tab] = data?.relations.items.filter(isPersonToPersonRelation).length ?? 0;
-      else counts[tab] = data?.searchItems.filter((item) => item.kind === TAB_DEFINITIONS[tab].kind).length ?? 0;
+      if (tab === "relations") counts[tab] = contextualRelationItems.length;
+      else counts[tab] = contextualItems.filter((item) => item.kind === TAB_DEFINITIONS[tab].kind).length;
     }
     return counts;
-  }, [data]);
+  }, [contextualItems, contextualRelationItems]);
 
-  const selectFocus = (focus: string, explicitScope?: string | null) => updateState({
+  const selectFocus = (focus: string, _explicitScope?: string | null) => updateState({
     focus,
-    scope: scopeForSelection(explicitScope),
+    scope: undefined,
     detail: undefined,
     atlasTab: tabForFocus(focus, state.atlasTab),
     view: "map",
@@ -345,7 +304,7 @@ export function AtlasWorkspace({ locale, state, onChange, className = "", headin
     const focus = relationDetail ? state.focus : detail;
     updateState({
       focus,
-      scope: relationDetail ? state.scope : undefined,
+      scope: undefined,
       detail,
       atlasTab: relationDetail ? state.atlasTab : tabForFocus(detail, state.atlasTab),
       view: "map",
@@ -561,19 +520,18 @@ function AtlasObjectPanel({
   const [visibleCount, setVisibleCount] = useState(80);
   useEffect(() => {
     setVisibleCount(80);
-  }, [query, state.atlasTab, state.scope, state.traditions.join(",")]);
+  }, [query, state.atlasTab, state.focus, state.traditions.join(",")]);
   const visibleItems = items.slice(0, visibleCount);
   const visibleRelations = relationItems.slice(0, visibleCount);
   const totalResults = state.atlasTab === "relations" ? relationItems.length : items.length;
   const shownResults = state.atlasTab === "relations" ? visibleRelations.length : visibleItems.length;
-  const scopeKey = scopeKeyForState(state);
-  const scopeTitle = scopeKey ? titleMap.get(scopeKey) : undefined;
-  const scopeLabel = scopeLabelFor(state, locale);
+  const contextTitle = state.focus ? titleMap.get(state.focus) : undefined;
+  const contextTypeLabel = locale === "zh-CN" ? TAB_DEFINITIONS[state.atlasTab].zh : TAB_DEFINITIONS[state.atlasTab].en;
   return (
     <aside className="atlas-object-panel" aria-label={locale === "zh-CN" ? "地图对象面板" : "Atlas entity panel"}>
       <nav className="atlas-tab-nav" aria-label={locale === "zh-CN" ? "对象类型" : "Entity types"}>
         {TAB_ORDER.map((tab) => (
-          <button className={state.atlasTab === tab ? "active" : ""} type="button" key={tab} aria-pressed={state.atlasTab === tab} onClick={() => onChange({ atlasTab: tab, detail: undefined })}>
+          <button className={state.atlasTab === tab ? "active" : ""} type="button" key={tab} aria-pressed={state.atlasTab === tab} onClick={() => onChange({ atlasTab: tab, scope: undefined, detail: undefined })}>
             <span>{locale === "zh-CN" ? TAB_DEFINITIONS[tab].zh : TAB_DEFINITIONS[tab].en}</span>
             <small>{tabCounts[tab]}</small>
           </button>
@@ -584,11 +542,11 @@ function AtlasObjectPanel({
         <input id="atlas-object-search" type="search" value={query} onChange={(event) => onQuery(event.target.value)} placeholder={locale === "zh-CN" ? "搜索人物、事件、地点……" : "Search figures, events, places…"} />
         <span>{shownResults === totalResults ? totalResults : `${shownResults} / ${totalResults}`} {locale === "zh-CN" ? "项" : "items"}</span>
       </div>
-      {scopeLabel && scopeTitle ? (
-        <div className="atlas-panel-scope-note" data-atlas-scope-note>
-          <span>{scopeTitle} · {scopeLabel} · {state.atlasTab === "relations" ? relationItems.length : items.length}</span>
-          <button type="button" onClick={() => onChange({ focus: scopeKey, scope: undefined, detail: undefined, atlasTab: tabForFocus(scopeKey ?? "", state.atlasTab), view: "map", mapLayer: "real" })}>
-            {locale === "zh-CN" ? `回到${scopeTitle}` : `Return to ${scopeTitle}`}
+      {state.focus && contextTitle ? (
+        <div className="atlas-panel-scope-note" data-atlas-context-note>
+          <span>{locale === "zh-CN" ? `${contextTitle} · 关联${contextTypeLabel}` : `${contextTitle} · Related ${contextTypeLabel.toLocaleLowerCase()}`} · {state.atlasTab === "relations" ? relationItems.length : items.length}</span>
+          <button type="button" onClick={() => onChange({ focus: undefined, scope: undefined, detail: undefined })}>
+            {locale === "zh-CN" ? "查看全部" : "Show all"}
           </button>
         </div>
       ) : null}
@@ -599,12 +557,15 @@ function AtlasObjectPanel({
           const detailKey = relationDetailKey(relation.id);
           return (
             <article className={`atlas-relation-card ${state.detail === detailKey ? "is-selected" : ""}`} key={relation.id}>
-              <button type="button" className="atlas-object-card-main" onClick={() => onFocus(sourceKey)} aria-pressed={state.focus === sourceKey}>
+              <button type="button" className="atlas-object-card-main" onClick={() => onOpenDetail(detailKey)} aria-pressed={state.detail === detailKey}>
                 <strong>{titleMap.get(sourceKey) ?? sourceKey} <span aria-hidden="true">{relationConnector(relation)}</span> {titleMap.get(targetKey) ?? targetKey}</strong>
                 <span>{relation.label}</span>
                 <small>{relation.temporalAssertions.map((assertion) => assertion.displayDate).join(" · ") || formatEvidence(relation.evidenceLayer, locale)} · {formatConfidence(relation.confidence, locale)}</small>
               </button>
-              <button className="atlas-object-card-detail" type="button" onClick={() => onOpenDetail(detailKey)}>{locale === "zh-CN" ? "查看关系" : "Inspect relation"}</button>
+              <div className="atlas-relation-card-actions">
+                <button type="button" onClick={() => onFocus(sourceKey)}>{locale === "zh-CN" ? "聚焦" : "Focus"} {titleMap.get(sourceKey) ?? sourceKey}</button>
+                <button type="button" onClick={() => onFocus(targetKey)}>{locale === "zh-CN" ? "聚焦" : "Focus"} {titleMap.get(targetKey) ?? targetKey}</button>
+              </div>
             </article>
           );
         }) : visibleItems.map((item) => {
@@ -859,7 +820,7 @@ function AtlasDetailDrawer({ locale, detailKey, relations, searchItems, onClose,
     <div className="atlas-drawer-backdrop" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) onClose(); }}>
       <aside ref={drawerRef} className="atlas-detail-drawer" role="dialog" aria-modal="true" aria-labelledby="atlas-detail-title">
         <div className="atlas-drawer-header">
-          <p className="eyebrow">{relation ? (locale === "zh-CN" ? "人物关系" : "Person relation") : (locale === "zh-CN" ? "对象档案" : "Entity dossier")}</p>
+          <p className="eyebrow">{relation ? (locale === "zh-CN" ? "语境关系" : "Context relation") : (locale === "zh-CN" ? "对象档案" : "Entity dossier")}</p>
           <button ref={closeRef} className="icon-button" type="button" onClick={onClose} aria-label={locale === "zh-CN" ? "关闭详情" : "Close detail"}><Icon name="close" /></button>
         </div>
         {adjacentKeys.length > 1 ? (
@@ -884,19 +845,22 @@ function AtlasDetailDrawer({ locale, detailKey, relations, searchItems, onClose,
 function RelationDrawerContent({ locale, relation, searchMap, onFocus }: { locale: Locale; relation: ReadModelRelation; searchMap: Map<string, string>; onFocus: (key: string) => void }) {
   const sourceKey = contextEndpointKey(relation.source);
   const targetKey = contextEndpointKey(relation.target);
+  const sourceKind = formatEntityKind(relation.source.kind as EntityKind, locale);
+  const targetKind = formatEntityKind(relation.target.kind as EntityKind, locale);
   return (
     <div className="atlas-drawer-content">
-      <h2 id="atlas-detail-title">{searchMap.get(sourceKey) ?? sourceKey} <span aria-hidden="true">↔</span> {searchMap.get(targetKey) ?? targetKey}</h2>
+      <p className="eyebrow">{sourceKind} {relationConnector(relation)} {targetKind}</p>
+      <h2 id="atlas-detail-title">{searchMap.get(sourceKey) ?? sourceKey} <span aria-hidden="true">{relationConnector(relation)}</span> {searchMap.get(targetKey) ?? targetKey}</h2>
       <p className="atlas-detail-lede">{relation.label}</p>
       <dl className="atlas-detail-facts">
         <div><dt>{locale === "zh-CN" ? "关系类型" : "Relation"}</dt><dd>{formatRelationType(relation.relationType, locale)}</dd></div>
         <div><dt>{locale === "zh-CN" ? "时间" : "Time"}</dt><dd>{relation.temporalAssertions.map((assertion) => assertion.displayDate).join(" · ") || (locale === "zh-CN" ? "未标明" : "Not specified")}</dd></div>
         <div><dt>{locale === "zh-CN" ? "证据" : "Evidence"}</dt><dd>{formatEvidenceLine(relation.evidenceLayer, relation.confidence, locale)}</dd></div>
       </dl>
-      <p className="atlas-detail-note">{locale === "zh-CN" ? "此处只显示现实人物与现实人物之间的关系；地点、事件、著作与后世接受保持在独立语境层。" : "This layer is limited to relations between real figures; places, events, works and later reception remain separate context layers."}</p>
+      <p className="atlas-detail-note">{locale === "zh-CN" ? "关系类型、方向与证据层按读模型原样展示；人物互动、空间活动、事件参与、文本归属与后世接受不会被混写成同一种关系。" : "Relation type, direction and evidence follow the read model; personal interaction, spatial activity, event participation, textual attribution and later reception remain distinct."}</p>
       <div className="atlas-drawer-actions">
-        <button className="button button-secondary" type="button" onClick={() => onFocus(sourceKey)}>{locale === "zh-CN" ? "聚焦第一位人物" : "Focus first figure"}</button>
-        <button className="button button-secondary" type="button" onClick={() => onFocus(targetKey)}>{locale === "zh-CN" ? "聚焦第二位人物" : "Focus second figure"}</button>
+        <button className="button button-secondary" type="button" onClick={() => onFocus(sourceKey)}>{locale === "zh-CN" ? `聚焦${searchMap.get(sourceKey) ?? sourceKind}` : `Focus ${searchMap.get(sourceKey) ?? sourceKind}`}</button>
+        <button className="button button-secondary" type="button" onClick={() => onFocus(targetKey)}>{locale === "zh-CN" ? `聚焦${searchMap.get(targetKey) ?? targetKind}` : `Focus ${searchMap.get(targetKey) ?? targetKind}`}</button>
       </div>
     </div>
   );

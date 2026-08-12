@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { ReadModelRelationIndex } from "@drf-museum/domain-schema";
-import { connectedContextKeys, figurePlaceContexts, isPersonToPersonRelation, placeFigureContexts, projectTimelineEvents, relationConnector } from "./data/contextProjection";
+import { connectedContextKeys, contextEntityKeys, contextRelations, figurePlaceContexts, isPersonToPersonRelation, placeFigureContexts, projectTimelineEvents, relationConnector } from "./data/contextProjection";
 import type { SearchItem, TimelineData } from "./types";
 
 const timeline: TimelineData = {
@@ -57,13 +57,53 @@ describe("context projections", () => {
   it("adds relation-time assertions only to a focused timeline", () => {
     expect(projectTimelineEvents(timeline, relations, searchItems, undefined)).toHaveLength(1);
     const projected = projectTimelineEvents(timeline, relations, searchItems, "figure:laozi");
-    expect(projected).toHaveLength(2);
+    expect(projected).toHaveLength(1);
     expect(projected[0]).toMatchObject({ relationId: "relation:laozi-remembered-luoyang", year: 618, contextKeys: ["figure:laozi", "place:luoyang"] });
     expect(projected[0].title).toBe("Laozi → Luoyang");
   });
 
   it("keeps both endpoints in a shared context set", () => {
     expect([...connectedContextKeys(relations, "figure:laozi")]).toEqual(["figure:laozi", "place:luoyang"]);
+  });
+
+  it("projects every direct entity kind and bounded event bridges into the object panel", () => {
+    const participatedEvent = {
+      ...relations.items[0],
+      id: "relation:laozi-participated-kaiyuan",
+      source: { kind: "figure", slug: "laozi" },
+      target: { kind: "event", slug: "kaiyuan-institutional-expansion" },
+      relationType: "participated_in",
+    } as (typeof relations.items)[number];
+    const eventPlace = {
+      ...relations.items[0],
+      id: "relation:kaiyuan-occurred-luoyang",
+      source: { kind: "event", slug: "kaiyuan-institutional-expansion" },
+      target: { kind: "place", slug: "luoyang" },
+      relationType: "occurred_at",
+    } as (typeof relations.items)[number];
+    const coParticipant = {
+      ...relations.items[0],
+      id: "relation:confucius-participated-kaiyuan",
+      source: { kind: "figure", slug: "confucius" },
+      target: { kind: "event", slug: "kaiyuan-institutional-expansion" },
+      relationType: "participated_in",
+    } as (typeof relations.items)[number];
+    const index = { ...relations, items: [participatedEvent, eventPlace, coParticipant] };
+    expect([...contextEntityKeys(index, "figure:laozi")]).toEqual([
+      "figure:laozi",
+      "event:kaiyuan-institutional-expansion",
+      "place:luoyang",
+      "figure:confucius",
+    ]);
+    expect(contextRelations(index, "figure:laozi").map((relation) => relation.id)).toEqual([
+      "relation:laozi-participated-kaiyuan",
+      "relation:kaiyuan-occurred-luoyang",
+      "relation:confucius-participated-kaiyuan",
+    ]);
+  });
+
+  it("keeps the global relation index complete when there is no focus", () => {
+    expect(contextRelations(relations, undefined)).toEqual(relations.items);
   });
 
   it("projects a city into its directly related figures", () => {
@@ -130,5 +170,6 @@ describe("context projections", () => {
     const base = relations.items[0];
     expect(relationConnector({ ...base, relationType: "influenced" })).toBe("→");
     expect(relationConnector({ ...base, relationType: "contemporary_with" })).toBe("↔");
+    expect(relationConnector({ ...base, relationType: "active_in" })).toBe("→");
   });
 });
