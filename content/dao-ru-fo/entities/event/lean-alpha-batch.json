@@ -461,8 +461,74 @@
     "profile": {
       "eventKind": "dynastic_transition",
       "historicity": "documented",
-      "sequenceOrder": 9,
+      "sequenceOrder": 10,
       "eventScope": "imperial"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "yijing-studies-nalanda",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "义净在那烂陀学习",
+        "shortSummary": "约 675–685 年，义净在那烂陀学习十年；这是可定位的学习节点，不是完整南亚行程的替代品。",
+        "curatorialDescription": [
+          "将学习事件单独列出，可以把人物、时间和地点连接起来，同时不把那烂陀扩写成整条海陆路线。"
+        ],
+        "researchNote": "学习年限与那烂陀节点已有编年入口；具体课程、师承、译经项目和不同传记版本仍需逐项核对。",
+        "timeLabel": "约 675–685",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Yijing studies at Nalanda",
+        "shortSummary": "Around 675–685, Yijing studied at Nalanda for a decade; this is a mappable learning node, not a substitute for his full South Asian itinerary.",
+        "curatorialDescription": [
+          "A separate study event connects person, time and place without expanding Nalanda into a complete maritime or overland route."
+        ],
+        "researchNote": "The study duration and Nalanda node have a chronological reference; curriculum, teachers, translation projects and variant biographies still require item-level review.",
+        "timeLabel": "c. 675–685",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:yijing-datawiki"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "pilgrimage_and_learning_scope",
+        "timeType": "range",
+        "startYear": 675,
+        "endYear": 685,
+        "displayDate": {
+          "zh-CN": "约 675–685",
+          "en": "c. 675–685"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:yijing-datawiki"
+      }
+    ],
+    "sourceIds": [
+      "source:yijing-datawiki",
+      "source:unesco-nalanda"
+    ],
+    "profile": {
+      "eventKind": "journey",
+      "historicity": "documented",
+      "sequenceOrder": 9,
+      "eventScope": "local"
     }
   },
   {
@@ -528,7 +594,7 @@
     "profile": {
       "eventKind": "journey",
       "historicity": "documented",
-      "sequenceOrder": 10,
+      "sequenceOrder": 11,
       "eventScope": "transregional"
     }
   },
@@ -595,7 +661,7 @@
     "profile": {
       "eventKind": "analytical_period",
       "historicity": "inferred",
-      "sequenceOrder": 11,
+      "sequenceOrder": 12,
       "eventScope": "imperial"
     }
   },
@@ -661,7 +727,7 @@
     "profile": {
       "eventKind": "conflict",
       "historicity": "documented",
-      "sequenceOrder": 12,
+      "sequenceOrder": 13,
       "eventScope": "imperial"
     }
   },
@@ -727,7 +793,7 @@
     "profile": {
       "eventKind": "conflict",
       "historicity": "documented",
-      "sequenceOrder": 13,
+      "sequenceOrder": 14,
       "eventScope": "imperial"
     }
   },
@@ -793,7 +859,7 @@
     "profile": {
       "eventKind": "policy",
       "historicity": "documented",
-      "sequenceOrder": 14,
+      "sequenceOrder": 15,
       "eventScope": "imperial"
     }
   }

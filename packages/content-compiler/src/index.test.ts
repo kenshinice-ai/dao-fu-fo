@@ -102,7 +102,7 @@ describe("public compiler boundary", () => {
     const passage = JSON.parse(await readFile(join(outputDirectory, "entities/passage/form-is-emptiness.en.json"), "utf8"));
     const historicalTimeline = JSON.parse(await readFile(join(outputDirectory, "timeline/overview.en.json"), "utf8"));
     const suitangTimeline = JSON.parse(await readFile(join(outputDirectory, "timeline/suitang.en.json"), "utf8"));
-    expect(historicalTimeline).toMatchObject({ startYear: -600, endYear: 1200 });
+    expect(historicalTimeline).toMatchObject({ startYear: -600, endYear: 1529 });
     expect(historicalTimeline.events.length).toBeGreaterThan(suitangTimeline.events.length);
     expect(suitangTimeline).toMatchObject({ startYear: 581, endYear: 907 });
     const reviewQueue = JSON.parse(await readFile(join(outputDirectory, "manifest/review-queue.json"), "utf8"));

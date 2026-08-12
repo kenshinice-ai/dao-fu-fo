@@ -117,7 +117,8 @@ function eventFocus(event: TimelineEvent): string {
 
 function tabForFocus(focus: string, fallback: AtlasTab): AtlasTab {
   const kind = focus.split(":")[0];
-  if (kind === "place" || kind === "figure") return "figures";
+  if (kind === "figure") return "figures";
+  if (kind === "place") return "places";
   if (kind === "event") return "events";
   if (kind === "route") return "routes";
   if (kind === "text") return "texts";
@@ -132,23 +133,14 @@ function scopeKeyForState(state: RouteState): string | undefined {
 }
 
 /**
- * A selection made inside a place/event dossier inherits that dossier as its
- * explicit scope. This is the URL contract that keeps map, object panel and
- * returned links on the same question. Map actions may pass null deliberately
- * when they are leaving the dossier (for example a trajectory stop).
+ * Entity selection has one canonical subject. Place/event scope is useful while
+ * that place/event remains selected, but must not leak into the next entity.
+ * This keeps the URL, active tab, map projection and detail panel on the same
+ * question instead of encoding a hidden second focus.
  */
-function scopeForSelection(state: RouteState, focus: string, explicitScope?: string | null): string | undefined {
+function scopeForSelection(explicitScope?: string | null): string | undefined {
   if (explicitScope !== undefined) return explicitScope === null ? undefined : explicitScope;
-  // A scope is context for a figure/event selection, never a second parent
-  // for a newly selected place. This prevents URLs such as
-  // focus=place:qufu&scope=place:qufu when switching panels from a scoped
-  // figure back to a place.
-  if (state.scope) return /^(figure|event):/.test(focus) ? state.scope : undefined;
-  const derivedScope = scopeKeyForState(state);
-  const currentKind = state.focus?.split(":")[0];
-  return derivedScope && derivedScope !== focus && /^(figure|event):/.test(focus) && (currentKind === "place" || currentKind === "event")
-    ? derivedScope
-    : undefined;
+  return undefined;
 }
 
 function scopeLabelFor(state: RouteState, locale: Locale): string | undefined {
@@ -338,25 +330,22 @@ export function AtlasWorkspace({ locale, state, onChange, className = "", headin
     return counts;
   }, [data]);
 
-  const selectFocus = (focus: string, explicitScope?: string | null, syncTab = true) => updateState({
+  const selectFocus = (focus: string, explicitScope?: string | null) => updateState({
     focus,
-    scope: scopeForSelection(state, focus, explicitScope),
+    scope: scopeForSelection(explicitScope),
     detail: undefined,
-    ...(syncTab ? { atlasTab: tabForFocus(focus, state.atlasTab) } : {}),
+    atlasTab: tabForFocus(focus, state.atlasTab),
     view: "map",
     mapLayer: "real",
   });
-  // Object-card selection stays in the active panel so its adjacent Inspect
-  // action remains available. Map/network selection explicitly changes the
-  // panel because it is a cross-context navigation gesture.
-  const setFocus = (focus: string) => selectFocus(focus, undefined, false);
+  const setFocus = (focus: string) => selectFocus(focus);
   const setMapFocus = (focus: string, scope?: string | null) => selectFocus(focus, scope);
   const openDetail = (detail: string) => {
     const relationDetail = detail.startsWith("relation:");
     const focus = relationDetail ? state.focus : detail;
     updateState({
       focus,
-      scope: relationDetail ? state.scope : scopeForSelection(state, focus ?? detail),
+      scope: relationDetail ? state.scope : undefined,
       detail,
       atlasTab: relationDetail ? state.atlasTab : tabForFocus(detail, state.atlasTab),
       view: "map",

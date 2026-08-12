@@ -115,6 +115,17 @@ function firstEnum<T extends string>(value: string | null, schema: z.ZodType<T>,
   return value && schema.safeParse(value).success ? value as T : fallback;
 }
 
+function atlasTabForFocus(focus: string | undefined, fallback: AtlasTab): AtlasTab {
+  const kind = focus?.split(":")[0];
+  if (kind === "figure") return "figures";
+  if (kind === "event") return "events";
+  if (kind === "place") return "places";
+  if (kind === "route") return "routes";
+  if (kind === "text") return "texts";
+  if (kind === "passage") return "sayings";
+  return fallback;
+}
+
 export function parseRouteState(search: string | URLSearchParams): RouteState {
   const params = typeof search === "string" ? new URLSearchParams(search.startsWith("?") ? search.slice(1) : search) : search;
   const view = firstEnum(params.get("view"), ExploreViewSchema, DEFAULT_ROUTE_STATE.view);
@@ -124,11 +135,13 @@ export function parseRouteState(search: string | URLSearchParams): RouteState {
   const requestedMapLayers = parseMapLayers(params.get("layers"));
   const hasExplicitMapLayers = params.has("layers");
   const requestedQuery = params.get("q")?.trim().slice(0, 120) || undefined;
+  const focus = params.get("focus")?.trim() || undefined;
+  const requestedTab = firstEnum(params.get("tab"), AtlasTabSchema, DEFAULT_ROUTE_STATE.atlasTab);
   const candidate = {
     ...DEFAULT_ROUTE_STATE,
     lang: firstEnum(params.get("lang"), LocaleSchema, DEFAULT_ROUTE_STATE.lang),
     view,
-    atlasTab: firstEnum(params.get("tab"), AtlasTabSchema, DEFAULT_ROUTE_STATE.atlasTab),
+    atlasTab: params.has("tab") ? requestedTab : atlasTabForFocus(focus, requestedTab),
     timelineMode: firstEnum(params.get("timeline"), TimelineModeSchema, DEFAULT_ROUTE_STATE.timelineMode),
     mode: firstEnum(params.get("mode"), ViewModeSchema, DEFAULT_ROUTE_STATE.mode),
     from: parseNumber(params.get("from")),
@@ -137,7 +150,7 @@ export function parseRouteState(search: string | URLSearchParams): RouteState {
     entityTypes: parseList(params.get("entityTypes"), EntityKindSchema),
     evidence: parseList(params.get("evidence"), EvidenceLayerSchema),
     certainty: parseList(params.get("certainty"), ConfidenceSchema),
-    focus: params.get("focus")?.trim() || undefined,
+    focus,
     scope: params.get("scope")?.trim() || undefined,
     detail: params.get("detail")?.trim() || undefined,
     compare: params.get("compare") ? params.get("compare")!.split(",").map((item) => item.trim()).filter(Boolean).slice(0, 3) : [],
@@ -160,7 +173,8 @@ export function serializeRouteState(state: RouteState): string {
   const params = new URLSearchParams();
   params.set("lang", parsed.lang);
   if (parsed.view !== DEFAULT_ROUTE_STATE.view) params.set("view", parsed.view);
-  if (parsed.atlasTab !== DEFAULT_ROUTE_STATE.atlasTab) params.set("tab", parsed.atlasTab);
+  const focusTab = atlasTabForFocus(parsed.focus, DEFAULT_ROUTE_STATE.atlasTab);
+  if (parsed.atlasTab !== DEFAULT_ROUTE_STATE.atlasTab || parsed.atlasTab !== focusTab) params.set("tab", parsed.atlasTab);
   if (parsed.timelineMode !== DEFAULT_ROUTE_STATE.timelineMode) params.set("timeline", parsed.timelineMode);
   if (parsed.mode !== DEFAULT_ROUTE_STATE.mode) params.set("mode", parsed.mode);
   if (parsed.from !== undefined) params.set("from", String(parsed.from));

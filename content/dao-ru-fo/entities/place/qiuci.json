@@ -15,7 +15,7 @@
         "本条使用现实地理层描述区域节点；具体佛寺、石窟、人物与艺术对象需要另建条目。",
         "“龟兹”是历史名称，现代地理对应和历史范围不能用一个点位完全替代。"
       ],
-      "researchNote": "需要补充历史地名对应、考古报告、石窟和语言文化资料的具体定位。",
+      "researchNote": "已用龟兹区域遗址的近似点补足地图坐标；该点不是龟兹城址或单一石窟的精确位置。历史地名对应、考古报告、石窟和语言文化资料仍需继续逐项定位。",
       "timeLabel": "隋唐交通与佛教交流语境",
       "keyFacts": [
         {
@@ -38,7 +38,7 @@
         "This record uses the real-geography layer for a regional node; specific monasteries, caves, figures and objects require separate records.",
         "Kucha is a historical name whose modern referent and historical extent cannot be reduced to one point."
       ],
-      "researchNote": "Historical place-name mapping, archaeological reports, cave sites and linguistic-cultural sources still need precise locators.",
+      "researchNote": "A regional approximation derived from Kucha-area heritage sites now supplies the map coordinate; it is not the exact location of the Kucha city site or one cave. Historical place-name mapping, archaeological reports, cave sites and linguistic-cultural sources still need item-level locators.",
       "timeLabel": "Sui–Tang transport and Buddhist exchange context",
       "keyFacts": [
         {
@@ -87,7 +87,11 @@
   "profile": {
     "placeReality": "approximate_region",
     "geometryType": "point",
-    "coordinateConfidence": "not_applicable",
+    "coordinates": [
+      82.778,
+      41.82
+    ],
+    "coordinateConfidence": "approximate",
     "geographicSourceId": "source:unesco-silk-roads-corridor"
   }
 }

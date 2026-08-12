@@ -22,4 +22,21 @@ describe("route state", () => {
     expect(state.mapLayer).toBe("cosmos");
     expect(state.traditions).toEqual(["daoism", "confucianism", "buddhism"]);
   });
+
+  it("derives the entity panel from a focus when the URL does not provide a tab", () => {
+    expect(parseRouteState("?focus=place:qufu").atlasTab).toBe("places");
+    expect(parseRouteState("?focus=event:yijing-studies-nalanda").atlasTab).toBe("events");
+    expect(parseRouteState("?focus=figure:yijing").atlasTab).toBe("figures");
+  });
+
+  it("preserves an explicit relation panel for a focused figure", () => {
+    expect(parseRouteState("?tab=relations&focus=figure:confucius").atlasTab).toBe("relations");
+  });
+
+  it("keeps an explicitly selected default panel when it differs from the focus panel", () => {
+    const placeInFigurePanel = { ...parseRouteState("?focus=place:changan"), atlasTab: "figures" as const };
+    const serialized = serializeRouteState(placeInFigurePanel);
+    expect(serialized).toContain("tab=figures");
+    expect(parseRouteState(serialized)).toEqual(placeInFigurePanel);
+  });
 });

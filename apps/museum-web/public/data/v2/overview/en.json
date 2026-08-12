@@ -27,7 +27,7 @@
       "subtitle": "道",
       "statement": "Follow texts, mountains, institutions and lineages to distinguish Daoist thought from organised Daoism.",
       "counts": {
-        "figures": 13,
+        "figures": 20,
         "texts": 6,
         "passages": 4
       },
@@ -42,7 +42,7 @@
       "subtitle": "儒",
       "statement": "Follow ritual, classical learning and state education to see Confucian traditions embedded in imperial institutions.",
       "counts": {
-        "figures": 6,
+        "figures": 16,
         "texts": 3,
         "passages": 4
       },
@@ -57,7 +57,7 @@
       "subtitle": "佛",
       "statement": "Follow pilgrimage, translation and monasteries to see how an imported tradition found new forms in China.",
       "counts": {
-        "figures": 13,
+        "figures": 24,
         "texts": 7,
         "passages": 6
       },

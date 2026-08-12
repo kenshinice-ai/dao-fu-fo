@@ -1,0 +1,134 @@
+[
+  {
+    "kind": "place", "slug": "handan", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_inferred", "importance": 3, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "邯郸", "subtitle": "战国赵地与先秦学术的城市尺度锚点", "shortSummary": "邯郸作为赵地城市锚点，连接荀子活动、先秦政治和礼学讨论。", "curatorialDescription": ["地图使用城市级近似点，不把人物活动压缩成一个具体讲学地址。"], "researchNote": "赵国宫城、学术往来和荀子具体活动地点仍需按史传和考古资料细分。", "timeLabel": "战国赵地语境", "keyFacts": [] },
+      "en": { "title": "Handan", "subtitle": "A city-scale anchor for Zhao and pre-Qin learning", "shortSummary": "Handan provides a Zhao-state city anchor for Xunzi, early political thought and debates on ritual learning.", "curatorialDescription": ["The map uses a city-scale approximation and does not reduce activity to one teaching address."], "researchNote": "The Zhao palace, intellectual exchanges and Xunzi's specific activity sites require item-level separation.", "timeLabel": "Zhao-state context in the Warring States period", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "confucianism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:han-classics-biographies" }],
+    "temporalAssertions": [{ "predicate": "geographic_and_religious_scope", "timeType": "atemporal", "displayDate": { "zh-CN": "战国赵地城市锚点", "en": "City anchor for Warring States Zhao" }, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:historical-geography-expanded" }],
+    "sourceIds": ["source:han-classics-biographies", "source:historical-geography-expanded", "source:editorial-method"], "related": [],
+    "profile": { "placeReality": "real_historical", "geometryType": "point", "coordinates": [114.49, 36.62], "coordinateConfidence": "approximate", "geographicSourceId": "source:historical-geography-expanded" }
+  },
+  {
+    "kind": "place", "slug": "yuyao", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_inferred", "importance": 3, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "余姚", "subtitle": "阳明学人物与江南地方文化的城市锚点", "shortSummary": "余姚连接王阳明的出生地记忆、地方教育和明代心学传播。", "curatorialDescription": ["人物与地方的关系使用城市尺度入口，不把后世纪念景观等同于人物全部思想形成。"], "researchNote": "阳明故居、书院与明代地方行政空间仍需按遗产与文献来源继续定位。", "timeLabel": "明代江南地方文化语境", "keyFacts": [] },
+      "en": { "title": "Yuyao", "subtitle": "A city anchor for Wang Yangming and Jiangnan learning", "shortSummary": "Yuyao connects Wang Yangming's birthplace memory with local education and the circulation of Ming Neo-Confucian learning.", "curatorialDescription": ["The figure–place relation is a city-scale entry and does not equate later memorial landscapes with the whole formation of his thought."], "researchNote": "Wang Yangming's residence, academies and Ming local-administrative setting require further heritage- and text-level localisation.", "timeLabel": "Ming Jiangnan cultural context", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "confucianism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:song-confucian-literati-records" }],
+    "temporalAssertions": [{ "predicate": "geographic_and_religious_scope", "timeType": "atemporal", "displayDate": { "zh-CN": "明代江南城市锚点", "en": "Ming Jiangnan city anchor" }, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:historical-geography-expanded" }],
+    "sourceIds": ["source:song-confucian-literati-records", "source:historical-geography-expanded", "source:editorial-method"], "related": [],
+    "profile": { "placeReality": "real_historical", "geometryType": "point", "coordinates": [121.15, 30.04], "coordinateConfidence": "approximate", "geographicSourceId": "source:historical-geography-expanded" }
+  },
+  {
+    "kind": "place", "slug": "linchuan", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_inferred", "importance": 3, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "临川", "subtitle": "北宋改革与士大夫文化的地方锚点", "shortSummary": "临川为王安石的地方身份、学术网络和北宋政治记忆提供城市尺度入口。", "curatorialDescription": ["地图点位只表达地方文化与人物生平的城市范围，不代替具体宅第和行政地点。"], "researchNote": "王安石出生地、地方文献和北宋行政空间仍需继续核对。", "timeLabel": "北宋临川地方文化语境", "keyFacts": [] },
+      "en": { "title": "Linchuan", "subtitle": "A local anchor for Northern Song reform and literati culture", "shortSummary": "Linchuan provides a city-scale entry into Wang Anshi's local identity, learning network and Northern Song political memory.", "curatorialDescription": ["The map expresses a local cultural and biographical range, not a specific residence or office."], "researchNote": "Wang Anshi's birthplace, local records and Northern Song administrative setting require further checking.", "timeLabel": "Northern Song Linchuan context", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "confucianism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:song-confucian-literati-records" }],
+    "temporalAssertions": [{ "predicate": "geographic_and_religious_scope", "timeType": "atemporal", "displayDate": { "zh-CN": "北宋临川地方锚点", "en": "Northern Song Linchuan anchor" }, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:historical-geography-expanded" }],
+    "sourceIds": ["source:song-confucian-literati-records", "source:historical-geography-expanded", "source:editorial-method"], "related": [],
+    "profile": { "placeReality": "real_historical", "geometryType": "point", "coordinates": [116.36, 27.98], "coordinateConfidence": "approximate", "geographicSourceId": "source:historical-geography-expanded" }
+  },
+  {
+    "kind": "place", "slug": "huangzhou", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_inferred", "importance": 3, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "黄州", "subtitle": "宋代贬谪文学与江岸文化景观", "shortSummary": "黄州连接苏轼贬谪时期的文学、地方治理记忆和佛道山水语境。", "curatorialDescription": ["黄州是人物事件的地方尺度锚点，文学表达与实际行政活动保持分层。"], "researchNote": "赤壁、东坡遗迹与地方行政沿革仍需分别定位，不能把文学地名合并为单一遗址。", "timeLabel": "北宋黄州语境", "keyFacts": [] },
+      "en": { "title": "Huangzhou", "subtitle": "A Song literary and riverside landscape of exile", "shortSummary": "Huangzhou connects Su Shi's exile-period writing with local governance memory and Buddhist–Daoist landscape contexts.", "curatorialDescription": ["Huangzhou is a local-scale anchor; literary expression and administrative activity remain separate layers."], "researchNote": "Red Cliff, Dongpo sites and local administrative history require separate locators rather than one merged literary monument.", "timeLabel": "Northern Song Huangzhou context", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "confucianism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:chinese-literati-records" }, { "tradition": "buddhism", "role": "secondary", "isPrimary": false, "confidence": "low", "evidenceLayer": "scholarly_interpretation", "sourceId": "source:editorial-method" }],
+    "temporalAssertions": [{ "predicate": "geographic_and_religious_scope", "timeType": "atemporal", "displayDate": { "zh-CN": "北宋文人与江岸文化锚点", "en": "Northern Song literati and riverside culture anchor" }, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:historical-geography-expanded" }],
+    "sourceIds": ["source:chinese-literati-records", "source:historical-geography-expanded", "source:editorial-method"], "related": [],
+    "profile": { "placeReality": "real_historical", "geometryType": "point", "coordinates": [114.87, 30.45], "coordinateConfidence": "approximate", "geographicSourceId": "source:historical-geography-expanded" }
+  },
+  {
+    "kind": "place", "slug": "xunyang", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_inferred", "importance": 3, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "浔阳", "subtitle": "陶渊明与中古江南隐逸文化的区域锚点", "shortSummary": "浔阳把陶渊明的地方身份、归隐叙事和中古山水文化放回江南区域空间。", "curatorialDescription": ["浔阳使用区域尺度的历史地理入口，不把后世陶渊明遗迹等同于晋代原址。"], "researchNote": "浔阳、柴桑与九江历史地名的对应以及具体居止地点仍需按地方志核对。", "timeLabel": "东晋江南地方语境", "keyFacts": [] },
+      "en": { "title": "Xunyang", "subtitle": "A regional anchor for Tao Yuanming and medieval Jiangnan reclusion", "shortSummary": "Xunyang places Tao Yuanming's local identity, reclusion narratives and medieval landscape culture in a Jiangnan regional setting.", "curatorialDescription": ["Xunyang is a historical-geography entry at regional scale and does not equate later Tao Yuanming sites with a Jin-period original location."], "researchNote": "The relation among Xunyang, Chaisang and Jiujiang, and Tao's specific residences, require local-gazetteer review.", "timeLabel": "Eastern Jin Jiangnan context", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "low", "evidenceLayer": "scholarly_interpretation", "sourceId": "source:chinese-literati-records" }, { "tradition": "confucianism", "role": "secondary", "isPrimary": false, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:editorial-method" }],
+    "temporalAssertions": [{ "predicate": "geographic_and_religious_scope", "timeType": "atemporal", "displayDate": { "zh-CN": "东晋浔阳区域锚点", "en": "Eastern Jin Xunyang regional anchor" }, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:historical-geography-expanded" }],
+    "sourceIds": ["source:chinese-literati-records", "source:historical-geography-expanded", "source:editorial-method"], "related": [],
+    "profile": { "placeReality": "approximate_region", "geometryType": "point", "coordinates": [116.0, 29.72], "coordinateConfidence": "approximate", "geographicSourceId": "source:historical-geography-expanded" }
+  },
+  {
+    "kind": "place", "slug": "kaifeng", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_inferred", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "开封", "subtitle": "北宋政治、经学与文人制度的都城锚点", "shortSummary": "开封为北宋士大夫、改革、史学和文学活动提供都城尺度空间。", "curatorialDescription": ["都城点位承载制度与人物网络，不等同于人物在城内的每一处活动。"], "researchNote": "北宋宫城、官署、书院和人物活动地址需要进一步拆成城市与机构条目。", "timeLabel": "北宋东京语境", "keyFacts": [] },
+      "en": { "title": "Kaifeng", "subtitle": "A Northern Song capital anchor for politics, learning and literati institutions", "shortSummary": "Kaifeng provides the capital-scale setting for Northern Song scholar-officials, reform, historiography and literary activity.", "curatorialDescription": ["The capital point carries institutional and personal networks without assigning every activity to one location within the city."], "researchNote": "Northern Song palaces, offices, academies and figure-specific addresses require separate institution and place records.", "timeLabel": "Northern Song Dongjing context", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "confucianism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:song-confucian-literati-records" }],
+    "temporalAssertions": [{ "predicate": "geographic_and_religious_scope", "timeType": "atemporal", "displayDate": { "zh-CN": "北宋都城制度锚点", "en": "Northern Song capital-institution anchor" }, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:historical-geography-expanded" }],
+    "sourceIds": ["source:song-confucian-literati-records", "source:historical-geography-expanded", "source:editorial-method"], "related": [],
+    "profile": { "placeReality": "real_historical", "geometryType": "point", "coordinates": [114.31, 34.8], "coordinateConfidence": "approximate", "geographicSourceId": "source:historical-geography-expanded" }
+  },
+  {
+    "kind": "place", "slug": "mount-huashan", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_inferred", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "华山", "subtitle": "道教山岳、隐逸与内丹传统的区域锚点", "shortSummary": "华山为陈抟等道教人物的山岳记忆和后世修炼传统提供现实地理入口。", "curatorialDescription": ["山岳坐标只表示文化景观范围，不证明每一则仙传或隐居故事的具体地点。"], "researchNote": "陈抟传记、华山宫观和后世道教遗产需要继续按时期拆分。", "timeLabel": "唐宋道教山岳语境", "keyFacts": [] },
+      "en": { "title": "Mount Hua", "subtitle": "A regional anchor for Daoist mountains, reclusion and inner-alchemy traditions", "shortSummary": "Mount Hua provides a real-geography entry into the mountain memory and later cultivation traditions associated with Chen Tuan and Daoism.", "curatorialDescription": ["The mountain coordinate represents a cultural landscape and does not prove every immortal biography or reclusion story at one exact site."], "researchNote": "Chen Tuan biographies, Mount Hua institutions and later Daoist heritage require period-specific separation.", "timeLabel": "Tang–Song Daoist mountain context", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:daoist-biographical-records" }],
+    "temporalAssertions": [{ "predicate": "cultural_landscape", "timeType": "atemporal", "displayDate": { "zh-CN": "唐宋道教山岳与后世遗产记忆", "en": "Tang–Song Daoist mountain and later heritage memory" }, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:historical-geography-expanded" }],
+    "sourceIds": ["source:daoist-biographical-records", "source:historical-geography-expanded", "source:editorial-method"], "related": [],
+    "profile": { "placeReality": "approximate_region", "geometryType": "point", "coordinates": [110.09, 34.48], "coordinateConfidence": "approximate", "geographicSourceId": "source:historical-geography-expanded" }
+  },
+  {
+    "kind": "place", "slug": "mount-tiantai", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_inferred", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "天台山", "subtitle": "天台宗教学、山岳寺院与东亚佛教传播的锚点", "shortSummary": "天台山连接智顗的教观组织、山岳寺院空间和后续东亚佛教传播。", "curatorialDescription": ["地图以山地范围表达宗派制度与文化景观，不将后世宗派影响回写为单一历史事件。"], "researchNote": "国清寺遗产、智顗活动阶段和东亚传承路线仍需按寺院与文本拆分。", "timeLabel": "隋唐佛教山岳语境", "keyFacts": [] },
+      "en": { "title": "Mount Tiantai", "subtitle": "A Buddhist mountain anchor for Tiantai teaching and East Asian transmission", "shortSummary": "Mount Tiantai connects Zhiyi's organisation of doctrine and practice with monastic space and later East Asian Buddhist transmission.", "curatorialDescription": ["The mountain range represents institutional and cultural landscape and does not turn later school influence into one historical event."], "researchNote": "Guoqing Monastery heritage, Zhiyi's activity phases and East Asian transmission routes require separate institution and text entries.", "timeLabel": "Sui–Tang Buddhist mountain context", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:buddhist-school-biographies" }],
+    "temporalAssertions": [{ "predicate": "cultural_landscape", "timeType": "atemporal", "displayDate": { "zh-CN": "隋唐天台佛教文化景观", "en": "Sui–Tang Tiantai Buddhist cultural landscape" }, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:historical-geography-expanded" }],
+    "sourceIds": ["source:buddhist-school-biographies", "source:historical-geography-expanded", "source:editorial-method"], "related": [],
+    "profile": { "placeReality": "real_historical", "geometryType": "point", "coordinates": [121.04, 29.21], "coordinateConfidence": "approximate", "geographicSourceId": "source:historical-geography-expanded" }
+  },
+  {
+    "kind": "place", "slug": "shaoguan", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_inferred", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "韶关", "subtitle": "岭南禅宗传播与慧能传统的城市锚点", "shortSummary": "韶关连接慧能南方活动、禅宗传承和岭南交通文化。", "curatorialDescription": ["城市锚点呈现人物与区域传播网络，不等同于慧能全部行迹或单一寺院遗址。"], "researchNote": "南华寺、曹溪地名和慧能传记版本需要继续逐层核对。", "timeLabel": "唐代岭南佛教语境", "keyFacts": [] },
+      "en": { "title": "Shaoguan", "subtitle": "A city anchor for southern Chan transmission and Huineng memory", "shortSummary": "Shaoguan connects Huineng's southern activity, Chan transmission and the Lingnan transport-cultural network.", "curatorialDescription": ["The city anchor presents a regional transmission network and does not stand for Huineng's whole itinerary or one monastery site."], "researchNote": "Nanhua Monastery, Caoxi place-names and versions of Huineng's biography require layered review.", "timeLabel": "Tang Lingnan Buddhist context", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:buddhist-school-biographies" }],
+    "temporalAssertions": [{ "predicate": "cultural_landscape", "timeType": "atemporal", "displayDate": { "zh-CN": "唐代岭南禅宗文化景观", "en": "Tang Lingnan Chan cultural landscape" }, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:historical-geography-expanded" }],
+    "sourceIds": ["source:buddhist-school-biographies", "source:historical-geography-expanded", "source:editorial-method"], "related": [],
+    "profile": { "placeReality": "real_historical", "geometryType": "point", "coordinates": [113.6, 24.81], "coordinateConfidence": "approximate", "geographicSourceId": "source:historical-geography-expanded" }
+  },
+  {
+    "kind": "place", "slug": "mount-baizhang", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_inferred", "importance": 3, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "百丈山", "subtitle": "禅门丛林制度与清规传统的山地锚点", "shortSummary": "百丈山连接怀海禅师、丛林组织和后世清规传统。", "curatorialDescription": ["山地坐标只表达寺院文化景观范围，不把清规的后世编纂史压缩成怀海一人创制。"], "researchNote": "百丈寺遗址、清规文本版本和怀海活动年代仍需继续拆分。", "timeLabel": "唐代禅门制度语境", "keyFacts": [] },
+      "en": { "title": "Mount Baizhang", "subtitle": "A mountain anchor for Chan monastic organisation and vinaya traditions", "shortSummary": "Mount Baizhang connects Baizhang Huaihai, monastic organisation and later清规 traditions.", "curatorialDescription": ["The mountain coordinate represents a monastery cultural landscape and does not assign the full later history of monastic rules to Huaihai alone."], "researchNote": "The Baizhang site, rule-text versions and Huaihai's activity dates require further separation.", "timeLabel": "Tang Chan institutional context", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:buddhist-school-biographies" }],
+    "temporalAssertions": [{ "predicate": "cultural_landscape", "timeType": "atemporal", "displayDate": { "zh-CN": "唐代禅门制度山地锚点", "en": "Tang Chan institutional mountain anchor" }, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:historical-geography-expanded" }],
+    "sourceIds": ["source:buddhist-school-biographies", "source:historical-geography-expanded", "source:editorial-method"], "related": [],
+    "profile": { "placeReality": "approximate_region", "geometryType": "point", "coordinates": [114.06, 28.56], "coordinateConfidence": "approximate", "geographicSourceId": "source:historical-geography-expanded" }
+  },
+  {
+    "kind": "place", "slug": "zhengding", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_inferred", "importance": 3, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "正定", "subtitle": "临济禅与北方寺院网络的城市锚点", "shortSummary": "正定连接临济义玄与北方禅宗寺院网络的地方记忆。", "curatorialDescription": ["城市尺度入口保留临济宗后续传播的制度与记忆层，不证明每一处早期活动坐标。"], "researchNote": "临济寺遗产、义玄活动年代及宗派谱系需要继续按碑刻和传记核对。", "timeLabel": "唐末五代禅宗语境", "keyFacts": [] },
+      "en": { "title": "Zhengding", "subtitle": "A city anchor for Linji Chan and northern monastic networks", "shortSummary": "Zhengding connects Linji Yixuan with the local memory of northern Chan monasteries.", "curatorialDescription": ["The city-scale entry preserves institutional and reception layers of later Linji transmission and does not prove every early activity coordinate."], "researchNote": "Linji Monastery heritage, Yixuan's dates and school genealogy require inscription- and biography-level review.", "timeLabel": "Late Tang–Five Dynasties Chan context", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:buddhist-school-biographies" }],
+    "temporalAssertions": [{ "predicate": "cultural_landscape", "timeType": "atemporal", "displayDate": { "zh-CN": "唐末五代临济禅区域锚点", "en": "Late Tang–Five Dynasties Linji Chan regional anchor" }, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:historical-geography-expanded" }],
+    "sourceIds": ["source:buddhist-school-biographies", "source:historical-geography-expanded", "source:editorial-method"], "related": [],
+    "profile": { "placeReality": "real_historical", "geometryType": "point", "coordinates": [114.57, 38.15], "coordinateConfidence": "approximate", "geographicSourceId": "source:historical-geography-expanded" }
+  },
+  {
+    "kind": "place", "slug": "yangzhou", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_inferred", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "扬州", "subtitle": "鉴真东渡、运河交通与唐代佛教传播的城市锚点", "shortSummary": "扬州连接鉴真的戒律传授、海上交通和唐代江南佛教网络。", "curatorialDescription": ["城市锚点表达出发与传播网络，不把东渡路线画成未经核定的逐段航线。"], "researchNote": "大明寺、鉴真活动阶段和东渡海路节点仍需接入寺院史与航路资料。", "timeLabel": "唐代江南佛教与交通语境", "keyFacts": [] },
+      "en": { "title": "Yangzhou", "subtitle": "A city anchor for Jianzhen, canal transport and Tang Buddhist transmission", "shortSummary": "Yangzhou connects Jianzhen's vinaya teaching, maritime movement and Tang Buddhist networks in Jiangnan.", "curatorialDescription": ["The city anchor expresses a departure and transmission network without drawing an unverified segment-by-segment sea route."], "researchNote": "Daming Monastery, Jianzhen's activity phases and maritime departure nodes require monastery-history and route sources.", "timeLabel": "Tang Jiangnan Buddhist and transport context", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:buddhist-school-biographies" }],
+    "temporalAssertions": [{ "predicate": "cultural_landscape", "timeType": "atemporal", "displayDate": { "zh-CN": "唐代江南佛教与交通城市锚点", "en": "Tang Jiangnan Buddhist and transport city anchor" }, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:historical-geography-expanded" }],
+    "sourceIds": ["source:buddhist-school-biographies", "source:historical-geography-expanded", "source:editorial-method"], "related": [],
+    "profile": { "placeReality": "real_historical", "geometryType": "point", "coordinates": [119.42, 32.39], "coordinateConfidence": "approximate", "geographicSourceId": "source:historical-geography-expanded" }
+  }
+]

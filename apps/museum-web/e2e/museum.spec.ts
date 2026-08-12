@@ -115,7 +115,7 @@ test("atlas figure index keeps all major and mythic figures focusable", async ({
   await page.goto("/explore?lang=en&view=map&focus=figure%3Ayan-shigu");
   await waitForMuseum(page);
   await waitForAtlas(page);
-  await expect(page.locator(".atlas-tab-nav button").filter({ hasText: "Figures" })).toContainText("32");
+  await expect(page.locator(".atlas-tab-nav button").filter({ hasText: "Figures" })).toContainText("60");
 
   const figureTitles = ["Laozi (Li Er)", "Confucius (Kong Qiu)", "Śākyamuni Buddha (Gautama)", "Fu Xi", "Xuanzang"];
   const search = page.getByRole("searchbox", { name: "Search atlas entities" });
@@ -192,7 +192,9 @@ test("map city selection opens the object dossier and figure relation network", 
   await cityDrawer.getByRole("button", { name: "Close detail", exact: true }).click();
 
   await page.locator(".atlas-tab-nav button").filter({ hasText: "Figures" }).click();
+  await expect(page.locator(".atlas-object-panel .atlas-tab-nav button.active")).toContainText("Figures");
   const xuanzangCard = page.locator(".atlas-object-card").filter({ hasText: "Xuanzang" }).first();
+  await expect(xuanzangCard).toBeVisible();
   await xuanzangCard.locator(".atlas-object-card-main").click();
   await expect(page).toHaveURL(/focus=figure%3Axuanzang/);
   await xuanzangCard.getByRole("button", { name: "Inspect", exact: true }).click();
@@ -211,12 +213,12 @@ test("map timeline rail, city people and scoped relations stay linked", async ({
 
   await rail.locator("[data-timeline-track-focus]").first().click();
   await expect(page).toHaveURL(/focus=place%3A/);
-  await expect(page.locator(".atlas-object-panel .atlas-tab-nav button.active")).toContainText("Figures");
-  await expect(page.locator("[data-atlas-scope-note]")).toContainText("Connected figures");
+  await expect(page.locator(".atlas-object-panel .atlas-tab-nav button.active")).toContainText("Places");
+  await expect(page.locator("[data-atlas-scope-note]")).toHaveCount(0);
 
   await page.goto("/explore?lang=en&view=map&focus=place%3Achangan");
   await waitForAtlas(page);
-  await expect(page.locator("[data-city-people] .map-context-figure-list li")).toHaveCount(11);
+  await expect(page.locator("[data-city-people] .map-context-figure-list li")).toHaveCount(18);
   const cityRelations = page.locator('[data-relation-scope="true"]');
   await expect(cityRelations).toBeVisible();
   await expect(cityRelations.locator(".relation-network-edge")).toHaveCount(1);
@@ -225,46 +227,41 @@ test("map timeline rail, city people and scoped relations stay linked", async ({
 
   const firstCityPerson = page.locator("[data-city-people] .map-context-figure-list li").first().getByRole("button").first();
   await firstCityPerson.click();
-  await expect(page).toHaveURL(/focus=figure%3A.*scope=place%3Achangan/);
-  await expect(page.locator("[data-atlas-scope-note]")).toContainText("Connected figures");
-  await expect(page.locator(".atlas-object-panel .atlas-panel-toolbar > span")).toHaveText("11 items");
-  await expect(page.locator(".atlas-object-panel .atlas-object-card")).toHaveCount(11);
-
-  await page.locator("[data-atlas-scope-note] button").click();
-  await expect(page).toHaveURL(/focus=place%3Achangan/);
+  await expect(page).toHaveURL(/focus=figure%3A/);
   await expect(page).not.toHaveURL(/scope=/);
-  await expect(page.locator("[data-city-people]")).toBeVisible();
+  await expect(page.locator(".atlas-object-panel .atlas-tab-nav button.active")).toContainText("Figures");
+  await expect(page.locator(".atlas-object-panel .atlas-panel-toolbar > span")).toHaveText("60 items");
+  await expect(page.locator("[data-figure-trajectory]")).toBeVisible();
 
+  await page.goto("/explore?lang=en&view=map&focus=place%3Achangan");
+  await waitForAtlas(page);
   const cityRelationsAfterReturn = page.locator('[data-relation-scope="true"]');
   await cityRelationsAfterReturn.locator(".relation-network-node").first().click();
-  await expect(page).toHaveURL(/focus=figure%3A.*scope=place%3Achangan/);
-  await expect(page.locator(".atlas-object-panel .atlas-panel-toolbar > span")).toHaveText("11 items");
+  await expect(page).toHaveURL(/focus=figure%3A/);
+  await expect(page).not.toHaveURL(/scope=/);
+  await expect(page.locator(".atlas-object-panel .atlas-panel-toolbar > span")).toHaveText("60 items");
   await expect(page.locator("[data-figure-trajectory]")).toBeVisible();
 });
 
-test("place-to-person selection keeps the place scope in the URL and relation tab", async ({ page }) => {
+test("place-to-person selection replaces the place with one canonical figure focus", async ({ page }) => {
   await page.goto("/explore?lang=en&view=map&focus=place%3Aqufu");
   await waitForMuseum(page);
   await waitForAtlas(page);
 
-  const confuciusCard = page.locator(".atlas-object-card").filter({ hasText: "Confucius (Kong Qiu)" }).first();
-  await confuciusCard.locator(".atlas-object-card-main").click();
-  await expect(page).toHaveURL(/focus=figure%3Aconfucius&scope=place%3Aqufu/);
+  await expect(page.locator(".atlas-object-panel .atlas-tab-nav button.active")).toContainText("Places");
+  await page.locator("[data-city-people]").getByRole("button", { name: "Confucius (Kong Qiu)", exact: true }).click();
+  await expect(page).toHaveURL(/focus=figure%3Aconfucius/);
+  await expect(page).not.toHaveURL(/scope=/);
   await expect(page.locator(".atlas-object-panel .atlas-tab-nav button.active")).toContainText("Figures");
-  await expect(page.locator("[data-atlas-scope-note]")).toContainText("Qufu · Connected figures · 1");
-  await expect(page.locator(".atlas-object-panel .atlas-panel-toolbar > span")).toHaveText("1 items");
+  await expect(page.locator("[data-atlas-scope-note]")).toHaveCount(0);
+  await expect(page.locator(".atlas-object-panel .atlas-panel-toolbar > span")).toHaveText("60 items");
+  await expect(page.locator("[data-figure-trajectory]")).toContainText("Confucius (Kong Qiu)");
 
   await page.locator(".atlas-tab-nav button").filter({ hasText: "Relations" }).click();
-  await expect(page).toHaveURL(/tab=relations&focus=figure%3Aconfucius&scope=place%3Aqufu/);
-  await expect(page.locator("[data-atlas-scope-note]")).toContainText("Qufu · Person relations in this place · 0");
+  await expect(page).toHaveURL(/tab=relations&focus=figure%3Aconfucius/);
+  await expect(page).not.toHaveURL(/scope=/);
   await expect(page.locator(".atlas-relation-card")).toHaveCount(0);
   await expect(page.locator(".atlas-empty-state")).toContainText("No entities match");
-
-  await page.locator("[data-atlas-scope-note] button").click();
-  await expect(page).toHaveURL(/focus=place%3Aqufu/);
-  await expect(page).not.toHaveURL(/scope=/);
-  await expect(page).not.toHaveURL(/tab=relations/);
-  await expect(page.locator("[data-city-people]")).toBeVisible();
 });
 
 test("figure focus presents an elegant saying card and only real person relations", async ({ page }) => {
@@ -289,14 +286,76 @@ test("figure focus presents an elegant saying card and only real person relation
   await expect(peopleRelations).not.toContainText("Mount Lu");
 });
 
-test("figure place context keeps coordinate-pending places visible", async ({ page }) => {
+test("figure place context maps an approximate historical region", async ({ page }) => {
   await page.goto("/explore?lang=en&view=map&focus=figure%3Akumarajiva");
   await waitForMuseum(page);
   await waitForAtlas(page);
 
-  await expect(page.locator("[data-figure-trajectory]")).toContainText("1 mapped stops · 1 pending places");
-  await expect(page.locator("[data-map-pending-places]")).toContainText("Kucha");
-  await expect(page.locator("[data-map-pending-places]")).toContainText("no drawable real-world coordinate");
+  await expect(page.locator("[data-figure-trajectory]")).toContainText("2 mapped stops");
+  await expect(page.locator("[data-map-pending-places]")).toHaveCount(0);
+  await expect(page.locator("[data-figure-trajectory] .map-trajectory-list")).toContainText("Kucha");
+});
+
+test("Yijing route keeps figure and mapped stops linked without a stale place scope", async ({ page }) => {
+  await page.goto("/explore?lang=en&view=map&focus=figure%3Ayijing");
+  await waitForMuseum(page);
+  await waitForAtlas(page);
+
+  await expect(page.locator("[data-figure-trajectory]")).toContainText("2 mapped stops");
+  const trajectory = page.locator("[data-figure-trajectory] .map-trajectory-list");
+  await expect(trajectory).toContainText("Nalanda");
+  await expect(trajectory).toContainText("Luoyang");
+
+  await trajectory.getByRole("button", { name: /Nalanda/ }).click();
+  await expect(page).toHaveURL(/focus=place%3Analanda/);
+  const nalandaPeople = page.locator("[data-city-people]");
+  await expect(nalandaPeople).toContainText("Yijing");
+
+  await nalandaPeople.getByRole("button", { name: "Yijing", exact: true }).click();
+  await expect(page).toHaveURL(/focus=figure%3Ayijing/);
+  await expect(page).not.toHaveURL(/scope=/);
+  await expect(page.locator(".atlas-object-panel .atlas-tab-nav button.active")).toContainText("Figures");
+  await expect(page.locator("[data-figure-trajectory]")).toBeVisible();
+});
+
+test("Yijing Nalanda study keeps event, place and figure contexts aligned", async ({ page }) => {
+  await page.goto("/explore?lang=en&view=map&focus=figure%3Ayijing");
+  await waitForMuseum(page);
+  await waitForAtlas(page);
+
+  await page.locator("[data-figure-trajectory] .map-trajectory-list").getByRole("button", { name: /Nalanda/ }).click();
+  await expect(page).toHaveURL(/focus=place%3Analanda/);
+  const nalandaEvents = page.locator("[data-city-events]");
+  await expect(nalandaEvents).toContainText("Yijing studies at Nalanda");
+
+  await nalandaEvents.getByRole("button", { name: "Yijing studies at Nalanda", exact: true }).click();
+  await expect(page).toHaveURL(/focus=event%3Ayijing-studies-nalanda/);
+  const eventContext = page.locator("[data-event-context]");
+  await expect(eventContext).toContainText("Nalanda");
+  await expect(eventContext).toContainText("Yijing");
+});
+
+test("Xuanzang route keeps all drawable waypoints connected to person and place context", async ({ page }) => {
+  await page.goto("/explore?lang=en&view=map&focus=figure%3Axuanzang");
+  await waitForMuseum(page);
+  await waitForAtlas(page);
+
+  await expect(page.locator("[data-figure-trajectory]")).toContainText("4 mapped stops");
+  const trajectory = page.locator("[data-figure-trajectory] .map-trajectory-list");
+  await expect(trajectory).toContainText("Chang'an");
+  await expect(trajectory).toContainText("Dunhuang");
+  await expect(trajectory).toContainText("Kucha");
+  await expect(trajectory).toContainText("Nalanda");
+
+  await trajectory.getByRole("button", { name: /Kucha/ }).click();
+  await expect(page).toHaveURL(/focus=place%3Aqiuci/);
+  const people = page.locator("[data-city-people]");
+  await expect(people).toContainText("Xuanzang");
+  await expect(people).toContainText("Kumārajīva");
+  await people.getByRole("button", { name: "Xuanzang", exact: true }).click();
+  await expect(page).toHaveURL(/focus=figure%3Axuanzang/);
+  await expect(page).not.toHaveURL(/scope=/);
+  await expect(page.locator(".atlas-object-panel .atlas-tab-nav button.active")).toContainText("Figures");
 });
 
 test("map keeps city switching and event selection available after a selection", async ({ page }) => {
@@ -360,7 +419,7 @@ test("relation focus filters the map and adds relation-time context", async ({ p
 
   await expect.poll(() => page.locator("#historical-map").getAttribute("data-map-visible-places")).not.toBe("0");
   await expect(page.locator("#historical-map")).toHaveAttribute("data-map-focus-state", /mapped|position-pending/);
-  await expect(page.locator("#historical-map")).toHaveAttribute("data-map-visible-routes", "3");
+  await expect(page.locator("#historical-map")).toHaveAttribute("data-map-visible-routes", "4");
   await page.locator(".atlas-tab-nav button").filter({ hasText: "Relations" }).click();
   await expect(page.locator(".atlas-relation-card")).toHaveCount(0);
   await expect(page.locator(".atlas-empty-state")).toContainText("No entities match");
@@ -368,13 +427,29 @@ test("relation focus filters the map and adds relation-time context", async ({ p
   await page.goto("/explore?lang=en&view=map");
   await waitForAtlas(page);
   await page.locator(".atlas-tab-nav button").filter({ hasText: "Relations" }).click();
-  await expect(page.locator(".atlas-relation-card")).toHaveCount(4);
+  await expect(page.locator(".atlas-relation-card")).toHaveCount(16);
   await expect(page.locator(".atlas-relation-card").filter({ hasText: "Dao'an" }).first()).toContainText("→");
   await expect(page.locator(".atlas-relation-card").filter({ hasText: "Huiyuan" }).filter({ hasText: "Kumārajīva" }).first()).toContainText("↔");
+  await page.locator(".atlas-relation-card .atlas-object-card-main").first().click();
+  await expect(page.locator(".atlas-object-panel .atlas-tab-nav button.active")).toContainText("Figures");
+  await expect(page).toHaveURL(/focus=figure%3A/);
+  await expect(page).not.toHaveURL(/tab=relations/);
+  await expect(page).not.toHaveURL(/scope=/);
 
   await page.goto("/explore?lang=en&view=timeline&focus=figure%3Alaozi");
   await waitForMuseum(page);
   await expect(page.locator(".timeline-list").getByText("Laozi (Li Er) → Chang'an Daoist monastic network", { exact: true })).toBeVisible();
+});
+
+test("direct figure relation URL never falls back to the global relation list", async ({ page }) => {
+  await page.goto("/?lang=en&tab=relations&focus=figure%3Aconfucius");
+  await waitForMuseum(page);
+  await waitForAtlas(page);
+
+  await expect(page).toHaveURL(/tab=relations&focus=figure%3Aconfucius/);
+  await expect(page.locator(".atlas-object-panel .atlas-tab-nav button.active")).toContainText("Relations");
+  await expect(page.locator(".atlas-relation-card")).toHaveCount(0);
+  await expect(page.locator(".atlas-empty-state")).toContainText("No entities match");
 });
 
 test("map shares the historical time window with the timeline", async ({ page }) => {
@@ -402,7 +477,7 @@ test("homepage exposes the expanded figure gateways", async ({ page }) => {
   await expect(page.locator(".figure-spotlight-card").filter({ hasText: "老子（李耳）" })).toBeVisible();
   await expect(page.locator(".figure-spotlight-card").filter({ hasText: "孔子（孔丘）" })).toBeVisible();
   await expect(page.locator(".figure-spotlight-card").filter({ hasText: "释迦牟尼佛" })).toBeVisible();
-  await expect(page.getByText("当前收录 32 位人物，三种传统；空间待核处明确保留证据边界。", { exact: true })).toBeVisible();
+  await expect(page.getByText("当前收录 60 位人物，三种传统；空间待核处明确保留证据边界。", { exact: true })).toBeVisible();
 });
 
 test("representative historical, traditional and mythic figures resolve through the map gateway", async ({ page }) => {
@@ -516,17 +591,17 @@ test("Research exposes the quality audit and review queue filters", async ({ pag
   await waitForMuseum(page);
 
   await expect(page.getByRole("heading", { name: "See what still blocks publication" })).toBeVisible();
-  await expect(page.locator(".research-governance-status strong")).toHaveText("410");
+  await expect(page.locator(".research-governance-status strong")).toHaveText("684");
   await expect(page.getByRole("heading", { name: "Review queue" })).toBeVisible();
-  await expect(page.getByText("278 subjects shown; all statuses are read-only.", { exact: true })).toBeVisible();
-  await expect(page.locator(".research-review-queue li")).toHaveCount(278);
+  await expect(page.getByText("455 subjects shown; all statuses are read-only.", { exact: true })).toBeVisible();
+  await expect(page.locator(".research-review-queue li")).toHaveCount(455);
   await expect(page.getByRole("link", { name: "Historical reviewer (0)", exact: true })).toBeVisible();
   await expect(page.getByRole("link", { name: "Accessibility editor (0)", exact: true })).toBeVisible();
 
   await page.getByRole("link", { name: "Show all", exact: true }).click();
   await expect(page).toHaveURL(/audit=all/);
-  await expect(page.getByText("353 subjects shown; all statuses are read-only.", { exact: true })).toBeVisible();
-  await expect(page.locator(".research-review-queue li")).toHaveCount(353);
+  await expect(page.getByText("530 subjects shown; all statuses are read-only.", { exact: true })).toBeVisible();
+  await expect(page.locator(".research-review-queue li")).toHaveCount(530);
   await expect(page.getByText("figure:xuanzang", { exact: true })).toBeVisible();
 });
 

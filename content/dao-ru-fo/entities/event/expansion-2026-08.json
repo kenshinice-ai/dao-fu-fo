@@ -1,0 +1,1892 @@
+[
+  {
+    "kind": "event",
+    "slug": "xunzi-ritual-and-nature",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "荀子礼学与性论语境",
+        "shortSummary": "荀子在礼学、政治秩序与人性论之间展开论辩，形成先秦经学与制度思想的交汇语境。",
+        "curatorialDescription": [
+          "事件是人物思想活动的分析性时间段，不把《荀子》现存编纂压缩成一次讲学。",
+          "事件与人物、地点关系分开记录，以便在地图和关系页核对证据层。"
+        ],
+        "researchNote": "研究状态：事件已与人物和地点建立最小闭环；具体文本、机构、版本和空间边界仍需继续核对。",
+        "timeLabel": "约公元前 310–235 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Xunzi's ritual learning and human-nature debate",
+        "shortSummary": "Xunzi's debate on ritual, political order and human nature formed an intersection of early classical learning and institutional thought.",
+        "curatorialDescription": [
+          "This is an analytical period of intellectual activity, not a claim that the received Xunzi was compiled in one teaching session.",
+          "The event is recorded separately from figure and place relations so evidence layers can be checked on the map and relation view."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific texts, institutions, editions and spatial boundaries still require review.",
+        "timeLabel": "c. 310–235 BCE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:han-classics-biographies"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "analytic_period",
+        "timeType": "range",
+        "startYear": -310,
+        "endYear": -235,
+        "displayDate": {
+          "zh-CN": "约公元前 310–235 年",
+          "en": "c. 310–235 BCE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:han-classics-biographies"
+      }
+    ],
+    "sourceIds": [
+      "source:han-classics-biographies",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "inferred",
+      "sequenceOrder": 101,
+      "eventScope": "regional"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "dong-zhongshu-confucian-statecraft",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "董仲舒的经学与汉代制度思想",
+        "shortSummary": "董仲舒的经学解释与汉代政治秩序、天人关系讨论相连，形成制度思想的研究语境。",
+        "curatorialDescription": [
+          "本事件不直接复述“独尊儒术”的后世简化说法，具体制度与人物言论仍需逐篇核对。",
+          "事件与人物、地点关系分开记录，以便在地图和关系页核对证据层。"
+        ],
+        "researchNote": "研究状态：事件已与人物和地点建立最小闭环；具体文本、机构、版本和空间边界仍需继续核对。",
+        "timeLabel": "约公元前 140–110 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Dong Zhongshu's classical learning and Han statecraft",
+        "shortSummary": "Dong Zhongshu's classical interpretation connected with Han political order and Heaven–human discourse in a statecraft context.",
+        "curatorialDescription": [
+          "The event does not reproduce later simplifications of Confucian statecraft; specific institutions and arguments require text-by-text review.",
+          "The event is recorded separately from figure and place relations so evidence layers can be checked on the map and relation view."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific texts, institutions, editions and spatial boundaries still require review.",
+        "timeLabel": "c. 140–110 BCE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:han-classics-biographies"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_activity",
+        "timeType": "range",
+        "startYear": -140,
+        "endYear": -110,
+        "displayDate": {
+          "zh-CN": "约公元前 140–110 年",
+          "en": "c. 140–110 BCE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:han-classics-biographies"
+      }
+    ],
+    "sourceIds": [
+      "source:han-classics-biographies",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "documented",
+      "sequenceOrder": 102,
+      "eventScope": "imperial"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "han-yu-ancient-prose-and-orthodoxy",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "韩愈古文与道统论述",
+        "shortSummary": "韩愈的古文实践、儒家道统论和佛道论辩构成唐代公共文化中的一组相互关联但不等同的活动。",
+        "curatorialDescription": [
+          "事件以长安城市尺度呈现文人、官署和思想网络，不主张所有文章都在此地完成。",
+          "事件与人物、地点关系分开记录，以便在地图和关系页核对证据层。"
+        ],
+        "researchNote": "研究状态：事件已与人物和地点建立最小闭环；具体文本、机构、版本和空间边界仍需继续核对。",
+        "timeLabel": "约 800–824 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Han Yu's classical prose and discourse on orthodoxy",
+        "shortSummary": "Han Yu's prose, discourse on Confucian orthodoxy and Buddhist–Daoist polemics formed related but non-identical activities in Tang public culture.",
+        "curatorialDescription": [
+          "The Chang'an event presents literati, offices and intellectual networks without claiming every text was composed there.",
+          "The event is recorded separately from figure and place relations so evidence layers can be checked on the map and relation view."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific texts, institutions, editions and spatial boundaries still require review.",
+        "timeLabel": "c. 800–824 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chinese-literati-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "composition",
+        "timeType": "range",
+        "startYear": 800,
+        "endYear": 824,
+        "displayDate": {
+          "zh-CN": "约 800–824 年",
+          "en": "c. 800–824 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chinese-literati-records"
+      }
+    ],
+    "sourceIds": [
+      "source:chinese-literati-records",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "editorial_project",
+      "historicity": "documented",
+      "sequenceOrder": 103,
+      "eventScope": "regional"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "cheng-brothers-luoyang-learning",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "二程与洛学讲学网络",
+        "shortSummary": "程颢、程颐与北宋洛阳学习网络相连，经典解释、师友往来和士大夫伦理在同一城市尺度相遇。",
+        "curatorialDescription": [
+          "共享事件用于表达学习网络，不把二程的思想和著述合并成一个人物或一套同时完成的学说。",
+          "事件与人物、地点关系分开记录，以便在地图和关系页核对证据层。"
+        ],
+        "researchNote": "研究状态：事件已与人物和地点建立最小闭环；具体文本、机构、版本和空间边界仍需继续核对。",
+        "timeLabel": "约 1050–1077 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "The Cheng brothers and the Luoyang learning network",
+        "shortSummary": "Cheng Hao and Cheng Yi connect with a Northern Song Luoyang learning network where classical interpretation, teachers and scholar-official ethics meet at city scale.",
+        "curatorialDescription": [
+          "The shared event expresses a learning network without merging the brothers' thought and writings into one person or one simultaneous doctrine.",
+          "The event is recorded separately from figure and place relations so evidence layers can be checked on the map and relation view."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific texts, institutions, editions and spatial boundaries still require review.",
+        "timeLabel": "c. 1050–1077 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:song-confucian-literati-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_activity",
+        "timeType": "range",
+        "startYear": 1050,
+        "endYear": 1077,
+        "displayDate": {
+          "zh-CN": "约 1050–1077 年",
+          "en": "c. 1050–1077 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:song-confucian-literati-records"
+      }
+    ],
+    "sourceIds": [
+      "source:song-confucian-literati-records",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "inferred",
+      "sequenceOrder": 104,
+      "eventScope": "regional"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "wang-yangming-yangming-learning",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "王阳明心学与地方讲学",
+        "shortSummary": "王阳明在地方治理、讲学和心学论述之间形成一条实践伦理线索，后世阳明学传播另作接受层。",
+        "curatorialDescription": [
+          "事件将余姚作为人物与地方学习网络的现实入口，不把后世书院遗产回写为明代同一机构。",
+          "事件与人物、地点关系分开记录，以便在地图和关系页核对证据层。"
+        ],
+        "researchNote": "研究状态：事件已与人物和地点建立最小闭环；具体文本、机构、版本和空间边界仍需继续核对。",
+        "timeLabel": "约 1508–1528 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Wang Yangming's mind learning and local teaching",
+        "shortSummary": "Wang Yangming's governance, teaching and mind-learning arguments form a line of practice ethics; later Yangmingist transmission remains a reception layer.",
+        "curatorialDescription": [
+          "Yuyao is a real entry into the figure and local learning network; later academy heritage is not projected back as the same Ming institution.",
+          "The event is recorded separately from figure and place relations so evidence layers can be checked on the map and relation view."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific texts, institutions, editions and spatial boundaries still require review.",
+        "timeLabel": "c. 1508–1528 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chinese-literati-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_activity",
+        "timeType": "range",
+        "startYear": 1508,
+        "endYear": 1528,
+        "displayDate": {
+          "zh-CN": "约 1508–1528 年",
+          "en": "c. 1508–1528 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chinese-literati-records"
+      }
+    ],
+    "sourceIds": [
+      "source:chinese-literati-records",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "documented",
+      "sequenceOrder": 105,
+      "eventScope": "regional"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "wang-anshi-reform-and-classics",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "王安石变法与新学",
+        "shortSummary": "王安石把经学解释、政策试验和北宋都城政治空间连接起来，呈现改革的制度过程而非个人标签。",
+        "curatorialDescription": [
+          "变法各项政策、反对者和后世评价仍需拆分；开封只承担都城尺度的空间锚点。",
+          "事件与人物、地点关系分开记录，以便在地图和关系页核对证据层。"
+        ],
+        "researchNote": "研究状态：事件已与人物和地点建立最小闭环；具体文本、机构、版本和空间边界仍需继续核对。",
+        "timeLabel": "约 1069–1076 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Wang Anshi's reforms and New Learning",
+        "shortSummary": "Wang Anshi's classical interpretation, policy experiments and Northern Song capital politics are connected as an institutional process rather than a personal label.",
+        "curatorialDescription": [
+          "Individual policies, opponents and later evaluations still require separation; Kaifeng supplies only a capital-scale spatial anchor.",
+          "The event is recorded separately from figure and place relations so evidence layers can be checked on the map and relation view."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific texts, institutions, editions and spatial boundaries still require review.",
+        "timeLabel": "c. 1069–1076 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-confucian-literati-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "policy",
+        "timeType": "range",
+        "startYear": 1069,
+        "endYear": 1076,
+        "displayDate": {
+          "zh-CN": "约 1069–1076 年",
+          "en": "c. 1069–1076 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-confucian-literati-records"
+      }
+    ],
+    "sourceIds": [
+      "source:song-confucian-literati-records",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "policy",
+      "historicity": "documented",
+      "sequenceOrder": 106,
+      "eventScope": "imperial"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "ouyang-xiu-song-history-and-prose",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "欧阳修的古文与宋代史学",
+        "shortSummary": "欧阳修的文集、史学参与和北宋士大夫公共文化在开封制度空间中交错，但各自的文本链仍需分开。",
+        "curatorialDescription": [
+          "事件是史学与文人活动的研究性阶段，不把所有文集写作归于开封一地。",
+          "事件与人物、地点关系分开记录，以便在地图和关系页核对证据层。"
+        ],
+        "researchNote": "研究状态：事件已与人物和地点建立最小闭环；具体文本、机构、版本和空间边界仍需继续核对。",
+        "timeLabel": "约 1042–1060 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Ouyang Xiu's prose and Song historiography",
+        "shortSummary": "Ouyang Xiu's writings, historiographical work and Northern Song public culture intersect in the Kaifeng institutional setting while retaining separate textual chains.",
+        "curatorialDescription": [
+          "This is a research period for historiography and literati activity, not an assignment of all collected writings to Kaifeng.",
+          "The event is recorded separately from figure and place relations so evidence layers can be checked on the map and relation view."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific texts, institutions, editions and spatial boundaries still require review.",
+        "timeLabel": "c. 1042–1060 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-confucian-literati-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "composition",
+        "timeType": "range",
+        "startYear": 1042,
+        "endYear": 1060,
+        "displayDate": {
+          "zh-CN": "约 1042–1060 年",
+          "en": "c. 1042–1060 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-confucian-literati-records"
+      }
+    ],
+    "sourceIds": [
+      "source:song-confucian-literati-records",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "editorial_project",
+      "historicity": "documented",
+      "sequenceOrder": 107,
+      "eventScope": "imperial"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "sima-guang-zizhi-tongjian",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "司马光编纂《资治通鉴》",
+        "shortSummary": "司马光主持的编年史学工程把洛阳文人网络、史料整理与北宋政治判断连接起来。",
+        "curatorialDescription": [
+          "编纂、进呈和后续版本不是同一节点；当前事件只覆盖主要编纂语境。",
+          "事件与人物、地点关系分开记录，以便在地图和关系页核对证据层。"
+        ],
+        "researchNote": "研究状态：事件已与人物和地点建立最小闭环；具体文本、机构、版本和空间边界仍需继续核对。",
+        "timeLabel": "约 1066–1084 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Sima Guang's compilation of the Comprehensive Mirror",
+        "shortSummary": "Sima Guang's annalistic project connects the Luoyang literati network, source organisation and Northern Song political judgement.",
+        "curatorialDescription": [
+          "Compilation, presentation and later editions are not one node; this event covers the principal compilation context.",
+          "The event is recorded separately from figure and place relations so evidence layers can be checked on the map and relation view."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific texts, institutions, editions and spatial boundaries still require review.",
+        "timeLabel": "c. 1066–1084 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-confucian-literati-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "compilation",
+        "timeType": "range",
+        "startYear": 1066,
+        "endYear": 1084,
+        "displayDate": {
+          "zh-CN": "约 1066–1084 年",
+          "en": "c. 1066–1084 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-confucian-literati-records"
+      }
+    ],
+    "sourceIds": [
+      "source:song-confucian-literati-records",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "editorial_project",
+      "historicity": "documented",
+      "sequenceOrder": 108,
+      "eventScope": "regional"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "su-shi-huangzhou-writing",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "苏轼黄州流寓与写作",
+        "shortSummary": "黄州流寓把苏轼的政治处境、地方经验、诗文写作和佛道思想资源放在同一现实地点语境中。",
+        "curatorialDescription": [
+          "事件不把黄州写作等同于全部“东坡”形象，也不把每一篇诗文自动定位于此。",
+          "事件与人物、地点关系分开记录，以便在地图和关系页核对证据层。"
+        ],
+        "researchNote": "研究状态：事件已与人物和地点建立最小闭环；具体文本、机构、版本和空间边界仍需继续核对。",
+        "timeLabel": "约 1079–1084 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Su Shi's Huangzhou exile and writing",
+        "shortSummary": "The Huangzhou exile places Su Shi's political circumstances, local experience, writing and Buddhist–Daoist resources in one real-place context.",
+        "curatorialDescription": [
+          "The event does not equate Huangzhou writing with the whole Dongpo image or automatically locate every poem there.",
+          "The event is recorded separately from figure and place relations so evidence layers can be checked on the map and relation view."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific texts, institutions, editions and spatial boundaries still require review.",
+        "timeLabel": "c. 1079–1084 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chinese-literati-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 1079,
+        "endYear": 1084,
+        "displayDate": {
+          "zh-CN": "约 1079–1084 年",
+          "en": "c. 1079–1084 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chinese-literati-records"
+      }
+    ],
+    "sourceIds": [
+      "source:chinese-literati-records",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "documented",
+      "sequenceOrder": 109,
+      "eventScope": "regional"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "tao-yuanming-reclusion-and-poetry",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "陶渊明归隐与诗文传统",
+        "shortSummary": "陶渊明的归隐叙事、诗文传述和中古文人接受在浔阳区域尺度上交汇，但文学形象与生平事实保持分层。",
+        "curatorialDescription": [
+          "浔阳为区域入口，不主张已经定位陶渊明每次居所或作品写作地点。",
+          "事件与人物、地点关系分开记录，以便在地图和关系页核对证据层。"
+        ],
+        "researchNote": "研究状态：事件已与人物和地点建立最小闭环；具体文本、机构、版本和空间边界仍需继续核对。",
+        "timeLabel": "约 405–427 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Tao Yuanming's reclusion and poetic tradition",
+        "shortSummary": "Tao Yuanming's reclusion narrative, poetic transmission and medieval literati reception meet at a Xunyang regional scale while literary image and biography remain distinct.",
+        "curatorialDescription": [
+          "Xunyang is a regional entry and does not claim to locate every residence or composition site.",
+          "The event is recorded separately from figure and place relations so evidence layers can be checked on the map and relation view."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific texts, institutions, editions and spatial boundaries still require review.",
+        "timeLabel": "c. 405–427 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:chinese-literati-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "composition",
+        "timeType": "range",
+        "startYear": 405,
+        "endYear": 427,
+        "displayDate": {
+          "zh-CN": "约 405–427 年",
+          "en": "c. 405–427 CE"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:chinese-literati-records"
+      }
+    ],
+    "sourceIds": [
+      "source:chinese-literati-records",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "inferred",
+      "sequenceOrder": 110,
+      "eventScope": "regional"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "wang-wei-changan-poetry-and-landscape",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "王维长安诗画与山水文化",
+        "shortSummary": "长安城市生活、仕隐转换与山水诗画表达构成王维人物入口，后世“诗佛”称谓另作接受层。",
+        "curatorialDescription": [
+          "诗文意象不能直接证明确切地理行迹；事件采用城市与文化网络尺度。",
+          "事件与人物、地点关系分开记录，以便在地图和关系页核对证据层。"
+        ],
+        "researchNote": "研究状态：事件已与人物和地点建立最小闭环；具体文本、机构、版本和空间边界仍需继续核对。",
+        "timeLabel": "约 730–750 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Wang Wei's Chang'an poetry and landscape culture",
+        "shortSummary": "Chang'an life, official–recluse movement and landscape poetry–painting form the Wang Wei entry, while the later 'poet-Buddha' label remains a reception layer.",
+        "curatorialDescription": [
+          "Poetic imagery does not directly prove exact itineraries; the event uses a city and cultural-network scale.",
+          "The event is recorded separately from figure and place relations so evidence layers can be checked on the map and relation view."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific texts, institutions, editions and spatial boundaries still require review.",
+        "timeLabel": "c. 730–750 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:chinese-literati-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "composition",
+        "timeType": "range",
+        "startYear": 730,
+        "endYear": 750,
+        "displayDate": {
+          "zh-CN": "约 730–750 年",
+          "en": "c. 730–750 CE"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:chinese-literati-records"
+      }
+    ],
+    "sourceIds": [
+      "source:chinese-literati-records",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "inferred",
+      "sequenceOrder": 111,
+      "eventScope": "regional"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "guo-xiang-zhuangzi-commentary",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "郭象注《庄子》传统",
+        "shortSummary": "郭象注《庄子》的文本活动将魏晋玄学、人物归属和后世通行本连接起来。",
+        "curatorialDescription": [
+          "注本形成与版本传承需要和庄周、向秀及后世整理分别建模；洛阳只作区域锚点。",
+          "事件与人物、地点关系分开记录，以便在地图和关系页核对证据层。"
+        ],
+        "researchNote": "研究状态：事件已与人物和地点建立最小闭环；具体文本、机构、版本和空间边界仍需继续核对。",
+        "timeLabel": "约 300–312 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Guo Xiang's Zhuangzi commentary tradition",
+        "shortSummary": "Guo Xiang's Zhuangzi commentary connects Wei–Jin thought, attribution and the later received text.",
+        "curatorialDescription": [
+          "Commentary formation and edition transmission remain distinct from Zhuang Zhou, Xiang Xiu and later editing; Luoyang is a regional anchor.",
+          "The event is recorded separately from figure and place relations so evidence layers can be checked on the map and relation view."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific texts, institutions, editions and spatial boundaries still require review.",
+        "timeLabel": "c. 300–312 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:daoist-biographical-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "commentary",
+        "timeType": "range",
+        "startYear": 300,
+        "endYear": 312,
+        "displayDate": {
+          "zh-CN": "约 300–312 年",
+          "en": "c. 300–312 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:daoist-biographical-records"
+      }
+    ],
+    "sourceIds": [
+      "source:daoist-biographical-records",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "editorial_project",
+      "historicity": "documented",
+      "sequenceOrder": 112,
+      "eventScope": "regional"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "kou-qianzhi-northern-wei-reform",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "寇谦之与北魏道教改革",
+        "shortSummary": "北魏道教改革把寇谦之、宫廷制度和道派组织带入同一历史语境，呈现宗教制度化的过程。",
+        "curatorialDescription": [
+          "道教传记与北魏制度记录的叙事层仍需逐项核对；洛阳不等同于具体宫观。",
+          "事件与人物、地点关系分开记录，以便在地图和关系页核对证据层。"
+        ],
+        "researchNote": "研究状态：事件已与人物和地点建立最小闭环；具体文本、机构、版本和空间边界仍需继续核对。",
+        "timeLabel": "约 424–448 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Kou Qianzhi and Northern Wei Daoist reform",
+        "shortSummary": "Northern Wei Daoist reform places Kou Qianzhi, court institutions and school organisation in one historical context of institutionalisation.",
+        "curatorialDescription": [
+          "Narrative layers in Daoist biographies and Northern Wei institutional records still require item-level comparison; Luoyang is not one specific monastery.",
+          "The event is recorded separately from figure and place relations so evidence layers can be checked on the map and relation view."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific texts, institutions, editions and spatial boundaries still require review.",
+        "timeLabel": "c. 424–448 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:daoist-biographical-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_activity",
+        "timeType": "range",
+        "startYear": 424,
+        "endYear": 448,
+        "displayDate": {
+          "zh-CN": "约 424–448 年",
+          "en": "c. 424–448 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:daoist-biographical-records"
+      }
+    ],
+    "sourceIds": [
+      "source:daoist-biographical-records",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "policy",
+      "historicity": "documented",
+      "sequenceOrder": 113,
+      "eventScope": "imperial"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "lu-xiujing-daoist-canon",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "陆修静整理道教经法",
+        "shortSummary": "陆修静的经录、经法与传戒活动把南朝道教文本和制度网络连接起来。",
+        "curatorialDescription": [
+          "后世道藏分类不能直接回写为南朝完成的体系；庐山作为文化景观锚点。",
+          "事件与人物、地点关系分开记录，以便在地图和关系页核对证据层。"
+        ],
+        "researchNote": "研究状态：事件已与人物和地点建立最小闭环；具体文本、机构、版本和空间边界仍需继续核对。",
+        "timeLabel": "约 450–470 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Lu Xiujing's organisation of Daoist scriptures and precepts",
+        "shortSummary": "Lu Xiujing's catalogues, scriptures and ordination activity connect Southern Dynasties Daoist texts with institutional networks.",
+        "curatorialDescription": [
+          "Later Daoist-canon classification is not projected back as a completed Southern Dynasties system; Mount Lu is a cultural-landscape anchor.",
+          "The event is recorded separately from figure and place relations so evidence layers can be checked on the map and relation view."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific texts, institutions, editions and spatial boundaries still require review.",
+        "timeLabel": "c. 450–470 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-biographical-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "compilation",
+        "timeType": "range",
+        "startYear": 450,
+        "endYear": 470,
+        "displayDate": {
+          "zh-CN": "约 450–470 年",
+          "en": "c. 450–470 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-biographical-records"
+      }
+    ],
+    "sourceIds": [
+      "source:daoist-biographical-records",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "editorial_project",
+      "historicity": "inferred",
+      "sequenceOrder": 114,
+      "eventScope": "regional"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "sun-simiao-medical-daoist-practice",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "孙思邈医学与养生实践",
+        "shortSummary": "孙思邈的医药写作、养生实践与道教知识网络在终南山区域语境中相连。",
+        "curatorialDescription": [
+          "医书编纂、个人活动和后世药王信仰保持分层；山地坐标不表示具体药方写作地点。",
+          "事件与人物、地点关系分开记录，以便在地图和关系页核对证据层。"
+        ],
+        "researchNote": "研究状态：事件已与人物和地点建立最小闭环；具体文本、机构、版本和空间边界仍需继续核对。",
+        "timeLabel": "约 630–670 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Sun Simiao's medical and cultivation practice",
+        "shortSummary": "Sun Simiao's medical writing, cultivation practice and Daoist knowledge networks connect in the Zhongnan mountain context.",
+        "curatorialDescription": [
+          "Medical compilation, personal activity and later Medicine King devotion remain distinct; the mountain coordinate is not a composition site for every prescription.",
+          "The event is recorded separately from figure and place relations so evidence layers can be checked on the map and relation view."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific texts, institutions, editions and spatial boundaries still require review.",
+        "timeLabel": "c. 630–670 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-biographical-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 630,
+        "endYear": 670,
+        "displayDate": {
+          "zh-CN": "约 630–670 年",
+          "en": "c. 630–670 CE"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-biographical-records"
+      }
+    ],
+    "sourceIds": [
+      "source:daoist-biographical-records",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "inferred",
+      "sequenceOrder": 115,
+      "eventScope": "regional"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "chen-tuan-huashan-reclusion",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "陈抟华山隐逸记忆",
+        "shortSummary": "华山成为陈抟隐逸、内丹与后世道教记忆交叠的山岳文化景观入口。",
+        "curatorialDescription": [
+          "事件采用低置信度区域语境，不把后世仙传、具体洞府或棋局故事作为确定行迹。",
+          "事件与人物、地点关系分开记录，以便在地图和关系页核对证据层。"
+        ],
+        "researchNote": "研究状态：事件已与人物和地点建立最小闭环；具体文本、机构、版本和空间边界仍需继续核对。",
+        "timeLabel": "约 920–980 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Chen Tuan's Mount Hua reclusion memory",
+        "shortSummary": "Mount Hua is a cultural-landscape entry where Chen Tuan's reclusion, inner-alchemy traditions and later Daoist memory overlap.",
+        "curatorialDescription": [
+          "This low-confidence regional context does not treat later immortal tales, exact grottoes or chess stories as certain itineraries.",
+          "The event is recorded separately from figure and place relations so evidence layers can be checked on the map and relation view."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific texts, institutions, editions and spatial boundaries still require review.",
+        "timeLabel": "c. 920–980 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-biographical-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_and_memory_scope",
+        "timeType": "range",
+        "startYear": 920,
+        "endYear": 980,
+        "displayDate": {
+          "zh-CN": "约 920–980 年",
+          "en": "c. 920–980 CE"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-biographical-records"
+      }
+    ],
+    "sourceIds": [
+      "source:daoist-biographical-records",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "inferred",
+      "sequenceOrder": 116,
+      "eventScope": "regional"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "wang-chongyang-quanzhen-formation",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "王重阳与全真教团形成",
+        "shortSummary": "王重阳与全真教团的形成把金代北方道教、弟子网络和终南山区域联系起来。",
+        "curatorialDescription": [
+          "七真谱系和后世全真制度另作接受层；本事件只覆盖早期教团形成语境。",
+          "事件与人物、地点关系分开记录，以便在地图和关系页核对证据层。"
+        ],
+        "researchNote": "研究状态：事件已与人物和地点建立最小闭环；具体文本、机构、版本和空间边界仍需继续核对。",
+        "timeLabel": "约 1160–1170 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Wang Chongyang and the formation of the Quanzhen community",
+        "shortSummary": "Wang Chongyang's Quanzhen community connects Jin-period northern Daoism, disciple networks and the Zhongnan region.",
+        "curatorialDescription": [
+          "Later Seven Perfect Ones genealogies and Quanzhen institutions remain a reception layer; this event covers the early community context.",
+          "The event is recorded separately from figure and place relations so evidence layers can be checked on the map and relation view."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific texts, institutions, editions and spatial boundaries still require review.",
+        "timeLabel": "c. 1160–1170 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:daoist-biographical-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "foundation",
+        "timeType": "range",
+        "startYear": 1160,
+        "endYear": 1170,
+        "displayDate": {
+          "zh-CN": "约 1160–1170 年",
+          "en": "c. 1160–1170 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:daoist-biographical-records"
+      }
+    ],
+    "sourceIds": [
+      "source:daoist-biographical-records",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "foundation",
+      "historicity": "documented",
+      "sequenceOrder": 117,
+      "eventScope": "regional"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "bodhidharma-luoyang-transmission",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "traditional_account",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "菩提达摩洛阳传承记忆",
+        "shortSummary": "洛阳传记与后世禅宗谱系把菩提达摩纳入中印佛教传承和祖师叙事，但证据层仍有争议。",
+        "curatorialDescription": [
+          "这是传统记忆与历史推断的交汇事件，不把单一寺院传说直接当作确证。",
+          "事件与人物、地点关系分开记录，以便在地图和关系页核对证据层。"
+        ],
+        "researchNote": "研究状态：事件已与人物和地点建立最小闭环；具体文本、机构、版本和空间边界仍需继续核对。",
+        "timeLabel": "约 5–6 世纪",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Bodhidharma's Luoyang transmission memory",
+        "shortSummary": "Luoyang biographies and later Chan genealogies place Bodhidharma within Sino-Indian transmission and patriarchal narrative, while evidence remains contested.",
+        "curatorialDescription": [
+          "This is an intersection of traditional memory and historical inference, not confirmation of one monastery legend.",
+          "The event is recorded separately from figure and place relations so evidence layers can be checked on the map and relation view."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific texts, institutions, editions and spatial boundaries still require review.",
+        "timeLabel": "c. fifth–sixth centuries CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "low",
+        "evidenceLayer": "traditional_account",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "traditional_occurrence",
+        "timeType": "century",
+        "startYear": 450,
+        "endYear": 550,
+        "displayDate": {
+          "zh-CN": "约 5–6 世纪",
+          "en": "c. fifth–sixth centuries CE"
+        },
+        "confidence": "low",
+        "evidenceLayer": "traditional_account",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "sourceIds": [
+      "source:buddhist-school-biographies",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "traditional",
+      "sequenceOrder": 118,
+      "eventScope": "regional"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "zhiyi-tiantai-teaching",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "智顗天台教观与山岳讲学",
+        "shortSummary": "智顗的教观组织与天台山寺院网络连接起来，形成经典解释、修行制度和宗派记忆的交汇事件。",
+        "curatorialDescription": [
+          "天台宗后世制度与智顗本人活动保持时间区分；天台山坐标为山岳文化景观尺度。",
+          "事件与人物、地点关系分开记录，以便在地图和关系页核对证据层。"
+        ],
+        "researchNote": "研究状态：事件已与人物和地点建立最小闭环；具体文本、机构、版本和空间边界仍需继续核对。",
+        "timeLabel": "约 585–591 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Zhiyi's Tiantai teaching and mountain institutions",
+        "shortSummary": "Zhiyi's organisation of doctrine and practice connects with Mount Tiantai monastic networks in an event at the intersection of interpretation, practice and school memory.",
+        "curatorialDescription": [
+          "Later Tiantai institutions remain chronologically distinct from Zhiyi's own activity; Mount Tiantai uses a cultural-landscape scale.",
+          "The event is recorded separately from figure and place relations so evidence layers can be checked on the map and relation view."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific texts, institutions, editions and spatial boundaries still require review.",
+        "timeLabel": "c. 585–591 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_activity",
+        "timeType": "range",
+        "startYear": 585,
+        "endYear": 591,
+        "displayDate": {
+          "zh-CN": "约 585–591 年",
+          "en": "c. 585–591 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "sourceIds": [
+      "source:buddhist-school-biographies",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "documented",
+      "sequenceOrder": 119,
+      "eventScope": "regional"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "fazang-huayan-teaching",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "法藏华严解释与长安译经网络",
+        "shortSummary": "法藏把华严教义组织、译经解释和唐代长安知识制度连接起来。",
+        "curatorialDescription": [
+          "华严宗制度化、译场协作和宫廷关系需按文本与机构分别核对；事件不主张法藏独立完成全部译经。",
+          "事件与人物、地点关系分开记录，以便在地图和关系页核对证据层。"
+        ],
+        "researchNote": "研究状态：事件已与人物和地点建立最小闭环；具体文本、机构、版本和空间边界仍需继续核对。",
+        "timeLabel": "约 689–705 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Fazang's Huayan interpretation in the Chang'an translation network",
+        "shortSummary": "Fazang connects Huayan doctrinal organisation, Buddhist interpretation and Tang Chang'an's institutional knowledge network.",
+        "curatorialDescription": [
+          "Huayan institutionalisation, translation collaboration and court relations require separate textual and institutional checks; the event does not assign every translation to Fazang alone.",
+          "The event is recorded separately from figure and place relations so evidence layers can be checked on the map and relation view."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific texts, institutions, editions and spatial boundaries still require review.",
+        "timeLabel": "c. 689–705 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "commentary",
+        "timeType": "range",
+        "startYear": 689,
+        "endYear": 705,
+        "displayDate": {
+          "zh-CN": "约 689–705 年",
+          "en": "c. 689–705 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "sourceIds": [
+      "source:buddhist-school-biographies",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "editorial_project",
+      "historicity": "documented",
+      "sequenceOrder": 120,
+      "eventScope": "imperial"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "huineng-caoxi-transmission",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "慧能曹溪禅与《坛经》传承",
+        "shortSummary": "慧能的岭南活动与《坛经》传承把人物记忆、寺院空间和禅宗经典化连接起来。",
+        "curatorialDescription": [
+          "《坛经》的编纂与慧能生平不是同一事件；韶关为区域锚点，不等于文本在此一次完成。",
+          "事件与人物、地点关系分开记录，以便在地图和关系页核对证据层。"
+        ],
+        "researchNote": "研究状态：事件已与人物和地点建立最小闭环；具体文本、机构、版本和空间边界仍需继续核对。",
+        "timeLabel": "约 675–713 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Huineng's Caoxi Chan and Platform Sutra transmission",
+        "shortSummary": "Huineng's southern activity and the Platform Sutra transmission connect figure memory, monastic space and Chan canonicalisation.",
+        "curatorialDescription": [
+          "The Platform Sutra's compilation and Huineng's biography are not one event; Shaoguan is a regional anchor, not a one-time composition site.",
+          "The event is recorded separately from figure and place relations so evidence layers can be checked on the map and relation view."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific texts, institutions, editions and spatial boundaries still require review.",
+        "timeLabel": "c. 675–713 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "textual_circulation",
+        "timeType": "range",
+        "startYear": 675,
+        "endYear": 713,
+        "displayDate": {
+          "zh-CN": "约 675–713 年",
+          "en": "c. 675–713 CE"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "sourceIds": [
+      "source:buddhist-school-biographies",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "editorial_project",
+      "historicity": "inferred",
+      "sequenceOrder": 121,
+      "eventScope": "regional"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "shandao-changan-pure-land-teaching",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "善导长安净土教化",
+        "shortSummary": "善导与长安寺院、净土教化和唐代信仰传播网络相连，呈现思想进入实践的城市尺度过程。",
+        "curatorialDescription": [
+          "个人讲说、寺院制度和后世净土宗谱系分开处理；长安点位不替代寺院级定位。",
+          "事件与人物、地点关系分开记录，以便在地图和关系页核对证据层。"
+        ],
+        "researchNote": "研究状态：事件已与人物和地点建立最小闭环；具体文本、机构、版本和空间边界仍需继续核对。",
+        "timeLabel": "约 645–681 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Shandao's Pure Land teaching in Chang'an",
+        "shortSummary": "Shandao's Chang'an monasteries, Pure Land teaching and Tang devotional networks form a city-scale process of doctrine entering practice.",
+        "curatorialDescription": [
+          "Personal preaching, monastery institutions and later Pure Land genealogy remain separate; Chang'an does not replace monastery-level localisation.",
+          "The event is recorded separately from figure and place relations so evidence layers can be checked on the map and relation view."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific texts, institutions, editions and spatial boundaries still require review.",
+        "timeLabel": "c. 645–681 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_activity",
+        "timeType": "range",
+        "startYear": 645,
+        "endYear": 681,
+        "displayDate": {
+          "zh-CN": "约 645–681 年",
+          "en": "c. 645–681 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "sourceIds": [
+      "source:buddhist-school-biographies",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "documented",
+      "sequenceOrder": 122,
+      "eventScope": "imperial"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "sengzhao-changan-madhyamaka",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "僧肇与长安中观译解网络",
+        "shortSummary": "僧肇在后秦长安译经网络中的活动连接翻译协作、思想解释和文本流通。",
+        "curatorialDescription": [
+          "僧肇作品归属与译场分工仍需进一步核查；事件不把译经团队成果归为个人独作。",
+          "事件与人物、地点关系分开记录，以便在地图和关系页核对证据层。"
+        ],
+        "researchNote": "研究状态：事件已与人物和地点建立最小闭环；具体文本、机构、版本和空间边界仍需继续核对。",
+        "timeLabel": "约 401–414 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Sengzhao and the Chang'an Madhyamaka translation network",
+        "shortSummary": "Sengzhao's activity in Later Qin Chang'an connects translation collaboration, interpretation and textual circulation.",
+        "curatorialDescription": [
+          "Attribution of Sengzhao's works and translation-bureau roles require further review; team production is not assigned to one person alone.",
+          "The event is recorded separately from figure and place relations so evidence layers can be checked on the map and relation view."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific texts, institutions, editions and spatial boundaries still require review.",
+        "timeLabel": "c. 401–414 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "translation",
+        "timeType": "range",
+        "startYear": 401,
+        "endYear": 414,
+        "displayDate": {
+          "zh-CN": "约 401–414 年",
+          "en": "c. 401–414 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "sourceIds": [
+      "source:buddhist-school-biographies",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "editorial_project",
+      "historicity": "documented",
+      "sequenceOrder": 123,
+      "eventScope": "imperial"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "daoxuan-vinaya-institution",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "道宣律学与僧传制度",
+        "shortSummary": "道宣的律学、僧传编纂和唐代僧团规范连接文本、人物与制度化佛教空间。",
+        "curatorialDescription": [
+          "《续高僧传》编纂、律学传承和唐代制度史需要分层；长安为制度网络锚点。",
+          "事件与人物、地点关系分开记录，以便在地图和关系页核对证据层。"
+        ],
+        "researchNote": "研究状态：事件已与人物和地点建立最小闭环；具体文本、机构、版本和空间边界仍需继续核对。",
+        "timeLabel": "约 640–667 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Daoxuan's vinaya learning and monastic institutions",
+        "shortSummary": "Daoxuan's vinaya learning, biographical compilation and Tang monastic norms connect texts, figures and institutional Buddhist space.",
+        "curatorialDescription": [
+          "The compilation of the Continued Biographies, vinaya transmission and Tang institutional history remain layered; Chang'an is the institutional anchor.",
+          "The event is recorded separately from figure and place relations so evidence layers can be checked on the map and relation view."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific texts, institutions, editions and spatial boundaries still require review.",
+        "timeLabel": "c. 640–667 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "compilation",
+        "timeType": "range",
+        "startYear": 640,
+        "endYear": 667,
+        "displayDate": {
+          "zh-CN": "约 640–667 年",
+          "en": "c. 640–667 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "sourceIds": [
+      "source:buddhist-school-biographies",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "editorial_project",
+      "historicity": "documented",
+      "sequenceOrder": 124,
+      "eventScope": "imperial"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "baizhang-monastic-rules",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "百丈怀海与禅门丛林制度",
+        "shortSummary": "百丈怀海与丛林组织、清规传统和唐代寺院生活相连，后世制度化内容保留为接受层。",
+        "curatorialDescription": [
+          "“百丈清规”并非可不加说明地归于一人一时；百丈山坐标表达文化景观范围。",
+          "事件与人物、地点关系分开记录，以便在地图和关系页核对证据层。"
+        ],
+        "researchNote": "研究状态：事件已与人物和地点建立最小闭环；具体文本、机构、版本和空间边界仍需继续核对。",
+        "timeLabel": "约 780–814 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Baizhang Huaihai and Chan monastic organisation",
+        "shortSummary": "Baizhang Huaihai connects monastic organisation, rule traditions and Tang Chan life, while later institutionalisation remains a reception layer.",
+        "curatorialDescription": [
+          "The Baizhang rules cannot be assigned without qualification to one person and time; Mount Baizhang represents a cultural landscape.",
+          "The event is recorded separately from figure and place relations so evidence layers can be checked on the map and relation view."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific texts, institutions, editions and spatial boundaries still require review.",
+        "timeLabel": "c. 780–814 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_activity",
+        "timeType": "range",
+        "startYear": 780,
+        "endYear": 814,
+        "displayDate": {
+          "zh-CN": "约 780–814 年",
+          "en": "c. 780–814 CE"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "sourceIds": [
+      "source:buddhist-school-biographies",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "inferred",
+      "sequenceOrder": 125,
+      "eventScope": "regional"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "linji-teaching-network",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "临济义玄与北方禅门网络",
+        "shortSummary": "临济义玄的语录与北方寺院活动连接晚唐禅门传播和后世临济宗记忆。",
+        "curatorialDescription": [
+          "语录成书、活动地与宗派谱系不能互相替代；正定只作为城市尺度锚点。",
+          "事件与人物、地点关系分开记录，以便在地图和关系页核对证据层。"
+        ],
+        "researchNote": "研究状态：事件已与人物和地点建立最小闭环；具体文本、机构、版本和空间边界仍需继续核对。",
+        "timeLabel": "约 840–866 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Linji Yixuan and northern Chan networks",
+        "shortSummary": "Linji Yixuan's sayings and northern monastery activity connect late Tang Chan transmission with later Linji memory.",
+        "curatorialDescription": [
+          "Recorded sayings, activity sites and school genealogy remain distinct; Zhengding is only a city-scale anchor.",
+          "The event is recorded separately from figure and place relations so evidence layers can be checked on the map and relation view."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific texts, institutions, editions and spatial boundaries still require review.",
+        "timeLabel": "c. 840–866 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "textual_circulation",
+        "timeType": "range",
+        "startYear": 840,
+        "endYear": 866,
+        "displayDate": {
+          "zh-CN": "约 840–866 年",
+          "en": "c. 840–866 CE"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "sourceIds": [
+      "source:buddhist-school-biographies",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "editorial_project",
+      "historicity": "inferred",
+      "sequenceOrder": 126,
+      "eventScope": "regional"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "jianzhen-eastward-vinaya-transmission",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "鉴真扬州律学与东渡网络",
+        "shortSummary": "鉴真与扬州寺院、律学传授和东渡网络相连，建立中国—日本佛教交流的可追踪起点。",
+        "curatorialDescription": [
+          "多次失败航行、最终抵达与日本境内地点尚未展开；本事件不绘制未经核定的海上逐段路线。",
+          "事件与人物、地点关系分开记录，以便在地图和关系页核对证据层。"
+        ],
+        "researchNote": "研究状态：事件已与人物和地点建立最小闭环；具体文本、机构、版本和空间边界仍需继续核对。",
+        "timeLabel": "约 733–754 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Jianzhen's Yangzhou vinaya network and eastward transmission",
+        "shortSummary": "Jianzhen's Yangzhou monasteries, vinaya teaching and eastward network establish a traceable starting point for Sino-Japanese Buddhist exchange.",
+        "curatorialDescription": [
+          "Failed voyages, final arrival and Japanese sites remain outside this event; it does not draw an unverified segment-by-segment sea route.",
+          "The event is recorded separately from figure and place relations so evidence layers can be checked on the map and relation view."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific texts, institutions, editions and spatial boundaries still require review.",
+        "timeLabel": "c. 733–754 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "temporalAssertions": [
+      {
+      "predicate": "route_time",
+        "timeType": "range",
+        "startYear": 733,
+        "endYear": 754,
+        "displayDate": {
+          "zh-CN": "约 733–754 年",
+          "en": "c. 733–754 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "sourceIds": [
+      "source:buddhist-school-biographies",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "journey",
+      "historicity": "documented",
+      "sequenceOrder": 127,
+      "eventScope": "transregional"
+    }
+  }
+]

@@ -1,0 +1,101 @@
+{
+  "kind": "route",
+  "slug": "yijing-maritime-pilgrimage",
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed",
+  "primaryEvidenceLayer": "historical_inferred",
+  "importance": 4,
+  "isFeatured": false,
+  "translations": {
+    "zh-CN": {
+      "title": "义净海上求法与归返路线骨架",
+      "subtitle": "从南亚学习节点到河洛归返区域的跨区域知识流动",
+      "shortSummary": "这条路线把义净约 675 年在那烂陀的学习节点与约 695 年携经归返河洛的区域表达放入同一地图研究框架。",
+      "curatorialDescription": [
+        "地图只连接有现实地理参照的锚点，不把海上中转点或未核定的抵达城市补成事实。",
+        "番禺出发港、海路停靠点和归返后的具体译经地点继续保留在事件与研究注记中。"
+      ],
+      "researchNote": "需继续核对番禺的港口尺度、海上航段、具体抵达城市，以及《大唐西域求法高僧传》和译经目录的版本与卷页。",
+      "timeLabel": "约 671–695",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "路线边界",
+            "en": "Route boundary"
+          },
+          "value": {
+            "zh-CN": "区域锚点骨架，不是完整航线",
+            "en": "Regional-anchor skeleton, not a complete sea route"
+          }
+        }
+      ]
+    },
+    "en": {
+      "title": "Yijing's maritime pilgrimage and return route skeleton",
+      "subtitle": "Transregional knowledge movement from a South Asian learning node to the He-Luo return region",
+      "shortSummary": "The route places Yijing's study at Nalanda around 675 alongside the regional expression of his return to He-Luo with scriptures around 695.",
+      "curatorialDescription": [
+        "The map connects only anchors with real geographic referents and does not turn unverified maritime stops or an arrival city into facts.",
+        "The Panyu departure port, maritime stops and specific translation sites after the return remain in the events and research notes."
+      ],
+      "researchNote": "The scale of Panyu as a port, maritime segments, the specific arrival city, and editions and folio references in the Record of Buddhist Pilgrims and translation catalogues still require verification.",
+      "timeLabel": "c. 671–695",
+      "keyFacts": [
+        {
+          "label": {
+            "zh-CN": "路线边界",
+            "en": "Route boundary"
+          },
+          "value": {
+            "zh-CN": "区域锚点骨架，不是完整航线",
+            "en": "Regional-anchor skeleton, not a complete sea route"
+          }
+        }
+      ]
+    }
+  },
+  "traditions": [
+    {
+      "tradition": "buddhism",
+      "role": "primary",
+      "isPrimary": true,
+      "confidence": "medium",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:yijing-biography-ctext"
+    }
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "route_activity",
+      "timeType": "range",
+      "startYear": 671,
+      "endYear": 695,
+      "displayDate": {
+        "zh-CN": "约 671–695",
+        "en": "c. 671–695"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:yijing-biography-ctext"
+    }
+  ],
+  "sourceIds": [
+    "source:yijing-biography-ctext",
+    "source:yijing-datawiki",
+    "source:historical-geography",
+    "source:editorial-method"
+  ],
+  "profile": {
+    "routeKind": "pilgrimage",
+    "certainty": "reconstructed",
+    "waypointSlugs": [
+      "nalanda",
+      "luoyang"
+    ],
+    "corridorNote": {
+      "zh-CN": "地图只连接那烂陀学习节点与洛阳（河洛区域）可绘制锚点；番禺出发港、海上中转点和具体抵达城市尚未核定，不将两点直线当作实际航线。",
+      "en": "The map connects only the drawable Nalanda learning node and Luoyang as a He-Luo regional anchor; the Panyu departure port, maritime stops and specific arrival city remain unverified, so the straight line between the two points is not presented as the actual sea route."
+    },
+    "animationAllowed": false
+  }
+}

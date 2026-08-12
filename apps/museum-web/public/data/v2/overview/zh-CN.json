@@ -27,7 +27,7 @@
       "subtitle": "Daoist traditions",
       "statement": "从经典、宫观、山岳和法脉，看道家思想与组织化道教如何并行发展。",
       "counts": {
-        "figures": 13,
+        "figures": 20,
         "texts": 6,
         "passages": 4
       },
@@ -42,7 +42,7 @@
       "subtitle": "Confucian traditions",
       "statement": "从礼、经学和国家教育，看儒家如何成为帝国制度与社会伦理的一部分。",
       "counts": {
-        "figures": 6,
+        "figures": 16,
         "texts": 3,
         "passages": 4
       },
@@ -57,7 +57,7 @@
       "subtitle": "Buddhism",
       "statement": "从求法、译经和寺院网络，看一种外来传统如何在中国重新表达自己。",
       "counts": {
-        "figures": 13,
+        "figures": 24,
         "texts": 7,
         "passages": 6
       },

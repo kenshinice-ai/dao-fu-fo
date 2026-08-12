@@ -6,7 +6,7 @@
   "scope": {
     "exhibition": "full-historical-space-time",
     "timeStart": -600,
-    "timeEnd": 1200,
+    "timeEnd": 1529,
     "geographies": ["中国历史地理", "中亚与南亚区域锚点", "神圣象征空间"]
   },
   "targets": {
@@ -24,17 +24,17 @@
     "exhibitionSection": 4
   },
   "current": {
-    "figure": 32,
+    "figure": 60,
     "text": 16,
     "concept": 6,
     "schoolOrInstitution": 6,
-    "place": 28,
-    "event": 37,
-    "route": 3,
+    "place": 40,
+    "event": 65,
+    "route": 4,
     "museumObject": 9,
     "passage": 14,
     "audio": 3,
-    "relation": 191,
+    "relation": 299,
     "exhibitionSection": 5
   },
   "completionRules": [

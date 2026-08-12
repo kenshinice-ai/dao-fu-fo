@@ -494,7 +494,7 @@ export function CivilisationMap({
               {placePeople.map((person) => (
                 <li key={person.figureKey}>
                   <div>
-                    <button type="button" onClick={() => onFocus?.(person.figureKey, featureKey(focusPlace))}>{contextTitle(person.figureKey)}</button>
+                    <button type="button" onClick={() => onFocus?.(person.figureKey, null)}>{contextTitle(person.figureKey)}</button>
                     <span>{person.relation.label}</span>
                     <small>
                       {person.connection === "direct"
@@ -534,7 +534,7 @@ export function CivilisationMap({
             focus={featureKey(focusPlace)}
             relations={relations}
             searchItems={searchItems}
-            onFocus={(key) => onFocus?.(key, featureKey(focusPlace))}
+            onFocus={(key) => onFocus?.(key, null)}
             compact
             peopleOnly
             scopeKeys={placeFigureKeys}

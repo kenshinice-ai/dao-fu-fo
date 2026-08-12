@@ -85,7 +85,7 @@
         "curatorialDescription": [
           "真实地理和圣地叙事在此并存，但地图层与象征宇宙层必须分别呈现。"
         ],
-        "researchNote": "范围、历史地名、宫观寺院节点及圣地叙事需逐条绑定来源。",
+        "researchNote": "已补充终南山山地范围的近似地图代理点；范围、历史地名、宫观寺院节点及圣地叙事仍需逐条绑定来源。",
         "timeLabel": "隋唐重点；长期文化地景",
         "keyFacts": []
       },
@@ -95,7 +95,7 @@
         "curatorialDescription": [
           "Real geography and sacred narratives coexist here, but the map and symbolic cosmos must remain separate views."
         ],
-        "researchNote": "Extent, historical names, institutional sites and sacred accounts require item-level sources.",
+        "researchNote": "An approximate map proxy for the mountain range is now included; extent, historical names, institutional sites and sacred accounts require item-level sources.",
         "timeLabel": "Sui–Tang focus; long cultural landscape",
         "keyFacts": []
       }
@@ -135,13 +135,18 @@
     ],
     "sourceIds": [
       "source:historical-geography",
+      "source:historical-geography-expanded",
       "source:daoist-historical-record"
     ],
     "profile": {
       "placeReality": "approximate_region",
       "geometryType": "point",
-      "coordinateConfidence": "not_applicable",
-      "geographicSourceId": "source:historical-geography"
+      "coordinates": [
+        109.0,
+        34.05
+      ],
+      "coordinateConfidence": "approximate",
+      "geographicSourceId": "source:historical-geography-expanded"
     }
   },
   {

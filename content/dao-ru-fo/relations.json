@@ -53,6 +53,94 @@
     ]
   },
   {
+    "id": "relation:xuanzang-travelled-qiuci",
+    "source": {
+      "kind": "figure",
+      "slug": "xuanzang"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "qiuci"
+    },
+    "relationType": "travelled_through",
+    "label": {
+      "zh-CN": "经过龟兹区域",
+      "en": "Travelled through the Kucha region"
+    },
+    "summary": {
+      "zh-CN": "龟兹作为天山南路的历史区域锚点进入玄奘路线；地图使用区域近似点，不把它解释为已核定的城址、石窟或具体停留门址。",
+      "en": "Kucha enters Xuanzang's route as a historical regional anchor on the southern Tianshan corridor; the map uses an approximate regional point rather than claiming a verified city site, cave or exact stop."
+    },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:xuanzang-records",
+      "source:historical-geography",
+      "source:unesco-silk-roads-corridor"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "route_activity",
+        "timeType": "range",
+        "startYear": 629,
+        "endYear": 645,
+        "displayDate": {
+          "zh-CN": "约 629–645 的西行路线语境",
+          "en": "Western-pilgrimage route context, c. 629–645"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:xuanzang-records"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "route_segment",
+      "historicity": "inferred",
+      "note": {
+        "zh-CN": "坐标是龟兹区域代理点，不是具体龟兹城址或石窟坐标。",
+        "en": "The coordinate is a regional Kucha proxy, not the coordinate of a specific city site or cave."
+      }
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:xuanzang-active-nalanda",
+    "source": {
+      "kind": "figure",
+      "slug": "xuanzang"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "nalanda"
+    },
+    "relationType": "active_in",
+    "label": {
+      "zh-CN": "与那烂陀学习网络相连",
+      "en": "Connected with Nalanda's learning network"
+    },
+    "summary": {
+      "zh-CN": "那烂陀是玄奘进入印度佛教学习网络的现实地点锚点；本关系不把路线重建或后世遗址范围扩写成精确抵达与停留日期。",
+      "en": "Nalanda is the real-place anchor for Xuanzang's participation in Indian Buddhist learning networks; this relation does not turn route reconstruction or the later heritage extent into exact arrival or residence dates."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:xuanzang-records",
+      "source:unesco-nalanda"
+    ],
+    "qualifiers": {
+      "spatialRole": "activity_site",
+      "historicity": "documented",
+      "note": {
+        "zh-CN": "地点关系用于连接地图与人物上下文；具体学习阶段和年份仍需按传记版本继续拆分。",
+        "en": "The place relation connects the map and figure context; specific study phases and dates still require biography-level separation."
+      }
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
     "id": "relation:xuanzang-active-luoyang",
     "source": {
       "kind": "figure",
@@ -1403,6 +1491,203 @@
     },
     "publicationState": "public",
     "reviewStatus": "publishable"
+  },
+  {
+    "id": "relation:xuanzang-travelled-western-route",
+    "source": {
+      "kind": "figure",
+      "slug": "xuanzang"
+    },
+    "target": {
+      "kind": "route",
+      "slug": "xuanzang-western-pilgrimage"
+    },
+    "relationType": "travelled_through",
+    "label": {
+      "zh-CN": "沿西行求法路线旅行",
+      "en": "Travelled along the western pilgrimage route"
+    },
+    "summary": {
+      "zh-CN": "玄奘的西行求法把长安、河西走廊、龟兹和南亚学习网络连成一条跨区域路线；路线节点按证据层分开表达。",
+      "en": "Xuanzang's western pilgrimage connects Chang'an, the Hexi Corridor, Kucha and South Asian learning networks across one transregional route, with waypoint evidence kept separate."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:xuanzang-records",
+      "source:historical-geography"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "route_activity",
+        "timeType": "range",
+        "startYear": 629,
+        "endYear": 645,
+        "displayDate": {
+          "zh-CN": "约 629–645",
+          "en": "c. 629–645"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:xuanzang-records"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "route_segment",
+      "historicity": "inferred"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:xuanzang-route-changan",
+    "source": {
+      "kind": "route",
+      "slug": "xuanzang-western-pilgrimage"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "changan"
+    },
+    "relationType": "route_connects",
+    "label": {
+      "zh-CN": "路线连接长安出发点",
+      "en": "Route connects to the Chang'an departure point"
+    },
+    "summary": {
+      "zh-CN": "长安是玄奘西行路线的出发与译经制度锚点；路线图使用城市尺度坐标，不替代具体城门或寺院定位。",
+      "en": "Chang'an anchors Xuanzang's departure and translation institutions; the map uses a city-scale coordinate rather than a specific gate or monastery location."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:xuanzang-records",
+      "source:historical-geography"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "departure",
+        "timeType": "circa",
+        "startYear": 629,
+        "endYear": 629,
+        "displayDate": {
+          "zh-CN": "约 629 年出发",
+          "en": "Departure, c. 629"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:xuanzang-records"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "departure_site",
+      "historicity": "documented"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:xuanzang-route-qiuci",
+    "source": {
+      "kind": "route",
+      "slug": "xuanzang-western-pilgrimage"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "qiuci"
+    },
+    "relationType": "route_connects",
+    "label": {
+      "zh-CN": "路线连接龟兹区域节点",
+      "en": "Route connects to the Kucha regional waypoint"
+    },
+    "summary": {
+      "zh-CN": "龟兹是西行路线中的历史区域节点；路线采用近似点，只表达区域经过关系，不把区域代理点当成精确城址。",
+      "en": "Kucha is a historical regional waypoint on the western route; the route uses an approximate point to express passage through a region, not an exact city site."
+    },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:xuanzang-records",
+      "source:historical-geography",
+      "source:unesco-silk-roads-corridor"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "route_time",
+        "timeType": "range",
+        "startYear": 629,
+        "endYear": 645,
+        "displayDate": {
+          "zh-CN": "约 629–645 的西行路线语境",
+          "en": "Western-route context, c. 629–645"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:xuanzang-records"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "route_segment",
+      "historicity": "inferred",
+      "note": {
+        "zh-CN": "龟兹坐标是区域遗址代理点，不是具体城市或石窟坐标。",
+        "en": "The Kucha coordinate is a regional heritage proxy, not a specific city or cave coordinate."
+      }
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:xuanzang-route-nalanda",
+    "source": {
+      "kind": "route",
+      "slug": "xuanzang-western-pilgrimage"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "nalanda"
+    },
+    "relationType": "route_connects",
+    "label": {
+      "zh-CN": "路线连接那烂陀学习节点",
+      "en": "Route connects to the Nalanda learning node"
+    },
+    "summary": {
+      "zh-CN": "那烂陀是玄奘进入印度佛教学习网络的重要地点锚点；路线图保留学习网络与具体停留日期之间的证据差异。",
+      "en": "Nalanda is an important place anchor for Xuanzang's participation in Indian Buddhist learning networks; the route keeps the evidence gap between a learning network and exact residence dates."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:xuanzang-records",
+      "source:unesco-nalanda"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "route_time",
+        "timeType": "range",
+        "startYear": 629,
+        "endYear": 645,
+        "displayDate": {
+          "zh-CN": "约 629–645 的求法路线语境",
+          "en": "Pilgrimage-route context, c. 629–645"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:xuanzang-records"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "route_segment",
+      "historicity": "inferred",
+      "note": {
+        "zh-CN": "那烂陀坐标连接学习网络，不推断某一具体学期或到达日。",
+        "en": "Nalanda anchors the learning network without inferring one exact term of study or arrival date."
+      }
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
   },
   {
     "id": "relation:sima-participated-kaiyuan",
@@ -3379,6 +3664,36 @@
     "reviewStatus": "bilingual_reviewed"
   },
   {
+    "id": "relation:yijing-participated-studies-nalanda",
+    "source": { "kind": "figure", "slug": "yijing" },
+    "target": { "kind": "event", "slug": "yijing-studies-nalanda" },
+    "relationType": "participated_in",
+    "label": { "zh-CN": "在那烂陀学习", "en": "Studied at Nalanda" },
+    "summary": { "zh-CN": "约 675–685 年的那烂陀学习被单列为义净的事件节点；它连接学习地点与人物时间，不替代完整求法路线。", "en": "Yijing's Nalanda study around 675–685 is modelled as a distinct event node; it links place, person and time without replacing the full pilgrimage route." },
+    "confidence": "medium",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": ["source:yijing-datawiki", "source:unesco-nalanda"],
+    "temporalAssertions": [{ "predicate": "pilgrimage_and_learning_scope", "timeType": "range", "startYear": 675, "endYear": 685, "displayDate": { "zh-CN": "约 675–685", "en": "c. 675–685" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:yijing-datawiki" }],
+    "qualifiers": { "historicity": "documented", "note": { "zh-CN": "学习事件与路线骨架并列呈现，避免把学习节点扩写成完整行程。", "en": "The study event is shown alongside the route skeleton and is not expanded into a complete itinerary." } },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:yijing-study-occurred-nalanda",
+    "source": { "kind": "event", "slug": "yijing-studies-nalanda" },
+    "target": { "kind": "place", "slug": "nalanda" },
+    "relationType": "occurred_at",
+    "label": { "zh-CN": "学习发生于那烂陀", "en": "Study occurred at Nalanda" },
+    "summary": { "zh-CN": "那烂陀是这段学习事件的现实地点锚点；关系只定位学习节点，不推断义净其余南亚行程。", "en": "Nalanda is the real-place anchor for this study event; the relation locates the learning node without inferring Yijing's remaining South Asian itinerary." },
+    "confidence": "medium",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": ["source:yijing-datawiki", "source:unesco-nalanda"],
+    "temporalAssertions": [{ "predicate": "pilgrimage_and_learning_scope", "timeType": "range", "startYear": 675, "endYear": 685, "displayDate": { "zh-CN": "约 675–685", "en": "c. 675–685" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:yijing-datawiki" }],
+    "qualifiers": { "spatialRole": "activity_site", "historicity": "documented" },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
     "id": "relation:yan-shigu-participated-five-classics",
     "source": {
       "kind": "figure",
@@ -4661,5 +4976,4954 @@
     "qualifiers": { "spatialRole": "birth_place", "historicity": "documented" },
     "publicationState": "preview",
     "reviewStatus": "bilingual_reviewed"
-  }
+  },
+  {
+    "id": "relation:yijing-travelled-maritime-route",
+    "source": { "kind": "figure", "slug": "yijing" },
+    "target": { "kind": "route", "slug": "yijing-maritime-pilgrimage" },
+    "relationType": "travelled_through",
+    "label": { "zh-CN": "行经义净海上求法路线骨架", "en": "Travelled through Yijing's maritime pilgrimage route skeleton" },
+    "summary": { "zh-CN": "义净的海路出发、那烂陀学习与河洛归返被组织为一条区域锚点路线；番禺港口、海上中转点和具体抵达城市仍不由此关系自动补全。", "en": "Yijing's maritime departure, study at Nalanda and return to He-Luo are organized as a regional-anchor route; this relation does not auto-fill the Panyu port, maritime stops or a specific arrival city." },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": ["source:yijing-biography-ctext", "source:yijing-datawiki", "source:editorial-method"],
+    "temporalAssertions": [{ "predicate": "route_activity", "timeType": "range", "startYear": 671, "endYear": 695, "displayDate": { "zh-CN": "约 671–695", "en": "c. 671–695" }, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:yijing-biography-ctext" }],
+    "qualifiers": { "spatialRole": "route_segment", "historicity": "inferred", "note": { "zh-CN": "这是地图与关系读模型的区域骨架，不是完整航线或逐站复原。", "en": "This is a regional map and relation-model skeleton, not a complete or stop-by-stop route reconstruction." } },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:yijing-route-nalanda",
+    "source": { "kind": "route", "slug": "yijing-maritime-pilgrimage" },
+    "target": { "kind": "place", "slug": "nalanda" },
+    "relationType": "route_connects",
+    "label": { "zh-CN": "路线连接那烂陀学习节点", "en": "Route connects the Nalanda learning node" },
+    "summary": { "zh-CN": "那烂陀是义净约 675–685 年学习网络的现实地点锚点；路线不把遗址范围或学习网络等同于完整海陆行程。", "en": "Nalanda is the real-place anchor for Yijing's learning network around 675–685; the route does not equate the heritage extent or learning network with a complete maritime or overland itinerary." },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": ["source:yijing-datawiki", "source:unesco-nalanda"],
+    "temporalAssertions": [{ "predicate": "route_time", "timeType": "range", "startYear": 675, "endYear": 685, "displayDate": { "zh-CN": "约 675–685 的学习节点", "en": "Learning node, c. 675–685" }, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:yijing-datawiki" }],
+    "qualifiers": { "spatialRole": "route_segment", "historicity": "inferred" },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:yijing-route-luoyang",
+    "source": { "kind": "route", "slug": "yijing-maritime-pilgrimage" },
+    "target": { "kind": "place", "slug": "luoyang" },
+    "relationType": "route_connects",
+    "label": { "zh-CN": "路线连接洛阳河洛区域锚点", "en": "Route connects the Luoyang He-Luo regional anchor" },
+    "summary": { "zh-CN": "洛阳仅作为“河洛”表达的可绘制区域锚点进入路线读模型，不主张义净已被一手材料明确定位到洛阳这一单一抵达城市。", "en": "Luoyang enters the route read model only as a drawable regional anchor for the expression “He-Luo”; this does not claim that primary material identifies Luoyang as Yijing's single arrival city." },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": ["source:yijing-biography-ctext", "source:historical-geography", "source:editorial-method"],
+    "temporalAssertions": [{ "predicate": "route_time", "timeType": "circa", "startYear": 695, "endYear": 695, "displayDate": { "zh-CN": "约 695 的河洛归返区域锚点", "en": "He-Luo return-region anchor, c. 695" }, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:yijing-biography-ctext" }],
+    "qualifiers": { "spatialRole": "context_only", "historicity": "inferred", "note": { "zh-CN": "洛阳是河洛区域的可绘制代理锚点，不是已核定的具体抵达城市。", "en": "Luoyang is a drawable proxy anchor for the He-Luo region, not a verified specific arrival city." } },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+{
+  "id": "relation:xunzi-participated-xunzi-ritual-and-nature",
+  "source": {
+    "kind": "figure",
+    "slug": "xunzi"
+  },
+  "target": {
+    "kind": "event",
+    "slug": "xunzi-ritual-and-nature"
+  },
+  "relationType": "participated_in",
+  "label": {
+    "zh-CN": "参与荀子礼学与性论语境",
+    "en": "Participated in Xunzi's ritual learning and human-nature debate"
+  },
+  "summary": {
+    "zh-CN": "荀子与荀子礼学与性论语境相连；该关系沿用事件的证据层，不把事件名称扩写成额外生平事实。",
+    "en": "Xunzi is connected with Xunzi's ritual learning and human-nature debate; the relation follows the event's evidence layer and does not expand its title into additional biographical facts."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_inferred",
+  "sourceIds": [
+    "source:han-classics-biographies",
+    "source:han-classics-biographies"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "analytic_period",
+      "timeType": "range",
+      "startYear": -310,
+      "endYear": -235,
+      "displayDate": {
+        "zh-CN": "约公元前 310–235 年",
+        "en": "c. 310–235 BCE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:han-classics-biographies"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "人物—事件关系按事件时间段表达，具体参与方式仍需继续核对。",
+      "en": "The figure–event relation uses the event's time range; the exact mode of participation still requires review."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:xunzi-active-handan",
+  "source": {
+    "kind": "figure",
+    "slug": "xunzi"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "handan"
+  },
+  "relationType": "active_in",
+  "label": {
+    "zh-CN": "在邯郸活动",
+    "en": "Active in Handan"
+  },
+  "summary": {
+    "zh-CN": "荀子与邯郸建立人物活动的地图入口；该点是城市、区域或山岳尺度锚点，不是每一处活动的精确坐标。",
+    "en": "Xunzi is mapped to Handan as an activity entry; the point is a city-, regional- or mountain-scale anchor, not the exact coordinate of every activity."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:han-classics-biographies",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "activity",
+      "timeType": "range",
+      "startYear": -310,
+      "endYear": -235,
+      "displayDate": {
+        "zh-CN": "约公元前 310–235 年",
+        "en": "c. 310–235 BCE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:han-classics-biographies"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地图点位与关系页面保持同一空间尺度；具体地点仍需继续细化。",
+      "en": "The map point and relation view use the same spatial scale; specific sites still require refinement."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:dong-zhongshu-participated-dong-zhongshu-confucian-statecraft",
+  "source": {
+    "kind": "figure",
+    "slug": "dong-zhongshu"
+  },
+  "target": {
+    "kind": "event",
+    "slug": "dong-zhongshu-confucian-statecraft"
+  },
+  "relationType": "participated_in",
+  "label": {
+    "zh-CN": "参与董仲舒的经学与汉代制度思想",
+    "en": "Participated in Dong Zhongshu's classical learning and Han statecraft"
+  },
+  "summary": {
+    "zh-CN": "董仲舒与董仲舒的经学与汉代制度思想相连；该关系沿用事件的证据层，不把事件名称扩写成额外生平事实。",
+    "en": "Dong Zhongshu is connected with Dong Zhongshu's classical learning and Han statecraft; the relation follows the event's evidence layer and does not expand its title into additional biographical facts."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:han-classics-biographies",
+    "source:han-classics-biographies"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "institutional_activity",
+      "timeType": "range",
+      "startYear": -140,
+      "endYear": -110,
+      "displayDate": {
+        "zh-CN": "约公元前 140–110 年",
+        "en": "c. 140–110 BCE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:han-classics-biographies"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "人物—事件关系按事件时间段表达，具体参与方式仍需继续核对。",
+      "en": "The figure–event relation uses the event's time range; the exact mode of participation still requires review."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:dong-zhongshu-active-changan",
+  "source": {
+    "kind": "figure",
+    "slug": "dong-zhongshu"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "changan"
+  },
+  "relationType": "active_in",
+  "label": {
+    "zh-CN": "在长安活动",
+    "en": "Active in Chang'an"
+  },
+  "summary": {
+    "zh-CN": "董仲舒与长安建立人物活动的地图入口；该点是城市、区域或山岳尺度锚点，不是每一处活动的精确坐标。",
+    "en": "Dong Zhongshu is mapped to Chang'an as an activity entry; the point is a city-, regional- or mountain-scale anchor, not the exact coordinate of every activity."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:han-classics-biographies",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "activity",
+      "timeType": "range",
+      "startYear": -179,
+      "endYear": -104,
+      "displayDate": {
+        "zh-CN": "约公元前 179–104 年",
+        "en": "c. 179–104 BCE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:han-classics-biographies"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地图点位与关系页面保持同一空间尺度；具体地点仍需继续细化。",
+      "en": "The map point and relation view use the same spatial scale; specific sites still require refinement."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:han-yu-participated-han-yu-ancient-prose-and-orthodoxy",
+  "source": {
+    "kind": "figure",
+    "slug": "han-yu"
+  },
+  "target": {
+    "kind": "event",
+    "slug": "han-yu-ancient-prose-and-orthodoxy"
+  },
+  "relationType": "participated_in",
+  "label": {
+    "zh-CN": "参与韩愈古文与道统论述",
+    "en": "Participated in Han Yu's classical prose and discourse on orthodoxy"
+  },
+  "summary": {
+    "zh-CN": "韩愈与韩愈古文与道统论述相连；该关系沿用事件的证据层，不把事件名称扩写成额外生平事实。",
+    "en": "Han Yu is connected with Han Yu's classical prose and discourse on orthodoxy; the relation follows the event's evidence layer and does not expand its title into additional biographical facts."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:chinese-literati-records",
+    "source:chinese-literati-records"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "composition",
+      "timeType": "range",
+      "startYear": 800,
+      "endYear": 824,
+      "displayDate": {
+        "zh-CN": "约 800–824 年",
+        "en": "c. 800–824 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:chinese-literati-records"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "人物—事件关系按事件时间段表达，具体参与方式仍需继续核对。",
+      "en": "The figure–event relation uses the event's time range; the exact mode of participation still requires review."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:han-yu-active-changan",
+  "source": {
+    "kind": "figure",
+    "slug": "han-yu"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "changan"
+  },
+  "relationType": "active_in",
+  "label": {
+    "zh-CN": "在长安活动",
+    "en": "Active in Chang'an"
+  },
+  "summary": {
+    "zh-CN": "韩愈与长安建立人物活动的地图入口；该点是城市、区域或山岳尺度锚点，不是每一处活动的精确坐标。",
+    "en": "Han Yu is mapped to Chang'an as an activity entry; the point is a city-, regional- or mountain-scale anchor, not the exact coordinate of every activity."
+  },
+  "confidence": "high",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:chinese-literati-records",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "activity",
+      "timeType": "range",
+      "startYear": 768,
+      "endYear": 824,
+      "displayDate": {
+        "zh-CN": "768–824 年",
+        "en": "768–824 CE"
+      },
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:chinese-literati-records"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地图点位与关系页面保持同一空间尺度；具体地点仍需继续细化。",
+      "en": "The map point and relation view use the same spatial scale; specific sites still require refinement."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:cheng-yi-participated-cheng-brothers-luoyang-learning",
+  "source": {
+    "kind": "figure",
+    "slug": "cheng-yi"
+  },
+  "target": {
+    "kind": "event",
+    "slug": "cheng-brothers-luoyang-learning"
+  },
+  "relationType": "participated_in",
+  "label": {
+    "zh-CN": "参与二程与洛学讲学网络",
+    "en": "Participated in The Cheng brothers and the Luoyang learning network"
+  },
+  "summary": {
+    "zh-CN": "程颐与二程与洛学讲学网络相连；该关系沿用事件的证据层，不把事件名称扩写成额外生平事实。",
+    "en": "Cheng Yi is connected with The Cheng brothers and the Luoyang learning network; the relation follows the event's evidence layer and does not expand its title into additional biographical facts."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_inferred",
+  "sourceIds": [
+    "source:song-confucian-literati-records",
+    "source:song-confucian-literati-records"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "institutional_activity",
+      "timeType": "range",
+      "startYear": 1050,
+      "endYear": 1077,
+      "displayDate": {
+        "zh-CN": "约 1050–1077 年",
+        "en": "c. 1050–1077 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:song-confucian-literati-records"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "人物—事件关系按事件时间段表达，具体参与方式仍需继续核对。",
+      "en": "The figure–event relation uses the event's time range; the exact mode of participation still requires review."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:cheng-yi-active-luoyang",
+  "source": {
+    "kind": "figure",
+    "slug": "cheng-yi"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "luoyang"
+  },
+  "relationType": "active_in",
+  "label": {
+    "zh-CN": "在洛阳活动",
+    "en": "Active in Luoyang"
+  },
+  "summary": {
+    "zh-CN": "程颐与洛阳建立人物活动的地图入口；该点是城市、区域或山岳尺度锚点，不是每一处活动的精确坐标。",
+    "en": "Cheng Yi is mapped to Luoyang as an activity entry; the point is a city-, regional- or mountain-scale anchor, not the exact coordinate of every activity."
+  },
+  "confidence": "high",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:song-confucian-literati-records",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "activity",
+      "timeType": "range",
+      "startYear": 1033,
+      "endYear": 1107,
+      "displayDate": {
+        "zh-CN": "1033–1107 年",
+        "en": "1033–1107 CE"
+      },
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:song-confucian-literati-records"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地图点位与关系页面保持同一空间尺度；具体地点仍需继续细化。",
+      "en": "The map point and relation view use the same spatial scale; specific sites still require refinement."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:cheng-hao-participated-cheng-brothers-luoyang-learning",
+  "source": {
+    "kind": "figure",
+    "slug": "cheng-hao"
+  },
+  "target": {
+    "kind": "event",
+    "slug": "cheng-brothers-luoyang-learning"
+  },
+  "relationType": "participated_in",
+  "label": {
+    "zh-CN": "参与二程与洛学讲学网络",
+    "en": "Participated in The Cheng brothers and the Luoyang learning network"
+  },
+  "summary": {
+    "zh-CN": "程颢与二程与洛学讲学网络相连；该关系沿用事件的证据层，不把事件名称扩写成额外生平事实。",
+    "en": "Cheng Hao is connected with The Cheng brothers and the Luoyang learning network; the relation follows the event's evidence layer and does not expand its title into additional biographical facts."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_inferred",
+  "sourceIds": [
+    "source:song-confucian-literati-records",
+    "source:song-confucian-literati-records"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "institutional_activity",
+      "timeType": "range",
+      "startYear": 1050,
+      "endYear": 1077,
+      "displayDate": {
+        "zh-CN": "约 1050–1077 年",
+        "en": "c. 1050–1077 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:song-confucian-literati-records"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "人物—事件关系按事件时间段表达，具体参与方式仍需继续核对。",
+      "en": "The figure–event relation uses the event's time range; the exact mode of participation still requires review."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:cheng-hao-active-luoyang",
+  "source": {
+    "kind": "figure",
+    "slug": "cheng-hao"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "luoyang"
+  },
+  "relationType": "active_in",
+  "label": {
+    "zh-CN": "在洛阳活动",
+    "en": "Active in Luoyang"
+  },
+  "summary": {
+    "zh-CN": "程颢与洛阳建立人物活动的地图入口；该点是城市、区域或山岳尺度锚点，不是每一处活动的精确坐标。",
+    "en": "Cheng Hao is mapped to Luoyang as an activity entry; the point is a city-, regional- or mountain-scale anchor, not the exact coordinate of every activity."
+  },
+  "confidence": "high",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:song-confucian-literati-records",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "activity",
+      "timeType": "range",
+      "startYear": 1032,
+      "endYear": 1085,
+      "displayDate": {
+        "zh-CN": "1032–1085 年",
+        "en": "1032–1085 CE"
+      },
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:song-confucian-literati-records"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地图点位与关系页面保持同一空间尺度；具体地点仍需继续细化。",
+      "en": "The map point and relation view use the same spatial scale; specific sites still require refinement."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:wang-yangming-participated-wang-yangming-yangming-learning",
+  "source": {
+    "kind": "figure",
+    "slug": "wang-yangming"
+  },
+  "target": {
+    "kind": "event",
+    "slug": "wang-yangming-yangming-learning"
+  },
+  "relationType": "participated_in",
+  "label": {
+    "zh-CN": "参与王阳明心学与地方讲学",
+    "en": "Participated in Wang Yangming's mind learning and local teaching"
+  },
+  "summary": {
+    "zh-CN": "王阳明与王阳明心学与地方讲学相连；该关系沿用事件的证据层，不把事件名称扩写成额外生平事实。",
+    "en": "Wang Yangming is connected with Wang Yangming's mind learning and local teaching; the relation follows the event's evidence layer and does not expand its title into additional biographical facts."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:chinese-literati-records",
+    "source:chinese-literati-records"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "institutional_activity",
+      "timeType": "range",
+      "startYear": 1508,
+      "endYear": 1528,
+      "displayDate": {
+        "zh-CN": "约 1508–1528 年",
+        "en": "c. 1508–1528 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:chinese-literati-records"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "人物—事件关系按事件时间段表达，具体参与方式仍需继续核对。",
+      "en": "The figure–event relation uses the event's time range; the exact mode of participation still requires review."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:wang-yangming-active-yuyao",
+  "source": {
+    "kind": "figure",
+    "slug": "wang-yangming"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "yuyao"
+  },
+  "relationType": "active_in",
+  "label": {
+    "zh-CN": "在余姚活动",
+    "en": "Active in Yuyao"
+  },
+  "summary": {
+    "zh-CN": "王阳明与余姚建立人物活动的地图入口；该点是城市、区域或山岳尺度锚点，不是每一处活动的精确坐标。",
+    "en": "Wang Yangming is mapped to Yuyao as an activity entry; the point is a city-, regional- or mountain-scale anchor, not the exact coordinate of every activity."
+  },
+  "confidence": "high",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:chinese-literati-records",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "activity",
+      "timeType": "range",
+      "startYear": 1472,
+      "endYear": 1529,
+      "displayDate": {
+        "zh-CN": "1472–1529 年",
+        "en": "1472–1529 CE"
+      },
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:chinese-literati-records"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地图点位与关系页面保持同一空间尺度；具体地点仍需继续细化。",
+      "en": "The map point and relation view use the same spatial scale; specific sites still require refinement."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:wang-anshi-participated-wang-anshi-reform-and-classics",
+  "source": {
+    "kind": "figure",
+    "slug": "wang-anshi"
+  },
+  "target": {
+    "kind": "event",
+    "slug": "wang-anshi-reform-and-classics"
+  },
+  "relationType": "participated_in",
+  "label": {
+    "zh-CN": "参与王安石变法与新学",
+    "en": "Participated in Wang Anshi's reforms and New Learning"
+  },
+  "summary": {
+    "zh-CN": "王安石与王安石变法与新学相连；该关系沿用事件的证据层，不把事件名称扩写成额外生平事实。",
+    "en": "Wang Anshi is connected with Wang Anshi's reforms and New Learning; the relation follows the event's evidence layer and does not expand its title into additional biographical facts."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:song-confucian-literati-records",
+    "source:song-confucian-literati-records"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "policy",
+      "timeType": "range",
+      "startYear": 1069,
+      "endYear": 1076,
+      "displayDate": {
+        "zh-CN": "约 1069–1076 年",
+        "en": "c. 1069–1076 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:song-confucian-literati-records"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "人物—事件关系按事件时间段表达，具体参与方式仍需继续核对。",
+      "en": "The figure–event relation uses the event's time range; the exact mode of participation still requires review."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:wang-anshi-active-kaifeng",
+  "source": {
+    "kind": "figure",
+    "slug": "wang-anshi"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "kaifeng"
+  },
+  "relationType": "active_in",
+  "label": {
+    "zh-CN": "在开封活动",
+    "en": "Active in Kaifeng"
+  },
+  "summary": {
+    "zh-CN": "王安石与开封建立人物活动的地图入口；该点是城市、区域或山岳尺度锚点，不是每一处活动的精确坐标。",
+    "en": "Wang Anshi is mapped to Kaifeng as an activity entry; the point is a city-, regional- or mountain-scale anchor, not the exact coordinate of every activity."
+  },
+  "confidence": "high",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:song-confucian-literati-records",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "activity",
+      "timeType": "range",
+      "startYear": 1021,
+      "endYear": 1086,
+      "displayDate": {
+        "zh-CN": "1021–1086 年",
+        "en": "1021–1086 CE"
+      },
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:song-confucian-literati-records"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地图点位与关系页面保持同一空间尺度；具体地点仍需继续细化。",
+      "en": "The map point and relation view use the same spatial scale; specific sites still require refinement."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:ouyang-xiu-participated-ouyang-xiu-song-history-and-prose",
+  "source": {
+    "kind": "figure",
+    "slug": "ouyang-xiu"
+  },
+  "target": {
+    "kind": "event",
+    "slug": "ouyang-xiu-song-history-and-prose"
+  },
+  "relationType": "participated_in",
+  "label": {
+    "zh-CN": "参与欧阳修的古文与宋代史学",
+    "en": "Participated in Ouyang Xiu's prose and Song historiography"
+  },
+  "summary": {
+    "zh-CN": "欧阳修与欧阳修的古文与宋代史学相连；该关系沿用事件的证据层，不把事件名称扩写成额外生平事实。",
+    "en": "Ouyang Xiu is connected with Ouyang Xiu's prose and Song historiography; the relation follows the event's evidence layer and does not expand its title into additional biographical facts."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:song-confucian-literati-records",
+    "source:song-confucian-literati-records"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "composition",
+      "timeType": "range",
+      "startYear": 1042,
+      "endYear": 1060,
+      "displayDate": {
+        "zh-CN": "约 1042–1060 年",
+        "en": "c. 1042–1060 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:song-confucian-literati-records"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "人物—事件关系按事件时间段表达，具体参与方式仍需继续核对。",
+      "en": "The figure–event relation uses the event's time range; the exact mode of participation still requires review."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:ouyang-xiu-active-kaifeng",
+  "source": {
+    "kind": "figure",
+    "slug": "ouyang-xiu"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "kaifeng"
+  },
+  "relationType": "active_in",
+  "label": {
+    "zh-CN": "在开封活动",
+    "en": "Active in Kaifeng"
+  },
+  "summary": {
+    "zh-CN": "欧阳修与开封建立人物活动的地图入口；该点是城市、区域或山岳尺度锚点，不是每一处活动的精确坐标。",
+    "en": "Ouyang Xiu is mapped to Kaifeng as an activity entry; the point is a city-, regional- or mountain-scale anchor, not the exact coordinate of every activity."
+  },
+  "confidence": "high",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:song-confucian-literati-records",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "activity",
+      "timeType": "range",
+      "startYear": 1007,
+      "endYear": 1072,
+      "displayDate": {
+        "zh-CN": "1007–1072 年",
+        "en": "1007–1072 CE"
+      },
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:song-confucian-literati-records"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地图点位与关系页面保持同一空间尺度；具体地点仍需继续细化。",
+      "en": "The map point and relation view use the same spatial scale; specific sites still require refinement."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:sima-guang-participated-sima-guang-zizhi-tongjian",
+  "source": {
+    "kind": "figure",
+    "slug": "sima-guang"
+  },
+  "target": {
+    "kind": "event",
+    "slug": "sima-guang-zizhi-tongjian"
+  },
+  "relationType": "participated_in",
+  "label": {
+    "zh-CN": "参与司马光编纂《资治通鉴》",
+    "en": "Participated in Sima Guang's compilation of the Comprehensive Mirror"
+  },
+  "summary": {
+    "zh-CN": "司马光与司马光编纂《资治通鉴》相连；该关系沿用事件的证据层，不把事件名称扩写成额外生平事实。",
+    "en": "Sima Guang is connected with Sima Guang's compilation of the Comprehensive Mirror; the relation follows the event's evidence layer and does not expand its title into additional biographical facts."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:song-confucian-literati-records",
+    "source:song-confucian-literati-records"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "compilation",
+      "timeType": "range",
+      "startYear": 1066,
+      "endYear": 1084,
+      "displayDate": {
+        "zh-CN": "约 1066–1084 年",
+        "en": "c. 1066–1084 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:song-confucian-literati-records"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "人物—事件关系按事件时间段表达，具体参与方式仍需继续核对。",
+      "en": "The figure–event relation uses the event's time range; the exact mode of participation still requires review."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:sima-guang-active-luoyang",
+  "source": {
+    "kind": "figure",
+    "slug": "sima-guang"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "luoyang"
+  },
+  "relationType": "active_in",
+  "label": {
+    "zh-CN": "在洛阳活动",
+    "en": "Active in Luoyang"
+  },
+  "summary": {
+    "zh-CN": "司马光与洛阳建立人物活动的地图入口；该点是城市、区域或山岳尺度锚点，不是每一处活动的精确坐标。",
+    "en": "Sima Guang is mapped to Luoyang as an activity entry; the point is a city-, regional- or mountain-scale anchor, not the exact coordinate of every activity."
+  },
+  "confidence": "high",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:song-confucian-literati-records",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "activity",
+      "timeType": "range",
+      "startYear": 1019,
+      "endYear": 1086,
+      "displayDate": {
+        "zh-CN": "1019–1086 年",
+        "en": "1019–1086 CE"
+      },
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:song-confucian-literati-records"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地图点位与关系页面保持同一空间尺度；具体地点仍需继续细化。",
+      "en": "The map point and relation view use the same spatial scale; specific sites still require refinement."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:su-shi-participated-su-shi-huangzhou-writing",
+  "source": {
+    "kind": "figure",
+    "slug": "su-shi"
+  },
+  "target": {
+    "kind": "event",
+    "slug": "su-shi-huangzhou-writing"
+  },
+  "relationType": "participated_in",
+  "label": {
+    "zh-CN": "参与苏轼黄州流寓与写作",
+    "en": "Participated in Su Shi's Huangzhou exile and writing"
+  },
+  "summary": {
+    "zh-CN": "苏轼与苏轼黄州流寓与写作相连；该关系沿用事件的证据层，不把事件名称扩写成额外生平事实。",
+    "en": "Su Shi is connected with Su Shi's Huangzhou exile and writing; the relation follows the event's evidence layer and does not expand its title into additional biographical facts."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:chinese-literati-records",
+    "source:chinese-literati-records"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "activity",
+      "timeType": "range",
+      "startYear": 1079,
+      "endYear": 1084,
+      "displayDate": {
+        "zh-CN": "约 1079–1084 年",
+        "en": "c. 1079–1084 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:chinese-literati-records"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "人物—事件关系按事件时间段表达，具体参与方式仍需继续核对。",
+      "en": "The figure–event relation uses the event's time range; the exact mode of participation still requires review."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:su-shi-active-huangzhou",
+  "source": {
+    "kind": "figure",
+    "slug": "su-shi"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "huangzhou"
+  },
+  "relationType": "active_in",
+  "label": {
+    "zh-CN": "在黄州活动",
+    "en": "Active in Huangzhou"
+  },
+  "summary": {
+    "zh-CN": "苏轼与黄州建立人物活动的地图入口；该点是城市、区域或山岳尺度锚点，不是每一处活动的精确坐标。",
+    "en": "Su Shi is mapped to Huangzhou as an activity entry; the point is a city-, regional- or mountain-scale anchor, not the exact coordinate of every activity."
+  },
+  "confidence": "high",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:chinese-literati-records",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "activity",
+      "timeType": "range",
+      "startYear": 1037,
+      "endYear": 1101,
+      "displayDate": {
+        "zh-CN": "1037–1101 年",
+        "en": "1037–1101 CE"
+      },
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:chinese-literati-records"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地图点位与关系页面保持同一空间尺度；具体地点仍需继续细化。",
+      "en": "The map point and relation view use the same spatial scale; specific sites still require refinement."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:tao-yuanming-participated-tao-yuanming-reclusion-and-poetry",
+  "source": {
+    "kind": "figure",
+    "slug": "tao-yuanming"
+  },
+  "target": {
+    "kind": "event",
+    "slug": "tao-yuanming-reclusion-and-poetry"
+  },
+  "relationType": "participated_in",
+  "label": {
+    "zh-CN": "参与陶渊明归隐与诗文传统",
+    "en": "Participated in Tao Yuanming's reclusion and poetic tradition"
+  },
+  "summary": {
+    "zh-CN": "陶渊明与陶渊明归隐与诗文传统相连；该关系沿用事件的证据层，不把事件名称扩写成额外生平事实。",
+    "en": "Tao Yuanming is connected with Tao Yuanming's reclusion and poetic tradition; the relation follows the event's evidence layer and does not expand its title into additional biographical facts."
+  },
+  "confidence": "low",
+  "evidenceLayer": "historical_inferred",
+  "sourceIds": [
+    "source:chinese-literati-records",
+    "source:chinese-literati-records"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "composition",
+      "timeType": "range",
+      "startYear": 405,
+      "endYear": 427,
+      "displayDate": {
+        "zh-CN": "约 405–427 年",
+        "en": "c. 405–427 CE"
+      },
+      "confidence": "low",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:chinese-literati-records"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "人物—事件关系按事件时间段表达，具体参与方式仍需继续核对。",
+      "en": "The figure–event relation uses the event's time range; the exact mode of participation still requires review."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:tao-yuanming-active-xunyang",
+  "source": {
+    "kind": "figure",
+    "slug": "tao-yuanming"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "xunyang"
+  },
+  "relationType": "active_in",
+  "label": {
+    "zh-CN": "在浔阳活动",
+    "en": "Active in Xunyang"
+  },
+  "summary": {
+    "zh-CN": "陶渊明与浔阳建立人物活动的地图入口；该点是城市、区域或山岳尺度锚点，不是每一处活动的精确坐标。",
+    "en": "Tao Yuanming is mapped to Xunyang as an activity entry; the point is a city-, regional- or mountain-scale anchor, not the exact coordinate of every activity."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_inferred",
+  "sourceIds": [
+    "source:chinese-literati-records",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "activity",
+      "timeType": "range",
+      "startYear": 365,
+      "endYear": 427,
+      "displayDate": {
+        "zh-CN": "约 365–427 年",
+        "en": "c. 365–427 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:chinese-literati-records"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地图点位与关系页面保持同一空间尺度；具体地点仍需继续细化。",
+      "en": "The map point and relation view use the same spatial scale; specific sites still require refinement."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:wang-wei-participated-wang-wei-changan-poetry-and-landscape",
+  "source": {
+    "kind": "figure",
+    "slug": "wang-wei"
+  },
+  "target": {
+    "kind": "event",
+    "slug": "wang-wei-changan-poetry-and-landscape"
+  },
+  "relationType": "participated_in",
+  "label": {
+    "zh-CN": "参与王维长安诗画与山水文化",
+    "en": "Participated in Wang Wei's Chang'an poetry and landscape culture"
+  },
+  "summary": {
+    "zh-CN": "王维与王维长安诗画与山水文化相连；该关系沿用事件的证据层，不把事件名称扩写成额外生平事实。",
+    "en": "Wang Wei is connected with Wang Wei's Chang'an poetry and landscape culture; the relation follows the event's evidence layer and does not expand its title into additional biographical facts."
+  },
+  "confidence": "low",
+  "evidenceLayer": "historical_inferred",
+  "sourceIds": [
+    "source:chinese-literati-records",
+    "source:chinese-literati-records"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "composition",
+      "timeType": "range",
+      "startYear": 730,
+      "endYear": 750,
+      "displayDate": {
+        "zh-CN": "约 730–750 年",
+        "en": "c. 730–750 CE"
+      },
+      "confidence": "low",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:chinese-literati-records"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "人物—事件关系按事件时间段表达，具体参与方式仍需继续核对。",
+      "en": "The figure–event relation uses the event's time range; the exact mode of participation still requires review."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:wang-wei-active-changan",
+  "source": {
+    "kind": "figure",
+    "slug": "wang-wei"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "changan"
+  },
+  "relationType": "active_in",
+  "label": {
+    "zh-CN": "在长安活动",
+    "en": "Active in Chang'an"
+  },
+  "summary": {
+    "zh-CN": "王维与长安建立人物活动的地图入口；该点是城市、区域或山岳尺度锚点，不是每一处活动的精确坐标。",
+    "en": "Wang Wei is mapped to Chang'an as an activity entry; the point is a city-, regional- or mountain-scale anchor, not the exact coordinate of every activity."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_inferred",
+  "sourceIds": [
+    "source:chinese-literati-records",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "activity",
+      "timeType": "range",
+      "startYear": 701,
+      "endYear": 761,
+      "displayDate": {
+        "zh-CN": "701–761 年",
+        "en": "701–761 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:chinese-literati-records"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地图点位与关系页面保持同一空间尺度；具体地点仍需继续细化。",
+      "en": "The map point and relation view use the same spatial scale; specific sites still require refinement."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:guo-xiang-participated-guo-xiang-zhuangzi-commentary",
+  "source": {
+    "kind": "figure",
+    "slug": "guo-xiang"
+  },
+  "target": {
+    "kind": "event",
+    "slug": "guo-xiang-zhuangzi-commentary"
+  },
+  "relationType": "participated_in",
+  "label": {
+    "zh-CN": "参与郭象注《庄子》传统",
+    "en": "Participated in Guo Xiang's Zhuangzi commentary tradition"
+  },
+  "summary": {
+    "zh-CN": "郭象与郭象注《庄子》传统相连；该关系沿用事件的证据层，不把事件名称扩写成额外生平事实。",
+    "en": "Guo Xiang is connected with Guo Xiang's Zhuangzi commentary tradition; the relation follows the event's evidence layer and does not expand its title into additional biographical facts."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:daoist-biographical-records",
+    "source:daoist-biographical-records"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "commentary",
+      "timeType": "range",
+      "startYear": 300,
+      "endYear": 312,
+      "displayDate": {
+        "zh-CN": "约 300–312 年",
+        "en": "c. 300–312 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:daoist-biographical-records"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "人物—事件关系按事件时间段表达，具体参与方式仍需继续核对。",
+      "en": "The figure–event relation uses the event's time range; the exact mode of participation still requires review."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:guo-xiang-active-luoyang",
+  "source": {
+    "kind": "figure",
+    "slug": "guo-xiang"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "luoyang"
+  },
+  "relationType": "active_in",
+  "label": {
+    "zh-CN": "在洛阳活动",
+    "en": "Active in Luoyang"
+  },
+  "summary": {
+    "zh-CN": "郭象与洛阳建立人物活动的地图入口；该点是城市、区域或山岳尺度锚点，不是每一处活动的精确坐标。",
+    "en": "Guo Xiang is mapped to Luoyang as an activity entry; the point is a city-, regional- or mountain-scale anchor, not the exact coordinate of every activity."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:daoist-biographical-records",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "activity",
+      "timeType": "range",
+      "startYear": 252,
+      "endYear": 312,
+      "displayDate": {
+        "zh-CN": "约 252–312 年",
+        "en": "c. 252–312 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:daoist-biographical-records"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地图点位与关系页面保持同一空间尺度；具体地点仍需继续细化。",
+      "en": "The map point and relation view use the same spatial scale; specific sites still require refinement."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:kou-qianzhi-participated-kou-qianzhi-northern-wei-reform",
+  "source": {
+    "kind": "figure",
+    "slug": "kou-qianzhi"
+  },
+  "target": {
+    "kind": "event",
+    "slug": "kou-qianzhi-northern-wei-reform"
+  },
+  "relationType": "participated_in",
+  "label": {
+    "zh-CN": "参与寇谦之与北魏道教改革",
+    "en": "Participated in Kou Qianzhi and Northern Wei Daoist reform"
+  },
+  "summary": {
+    "zh-CN": "寇谦之与寇谦之与北魏道教改革相连；该关系沿用事件的证据层，不把事件名称扩写成额外生平事实。",
+    "en": "Kou Qianzhi is connected with Kou Qianzhi and Northern Wei Daoist reform; the relation follows the event's evidence layer and does not expand its title into additional biographical facts."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:daoist-biographical-records",
+    "source:daoist-biographical-records"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "institutional_activity",
+      "timeType": "range",
+      "startYear": 424,
+      "endYear": 448,
+      "displayDate": {
+        "zh-CN": "约 424–448 年",
+        "en": "c. 424–448 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:daoist-biographical-records"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "人物—事件关系按事件时间段表达，具体参与方式仍需继续核对。",
+      "en": "The figure–event relation uses the event's time range; the exact mode of participation still requires review."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:kou-qianzhi-active-luoyang",
+  "source": {
+    "kind": "figure",
+    "slug": "kou-qianzhi"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "luoyang"
+  },
+  "relationType": "active_in",
+  "label": {
+    "zh-CN": "在洛阳活动",
+    "en": "Active in Luoyang"
+  },
+  "summary": {
+    "zh-CN": "寇谦之与洛阳建立人物活动的地图入口；该点是城市、区域或山岳尺度锚点，不是每一处活动的精确坐标。",
+    "en": "Kou Qianzhi is mapped to Luoyang as an activity entry; the point is a city-, regional- or mountain-scale anchor, not the exact coordinate of every activity."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:daoist-biographical-records",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "activity",
+      "timeType": "range",
+      "startYear": 365,
+      "endYear": 448,
+      "displayDate": {
+        "zh-CN": "365–448 年",
+        "en": "365–448 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:daoist-biographical-records"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地图点位与关系页面保持同一空间尺度；具体地点仍需继续细化。",
+      "en": "The map point and relation view use the same spatial scale; specific sites still require refinement."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:lu-xiujing-participated-lu-xiujing-daoist-canon",
+  "source": {
+    "kind": "figure",
+    "slug": "lu-xiujing"
+  },
+  "target": {
+    "kind": "event",
+    "slug": "lu-xiujing-daoist-canon"
+  },
+  "relationType": "participated_in",
+  "label": {
+    "zh-CN": "参与陆修静整理道教经法",
+    "en": "Participated in Lu Xiujing's organisation of Daoist scriptures and precepts"
+  },
+  "summary": {
+    "zh-CN": "陆修静与陆修静整理道教经法相连；该关系沿用事件的证据层，不把事件名称扩写成额外生平事实。",
+    "en": "Lu Xiujing is connected with Lu Xiujing's organisation of Daoist scriptures and precepts; the relation follows the event's evidence layer and does not expand its title into additional biographical facts."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_inferred",
+  "sourceIds": [
+    "source:daoist-biographical-records",
+    "source:daoist-biographical-records"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "compilation",
+      "timeType": "range",
+      "startYear": 450,
+      "endYear": 470,
+      "displayDate": {
+        "zh-CN": "约 450–470 年",
+        "en": "c. 450–470 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:daoist-biographical-records"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "人物—事件关系按事件时间段表达，具体参与方式仍需继续核对。",
+      "en": "The figure–event relation uses the event's time range; the exact mode of participation still requires review."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:lu-xiujing-active-lushan",
+  "source": {
+    "kind": "figure",
+    "slug": "lu-xiujing"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "lushan"
+  },
+  "relationType": "active_in",
+  "label": {
+    "zh-CN": "在庐山活动",
+    "en": "Active in Mount Lu"
+  },
+  "summary": {
+    "zh-CN": "陆修静与庐山建立人物活动的地图入口；该点是城市、区域或山岳尺度锚点，不是每一处活动的精确坐标。",
+    "en": "Lu Xiujing is mapped to Mount Lu as an activity entry; the point is a city-, regional- or mountain-scale anchor, not the exact coordinate of every activity."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:daoist-biographical-records",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "activity",
+      "timeType": "range",
+      "startYear": 406,
+      "endYear": 477,
+      "displayDate": {
+        "zh-CN": "406–477 年",
+        "en": "406–477 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:daoist-biographical-records"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地图点位与关系页面保持同一空间尺度；具体地点仍需继续细化。",
+      "en": "The map point and relation view use the same spatial scale; specific sites still require refinement."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:sun-simiao-participated-sun-simiao-medical-daoist-practice",
+  "source": {
+    "kind": "figure",
+    "slug": "sun-simiao"
+  },
+  "target": {
+    "kind": "event",
+    "slug": "sun-simiao-medical-daoist-practice"
+  },
+  "relationType": "participated_in",
+  "label": {
+    "zh-CN": "参与孙思邈医学与养生实践",
+    "en": "Participated in Sun Simiao's medical and cultivation practice"
+  },
+  "summary": {
+    "zh-CN": "孙思邈与孙思邈医学与养生实践相连；该关系沿用事件的证据层，不把事件名称扩写成额外生平事实。",
+    "en": "Sun Simiao is connected with Sun Simiao's medical and cultivation practice; the relation follows the event's evidence layer and does not expand its title into additional biographical facts."
+  },
+  "confidence": "low",
+  "evidenceLayer": "historical_inferred",
+  "sourceIds": [
+    "source:daoist-biographical-records",
+    "source:daoist-biographical-records"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "activity",
+      "timeType": "range",
+      "startYear": 630,
+      "endYear": 670,
+      "displayDate": {
+        "zh-CN": "约 630–670 年",
+        "en": "c. 630–670 CE"
+      },
+      "confidence": "low",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:daoist-biographical-records"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "人物—事件关系按事件时间段表达，具体参与方式仍需继续核对。",
+      "en": "The figure–event relation uses the event's time range; the exact mode of participation still requires review."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:sun-simiao-active-zhongnan-mountains",
+  "source": {
+    "kind": "figure",
+    "slug": "sun-simiao"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "zhongnan-mountains"
+  },
+  "relationType": "active_in",
+  "label": {
+    "zh-CN": "在终南山活动",
+    "en": "Active in Zhongnan Mountains"
+  },
+  "summary": {
+    "zh-CN": "孙思邈与终南山建立人物活动的地图入口；该点是城市、区域或山岳尺度锚点，不是每一处活动的精确坐标。",
+    "en": "Sun Simiao is mapped to Zhongnan Mountains as an activity entry; the point is a city-, regional- or mountain-scale anchor, not the exact coordinate of every activity."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_inferred",
+  "sourceIds": [
+    "source:daoist-biographical-records",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "activity",
+      "timeType": "range",
+      "startYear": 581,
+      "endYear": 682,
+      "displayDate": {
+        "zh-CN": "581–682 年",
+        "en": "581–682 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:daoist-biographical-records"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地图点位与关系页面保持同一空间尺度；具体地点仍需继续细化。",
+      "en": "The map point and relation view use the same spatial scale; specific sites still require refinement."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:chen-tuan-participated-chen-tuan-huashan-reclusion",
+  "source": {
+    "kind": "figure",
+    "slug": "chen-tuan"
+  },
+  "target": {
+    "kind": "event",
+    "slug": "chen-tuan-huashan-reclusion"
+  },
+  "relationType": "participated_in",
+  "label": {
+    "zh-CN": "参与陈抟华山隐逸记忆",
+    "en": "Participated in Chen Tuan's Mount Hua reclusion memory"
+  },
+  "summary": {
+    "zh-CN": "陈抟与陈抟华山隐逸记忆相连；该关系沿用事件的证据层，不把事件名称扩写成额外生平事实。",
+    "en": "Chen Tuan is connected with Chen Tuan's Mount Hua reclusion memory; the relation follows the event's evidence layer and does not expand its title into additional biographical facts."
+  },
+  "confidence": "low",
+  "evidenceLayer": "historical_inferred",
+  "sourceIds": [
+    "source:daoist-biographical-records",
+    "source:daoist-biographical-records"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "institutional_and_memory_scope",
+      "timeType": "range",
+      "startYear": 920,
+      "endYear": 980,
+      "displayDate": {
+        "zh-CN": "约 920–980 年",
+        "en": "c. 920–980 CE"
+      },
+      "confidence": "low",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:daoist-biographical-records"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "inferred",
+    "note": {
+      "zh-CN": "人物—事件关系按事件时间段表达，具体参与方式仍需继续核对。",
+      "en": "The figure–event relation uses the event's time range; the exact mode of participation still requires review."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:chen-tuan-active-mount-huashan",
+  "source": {
+    "kind": "figure",
+    "slug": "chen-tuan"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "mount-huashan"
+  },
+  "relationType": "active_in",
+  "label": {
+    "zh-CN": "在华山活动",
+    "en": "Active in Mount Hua"
+  },
+  "summary": {
+    "zh-CN": "陈抟与华山建立人物活动的地图入口；该点是城市、区域或山岳尺度锚点，不是每一处活动的精确坐标。",
+    "en": "Chen Tuan is mapped to Mount Hua as an activity entry; the point is a city-, regional- or mountain-scale anchor, not the exact coordinate of every activity."
+  },
+  "confidence": "low",
+  "evidenceLayer": "historical_inferred",
+  "sourceIds": [
+    "source:daoist-biographical-records",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "activity",
+      "timeType": "range",
+      "startYear": 871,
+      "endYear": 989,
+      "displayDate": {
+        "zh-CN": "约 871–989 年",
+        "en": "c. 871–989 CE"
+      },
+      "confidence": "low",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:daoist-biographical-records"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "inferred",
+    "note": {
+      "zh-CN": "地图点位与关系页面保持同一空间尺度；具体地点仍需继续细化。",
+      "en": "The map point and relation view use the same spatial scale; specific sites still require refinement."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:wang-chongyang-participated-wang-chongyang-quanzhen-formation",
+  "source": {
+    "kind": "figure",
+    "slug": "wang-chongyang"
+  },
+  "target": {
+    "kind": "event",
+    "slug": "wang-chongyang-quanzhen-formation"
+  },
+  "relationType": "participated_in",
+  "label": {
+    "zh-CN": "参与王重阳与全真教团形成",
+    "en": "Participated in Wang Chongyang and the formation of the Quanzhen community"
+  },
+  "summary": {
+    "zh-CN": "王重阳与王重阳与全真教团形成相连；该关系沿用事件的证据层，不把事件名称扩写成额外生平事实。",
+    "en": "Wang Chongyang is connected with Wang Chongyang and the formation of the Quanzhen community; the relation follows the event's evidence layer and does not expand its title into additional biographical facts."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:daoist-biographical-records",
+    "source:daoist-biographical-records"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "foundation",
+      "timeType": "range",
+      "startYear": 1160,
+      "endYear": 1170,
+      "displayDate": {
+        "zh-CN": "约 1160–1170 年",
+        "en": "c. 1160–1170 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:daoist-biographical-records"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "人物—事件关系按事件时间段表达，具体参与方式仍需继续核对。",
+      "en": "The figure–event relation uses the event's time range; the exact mode of participation still requires review."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:wang-chongyang-active-zhongnan-mountains",
+  "source": {
+    "kind": "figure",
+    "slug": "wang-chongyang"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "zhongnan-mountains"
+  },
+  "relationType": "active_in",
+  "label": {
+    "zh-CN": "在终南山活动",
+    "en": "Active in Zhongnan Mountains"
+  },
+  "summary": {
+    "zh-CN": "王重阳与终南山建立人物活动的地图入口；该点是城市、区域或山岳尺度锚点，不是每一处活动的精确坐标。",
+    "en": "Wang Chongyang is mapped to Zhongnan Mountains as an activity entry; the point is a city-, regional- or mountain-scale anchor, not the exact coordinate of every activity."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:daoist-biographical-records",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "activity",
+      "timeType": "range",
+      "startYear": 1113,
+      "endYear": 1170,
+      "displayDate": {
+        "zh-CN": "1113–1170 年",
+        "en": "1113–1170 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:daoist-biographical-records"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地图点位与关系页面保持同一空间尺度；具体地点仍需继续细化。",
+      "en": "The map point and relation view use the same spatial scale; specific sites still require refinement."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:bodhidharma-participated-bodhidharma-luoyang-transmission",
+  "source": {
+    "kind": "figure",
+    "slug": "bodhidharma"
+  },
+  "target": {
+    "kind": "event",
+    "slug": "bodhidharma-luoyang-transmission"
+  },
+  "relationType": "participated_in",
+  "label": {
+    "zh-CN": "参与菩提达摩洛阳传承记忆",
+    "en": "Participated in Bodhidharma's Luoyang transmission memory"
+  },
+  "summary": {
+    "zh-CN": "菩提达摩与菩提达摩洛阳传承记忆相连；该关系沿用事件的证据层，不把事件名称扩写成额外生平事实。",
+    "en": "Bodhidharma is connected with Bodhidharma's Luoyang transmission memory; the relation follows the event's evidence layer and does not expand its title into additional biographical facts."
+  },
+  "confidence": "low",
+  "evidenceLayer": "traditional_account",
+  "sourceIds": [
+    "source:buddhist-school-biographies",
+    "source:buddhist-school-biographies"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "traditional_occurrence",
+      "timeType": "century",
+      "startYear": 450,
+      "endYear": 550,
+      "displayDate": {
+        "zh-CN": "约 5–6 世纪",
+        "en": "c. fifth–sixth centuries CE"
+      },
+      "confidence": "low",
+      "evidenceLayer": "traditional_account",
+      "sourceId": "source:buddhist-school-biographies"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "contested",
+    "note": {
+      "zh-CN": "人物—事件关系按事件时间段表达，具体参与方式仍需继续核对。",
+      "en": "The figure–event relation uses the event's time range; the exact mode of participation still requires review."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:bodhidharma-active-luoyang",
+  "source": {
+    "kind": "figure",
+    "slug": "bodhidharma"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "luoyang"
+  },
+  "relationType": "active_in",
+  "label": {
+    "zh-CN": "在洛阳活动",
+    "en": "Active in Luoyang"
+  },
+  "summary": {
+    "zh-CN": "菩提达摩与洛阳建立人物活动的地图入口；该点是城市、区域或山岳尺度锚点，不是每一处活动的精确坐标。",
+    "en": "Bodhidharma is mapped to Luoyang as an activity entry; the point is a city-, regional- or mountain-scale anchor, not the exact coordinate of every activity."
+  },
+  "confidence": "low",
+  "evidenceLayer": "historical_inferred",
+  "sourceIds": [
+    "source:buddhist-school-biographies",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "activity",
+      "timeType": "century",
+      "startYear": 450,
+      "endYear": 550,
+      "displayDate": {
+        "zh-CN": "约 5–6 世纪",
+        "en": "c. fifth–sixth centuries CE"
+      },
+      "confidence": "low",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:buddhist-school-biographies"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "memory_site",
+    "historicity": "contested",
+    "note": {
+      "zh-CN": "地图点位与关系页面保持同一空间尺度；具体地点仍需继续细化。",
+      "en": "The map point and relation view use the same spatial scale; specific sites still require refinement."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:zhiyi-participated-zhiyi-tiantai-teaching",
+  "source": {
+    "kind": "figure",
+    "slug": "zhiyi"
+  },
+  "target": {
+    "kind": "event",
+    "slug": "zhiyi-tiantai-teaching"
+  },
+  "relationType": "participated_in",
+  "label": {
+    "zh-CN": "参与智顗天台教观与山岳讲学",
+    "en": "Participated in Zhiyi's Tiantai teaching and mountain institutions"
+  },
+  "summary": {
+    "zh-CN": "智顗与智顗天台教观与山岳讲学相连；该关系沿用事件的证据层，不把事件名称扩写成额外生平事实。",
+    "en": "Zhiyi is connected with Zhiyi's Tiantai teaching and mountain institutions; the relation follows the event's evidence layer and does not expand its title into additional biographical facts."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:buddhist-school-biographies",
+    "source:buddhist-school-biographies"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "institutional_activity",
+      "timeType": "range",
+      "startYear": 585,
+      "endYear": 591,
+      "displayDate": {
+        "zh-CN": "约 585–591 年",
+        "en": "c. 585–591 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:buddhist-school-biographies"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "人物—事件关系按事件时间段表达，具体参与方式仍需继续核对。",
+      "en": "The figure–event relation uses the event's time range; the exact mode of participation still requires review."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:zhiyi-active-mount-tiantai",
+  "source": {
+    "kind": "figure",
+    "slug": "zhiyi"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "mount-tiantai"
+  },
+  "relationType": "active_in",
+  "label": {
+    "zh-CN": "在天台山活动",
+    "en": "Active in Mount Tiantai"
+  },
+  "summary": {
+    "zh-CN": "智顗与天台山建立人物活动的地图入口；该点是城市、区域或山岳尺度锚点，不是每一处活动的精确坐标。",
+    "en": "Zhiyi is mapped to Mount Tiantai as an activity entry; the point is a city-, regional- or mountain-scale anchor, not the exact coordinate of every activity."
+  },
+  "confidence": "high",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:buddhist-school-biographies",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "activity",
+      "timeType": "range",
+      "startYear": 538,
+      "endYear": 597,
+      "displayDate": {
+        "zh-CN": "538–597 年",
+        "en": "538–597 CE"
+      },
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:buddhist-school-biographies"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地图点位与关系页面保持同一空间尺度；具体地点仍需继续细化。",
+      "en": "The map point and relation view use the same spatial scale; specific sites still require refinement."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:fazang-participated-fazang-huayan-teaching",
+  "source": {
+    "kind": "figure",
+    "slug": "fazang"
+  },
+  "target": {
+    "kind": "event",
+    "slug": "fazang-huayan-teaching"
+  },
+  "relationType": "participated_in",
+  "label": {
+    "zh-CN": "参与法藏华严解释与长安译经网络",
+    "en": "Participated in Fazang's Huayan interpretation in the Chang'an translation network"
+  },
+  "summary": {
+    "zh-CN": "法藏与法藏华严解释与长安译经网络相连；该关系沿用事件的证据层，不把事件名称扩写成额外生平事实。",
+    "en": "Fazang is connected with Fazang's Huayan interpretation in the Chang'an translation network; the relation follows the event's evidence layer and does not expand its title into additional biographical facts."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:buddhist-school-biographies",
+    "source:buddhist-school-biographies"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "commentary",
+      "timeType": "range",
+      "startYear": 689,
+      "endYear": 705,
+      "displayDate": {
+        "zh-CN": "约 689–705 年",
+        "en": "c. 689–705 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:buddhist-school-biographies"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "人物—事件关系按事件时间段表达，具体参与方式仍需继续核对。",
+      "en": "The figure–event relation uses the event's time range; the exact mode of participation still requires review."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:fazang-active-changan",
+  "source": {
+    "kind": "figure",
+    "slug": "fazang"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "changan"
+  },
+  "relationType": "active_in",
+  "label": {
+    "zh-CN": "在长安活动",
+    "en": "Active in Chang'an"
+  },
+  "summary": {
+    "zh-CN": "法藏与长安建立人物活动的地图入口；该点是城市、区域或山岳尺度锚点，不是每一处活动的精确坐标。",
+    "en": "Fazang is mapped to Chang'an as an activity entry; the point is a city-, regional- or mountain-scale anchor, not the exact coordinate of every activity."
+  },
+  "confidence": "high",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:buddhist-school-biographies",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "activity",
+      "timeType": "range",
+      "startYear": 643,
+      "endYear": 712,
+      "displayDate": {
+        "zh-CN": "643–712 年",
+        "en": "643–712 CE"
+      },
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:buddhist-school-biographies"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地图点位与关系页面保持同一空间尺度；具体地点仍需继续细化。",
+      "en": "The map point and relation view use the same spatial scale; specific sites still require refinement."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:huineng-participated-huineng-caoxi-transmission",
+  "source": {
+    "kind": "figure",
+    "slug": "huineng"
+  },
+  "target": {
+    "kind": "event",
+    "slug": "huineng-caoxi-transmission"
+  },
+  "relationType": "participated_in",
+  "label": {
+    "zh-CN": "参与慧能曹溪禅与《坛经》传承",
+    "en": "Participated in Huineng's Caoxi Chan and Platform Sutra transmission"
+  },
+  "summary": {
+    "zh-CN": "慧能与慧能曹溪禅与《坛经》传承相连；该关系沿用事件的证据层，不把事件名称扩写成额外生平事实。",
+    "en": "Huineng is connected with Huineng's Caoxi Chan and Platform Sutra transmission; the relation follows the event's evidence layer and does not expand its title into additional biographical facts."
+  },
+  "confidence": "low",
+  "evidenceLayer": "historical_inferred",
+  "sourceIds": [
+    "source:buddhist-school-biographies",
+    "source:buddhist-school-biographies"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "textual_circulation",
+      "timeType": "range",
+      "startYear": 675,
+      "endYear": 713,
+      "displayDate": {
+        "zh-CN": "约 675–713 年",
+        "en": "c. 675–713 CE"
+      },
+      "confidence": "low",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:buddhist-school-biographies"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "contested",
+    "note": {
+      "zh-CN": "人物—事件关系按事件时间段表达，具体参与方式仍需继续核对。",
+      "en": "The figure–event relation uses the event's time range; the exact mode of participation still requires review."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:huineng-active-shaoguan",
+  "source": {
+    "kind": "figure",
+    "slug": "huineng"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "shaoguan"
+  },
+  "relationType": "active_in",
+  "label": {
+    "zh-CN": "在韶关活动",
+    "en": "Active in Shaoguan"
+  },
+  "summary": {
+    "zh-CN": "慧能与韶关建立人物活动的地图入口；该点是城市、区域或山岳尺度锚点，不是每一处活动的精确坐标。",
+    "en": "Huineng is mapped to Shaoguan as an activity entry; the point is a city-, regional- or mountain-scale anchor, not the exact coordinate of every activity."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_inferred",
+  "sourceIds": [
+    "source:buddhist-school-biographies",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "activity",
+      "timeType": "range",
+      "startYear": 638,
+      "endYear": 713,
+      "displayDate": {
+        "zh-CN": "638–713 年",
+        "en": "638–713 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:buddhist-school-biographies"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "contested",
+    "note": {
+      "zh-CN": "地图点位与关系页面保持同一空间尺度；具体地点仍需继续细化。",
+      "en": "The map point and relation view use the same spatial scale; specific sites still require refinement."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:shandao-participated-shandao-changan-pure-land-teaching",
+  "source": {
+    "kind": "figure",
+    "slug": "shandao"
+  },
+  "target": {
+    "kind": "event",
+    "slug": "shandao-changan-pure-land-teaching"
+  },
+  "relationType": "participated_in",
+  "label": {
+    "zh-CN": "参与善导长安净土教化",
+    "en": "Participated in Shandao's Pure Land teaching in Chang'an"
+  },
+  "summary": {
+    "zh-CN": "善导与善导长安净土教化相连；该关系沿用事件的证据层，不把事件名称扩写成额外生平事实。",
+    "en": "Shandao is connected with Shandao's Pure Land teaching in Chang'an; the relation follows the event's evidence layer and does not expand its title into additional biographical facts."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:buddhist-school-biographies",
+    "source:buddhist-school-biographies"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "institutional_activity",
+      "timeType": "range",
+      "startYear": 645,
+      "endYear": 681,
+      "displayDate": {
+        "zh-CN": "约 645–681 年",
+        "en": "c. 645–681 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:buddhist-school-biographies"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "人物—事件关系按事件时间段表达，具体参与方式仍需继续核对。",
+      "en": "The figure–event relation uses the event's time range; the exact mode of participation still requires review."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:shandao-active-changan",
+  "source": {
+    "kind": "figure",
+    "slug": "shandao"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "changan"
+  },
+  "relationType": "active_in",
+  "label": {
+    "zh-CN": "在长安活动",
+    "en": "Active in Chang'an"
+  },
+  "summary": {
+    "zh-CN": "善导与长安建立人物活动的地图入口；该点是城市、区域或山岳尺度锚点，不是每一处活动的精确坐标。",
+    "en": "Shandao is mapped to Chang'an as an activity entry; the point is a city-, regional- or mountain-scale anchor, not the exact coordinate of every activity."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:buddhist-school-biographies",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "activity",
+      "timeType": "range",
+      "startYear": 613,
+      "endYear": 681,
+      "displayDate": {
+        "zh-CN": "613–681 年",
+        "en": "613–681 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:buddhist-school-biographies"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地图点位与关系页面保持同一空间尺度；具体地点仍需继续细化。",
+      "en": "The map point and relation view use the same spatial scale; specific sites still require refinement."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:sengzhao-participated-sengzhao-changan-madhyamaka",
+  "source": {
+    "kind": "figure",
+    "slug": "sengzhao"
+  },
+  "target": {
+    "kind": "event",
+    "slug": "sengzhao-changan-madhyamaka"
+  },
+  "relationType": "participated_in",
+  "label": {
+    "zh-CN": "参与僧肇与长安中观译解网络",
+    "en": "Participated in Sengzhao and the Chang'an Madhyamaka translation network"
+  },
+  "summary": {
+    "zh-CN": "僧肇与僧肇与长安中观译解网络相连；该关系沿用事件的证据层，不把事件名称扩写成额外生平事实。",
+    "en": "Sengzhao is connected with Sengzhao and the Chang'an Madhyamaka translation network; the relation follows the event's evidence layer and does not expand its title into additional biographical facts."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:buddhist-school-biographies",
+    "source:buddhist-school-biographies"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "translation",
+      "timeType": "range",
+      "startYear": 401,
+      "endYear": 414,
+      "displayDate": {
+        "zh-CN": "约 401–414 年",
+        "en": "c. 401–414 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:buddhist-school-biographies"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "人物—事件关系按事件时间段表达，具体参与方式仍需继续核对。",
+      "en": "The figure–event relation uses the event's time range; the exact mode of participation still requires review."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:sengzhao-active-changan",
+  "source": {
+    "kind": "figure",
+    "slug": "sengzhao"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "changan"
+  },
+  "relationType": "active_in",
+  "label": {
+    "zh-CN": "在长安活动",
+    "en": "Active in Chang'an"
+  },
+  "summary": {
+    "zh-CN": "僧肇与长安建立人物活动的地图入口；该点是城市、区域或山岳尺度锚点，不是每一处活动的精确坐标。",
+    "en": "Sengzhao is mapped to Chang'an as an activity entry; the point is a city-, regional- or mountain-scale anchor, not the exact coordinate of every activity."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:buddhist-school-biographies",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "activity",
+      "timeType": "range",
+      "startYear": 384,
+      "endYear": 414,
+      "displayDate": {
+        "zh-CN": "约 384–414 年",
+        "en": "c. 384–414 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:buddhist-school-biographies"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地图点位与关系页面保持同一空间尺度；具体地点仍需继续细化。",
+      "en": "The map point and relation view use the same spatial scale; specific sites still require refinement."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:daoxuan-participated-daoxuan-vinaya-institution",
+  "source": {
+    "kind": "figure",
+    "slug": "daoxuan"
+  },
+  "target": {
+    "kind": "event",
+    "slug": "daoxuan-vinaya-institution"
+  },
+  "relationType": "participated_in",
+  "label": {
+    "zh-CN": "参与道宣律学与僧传制度",
+    "en": "Participated in Daoxuan's vinaya learning and monastic institutions"
+  },
+  "summary": {
+    "zh-CN": "道宣与道宣律学与僧传制度相连；该关系沿用事件的证据层，不把事件名称扩写成额外生平事实。",
+    "en": "Daoxuan is connected with Daoxuan's vinaya learning and monastic institutions; the relation follows the event's evidence layer and does not expand its title into additional biographical facts."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:buddhist-school-biographies",
+    "source:buddhist-school-biographies"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "compilation",
+      "timeType": "range",
+      "startYear": 640,
+      "endYear": 667,
+      "displayDate": {
+        "zh-CN": "约 640–667 年",
+        "en": "c. 640–667 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:buddhist-school-biographies"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "人物—事件关系按事件时间段表达，具体参与方式仍需继续核对。",
+      "en": "The figure–event relation uses the event's time range; the exact mode of participation still requires review."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:daoxuan-active-changan",
+  "source": {
+    "kind": "figure",
+    "slug": "daoxuan"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "changan"
+  },
+  "relationType": "active_in",
+  "label": {
+    "zh-CN": "在长安活动",
+    "en": "Active in Chang'an"
+  },
+  "summary": {
+    "zh-CN": "道宣与长安建立人物活动的地图入口；该点是城市、区域或山岳尺度锚点，不是每一处活动的精确坐标。",
+    "en": "Daoxuan is mapped to Chang'an as an activity entry; the point is a city-, regional- or mountain-scale anchor, not the exact coordinate of every activity."
+  },
+  "confidence": "high",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:buddhist-school-biographies",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "activity",
+      "timeType": "range",
+      "startYear": 596,
+      "endYear": 667,
+      "displayDate": {
+        "zh-CN": "596–667 年",
+        "en": "596–667 CE"
+      },
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:buddhist-school-biographies"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地图点位与关系页面保持同一空间尺度；具体地点仍需继续细化。",
+      "en": "The map point and relation view use the same spatial scale; specific sites still require refinement."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:baizhang-huaihai-participated-baizhang-monastic-rules",
+  "source": {
+    "kind": "figure",
+    "slug": "baizhang-huaihai"
+  },
+  "target": {
+    "kind": "event",
+    "slug": "baizhang-monastic-rules"
+  },
+  "relationType": "participated_in",
+  "label": {
+    "zh-CN": "参与百丈怀海与禅门丛林制度",
+    "en": "Participated in Baizhang Huaihai and Chan monastic organisation"
+  },
+  "summary": {
+    "zh-CN": "百丈怀海与百丈怀海与禅门丛林制度相连；该关系沿用事件的证据层，不把事件名称扩写成额外生平事实。",
+    "en": "Baizhang Huaihai is connected with Baizhang Huaihai and Chan monastic organisation; the relation follows the event's evidence layer and does not expand its title into additional biographical facts."
+  },
+  "confidence": "low",
+  "evidenceLayer": "historical_inferred",
+  "sourceIds": [
+    "source:buddhist-school-biographies",
+    "source:buddhist-school-biographies"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "institutional_activity",
+      "timeType": "range",
+      "startYear": 780,
+      "endYear": 814,
+      "displayDate": {
+        "zh-CN": "约 780–814 年",
+        "en": "c. 780–814 CE"
+      },
+      "confidence": "low",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:buddhist-school-biographies"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "人物—事件关系按事件时间段表达，具体参与方式仍需继续核对。",
+      "en": "The figure–event relation uses the event's time range; the exact mode of participation still requires review."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:baizhang-huaihai-active-mount-baizhang",
+  "source": {
+    "kind": "figure",
+    "slug": "baizhang-huaihai"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "mount-baizhang"
+  },
+  "relationType": "active_in",
+  "label": {
+    "zh-CN": "在百丈山活动",
+    "en": "Active in Mount Baizhang"
+  },
+  "summary": {
+    "zh-CN": "百丈怀海与百丈山建立人物活动的地图入口；该点是城市、区域或山岳尺度锚点，不是每一处活动的精确坐标。",
+    "en": "Baizhang Huaihai is mapped to Mount Baizhang as an activity entry; the point is a city-, regional- or mountain-scale anchor, not the exact coordinate of every activity."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_inferred",
+  "sourceIds": [
+    "source:buddhist-school-biographies",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "activity",
+      "timeType": "range",
+      "startYear": 720,
+      "endYear": 814,
+      "displayDate": {
+        "zh-CN": "约 720–814 年",
+        "en": "c. 720–814 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:buddhist-school-biographies"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地图点位与关系页面保持同一空间尺度；具体地点仍需继续细化。",
+      "en": "The map point and relation view use the same spatial scale; specific sites still require refinement."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:linji-yixuan-participated-linji-teaching-network",
+  "source": {
+    "kind": "figure",
+    "slug": "linji-yixuan"
+  },
+  "target": {
+    "kind": "event",
+    "slug": "linji-teaching-network"
+  },
+  "relationType": "participated_in",
+  "label": {
+    "zh-CN": "参与临济义玄与北方禅门网络",
+    "en": "Participated in Linji Yixuan and northern Chan networks"
+  },
+  "summary": {
+    "zh-CN": "临济义玄与临济义玄与北方禅门网络相连；该关系沿用事件的证据层，不把事件名称扩写成额外生平事实。",
+    "en": "Linji Yixuan is connected with Linji Yixuan and northern Chan networks; the relation follows the event's evidence layer and does not expand its title into additional biographical facts."
+  },
+  "confidence": "low",
+  "evidenceLayer": "historical_inferred",
+  "sourceIds": [
+    "source:buddhist-school-biographies",
+    "source:buddhist-school-biographies"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "textual_circulation",
+      "timeType": "range",
+      "startYear": 840,
+      "endYear": 866,
+      "displayDate": {
+        "zh-CN": "约 840–866 年",
+        "en": "c. 840–866 CE"
+      },
+      "confidence": "low",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:buddhist-school-biographies"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "人物—事件关系按事件时间段表达，具体参与方式仍需继续核对。",
+      "en": "The figure–event relation uses the event's time range; the exact mode of participation still requires review."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:linji-yixuan-active-zhengding",
+  "source": {
+    "kind": "figure",
+    "slug": "linji-yixuan"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "zhengding"
+  },
+  "relationType": "active_in",
+  "label": {
+    "zh-CN": "在正定活动",
+    "en": "Active in Zhengding"
+  },
+  "summary": {
+    "zh-CN": "临济义玄与正定建立人物活动的地图入口；该点是城市、区域或山岳尺度锚点，不是每一处活动的精确坐标。",
+    "en": "Linji Yixuan is mapped to Zhengding as an activity entry; the point is a city-, regional- or mountain-scale anchor, not the exact coordinate of every activity."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_inferred",
+  "sourceIds": [
+    "source:buddhist-school-biographies",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "activity",
+      "timeType": "range",
+      "startYear": 810,
+      "endYear": 866,
+      "displayDate": {
+        "zh-CN": "约 810–866 年",
+        "en": "c. 810–866 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:buddhist-school-biographies"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地图点位与关系页面保持同一空间尺度；具体地点仍需继续细化。",
+      "en": "The map point and relation view use the same spatial scale; specific sites still require refinement."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:jian-zhen-participated-jianzhen-eastward-vinaya-transmission",
+  "source": {
+    "kind": "figure",
+    "slug": "jian-zhen"
+  },
+  "target": {
+    "kind": "event",
+    "slug": "jianzhen-eastward-vinaya-transmission"
+  },
+  "relationType": "participated_in",
+  "label": {
+    "zh-CN": "参与鉴真扬州律学与东渡网络",
+    "en": "Participated in Jianzhen's Yangzhou vinaya network and eastward transmission"
+  },
+  "summary": {
+    "zh-CN": "鉴真与鉴真扬州律学与东渡网络相连；该关系沿用事件的证据层，不把事件名称扩写成额外生平事实。",
+    "en": "Jianzhen is connected with Jianzhen's Yangzhou vinaya network and eastward transmission; the relation follows the event's evidence layer and does not expand its title into additional biographical facts."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:buddhist-school-biographies",
+    "source:buddhist-school-biographies"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "route_time",
+      "timeType": "range",
+      "startYear": 733,
+      "endYear": 754,
+      "displayDate": {
+        "zh-CN": "约 733–754 年",
+        "en": "c. 733–754 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:buddhist-school-biographies"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "人物—事件关系按事件时间段表达，具体参与方式仍需继续核对。",
+      "en": "The figure–event relation uses the event's time range; the exact mode of participation still requires review."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:jian-zhen-active-yangzhou",
+  "source": {
+    "kind": "figure",
+    "slug": "jian-zhen"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "yangzhou"
+  },
+  "relationType": "active_in",
+  "label": {
+    "zh-CN": "在扬州活动",
+    "en": "Active in Yangzhou"
+  },
+  "summary": {
+    "zh-CN": "鉴真与扬州建立人物活动的地图入口；该点是城市、区域或山岳尺度锚点，不是每一处活动的精确坐标。",
+    "en": "Jianzhen is mapped to Yangzhou as an activity entry; the point is a city-, regional- or mountain-scale anchor, not the exact coordinate of every activity."
+  },
+  "confidence": "high",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:buddhist-school-biographies",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "activity",
+      "timeType": "range",
+      "startYear": 688,
+      "endYear": 763,
+      "displayDate": {
+        "zh-CN": "688–763 年",
+        "en": "688–763 CE"
+      },
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:buddhist-school-biographies"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地图点位与关系页面保持同一空间尺度；具体地点仍需继续细化。",
+      "en": "The map point and relation view use the same spatial scale; specific sites still require refinement."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:xunzi-ritual-and-nature-occurred-handan",
+  "source": {
+    "kind": "event",
+    "slug": "xunzi-ritual-and-nature"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "handan"
+  },
+  "relationType": "occurred_at",
+  "label": {
+    "zh-CN": "发生于邯郸",
+    "en": "Occurred in Handan"
+  },
+  "summary": {
+    "zh-CN": "荀子礼学与性论语境以邯郸作为城市、区域或山岳尺度的空间锚点；点位不替代具体机构或遗址定位。",
+    "en": "Xunzi's ritual learning and human-nature debate uses Handan as a city-, regional- or mountain-scale spatial anchor; the point does not replace a specific institution or site."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_inferred",
+  "sourceIds": [
+    "source:han-classics-biographies",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "analytic_period",
+      "timeType": "range",
+      "startYear": -310,
+      "endYear": -235,
+      "displayDate": {
+        "zh-CN": "约公元前 310–235 年",
+        "en": "c. 310–235 BCE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:han-classics-biographies"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "inferred",
+    "note": {
+      "zh-CN": "地点关系只表达当前发布的空间尺度，不自动推断精确到访点。",
+      "en": "The place relation expresses the published spatial scale and does not infer an exact visit point."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:dong-zhongshu-confucian-statecraft-occurred-changan",
+  "source": {
+    "kind": "event",
+    "slug": "dong-zhongshu-confucian-statecraft"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "changan"
+  },
+  "relationType": "occurred_at",
+  "label": {
+    "zh-CN": "发生于长安",
+    "en": "Occurred in Chang'an"
+  },
+  "summary": {
+    "zh-CN": "董仲舒的经学与汉代制度思想以长安作为城市、区域或山岳尺度的空间锚点；点位不替代具体机构或遗址定位。",
+    "en": "Dong Zhongshu's classical learning and Han statecraft uses Chang'an as a city-, regional- or mountain-scale spatial anchor; the point does not replace a specific institution or site."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:han-classics-biographies",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "institutional_activity",
+      "timeType": "range",
+      "startYear": -140,
+      "endYear": -110,
+      "displayDate": {
+        "zh-CN": "约公元前 140–110 年",
+        "en": "c. 140–110 BCE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:han-classics-biographies"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地点关系只表达当前发布的空间尺度，不自动推断精确到访点。",
+      "en": "The place relation expresses the published spatial scale and does not infer an exact visit point."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:han-yu-ancient-prose-and-orthodoxy-occurred-changan",
+  "source": {
+    "kind": "event",
+    "slug": "han-yu-ancient-prose-and-orthodoxy"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "changan"
+  },
+  "relationType": "occurred_at",
+  "label": {
+    "zh-CN": "发生于长安",
+    "en": "Occurred in Chang'an"
+  },
+  "summary": {
+    "zh-CN": "韩愈古文与道统论述以长安作为城市、区域或山岳尺度的空间锚点；点位不替代具体机构或遗址定位。",
+    "en": "Han Yu's classical prose and discourse on orthodoxy uses Chang'an as a city-, regional- or mountain-scale spatial anchor; the point does not replace a specific institution or site."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:chinese-literati-records",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "composition",
+      "timeType": "range",
+      "startYear": 800,
+      "endYear": 824,
+      "displayDate": {
+        "zh-CN": "约 800–824 年",
+        "en": "c. 800–824 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:chinese-literati-records"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地点关系只表达当前发布的空间尺度，不自动推断精确到访点。",
+      "en": "The place relation expresses the published spatial scale and does not infer an exact visit point."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:cheng-brothers-luoyang-learning-occurred-luoyang",
+  "source": {
+    "kind": "event",
+    "slug": "cheng-brothers-luoyang-learning"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "luoyang"
+  },
+  "relationType": "occurred_at",
+  "label": {
+    "zh-CN": "发生于洛阳",
+    "en": "Occurred in Luoyang"
+  },
+  "summary": {
+    "zh-CN": "二程与洛学讲学网络以洛阳作为城市、区域或山岳尺度的空间锚点；点位不替代具体机构或遗址定位。",
+    "en": "The Cheng brothers and the Luoyang learning network uses Luoyang as a city-, regional- or mountain-scale spatial anchor; the point does not replace a specific institution or site."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_inferred",
+  "sourceIds": [
+    "source:song-confucian-literati-records",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "institutional_activity",
+      "timeType": "range",
+      "startYear": 1050,
+      "endYear": 1077,
+      "displayDate": {
+        "zh-CN": "约 1050–1077 年",
+        "en": "c. 1050–1077 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:song-confucian-literati-records"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "inferred",
+    "note": {
+      "zh-CN": "地点关系只表达当前发布的空间尺度，不自动推断精确到访点。",
+      "en": "The place relation expresses the published spatial scale and does not infer an exact visit point."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:wang-yangming-yangming-learning-occurred-yuyao",
+  "source": {
+    "kind": "event",
+    "slug": "wang-yangming-yangming-learning"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "yuyao"
+  },
+  "relationType": "occurred_at",
+  "label": {
+    "zh-CN": "发生于余姚",
+    "en": "Occurred in Yuyao"
+  },
+  "summary": {
+    "zh-CN": "王阳明心学与地方讲学以余姚作为城市、区域或山岳尺度的空间锚点；点位不替代具体机构或遗址定位。",
+    "en": "Wang Yangming's mind learning and local teaching uses Yuyao as a city-, regional- or mountain-scale spatial anchor; the point does not replace a specific institution or site."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:chinese-literati-records",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "institutional_activity",
+      "timeType": "range",
+      "startYear": 1508,
+      "endYear": 1528,
+      "displayDate": {
+        "zh-CN": "约 1508–1528 年",
+        "en": "c. 1508–1528 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:chinese-literati-records"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地点关系只表达当前发布的空间尺度，不自动推断精确到访点。",
+      "en": "The place relation expresses the published spatial scale and does not infer an exact visit point."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:wang-anshi-reform-and-classics-occurred-kaifeng",
+  "source": {
+    "kind": "event",
+    "slug": "wang-anshi-reform-and-classics"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "kaifeng"
+  },
+  "relationType": "occurred_at",
+  "label": {
+    "zh-CN": "发生于开封",
+    "en": "Occurred in Kaifeng"
+  },
+  "summary": {
+    "zh-CN": "王安石变法与新学以开封作为城市、区域或山岳尺度的空间锚点；点位不替代具体机构或遗址定位。",
+    "en": "Wang Anshi's reforms and New Learning uses Kaifeng as a city-, regional- or mountain-scale spatial anchor; the point does not replace a specific institution or site."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:song-confucian-literati-records",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "policy",
+      "timeType": "range",
+      "startYear": 1069,
+      "endYear": 1076,
+      "displayDate": {
+        "zh-CN": "约 1069–1076 年",
+        "en": "c. 1069–1076 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:song-confucian-literati-records"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "institutional_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地点关系只表达当前发布的空间尺度，不自动推断精确到访点。",
+      "en": "The place relation expresses the published spatial scale and does not infer an exact visit point."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:ouyang-xiu-song-history-and-prose-occurred-kaifeng",
+  "source": {
+    "kind": "event",
+    "slug": "ouyang-xiu-song-history-and-prose"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "kaifeng"
+  },
+  "relationType": "occurred_at",
+  "label": {
+    "zh-CN": "发生于开封",
+    "en": "Occurred in Kaifeng"
+  },
+  "summary": {
+    "zh-CN": "欧阳修的古文与宋代史学以开封作为城市、区域或山岳尺度的空间锚点；点位不替代具体机构或遗址定位。",
+    "en": "Ouyang Xiu's prose and Song historiography uses Kaifeng as a city-, regional- or mountain-scale spatial anchor; the point does not replace a specific institution or site."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:song-confucian-literati-records",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "composition",
+      "timeType": "range",
+      "startYear": 1042,
+      "endYear": 1060,
+      "displayDate": {
+        "zh-CN": "约 1042–1060 年",
+        "en": "c. 1042–1060 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:song-confucian-literati-records"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地点关系只表达当前发布的空间尺度，不自动推断精确到访点。",
+      "en": "The place relation expresses the published spatial scale and does not infer an exact visit point."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:sima-guang-zizhi-tongjian-occurred-luoyang",
+  "source": {
+    "kind": "event",
+    "slug": "sima-guang-zizhi-tongjian"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "luoyang"
+  },
+  "relationType": "occurred_at",
+  "label": {
+    "zh-CN": "发生于洛阳",
+    "en": "Occurred in Luoyang"
+  },
+  "summary": {
+    "zh-CN": "司马光编纂《资治通鉴》以洛阳作为城市、区域或山岳尺度的空间锚点；点位不替代具体机构或遗址定位。",
+    "en": "Sima Guang's compilation of the Comprehensive Mirror uses Luoyang as a city-, regional- or mountain-scale spatial anchor; the point does not replace a specific institution or site."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:song-confucian-literati-records",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "compilation",
+      "timeType": "range",
+      "startYear": 1066,
+      "endYear": 1084,
+      "displayDate": {
+        "zh-CN": "约 1066–1084 年",
+        "en": "c. 1066–1084 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:song-confucian-literati-records"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地点关系只表达当前发布的空间尺度，不自动推断精确到访点。",
+      "en": "The place relation expresses the published spatial scale and does not infer an exact visit point."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:su-shi-huangzhou-writing-occurred-huangzhou",
+  "source": {
+    "kind": "event",
+    "slug": "su-shi-huangzhou-writing"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "huangzhou"
+  },
+  "relationType": "occurred_at",
+  "label": {
+    "zh-CN": "发生于黄州",
+    "en": "Occurred in Huangzhou"
+  },
+  "summary": {
+    "zh-CN": "苏轼黄州流寓与写作以黄州作为城市、区域或山岳尺度的空间锚点；点位不替代具体机构或遗址定位。",
+    "en": "Su Shi's Huangzhou exile and writing uses Huangzhou as a city-, regional- or mountain-scale spatial anchor; the point does not replace a specific institution or site."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:chinese-literati-records",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "activity",
+      "timeType": "range",
+      "startYear": 1079,
+      "endYear": 1084,
+      "displayDate": {
+        "zh-CN": "约 1079–1084 年",
+        "en": "c. 1079–1084 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:chinese-literati-records"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地点关系只表达当前发布的空间尺度，不自动推断精确到访点。",
+      "en": "The place relation expresses the published spatial scale and does not infer an exact visit point."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:tao-yuanming-reclusion-and-poetry-occurred-xunyang",
+  "source": {
+    "kind": "event",
+    "slug": "tao-yuanming-reclusion-and-poetry"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "xunyang"
+  },
+  "relationType": "occurred_at",
+  "label": {
+    "zh-CN": "发生于浔阳",
+    "en": "Occurred in Xunyang"
+  },
+  "summary": {
+    "zh-CN": "陶渊明归隐与诗文传统以浔阳作为城市、区域或山岳尺度的空间锚点；点位不替代具体机构或遗址定位。",
+    "en": "Tao Yuanming's reclusion and poetic tradition uses Xunyang as a city-, regional- or mountain-scale spatial anchor; the point does not replace a specific institution or site."
+  },
+  "confidence": "low",
+  "evidenceLayer": "historical_inferred",
+  "sourceIds": [
+    "source:chinese-literati-records",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "composition",
+      "timeType": "range",
+      "startYear": 405,
+      "endYear": 427,
+      "displayDate": {
+        "zh-CN": "约 405–427 年",
+        "en": "c. 405–427 CE"
+      },
+      "confidence": "low",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:chinese-literati-records"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "inferred",
+    "note": {
+      "zh-CN": "地点关系只表达当前发布的空间尺度，不自动推断精确到访点。",
+      "en": "The place relation expresses the published spatial scale and does not infer an exact visit point."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:wang-wei-changan-poetry-and-landscape-occurred-changan",
+  "source": {
+    "kind": "event",
+    "slug": "wang-wei-changan-poetry-and-landscape"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "changan"
+  },
+  "relationType": "occurred_at",
+  "label": {
+    "zh-CN": "发生于长安",
+    "en": "Occurred in Chang'an"
+  },
+  "summary": {
+    "zh-CN": "王维长安诗画与山水文化以长安作为城市、区域或山岳尺度的空间锚点；点位不替代具体机构或遗址定位。",
+    "en": "Wang Wei's Chang'an poetry and landscape culture uses Chang'an as a city-, regional- or mountain-scale spatial anchor; the point does not replace a specific institution or site."
+  },
+  "confidence": "low",
+  "evidenceLayer": "historical_inferred",
+  "sourceIds": [
+    "source:chinese-literati-records",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "composition",
+      "timeType": "range",
+      "startYear": 730,
+      "endYear": 750,
+      "displayDate": {
+        "zh-CN": "约 730–750 年",
+        "en": "c. 730–750 CE"
+      },
+      "confidence": "low",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:chinese-literati-records"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "inferred",
+    "note": {
+      "zh-CN": "地点关系只表达当前发布的空间尺度，不自动推断精确到访点。",
+      "en": "The place relation expresses the published spatial scale and does not infer an exact visit point."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:guo-xiang-zhuangzi-commentary-occurred-luoyang",
+  "source": {
+    "kind": "event",
+    "slug": "guo-xiang-zhuangzi-commentary"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "luoyang"
+  },
+  "relationType": "occurred_at",
+  "label": {
+    "zh-CN": "发生于洛阳",
+    "en": "Occurred in Luoyang"
+  },
+  "summary": {
+    "zh-CN": "郭象注《庄子》传统以洛阳作为城市、区域或山岳尺度的空间锚点；点位不替代具体机构或遗址定位。",
+    "en": "Guo Xiang's Zhuangzi commentary tradition uses Luoyang as a city-, regional- or mountain-scale spatial anchor; the point does not replace a specific institution or site."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:daoist-biographical-records",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "commentary",
+      "timeType": "range",
+      "startYear": 300,
+      "endYear": 312,
+      "displayDate": {
+        "zh-CN": "约 300–312 年",
+        "en": "c. 300–312 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:daoist-biographical-records"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地点关系只表达当前发布的空间尺度，不自动推断精确到访点。",
+      "en": "The place relation expresses the published spatial scale and does not infer an exact visit point."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:kou-qianzhi-northern-wei-reform-occurred-luoyang",
+  "source": {
+    "kind": "event",
+    "slug": "kou-qianzhi-northern-wei-reform"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "luoyang"
+  },
+  "relationType": "occurred_at",
+  "label": {
+    "zh-CN": "发生于洛阳",
+    "en": "Occurred in Luoyang"
+  },
+  "summary": {
+    "zh-CN": "寇谦之与北魏道教改革以洛阳作为城市、区域或山岳尺度的空间锚点；点位不替代具体机构或遗址定位。",
+    "en": "Kou Qianzhi and Northern Wei Daoist reform uses Luoyang as a city-, regional- or mountain-scale spatial anchor; the point does not replace a specific institution or site."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:daoist-biographical-records",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "institutional_activity",
+      "timeType": "range",
+      "startYear": 424,
+      "endYear": 448,
+      "displayDate": {
+        "zh-CN": "约 424–448 年",
+        "en": "c. 424–448 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:daoist-biographical-records"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地点关系只表达当前发布的空间尺度，不自动推断精确到访点。",
+      "en": "The place relation expresses the published spatial scale and does not infer an exact visit point."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:lu-xiujing-daoist-canon-occurred-lushan",
+  "source": {
+    "kind": "event",
+    "slug": "lu-xiujing-daoist-canon"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "lushan"
+  },
+  "relationType": "occurred_at",
+  "label": {
+    "zh-CN": "发生于庐山",
+    "en": "Occurred in Mount Lu"
+  },
+  "summary": {
+    "zh-CN": "陆修静整理道教经法以庐山作为城市、区域或山岳尺度的空间锚点；点位不替代具体机构或遗址定位。",
+    "en": "Lu Xiujing's organisation of Daoist scriptures and precepts uses Mount Lu as a city-, regional- or mountain-scale spatial anchor; the point does not replace a specific institution or site."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_inferred",
+  "sourceIds": [
+    "source:daoist-biographical-records",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "compilation",
+      "timeType": "range",
+      "startYear": 450,
+      "endYear": 470,
+      "displayDate": {
+        "zh-CN": "约 450–470 年",
+        "en": "c. 450–470 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:daoist-biographical-records"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "institutional_site",
+    "historicity": "inferred",
+    "note": {
+      "zh-CN": "地点关系只表达当前发布的空间尺度，不自动推断精确到访点。",
+      "en": "The place relation expresses the published spatial scale and does not infer an exact visit point."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:sun-simiao-medical-daoist-practice-occurred-zhongnan-mountains",
+  "source": {
+    "kind": "event",
+    "slug": "sun-simiao-medical-daoist-practice"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "zhongnan-mountains"
+  },
+  "relationType": "occurred_at",
+  "label": {
+    "zh-CN": "发生于终南山",
+    "en": "Occurred in Zhongnan Mountains"
+  },
+  "summary": {
+    "zh-CN": "孙思邈医学与养生实践以终南山作为城市、区域或山岳尺度的空间锚点；点位不替代具体机构或遗址定位。",
+    "en": "Sun Simiao's medical and cultivation practice uses Zhongnan Mountains as a city-, regional- or mountain-scale spatial anchor; the point does not replace a specific institution or site."
+  },
+  "confidence": "low",
+  "evidenceLayer": "historical_inferred",
+  "sourceIds": [
+    "source:daoist-biographical-records",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "activity",
+      "timeType": "range",
+      "startYear": 630,
+      "endYear": 670,
+      "displayDate": {
+        "zh-CN": "约 630–670 年",
+        "en": "c. 630–670 CE"
+      },
+      "confidence": "low",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:daoist-biographical-records"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "inferred",
+    "note": {
+      "zh-CN": "地点关系只表达当前发布的空间尺度，不自动推断精确到访点。",
+      "en": "The place relation expresses the published spatial scale and does not infer an exact visit point."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:chen-tuan-huashan-reclusion-occurred-mount-huashan",
+  "source": {
+    "kind": "event",
+    "slug": "chen-tuan-huashan-reclusion"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "mount-huashan"
+  },
+  "relationType": "occurred_at",
+  "label": {
+    "zh-CN": "发生于华山",
+    "en": "Occurred in Mount Hua"
+  },
+  "summary": {
+    "zh-CN": "陈抟华山隐逸记忆以华山作为城市、区域或山岳尺度的空间锚点；点位不替代具体机构或遗址定位。",
+    "en": "Chen Tuan's Mount Hua reclusion memory uses Mount Hua as a city-, regional- or mountain-scale spatial anchor; the point does not replace a specific institution or site."
+  },
+  "confidence": "low",
+  "evidenceLayer": "historical_inferred",
+  "sourceIds": [
+    "source:daoist-biographical-records",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "institutional_and_memory_scope",
+      "timeType": "range",
+      "startYear": 920,
+      "endYear": 980,
+      "displayDate": {
+        "zh-CN": "约 920–980 年",
+        "en": "c. 920–980 CE"
+      },
+      "confidence": "low",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:daoist-biographical-records"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "inferred",
+    "note": {
+      "zh-CN": "地点关系只表达当前发布的空间尺度，不自动推断精确到访点。",
+      "en": "The place relation expresses the published spatial scale and does not infer an exact visit point."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:wang-chongyang-quanzhen-formation-occurred-zhongnan-mountains",
+  "source": {
+    "kind": "event",
+    "slug": "wang-chongyang-quanzhen-formation"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "zhongnan-mountains"
+  },
+  "relationType": "occurred_at",
+  "label": {
+    "zh-CN": "发生于终南山",
+    "en": "Occurred in Zhongnan Mountains"
+  },
+  "summary": {
+    "zh-CN": "王重阳与全真教团形成以终南山作为城市、区域或山岳尺度的空间锚点；点位不替代具体机构或遗址定位。",
+    "en": "Wang Chongyang and the formation of the Quanzhen community uses Zhongnan Mountains as a city-, regional- or mountain-scale spatial anchor; the point does not replace a specific institution or site."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:daoist-biographical-records",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "foundation",
+      "timeType": "range",
+      "startYear": 1160,
+      "endYear": 1170,
+      "displayDate": {
+        "zh-CN": "约 1160–1170 年",
+        "en": "c. 1160–1170 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:daoist-biographical-records"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地点关系只表达当前发布的空间尺度，不自动推断精确到访点。",
+      "en": "The place relation expresses the published spatial scale and does not infer an exact visit point."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:bodhidharma-luoyang-transmission-occurred-luoyang",
+  "source": {
+    "kind": "event",
+    "slug": "bodhidharma-luoyang-transmission"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "luoyang"
+  },
+  "relationType": "occurred_at",
+  "label": {
+    "zh-CN": "发生于洛阳",
+    "en": "Occurred in Luoyang"
+  },
+  "summary": {
+    "zh-CN": "菩提达摩洛阳传承记忆以洛阳作为城市、区域或山岳尺度的空间锚点；点位不替代具体机构或遗址定位。",
+    "en": "Bodhidharma's Luoyang transmission memory uses Luoyang as a city-, regional- or mountain-scale spatial anchor; the point does not replace a specific institution or site."
+  },
+  "confidence": "low",
+  "evidenceLayer": "traditional_account",
+  "sourceIds": [
+    "source:buddhist-school-biographies",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "traditional_occurrence",
+      "timeType": "century",
+      "startYear": 450,
+      "endYear": 550,
+      "displayDate": {
+        "zh-CN": "约 5–6 世纪",
+        "en": "c. fifth–sixth centuries CE"
+      },
+      "confidence": "low",
+      "evidenceLayer": "traditional_account",
+      "sourceId": "source:buddhist-school-biographies"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "memory_site",
+    "historicity": "traditional",
+    "note": {
+      "zh-CN": "地点关系只表达当前发布的空间尺度，不自动推断精确到访点。",
+      "en": "The place relation expresses the published spatial scale and does not infer an exact visit point."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:zhiyi-tiantai-teaching-occurred-mount-tiantai",
+  "source": {
+    "kind": "event",
+    "slug": "zhiyi-tiantai-teaching"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "mount-tiantai"
+  },
+  "relationType": "occurred_at",
+  "label": {
+    "zh-CN": "发生于天台山",
+    "en": "Occurred in Mount Tiantai"
+  },
+  "summary": {
+    "zh-CN": "智顗天台教观与山岳讲学以天台山作为城市、区域或山岳尺度的空间锚点；点位不替代具体机构或遗址定位。",
+    "en": "Zhiyi's Tiantai teaching and mountain institutions uses Mount Tiantai as a city-, regional- or mountain-scale spatial anchor; the point does not replace a specific institution or site."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:buddhist-school-biographies",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "institutional_activity",
+      "timeType": "range",
+      "startYear": 585,
+      "endYear": 591,
+      "displayDate": {
+        "zh-CN": "约 585–591 年",
+        "en": "c. 585–591 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:buddhist-school-biographies"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地点关系只表达当前发布的空间尺度，不自动推断精确到访点。",
+      "en": "The place relation expresses the published spatial scale and does not infer an exact visit point."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:fazang-huayan-teaching-occurred-changan",
+  "source": {
+    "kind": "event",
+    "slug": "fazang-huayan-teaching"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "changan"
+  },
+  "relationType": "occurred_at",
+  "label": {
+    "zh-CN": "发生于长安",
+    "en": "Occurred in Chang'an"
+  },
+  "summary": {
+    "zh-CN": "法藏华严解释与长安译经网络以长安作为城市、区域或山岳尺度的空间锚点；点位不替代具体机构或遗址定位。",
+    "en": "Fazang's Huayan interpretation in the Chang'an translation network uses Chang'an as a city-, regional- or mountain-scale spatial anchor; the point does not replace a specific institution or site."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:buddhist-school-biographies",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "commentary",
+      "timeType": "range",
+      "startYear": 689,
+      "endYear": 705,
+      "displayDate": {
+        "zh-CN": "约 689–705 年",
+        "en": "c. 689–705 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:buddhist-school-biographies"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地点关系只表达当前发布的空间尺度，不自动推断精确到访点。",
+      "en": "The place relation expresses the published spatial scale and does not infer an exact visit point."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:huineng-caoxi-transmission-occurred-shaoguan",
+  "source": {
+    "kind": "event",
+    "slug": "huineng-caoxi-transmission"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "shaoguan"
+  },
+  "relationType": "occurred_at",
+  "label": {
+    "zh-CN": "发生于韶关",
+    "en": "Occurred in Shaoguan"
+  },
+  "summary": {
+    "zh-CN": "慧能曹溪禅与《坛经》传承以韶关作为城市、区域或山岳尺度的空间锚点；点位不替代具体机构或遗址定位。",
+    "en": "Huineng's Caoxi Chan and Platform Sutra transmission uses Shaoguan as a city-, regional- or mountain-scale spatial anchor; the point does not replace a specific institution or site."
+  },
+  "confidence": "low",
+  "evidenceLayer": "historical_inferred",
+  "sourceIds": [
+    "source:buddhist-school-biographies",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "textual_circulation",
+      "timeType": "range",
+      "startYear": 675,
+      "endYear": 713,
+      "displayDate": {
+        "zh-CN": "约 675–713 年",
+        "en": "c. 675–713 CE"
+      },
+      "confidence": "low",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:buddhist-school-biographies"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "inferred",
+    "note": {
+      "zh-CN": "地点关系只表达当前发布的空间尺度，不自动推断精确到访点。",
+      "en": "The place relation expresses the published spatial scale and does not infer an exact visit point."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:shandao-changan-pure-land-teaching-occurred-changan",
+  "source": {
+    "kind": "event",
+    "slug": "shandao-changan-pure-land-teaching"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "changan"
+  },
+  "relationType": "occurred_at",
+  "label": {
+    "zh-CN": "发生于长安",
+    "en": "Occurred in Chang'an"
+  },
+  "summary": {
+    "zh-CN": "善导长安净土教化以长安作为城市、区域或山岳尺度的空间锚点；点位不替代具体机构或遗址定位。",
+    "en": "Shandao's Pure Land teaching in Chang'an uses Chang'an as a city-, regional- or mountain-scale spatial anchor; the point does not replace a specific institution or site."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:buddhist-school-biographies",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "institutional_activity",
+      "timeType": "range",
+      "startYear": 645,
+      "endYear": 681,
+      "displayDate": {
+        "zh-CN": "约 645–681 年",
+        "en": "c. 645–681 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:buddhist-school-biographies"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地点关系只表达当前发布的空间尺度，不自动推断精确到访点。",
+      "en": "The place relation expresses the published spatial scale and does not infer an exact visit point."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:sengzhao-changan-madhyamaka-occurred-changan",
+  "source": {
+    "kind": "event",
+    "slug": "sengzhao-changan-madhyamaka"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "changan"
+  },
+  "relationType": "occurred_at",
+  "label": {
+    "zh-CN": "发生于长安",
+    "en": "Occurred in Chang'an"
+  },
+  "summary": {
+    "zh-CN": "僧肇与长安中观译解网络以长安作为城市、区域或山岳尺度的空间锚点；点位不替代具体机构或遗址定位。",
+    "en": "Sengzhao and the Chang'an Madhyamaka translation network uses Chang'an as a city-, regional- or mountain-scale spatial anchor; the point does not replace a specific institution or site."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:buddhist-school-biographies",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "translation",
+      "timeType": "range",
+      "startYear": 401,
+      "endYear": 414,
+      "displayDate": {
+        "zh-CN": "约 401–414 年",
+        "en": "c. 401–414 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:buddhist-school-biographies"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地点关系只表达当前发布的空间尺度，不自动推断精确到访点。",
+      "en": "The place relation expresses the published spatial scale and does not infer an exact visit point."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:daoxuan-vinaya-institution-occurred-changan",
+  "source": {
+    "kind": "event",
+    "slug": "daoxuan-vinaya-institution"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "changan"
+  },
+  "relationType": "occurred_at",
+  "label": {
+    "zh-CN": "发生于长安",
+    "en": "Occurred in Chang'an"
+  },
+  "summary": {
+    "zh-CN": "道宣律学与僧传制度以长安作为城市、区域或山岳尺度的空间锚点；点位不替代具体机构或遗址定位。",
+    "en": "Daoxuan's vinaya learning and monastic institutions uses Chang'an as a city-, regional- or mountain-scale spatial anchor; the point does not replace a specific institution or site."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:buddhist-school-biographies",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "compilation",
+      "timeType": "range",
+      "startYear": 640,
+      "endYear": 667,
+      "displayDate": {
+        "zh-CN": "约 640–667 年",
+        "en": "c. 640–667 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:buddhist-school-biographies"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "institutional_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地点关系只表达当前发布的空间尺度，不自动推断精确到访点。",
+      "en": "The place relation expresses the published spatial scale and does not infer an exact visit point."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:baizhang-monastic-rules-occurred-mount-baizhang",
+  "source": {
+    "kind": "event",
+    "slug": "baizhang-monastic-rules"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "mount-baizhang"
+  },
+  "relationType": "occurred_at",
+  "label": {
+    "zh-CN": "发生于百丈山",
+    "en": "Occurred in Mount Baizhang"
+  },
+  "summary": {
+    "zh-CN": "百丈怀海与禅门丛林制度以百丈山作为城市、区域或山岳尺度的空间锚点；点位不替代具体机构或遗址定位。",
+    "en": "Baizhang Huaihai and Chan monastic organisation uses Mount Baizhang as a city-, regional- or mountain-scale spatial anchor; the point does not replace a specific institution or site."
+  },
+  "confidence": "low",
+  "evidenceLayer": "historical_inferred",
+  "sourceIds": [
+    "source:buddhist-school-biographies",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "institutional_activity",
+      "timeType": "range",
+      "startYear": 780,
+      "endYear": 814,
+      "displayDate": {
+        "zh-CN": "约 780–814 年",
+        "en": "c. 780–814 CE"
+      },
+      "confidence": "low",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:buddhist-school-biographies"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "inferred",
+    "note": {
+      "zh-CN": "地点关系只表达当前发布的空间尺度，不自动推断精确到访点。",
+      "en": "The place relation expresses the published spatial scale and does not infer an exact visit point."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:linji-teaching-network-occurred-zhengding",
+  "source": {
+    "kind": "event",
+    "slug": "linji-teaching-network"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "zhengding"
+  },
+  "relationType": "occurred_at",
+  "label": {
+    "zh-CN": "发生于正定",
+    "en": "Occurred in Zhengding"
+  },
+  "summary": {
+    "zh-CN": "临济义玄与北方禅门网络以正定作为城市、区域或山岳尺度的空间锚点；点位不替代具体机构或遗址定位。",
+    "en": "Linji Yixuan and northern Chan networks uses Zhengding as a city-, regional- or mountain-scale spatial anchor; the point does not replace a specific institution or site."
+  },
+  "confidence": "low",
+  "evidenceLayer": "historical_inferred",
+  "sourceIds": [
+    "source:buddhist-school-biographies",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "textual_circulation",
+      "timeType": "range",
+      "startYear": 840,
+      "endYear": 866,
+      "displayDate": {
+        "zh-CN": "约 840–866 年",
+        "en": "c. 840–866 CE"
+      },
+      "confidence": "low",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:buddhist-school-biographies"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "activity_site",
+    "historicity": "inferred",
+    "note": {
+      "zh-CN": "地点关系只表达当前发布的空间尺度，不自动推断精确到访点。",
+      "en": "The place relation expresses the published spatial scale and does not infer an exact visit point."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:jianzhen-eastward-vinaya-transmission-occurred-yangzhou",
+  "source": {
+    "kind": "event",
+    "slug": "jianzhen-eastward-vinaya-transmission"
+  },
+  "target": {
+    "kind": "place",
+    "slug": "yangzhou"
+  },
+  "relationType": "occurred_at",
+  "label": {
+    "zh-CN": "发生于扬州",
+    "en": "Occurred in Yangzhou"
+  },
+  "summary": {
+    "zh-CN": "鉴真扬州律学与东渡网络以扬州作为城市、区域或山岳尺度的空间锚点；点位不替代具体机构或遗址定位。",
+    "en": "Jianzhen's Yangzhou vinaya network and eastward transmission uses Yangzhou as a city-, regional- or mountain-scale spatial anchor; the point does not replace a specific institution or site."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:buddhist-school-biographies",
+    "source:historical-geography-expanded"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "route_time",
+      "timeType": "range",
+      "startYear": 733,
+      "endYear": 754,
+      "displayDate": {
+        "zh-CN": "约 733–754 年",
+        "en": "c. 733–754 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:buddhist-school-biographies"
+    }
+  ],
+  "qualifiers": {
+    "spatialRole": "departure_site",
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "地点关系只表达当前发布的空间尺度，不自动推断精确到访点。",
+      "en": "The place relation expresses the published spatial scale and does not infer an exact visit point."
+    }
+  },
+  "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+{
+  "id": "relation:xunzi-influenced-cheng-yi",
+  "source": {
+    "kind": "figure",
+    "slug": "xunzi"
+  },
+  "target": {
+    "kind": "figure",
+    "slug": "cheng-yi"
+  },
+  "relationType": "influenced",
+  "label": {
+    "zh-CN": "经学传统影响程颐",
+    "en": "Classical-learning tradition influenced Cheng Yi"
+  },
+  "summary": {
+    "zh-CN": "该关系表示荀子经学与礼学问题进入后世经典解释的研究链，不主张两人直接相遇。",
+    "en": "The relation marks a research chain from Xunzi's classical and ritual questions into later interpretation, not a direct encounter."
+  },
+  "confidence": "low",
+  "evidenceLayer": "historical_inferred",
+  "sourceIds": [
+    "source:han-classics-biographies",
+    "source:song-confucian-literati-records"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "textual_circulation",
+      "timeType": "range",
+      "startYear": 1033,
+      "endYear": 1107,
+      "displayDate": {
+        "zh-CN": "程颐活动语境（1033–1107）",
+        "en": "Cheng Yi's activity context (1033–1107 CE)"
+      },
+      "confidence": "low",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:song-confucian-literati-records"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "inferred",
+    "receptionMode": "transmitted",
+    "note": {
+      "zh-CN": "远距离文本影响，不表示直接师承。",
+      "en": "A long-range textual influence, not direct discipleship."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:xunzi-influenced-wang-yangming",
+  "source": {
+    "kind": "figure",
+    "slug": "xunzi"
+  },
+  "target": {
+    "kind": "figure",
+    "slug": "wang-yangming"
+  },
+  "relationType": "influenced",
+  "label": {
+    "zh-CN": "经学传统进入王阳明解释链",
+    "en": "Classical-learning tradition enters Wang Yangming's interpretive chain"
+  },
+  "summary": {
+    "zh-CN": "荀子与王阳明通过经学、性论和实践伦理形成远距离文本关联，不是直接师承。",
+    "en": "Xunzi and Wang Yangming are connected through long-range textual questions about classical learning, human nature and practice ethics, not direct discipleship."
+  },
+  "confidence": "low",
+  "evidenceLayer": "historical_inferred",
+  "sourceIds": [
+    "source:han-classics-biographies",
+    "source:chinese-literati-records"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "textual_circulation",
+      "timeType": "range",
+      "startYear": 1472,
+      "endYear": 1529,
+      "displayDate": {
+        "zh-CN": "王阳明活动语境（1472–1529）",
+        "en": "Wang Yangming's activity context (1472–1529 CE)"
+      },
+      "confidence": "low",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:chinese-literati-records"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "inferred",
+    "receptionMode": "transmitted",
+    "note": {
+      "zh-CN": "远距离文本影响，不表示直接师承。",
+      "en": "A long-range textual influence, not direct discipleship."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:han-yu-influenced-zhu-xi",
+  "source": {
+    "kind": "figure",
+    "slug": "han-yu"
+  },
+  "target": {
+    "kind": "figure",
+    "slug": "zhu-xi"
+  },
+  "relationType": "influenced",
+  "label": {
+    "zh-CN": "古文与道统论进入朱熹接受链",
+    "en": "Classical prose and orthodoxy enter Zhu Xi's reception chain"
+  },
+  "summary": {
+    "zh-CN": "韩愈在古文和道统论上的后世影响进入朱熹的理学接受史；这是文本传播链，不是同时代互动。",
+    "en": "Han Yu's later influence through prose and orthodoxy enters Zhu Xi's Neo-Confucian reception history; this is textual transmission, not contemporaneous interaction."
+  },
+  "confidence": "low",
+  "evidenceLayer": "historical_inferred",
+  "sourceIds": [
+    "source:chinese-literati-records",
+    "source:song-confucian-literati-records"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "textual_circulation",
+      "timeType": "range",
+      "startYear": 1130,
+      "endYear": 1200,
+      "displayDate": {
+        "zh-CN": "朱熹活动语境（1130–1200）",
+        "en": "Zhu Xi's activity context (1130–1200 CE)"
+      },
+      "confidence": "low",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:song-confucian-literati-records"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "inferred",
+    "receptionMode": "transmitted",
+    "note": {
+      "zh-CN": "后世接受链，不表示两人直接相遇。",
+      "en": "A later reception chain, not direct contact."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:cheng-hao-contemporary-cheng-yi",
+  "source": {
+    "kind": "figure",
+    "slug": "cheng-hao"
+  },
+  "target": {
+    "kind": "figure",
+    "slug": "cheng-yi"
+  },
+  "relationType": "contemporary_with",
+  "label": {
+    "zh-CN": "兄弟同处北宋洛学时代",
+    "en": "Brothers active in the Northern Song Luoyang-learning era"
+  },
+  "summary": {
+    "zh-CN": "程颢与程颐的生平年代和学习网络存在明确重叠；同时代不等同于所有思想主张相同。",
+    "en": "Cheng Hao and Cheng Yi overlap in life dates and learning networks; contemporaneity does not make their positions identical."
+  },
+  "confidence": "high",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:song-confucian-literati-records"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "life",
+      "timeType": "range",
+      "startYear": 1032,
+      "endYear": 1085,
+      "displayDate": {
+        "zh-CN": "1032–1085 年",
+        "en": "1032–1085 CE"
+      },
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:song-confucian-literati-records"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "同时代关系不抹平两人的思想差异。",
+      "en": "Contemporaneity does not erase their intellectual differences."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:ouyang-xiu-contemporary-wang-anshi",
+  "source": {
+    "kind": "figure",
+    "slug": "ouyang-xiu"
+  },
+  "target": {
+    "kind": "figure",
+    "slug": "wang-anshi"
+  },
+  "relationType": "contemporary_with",
+  "label": {
+    "zh-CN": "同处北宋政治文化语境",
+    "en": "Contemporaries in Northern Song political culture"
+  },
+  "summary": {
+    "zh-CN": "欧阳修与王安石存在北宋政治文化的年代重叠；该关系不替代两人的政策分歧和具体交往史。",
+    "en": "Ouyang Xiu and Wang Anshi overlap in Northern Song political culture; this does not replace the history of their policy differences or specific encounters."
+  },
+  "confidence": "high",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:song-confucian-literati-records"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "life",
+      "timeType": "range",
+      "startYear": 1021,
+      "endYear": 1072,
+      "displayDate": {
+        "zh-CN": "1021–1072 年的重叠语境",
+        "en": "overlapping context, 1021–1072 CE"
+      },
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:song-confucian-literati-records"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "同时代不表示每一项政策或文本都有直接往来。",
+      "en": "Contemporaneity does not imply direct exchange for every policy or text."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:ouyang-xiu-contemporary-sima-guang",
+  "source": {
+    "kind": "figure",
+    "slug": "ouyang-xiu"
+  },
+  "target": {
+    "kind": "figure",
+    "slug": "sima-guang"
+  },
+  "relationType": "contemporary_with",
+  "label": {
+    "zh-CN": "同处北宋史学与士大夫网络",
+    "en": "Contemporaries in Northern Song historiographical networks"
+  },
+  "summary": {
+    "zh-CN": "欧阳修与司马光的生命年代和史学网络相交；同时代关系不自动表示同一编纂项目。",
+    "en": "Ouyang Xiu and Sima Guang overlap in life dates and historiographical networks; contemporaneity does not imply one shared compilation project."
+  },
+  "confidence": "high",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:song-confucian-literati-records"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "life",
+      "timeType": "range",
+      "startYear": 1019,
+      "endYear": 1072,
+      "displayDate": {
+        "zh-CN": "1019–1072 年的重叠语境",
+        "en": "overlapping context, 1019–1072 CE"
+      },
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:song-confucian-literati-records"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "年代与网络重叠不等同于同一项目。",
+      "en": "Overlapping dates and networks do not imply one project."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:ouyang-xiu-contemporary-su-shi",
+  "source": {
+    "kind": "figure",
+    "slug": "ouyang-xiu"
+  },
+  "target": {
+    "kind": "figure",
+    "slug": "su-shi"
+  },
+  "relationType": "contemporary_with",
+  "label": {
+    "zh-CN": "同处北宋文人政治网络",
+    "en": "Contemporaries in Northern Song literati politics"
+  },
+  "summary": {
+    "zh-CN": "欧阳修与苏轼存在北宋文人政治和文学网络的年代重叠；关系不等同于所有文章或事件均有直接往来。",
+    "en": "Ouyang Xiu and Su Shi overlap in Northern Song literati and political networks; the relation does not imply direct exchange for every text or event."
+  },
+  "confidence": "high",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:song-confucian-literati-records",
+    "source:chinese-literati-records"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "life",
+      "timeType": "range",
+      "startYear": 1037,
+      "endYear": 1072,
+      "displayDate": {
+        "zh-CN": "1037–1072 年的重叠语境",
+        "en": "overlapping context, 1037–1072 CE"
+      },
+      "confidence": "high",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:song-confucian-literati-records"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "同时代关系不替代具体交往史。",
+      "en": "Contemporaneity does not replace a history of specific encounters."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:tao-yuanming-influenced-wang-wei",
+  "source": {
+    "kind": "figure",
+    "slug": "tao-yuanming"
+  },
+  "target": {
+    "kind": "figure",
+    "slug": "wang-wei"
+  },
+  "relationType": "influenced",
+  "label": {
+    "zh-CN": "隐逸诗学进入王维接受链",
+    "en": "Reclusion poetics enters Wang Wei's reception chain"
+  },
+  "summary": {
+    "zh-CN": "陶渊明的隐逸诗学与王维的山水、仕隐表达形成后世文学传播关联，不表示直接交往。",
+    "en": "Tao Yuanming's reclusion poetics entered a later literary chain associated with Wang Wei's landscape and official–recluse expression, not direct contact."
+  },
+  "confidence": "low",
+  "evidenceLayer": "historical_inferred",
+  "sourceIds": [
+    "source:chinese-literati-records"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "textual_circulation",
+      "timeType": "range",
+      "startYear": 701,
+      "endYear": 761,
+      "displayDate": {
+        "zh-CN": "王维活动语境（701–761）",
+        "en": "Wang Wei's activity context (701–761 CE)"
+      },
+      "confidence": "low",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:chinese-literati-records"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "inferred",
+    "receptionMode": "transmitted",
+    "note": {
+      "zh-CN": "文学接受链，不表示直接会面。",
+      "en": "A literary reception chain, not direct contact."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:tao-yuanming-influenced-su-shi",
+  "source": {
+    "kind": "figure",
+    "slug": "tao-yuanming"
+  },
+  "target": {
+    "kind": "figure",
+    "slug": "su-shi"
+  },
+  "relationType": "influenced",
+  "label": {
+    "zh-CN": "隐逸传统进入苏轼文学接受链",
+    "en": "Reclusion tradition enters Su Shi's literary reception chain"
+  },
+  "summary": {
+    "zh-CN": "陶渊明作为隐逸诗人进入苏轼的文学接受语境；这是文本和形象传播关系，不是直接师承。",
+    "en": "Tao Yuanming as a poet of reclusion enters Su Shi's literary reception context; this is textual and imagistic transmission, not direct discipleship."
+  },
+  "confidence": "low",
+  "evidenceLayer": "historical_inferred",
+  "sourceIds": [
+    "source:chinese-literati-records"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "textual_circulation",
+      "timeType": "range",
+      "startYear": 1037,
+      "endYear": 1101,
+      "displayDate": {
+        "zh-CN": "苏轼活动语境（1037–1101）",
+        "en": "Su Shi's activity context (1037–1101 CE)"
+      },
+      "confidence": "low",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:chinese-literati-records"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "inferred",
+    "receptionMode": "transmitted",
+    "note": {
+      "zh-CN": "文学接受链，不表示直接师承。",
+      "en": "A literary reception chain, not direct discipleship."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:guo-xiang-commented-zhuangzi",
+  "source": {
+    "kind": "figure",
+    "slug": "guo-xiang"
+  },
+  "target": {
+    "kind": "text",
+    "slug": "zhuangzi"
+  },
+  "relationType": "commented_on",
+  "label": {
+    "zh-CN": "注释《庄子》",
+    "en": "Commented on the Zhuangzi"
+  },
+  "summary": {
+    "zh-CN": "郭象与通行《庄子》注本传统相连；关系只表达注释入口，不把全部篇章归为郭象独作。",
+    "en": "Guo Xiang is connected with the received Zhuangzi commentary tradition; this is a commentary entry, not attribution of every chapter to him."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_documented",
+  "sourceIds": [
+    "source:daoist-biographical-records",
+    "source:zhuangzi-ctext"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "commentary",
+      "timeType": "range",
+      "startYear": 300,
+      "endYear": 312,
+      "displayDate": {
+        "zh-CN": "约 300–312 年",
+        "en": "c. 300–312 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_documented",
+      "sourceId": "source:daoist-biographical-records"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "documented",
+    "note": {
+      "zh-CN": "注释入口不等同于全书独作。",
+      "en": "A commentary entry is not authorship of the whole text."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:sengzhao-commented-mulamadhyamakakarika",
+  "source": {
+    "kind": "figure",
+    "slug": "sengzhao"
+  },
+  "target": {
+    "kind": "text",
+    "slug": "mulamadhyamakakarika"
+  },
+  "relationType": "commented_on",
+  "label": {
+    "zh-CN": "进入《中论》汉地解释链",
+    "en": "Entered the Chinese interpretive chain of the Mūlamadhyamakakārikā"
+  },
+  "summary": {
+    "zh-CN": "僧肇与中观思想的汉地解释和译经网络相连；作品归属与具体注释方式仍需继续核对。",
+    "en": "Sengzhao is connected with Chinese interpretation and translation networks around Madhyamaka; attribution and exact commentary mode still require review."
+  },
+  "confidence": "medium",
+  "evidenceLayer": "historical_inferred",
+  "sourceIds": [
+    "source:buddhist-school-biographies"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "commentary",
+      "timeType": "range",
+      "startYear": 401,
+      "endYear": 414,
+      "displayDate": {
+        "zh-CN": "约 401–414 年",
+        "en": "c. 401–414 CE"
+      },
+      "confidence": "medium",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:buddhist-school-biographies"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "inferred",
+    "note": {
+      "zh-CN": "译经和解释网络不自动等同于单一注本。",
+      "en": "Translation and interpretation networks do not automatically imply one commentary."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:bodhidharma-influenced-huineng",
+  "source": {
+    "kind": "figure",
+    "slug": "bodhidharma"
+  },
+  "target": {
+    "kind": "figure",
+    "slug": "huineng"
+  },
+  "relationType": "influenced",
+  "label": {
+    "zh-CN": "在禅宗祖师谱系中影响慧能传统",
+    "en": "Influenced Huineng in later Chan patriarchal genealogy"
+  },
+  "summary": {
+    "zh-CN": "该关系只表示后世禅宗谱系将达摩与慧能连接起来，不主张直接会面或可复原的师徒时间线。",
+    "en": "This relation marks the later Chan genealogy connecting Bodhidharma and Huineng; it does not claim a direct meeting or recoverable teacher–student timeline."
+  },
+  "confidence": "low",
+  "evidenceLayer": "traditional_account",
+  "sourceIds": [
+    "source:buddhist-school-biographies"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "textual_circulation",
+      "timeType": "range",
+      "startYear": 638,
+      "endYear": 713,
+      "displayDate": {
+        "zh-CN": "慧能传统语境（638–713）",
+        "en": "Huineng tradition context (638–713 CE)"
+      },
+      "confidence": "low",
+      "evidenceLayer": "traditional_account",
+      "sourceId": "source:buddhist-school-biographies"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "traditional",
+    "receptionMode": "transmitted",
+    "note": {
+      "zh-CN": "后世谱系关系，不表示直接会面。",
+      "en": "A later lineage relation, not direct contact."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:huineng-influenced-linji",
+  "source": {
+    "kind": "figure",
+    "slug": "huineng"
+  },
+  "target": {
+    "kind": "figure",
+    "slug": "linji-yixuan"
+  },
+  "relationType": "influenced",
+  "label": {
+    "zh-CN": "禅宗谱系将慧能与临济传统连接",
+    "en": "Chan genealogy connects Huineng with the Linji tradition"
+  },
+  "summary": {
+    "zh-CN": "该关系表达后世禅宗谱系的传播链，不表示慧能与临济义玄直接相遇。",
+    "en": "This relation expresses a later Chan transmission chain and does not imply a direct meeting between Huineng and Linji Yixuan."
+  },
+  "confidence": "low",
+  "evidenceLayer": "traditional_account",
+  "sourceIds": [
+    "source:buddhist-school-biographies"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "textual_circulation",
+      "timeType": "range",
+      "startYear": 810,
+      "endYear": 866,
+      "displayDate": {
+        "zh-CN": "临济义玄传统语境（约 810–866）",
+        "en": "Linji Yixuan tradition context (c. 810–866 CE)"
+      },
+      "confidence": "low",
+      "evidenceLayer": "traditional_account",
+      "sourceId": "source:buddhist-school-biographies"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "traditional",
+    "receptionMode": "transmitted",
+    "note": {
+      "zh-CN": "后世谱系关系，不表示直接会面。",
+      "en": "A later lineage relation, not direct contact."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+},
+{
+  "id": "relation:zhiyi-influenced-fazang",
+  "source": {
+    "kind": "figure",
+    "slug": "zhiyi"
+  },
+  "target": {
+    "kind": "figure",
+    "slug": "fazang"
+  },
+  "relationType": "influenced",
+  "label": {
+    "zh-CN": "佛教教判传统进入法藏解释链",
+    "en": "Buddhist doctrinal classification enters Fazang's interpretive chain"
+  },
+  "summary": {
+    "zh-CN": "智顗与法藏通过中国佛教教判和经典组织形成远距离思想关联，不主张直接会面。",
+    "en": "Zhiyi and Fazang are connected through long-range Chinese Buddhist traditions of doctrinal classification and scriptural organisation, not direct contact."
+  },
+  "confidence": "low",
+  "evidenceLayer": "historical_inferred",
+  "sourceIds": [
+    "source:buddhist-school-biographies"
+  ],
+  "temporalAssertions": [
+    {
+      "predicate": "textual_circulation",
+      "timeType": "range",
+      "startYear": 643,
+      "endYear": 712,
+      "displayDate": {
+        "zh-CN": "法藏活动语境（643–712）",
+        "en": "Fazang's activity context (643–712 CE)"
+      },
+      "confidence": "low",
+      "evidenceLayer": "historical_inferred",
+      "sourceId": "source:buddhist-school-biographies"
+    }
+  ],
+  "qualifiers": {
+    "historicity": "inferred",
+    "receptionMode": "transmitted",
+    "note": {
+      "zh-CN": "远距离思想关联，不表示直接师承。",
+      "en": "A long-range intellectual relation, not direct discipleship."
+    }
+  },
+  "publicationState": "preview",
+  "reviewStatus": "bilingual_reviewed"
+}
 ]

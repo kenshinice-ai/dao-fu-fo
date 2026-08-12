@@ -1,0 +1,2662 @@
+[
+  {
+    "kind": "figure",
+    "slug": "xunzi",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "荀子",
+        "subtitle": "礼学、性恶论与先秦经学的制度化入口",
+        "shortSummary": "荀子把先秦礼学、政治秩序与经学传承连接起来，是观察儒家思想内部差异的重要人物。",
+        "curatorialDescription": [
+          "人物生平与《荀子》编纂层保持区分；当前先呈现思想与学术网络，不把后世整理直接当作现场记录。",
+          "本条先建立人物、事件和地点之间的可追踪入口；关系强度与后世接受将继续按来源拆分。"
+        ],
+        "researchNote": "研究状态：已建立最小人物—事件—地点闭环；具体文本版本、机构层和关系方向仍需按卷页或碑刻继续复核。",
+        "timeLabel": "约公元前 310–235 年",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "主要入口",
+              "en": "Primary entry"
+            },
+            "value": {
+              "zh-CN": "人物—事件—地点闭环",
+              "en": "Figure–event–place chain"
+            }
+          }
+        ]
+      },
+      "en": {
+        "title": "Xunzi",
+        "subtitle": "A gateway into ritual learning, human-nature debate and early classical scholarship",
+        "shortSummary": "Xunzi connects ritual learning, political order and classical transmission, making him a key figure for differences within early Confucian thought.",
+        "curatorialDescription": [
+          "Biography and the compiled layers of the Xunzi remain distinct; this entry starts with intellectual and scholarly networks rather than treating later editing as direct reportage.",
+          "This release establishes a traceable figure–event–place entry; relation strength and later reception will be separated by source in later review."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific text versions, institutional layers and relation direction still require volume- or inscription-level review.",
+        "timeLabel": "c. 310–235 BCE",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "Primary entry",
+              "en": "主要入口"
+            },
+            "value": {
+              "zh-CN": "Figure–event–place chain",
+              "en": "人物—事件—地点闭环"
+            }
+          }
+        ]
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:han-classics-biographies"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "range",
+        "startYear": -310,
+        "endYear": -235,
+        "displayDate": {
+          "zh-CN": "约公元前 310–235 年",
+          "en": "c. 310–235 BCE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:han-classics-biographies"
+      }
+    ],
+    "sourceIds": [
+      "source:han-classics-biographies",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "荀子",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "dong-zhongshu",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "董仲舒",
+        "subtitle": "经学、天人关系与汉代制度思想的交汇点",
+        "shortSummary": "董仲舒连接两汉经学解释、政治秩序和天人关系论述；后世“独尊儒术”的概括需要与具体制度史分开。",
+        "curatorialDescription": [
+          "汉代制度与董仲舒个人言论、后世学术概括并非同一层，本条保留这一证据边界。",
+          "本条先建立人物、事件和地点之间的可追踪入口；关系强度与后世接受将继续按来源拆分。"
+        ],
+        "researchNote": "研究状态：已建立最小人物—事件—地点闭环；具体文本版本、机构层和关系方向仍需按卷页或碑刻继续复核。",
+        "timeLabel": "约公元前 179–104 年",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "主要入口",
+              "en": "Primary entry"
+            },
+            "value": {
+              "zh-CN": "人物—事件—地点闭环",
+              "en": "Figure–event–place chain"
+            }
+          }
+        ]
+      },
+      "en": {
+        "title": "Dong Zhongshu",
+        "subtitle": "A meeting point of classical learning, cosmic order and Han institutional thought",
+        "shortSummary": "Dong Zhongshu connects Han classical interpretation, political order and discourse on Heaven–human relations; later summaries of Confucian statecraft must remain separate from specific institutions.",
+        "curatorialDescription": [
+          "Han institutions, Dong Zhongshu's own arguments and later scholarly summaries are different layers; the entry keeps that evidence boundary visible.",
+          "This release establishes a traceable figure–event–place entry; relation strength and later reception will be separated by source in later review."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific text versions, institutional layers and relation direction still require volume- or inscription-level review.",
+        "timeLabel": "c. 179–104 BCE",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "Primary entry",
+              "en": "主要入口"
+            },
+            "value": {
+              "zh-CN": "Figure–event–place chain",
+              "en": "人物—事件—地点闭环"
+            }
+          }
+        ]
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:han-classics-biographies"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "range",
+        "startYear": -179,
+        "endYear": -104,
+        "displayDate": {
+          "zh-CN": "约公元前 179–104 年",
+          "en": "c. 179–104 BCE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:han-classics-biographies"
+      }
+    ],
+    "sourceIds": [
+      "source:han-classics-biographies",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "董仲舒",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "han-yu",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "韩愈",
+        "subtitle": "古文运动、道统论与唐代儒学复兴的关键人物",
+        "shortSummary": "韩愈把唐代文体改革、儒家道统论与政治文化争论连接起来，也显示佛道批评与儒学自我重建之间的张力。",
+        "curatorialDescription": [
+          "韩愈的儒学定位、古文实践和佛道论辩分别来自不同材料层；后世“道统”叙事不直接等同于唐代共识。",
+          "本条先建立人物、事件和地点之间的可追踪入口；关系强度与后世接受将继续按来源拆分。"
+        ],
+        "researchNote": "研究状态：已建立最小人物—事件—地点闭环；具体文本版本、机构层和关系方向仍需按卷页或碑刻继续复核。",
+        "timeLabel": "768–824 年",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "主要入口",
+              "en": "Primary entry"
+            },
+            "value": {
+              "zh-CN": "人物—事件—地点闭环",
+              "en": "Figure–event–place chain"
+            }
+          }
+        ]
+      },
+      "en": {
+        "title": "Han Yu",
+        "subtitle": "A key figure in classical prose, orthodoxy and Tang Confucian revival",
+        "shortSummary": "Han Yu connects Tang prose reform, Confucian orthodoxy and political-cultural debate, while exposing tensions between critiques of Buddhism and Daoism and Confucian self-reconstruction.",
+        "curatorialDescription": [
+          "Han Yu's Confucian positioning, prose practice and Buddhist–Daoist polemics come from different layers of evidence; later narratives of orthodoxy are not treated as a Tang-wide consensus.",
+          "This release establishes a traceable figure–event–place entry; relation strength and later reception will be separated by source in later review."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific text versions, institutional layers and relation direction still require volume- or inscription-level review.",
+        "timeLabel": "768–824 CE",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "Primary entry",
+              "en": "主要入口"
+            },
+            "value": {
+              "zh-CN": "Figure–event–place chain",
+              "en": "人物—事件—地点闭环"
+            }
+          }
+        ]
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chinese-literati-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "range",
+        "startYear": 768,
+        "endYear": 824,
+        "displayDate": {
+          "zh-CN": "768–824 年",
+          "en": "768–824 CE"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chinese-literati-records"
+      }
+    ],
+    "sourceIds": [
+      "source:chinese-literati-records",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "韩愈",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "cheng-yi",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "程颐",
+        "subtitle": "洛学、理学经典解释与宋代士大夫网络",
+        "shortSummary": "程颐是北宋理学与经典解释的重要人物，洛阳学习网络使他的思想、师友和制度语境可以在地图上相遇。",
+        "curatorialDescription": [
+          "程颐的学术影响与后世理学体系化不能压缩成一个地点或一次讲学事件。",
+          "本条先建立人物、事件和地点之间的可追踪入口；关系强度与后世接受将继续按来源拆分。"
+        ],
+        "researchNote": "研究状态：已建立最小人物—事件—地点闭环；具体文本版本、机构层和关系方向仍需按卷页或碑刻继续复核。",
+        "timeLabel": "1033–1107 年",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "主要入口",
+              "en": "Primary entry"
+            },
+            "value": {
+              "zh-CN": "人物—事件—地点闭环",
+              "en": "Figure–event–place chain"
+            }
+          }
+        ]
+      },
+      "en": {
+        "title": "Cheng Yi",
+        "subtitle": "Luoyang learning, classical interpretation and Song scholar-official networks",
+        "shortSummary": "Cheng Yi was a major Northern Song figure in Neo-Confucian learning and classical interpretation; the Luoyang network lets thought, teachers and institutions meet on the map.",
+        "curatorialDescription": [
+          "Cheng Yi's intellectual influence and later systematisation of Neo-Confucianism cannot be compressed into one place or one teaching event.",
+          "This release establishes a traceable figure–event–place entry; relation strength and later reception will be separated by source in later review."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific text versions, institutional layers and relation direction still require volume- or inscription-level review.",
+        "timeLabel": "1033–1107 CE",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "Primary entry",
+              "en": "主要入口"
+            },
+            "value": {
+              "zh-CN": "Figure–event–place chain",
+              "en": "人物—事件—地点闭环"
+            }
+          }
+        ]
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-confucian-literati-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "range",
+        "startYear": 1033,
+        "endYear": 1107,
+        "displayDate": {
+          "zh-CN": "1033–1107 年",
+          "en": "1033–1107 CE"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-confucian-literati-records"
+      }
+    ],
+    "sourceIds": [
+      "source:song-confucian-literati-records",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "程颐",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "cheng-hao",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "程颢",
+        "subtitle": "北宋理学、政治实践与洛学传统",
+        "shortSummary": "程颢把北宋士大夫政治、伦理修养和洛学传统连接起来，与程颐共享学习事件但不抹平两人的思想差异。",
+        "curatorialDescription": [
+          "程颢与程颐的学术关系适合通过共享事件和分别的人物关系呈现，不把“二程”当成单一作者。",
+          "本条先建立人物、事件和地点之间的可追踪入口；关系强度与后世接受将继续按来源拆分。"
+        ],
+        "researchNote": "研究状态：已建立最小人物—事件—地点闭环；具体文本版本、机构层和关系方向仍需按卷页或碑刻继续复核。",
+        "timeLabel": "1032–1085 年",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "主要入口",
+              "en": "Primary entry"
+            },
+            "value": {
+              "zh-CN": "人物—事件—地点闭环",
+              "en": "Figure–event–place chain"
+            }
+          }
+        ]
+      },
+      "en": {
+        "title": "Cheng Hao",
+        "subtitle": "Northern Song learning, public ethics and the Luoyang tradition",
+        "shortSummary": "Cheng Hao connects Northern Song scholar-official politics, ethical cultivation and the Luoyang tradition; he shares a learning event with Cheng Yi without collapsing their differences.",
+        "curatorialDescription": [
+          "The Cheng brothers are best shown through a shared event and separate figure records, not as one composite author.",
+          "This release establishes a traceable figure–event–place entry; relation strength and later reception will be separated by source in later review."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific text versions, institutional layers and relation direction still require volume- or inscription-level review.",
+        "timeLabel": "1032–1085 CE",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "Primary entry",
+              "en": "主要入口"
+            },
+            "value": {
+              "zh-CN": "Figure–event–place chain",
+              "en": "人物—事件—地点闭环"
+            }
+          }
+        ]
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-confucian-literati-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "range",
+        "startYear": 1032,
+        "endYear": 1085,
+        "displayDate": {
+          "zh-CN": "1032–1085 年",
+          "en": "1032–1085 CE"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-confucian-literati-records"
+      }
+    ],
+    "sourceIds": [
+      "source:song-confucian-literati-records",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "程颢",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "wang-yangming",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "王阳明",
+        "subtitle": "心学、地方治理与明代儒学实践",
+        "shortSummary": "王阳明把心学、军事与地方治理、书院讲学和后世东亚传播连接起来，是儒学从经典解释走向实践伦理的重要入口。",
+        "curatorialDescription": [
+          "心学概念、具体政务和后世阳明学传播需分层处理；当前以人物活动地和讲学网络为主。",
+          "本条先建立人物、事件和地点之间的可追踪入口；关系强度与后世接受将继续按来源拆分。"
+        ],
+        "researchNote": "研究状态：已建立最小人物—事件—地点闭环；具体文本版本、机构层和关系方向仍需按卷页或碑刻继续复核。",
+        "timeLabel": "1472–1529 年",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "主要入口",
+              "en": "Primary entry"
+            },
+            "value": {
+              "zh-CN": "人物—事件—地点闭环",
+              "en": "Figure–event–place chain"
+            }
+          }
+        ]
+      },
+      "en": {
+        "title": "Wang Yangming",
+        "subtitle": "Mind learning, local governance and Ming Confucian practice",
+        "shortSummary": "Wang Yangming connects mind learning with military and local governance, academy teaching and later East Asian transmission, offering an entry into Confucian practice ethics.",
+        "curatorialDescription": [
+          "Mind-learning concepts, specific offices and later Yangmingist transmission remain separate layers; this entry starts with activity places and teaching networks.",
+          "This release establishes a traceable figure–event–place entry; relation strength and later reception will be separated by source in later review."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific text versions, institutional layers and relation direction still require volume- or inscription-level review.",
+        "timeLabel": "1472–1529 CE",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "Primary entry",
+              "en": "主要入口"
+            },
+            "value": {
+              "zh-CN": "Figure–event–place chain",
+              "en": "人物—事件—地点闭环"
+            }
+          }
+        ]
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chinese-literati-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "range",
+        "startYear": 1472,
+        "endYear": 1529,
+        "displayDate": {
+          "zh-CN": "1472–1529 年",
+          "en": "1472–1529 CE"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chinese-literati-records"
+      }
+    ],
+    "sourceIds": [
+      "source:chinese-literati-records",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "王阳明",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "wang-anshi",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 5,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "王安石",
+        "subtitle": "新学、变法与北宋国家治理争论",
+        "shortSummary": "王安石把经典解释、财政与行政改革、士大夫争论和北宋都城制度空间连接起来。",
+        "curatorialDescription": [
+          "变法政策的参与者、年代和后世评价需要拆分；开封与临川分别承担都城和地域记忆的地图角色。",
+          "本条先建立人物、事件和地点之间的可追踪入口；关系强度与后世接受将继续按来源拆分。"
+        ],
+        "researchNote": "研究状态：已建立最小人物—事件—地点闭环；具体文本版本、机构层和关系方向仍需按卷页或碑刻继续复核。",
+        "timeLabel": "1021–1086 年",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "主要入口",
+              "en": "Primary entry"
+            },
+            "value": {
+              "zh-CN": "人物—事件—地点闭环",
+              "en": "Figure–event–place chain"
+            }
+          }
+        ]
+      },
+      "en": {
+        "title": "Wang Anshi",
+        "subtitle": "New learning, reform and Northern Song statecraft debate",
+        "shortSummary": "Wang Anshi connects classical interpretation with fiscal and administrative reform, scholar-official debate and the institutional space of the Northern Song capital.",
+        "curatorialDescription": [
+          "Participants, dates and later evaluations of the reforms require separation; Kaifeng and Linchuan carry capital and regional-memory roles respectively.",
+          "This release establishes a traceable figure–event–place entry; relation strength and later reception will be separated by source in later review."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific text versions, institutional layers and relation direction still require volume- or inscription-level review.",
+        "timeLabel": "1021–1086 CE",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "Primary entry",
+              "en": "主要入口"
+            },
+            "value": {
+              "zh-CN": "Figure–event–place chain",
+              "en": "人物—事件—地点闭环"
+            }
+          }
+        ]
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-confucian-literati-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "range",
+        "startYear": 1021,
+        "endYear": 1086,
+        "displayDate": {
+          "zh-CN": "1021–1086 年",
+          "en": "1021–1086 CE"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-confucian-literati-records"
+      }
+    ],
+    "sourceIds": [
+      "source:song-confucian-literati-records",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "王安石",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "ouyang-xiu",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "欧阳修",
+        "subtitle": "古文、史学与北宋士大夫公共文化",
+        "shortSummary": "欧阳修连接古文、史学编纂、地方记忆和北宋士大夫公共文化，是人物、文本和制度关系的复合入口。",
+        "curatorialDescription": [
+          "文集、史学工程和政治生涯不能互相替代；本条先用开封作为都城尺度锚点。",
+          "本条先建立人物、事件和地点之间的可追踪入口；关系强度与后世接受将继续按来源拆分。"
+        ],
+        "researchNote": "研究状态：已建立最小人物—事件—地点闭环；具体文本版本、机构层和关系方向仍需按卷页或碑刻继续复核。",
+        "timeLabel": "1007–1072 年",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "主要入口",
+              "en": "Primary entry"
+            },
+            "value": {
+              "zh-CN": "人物—事件—地点闭环",
+              "en": "Figure–event–place chain"
+            }
+          }
+        ]
+      },
+      "en": {
+        "title": "Ouyang Xiu",
+        "subtitle": "Classical prose, historiography and Northern Song public culture",
+        "shortSummary": "Ouyang Xiu connects classical prose, historiography, local memory and Northern Song scholar-official public culture as a composite figure–text–institutional entry.",
+        "curatorialDescription": [
+          "Collected writings, historiographical projects and political career remain distinct; Kaifeng is used first as a capital-scale anchor.",
+          "This release establishes a traceable figure–event–place entry; relation strength and later reception will be separated by source in later review."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific text versions, institutional layers and relation direction still require volume- or inscription-level review.",
+        "timeLabel": "1007–1072 CE",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "Primary entry",
+              "en": "主要入口"
+            },
+            "value": {
+              "zh-CN": "Figure–event–place chain",
+              "en": "人物—事件—地点闭环"
+            }
+          }
+        ]
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-confucian-literati-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "range",
+        "startYear": 1007,
+        "endYear": 1072,
+        "displayDate": {
+          "zh-CN": "1007–1072 年",
+          "en": "1007–1072 CE"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-confucian-literati-records"
+      }
+    ],
+    "sourceIds": [
+      "source:song-confucian-literati-records",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "欧阳修",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "sima-guang",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 5,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "司马光",
+        "subtitle": "《资治通鉴》、史学判断与北宋政治记忆",
+        "shortSummary": "司马光把编年史学、政治判断和洛阳—开封之间的士大夫网络连接起来；《资治通鉴》是工程而非单一瞬间。",
+        "curatorialDescription": [
+          "编纂、进呈、版本和政治立场分别建模；当前以洛阳编纂网络作为主要地图入口。",
+          "本条先建立人物、事件和地点之间的可追踪入口；关系强度与后世接受将继续按来源拆分。"
+        ],
+        "researchNote": "研究状态：已建立最小人物—事件—地点闭环；具体文本版本、机构层和关系方向仍需按卷页或碑刻继续复核。",
+        "timeLabel": "1019–1086 年",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "主要入口",
+              "en": "Primary entry"
+            },
+            "value": {
+              "zh-CN": "人物—事件—地点闭环",
+              "en": "Figure–event–place chain"
+            }
+          }
+        ]
+      },
+      "en": {
+        "title": "Sima Guang",
+        "subtitle": "The Comprehensive Mirror, historical judgement and Northern Song political memory",
+        "shortSummary": "Sima Guang connects annalistic historiography, political judgement and scholar-official networks between Luoyang and Kaifeng; the Comprehensive Mirror is a project rather than one moment.",
+        "curatorialDescription": [
+          "Compilation, presentation, editions and political positioning are modelled separately; the Luoyang compilation network is the first map entry.",
+          "This release establishes a traceable figure–event–place entry; relation strength and later reception will be separated by source in later review."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific text versions, institutional layers and relation direction still require volume- or inscription-level review.",
+        "timeLabel": "1019–1086 CE",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "Primary entry",
+              "en": "主要入口"
+            },
+            "value": {
+              "zh-CN": "Figure–event–place chain",
+              "en": "人物—事件—地点闭环"
+            }
+          }
+        ]
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-confucian-literati-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "range",
+        "startYear": 1019,
+        "endYear": 1086,
+        "displayDate": {
+          "zh-CN": "1019–1086 年",
+          "en": "1019–1086 CE"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-confucian-literati-records"
+      }
+    ],
+    "sourceIds": [
+      "source:song-confucian-literati-records",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "司马光",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "su-shi",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "苏轼",
+        "subtitle": "文人政治、诗文与黄州流寓经验",
+        "shortSummary": "苏轼把北宋政治、诗文创作、地方经验与佛道思想资源连接起来，黄州是理解其流寓与写作转折的现实入口。",
+        "curatorialDescription": [
+          "诗文中的自我形象、贬谪事实和后世东坡记忆保持分层；黄州点位不代表每一篇作品的写作地点。",
+          "本条先建立人物、事件和地点之间的可追踪入口；关系强度与后世接受将继续按来源拆分。"
+        ],
+        "researchNote": "研究状态：已建立最小人物—事件—地点闭环；具体文本版本、机构层和关系方向仍需按卷页或碑刻继续复核。",
+        "timeLabel": "1037–1101 年",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "主要入口",
+              "en": "Primary entry"
+            },
+            "value": {
+              "zh-CN": "人物—事件—地点闭环",
+              "en": "Figure–event–place chain"
+            }
+          }
+        ]
+      },
+      "en": {
+        "title": "Su Shi",
+        "subtitle": "Literati politics, poetry and the Huangzhou exile experience",
+        "shortSummary": "Su Shi connects Northern Song politics, poetry, local experience and Buddhist–Daoist resources; Huangzhou is a real-place entry into exile and literary change.",
+        "curatorialDescription": [
+          "Self-fashioning in poetry, the historical exile and later Dongpo memory remain distinct; Huangzhou does not stand for the composition site of every work.",
+          "This release establishes a traceable figure–event–place entry; relation strength and later reception will be separated by source in later review."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific text versions, institutional layers and relation direction still require volume- or inscription-level review.",
+        "timeLabel": "1037–1101 CE",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "Primary entry",
+              "en": "主要入口"
+            },
+            "value": {
+              "zh-CN": "Figure–event–place chain",
+              "en": "人物—事件—地点闭环"
+            }
+          }
+        ]
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chinese-literati-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "range",
+        "startYear": 1037,
+        "endYear": 1101,
+        "displayDate": {
+          "zh-CN": "1037–1101 年",
+          "en": "1037–1101 CE"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chinese-literati-records"
+      }
+    ],
+    "sourceIds": [
+      "source:chinese-literati-records",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "苏轼",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "tao-yuanming",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "陶渊明",
+        "subtitle": "隐逸、诗酒与中古文人山水想象",
+        "shortSummary": "陶渊明连接东晋士人生活、归隐叙事和后世山水文学；浔阳是区域尺度的生平与接受入口，不是单一故居坐标。",
+        "curatorialDescription": [
+          "归隐经历、诗文编纂和后世“隐逸典范”是不同证据层，本条不把文学形象直接当作完整生平。",
+          "本条先建立人物、事件和地点之间的可追踪入口；关系强度与后世接受将继续按来源拆分。"
+        ],
+        "researchNote": "研究状态：已建立最小人物—事件—地点闭环；具体文本版本、机构层和关系方向仍需按卷页或碑刻继续复核。",
+        "timeLabel": "约 365–427 年",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "主要入口",
+              "en": "Primary entry"
+            },
+            "value": {
+              "zh-CN": "人物—事件—地点闭环",
+              "en": "Figure–event–place chain"
+            }
+          }
+        ]
+      },
+      "en": {
+        "title": "Tao Yuanming",
+        "subtitle": "Reclusion, poetry and medieval literati landscapes",
+        "shortSummary": "Tao Yuanming connects Eastern Jin literati life, reclusion narratives and later landscape literature; Xunyang is a regional biographical and reception entry, not one exact residence.",
+        "curatorialDescription": [
+          "Reclusion, poetic compilation and the later exemplary image of the recluse are different evidence layers; the literary image is not treated as a complete biography.",
+          "This release establishes a traceable figure–event–place entry; relation strength and later reception will be separated by source in later review."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific text versions, institutional layers and relation direction still require volume- or inscription-level review.",
+        "timeLabel": "c. 365–427 CE",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "Primary entry",
+              "en": "主要入口"
+            },
+            "value": {
+              "zh-CN": "Figure–event–place chain",
+              "en": "人物—事件—地点闭环"
+            }
+          }
+        ]
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:chinese-literati-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "range",
+        "startYear": 365,
+        "endYear": 427,
+        "displayDate": {
+          "zh-CN": "约 365–427 年",
+          "en": "c. 365–427 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:chinese-literati-records"
+      }
+    ],
+    "sourceIds": [
+      "source:chinese-literati-records",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "陶渊明",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "wang-wei",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "王维",
+        "subtitle": "诗画、山居与唐代佛教文化语境",
+        "shortSummary": "王维把唐代士大夫仕隐转换、诗画表达与佛教文化语境连接起来；地图重点呈现长安与山水文化网络。",
+        "curatorialDescription": [
+          "王维诗文中的山居意象、确切活动地和后世“诗佛”称谓不能互相证明，当前采用城市尺度锚点。",
+          "本条先建立人物、事件和地点之间的可追踪入口；关系强度与后世接受将继续按来源拆分。"
+        ],
+        "researchNote": "研究状态：已建立最小人物—事件—地点闭环；具体文本版本、机构层和关系方向仍需按卷页或碑刻继续复核。",
+        "timeLabel": "701–761 年",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "主要入口",
+              "en": "Primary entry"
+            },
+            "value": {
+              "zh-CN": "人物—事件—地点闭环",
+              "en": "Figure–event–place chain"
+            }
+          }
+        ]
+      },
+      "en": {
+        "title": "Wang Wei",
+        "subtitle": "Poetry, painting and Tang Buddhist cultural landscapes",
+        "shortSummary": "Wang Wei connects Tang scholar-official life, poetry–painting expression and Buddhist cultural settings, with the map focusing on Chang'an and landscape networks.",
+        "curatorialDescription": [
+          "Landscape imagery, exact activity sites and the later label 'poet-Buddha' do not prove one another; this release uses city-scale anchors.",
+          "This release establishes a traceable figure–event–place entry; relation strength and later reception will be separated by source in later review."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific text versions, institutional layers and relation direction still require volume- or inscription-level review.",
+        "timeLabel": "701–761 CE",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "Primary entry",
+              "en": "主要入口"
+            },
+            "value": {
+              "zh-CN": "Figure–event–place chain",
+              "en": "人物—事件—地点闭环"
+            }
+          }
+        ]
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:chinese-literati-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "range",
+        "startYear": 701,
+        "endYear": 761,
+        "displayDate": {
+          "zh-CN": "701–761 年",
+          "en": "701–761 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:chinese-literati-records"
+      }
+    ],
+    "sourceIds": [
+      "source:chinese-literati-records",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "王维",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "guo-xiang",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "郭象",
+        "subtitle": "《庄子》注疏与魏晋玄学的解释转向",
+        "shortSummary": "郭象是《庄子》注本传统与魏晋玄学的重要解释者，适合观察文本、人物和后世归属如何彼此连接。",
+        "curatorialDescription": [
+          "郭象注本的形成、版本层和“独创”评价需要与庄周本人和后世编纂分开。",
+          "本条先建立人物、事件和地点之间的可追踪入口；关系强度与后世接受将继续按来源拆分。"
+        ],
+        "researchNote": "研究状态：已建立最小人物—事件—地点闭环；具体文本版本、机构层和关系方向仍需按卷页或碑刻继续复核。",
+        "timeLabel": "约 252–312 年",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "主要入口",
+              "en": "Primary entry"
+            },
+            "value": {
+              "zh-CN": "人物—事件—地点闭环",
+              "en": "Figure–event–place chain"
+            }
+          }
+        ]
+      },
+      "en": {
+        "title": "Guo Xiang",
+        "subtitle": "Zhuangzi commentary and the interpretive turn of Wei–Jin thought",
+        "shortSummary": "Guo Xiang is a major interpreter in the Zhuangzi commentary tradition and Wei–Jin thought, making him useful for tracing text, figure and attribution.",
+        "curatorialDescription": [
+          "The formation and editions of Guo Xiang's commentary, and claims of originality, remain separate from Zhuang Zhou and later compilation.",
+          "This release establishes a traceable figure–event–place entry; relation strength and later reception will be separated by source in later review."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific text versions, institutional layers and relation direction still require volume- or inscription-level review.",
+        "timeLabel": "c. 252–312 CE",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "Primary entry",
+              "en": "主要入口"
+            },
+            "value": {
+              "zh-CN": "Figure–event–place chain",
+              "en": "人物—事件—地点闭环"
+            }
+          }
+        ]
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:daoist-biographical-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "range",
+        "startYear": 252,
+        "endYear": 312,
+        "displayDate": {
+          "zh-CN": "约 252–312 年",
+          "en": "c. 252–312 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:daoist-biographical-records"
+      }
+    ],
+    "sourceIds": [
+      "source:daoist-biographical-records",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "郭象",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "kou-qianzhi",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "寇谦之",
+        "subtitle": "北魏天师道改革与国家宗教制度",
+        "shortSummary": "寇谦之连接北魏道教改革、宫廷制度与道派组织，是观察宗教传统进入国家空间的关键人物。",
+        "curatorialDescription": [
+          "北魏制度史、道教传记和后世道派谱系并非同一证据层；洛阳作为都城锚点不代替宫观级定位。",
+          "本条先建立人物、事件和地点之间的可追踪入口；关系强度与后世接受将继续按来源拆分。"
+        ],
+        "researchNote": "研究状态：已建立最小人物—事件—地点闭环；具体文本版本、机构层和关系方向仍需按卷页或碑刻继续复核。",
+        "timeLabel": "365–448 年",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "主要入口",
+              "en": "Primary entry"
+            },
+            "value": {
+              "zh-CN": "人物—事件—地点闭环",
+              "en": "Figure–event–place chain"
+            }
+          }
+        ]
+      },
+      "en": {
+        "title": "Kou Qianzhi",
+        "subtitle": "Northern Wei Celestial Masters reform and state religious institutions",
+        "shortSummary": "Kou Qianzhi connects Northern Wei Daoist reform, court institutions and school organisation, offering a key case of religious tradition entering state space.",
+        "curatorialDescription": [
+          "Northern Wei institutional history, Daoist biography and later school genealogies are different evidence layers; Luoyang is a capital anchor, not a monastery-level location.",
+          "This release establishes a traceable figure–event–place entry; relation strength and later reception will be separated by source in later review."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific text versions, institutional layers and relation direction still require volume- or inscription-level review.",
+        "timeLabel": "365–448 CE",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "Primary entry",
+              "en": "主要入口"
+            },
+            "value": {
+              "zh-CN": "Figure–event–place chain",
+              "en": "人物—事件—地点闭环"
+            }
+          }
+        ]
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:daoist-biographical-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "range",
+        "startYear": 365,
+        "endYear": 448,
+        "displayDate": {
+          "zh-CN": "365–448 年",
+          "en": "365–448 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:daoist-biographical-records"
+      }
+    ],
+    "sourceIds": [
+      "source:daoist-biographical-records",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "寇谦之",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "lu-xiujing",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "陆修静",
+        "subtitle": "道教经法整理与南朝宗教制度网络",
+        "shortSummary": "陆修静把南朝道教经法整理、宫观制度与传戒网络连接起来，是道教文本和制度化过程的入口。",
+        "curatorialDescription": [
+          "经录编纂、受戒传统和后世道藏分类需分层展示；庐山是文化景观锚点，不等同于所有活动地点。",
+          "本条先建立人物、事件和地点之间的可追踪入口；关系强度与后世接受将继续按来源拆分。"
+        ],
+        "researchNote": "研究状态：已建立最小人物—事件—地点闭环；具体文本版本、机构层和关系方向仍需按卷页或碑刻继续复核。",
+        "timeLabel": "406–477 年",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "主要入口",
+              "en": "Primary entry"
+            },
+            "value": {
+              "zh-CN": "人物—事件—地点闭环",
+              "en": "Figure–event–place chain"
+            }
+          }
+        ]
+      },
+      "en": {
+        "title": "Lu Xiujing",
+        "subtitle": "Daoist textual organisation and Southern Dynasties religious institutions",
+        "shortSummary": "Lu Xiujing connects Southern Dynasties Daoist textual organisation, monastery institutions and ordination networks as an entry into institutionalisation.",
+        "curatorialDescription": [
+          "Catalogue work, ordination traditions and later Daoist-canon classification remain separate; Mount Lu is a cultural-landscape anchor, not every activity site.",
+          "This release establishes a traceable figure–event–place entry; relation strength and later reception will be separated by source in later review."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific text versions, institutional layers and relation direction still require volume- or inscription-level review.",
+        "timeLabel": "406–477 CE",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "Primary entry",
+              "en": "主要入口"
+            },
+            "value": {
+              "zh-CN": "Figure–event–place chain",
+              "en": "人物—事件—地点闭环"
+            }
+          }
+        ]
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:daoist-biographical-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "range",
+        "startYear": 406,
+        "endYear": 477,
+        "displayDate": {
+          "zh-CN": "406–477 年",
+          "en": "406–477 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:daoist-biographical-records"
+      }
+    ],
+    "sourceIds": [
+      "source:daoist-biographical-records",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "陆修静",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "sun-simiao",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "孙思邈",
+        "subtitle": "医学、养生与唐代道教知识实践",
+        "shortSummary": "孙思邈连接医学写作、养生实践和唐代道教知识网络，展示宗教人物与技术知识之间的交叉。",
+        "curatorialDescription": [
+          "医药文本、道教传记和后世“药王”信仰需要区分；终南山采用山地尺度坐标。",
+          "本条先建立人物、事件和地点之间的可追踪入口；关系强度与后世接受将继续按来源拆分。"
+        ],
+        "researchNote": "研究状态：已建立最小人物—事件—地点闭环；具体文本版本、机构层和关系方向仍需按卷页或碑刻继续复核。",
+        "timeLabel": "581–682 年",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "主要入口",
+              "en": "Primary entry"
+            },
+            "value": {
+              "zh-CN": "人物—事件—地点闭环",
+              "en": "Figure–event–place chain"
+            }
+          }
+        ]
+      },
+      "en": {
+        "title": "Sun Simiao",
+        "subtitle": "Medicine, cultivation and Tang Daoist knowledge practice",
+        "shortSummary": "Sun Simiao connects medical writing, cultivation practice and Tang Daoist knowledge networks, showing intersections between religious figures and technical knowledge.",
+        "curatorialDescription": [
+          "Medical texts, Daoist biography and later Medicine King devotion remain distinct; the Zhongnan Mountains use a mountain-scale coordinate.",
+          "This release establishes a traceable figure–event–place entry; relation strength and later reception will be separated by source in later review."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific text versions, institutional layers and relation direction still require volume- or inscription-level review.",
+        "timeLabel": "581–682 CE",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "Primary entry",
+              "en": "主要入口"
+            },
+            "value": {
+              "zh-CN": "Figure–event–place chain",
+              "en": "人物—事件—地点闭环"
+            }
+          }
+        ]
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-biographical-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "range",
+        "startYear": 581,
+        "endYear": 682,
+        "displayDate": {
+          "zh-CN": "581–682 年",
+          "en": "581–682 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-biographical-records"
+      }
+    ],
+    "sourceIds": [
+      "source:daoist-biographical-records",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "孙思邈",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "chen-tuan",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "陈抟",
+        "subtitle": "华山隐逸、内丹传统与宋初道教记忆",
+        "shortSummary": "陈抟是唐宋之际道教隐逸和内丹传统的重要入口；华山地图点位表达山岳记忆，不把仙传细节当作确定行迹。",
+        "curatorialDescription": [
+          "陈抟生平、内丹谱系和后世仙传交叠明显，当前使用保守年代与区域锚点。",
+          "本条先建立人物、事件和地点之间的可追踪入口；关系强度与后世接受将继续按来源拆分。"
+        ],
+        "researchNote": "研究状态：已建立最小人物—事件—地点闭环；具体文本版本、机构层和关系方向仍需按卷页或碑刻继续复核。",
+        "timeLabel": "约 871–989 年",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "主要入口",
+              "en": "Primary entry"
+            },
+            "value": {
+              "zh-CN": "人物—事件—地点闭环",
+              "en": "Figure–event–place chain"
+            }
+          }
+        ]
+      },
+      "en": {
+        "title": "Chen Tuan",
+        "subtitle": "Mount Hua reclusion, inner alchemy and early Song Daoist memory",
+        "shortSummary": "Chen Tuan is an important entry into Tang–Song Daoist reclusion and inner-alchemy traditions; Mount Hua expresses mountain memory without treating immortal biographies as certain itineraries.",
+        "curatorialDescription": [
+          "Chen Tuan's biography, inner-alchemy genealogies and later immortal tales overlap heavily; this release uses a conservative date range and regional anchor.",
+          "This release establishes a traceable figure–event–place entry; relation strength and later reception will be separated by source in later review."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific text versions, institutional layers and relation direction still require volume- or inscription-level review.",
+        "timeLabel": "c. 871–989 CE",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "Primary entry",
+              "en": "主要入口"
+            },
+            "value": {
+              "zh-CN": "Figure–event–place chain",
+              "en": "人物—事件—地点闭环"
+            }
+          }
+        ]
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-biographical-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "range",
+        "startYear": 871,
+        "endYear": 989,
+        "displayDate": {
+          "zh-CN": "约 871–989 年",
+          "en": "c. 871–989 CE"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-biographical-records"
+      }
+    ],
+    "sourceIds": [
+      "source:daoist-biographical-records",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "inferred",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "陈抟",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "wang-chongyang",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "王重阳",
+        "subtitle": "全真道形成与金代道教网络",
+        "shortSummary": "王重阳连接金代北方道教、全真教团和终南山修行网络，是宗派形成与地点关系的重点人物。",
+        "curatorialDescription": [
+          "全真教团的形成、弟子谱系和后世七真叙事需要分层；终南山是区域活动锚点。",
+          "本条先建立人物、事件和地点之间的可追踪入口；关系强度与后世接受将继续按来源拆分。"
+        ],
+        "researchNote": "研究状态：已建立最小人物—事件—地点闭环；具体文本版本、机构层和关系方向仍需按卷页或碑刻继续复核。",
+        "timeLabel": "1113–1170 年",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "主要入口",
+              "en": "Primary entry"
+            },
+            "value": {
+              "zh-CN": "人物—事件—地点闭环",
+              "en": "Figure–event–place chain"
+            }
+          }
+        ]
+      },
+      "en": {
+        "title": "Wang Chongyang",
+        "subtitle": "The formation of Quanzhen Daoism and Jin-period religious networks",
+        "shortSummary": "Wang Chongyang connects Jin-period northern Daoism, the Quanzhen community and Zhongnan mountain practice networks as a key figure in school formation.",
+        "curatorialDescription": [
+          "The formation of the Quanzhen community, disciple genealogies and later Seven Perfect Ones narratives remain separate; the Zhongnan Mountains are a regional activity anchor.",
+          "This release establishes a traceable figure–event–place entry; relation strength and later reception will be separated by source in later review."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific text versions, institutional layers and relation direction still require volume- or inscription-level review.",
+        "timeLabel": "1113–1170 CE",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "Primary entry",
+              "en": "主要入口"
+            },
+            "value": {
+              "zh-CN": "Figure–event–place chain",
+              "en": "人物—事件—地点闭环"
+            }
+          }
+        ]
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:daoist-biographical-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "range",
+        "startYear": 1113,
+        "endYear": 1170,
+        "displayDate": {
+          "zh-CN": "1113–1170 年",
+          "en": "1113–1170 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:daoist-biographical-records"
+      }
+    ],
+    "sourceIds": [
+      "source:daoist-biographical-records",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "王重阳",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "bodhidharma",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "菩提达摩",
+        "subtitle": "禅宗祖师叙事与中印传承记忆",
+        "shortSummary": "菩提达摩是中印佛教传承与禅宗祖师叙事的重要入口；人物史实、师承谱系和后世神异故事必须分层。",
+        "curatorialDescription": [
+          "达摩生平、洛阳活动和禅宗祖师谱系存在传记层差异，当前不把单一寺院或面壁故事当作确定事实。",
+          "本条先建立人物、事件和地点之间的可追踪入口；关系强度与后世接受将继续按来源拆分。"
+        ],
+        "researchNote": "研究状态：已建立最小人物—事件—地点闭环；具体文本版本、机构层和关系方向仍需按卷页或碑刻继续复核。",
+        "timeLabel": "约 5–6 世纪",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "主要入口",
+              "en": "Primary entry"
+            },
+            "value": {
+              "zh-CN": "人物—事件—地点闭环",
+              "en": "Figure–event–place chain"
+            }
+          }
+        ]
+      },
+      "en": {
+        "title": "Bodhidharma",
+        "subtitle": "Chan patriarchal narrative and Sino-Indian transmission memory",
+        "shortSummary": "Bodhidharma is a major entry into Sino-Indian Buddhist transmission and Chan patriarchal narrative; historical evidence, lineage and later miracle stories must remain layered.",
+        "curatorialDescription": [
+          "Biographical layers differ on Bodhidharma's life, Luoyang activity and Chan lineage; no single monastery or wall-facing story is treated as certain fact.",
+          "This release establishes a traceable figure–event–place entry; relation strength and later reception will be separated by source in later review."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific text versions, institutional layers and relation direction still require volume- or inscription-level review.",
+        "timeLabel": "c. fifth–sixth centuries CE",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "Primary entry",
+              "en": "主要入口"
+            },
+            "value": {
+              "zh-CN": "Figure–event–place chain",
+              "en": "人物—事件—地点闭环"
+            }
+          }
+        ]
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "century",
+        "startYear": 450,
+        "endYear": 550,
+        "displayDate": {
+          "zh-CN": "约 5–6 世纪",
+          "en": "c. fifth–sixth centuries CE"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "sourceIds": [
+      "source:buddhist-school-biographies",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "contested",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "菩提达摩",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "zhiyi",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "智顗",
+        "subtitle": "天台教观、山岳寺院与佛教经典组织",
+        "shortSummary": "智顗把天台教观、经典解释和山岳寺院制度连接起来，是中国佛教宗派化与东亚传播的核心人物。",
+        "curatorialDescription": [
+          "智顗个人讲学、天台宗后世制度和东亚传播不是同一时间层；天台山作为现实文化景观入口。",
+          "本条先建立人物、事件和地点之间的可追踪入口；关系强度与后世接受将继续按来源拆分。"
+        ],
+        "researchNote": "研究状态：已建立最小人物—事件—地点闭环；具体文本版本、机构层和关系方向仍需按卷页或碑刻继续复核。",
+        "timeLabel": "538–597 年",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "主要入口",
+              "en": "Primary entry"
+            },
+            "value": {
+              "zh-CN": "人物—事件—地点闭环",
+              "en": "Figure–event–place chain"
+            }
+          }
+        ]
+      },
+      "en": {
+        "title": "Zhiyi",
+        "subtitle": "Tiantai doctrine and practice, mountain monasteries and scriptural organisation",
+        "shortSummary": "Zhiyi connects Tiantai doctrine and practice, scriptural interpretation and mountain-monastery institutions as a central figure in Chinese Buddhist school formation.",
+        "curatorialDescription": [
+          "Zhiyi's own teaching, later Tiantai institutions and East Asian transmission are different time layers; Mount Tiantai is the real cultural-landscape entry.",
+          "This release establishes a traceable figure–event–place entry; relation strength and later reception will be separated by source in later review."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific text versions, institutional layers and relation direction still require volume- or inscription-level review.",
+        "timeLabel": "538–597 CE",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "Primary entry",
+              "en": "主要入口"
+            },
+            "value": {
+              "zh-CN": "Figure–event–place chain",
+              "en": "人物—事件—地点闭环"
+            }
+          }
+        ]
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "range",
+        "startYear": 538,
+        "endYear": 597,
+        "displayDate": {
+          "zh-CN": "538–597 年",
+          "en": "538–597 CE"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "sourceIds": [
+      "source:buddhist-school-biographies",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "智顗",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "fazang",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "法藏",
+        "subtitle": "华严宗组织、译经解释与唐代长安",
+        "shortSummary": "法藏连接华严宗教义组织、译经解释和唐代长安制度网络，是佛教思想与帝国知识空间的交汇人物。",
+        "curatorialDescription": [
+          "法藏与译场、宫廷和宗派谱系的关系需要按具体文献拆分；当前使用长安城市尺度锚点。",
+          "本条先建立人物、事件和地点之间的可追踪入口；关系强度与后世接受将继续按来源拆分。"
+        ],
+        "researchNote": "研究状态：已建立最小人物—事件—地点闭环；具体文本版本、机构层和关系方向仍需按卷页或碑刻继续复核。",
+        "timeLabel": "643–712 年",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "主要入口",
+              "en": "Primary entry"
+            },
+            "value": {
+              "zh-CN": "人物—事件—地点闭环",
+              "en": "Figure–event–place chain"
+            }
+          }
+        ]
+      },
+      "en": {
+        "title": "Fazang",
+        "subtitle": "Huayan organisation, Buddhist interpretation and Tang Chang'an",
+        "shortSummary": "Fazang connects Huayan doctrinal organisation, Buddhist interpretation and Tang Chang'an's institutional knowledge networks.",
+        "curatorialDescription": [
+          "Fazang's relations with translation bureaux, court and school genealogy require text-level separation; Chang'an is used as a city-scale anchor.",
+          "This release establishes a traceable figure–event–place entry; relation strength and later reception will be separated by source in later review."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific text versions, institutional layers and relation direction still require volume- or inscription-level review.",
+        "timeLabel": "643–712 CE",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "Primary entry",
+              "en": "主要入口"
+            },
+            "value": {
+              "zh-CN": "Figure–event–place chain",
+              "en": "人物—事件—地点闭环"
+            }
+          }
+        ]
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "range",
+        "startYear": 643,
+        "endYear": 712,
+        "displayDate": {
+          "zh-CN": "643–712 年",
+          "en": "643–712 CE"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "sourceIds": [
+      "source:buddhist-school-biographies",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "法藏",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "huineng",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "慧能",
+        "subtitle": "曹溪禅、坛经传承与南方佛教网络",
+        "shortSummary": "慧能把岭南禅宗、师承记忆和《坛经》传承连接起来，是人物史实与宗派经典化需要并置观察的入口。",
+        "curatorialDescription": [
+          "慧能生平、南华寺空间和《坛经》编纂层保持区分；韶关是岭南区域锚点，不是单一传法现场。",
+          "本条先建立人物、事件和地点之间的可追踪入口；关系强度与后世接受将继续按来源拆分。"
+        ],
+        "researchNote": "研究状态：已建立最小人物—事件—地点闭环；具体文本版本、机构层和关系方向仍需按卷页或碑刻继续复核。",
+        "timeLabel": "638–713 年",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "主要入口",
+              "en": "Primary entry"
+            },
+            "value": {
+              "zh-CN": "人物—事件—地点闭环",
+              "en": "Figure–event–place chain"
+            }
+          }
+        ]
+      },
+      "en": {
+        "title": "Huineng",
+        "subtitle": "Caoxi Chan, Platform Sutra transmission and southern Buddhist networks",
+        "shortSummary": "Huineng connects southern Chan, lineage memory and the transmission of the Platform Sutra, making him an entry into biography and canonicalisation.",
+        "curatorialDescription": [
+          "Huineng's biography, Nanhua Monastery and the Platform Sutra's compilation layers remain distinct; Shaoguan is a Lingnan regional anchor, not one exact preaching site.",
+          "This release establishes a traceable figure–event–place entry; relation strength and later reception will be separated by source in later review."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific text versions, institutional layers and relation direction still require volume- or inscription-level review.",
+        "timeLabel": "638–713 CE",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "Primary entry",
+              "en": "主要入口"
+            },
+            "value": {
+              "zh-CN": "Figure–event–place chain",
+              "en": "人物—事件—地点闭环"
+            }
+          }
+        ]
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "range",
+        "startYear": 638,
+        "endYear": 713,
+        "displayDate": {
+          "zh-CN": "638–713 年",
+          "en": "638–713 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "sourceIds": [
+      "source:buddhist-school-biographies",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "contested",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "慧能",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "shandao",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "善导",
+        "subtitle": "净土教化、长安寺院与唐代信仰传播",
+        "shortSummary": "善导连接净土教化、长安寺院空间和唐代信仰传播，是佛教思想进入大众实践的重要人物。",
+        "curatorialDescription": [
+          "善导个人活动、净土传统的长期形成和后世往生叙事需要分层；本条先以长安为城市尺度锚点。",
+          "本条先建立人物、事件和地点之间的可追踪入口；关系强度与后世接受将继续按来源拆分。"
+        ],
+        "researchNote": "研究状态：已建立最小人物—事件—地点闭环；具体文本版本、机构层和关系方向仍需按卷页或碑刻继续复核。",
+        "timeLabel": "613–681 年",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "主要入口",
+              "en": "Primary entry"
+            },
+            "value": {
+              "zh-CN": "人物—事件—地点闭环",
+              "en": "Figure–event–place chain"
+            }
+          }
+        ]
+      },
+      "en": {
+        "title": "Shandao",
+        "subtitle": "Pure Land teaching, Chang'an monasteries and Tang devotional transmission",
+        "shortSummary": "Shandao connects Pure Land teaching, Chang'an monastic space and Tang devotional transmission as a major figure in Buddhist practice.",
+        "curatorialDescription": [
+          "Shandao's own activity, the long formation of Pure Land traditions and later rebirth narratives remain separate; Chang'an is first used as a city-scale anchor.",
+          "This release establishes a traceable figure–event–place entry; relation strength and later reception will be separated by source in later review."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific text versions, institutional layers and relation direction still require volume- or inscription-level review.",
+        "timeLabel": "613–681 CE",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "Primary entry",
+              "en": "主要入口"
+            },
+            "value": {
+              "zh-CN": "Figure–event–place chain",
+              "en": "人物—事件—地点闭环"
+            }
+          }
+        ]
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "range",
+        "startYear": 613,
+        "endYear": 681,
+        "displayDate": {
+          "zh-CN": "613–681 年",
+          "en": "613–681 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "sourceIds": [
+      "source:buddhist-school-biographies",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "善导",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "sengzhao",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "僧肇",
+        "subtitle": "鸠摩罗什译场与中观思想的汉地解释",
+        "shortSummary": "僧肇把鸠摩罗什译场、后秦长安和中观思想汉地解释连接起来，是译经团队与思想传播的关键人物。",
+        "curatorialDescription": [
+          "僧肇著述归属、译场分工和中观接受史需要分层；长安点位表达译经制度网络而非具体书房。",
+          "本条先建立人物、事件和地点之间的可追踪入口；关系强度与后世接受将继续按来源拆分。"
+        ],
+        "researchNote": "研究状态：已建立最小人物—事件—地点闭环；具体文本版本、机构层和关系方向仍需按卷页或碑刻继续复核。",
+        "timeLabel": "约 384–414 年",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "主要入口",
+              "en": "Primary entry"
+            },
+            "value": {
+              "zh-CN": "人物—事件—地点闭环",
+              "en": "Figure–event–place chain"
+            }
+          }
+        ]
+      },
+      "en": {
+        "title": "Sengzhao",
+        "subtitle": "Kumarajiva's translation network and Chinese interpretation of Madhyamaka",
+        "shortSummary": "Sengzhao connects Kumarajiva's translation network, Later Qin Chang'an and Chinese interpretations of Madhyamaka as a key translator-scholar.",
+        "curatorialDescription": [
+          "Attribution of Sengzhao's writings, translation-bureau roles and Madhyamaka reception remain layered; Chang'an expresses an institutional network, not one study room.",
+          "This release establishes a traceable figure–event–place entry; relation strength and later reception will be separated by source in later review."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific text versions, institutional layers and relation direction still require volume- or inscription-level review.",
+        "timeLabel": "c. 384–414 CE",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "Primary entry",
+              "en": "主要入口"
+            },
+            "value": {
+              "zh-CN": "Figure–event–place chain",
+              "en": "人物—事件—地点闭环"
+            }
+          }
+        ]
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "range",
+        "startYear": 384,
+        "endYear": 414,
+        "displayDate": {
+          "zh-CN": "约 384–414 年",
+          "en": "c. 384–414 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "sourceIds": [
+      "source:buddhist-school-biographies",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "僧肇",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "daoxuan",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "道宣",
+        "subtitle": "律学、僧传与唐代佛教制度化",
+        "shortSummary": "道宣连接戒律学、僧传编纂和唐代僧团制度，是观察佛教规范如何进入机构与文本的重点人物。",
+        "curatorialDescription": [
+          "律藏传承、僧传写作和唐代制度史不能压缩为一个长安事件；当前以制度网络为主。",
+          "本条先建立人物、事件和地点之间的可追踪入口；关系强度与后世接受将继续按来源拆分。"
+        ],
+        "researchNote": "研究状态：已建立最小人物—事件—地点闭环；具体文本版本、机构层和关系方向仍需按卷页或碑刻继续复核。",
+        "timeLabel": "596–667 年",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "主要入口",
+              "en": "Primary entry"
+            },
+            "value": {
+              "zh-CN": "人物—事件—地点闭环",
+              "en": "Figure–event–place chain"
+            }
+          }
+        ]
+      },
+      "en": {
+        "title": "Daoxuan",
+        "subtitle": "Vinaya learning, monastic biographies and Tang Buddhist institutions",
+        "shortSummary": "Daoxuan connects vinaya learning, eminent-monk biographies and Tang monastic institutions, showing how Buddhist norms enter texts and organisations.",
+        "curatorialDescription": [
+          "Vinaya transmission, biographical writing and Tang institutional history cannot be compressed into one Chang'an event; the entry starts with the institutional network.",
+          "This release establishes a traceable figure–event–place entry; relation strength and later reception will be separated by source in later review."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific text versions, institutional layers and relation direction still require volume- or inscription-level review.",
+        "timeLabel": "596–667 CE",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "Primary entry",
+              "en": "主要入口"
+            },
+            "value": {
+              "zh-CN": "Figure–event–place chain",
+              "en": "人物—事件—地点闭环"
+            }
+          }
+        ]
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "range",
+        "startYear": 596,
+        "endYear": 667,
+        "displayDate": {
+          "zh-CN": "596–667 年",
+          "en": "596–667 CE"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "sourceIds": [
+      "source:buddhist-school-biographies",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "道宣",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "baizhang-huaihai",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "百丈怀海",
+        "subtitle": "禅门丛林、清规传统与唐代寺院组织",
+        "shortSummary": "百丈怀海是禅门丛林组织与清规传统的重要入口；后世把复杂制度史归于一人，需要保持谨慎。",
+        "curatorialDescription": [
+          "《百丈清规》的成书、后世重编和怀海活动年代并非同一层，百丈山点位只表达寺院文化景观。",
+          "本条先建立人物、事件和地点之间的可追踪入口；关系强度与后世接受将继续按来源拆分。"
+        ],
+        "researchNote": "研究状态：已建立最小人物—事件—地点闭环；具体文本版本、机构层和关系方向仍需按卷页或碑刻继续复核。",
+        "timeLabel": "约 720–814 年",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "主要入口",
+              "en": "Primary entry"
+            },
+            "value": {
+              "zh-CN": "人物—事件—地点闭环",
+              "en": "Figure–event–place chain"
+            }
+          }
+        ]
+      },
+      "en": {
+        "title": "Baizhang Huaihai",
+        "subtitle": "Chan monastic organisation, rule traditions and Tang institutions",
+        "shortSummary": "Baizhang Huaihai is an important entry into Chan monastic organisation and rule traditions; later attribution of a complex institutional history to one person requires caution.",
+        "curatorialDescription": [
+          "The formation and later redaction of the Baizhang rules and Huaihai's activity dates are different layers; Mount Baizhang represents a monastery cultural landscape.",
+          "This release establishes a traceable figure–event–place entry; relation strength and later reception will be separated by source in later review."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific text versions, institutional layers and relation direction still require volume- or inscription-level review.",
+        "timeLabel": "c. 720–814 CE",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "Primary entry",
+              "en": "主要入口"
+            },
+            "value": {
+              "zh-CN": "Figure–event–place chain",
+              "en": "人物—事件—地点闭环"
+            }
+          }
+        ]
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "range",
+        "startYear": 720,
+        "endYear": 814,
+        "displayDate": {
+          "zh-CN": "约 720–814 年",
+          "en": "c. 720–814 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "sourceIds": [
+      "source:buddhist-school-biographies",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "百丈怀海",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "linji-yixuan",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "临济义玄",
+        "subtitle": "临济禅、语录传统与北方寺院网络",
+        "shortSummary": "临济义玄连接晚唐禅门语录、北方寺院网络和后世临济宗传播，是关系与接受层的重要人物。",
+        "curatorialDescription": [
+          "语录成书、义玄活动地和后世宗派谱系需要分层；正定是城市尺度的地方记忆锚点。",
+          "本条先建立人物、事件和地点之间的可追踪入口；关系强度与后世接受将继续按来源拆分。"
+        ],
+        "researchNote": "研究状态：已建立最小人物—事件—地点闭环；具体文本版本、机构层和关系方向仍需按卷页或碑刻继续复核。",
+        "timeLabel": "约 810–866 年",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "主要入口",
+              "en": "Primary entry"
+            },
+            "value": {
+              "zh-CN": "人物—事件—地点闭环",
+              "en": "Figure–event–place chain"
+            }
+          }
+        ]
+      },
+      "en": {
+        "title": "Linji Yixuan",
+        "subtitle": "Linji Chan, recorded sayings and northern monastic networks",
+        "shortSummary": "Linji Yixuan connects late Tang Chan recorded sayings, northern monastic networks and later Linji transmission as a key figure for relation and reception layers.",
+        "curatorialDescription": [
+          "Recorded sayings, Yixuan's activity sites and later school genealogy remain separate; Zhengding is a city-scale anchor for local memory.",
+          "This release establishes a traceable figure–event–place entry; relation strength and later reception will be separated by source in later review."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific text versions, institutional layers and relation direction still require volume- or inscription-level review.",
+        "timeLabel": "c. 810–866 CE",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "Primary entry",
+              "en": "主要入口"
+            },
+            "value": {
+              "zh-CN": "Figure–event–place chain",
+              "en": "人物—事件—地点闭环"
+            }
+          }
+        ]
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "range",
+        "startYear": 810,
+        "endYear": 866,
+        "displayDate": {
+          "zh-CN": "约 810–866 年",
+          "en": "c. 810–866 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "sourceIds": [
+      "source:buddhist-school-biographies",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "临济义玄",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "jian-zhen",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "鉴真",
+        "subtitle": "律学传授、扬州出发与东亚佛教交流",
+        "shortSummary": "鉴真把唐代律学、扬州寺院网络、海上交通和日本佛教制度连接起来，是跨区域传播的重点人物。",
+        "curatorialDescription": [
+          "东渡多次失败、最终航线、到达地点和后世鉴真记忆需要分层；当前先做扬州出发与传播网络。",
+          "本条先建立人物、事件和地点之间的可追踪入口；关系强度与后世接受将继续按来源拆分。"
+        ],
+        "researchNote": "研究状态：已建立最小人物—事件—地点闭环；具体文本版本、机构层和关系方向仍需按卷页或碑刻继续复核。",
+        "timeLabel": "688–763 年",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "主要入口",
+              "en": "Primary entry"
+            },
+            "value": {
+              "zh-CN": "人物—事件—地点闭环",
+              "en": "Figure–event–place chain"
+            }
+          }
+        ]
+      },
+      "en": {
+        "title": "Jianzhen",
+        "subtitle": "Vinaya transmission, Yangzhou departure and East Asian Buddhist exchange",
+        "shortSummary": "Jianzhen connects Tang vinaya learning, Yangzhou monasteries, maritime movement and Japanese Buddhist institutions as a key transregional figure.",
+        "curatorialDescription": [
+          "Failed crossings, the final voyage, arrival sites and later Jianzhen memory remain separate; this entry first models Yangzhou departure and transmission networks.",
+          "This release establishes a traceable figure–event–place entry; relation strength and later reception will be separated by source in later review."
+        ],
+        "researchNote": "Research status: a minimum figure–event–place chain is in place; specific text versions, institutional layers and relation direction still require volume- or inscription-level review.",
+        "timeLabel": "688–763 CE",
+        "keyFacts": [
+          {
+            "label": {
+              "zh-CN": "Primary entry",
+              "en": "主要入口"
+            },
+            "value": {
+              "zh-CN": "Figure–event–place chain",
+              "en": "人物—事件—地点闭环"
+            }
+          }
+        ]
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "range",
+        "startYear": 688,
+        "endYear": 763,
+        "displayDate": {
+          "zh-CN": "688–763 年",
+          "en": "688–763 CE"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-school-biographies"
+      }
+    ],
+    "sourceIds": [
+      "source:buddhist-school-biographies",
+      "source:historical-geography-expanded",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "鉴真",
+      "nameLanguageCode": "lzh"
+    }
+  }
+]

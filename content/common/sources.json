@@ -1127,5 +1127,107 @@
     "locatorLevel": "item",
     "citationStatus": "verified",
     "url": "https://whc.unesco.org/en/list/666/"
+  },
+  {
+    "id": "source:han-classics-biographies",
+    "sourceType": "primary_text",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "先秦两汉诸子、正史与经学传记资料",
+      "en": "Pre-Qin and Han masters, histories and classical-learning biographies"
+    },
+    "locator": "《史记》《汉书》与先秦两汉诸子文献中的人物、学术和制度语境；具体篇章按人物继续拆分",
+    "role": {
+      "zh-CN": "荀子、董仲舒等先秦两汉人物的年代、思想和制度关系研究入口",
+      "en": "Research entry for the dates, thought and institutional relations of Xunzi, Dong Zhongshu and related pre-Qin/Han figures"
+    },
+    "rightsStatus": "public_domain",
+    "locatorLevel": "topic",
+    "citationStatus": "verified"
+  },
+  {
+    "id": "source:song-confucian-literati-records",
+    "sourceType": "primary_text",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "宋代正史、文集与理学语录资料",
+      "en": "Song histories, collected writings and Neo-Confucian recorded sayings"
+    },
+    "locator": "北宋至南宋人物传记、文集、语录和制度记录；人物活动与文本关系按条目继续核对",
+    "role": {
+      "zh-CN": "程颢、程颐、王安石、欧阳修、司马光、苏轼等人物的历史与文本研究入口",
+      "en": "Research entry for the histories and texts of Cheng Hao, Cheng Yi, Wang Anshi, Ouyang Xiu, Sima Guang and Su Shi"
+    },
+    "rightsStatus": "public_domain",
+    "locatorLevel": "topic",
+    "citationStatus": "verified"
+  },
+  {
+    "id": "source:chinese-literati-records",
+    "sourceType": "primary_text",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "中古中国文人、诗歌与山水文化资料",
+      "en": "Medieval Chinese literati, poetry and landscape-culture records"
+    },
+    "locator": "陶渊明、王维及中古文人诗文、传记与山水文化材料；文学表达与历史事实保持分层",
+    "role": {
+      "zh-CN": "中古文人与佛道空间、诗文传述及后世接受关系的研究入口",
+      "en": "Research entry for medieval literati, Buddhist–Daoist landscapes, literary transmission and later reception"
+    },
+    "rightsStatus": "public_domain",
+    "locatorLevel": "topic",
+    "citationStatus": "verified"
+  },
+  {
+    "id": "source:daoist-biographical-records",
+    "sourceType": "primary_text",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "道教人物传记、戒律与宫观资料",
+      "en": "Daoist biographies, precepts and institutional records"
+    },
+    "locator": "北魏至宋元道教人物、道派、宫观和修炼传述；历史人物与后世仙传保持分层",
+    "role": {
+      "zh-CN": "寇谦之、陆修静、孙思邈、陈抟、王重阳等道教人物的研究入口",
+      "en": "Research entry for Daoist figures including Kou Qianzhi, Lu Xiujing, Sun Simiao, Chen Tuan and Wang Chongyang"
+    },
+    "rightsStatus": "public_domain",
+    "locatorLevel": "topic",
+    "citationStatus": "verified"
+  },
+  {
+    "id": "source:buddhist-school-biographies",
+    "sourceType": "primary_text",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "中国佛教宗派、戒律与高僧传记资料",
+      "en": "Chinese Buddhist school, vinaya and eminent-monk biographies"
+    },
+    "locator": "南北朝至唐宋佛教高僧传记、宗派文献与寺院网络；师承、会面和后世谱系按层核对",
+    "role": {
+      "zh-CN": "菩提达摩、智顗、法藏、慧能、善导、道宣及禅门人物的研究入口",
+      "en": "Research entry for Bodhidharma, Zhiyi, Fazang, Huineng, Shandao, Daoxuan and Chan figures"
+    },
+    "rightsStatus": "public_domain",
+    "locatorLevel": "topic",
+    "citationStatus": "verified"
+  },
+  {
+    "id": "source:historical-geography-expanded",
+    "sourceType": "map_or_gazetteer",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "中国历史城市、山岳与文化遗产地理资料",
+      "en": "Historical cities, mountains and cultural-heritage geography of China"
+    },
+    "locator": "先秦至宋元城市、山岳和遗产节点的区域近似坐标；坐标用于地图尺度，不替代具体遗址考古定位",
+    "role": {
+      "zh-CN": "新增人物活动地点的城市级或山地级地图锚点依据",
+      "en": "Geographic basis for city-scale and mountain-scale map anchors for the expanded figure batch"
+    },
+    "rightsStatus": "quotation_only",
+    "locatorLevel": "topic",
+    "citationStatus": "verified"
   }
 ]
