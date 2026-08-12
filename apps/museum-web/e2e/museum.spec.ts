@@ -462,6 +462,34 @@ test("direct figure relation URL never falls back to the global relation list", 
   await expect(page.locator(".atlas-relation-card").first()).toContainText("Confucius (Kong Qiu)");
 });
 
+test("relations tab exposes the Bible Atlas-style interactive people graph", async ({ page }) => {
+  await page.goto("/explore?lang=en&view=map");
+  await waitForMuseum(page);
+  await waitForAtlas(page);
+
+  await page.locator(".atlas-tab-nav button").filter({ hasText: "Relations" }).click();
+  const graph = page.locator(".relationship-graph");
+  await expect(graph).toBeVisible();
+  await expect(graph.locator(".relationship-graph-canvas")).toBeVisible();
+  await expect(graph.locator(".relationship-graph-node").first()).toBeVisible();
+  await expect(graph.getByText(/Scroll to zoom|滚轮缩放/)).toBeVisible();
+
+  await graph.getByRole("button", { name: "Show as table", exact: true }).click();
+  await expect(graph.locator(".relationship-graph-table")).toBeVisible();
+  await expect(graph.locator(".relationship-graph-table tbody tr").first()).toBeVisible();
+  await graph.locator(".relationship-graph-table tbody tr").first().getByRole("button").nth(1).click();
+  await expect(page).toHaveURL(/detail=relation%3A(?!relation%3A)/);
+
+  await page.goto("/explore?lang=en&view=map&tab=relations&focus=figure%3Aconfucius");
+  await waitForAtlas(page);
+  await expect(page.locator(".relationship-graph")).toBeVisible();
+  const confuciusNode = page.getByRole("button", { name: /Confucius \(Kong Qiu\)/ }).last();
+  await expect(confuciusNode).toBeVisible();
+  await confuciusNode.click();
+  await expect(page).toHaveURL(/focus=figure%3Aconfucius/);
+  await expect(page.locator(".atlas-object-panel .atlas-tab-nav button.active")).toContainText("Figures");
+});
+
 test("map shares the historical time window with the timeline", async ({ page }) => {
   await page.goto("/explore?lang=en&view=map&from=-600&to=-500");
   await waitForMuseum(page);

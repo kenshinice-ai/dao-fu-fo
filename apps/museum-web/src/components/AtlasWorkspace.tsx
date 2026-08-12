@@ -10,6 +10,7 @@ import { CivilisationMap } from "./CivilisationMap";
 import { ErrorState, LoadingState } from "./LoadingState";
 import { Icon } from "./Icon";
 import { RelationNetwork } from "./RelationNetwork";
+import { InteractiveRelationshipGraph } from "./InteractiveRelationshipGraph";
 import { ERA_CONTEXTS } from "../data/eraContexts";
 import { formatConfidence, formatEntityKind, formatEvidence, formatEvidenceLine, formatRelationType } from "../data/labels";
 import type { EntityData, EntityKind, Locale, MapContextData, SearchItem, TimelineData, TimelineEvent, Tradition } from "../types";
@@ -471,6 +472,21 @@ export function AtlasWorkspace({ locale, state, onChange, className = "", headin
           onOpenDetail={openDetail}
         />
       </div>
+
+      {state.atlasTab === "relations" ? (
+        <InteractiveRelationshipGraph
+          locale={locale}
+          relations={data.relations}
+          scopeRelations={contextualRelationItems}
+          searchItems={data.searchItems}
+          focus={state.focus}
+          traditions={state.traditions}
+          zoomLevel={state.zoomLevel}
+          onZoomLevel={(zoomLevel) => updateState({ zoomLevel })}
+          onFocus={setFocus}
+          onOpenRelation={(relationId) => openDetail(relationDetailKey(relationId))}
+        />
+      ) : null}
 
       <AtlasDataNotes locale={locale} data={data} state={state} />
 
