@@ -1,8 +1,18 @@
 # 道·儒·佛文明数字博物馆｜项目交接文档
 
 > 维护纪律：每个可独立说明的实现、修复、验证或发布阶段完成后立即更新。
-> 最后更新：2026-08-11
-> 当前阶段：关系与地点投影审计修复已完成并直发 Full Alpha production / production 作为唯一线上复盘基准 / Public RC 边界保持独立
+> 最后更新：2026-08-12
+> 当前阶段：Bible Atlas 式单实体状态链与扩展研究图谱已直发 Full Alpha production / production 作为唯一线上复盘基准 / Public RC 边界保持独立
+
+## 2026-08-12｜Bible Atlas 单实体状态链与扩展研究图谱 production handoff（当前）
+
+- 本轮重新对照线上 Bible Atlas、本地 `The Bible Atlas` 与 `previous project` 的 `ExploreState`、`AtlasMap`、`EntityDrawer` 和 URL 序列化实现，确认核心约束是“每次实体点击只留下一个规范实体，面板类型随实体同步，地图/时间轴/关系从该实体反向派生”；据此移除地点 → 人物、地点关系节点 → 人物时遗留的第二 `scope`，地点焦点归入 Places、人物归入 Figures、事件归入 Events、路线归入 Routes；关系卡点击人物会离开 Relations，不再出现 URL 指向人物而界面仍停在关系面板的混合状态；
+- 修复 route-state 的 parse / serialize round-trip：无显式 tab 的深链接按 `focus` 类型选择面板；当用户选择的面板不同于焦点推导面板时，即使是默认 Figures，也显式保留 `tab=figures`，避免序列化删参后被重新解析回 Places；新增 core 单元回归和地图地点 → 人物、关系 → 人物、龟兹 → 玄奘、那烂陀 → 义净、事件 → 地点/人物、路线节点等 Playwright 回归；
+- Full Alpha 内容扩展与空间对齐同步进入本批：人物 60、事件 65、地点 40、路线 4、关系 299、来源 70、音频 3；新增义净海上求法区域骨架，并补齐玄奘长安—敦煌—龟兹—那烂陀路线节点；真实地图为 35 个地点。`verify:alignment` 确认 source/read-model 实体 228/228、关系 299/299、database bundle 231 entities / 299 relations、warnings 0；
+- 本地门禁：`npm run check` 全量通过；core 11/11、compiler 5/5、web 9/9；完整 Playwright + axe 为 **61 passed / 1 skipped**（唯一 skipped 为 Public RC 专用用例）；diff-check、`git diff --check`、Full Alpha build、数据库 import plan、静态发布验证均通过；Vite >500 kB bundle 提示仍为非阻断既有提示；应用 release commit：`444d34b fix: align atlas navigation and research graph`（`444d34be9a3a4d1bd6adb6adf106688460552266`）；
+- Cloudflare production：默认地址 <https://dao-ru-fo-digital-museum.pages.dev>；本次 unique deployment <https://1c08d5bb.dao-ru-fo-digital-museum.pages.dev>；deployment ID `1c08d5bb-4f9e-4d2b-acf1-926d7e37b24c`；Environment `Production`；branch `main`；source marker `444d34b`；Wrangler `4.120.1`；manifest `2026.08.alpha.1 / alpha / preview`；上传使用 clean worktree 与 `--commit-dirty=false`；上一成功 production deployment `8d0b6109-401d-4edb-b9f4-fb33b11260dc` 保留为回滚定位；
+- post-deploy HTTP smoke：默认地址与 unique 地址均 **25/25**；首页 HTML/CSP/安全响应头、SPA deep links、manifest、英文 profile、地图 GeoJSON、时间轴 JSON 和 immutable hashed asset 均通过；线上浏览器确认 Qufu 初始为 Places，点击 Confucius 后 URL 为 `focus=figure:confucius`、Figures 激活且无 `scope`；全局 Relations 的 Dao'an → Huiyuan 卡点击后切为 `focus=figure:dao-an` 且清除 relation tab；unique 地址 Kucha → Xuanzang 同样进入单一人物焦点并无 scope 泄漏；
+- Full Alpha 的 `preview` visibility 与 684 个 public blockers 继续表示研究内容审核状态，不等于 Cloudflare Preview branch、Public RC 或正式学术发布；仓库当前没有配置 Git remote，因此 commit 已落在本地 iCloud 工作区但没有远端 push 目标；本 handoff 为 docs-only follow-up，不重新上传应用、不改变已部署 source marker。
 
 ## 2026-08-11｜地图→人物→关系语境对齐修复 production handoff（当前）
 
