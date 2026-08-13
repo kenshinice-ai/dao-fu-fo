@@ -35,17 +35,36 @@ function HomeAtlasPreview({ locale }: { locale: Locale }) {
 
 export function HomePage() {
   const { locale } = useMuseumContext();
-  const loader = useCallback((signal: AbortSignal) => staticData.overview(locale, signal), [locale]);
+  const loader = useCallback(async (signal: AbortSignal) => {
+    const [overview, search] = await Promise.all([
+      staticData.overview(locale, signal),
+      staticData.searchIndex(locale, signal),
+    ]);
+    return { overview, search };
+  }, [locale]);
   const { data, error } = useStaticData(loader);
 
   if (error) return <ErrorState locale={locale} error={error} />;
   if (!data) return <LoadingState locale={locale} />;
-  const totalFigureCount = data.traditions.reduce((total, tradition) => total + tradition.counts.figures, 0);
+  const { overview, search } = data;
+  const countsByTradition = new Map<string, { figures: number; texts: number; passages: number }>();
+  for (const item of search.items) {
+    if (!countsByTradition.has(item.tradition)) countsByTradition.set(item.tradition, { figures: 0, texts: 0, passages: 0 });
+    const counts = countsByTradition.get(item.tradition)!;
+    if (item.kind === "figure") counts.figures += 1;
+    if (item.kind === "text") counts.texts += 1;
+    if (item.kind === "passage") counts.passages += 1;
+  }
+  const traditions = overview.traditions.map((tradition) => ({
+    ...tradition,
+    counts: { ...tradition.counts, ...(countsByTradition.get(tradition.slug) ?? {}) },
+  }));
+  const totalFigureCount = search.items.filter((item) => item.kind === "figure").length;
 
   return (
     <>
       <section className="home-hero home-atlas-hero">
-        <h1 className="sr-only">{data.heroTitle}</h1>
+        <h1 className="sr-only">{overview.heroTitle}</h1>
         <HomeAtlasPreview locale={locale} />
       </section>
 
@@ -56,7 +75,7 @@ export function HomePage() {
           <p>{locale === "zh-CN" ? "每个入口保留自身历史，也显示与另外两者相遇的地方。" : "Each path keeps its own history while showing where it meets the others."}</p>
         </div>
         <div className="tradition-grid">
-          {data.traditions.map((tradition, index) => (
+          {traditions.map((tradition, index) => (
             <Link
               key={tradition.slug}
               className={`tradition-card tradition-card-${tradition.slug}`}
@@ -85,7 +104,7 @@ export function HomePage() {
           <p>{locale === "zh-CN" ? "从老子、孔子与释迦牟尼等源头人物，到历代思想家、译经家、制度人物与后世接受；每个人物都回到具体地点、事件、文本和后世影响。" : "From source figures such as Laozi, Confucius and Śākyamuni to thinkers, translators, institutional figures and later reception across the centuries, each person returns to a place, event, text and later influence."}</p>
         </div>
         <div className="figure-spotlight-grid">
-          {data.featuredFigures.map((figure, index) => (
+          {overview.featuredFigures.map((figure, index) => (
             <Link
               className={`figure-spotlight-card tradition-card-${figure.tradition}`}
               key={figure.slug}
@@ -121,25 +140,25 @@ export function HomePage() {
         <div className="exhibition-number" aria-hidden="true">01</div>
         <div className="featured-copy">
           <p className="eyebrow">{locale === "zh-CN" ? "首个数字展览" : "First digital exhibition"}</p>
-          <h2>{data.exhibition.title}</h2>
-          <p className="featured-subtitle">{data.exhibition.subtitle}</p>
-          <blockquote>{data.exhibition.question}</blockquote>
-          <Link className="text-link" to={withLang(`/museum/${data.exhibition.slug}`, locale)}>
-            {data.primaryAction} <Icon name="arrow" />
+          <h2>{overview.exhibition.title}</h2>
+          <p className="featured-subtitle">{overview.exhibition.subtitle}</p>
+          <blockquote>{overview.exhibition.question}</blockquote>
+          <Link className="text-link" to={withLang(`/museum/${overview.exhibition.slug}`, locale)}>
+            {overview.primaryAction} <Icon name="arrow" />
           </Link>
         </div>
         <div className="passage-preview">
-          <span>{data.todayLabel}</span>
-          <blockquote lang="zh-Hans">{data.todayPassage.quote}</blockquote>
-          <p>{data.todayPassage.interpretation}</p>
-          <Link to={entityPath("passage", data.todayPassage.slug, locale)}>{data.todayPassage.source}</Link>
+          <span>{overview.todayLabel}</span>
+          <blockquote lang="zh-Hans">{overview.todayPassage.quote}</blockquote>
+          <p>{overview.todayPassage.interpretation}</p>
+          <Link to={entityPath("passage", overview.todayPassage.slug, locale)}>{overview.todayPassage.source}</Link>
         </div>
       </section>
 
       <section className="methodology-teaser section-shell">
         <p className="eyebrow">Method / 方法</p>
-        <h2>{data.methodologyTitle}</h2>
-        <p>{data.methodologyText}</p>
+        <h2>{overview.methodologyTitle}</h2>
+        <p>{overview.methodologyText}</p>
         <Link className="button button-secondary" to={withLang("/methodology", locale)}>
           {locale === "zh-CN" ? "查看来源与方法" : "View sources and method"}
         </Link>

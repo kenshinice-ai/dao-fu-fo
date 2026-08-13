@@ -1,8 +1,18 @@
 # 道·儒·佛文明数字博物馆｜项目交接文档
 
 > 维护纪律：每个可独立说明的实现、修复、验证或发布阶段完成后立即更新。
-> 最后更新：2026-08-12
-> 当前阶段：Bible Atlas 式单实体状态链与扩展研究图谱已直发 Full Alpha production / production 作为唯一线上复盘基准 / Public RC 边界保持独立
+> 最后更新：2026-08-13
+> 当前阶段：首批 100 人物内容闭环已完成本地验证，等待用户复盘确认后再继续扩容；production 发布保持独立待明确授权
+
+## 2026-08-13｜首批 100 人物—地点—事件—关系内容闭环（当前）
+
+- 用户已明确授权从 60 位扩展到首批约 100 位人物；本轮新增 40 位人物、40 个事件、20 个地点，并将总量对齐为：人物 100、事件 105、地点 60、路线 4、关系 471、来源 81、音频 3；Full Alpha 仍为 `preview` visibility，不等同 Public RC 或正式学术发布；
+- 新增人物按儒家/先秦与经学 14、道教 10、佛教 16 分组；每位人物都有双语 identity/summary/research note、figure class、historicity、时间断言、来源和地点入口；魏伯阳、许逊使用 `traditional_sage` + `traditional_date` + `remembered_in`，没有被伪画成历史路线；
+- 每位新增人物均闭合 `figure → participated_in → event → occurred_at → place`，另有 `figure → active_in/remembered_in/born_in/travelled_through → place`；每位新增人物至少与一位已有数据库人物建立 `contemporary_with`、`received_by` 或 `influenced` 关系，避免新增人物成为孤立名单；孔子—班固、慧能—黄梅和全部新增人物交叉关系均已纳入统一 `relations.json`；
+- 关系、地图、时间轴和对象面板继续沿用 Bible Atlas / previous project 的单一 canonical focus：实体点击只改变共享焦点，所有面板从同一关系集合反向派生；传统记忆关系不进入现实到访投影，事件地点通过 `participated_in → occurred_at` 生成；本轮修复时间轴事件节点优先写入 `focus=event:*`，不再被地点 context 抢占；首页人物/传统统计改为从当前 search read model 动态派生，不再显示旧的 60 人基线；
+- 新增 `scripts/verify-first-100-batch.mjs` 与 `npm run verify:first-100`，作为批次级 Handoff 门禁，检查批次数量、总量、时间、来源、关系端点、地点引用和新增人物—既有人物连接；
+- 本地已通过：`npm run check` 全量门禁；`npm run build:content`（328 entities / 471 relations / 81 sources）、`npm run verify:content`、`npm run verify:alignment`（source/read-model entities 328/328，database 331（三传统字典实体为额外 3 项）；relations 471/471/471，warnings 0）、`npm run verify:domain-architecture`、`npm run verify:database-bundle`、`npm run verify:preview-context`、`npm run verify:first-100`；完整 Playwright + axe 为 **62 passed / 1 skipped**（唯一 skipped 为 Public RC 专用用例）；
+- 当前不继续增加人物或地点，先等待用户对首批人物选择、史实关系、坐标尺度和页面联动复盘确认；下一次扩容必须沿用同一闭环和门禁。尚未在本轮执行 Git push 或 Cloudflare 部署。
 
 ## 2026-08-12｜Bible Atlas 单实体状态链与扩展研究图谱 production handoff（当前）
 

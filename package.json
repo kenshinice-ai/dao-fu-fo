@@ -15,6 +15,7 @@
     "build:content": "npm run build:packages && node scripts/compile-content.mjs --database-bundle .artifacts/database/import-v1.json",
     "build:content:public": "npm run build:packages && node scripts/compile-content.mjs --public",
     "verify:content": "node scripts/verify-content.mjs",
+    "verify:first-100": "node scripts/verify-first-100-batch.mjs",
     "verify:alignment": "node scripts/verify-content-alignment.mjs",
     "verify:content:public": "node scripts/verify-public-content.mjs",
     "verify:matrix": "node scripts/verify-alpha-matrix.mjs",
@@ -40,7 +41,7 @@
     "test": "npm run build:packages && npm run test -w @drf-museum/core && npm run test -w @drf-museum/content-compiler && npm run test -w @drf-museum/web",
     "test:e2e": "npm run build:content && npm run test:e2e -w @drf-museum/web",
     "verify:static": "node scripts/verify-static.mjs",
-    "check": "npm run typecheck && npm run test && npm run verify:migrations && npm run db:migrate:plan && npm run build:content && npm run sync:preview-read-models && npm run verify:generated && npm run verify:architecture && npm run verify:preview-context && npm run verify:domain-architecture && npm run verify:public-rc && npm run verify:database-bundle && npm run db:import:plan && npm run verify:content && npm run verify:alignment && npm run verify:matrix && npm run verify:alpha-ready && npm run build:content:public && npm run verify:content:public && npm run build && npm run verify:static",
+    "check": "npm run typecheck && npm run test && npm run verify:migrations && npm run db:migrate:plan && npm run build:content && npm run sync:preview-read-models && npm run verify:generated && npm run verify:architecture && npm run verify:preview-context && npm run verify:domain-architecture && npm run verify:first-100 && npm run verify:public-rc && npm run verify:database-bundle && npm run db:import:plan && npm run verify:content && npm run verify:alignment && npm run verify:matrix && npm run verify:alpha-ready && npm run build:content:public && npm run verify:content:public && npm run build && npm run verify:static",
     "check:release": "npm run check && npm run test:e2e && npm run verify:database:integration"
   },
   "engines": {

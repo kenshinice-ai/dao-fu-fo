@@ -1,0 +1,442 @@
+[
+  {
+    "kind": "figure", "slug": "mozi", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_inferred", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "墨子", "subtitle": "兼爱、非攻与技术伦理的先秦思想家", "shortSummary": "墨子把工艺、战争伦理与社会秩序连接起来，是先秦诸子之间比较儒家礼学的重要入口。", "curatorialDescription": ["本条把墨家思想、弟子团体与后世文献编纂分开；临淄和鲁地只作为区域尺度锚点，不断言具体讲学地址。"], "researchNote": "墨子生平年代、活动范围和《墨子》篇章层次仍有争议，当前以先秦文献和后世汇编的交叉层标注。", "timeLabel": "约公元前 5 世纪—前 4 世纪", "keyFacts": [] },
+      "en": { "title": "Mozi", "subtitle": "A pre-Qin thinker of universal care, non-aggression and technical ethics", "shortSummary": "Mozi connects craft, the ethics of war and social order, offering an important comparative entry beside Confucian ritual learning.", "curatorialDescription": ["The record separates Mohist ideas, itinerant communities and later textual compilation; Linzi and the Lu region are regional anchors rather than precise teaching addresses."], "researchNote": "Mozi's dates, activity range and the compositional layers of the Mozi remain debated; this record keeps the pre-Qin and later compilation layers distinct.", "timeLabel": "c. fifth–fourth centuries BCE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "confucianism", "role": "comparative_only", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:pre-qin-classics-ctext" }],
+    "temporalAssertions": [{ "predicate": "life", "timeType": "circa", "startYear": -468, "endYear": -376, "displayDate": { "zh-CN": "约公元前 468—376 年；年代有争议", "en": "c. 468–376 BCE; dates contested" }, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:pre-qin-classics-ctext" }],
+    "sourceIds": ["source:pre-qin-classics-ctext", "source:historical-geography-expanded", "source:editorial-method"], "related": [{ "kind": "place", "slug": "linzi", "title": { "zh-CN": "临淄", "en": "Linzi" }, "relation": { "zh-CN": "先秦诸子交流的区域锚点", "en": "Regional anchor for pre-Qin exchange" } }],
+    "profile": { "historicity": "contested", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "墨子", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "han-feizi", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "韩非", "subtitle": "法、术、势与战国政治论述的集成者", "shortSummary": "韩非把战国制度竞争、君主治理与法家论述集中到一套影响深远的文本传统中。", "curatorialDescription": ["新郑作为韩国政治语境的城市锚点；《韩非子》的篇章归属与后世编纂不等同于韩非亲笔完成全书。"], "researchNote": "韩非生平与文本形成可由《史记》及篇章研究互证，当前不把法家思想直接归并为儒家传统。", "timeLabel": "约公元前 280—233 年", "keyFacts": [] },
+      "en": { "title": "Han Feizi", "subtitle": "A synthesiser of law, technique, power and Warring States political argument", "shortSummary": "Han Feizi brings institutional competition, rulership and Legalist argument into a textual tradition with long afterlives.", "curatorialDescription": ["Xinzheng is a city-scale anchor for the Han-state political context; the chapter layers of the Han Feizi are not treated as a book wholly authored by Han Fei."], "researchNote": "Han Fei's biography and textual formation can be checked against the Shiji and chapter studies; Legalist thought is kept distinct from the Confucian tradition.", "timeLabel": "c. 280–233 BCE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "confucianism", "role": "comparative_only", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:han-histories-records" }],
+    "temporalAssertions": [{ "predicate": "life", "timeType": "circa", "startYear": -280, "endYear": -233, "displayDate": { "zh-CN": "约公元前 280—233 年", "en": "c. 280–233 BCE" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:han-histories-records" }],
+    "sourceIds": ["source:han-histories-records", "source:pre-qin-classics-ctext", "source:historical-geography-expanded"], "related": [{ "kind": "place", "slug": "xinzheng", "title": { "zh-CN": "新郑", "en": "Xinzheng" }, "relation": { "zh-CN": "韩国政治语境", "en": "Han-state political context" } }],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "韓非", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "jia-yi", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "贾谊", "subtitle": "汉初政论、礼制与长沙地方经验的文士", "shortSummary": "贾谊把汉初帝国治理、礼制论述与长沙的地方政治经验连接起来。", "curatorialDescription": ["长沙关系表达贬谪与任职的地方尺度，不把文学化的贾谊祠祀记忆当作生平事实。"], "researchNote": "贾谊生平和政论主要依《史记》《汉书》校读；后世长沙纪念空间另以记忆关系处理。", "timeLabel": "前 200—168 年", "keyFacts": [] },
+      "en": { "title": "Jia Yi", "subtitle": "A Han writer of statecraft, ritual and the local experience of Changsha", "shortSummary": "Jia Yi connects early Han imperial governance and ritual argument with the local political experience of Changsha.", "curatorialDescription": ["Changsha expresses the scale of exile and office; later shrine memory is kept separate from the biographical record."], "researchNote": "Jia Yi's biography and memorials are read through the Shiji and Hanshu; later Changsha commemoration is modelled as memory rather than life evidence.", "timeLabel": "200–168 BCE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "confucianism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:han-histories-records" }],
+    "temporalAssertions": [{ "predicate": "life", "timeType": "exact", "startYear": -200, "endYear": -168, "displayDate": { "zh-CN": "前 200—168 年", "en": "200–168 BCE" }, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:han-histories-records" }],
+    "sourceIds": ["source:han-histories-records", "source:historical-geography-expanded", "source:editorial-method"], "related": [{ "kind": "place", "slug": "changsha", "title": { "zh-CN": "长沙", "en": "Changsha" }, "relation": { "zh-CN": "任职与贬谪的地方语境", "en": "Local context of office and exile" } }],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "賈誼", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "wang-bi", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "王弼", "subtitle": "玄学、老庄注释与魏晋经典解释的关键人物", "shortSummary": "王弼以魏晋玄学方式重释《老子》《周易》，成为道家文本进入经学解释史的重要节点。", "curatorialDescription": ["王弼的注释是后世解释传统，不等同于老子时代的原始语境；洛阳作为魏晋学术与政治城市锚点。"], "researchNote": "王弼注本、玄学概念和政治身份需结合版本与魏晋思想史继续分层核实。", "timeLabel": "226—249 年", "keyFacts": [] },
+      "en": { "title": "Wang Bi", "subtitle": "A key interpreter of Lao–Zhuang texts and Wei–Jin classical learning", "shortSummary": "Wang Bi reread the Daodejing and Zhouyi through Wei–Jin xuanxue, making him a major node in the reception history of Daoist classics.", "curatorialDescription": ["Wang Bi's commentary is a later interpretive layer, not the original setting of Laozi; Luoyang is a city-scale anchor for Wei–Jin learning and politics."], "researchNote": "The commentary witnesses, xuanxue concepts and Wang Bi's office require continued checking across editions and Wei–Jin intellectual history.", "timeLabel": "226–249 CE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "later_associated", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:wei-jin-commentary-records" }],
+    "temporalAssertions": [{ "predicate": "life", "timeType": "exact", "startYear": 226, "endYear": 249, "displayDate": { "zh-CN": "226—249 年", "en": "226–249 CE" }, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:wei-jin-commentary-records" }],
+    "sourceIds": ["source:wei-jin-commentary-records", "source:daodejing-edition", "source:historical-geography-expanded"], "related": [{ "kind": "place", "slug": "luoyang", "title": { "zh-CN": "洛阳", "en": "Luoyang" }, "relation": { "zh-CN": "魏晋注释与政治城市语境", "en": "Wei–Jin commentary and political setting" } }],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "王弼", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "liu-xie", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_inferred", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "刘勰", "subtitle": "《文心雕龙》与六朝文论的系统编纂者", "shortSummary": "刘勰把文学批评、经典秩序和佛教文化环境连接成六朝文论的系统框架。", "curatorialDescription": ["建康作为刘勰所处的六朝文化城市锚点；《文心雕龙》的思想来源以接受关系呈现，不回写为孔子直接教诲。"], "researchNote": "刘勰生平材料稀少，文本年代与任职经历应继续通过传记和六朝文献核对。", "timeLabel": "约 465—522 年", "keyFacts": [] },
+      "en": { "title": "Liu Xie", "subtitle": "The systematiser of Wenxin Diaolong and Six Dynasties literary theory", "shortSummary": "Liu Xie connects literary criticism, classical order and the Buddhist cultural environment into a systematic Six Dynasties poetics.", "curatorialDescription": ["Jiankang is a city-scale anchor for the Six Dynasties cultural setting; the work's classical sources are modelled as reception rather than direct instruction from Confucius."], "researchNote": "Liu Xie's biography is sparse; his textual date and offices require further checking across biographies and Six Dynasties sources.", "timeLabel": "c. 465–522 CE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "confucianism", "role": "comparative_only", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:wei-jin-commentary-records" }],
+    "temporalAssertions": [{ "predicate": "life", "timeType": "circa", "startYear": 465, "endYear": 522, "displayDate": { "zh-CN": "约 465—522 年", "en": "c. 465–522 CE" }, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:wei-jin-commentary-records" }],
+    "sourceIds": ["source:wei-jin-commentary-records", "source:chinese-literati-records", "source:historical-geography-expanded"], "related": [{ "kind": "place", "slug": "jiankang", "title": { "zh-CN": "建康", "en": "Jiankang" }, "relation": { "zh-CN": "六朝文论城市语境", "en": "Six Dynasties literary setting" } }],
+    "profile": { "historicity": "inferred", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "劉勰", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "liu-zongyuan", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "柳宗元", "subtitle": "永州山水、政治贬谪与古文传统的作家", "shortSummary": "柳宗元把永州地方经验、政治贬谪和古文写作连接起来，展示文人如何在边缘空间重建知识网络。", "curatorialDescription": ["永州是贬谪、写作与地方观察的活动锚点；山水记忆和后世文学旅游不替代唐代活动证据。"], "researchNote": "柳宗元与韩愈的交往、永州文献和具体行迹可继续按文集、墓志与正史细化。", "timeLabel": "773—819 年", "keyFacts": [] },
+      "en": { "title": "Liu Zongyuan", "subtitle": "A writer of Yongzhou landscapes, political exile and guwen", "shortSummary": "Liu Zongyuan connects local experience in Yongzhou, political exile and classical prose, showing how a writer rebuilt knowledge networks in a peripheral setting.", "curatorialDescription": ["Yongzhou is an activity anchor for exile, writing and local observation; later literary tourism does not replace Tang-period evidence."], "researchNote": "Liu Zongyuan's exchange with Han Yu, Yongzhou sources and exact movements can be refined through collected works, epitaphs and histories.", "timeLabel": "773–819 CE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "confucianism", "role": "comparative_only", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:chinese-literati-records" }],
+    "temporalAssertions": [{ "predicate": "life", "timeType": "exact", "startYear": 773, "endYear": 819, "displayDate": { "zh-CN": "773—819 年", "en": "773–819 CE" }, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:chinese-literati-records" }],
+    "sourceIds": ["source:chinese-literati-records", "source:historical-geography-expanded", "source:editorial-method"], "related": [{ "kind": "place", "slug": "yongzhou", "title": { "zh-CN": "永州", "en": "Yongzhou" }, "relation": { "zh-CN": "贬谪与写作活动空间", "en": "Exile and writing setting" } }],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "柳宗元", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "zhang-zai", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "张载", "subtitle": "关学、气论与北宋儒学的关中节点", "shortSummary": "张载以关中讲学和气论重建宋代儒学的宇宙论与伦理秩序。", "curatorialDescription": ["凤翔作为关中活动与讲学区域的城市锚点；‘横渠四句’的后世传播不等同于单一历史场景。"], "researchNote": "张载的讲学地点、文集版本和与二程的思想关系应继续按宋代文献核实。", "timeLabel": "1020—1077 年", "keyFacts": [] },
+      "en": { "title": "Zhang Zai", "subtitle": "The Guanzhong node of qi theory and Northern Song Confucian learning", "shortSummary": "Zhang Zai's Guanzhong teaching and qi theory rebuilt a cosmology and ethical order for Song Confucian learning.", "curatorialDescription": ["Fengxiang is a city-scale anchor for his Guanzhong activity and teaching; the later circulation of the ‘Four Sentences’ is not reduced to one historical scene."], "researchNote": "Zhang Zai's teaching sites, textual witnesses and intellectual relation to the Cheng brothers require further Song-period checking.", "timeLabel": "1020–1077 CE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "confucianism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:song-confucian-literati-records" }],
+    "temporalAssertions": [{ "predicate": "life", "timeType": "exact", "startYear": 1020, "endYear": 1077, "displayDate": { "zh-CN": "1020—1077 年", "en": "1020–1077 CE" }, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:song-confucian-literati-records" }],
+    "sourceIds": ["source:song-confucian-literati-records", "source:historical-geography-expanded", "source:editorial-method"], "related": [{ "kind": "place", "slug": "fengxiang", "title": { "zh-CN": "凤翔", "en": "Fengxiang" }, "relation": { "zh-CN": "关中讲学与活动区域", "en": "Guanzhong teaching and activity region" } }],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "張載", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "lu-jiuyuan", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "陆九渊", "subtitle": "心学、象山讲学与南宋儒学的地方网络", "shortSummary": "陆九渊以心学和象山讲学拓展南宋儒学的地方传播网络，并与朱熹形成重要思想对话。", "curatorialDescription": ["金溪表达象山及其地方讲学传统的区域锚点；陆九渊与朱熹的关系以思想争论呈现，不简化为私人冲突。"], "researchNote": "陆九渊文集、讲学活动与朱陆异同需继续结合宋代文献和后世学案核对。", "timeLabel": "1139—1193 年", "keyFacts": [] },
+      "en": { "title": "Lu Jiuyuan", "subtitle": "Mind learning, Xiangshan teaching and Southern Song local networks", "shortSummary": "Lu Jiuyuan expanded Southern Song Confucian transmission through mind learning and Xiangshan teaching while engaging in a major debate with Zhu Xi.", "curatorialDescription": ["Jinxi is a regional anchor for Xiangshan teaching and local transmission; the Lu–Zhu relation is presented as an intellectual debate rather than a personal quarrel."], "researchNote": "Lu Jiuyuan's writings, teaching activity and the Lu–Zhu contrast require continued checking through Song sources and later learning-case histories.", "timeLabel": "1139–1193 CE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "confucianism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:song-confucian-literati-records" }],
+    "temporalAssertions": [{ "predicate": "life", "timeType": "exact", "startYear": 1139, "endYear": 1193, "displayDate": { "zh-CN": "1139—1193 年", "en": "1139–1193 CE" }, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:song-confucian-literati-records" }],
+    "sourceIds": ["source:song-confucian-literati-records", "source:historical-geography-expanded", "source:editorial-method"], "related": [{ "kind": "place", "slug": "jinxi", "title": { "zh-CN": "金溪", "en": "Jinxi" }, "relation": { "zh-CN": "象山讲学与地方网络", "en": "Xiangshan teaching and local network" } }],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "陸九淵", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "huang-zongxi", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "黄宗羲", "subtitle": "明清之际经世、学术史与制度批评的学者", "shortSummary": "黄宗羲把明清易代经验、学术谱系与制度批评连接起来，是理解儒学现代转化前史的关键人物。", "curatorialDescription": ["余姚作为浙东学术与黄宗羲活动的地方入口；《明儒学案》是学术史编纂事件，不等同于完整中立的现代人物数据库。"], "researchNote": "黄宗羲著述、政治经历和浙东师友网络需继续按版本与清初文献细化。", "timeLabel": "1610—1695 年", "keyFacts": [] },
+      "en": { "title": "Huang Zongxi", "subtitle": "A scholar of statecraft, intellectual history and institutional critique across the Ming–Qing transition", "shortSummary": "Huang Zongxi connects dynastic transition, intellectual genealogy and institutional criticism, offering a key prehistory of Confucian modern transformation.", "curatorialDescription": ["Yuyao is a local entry into the Eastern Zhejiang learning network; the Mingru xue'an is an intellectual-history compilation event, not a neutral modern database."], "researchNote": "Huang Zongxi's writings, political experience and Eastern Zhejiang network require further checking across editions and early Qing sources.", "timeLabel": "1610–1695 CE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "confucianism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:ming-qing-confucian-records" }],
+    "temporalAssertions": [{ "predicate": "life", "timeType": "exact", "startYear": 1610, "endYear": 1695, "displayDate": { "zh-CN": "1610—1695 年", "en": "1610–1695 CE" }, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:ming-qing-confucian-records" }],
+    "sourceIds": ["source:ming-qing-confucian-records", "source:historical-geography-expanded", "source:editorial-method"], "related": [{ "kind": "place", "slug": "yuyao", "title": { "zh-CN": "余姚", "en": "Yuyao" }, "relation": { "zh-CN": "浙东学术与地方活动入口", "en": "Eastern Zhejiang learning and local activity" } }],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "黃宗羲", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "gu-yanwu", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "顾炎武", "subtitle": "经世致用、考据学与明清迁徙网络的学者", "shortSummary": "顾炎武以地方考察、经世论和金石文献研究重建明清之际的知识网络。", "curatorialDescription": ["昆山是顾炎武早年与地方士人网络的活动入口；后世‘天下兴亡’名句的归属需与具体文献分层。"], "researchNote": "顾炎武行旅路线、著述版本和清初学术网络可继续按日记、文集及地方志核实。", "timeLabel": "1613—1682 年", "keyFacts": [] },
+      "en": { "title": "Gu Yanwu", "subtitle": "A scholar of statecraft, evidential learning and Ming–Qing mobility", "shortSummary": "Gu Yanwu rebuilt a knowledge network through local investigation, statecraft writing and the study of inscriptions and texts.", "curatorialDescription": ["Kunshan is an entry into his early local and literati network; later attribution of the ‘rise and fall of the realm’ phrase is kept separate from specific textual evidence."], "researchNote": "Gu Yanwu's travel routes, textual witnesses and early Qing network can be refined through diaries, collected works and local gazetteers.", "timeLabel": "1613–1682 CE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "confucianism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:ming-qing-confucian-records" }],
+    "temporalAssertions": [{ "predicate": "life", "timeType": "exact", "startYear": 1613, "endYear": 1682, "displayDate": { "zh-CN": "1613—1682 年", "en": "1613–1682 CE" }, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:ming-qing-confucian-records" }],
+    "sourceIds": ["source:ming-qing-confucian-records", "source:historical-geography-expanded", "source:editorial-method"], "related": [{ "kind": "place", "slug": "kunshan", "title": { "zh-CN": "昆山", "en": "Kunshan" }, "relation": { "zh-CN": "早年地方网络与学术入口", "en": "Early local network and learning entry" } }],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "顧炎武", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "dai-zhen", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "戴震", "subtitle": "音韵、训诂与清代考据学的徽州学者", "shortSummary": "戴震以音韵训诂、经学考证和理学批评推进清代知识方法的转型。", "curatorialDescription": ["休宁作为徽州学术与戴震出生地的区域入口；清代考据学的现代分类不替代当时经学、史学和语言学的交织。"], "researchNote": "戴震生平、著述版本和与乾嘉学者的往来需继续由清代文集及学术史核对。", "timeLabel": "1724—1777 年", "keyFacts": [] },
+      "en": { "title": "Dai Zhen", "subtitle": "A Huizhou scholar of phonology, exegesis and Qing evidential learning", "shortSummary": "Dai Zhen advanced Qing intellectual methods through phonology, classical exegesis and criticism of inherited moral metaphysics.", "curatorialDescription": ["Xiuning is a regional entry into Huizhou learning and Dai Zhen's birthplace; modern categories of evidential scholarship do not replace the period's intertwined philology, history and language studies."], "researchNote": "Dai Zhen's biography, textual witnesses and exchanges with Qianlong-era scholars require further checking through Qing collections and intellectual histories.", "timeLabel": "1724–1777 CE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "confucianism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:ming-qing-confucian-records" }],
+    "temporalAssertions": [{ "predicate": "life", "timeType": "exact", "startYear": 1724, "endYear": 1777, "displayDate": { "zh-CN": "1724—1777 年", "en": "1724–1777 CE" }, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:ming-qing-confucian-records" }],
+    "sourceIds": ["source:ming-qing-confucian-records", "source:historical-geography-expanded", "source:editorial-method"], "related": [{ "kind": "place", "slug": "xiuning", "title": { "zh-CN": "休宁", "en": "Xiuning" }, "relation": { "zh-CN": "徽州学术与出生地入口", "en": "Huizhou learning and birthplace entry" } }],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "戴震", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "cai-yuanpei", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "蔡元培", "subtitle": "近代教育、大学制度与儒学现代转译的教育家", "shortSummary": "蔡元培把传统学术、现代大学制度与多元教育理念连接起来，是儒学现代公共表达的重要转译者。", "curatorialDescription": ["绍兴作为其出生地和早期文化背景的地方锚点；北京作为现代教育制度活动空间，关系由事件和地点共同表达。"], "researchNote": "蔡元培与北京大学、教育改革及传统文化论述的关系需继续按档案和教育史分层核实。", "timeLabel": "1868—1940 年", "keyFacts": [] },
+      "en": { "title": "Cai Yuanpei", "subtitle": "An educator of modern universities and the modern translation of classical learning", "shortSummary": "Cai Yuanpei connected classical scholarship, the modern university and plural education, becoming a major translator of Confucian learning into public modernity.", "curatorialDescription": ["Shaoxing is a local anchor for birthplace and early cultural context; Beijing is the institutional setting of modern education, expressed through linked events and places."], "researchNote": "Cai Yuanpei's relation to Peking University, education reform and classical culture requires further archival and educational-history review.", "timeLabel": "1868–1940 CE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "confucianism", "role": "comparative_only", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:modern-confucian-education-records" }],
+    "temporalAssertions": [{ "predicate": "life", "timeType": "exact", "startYear": 1868, "endYear": 1940, "displayDate": { "zh-CN": "1868—1940 年", "en": "1868–1940 CE" }, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:modern-confucian-education-records" }],
+    "sourceIds": ["source:modern-confucian-education-records", "source:historical-geography-expanded", "source:editorial-method"], "related": [{ "kind": "place", "slug": "shaoxing", "title": { "zh-CN": "绍兴", "en": "Shaoxing" }, "relation": { "zh-CN": "出生地与早期文化背景", "en": "Birthplace and early cultural setting" } }, { "kind": "place", "slug": "beijing", "title": { "zh-CN": "北京", "en": "Beijing" }, "relation": { "zh-CN": "现代教育制度活动空间", "en": "Modern educational institution setting" } }],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "蔡元培", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "sima-qian", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 5, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "司马迁", "subtitle": "《史记》编纂与古代历史记忆的奠基者", "shortSummary": "司马迁以《史记》把王朝、人物、地方与传说编入一套可持续重读的历史叙事。", "curatorialDescription": ["长安表达太史令与编纂制度空间；韩城表达家族与出生地传统，二者不合并成单一点位。"], "researchNote": "司马迁生年、受刑年份和《史记》成书阶段仍需按史料层次区分，当前采用约值。", "timeLabel": "约前 145—86 年", "keyFacts": [] },
+      "en": { "title": "Sima Qian", "subtitle": "Compiler of the Shiji and a founder of durable historical memory", "shortSummary": "Sima Qian brought dynasties, people, places and legend into a historical narrative that remains open to rereading.", "curatorialDescription": ["Chang'an expresses the Grand Historian's institutional and compilation setting; Hancheng records the family and birthplace tradition rather than collapsing both into one point."], "researchNote": "Sima Qian's birth date, punishment and stages of Shiji compilation require layered dating; this release uses approximate ranges.", "timeLabel": "c. 145–86 BCE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "confucianism", "role": "comparative_only", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:han-histories-records" }],
+    "temporalAssertions": [{ "predicate": "life", "timeType": "circa", "startYear": -145, "endYear": -86, "displayDate": { "zh-CN": "约前 145—86 年", "en": "c. 145–86 BCE" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:han-histories-records" }],
+    "sourceIds": ["source:han-histories-records", "source:historical-geography-expanded", "source:editorial-method"], "related": [{ "kind": "place", "slug": "changan", "title": { "zh-CN": "长安", "en": "Chang'an" }, "relation": { "zh-CN": "太史令与编纂制度空间", "en": "Grand Historian and compilation setting" } }, { "kind": "place", "slug": "hancheng", "title": { "zh-CN": "韩城", "en": "Hancheng" }, "relation": { "zh-CN": "家族与出生地传统", "en": "Family and birthplace tradition" } }],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "司馬遷", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "ban-gu", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "班固", "subtitle": "《汉书》编纂与东汉历史书写的史家", "shortSummary": "班固承接纪传史传统，编纂《汉书》，把东汉对前代制度与人物的整理固定下来。", "curatorialDescription": ["长安是班氏家族、史馆与汉代历史书写的制度锚点；与司马迁的关系以史学承继呈现。"], "researchNote": "《汉书》的编纂分工、班固与班昭关系和文本完成阶段需继续按传记与版本核对。", "timeLabel": "32—92 年", "keyFacts": [] },
+      "en": { "title": "Ban Gu", "subtitle": "Compiler of the Hanshu and historian of Eastern Han historical writing", "shortSummary": "Ban Gu extended the annalistic-biographical tradition through the Hanshu, fixing Eastern Han's organisation of earlier institutions and figures.", "curatorialDescription": ["Chang'an is an institutional anchor for the Ban family, historiographical work and Han historical writing; the relation to Sima Qian is shown as historiographical succession."], "researchNote": "The Hanshu division of labour, Ban Gu's relation to Ban Zhao and stages of completion require further checking across biographies and editions.", "timeLabel": "32–92 CE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "confucianism", "role": "comparative_only", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:han-histories-records" }],
+    "temporalAssertions": [{ "predicate": "life", "timeType": "exact", "startYear": 32, "endYear": 92, "displayDate": { "zh-CN": "32—92 年", "en": "32–92 CE" }, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:han-histories-records" }],
+    "sourceIds": ["source:han-histories-records", "source:historical-geography-expanded", "source:editorial-method"], "related": [{ "kind": "place", "slug": "changan", "title": { "zh-CN": "长安", "en": "Chang'an" }, "relation": { "zh-CN": "史学编纂与汉代制度空间", "en": "Historiographical and Han institutional setting" } }],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "班固", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "wei-boyang", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "traditional_account", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "魏伯阳", "subtitle": "《参同契》传统与早期内丹思想的象征性入口", "shortSummary": "魏伯阳与《周易参同契》传统相连，展示炼丹、易学与后世内丹如何在文本中叠层。", "curatorialDescription": ["上虞是传统记忆中的区域入口；本条不把魏伯阳传说日期或具体炼丹地点当作已证实生平。"], "researchNote": "魏伯阳身份、年代与《参同契》成书层次存在长期争议，当前以传统人物和记忆地点处理。", "timeLabel": "传统人物；年代无单一共识", "keyFacts": [] },
+      "en": { "title": "Wei Boyang", "subtitle": "A symbolic entry into the Cantongqi tradition and early inner alchemy", "shortSummary": "Wei Boyang is linked with the Cantongqi tradition, where alchemy, Zhouyi learning and later inner alchemy accumulate in textual layers.", "curatorialDescription": ["Shangyu is a regional memory entry; legendary dates and precise alchemical sites are not treated as verified biography."], "researchNote": "Wei Boyang's identity, date and the compositional layers of the Cantongqi remain disputed; this record is kept as a traditional figure with a memory site.", "timeLabel": "Traditional figure; no single agreed date", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "low", "evidenceLayer": "traditional_account", "sourceId": "source:daoist-alchemical-records" }],
+    "temporalAssertions": [{ "predicate": "traditional_occurrence", "timeType": "traditional_date", "displayDate": { "zh-CN": "《参同契》传统；年代与归属有争议", "en": "Cantongqi tradition; date and attribution contested" }, "confidence": "low", "evidenceLayer": "traditional_account", "sourceId": "source:daoist-alchemical-records" }],
+    "sourceIds": ["source:daoist-alchemical-records", "source:historical-geography-expanded", "source:editorial-method"], "related": [{ "kind": "place", "slug": "shangyu", "title": { "zh-CN": "上虞", "en": "Shangyu" }, "relation": { "zh-CN": "传统记忆区域入口", "en": "Regional memory entry" } }],
+    "profile": { "historicity": "traditional", "figureClass": "traditional_sage", "gender": "male", "canonicalNameOriginal": "魏伯陽", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "xu-xun", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "traditional_account", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "许逊", "subtitle": "净明传统、地方水利记忆与道教神仙化人物", "shortSummary": "许逊连接净明道传统、地方治水叙事与后世神仙化记忆，是观察人物—地点—传说层叠的入口。", "curatorialDescription": ["南昌是净明传统的记忆与制度空间；地图不把斩蛟、治水等传说情节当作可验证的历史路线。"], "researchNote": "许逊年代、生平和净明传统形成具有明显的后世层累，当前以传统人物、记忆地点和低置信度时间处理。", "timeLabel": "传统人物；净明传统后世形成", "keyFacts": [] },
+      "en": { "title": "Xu Xun", "subtitle": "Jingming tradition, local water-control memory and Daoist immortalisation", "shortSummary": "Xu Xun connects the Jingming tradition, local water-control narratives and later immortal memory, offering an entry into layered figure–place–legend relations.", "curatorialDescription": ["Nanchang is a memory and institutional setting for the Jingming tradition; legendary flood and dragon episodes are not mapped as verified historical routes."], "researchNote": "Xu Xun's date, biography and the formation of Jingming tradition are heavily layered by later accounts; this record uses traditional historicity and low-confidence time.", "timeLabel": "Traditional figure; later Jingming formation", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "low", "evidenceLayer": "traditional_account", "sourceId": "source:daoist-biographical-records" }],
+    "temporalAssertions": [{ "predicate": "traditional_occurrence", "timeType": "traditional_date", "displayDate": { "zh-CN": "净明传统与地方记忆；无单一历史年代", "en": "Jingming tradition and local memory; no single historical date" }, "confidence": "low", "evidenceLayer": "traditional_account", "sourceId": "source:daoist-biographical-records" }],
+    "sourceIds": ["source:daoist-biographical-records", "source:historical-geography-expanded", "source:editorial-method"], "related": [{ "kind": "place", "slug": "nanchang", "title": { "zh-CN": "南昌", "en": "Nanchang" }, "relation": { "zh-CN": "净明传统记忆与制度空间", "en": "Jingming memory and institutional setting" } }],
+    "profile": { "historicity": "traditional", "figureClass": "traditional_sage", "gender": "male", "canonicalNameOriginal": "許遜", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "zhang-bo-duan", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_inferred", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "张伯端", "subtitle": "南宗内丹与《悟真篇》传统的宋代作者", "shortSummary": "张伯端以《悟真篇》把道教内丹、易学象数和宋代修炼论述连接起来。", "curatorialDescription": ["天台作为活动与后世道教记忆的山地锚点；《悟真篇》的内丹术语需要与后世宗派归类区分。"], "researchNote": "张伯端生平、活动地点及《悟真篇》版本关系仍需继续考证，当前采用中等置信度的历史推断。", "timeLabel": "约 984—1082 年", "keyFacts": [] },
+      "en": { "title": "Zhang Boduan", "subtitle": "A Song figure in Southern Lineage inner alchemy and the Cantongqi tradition", "shortSummary": "Zhang Boduan connected inner alchemy, Yijing imagery and Song-period cultivation discourse through the Wuzhen pian tradition.", "curatorialDescription": ["Tiantai is a mountain anchor for activity and later Daoist memory; inner-alchemical terminology is kept distinct from later sectarian classification."], "researchNote": "Zhang Boduan's biography, activity sites and Wuzhen pian witnesses require further checking; this release uses a medium-confidence historical inference.", "timeLabel": "c. 984–1082 CE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_inferred", "sourceId": "source:daoist-alchemical-records" }],
+    "temporalAssertions": [{ "predicate": "life", "timeType": "circa", "startYear": 984, "endYear": 1082, "displayDate": { "zh-CN": "约 984—1082 年", "en": "c. 984–1082 CE" }, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:daoist-alchemical-records" }],
+    "sourceIds": ["source:daoist-alchemical-records", "source:historical-geography-expanded", "source:editorial-method"], "related": [{ "kind": "place", "slug": "mount-tiantai", "title": { "zh-CN": "天台山", "en": "Mount Tiantai" }, "relation": { "zh-CN": "内丹活动与山地记忆锚点", "en": "Inner-alchemy activity and mountain-memory anchor" } }],
+    "profile": { "historicity": "inferred", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "張伯端", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "qiu-chuji", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "丘处机", "subtitle": "全真龙门传统与跨区域宗教网络的道士", "shortSummary": "丘处机把全真教的修行网络、燕京城市空间与跨区域政治交往连接起来。", "curatorialDescription": ["北京是燕京时期与全真龙门后世网络的城市锚点；与成吉思汗的会见属于特定事件，不泛化为所有宗教政治关系。"], "researchNote": "丘处机西行路线、传记叙事与全真龙门谱系需继续按《长春真人西游记》等材料拆分。", "timeLabel": "1148—1227 年", "keyFacts": [] },
+      "en": { "title": "Qiu Chuji", "subtitle": "A Daoist of the Quanzhen Longmen tradition and transregional religious networks", "shortSummary": "Qiu Chuji connects Quanzhen practice, the urban setting of Yanjing and transregional political exchange.", "curatorialDescription": ["Beijing is a city anchor for his Yanjing period and later Longmen networks; the meeting with Chinggis Khan is kept as a specific event rather than a general religious-political claim."], "researchNote": "Qiu Chuji's westward route, biographical narrative and Longmen genealogy require separation across the Changchun zhenren xiyou ji and related sources.", "timeLabel": "1148–1227 CE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:quanzhen-biographies" }],
+    "temporalAssertions": [{ "predicate": "life", "timeType": "exact", "startYear": 1148, "endYear": 1227, "displayDate": { "zh-CN": "1148—1227 年", "en": "1148–1227 CE" }, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:quanzhen-biographies" }],
+    "sourceIds": ["source:quanzhen-biographies", "source:historical-geography-expanded", "source:editorial-method"], "related": [{ "kind": "place", "slug": "beijing", "title": { "zh-CN": "北京", "en": "Beijing" }, "relation": { "zh-CN": "燕京活动与全真城市网络", "en": "Yanjing activity and Quanzhen urban network" } }],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "丘處機", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "liu-chuxuan", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 3, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "刘处玄", "subtitle": "全真早期教团与宁海地方网络的道士", "shortSummary": "刘处玄把全真早期教团、宁海地方社会与北方道教传播网络连接起来。", "curatorialDescription": ["宁海是全真早期活动与地方网络的区域锚点；人物之间以同时代网络表达，不假定所有同门都有直接会面。"], "researchNote": "刘处玄的传记、全真教团分支和宁海活动范围需要继续对读全真碑传资料。", "timeLabel": "1147—1203 年", "keyFacts": [] },
+      "en": { "title": "Liu Chuxuan", "subtitle": "A Quanzhen figure in early communities and the Ninghai local network", "shortSummary": "Liu Chuxuan connects early Quanzhen communities, Ninghai society and the northern Daoist transmission network.", "curatorialDescription": ["Ninghai is a regional anchor for early Quanzhen activity; figure relations express a contemporary network without assuming direct meetings among every colleague."], "researchNote": "Liu Chuxuan's biography, Quanzhen branches and Ninghai activity require further comparison across Quanzhen inscriptions and biographies.", "timeLabel": "1147–1203 CE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:quanzhen-biographies" }],
+    "temporalAssertions": [{ "predicate": "life", "timeType": "exact", "startYear": 1147, "endYear": 1203, "displayDate": { "zh-CN": "1147—1203 年", "en": "1147–1203 CE" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:quanzhen-biographies" }],
+    "sourceIds": ["source:quanzhen-biographies", "source:historical-geography-expanded", "source:editorial-method"], "related": [{ "kind": "place", "slug": "ninghai", "title": { "zh-CN": "宁海", "en": "Ninghai" }, "relation": { "zh-CN": "全真早期地方网络", "en": "Early Quanzhen local network" } }],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "劉處玄", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "ma-danyang", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "马丹阳", "subtitle": "全真早期传承、修行实践与山东网络的道士", "shortSummary": "马丹阳是全真早期传承的重要人物，连接宁海地方活动、修行实践和王重阳的教团网络。", "curatorialDescription": ["宁海作为活动与教团网络锚点；‘七真’谱系属于后世组织化叙事，关系中保留师承和历史层次。"], "researchNote": "马丹阳的活动地点、传记细节和全真七子谱系需继续按碑传和教内文献校核。", "timeLabel": "1123—1183 年", "keyFacts": [] },
+      "en": { "title": "Ma Danyang", "subtitle": "A Quanzhen figure of early transmission, practice and the Shandong network", "shortSummary": "Ma Danyang was an important early Quanzhen figure connecting Ninghai activity, cultivation practice and Wang Chongyang's community.", "curatorialDescription": ["Ninghai is an anchor for activity and community networks; the later institutionalised ‘Seven Perfected’ genealogy is kept distinct from individual evidence."], "researchNote": "Ma Danyang's activity sites, biography and the Seven Perfected genealogy require continued checking across inscriptions and internal writings.", "timeLabel": "1123–1183 CE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:quanzhen-biographies" }],
+    "temporalAssertions": [{ "predicate": "life", "timeType": "exact", "startYear": 1123, "endYear": 1183, "displayDate": { "zh-CN": "1123—1183 年", "en": "1123–1183 CE" }, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:quanzhen-biographies" }],
+    "sourceIds": ["source:quanzhen-biographies", "source:historical-geography-expanded", "source:editorial-method"], "related": [{ "kind": "place", "slug": "ninghai", "title": { "zh-CN": "宁海", "en": "Ninghai" }, "relation": { "zh-CN": "全真早期活动与教团网络", "en": "Early Quanzhen activity and community network" } }],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "馬丹陽", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "sun-buer", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "孙不二", "subtitle": "全真女性修行、宁海教团与后世七真记忆", "shortSummary": "孙不二使全真早期女性修行与教团网络可见，并连接宁海地方空间和后世女性道教记忆。", "curatorialDescription": ["宁海是活动与记忆空间；后世‘清净散人’等称谓属于接受史，不替代具体生平证据。"], "researchNote": "孙不二生平、修行地点和女性全真传承需要继续核对碑传、教内文献与后世传记。", "timeLabel": "1119—1182 年", "keyFacts": [] },
+      "en": { "title": "Sun Bu'er", "subtitle": "Female Quanzhen practice, Ninghai communities and later Seven Perfected memory", "shortSummary": "Sun Bu'er makes early Quanzhen women's practice and community networks visible, connecting Ninghai with later memory of Daoist women.", "curatorialDescription": ["Ninghai is an activity and memory setting; later titles such as ‘Pure and Tranquil Immortal’ are reception history, not substitutes for biography."], "researchNote": "Sun Bu'er's life, practice sites and female Quanzhen transmission require further checking across inscriptions, internal writings and later biographies.", "timeLabel": "1119–1182 CE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:quanzhen-biographies" }],
+    "temporalAssertions": [{ "predicate": "life", "timeType": "exact", "startYear": 1119, "endYear": 1182, "displayDate": { "zh-CN": "1119—1182 年", "en": "1119–1182 CE" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:quanzhen-biographies" }],
+    "sourceIds": ["source:quanzhen-biographies", "source:historical-geography-expanded", "source:editorial-method"], "related": [{ "kind": "place", "slug": "ninghai", "title": { "zh-CN": "宁海", "en": "Ninghai" }, "relation": { "zh-CN": "女性全真活动与记忆空间", "en": "Female Quanzhen activity and memory setting" } }],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "female", "canonicalNameOriginal": "孫不二", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "du-guangting", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "杜光庭", "subtitle": "晚唐五代道教仪式、斋醮与经典编纂者", "shortSummary": "杜光庭把成都宫观、道教仪式和晚唐五代经典编纂连接起来。", "curatorialDescription": ["成都表达晚唐五代道教制度与编纂活动；后世神仙传记和法术谱系不直接等同于杜光庭个人实践。"], "researchNote": "杜光庭著述真伪、宫观活动和五代政治关系需继续按道藏目录与地方材料分层。", "timeLabel": "850—933 年", "keyFacts": [] },
+      "en": { "title": "Du Guangting", "subtitle": "A compiler of late Tang–Five Dynasties Daoist ritual and scriptures", "shortSummary": "Du Guangting connects Chengdu institutions, Daoist ritual and textual compilation across the late Tang and Five Dynasties.", "curatorialDescription": ["Chengdu expresses the institutional and editorial setting; later immortal biographies and ritual genealogies are not treated as direct evidence of Du Guangting's personal practice."], "researchNote": "Attribution of Du Guangting's works, institutional activity and Five Dynasties political relations require further separation through Daoist catalogues and local sources.", "timeLabel": "850–933 CE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:daoist-biographical-records" }],
+    "temporalAssertions": [{ "predicate": "life", "timeType": "exact", "startYear": 850, "endYear": 933, "displayDate": { "zh-CN": "850—933 年", "en": "850–933 CE" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:daoist-biographical-records" }],
+    "sourceIds": ["source:daoist-biographical-records", "source:historical-geography-expanded", "source:editorial-method"], "related": [{ "kind": "place", "slug": "chengdu", "title": { "zh-CN": "成都", "en": "Chengdu" }, "relation": { "zh-CN": "道教制度与经典编纂空间", "en": "Daoist institutional and editorial setting" } }],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "杜光庭", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "wang-changyue", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_inferred", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "王常月", "subtitle": "清初全真龙门戒律与北京宫观网络的道士", "shortSummary": "王常月把清初全真龙门戒律、北京宫观制度和道教教团复兴连接起来。", "curatorialDescription": ["北京作为清初宫观与授戒网络的制度锚点；龙门谱系为后世教团组织化结果，关系中标注接受层。"], "researchNote": "王常月的生卒年、授戒活动和龙门传播范围仍需继续核对清代碑传与道藏材料。", "timeLabel": "约 17 世纪；年代待进一步核实", "keyFacts": [] },
+      "en": { "title": "Wang Changyue", "subtitle": "A Qing Longmen figure of ordination and Beijing temple networks", "shortSummary": "Wang Changyue connects early Qing Longmen discipline, Beijing temple institutions and Daoist community revival.", "curatorialDescription": ["Beijing is an institutional anchor for Qing temples and ordination networks; Longmen genealogy is marked as a later organised lineage."], "researchNote": "Wang Changyue's dates, ordination activity and Longmen reach require further checking through Qing inscriptions and Daoist sources.", "timeLabel": "c. seventeenth century; dates require further review", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:quanzhen-biographies" }],
+    "temporalAssertions": [{ "predicate": "activity", "timeType": "century", "startYear": 1600, "endYear": 1699, "displayDate": { "zh-CN": "约 17 世纪；生卒与授戒年代待核", "en": "c. seventeenth century; life and ordination dates under review" }, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:quanzhen-biographies" }],
+    "sourceIds": ["source:quanzhen-biographies", "source:historical-geography-expanded", "source:editorial-method"], "related": [{ "kind": "place", "slug": "beijing", "title": { "zh-CN": "北京", "en": "Beijing" }, "relation": { "zh-CN": "清初授戒与宫观网络", "en": "Early Qing ordination and temple network" } }],
+    "profile": { "historicity": "inferred", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "王常月", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "liu-yiming", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "刘一明", "subtitle": "清代内丹、易学与西北道教写作的作者", "shortSummary": "刘一明以丹道著述和易学解释连接清代内丹实践、文本传播与西北地方空间。", "curatorialDescription": ["成都在本批中作为其著述与道教知识网络的区域入口；丹道术语以思想与文本关系呈现，不作医学或生理事实断言。"], "researchNote": "刘一明的活动地点、著作版本和龙门关联需要继续按清代道教文献与地方志核实。", "timeLabel": "1734—1821 年", "keyFacts": [] },
+      "en": { "title": "Liu Yiming", "subtitle": "A Qing author of inner alchemy, Yijing interpretation and northwestern Daoist writing", "shortSummary": "Liu Yiming connected Qing inner-alchemical practice, Yijing interpretation and textual circulation in a northwestern setting.", "curatorialDescription": ["Chengdu is used here as a regional entry into his writing and Daoist knowledge network; alchemical language is presented as textual and intellectual history, not medical or physiological fact."], "researchNote": "Liu Yiming's activity sites, textual witnesses and Longmen associations require further checking through Qing Daoist sources and local gazetteers.", "timeLabel": "1734–1821 CE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "daoism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:daoist-alchemical-records" }],
+    "temporalAssertions": [{ "predicate": "life", "timeType": "exact", "startYear": 1734, "endYear": 1821, "displayDate": { "zh-CN": "1734—1821 年", "en": "1734–1821 CE" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:daoist-alchemical-records" }],
+    "sourceIds": ["source:daoist-alchemical-records", "source:historical-geography-expanded", "source:editorial-method"], "related": [{ "kind": "place", "slug": "chengdu", "title": { "zh-CN": "成都", "en": "Chengdu" }, "relation": { "zh-CN": "道教著述与知识网络入口", "en": "Daoist writing and knowledge-network entry" } }],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "劉一明", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "an-shigao", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "安世高", "subtitle": "东汉早期佛经翻译与洛阳传播网络的译师", "shortSummary": "安世高把早期佛教禅修与说一切有部相关文本带入洛阳译经语境，是汉译佛典史的重要起点。", "curatorialDescription": ["洛阳是译经与传播制度的城市锚点；早期译名、传记与译场地点仍以文献层次分开。"], "researchNote": "安世高来华年代、译籍归属和传记中的行迹需要继续对读早期目录、传记与译本研究。", "timeLabel": "约 2 世纪中叶活动", "keyFacts": [] },
+      "en": { "title": "An Shigao", "subtitle": "An early translator in the Eastern Han and the Luoyang transmission network", "shortSummary": "An Shigao brought early Buddhist meditation and Sarvastivada-related texts into the Luoyang translation setting, marking an important point in the history of Chinese Buddhist translation.", "curatorialDescription": ["Luoyang is a city-scale anchor for translation and circulation; early attributions, biographies and workshop locations remain separated by evidence layer."], "researchNote": "An Shigao's arrival, attribution of translations and biographical movements require further comparison across catalogues, biographies and text studies.", "timeLabel": "active around the mid-second century CE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:early-buddhist-translation-records" }],
+    "temporalAssertions": [{ "predicate": "activity", "timeType": "century", "startYear": 100, "endYear": 199, "displayDate": { "zh-CN": "约东汉中期；译经活动年代有争议", "en": "around the middle Eastern Han; translation dates contested" }, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:early-buddhist-translation-records" }],
+    "sourceIds": ["source:early-buddhist-translation-records", "source:historical-geography-expanded", "source:editorial-method"], "related": [{ "kind": "place", "slug": "luoyang", "title": { "zh-CN": "洛阳", "en": "Luoyang" }, "relation": { "zh-CN": "早期译经与传播城市", "en": "Early translation and circulation city" } }],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "安世高", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "zhi-qian", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "支谦", "subtitle": "三国时期佛经翻译、吴地僧团与汉译语言的译师", "shortSummary": "支谦把早期汉译佛典的语言转化、吴地城市网络与译师流动连接起来。", "curatorialDescription": ["建康作为三国吴至六朝译经与僧团网络的城市尺度入口；‘支谦译’的目录归属需保留版本层次。"], "researchNote": "支谦的族属、译籍数量和活动地点可继续按出三藏记集、历代三宝纪和版本研究核对。", "timeLabel": "约 3 世纪前中期活动", "keyFacts": [] },
+      "en": { "title": "Zhi Qian", "subtitle": "A translator of the Three Kingdoms, Wu communities and early Chinese Buddhist language", "shortSummary": "Zhi Qian connects linguistic transformation in early Chinese Buddhist translations with Wu-region urban networks and translator mobility.", "curatorialDescription": ["Jiankang is a city-scale entry into Wu and Six Dynasties translation and monastic networks; catalogue attributions retain their textual layers."], "researchNote": "Zhi Qian's background, translation corpus and activity sites can be refined through early catalogues, biographies and edition studies.", "timeLabel": "active around the early–middle third century CE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:early-buddhist-translation-records" }],
+    "temporalAssertions": [{ "predicate": "translation", "timeType": "century", "startYear": 200, "endYear": 299, "displayDate": { "zh-CN": "约 3 世纪；译经活动年代待分层", "en": "c. third century CE; translation activity requires layered dating" }, "confidence": "low", "evidenceLayer": "historical_inferred", "sourceId": "source:early-buddhist-translation-records" }],
+    "sourceIds": ["source:early-buddhist-translation-records", "source:historical-geography-expanded", "source:editorial-method"], "related": [{ "kind": "place", "slug": "jiankang", "title": { "zh-CN": "建康", "en": "Jiankang" }, "relation": { "zh-CN": "吴地译经与僧团网络", "en": "Wu translation and monastic network" } }],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "支謙", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "dharmaksema", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "昙无谶", "subtitle": "北凉译经与河西佛教文本传播的译师", "shortSummary": "昙无谶把河西走廊、北凉政权与大乘经典汉译连接起来，是北方译经网络的重要节点。", "curatorialDescription": ["姑臧作为北凉译场与河西区域网络的城市锚点；译经工程与后世教义影响分开建模。"], "researchNote": "昙无谶的译籍归属、北凉译场与遇害叙事需继续按高僧传、目录和河西史料核实。", "timeLabel": "385—433 年", "keyFacts": [] },
+      "en": { "title": "Dharmaksema", "subtitle": "A translator of Northern Liang and the Hexi Buddhist textual network", "shortSummary": "Dharmaksema connects the Hexi Corridor, Northern Liang institutions and Chinese translations of Mahayana scriptures.", "curatorialDescription": ["Guzang is a city-scale anchor for the Northern Liang translation setting and Hexi network; translation projects and later doctrinal influence are modelled separately."], "researchNote": "Dharmaksema's corpus, the Northern Liang workshop and his death narrative require continued checking across biographies, catalogues and Hexi sources.", "timeLabel": "385–433 CE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:buddhist-translation-records" }],
+    "temporalAssertions": [{ "predicate": "life", "timeType": "exact", "startYear": 385, "endYear": 433, "displayDate": { "zh-CN": "385—433 年", "en": "385–433 CE" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:buddhist-translation-records" }],
+    "sourceIds": ["source:buddhist-translation-records", "source:historical-geography-expanded", "source:editorial-method"], "related": [{ "kind": "place", "slug": "guzang", "title": { "zh-CN": "姑臧", "en": "Guzang" }, "relation": { "zh-CN": "北凉译经与河西网络", "en": "Northern Liang translation and Hexi network" } }],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "曇無讖", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "buddhabhadra", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "佛陀跋陀罗", "subtitle": "东晋译经、庐山—建康网络与禅修文本的译师", "shortSummary": "佛陀跋陀罗把东晋建康译场、禅修经典与北印度佛教传承连接起来。", "curatorialDescription": ["建康表达译经制度与城市网络；法显等人的交往以传记与译场关系分层，不直接推断所有行迹。"], "researchNote": "佛陀跋陀罗译籍、活动地点和与慧远、法显的关系需继续按目录和高僧传核实。", "timeLabel": "359—429 年", "keyFacts": [] },
+      "en": { "title": "Buddhabhadra", "subtitle": "A translator of the Eastern Jin, Jiankang network and meditation texts", "shortSummary": "Buddhabhadra connects the Eastern Jin translation setting in Jiankang, meditation scriptures and North Indian Buddhist transmission.", "curatorialDescription": ["Jiankang expresses translation institutions and urban networks; relations with Faxian and Huiyuan remain layered through biographies and translation settings rather than inferred itineraries."], "researchNote": "Buddhabhadra's corpus, activity sites and relations with Huiyuan and Faxian require further checking through catalogues and Buddhist biographies.", "timeLabel": "359–429 CE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:buddhist-translation-records" }],
+    "temporalAssertions": [{ "predicate": "life", "timeType": "exact", "startYear": 359, "endYear": 429, "displayDate": { "zh-CN": "359—429 年", "en": "359–429 CE" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:buddhist-translation-records" }],
+    "sourceIds": ["source:buddhist-translation-records", "source:historical-geography-expanded", "source:editorial-method"], "related": [{ "kind": "place", "slug": "jiankang", "title": { "zh-CN": "建康", "en": "Jiankang" }, "relation": { "zh-CN": "东晋译经与城市网络", "en": "Eastern Jin translation and urban network" } }],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "佛陀跋陀羅", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "gunavarman", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "求那跋摩", "subtitle": "刘宋译经、戒律传播与建康佛教网络的译师", "shortSummary": "求那跋摩把海上与南亚佛教流动、刘宋宫廷和戒律传译连接起来。", "curatorialDescription": ["建康是刘宋译经与戒律传播的制度锚点；跨海来华路线保留为区域网络，不虚构逐段航迹。"], "researchNote": "求那跋摩来华路线、译籍和宫廷关系需继续按高僧传、目录与南朝史料核对。", "timeLabel": "367—431 年", "keyFacts": [] },
+      "en": { "title": "Gunavarman", "subtitle": "A Liu Song translator of vinaya, maritime mobility and the Jiankang Buddhist network", "shortSummary": "Gunavarman connects Buddhist mobility across South and Southeast Asia, the Liu Song court and the translation of monastic discipline.", "curatorialDescription": ["Jiankang is an institutional anchor for Liu Song translation and vinaya transmission; maritime movement remains a regional network rather than an invented itinerary."], "researchNote": "Gunavarman's route, translation corpus and court relations require further checking across biographies, catalogues and Southern Dynasties sources.", "timeLabel": "367–431 CE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:buddhist-translation-records" }],
+    "temporalAssertions": [{ "predicate": "life", "timeType": "exact", "startYear": 367, "endYear": 431, "displayDate": { "zh-CN": "367—431 年", "en": "367–431 CE" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:buddhist-translation-records" }],
+    "sourceIds": ["source:buddhist-translation-records", "source:historical-geography-expanded", "source:editorial-method"], "related": [{ "kind": "place", "slug": "jiankang", "title": { "zh-CN": "建康", "en": "Jiankang" }, "relation": { "zh-CN": "刘宋译经与戒律制度空间", "en": "Liu Song translation and vinaya setting" } }],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "求那跋摩", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "paramartha", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "真谛", "subtitle": "梁陈之际唯识译传与建康—广州网络的译师", "shortSummary": "真谛把南朝宫廷、广州与建康的译经网络以及摄论学传统连接起来。", "curatorialDescription": ["建康作为译经制度入口，广州作为南方交通和抵达节点；晚年迁徙不压缩为单一路线。"], "researchNote": "真谛译籍、译场迁移和摄论宗接受史需继续按传记、目录与版本研究分层。", "timeLabel": "499—569 年", "keyFacts": [] },
+      "en": { "title": "Paramartha", "subtitle": "A translator of Yogacara traditions across the Liang–Chen and Jiankang–Guangzhou networks", "shortSummary": "Paramartha connects Southern Dynasties courts, the Jiankang–Guangzhou translation network and the later Shelun tradition.", "curatorialDescription": ["Jiankang is a translation-institution entry and Guangzhou a southern travel and arrival node; late movements are not collapsed into one route."], "researchNote": "Paramartha's corpus, workshop movements and Shelun reception require further separation through biographies, catalogues and edition studies.", "timeLabel": "499–569 CE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:buddhist-translation-records" }],
+    "temporalAssertions": [{ "predicate": "life", "timeType": "exact", "startYear": 499, "endYear": 569, "displayDate": { "zh-CN": "499—569 年", "en": "499–569 CE" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:buddhist-translation-records" }],
+    "sourceIds": ["source:buddhist-translation-records", "source:historical-geography-expanded", "source:editorial-method"], "related": [{ "kind": "place", "slug": "jiankang", "title": { "zh-CN": "建康", "en": "Jiankang" }, "relation": { "zh-CN": "南朝译经制度空间", "en": "Southern Dynasties translation setting" } }, { "kind": "place", "slug": "guangzhou", "title": { "zh-CN": "广州", "en": "Guangzhou" }, "relation": { "zh-CN": "南方交通与译师抵达节点", "en": "Southern travel and arrival node" } }],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "真諦", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "bodhiruci", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "菩提流支", "subtitle": "北魏洛阳译经与大乘论书传播的译师", "shortSummary": "菩提流支把北魏洛阳、菩萨地论书和北方大乘译经网络连接起来。", "curatorialDescription": ["洛阳是北魏译场与寺院制度的城市锚点；译师之间的竞争与合作需要按译场、文本和传记分别处理。"], "researchNote": "菩提流支译籍、译场关系及与勒那摩提的争议叙事需继续按目录和高僧传核实。", "timeLabel": "约 508—527 年活动", "keyFacts": [] },
+      "en": { "title": "Bodhiruci", "subtitle": "A Northern Wei translator of Mahayana treatises in Luoyang", "shortSummary": "Bodhiruci connects Northern Wei Luoyang, Yogacara-related treatises and the northern Mahayana translation network.", "curatorialDescription": ["Luoyang is a city-scale anchor for the Northern Wei translation and monastery system; competition and collaboration among translators remain separated by workshop, text and biography."], "researchNote": "Bodhiruci's corpus, workshop relations and the narrative of debate with Ratnamati require further checking across catalogues and biographies.", "timeLabel": "active around 508–527 CE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:buddhist-translation-records" }],
+    "temporalAssertions": [{ "predicate": "translation", "timeType": "circa", "startYear": 508, "endYear": 527, "displayDate": { "zh-CN": "约 508—527 年；洛阳译经活动", "en": "c. 508–527 CE; Luoyang translation activity" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:buddhist-translation-records" }],
+    "sourceIds": ["source:buddhist-translation-records", "source:historical-geography-expanded", "source:editorial-method"], "related": [{ "kind": "place", "slug": "luoyang", "title": { "zh-CN": "洛阳", "en": "Luoyang" }, "relation": { "zh-CN": "北魏译场与寺院制度", "en": "Northern Wei translation and monastery system" } }],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "菩提流支", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "shubhakarasimha", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "善无畏", "subtitle": "唐代密教译经与长安仪式网络的译师", "shortSummary": "善无畏把中印度密教传承、长安译经机构和《大日经》汉译连接起来。", "curatorialDescription": ["长安作为译经制度与密教仪式空间；密教谱系关系以译传和文本证据表达，不将后世法脉直接回写。"], "researchNote": "善无畏入唐时间、译经合作和仪式活动需继续对读传记、译经目录与唐代制度史。", "timeLabel": "637—735 年", "keyFacts": [] },
+      "en": { "title": "Shubhakarasimha", "subtitle": "A Tang translator of Esoteric Buddhism and Chang'an ritual networks", "shortSummary": "Shubhakarasimha connected Indian Esoteric Buddhist transmission, Chang'an translation institutions and the Chinese Mahavairocana tradition.", "curatorialDescription": ["Chang'an is an institutional and ritual anchor; esoteric lineages are expressed through translation and textual evidence rather than projected backward from later schools."], "researchNote": "Shubhakarasimha's arrival, collaboration and ritual activity require further checking across biographies, catalogues and Tang institutional history.", "timeLabel": "637–735 CE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:tang-esoteric-buddhist-records" }],
+    "temporalAssertions": [{ "predicate": "life", "timeType": "exact", "startYear": 637, "endYear": 735, "displayDate": { "zh-CN": "637—735 年", "en": "637–735 CE" }, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:tang-esoteric-buddhist-records" }],
+    "sourceIds": ["source:tang-esoteric-buddhist-records", "source:historical-geography-expanded", "source:editorial-method"], "related": [{ "kind": "place", "slug": "changan", "title": { "zh-CN": "长安", "en": "Chang'an" }, "relation": { "zh-CN": "密教译经与仪式制度空间", "en": "Esoteric translation and ritual institution" } }],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "善無畏", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "vajrabodhi", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "金刚智", "subtitle": "唐代密教传入与长安—海上交通网络的译师", "shortSummary": "金刚智把南亚密教传承、海上交通、长安译经与金刚界仪轨传统连接起来。", "curatorialDescription": ["长安为译经与宫廷制度锚点；南方港口和海路在本阶段先保留为区域网络，不虚构精确航迹。"], "researchNote": "金刚智行程、译籍合作和与不空的师承叙事需继续按传记、目录与海上交通史料核实。", "timeLabel": "669—741 年", "keyFacts": [] },
+      "en": { "title": "Vajrabodhi", "subtitle": "A Tang transmitter of Esoteric Buddhism across maritime and Chang'an networks", "shortSummary": "Vajrabodhi connects South Asian Esoteric Buddhism, maritime mobility, Chang'an translation and Vajradhatu ritual traditions.", "curatorialDescription": ["Chang'an is the translation and court anchor; southern ports and sea routes remain a regional network here rather than an invented precise itinerary."], "researchNote": "Vajrabodhi's movements, translation collaborations and lineage narrative with Amoghavajra require further checking across biographies, catalogues and maritime sources.", "timeLabel": "669–741 CE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:tang-esoteric-buddhist-records" }],
+    "temporalAssertions": [{ "predicate": "life", "timeType": "exact", "startYear": 669, "endYear": 741, "displayDate": { "zh-CN": "669—741 年", "en": "669–741 CE" }, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:tang-esoteric-buddhist-records" }],
+    "sourceIds": ["source:tang-esoteric-buddhist-records", "source:historical-geography-expanded", "source:editorial-method"], "related": [{ "kind": "place", "slug": "changan", "title": { "zh-CN": "长安", "en": "Chang'an" }, "relation": { "zh-CN": "密教译经与宫廷制度空间", "en": "Esoteric translation and court setting" } }],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "金剛智", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "amoghavajra", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 5, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "不空", "subtitle": "唐代密教译经、国家仪式与长安宗教网络的高僧", "shortSummary": "不空把密教译经、长安国家仪式与跨区域僧侣网络连接起来，是唐代佛教制度化的重要人物。", "curatorialDescription": ["长安作为译经机构、宫廷仪式和制度化网络的核心锚点；后世密教法脉与唐代史实保持分层。"], "researchNote": "不空译籍、宫廷活动和师承网络需继续按目录、碑传和唐代政治史核实。", "timeLabel": "705—774 年", "keyFacts": [] },
+      "en": { "title": "Amoghavajra", "subtitle": "A Tang master of Esoteric translation, state ritual and Chang'an networks", "shortSummary": "Amoghavajra connects Esoteric translation, state ritual in Chang'an and transregional monastic networks, making him central to Tang institutional Buddhism.", "curatorialDescription": ["Chang'an is the core anchor for translation institutions, court ritual and organised networks; later Esoteric lineages remain distinct from Tang evidence."], "researchNote": "Amoghavajra's corpus, court activity and lineage network require continued checking through catalogues, inscriptions and Tang political history.", "timeLabel": "705–774 CE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:tang-esoteric-buddhist-records" }],
+    "temporalAssertions": [{ "predicate": "life", "timeType": "exact", "startYear": 705, "endYear": 774, "displayDate": { "zh-CN": "705—774 年", "en": "705–774 CE" }, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:tang-esoteric-buddhist-records" }],
+    "sourceIds": ["source:tang-esoteric-buddhist-records", "source:historical-geography-expanded", "source:editorial-method"], "related": [{ "kind": "place", "slug": "changan", "title": { "zh-CN": "长安", "en": "Chang'an" }, "relation": { "zh-CN": "密教译经与国家仪式空间", "en": "Esoteric translation and state ritual setting" } }],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "不空", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "hui-si", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "慧思", "subtitle": "南岳止观、天台宗先驱与南北佛教网络的僧人", "shortSummary": "慧思把南岳山地修行、止观思想和天台传统的早期形成连接起来。", "curatorialDescription": ["南岳作为活动与后世宗派记忆的山地锚点；与智顗的师承关系以传记和思想继承表达。"], "researchNote": "慧思的南岳活动、著述归属和天台早期谱系需继续按高僧传、碑铭与天台文献核实。", "timeLabel": "515—577 年", "keyFacts": [] },
+      "en": { "title": "Hui-si", "subtitle": "A Nanyue practitioner, Tiantai precursor and Buddhist network figure", "shortSummary": "Hui-si connects mountain practice at Nanyue, meditation theory and the early formation of the Tiantai tradition.", "curatorialDescription": ["Nanyue is a mountain anchor for activity and later sectarian memory; the relation to Zhiyi is expressed through biography and intellectual succession."], "researchNote": "Hui-si's Nanyue activity, textual attribution and early Tiantai genealogy require further checking across biographies, inscriptions and Tiantai sources.", "timeLabel": "515–577 CE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:tiantai-chan-records" }],
+    "temporalAssertions": [{ "predicate": "life", "timeType": "exact", "startYear": 515, "endYear": 577, "displayDate": { "zh-CN": "515—577 年", "en": "515–577 CE" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:tiantai-chan-records" }],
+    "sourceIds": ["source:tiantai-chan-records", "source:historical-geography-expanded", "source:editorial-method"], "related": [{ "kind": "place", "slug": "nanyue", "title": { "zh-CN": "南岳", "en": "Nanyue" }, "relation": { "zh-CN": "止观修行与天台早期记忆", "en": "Meditation practice and early Tiantai memory" } }],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "慧思", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "zhanran", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "湛然", "subtitle": "中唐天台复兴、止观解释与天台山僧团的祖师", "shortSummary": "湛然在中唐重新阐释天台教观，把天台山地、僧团制度与宗派复兴连接起来。", "curatorialDescription": ["天台山作为活动、讲学与宗派记忆空间；‘复兴’是历史解释，不等同于单一事件日期。"], "researchNote": "湛然著述、天台宗谱系与中唐制度环境需继续对读天台文献、碑铭和佛教史研究。", "timeLabel": "711—782 年", "keyFacts": [] },
+      "en": { "title": "Zhanran", "subtitle": "A Middle Tang restorer of Tiantai interpretation and Mount Tiantai communities", "shortSummary": "Zhanran reinterpreted Tiantai doctrine and practice in the Middle Tang, connecting the mountain, monastic institutions and sectarian revival.", "curatorialDescription": ["Mount Tiantai is an activity, teaching and sectarian-memory setting; ‘revival’ is an historical interpretation, not a single dated event."], "researchNote": "Zhanran's works, Tiantai genealogy and Middle Tang institutional context require continued comparison across Tiantai texts, inscriptions and Buddhist history.", "timeLabel": "711–782 CE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:tiantai-chan-records" }],
+    "temporalAssertions": [{ "predicate": "life", "timeType": "exact", "startYear": 711, "endYear": 782, "displayDate": { "zh-CN": "711—782 年", "en": "711–782 CE" }, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:tiantai-chan-records" }],
+    "sourceIds": ["source:tiantai-chan-records", "source:historical-geography-expanded", "source:editorial-method"], "related": [{ "kind": "place", "slug": "mount-tiantai", "title": { "zh-CN": "天台山", "en": "Mount Tiantai" }, "relation": { "zh-CN": "天台讲学与宗派复兴空间", "en": "Tiantai teaching and sectarian revival setting" } }],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "湛然", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "shenhui", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "神会", "subtitle": "南宗禅、洛阳论争与慧能记忆的塑形者", "shortSummary": "神会把洛阳的禅宗论争、南宗谱系与慧能的后世地位连接起来。", "curatorialDescription": ["洛阳作为论争与制度传播空间；‘南宗’地位包含神会及后世谱系塑形，不能直接等同于慧能时代的完整组织。"], "researchNote": "神会语录、坛经关系和滑台论争的年代与文本层次需要继续按敦煌文献和传记核实。", "timeLabel": "684—758 年", "keyFacts": [] },
+      "en": { "title": "Shenhui", "subtitle": "A shaper of Southern Chan, Luoyang debates and the memory of Huineng", "shortSummary": "Shenhui connects Chan debate in Luoyang, the Southern School genealogy and Huineng's later standing.", "curatorialDescription": ["Luoyang is a setting for debate and institutional circulation; the Southern School's status includes Shenhui's and later genealogical shaping, not a complete organisation projected back to Huineng's lifetime."], "researchNote": "Shenhui's sayings, relation to the Platform Sutra and the dates and layers of the Huatai debate require further checking through Dunhuang materials and biographies.", "timeLabel": "684–758 CE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:tiantai-chan-records" }],
+    "temporalAssertions": [{ "predicate": "life", "timeType": "exact", "startYear": 684, "endYear": 758, "displayDate": { "zh-CN": "684—758 年", "en": "684–758 CE" }, "confidence": "medium", "evidenceLayer": "historical_documented", "sourceId": "source:tiantai-chan-records" }],
+    "sourceIds": ["source:tiantai-chan-records", "source:historical-geography-expanded", "source:editorial-method"], "related": [{ "kind": "place", "slug": "luoyang", "title": { "zh-CN": "洛阳", "en": "Luoyang" }, "relation": { "zh-CN": "禅宗论争与制度传播空间", "en": "Chan debate and institutional circulation" } }],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "神會", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "mazu-daoyi", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 5, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "马祖道一", "subtitle": "洪州禅、丛林网络与唐代禅宗地方化的禅师", "shortSummary": "马祖道一把洪州地区的禅修网络、丛林组织与唐代禅宗地方化连接起来。", "curatorialDescription": ["南昌作为洪州区域尺度入口；‘平常心是道’等语句的归属需与语录编纂层分开。"], "researchNote": "马祖行迹、语录形成和门下网络需继续按灯录、碑传与地方史料细化。", "timeLabel": "709—788 年", "keyFacts": [] },
+      "en": { "title": "Mazu Daoyi", "subtitle": "A master of Hongzhou Chan, monastic networks and regionalisation in the Tang", "shortSummary": "Mazu Daoyi connects the Hongzhou meditation network, monastic organisation and the regionalisation of Tang Chan.", "curatorialDescription": ["Nanchang is a regional entry into Hongzhou; sayings such as ‘ordinary mind is the Way’ remain distinct from the layers of record compilation."], "researchNote": "Mazu's movements, saying collections and disciple network require further refinement through lamp records, inscriptions and local sources.", "timeLabel": "709–788 CE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:tiantai-chan-records" }],
+    "temporalAssertions": [{ "predicate": "life", "timeType": "exact", "startYear": 709, "endYear": 788, "displayDate": { "zh-CN": "709—788 年", "en": "709–788 CE" }, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:tiantai-chan-records" }],
+    "sourceIds": ["source:tiantai-chan-records", "source:historical-geography-expanded", "source:editorial-method"], "related": [{ "kind": "place", "slug": "nanchang", "title": { "zh-CN": "南昌", "en": "Nanchang" }, "relation": { "zh-CN": "洪州禅区域与丛林网络", "en": "Hongzhou Chan region and monastic network" } }],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "馬祖道一", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "zongmi", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 5, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "宗密", "subtitle": "华严、禅与教判综合的唐代僧人", "shortSummary": "宗密把华严教理、禅宗实践与唐代教判写作综合起来，是观察佛教内部互释的重要节点。", "curatorialDescription": ["长安作为学术、译经和制度网络的城市锚点；宗密的综合性不等同于消除禅与教的历史差异。"], "researchNote": "宗密与荷泽宗、华严宗的关系和著述层次需继续按传记、文集及敦煌资料核对。", "timeLabel": "780—841 年", "keyFacts": [] },
+      "en": { "title": "Zongmi", "subtitle": "A Tang monk who synthesised Huayan, Chan and classificatory writing", "shortSummary": "Zongmi brought Huayan doctrine, Chan practice and Tang classificatory writing into a sustained internal Buddhist dialogue.", "curatorialDescription": ["Chang'an is a city-scale anchor for learning, translation and institutions; Zongmi's synthesis does not erase historical differences between Chan and doctrinal traditions."], "researchNote": "Zongmi's relations with Heze Chan, Huayan and his textual layers require further checking across biographies, collections and Dunhuang materials.", "timeLabel": "780–841 CE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:tiantai-chan-records" }],
+    "temporalAssertions": [{ "predicate": "life", "timeType": "exact", "startYear": 780, "endYear": 841, "displayDate": { "zh-CN": "780—841 年", "en": "780–841 CE" }, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:tiantai-chan-records" }],
+    "sourceIds": ["source:tiantai-chan-records", "source:historical-geography-expanded", "source:editorial-method"], "related": [{ "kind": "place", "slug": "changan", "title": { "zh-CN": "长安", "en": "Chang'an" }, "relation": { "zh-CN": "华严、禅与教判知识网络", "en": "Huayan, Chan and classificatory learning network" } }],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "宗密", "nameLanguageCode": "lzh" }
+  },
+  {
+    "kind": "figure", "slug": "yongming-yanshou", "publicationState": "preview", "reviewStatus": "bilingual_reviewed", "primaryEvidenceLayer": "historical_documented", "importance": 4, "isFeatured": false,
+    "translations": {
+      "zh-CN": { "title": "永明延寿", "subtitle": "吴越佛教、禅净融合与杭州寺院网络的僧人", "shortSummary": "永明延寿把吴越地域、禅净会通与杭州寺院制度连接起来，呈现宋初佛教的综合化趋势。", "curatorialDescription": ["杭州作为吴越王国和寺院网络的城市锚点；‘禅净双修’是后世概括，需与具体著述和制度背景分层。"], "researchNote": "永明延寿的生平、著述归属和禅净关系需继续按宋代传记、寺志与版本研究核实。", "timeLabel": "904—976 年", "keyFacts": [] },
+      "en": { "title": "Yongming Yanshou", "subtitle": "A Wuyue monk of Chan–Pure Land synthesis and Hangzhou temple networks", "shortSummary": "Yongming Yanshou connects the Wuyue region, Chan–Pure Land dialogue and Hangzhou temple institutions, showing an integrative tendency in early Song Buddhism.", "curatorialDescription": ["Hangzhou is a city-scale anchor for Wuyue and temple networks; ‘dual cultivation’ is a later summary kept distinct from specific writings and institutions."], "researchNote": "Yongming Yanshou's biography, textual attributions and Chan–Pure Land relations require further checking through Song biographies, temple records and editions.", "timeLabel": "904–976 CE", "keyFacts": [] }
+    },
+    "traditions": [{ "tradition": "buddhism", "role": "primary", "isPrimary": true, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:buddhist-school-biographies" }],
+    "temporalAssertions": [{ "predicate": "life", "timeType": "exact", "startYear": 904, "endYear": 976, "displayDate": { "zh-CN": "904—976 年", "en": "904–976 CE" }, "confidence": "high", "evidenceLayer": "historical_documented", "sourceId": "source:buddhist-school-biographies" }],
+    "sourceIds": ["source:buddhist-school-biographies", "source:historical-geography-expanded", "source:editorial-method"], "related": [{ "kind": "place", "slug": "hangzhou", "title": { "zh-CN": "杭州", "en": "Hangzhou" }, "relation": { "zh-CN": "吴越寺院与禅净会通空间", "en": "Wuyue temple and Chan–Pure Land setting" } }],
+    "profile": { "historicity": "documented", "figureClass": "historical_person", "gender": "male", "canonicalNameOriginal": "永明延壽", "nameLanguageCode": "lzh" }
+  }
+]

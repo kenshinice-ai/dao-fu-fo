@@ -809,10 +809,10 @@ function timelineTicks(startYear: number, endYear: number): number[] {
 }
 
 function timelineEventFocus(event: TimelineEvent): string {
-  return event.contextKeys?.find((key) => key.startsWith("place:"))
-    ?? (event.kind === "event"
-      ? event.kind + ":" + event.slug
-      : event.entity ? event.entity.kind + ":" + event.entity.slug : event.kind + ":" + event.slug);
+  return event.kind === "event"
+    ? event.kind + ":" + event.slug
+    : event.contextKeys?.find((key) => key.startsWith("place:"))
+      ?? (event.entity ? event.entity.kind + ":" + event.entity.slug : event.kind + ":" + event.slug);
 }
 
 function TimelinePlate({ data, locale, traditions, from, to, focus, relations, searchItems, zoomLevel, onFocus }: { data: TimelineData; locale: Locale; traditions: Tradition[]; from?: number; to?: number; focus?: string; relations?: ReadModelRelationIndex; searchItems: SearchItem[]; zoomLevel: ZoomLevel; onFocus: (focus: string) => void }) {

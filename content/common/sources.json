@@ -1229,5 +1229,104 @@
     "rightsStatus": "quotation_only",
     "locatorLevel": "topic",
     "citationStatus": "verified"
+  },
+  {
+    "id": "source:pre-qin-classics-ctext",
+    "sourceType": "primary_text",
+    "evidenceGrade": "A",
+    "title": { "zh-CN": "先秦诸子典籍与中国哲学书电子化计划文本页", "en": "Pre-Qin masters and Chinese Text Project editions" },
+    "locator": "《墨子》《韩非子》及相关先秦诸子篇章；用于思想与文本入口，不替代人物生平的独立史传",
+    "role": { "zh-CN": "墨子、韩非及先秦思想人物的文本与传承入口", "en": "Textual and transmission entry for Mozi, Han Fei and related pre-Qin thinkers" },
+    "rightsStatus": "public_domain", "locatorLevel": "precise", "citationStatus": "verified", "url": "https://ctext.org/"
+  },
+  {
+    "id": "source:han-histories-records",
+    "sourceType": "primary_text",
+    "evidenceGrade": "A",
+    "title": { "zh-CN": "《史记》《汉书》人物与编年资料", "en": "Biographical and chronological records in the Shiji and Hanshu" },
+    "locator": "《史记》与《汉书》相关人物传记、史学编纂和汉代制度语境；具体卷传仍需逐条复核",
+    "role": { "zh-CN": "贾谊、司马迁、班固等人物的史传与时间入口", "en": "Historiographical and temporal entry for Jia Yi, Sima Qian, Ban Gu and related figures" },
+    "rightsStatus": "public_domain", "locatorLevel": "edition", "citationStatus": "verified", "url": "https://ctext.org/"
+  },
+  {
+    "id": "source:wei-jin-commentary-records",
+    "sourceType": "primary_text",
+    "evidenceGrade": "B",
+    "title": { "zh-CN": "魏晋玄学、经学注释与人物资料", "en": "Wei–Jin commentary, classical learning and figure records" },
+    "locator": "王弼、刘勰及魏晋注释与文论语境；人物年代、文本归属和后世整理分层处理",
+    "role": { "zh-CN": "魏晋思想、注释与文论人物的研究入口", "en": "Research entry for Wei–Jin thinkers, commentators and literary theorists" },
+    "rightsStatus": "quotation_only", "locatorLevel": "precise", "citationStatus": "verified", "url": "https://ctext.org/"
+  },
+  {
+    "id": "source:ming-qing-confucian-records",
+    "sourceType": "primary_text",
+    "evidenceGrade": "B",
+    "title": { "zh-CN": "明清经学、思想史与学术人物资料", "en": "Ming–Qing classical learning, intellectual history and figure records" },
+    "locator": "陆九渊后续心学、黄宗羲、顾炎武、戴震等人物的文集、学案与学术史语境",
+    "role": { "zh-CN": "宋元以后经学、考据与思想史人物的研究入口", "en": "Research entry for later classical learning, evidential scholarship and intellectual-history figures" },
+    "rightsStatus": "public_domain", "locatorLevel": "topic", "citationStatus": "verified"
+  },
+  {
+    "id": "source:modern-confucian-education-records",
+    "sourceType": "institutional_record",
+    "evidenceGrade": "B",
+    "title": { "zh-CN": "近代教育、学术机构与蔡元培资料", "en": "Modern education, academic institutions and Cai Yuanpei records" },
+    "locator": "清末民初教育改革、大学制度与蔡元培活动资料；现代机构史与先秦传统接受保持分层",
+    "role": { "zh-CN": "近代人物、教育制度与经典传统现代转化的研究入口", "en": "Research entry for modern figures, education institutions and the transformation of classical traditions" },
+    "rightsStatus": "quotation_only", "locatorLevel": "precise", "citationStatus": "verified"
+  },
+  {
+    "id": "source:daoist-alchemical-records",
+    "sourceType": "primary_text",
+    "evidenceGrade": "B",
+    "title": { "zh-CN": "道教炼养、内丹与仙传文献资料", "en": "Daoist alchemical, cultivation and hagiographical records" },
+    "locator": "魏伯阳、张伯端及内丹传统相关文本；传统谱系、文本归属和历史人物活动分层处理",
+    "role": { "zh-CN": "道教炼养与内丹人物的文本、传承和接受入口", "en": "Textual, lineage and reception entry for Daoist cultivation and inner-alchemy figures" },
+    "rightsStatus": "public_domain", "locatorLevel": "precise", "citationStatus": "verified", "url": "https://ctext.org/"
+  },
+  {
+    "id": "source:quanzhen-biographies",
+    "sourceType": "primary_text",
+    "evidenceGrade": "B",
+    "title": { "zh-CN": "全真道祖师传记与宫观网络资料", "en": "Quanzhen patriarch biographies and institutional-network records" },
+    "locator": "丘处机、刘处玄、马丹阳、孙不二及全真道宫观、师承与传播语境",
+    "role": { "zh-CN": "金元全真道人物、师承与区域网络的研究入口", "en": "Research entry for Jin–Yuan Quanzhen figures, lineages and regional networks" },
+    "rightsStatus": "quotation_only", "locatorLevel": "precise", "citationStatus": "verified"
+  },
+  {
+    "id": "source:early-buddhist-translation-records",
+    "sourceType": "primary_text",
+    "evidenceGrade": "B",
+    "title": { "zh-CN": "汉魏六朝佛教译经与高僧传记资料", "en": "Han–Six Dynasties Buddhist translation and eminent-monk records" },
+    "locator": "安世高、支谦、昙无谶、佛陀跋陀罗等译经人物与译场传记资料",
+    "role": { "zh-CN": "早期佛教传入、译经与城市网络人物的研究入口", "en": "Research entry for early Buddhist transmission, translation and urban networks" },
+    "rightsStatus": "public_domain", "locatorLevel": "precise", "citationStatus": "verified", "url": "https://ctext.org/"
+  },
+  {
+    "id": "source:buddhist-translation-records",
+    "sourceType": "primary_text",
+    "evidenceGrade": "B",
+    "title": { "zh-CN": "南北朝佛教译师、经录与传承资料", "en": "Northern and Southern Dynasties Buddhist translators, catalogues and transmission records" },
+    "locator": "求那跋陀罗、真谛、菩提流支等人物的译经、经录与传记语境；会面与师承不作自动推断",
+    "role": { "zh-CN": "南北朝译经人物、文本生产和跨区域传播的研究入口", "en": "Research entry for Northern–Southern Dynasties translators, textual production and transregional transmission" },
+    "rightsStatus": "quotation_only", "locatorLevel": "precise", "citationStatus": "verified"
+  },
+  {
+    "id": "source:tang-esoteric-buddhist-records",
+    "sourceType": "primary_text",
+    "evidenceGrade": "B",
+    "title": { "zh-CN": "唐代密教译经与长安制度资料", "en": "Tang Esoteric Buddhist translation and Chang'an institutional records" },
+    "locator": "善无畏、金刚智、不空及唐代译经、宫廷和寺院制度语境",
+    "role": { "zh-CN": "唐代密教译经人物、长安空间与制度网络的研究入口", "en": "Research entry for Tang Esoteric Buddhist translators, Chang'an space and institutional networks" },
+    "rightsStatus": "quotation_only", "locatorLevel": "precise", "citationStatus": "verified"
+  },
+  {
+    "id": "source:tiantai-chan-records",
+    "sourceType": "primary_text",
+    "evidenceGrade": "B",
+    "title": { "zh-CN": "天台、禅宗与华严人物传承资料", "en": "Tiantai, Chan and Huayan lineage records" },
+    "locator": "慧思、湛然、神会、马祖道一、宗密、永明延寿等人物的传记、宗派与注释语境",
+    "role": { "zh-CN": "佛教宗派形成、人物传承和后世接受的研究入口", "en": "Research entry for Buddhist school formation, figure lineages and later reception" },
+    "rightsStatus": "quotation_only", "locatorLevel": "precise", "citationStatus": "verified"
   }
 ]
