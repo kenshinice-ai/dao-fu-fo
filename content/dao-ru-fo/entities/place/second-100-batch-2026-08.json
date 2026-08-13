@@ -1,0 +1,1422 @@
+[
+  {
+    "kind": "place",
+    "slug": "luohe",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "漯河",
+        "subtitle": "汉代文字学与中原区域入口",
+        "shortSummary": "漯河作为汉代文字学与中原区域入口，为人物、事件和传统传播提供城市或山岳尺度的地图入口。",
+        "curatorialDescription": [
+          "地图点位采用近似或城市/山岳尺度，不把区域锚点解释为具体建筑、寺院或逐日路线。"
+        ],
+        "researchNote": "地点尺度、历史沿革与人物活动的具体对应仍需按地方志、考古与传记资料继续核对。",
+        "timeLabel": "历史城市、山岳或区域语境",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Luohe",
+        "subtitle": "Han philology and Central Plains regional entry",
+        "shortSummary": "Luohe provides a city- or mountain-scale map entry for figures, events and transmission associated with this context.",
+        "curatorialDescription": [
+          "The map point uses an approximate city or mountain scale and is not a claim about one building, monastery or day-by-day route."
+        ],
+        "researchNote": "Scale, historical geography and figure-specific activity still require checking against gazetteers, archaeology and biographies.",
+        "timeLabel": "Historical city, mountain or regional cultural landscape",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "cultural_landscape",
+        "timeType": "atemporal",
+        "displayDate": {
+          "zh-CN": "历史城市、山岳或区域文化景观",
+          "en": "Historical city, mountain or regional cultural landscape"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "sourceIds": [
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "placeReality": "real_historical",
+      "geometryType": "point",
+      "coordinates": [
+        114.02,
+        33.58
+      ],
+      "coordinateConfidence": "approximate",
+      "geographicSourceId": "source:historical-geography-second-batch"
+    }
+  },
+  {
+    "kind": "place",
+    "slug": "gaomi",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "高密",
+        "subtitle": "东汉经学与郑学地方入口",
+        "shortSummary": "高密作为东汉经学与郑学地方入口，为人物、事件和传统传播提供城市或山岳尺度的地图入口。",
+        "curatorialDescription": [
+          "地图点位采用近似或城市/山岳尺度，不把区域锚点解释为具体建筑、寺院或逐日路线。"
+        ],
+        "researchNote": "地点尺度、历史沿革与人物活动的具体对应仍需按地方志、考古与传记资料继续核对。",
+        "timeLabel": "历史城市、山岳或区域语境",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Gaomi",
+        "subtitle": "Eastern Han classical learning and Zheng-school local entry",
+        "shortSummary": "Gaomi provides a city- or mountain-scale map entry for figures, events and transmission associated with this context.",
+        "curatorialDescription": [
+          "The map point uses an approximate city or mountain scale and is not a claim about one building, monastery or day-by-day route."
+        ],
+        "researchNote": "Scale, historical geography and figure-specific activity still require checking against gazetteers, archaeology and biographies.",
+        "timeLabel": "Historical city, mountain or regional cultural landscape",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "cultural_landscape",
+        "timeType": "atemporal",
+        "displayDate": {
+          "zh-CN": "历史城市、山岳或区域文化景观",
+          "en": "Historical city, mountain or regional cultural landscape"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "sourceIds": [
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "placeReality": "real_historical",
+      "geometryType": "point",
+      "coordinates": [
+        119.75,
+        36.38
+      ],
+      "coordinateConfidence": "approximate",
+      "geographicSourceId": "source:historical-geography-second-batch"
+    }
+  },
+  {
+    "kind": "place",
+    "slug": "xingping",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "兴平",
+        "subtitle": "关中经学与马融活动区域入口",
+        "shortSummary": "兴平作为关中经学与马融活动区域入口，为人物、事件和传统传播提供城市或山岳尺度的地图入口。",
+        "curatorialDescription": [
+          "地图点位采用近似或城市/山岳尺度，不把区域锚点解释为具体建筑、寺院或逐日路线。"
+        ],
+        "researchNote": "地点尺度、历史沿革与人物活动的具体对应仍需按地方志、考古与传记资料继续核对。",
+        "timeLabel": "历史城市、山岳或区域语境",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Xingping",
+        "subtitle": "Guanzhong classical learning and Ma Rong activity entry",
+        "shortSummary": "Xingping provides a city- or mountain-scale map entry for figures, events and transmission associated with this context.",
+        "curatorialDescription": [
+          "The map point uses an approximate city or mountain scale and is not a claim about one building, monastery or day-by-day route."
+        ],
+        "researchNote": "Scale, historical geography and figure-specific activity still require checking against gazetteers, archaeology and biographies.",
+        "timeLabel": "Historical city, mountain or regional cultural landscape",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "cultural_landscape",
+        "timeType": "atemporal",
+        "displayDate": {
+          "zh-CN": "历史城市、山岳或区域文化景观",
+          "en": "Historical city, mountain or regional cultural landscape"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "sourceIds": [
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "placeReality": "real_historical",
+      "geometryType": "point",
+      "coordinates": [
+        108.49,
+        34.3
+      ],
+      "coordinateConfidence": "approximate",
+      "geographicSourceId": "source:historical-geography-second-batch"
+    }
+  },
+  {
+    "kind": "place",
+    "slug": "huiji",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "会稽",
+        "subtitle": "东汉思想与会稽区域入口",
+        "shortSummary": "会稽作为东汉思想与会稽区域入口，为人物、事件和传统传播提供城市或山岳尺度的地图入口。",
+        "curatorialDescription": [
+          "地图点位采用近似或城市/山岳尺度，不把区域锚点解释为具体建筑、寺院或逐日路线。"
+        ],
+        "researchNote": "地点尺度、历史沿革与人物活动的具体对应仍需按地方志、考古与传记资料继续核对。",
+        "timeLabel": "历史城市、山岳或区域语境",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Kuaiji",
+        "subtitle": "Eastern Han thought and Kuaiji regional entry",
+        "shortSummary": "Kuaiji provides a city- or mountain-scale map entry for figures, events and transmission associated with this context.",
+        "curatorialDescription": [
+          "The map point uses an approximate city or mountain scale and is not a claim about one building, monastery or day-by-day route."
+        ],
+        "researchNote": "Scale, historical geography and figure-specific activity still require checking against gazetteers, archaeology and biographies.",
+        "timeLabel": "Historical city, mountain or regional cultural landscape",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "cultural_landscape",
+        "timeType": "atemporal",
+        "displayDate": {
+          "zh-CN": "历史城市、山岳或区域文化景观",
+          "en": "Historical city, mountain or regional cultural landscape"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "sourceIds": [
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "placeReality": "real_historical",
+      "geometryType": "point",
+      "coordinates": [
+        120.58,
+        30
+      ],
+      "coordinateConfidence": "approximate",
+      "geographicSourceId": "source:historical-geography-second-batch"
+    }
+  },
+  {
+    "kind": "place",
+    "slug": "jiangle",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "将乐",
+        "subtitle": "东南理学与杨时地方入口",
+        "shortSummary": "将乐作为东南理学与杨时地方入口，为人物、事件和传统传播提供城市或山岳尺度的地图入口。",
+        "curatorialDescription": [
+          "地图点位采用近似或城市/山岳尺度，不把区域锚点解释为具体建筑、寺院或逐日路线。"
+        ],
+        "researchNote": "地点尺度、历史沿革与人物活动的具体对应仍需按地方志、考古与传记资料继续核对。",
+        "timeLabel": "历史城市、山岳或区域语境",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Jiangle",
+        "subtitle": "Southeastern learning and Yang Shi local entry",
+        "shortSummary": "Jiangle provides a city- or mountain-scale map entry for figures, events and transmission associated with this context.",
+        "curatorialDescription": [
+          "The map point uses an approximate city or mountain scale and is not a claim about one building, monastery or day-by-day route."
+        ],
+        "researchNote": "Scale, historical geography and figure-specific activity still require checking against gazetteers, archaeology and biographies.",
+        "timeLabel": "Historical city, mountain or regional cultural landscape",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "cultural_landscape",
+        "timeType": "atemporal",
+        "displayDate": {
+          "zh-CN": "历史城市、山岳或区域文化景观",
+          "en": "Historical city, mountain or regional cultural landscape"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "sourceIds": [
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "placeReality": "real_historical",
+      "geometryType": "point",
+      "coordinates": [
+        117.46,
+        26.73
+      ],
+      "coordinateConfidence": "approximate",
+      "geographicSourceId": "source:historical-geography-second-batch"
+    }
+  },
+  {
+    "kind": "place",
+    "slug": "nanping",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "南平",
+        "subtitle": "延平理学与闽北学术入口",
+        "shortSummary": "南平作为延平理学与闽北学术入口，为人物、事件和传统传播提供城市或山岳尺度的地图入口。",
+        "curatorialDescription": [
+          "地图点位采用近似或城市/山岳尺度，不把区域锚点解释为具体建筑、寺院或逐日路线。"
+        ],
+        "researchNote": "地点尺度、历史沿革与人物活动的具体对应仍需按地方志、考古与传记资料继续核对。",
+        "timeLabel": "历史城市、山岳或区域语境",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Nanping",
+        "subtitle": "Yanping learning and northern Fujian intellectual entry",
+        "shortSummary": "Nanping provides a city- or mountain-scale map entry for figures, events and transmission associated with this context.",
+        "curatorialDescription": [
+          "The map point uses an approximate city or mountain scale and is not a claim about one building, monastery or day-by-day route."
+        ],
+        "researchNote": "Scale, historical geography and figure-specific activity still require checking against gazetteers, archaeology and biographies.",
+        "timeLabel": "Historical city, mountain or regional cultural landscape",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "cultural_landscape",
+        "timeType": "atemporal",
+        "displayDate": {
+          "zh-CN": "历史城市、山岳或区域文化景观",
+          "en": "Historical city, mountain or regional cultural landscape"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "sourceIds": [
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "placeReality": "real_historical",
+      "geometryType": "point",
+      "coordinates": [
+        118.18,
+        26.64
+      ],
+      "coordinateConfidence": "approximate",
+      "geographicSourceId": "source:historical-geography-second-batch"
+    }
+  },
+  {
+    "kind": "place",
+    "slug": "yongkang",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "永康",
+        "subtitle": "永康学与南宋经世论入口",
+        "shortSummary": "永康作为永康学与南宋经世论入口，为人物、事件和传统传播提供城市或山岳尺度的地图入口。",
+        "curatorialDescription": [
+          "地图点位采用近似或城市/山岳尺度，不把区域锚点解释为具体建筑、寺院或逐日路线。"
+        ],
+        "researchNote": "地点尺度、历史沿革与人物活动的具体对应仍需按地方志、考古与传记资料继续核对。",
+        "timeLabel": "历史城市、山岳或区域语境",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Yongkang",
+        "subtitle": "Yongkang learning and Southern Song statecraft entry",
+        "shortSummary": "Yongkang provides a city- or mountain-scale map entry for figures, events and transmission associated with this context.",
+        "curatorialDescription": [
+          "The map point uses an approximate city or mountain scale and is not a claim about one building, monastery or day-by-day route."
+        ],
+        "researchNote": "Scale, historical geography and figure-specific activity still require checking against gazetteers, archaeology and biographies.",
+        "timeLabel": "Historical city, mountain or regional cultural landscape",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "cultural_landscape",
+        "timeType": "atemporal",
+        "displayDate": {
+          "zh-CN": "历史城市、山岳或区域文化景观",
+          "en": "Historical city, mountain or regional cultural landscape"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "sourceIds": [
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "placeReality": "real_historical",
+      "geometryType": "point",
+      "coordinates": [
+        120.03,
+        28.9
+      ],
+      "coordinateConfidence": "approximate",
+      "geographicSourceId": "source:historical-geography-second-batch"
+    }
+  },
+  {
+    "kind": "place",
+    "slug": "wenzhou",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "温州",
+        "subtitle": "永嘉学派与浙东学术入口",
+        "shortSummary": "温州作为永嘉学派与浙东学术入口，为人物、事件和传统传播提供城市或山岳尺度的地图入口。",
+        "curatorialDescription": [
+          "地图点位采用近似或城市/山岳尺度，不把区域锚点解释为具体建筑、寺院或逐日路线。"
+        ],
+        "researchNote": "地点尺度、历史沿革与人物活动的具体对应仍需按地方志、考古与传记资料继续核对。",
+        "timeLabel": "历史城市、山岳或区域语境",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Wenzhou",
+        "subtitle": "Yongjia learning and eastern Zhejiang intellectual entry",
+        "shortSummary": "Wenzhou provides a city- or mountain-scale map entry for figures, events and transmission associated with this context.",
+        "curatorialDescription": [
+          "The map point uses an approximate city or mountain scale and is not a claim about one building, monastery or day-by-day route."
+        ],
+        "researchNote": "Scale, historical geography and figure-specific activity still require checking against gazetteers, archaeology and biographies.",
+        "timeLabel": "Historical city, mountain or regional cultural landscape",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "cultural_landscape",
+        "timeType": "atemporal",
+        "displayDate": {
+          "zh-CN": "历史城市、山岳或区域文化景观",
+          "en": "Historical city, mountain or regional cultural landscape"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "sourceIds": [
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "placeReality": "real_historical",
+      "geometryType": "point",
+      "coordinates": [
+        120.7,
+        28
+      ],
+      "coordinateConfidence": "approximate",
+      "geographicSourceId": "source:historical-geography-second-batch"
+    }
+  },
+  {
+    "kind": "place",
+    "slug": "hejin",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "河津",
+        "subtitle": "河东理学地方入口",
+        "shortSummary": "河津作为河东理学地方入口，为人物、事件和传统传播提供城市或山岳尺度的地图入口。",
+        "curatorialDescription": [
+          "地图点位采用近似或城市/山岳尺度，不把区域锚点解释为具体建筑、寺院或逐日路线。"
+        ],
+        "researchNote": "地点尺度、历史沿革与人物活动的具体对应仍需按地方志、考古与传记资料继续核对。",
+        "timeLabel": "历史城市、山岳或区域语境",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Hejin",
+        "subtitle": "Hedong Neo-Confucian local entry",
+        "shortSummary": "Hejin provides a city- or mountain-scale map entry for figures, events and transmission associated with this context.",
+        "curatorialDescription": [
+          "The map point uses an approximate city or mountain scale and is not a claim about one building, monastery or day-by-day route."
+        ],
+        "researchNote": "Scale, historical geography and figure-specific activity still require checking against gazetteers, archaeology and biographies.",
+        "timeLabel": "Historical city, mountain or regional cultural landscape",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "cultural_landscape",
+        "timeType": "atemporal",
+        "displayDate": {
+          "zh-CN": "历史城市、山岳或区域文化景观",
+          "en": "Historical city, mountain or regional cultural landscape"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "sourceIds": [
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "placeReality": "real_historical",
+      "geometryType": "point",
+      "coordinates": [
+        110.71,
+        35.6
+      ],
+      "coordinateConfidence": "approximate",
+      "geographicSourceId": "source:historical-geography-second-batch"
+    }
+  },
+  {
+    "kind": "place",
+    "slug": "taizhou",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "泰州",
+        "subtitle": "泰州学派与心学地方传播入口",
+        "shortSummary": "泰州作为泰州学派与心学地方传播入口，为人物、事件和传统传播提供城市或山岳尺度的地图入口。",
+        "curatorialDescription": [
+          "地图点位采用近似或城市/山岳尺度，不把区域锚点解释为具体建筑、寺院或逐日路线。"
+        ],
+        "researchNote": "地点尺度、历史沿革与人物活动的具体对应仍需按地方志、考古与传记资料继续核对。",
+        "timeLabel": "历史城市、山岳或区域语境",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Taizhou",
+        "subtitle": "Taizhou school and local Yangming learning entry",
+        "shortSummary": "Taizhou provides a city- or mountain-scale map entry for figures, events and transmission associated with this context.",
+        "curatorialDescription": [
+          "The map point uses an approximate city or mountain scale and is not a claim about one building, monastery or day-by-day route."
+        ],
+        "researchNote": "Scale, historical geography and figure-specific activity still require checking against gazetteers, archaeology and biographies.",
+        "timeLabel": "Historical city, mountain or regional cultural landscape",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "cultural_landscape",
+        "timeType": "atemporal",
+        "displayDate": {
+          "zh-CN": "历史城市、山岳或区域文化景观",
+          "en": "Historical city, mountain or regional cultural landscape"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "sourceIds": [
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "placeReality": "real_historical",
+      "geometryType": "point",
+      "coordinates": [
+        119.92,
+        32.45
+      ],
+      "coordinateConfidence": "approximate",
+      "geographicSourceId": "source:historical-geography-second-batch"
+    }
+  },
+  {
+    "kind": "place",
+    "slug": "haining",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "海宁",
+        "subtitle": "清初经学与浙北地方入口",
+        "shortSummary": "海宁作为清初经学与浙北地方入口，为人物、事件和传统传播提供城市或山岳尺度的地图入口。",
+        "curatorialDescription": [
+          "地图点位采用近似或城市/山岳尺度，不把区域锚点解释为具体建筑、寺院或逐日路线。"
+        ],
+        "researchNote": "地点尺度、历史沿革与人物活动的具体对应仍需按地方志、考古与传记资料继续核对。",
+        "timeLabel": "历史城市、山岳或区域语境",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Haining",
+        "subtitle": "Early Qing classical learning and northern Zhejiang entry",
+        "shortSummary": "Haining provides a city- or mountain-scale map entry for figures, events and transmission associated with this context.",
+        "curatorialDescription": [
+          "The map point uses an approximate city or mountain scale and is not a claim about one building, monastery or day-by-day route."
+        ],
+        "researchNote": "Scale, historical geography and figure-specific activity still require checking against gazetteers, archaeology and biographies.",
+        "timeLabel": "Historical city, mountain or regional cultural landscape",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "cultural_landscape",
+        "timeType": "atemporal",
+        "displayDate": {
+          "zh-CN": "历史城市、山岳或区域文化景观",
+          "en": "Historical city, mountain or regional cultural landscape"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "sourceIds": [
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "placeReality": "real_historical",
+      "geometryType": "point",
+      "coordinates": [
+        120.68,
+        30.53
+      ],
+      "coordinateConfidence": "approximate",
+      "geographicSourceId": "source:historical-geography-second-batch"
+    }
+  },
+  {
+    "kind": "place",
+    "slug": "xinhui",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "新会",
+        "subtitle": "近代思想人物的岭南地方入口",
+        "shortSummary": "新会作为近代思想人物的岭南地方入口，为人物、事件和传统传播提供城市或山岳尺度的地图入口。",
+        "curatorialDescription": [
+          "地图点位采用近似或城市/山岳尺度，不把区域锚点解释为具体建筑、寺院或逐日路线。"
+        ],
+        "researchNote": "地点尺度、历史沿革与人物活动的具体对应仍需按地方志、考古与传记资料继续核对。",
+        "timeLabel": "历史城市、山岳或区域语境",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Xinhui",
+        "subtitle": "Lingnan local entry for modern intellectual history",
+        "shortSummary": "Xinhui provides a city- or mountain-scale map entry for figures, events and transmission associated with this context.",
+        "curatorialDescription": [
+          "The map point uses an approximate city or mountain scale and is not a claim about one building, monastery or day-by-day route."
+        ],
+        "researchNote": "Scale, historical geography and figure-specific activity still require checking against gazetteers, archaeology and biographies.",
+        "timeLabel": "Historical city, mountain or regional cultural landscape",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "cultural_landscape",
+        "timeType": "atemporal",
+        "displayDate": {
+          "zh-CN": "历史城市、山岳或区域文化景观",
+          "en": "Historical city, mountain or regional cultural landscape"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "sourceIds": [
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "placeReality": "real_historical",
+      "geometryType": "point",
+      "coordinates": [
+        113.03,
+        22.46
+      ],
+      "coordinateConfidence": "approximate",
+      "geographicSourceId": "source:historical-geography-second-batch"
+    }
+  },
+  {
+    "kind": "place",
+    "slug": "quzhou",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "衢州",
+        "subtitle": "唐宋道教地方记忆与区域入口",
+        "shortSummary": "衢州作为唐宋道教地方记忆与区域入口，为人物、事件和传统传播提供城市或山岳尺度的地图入口。",
+        "curatorialDescription": [
+          "地图点位采用近似或城市/山岳尺度，不把区域锚点解释为具体建筑、寺院或逐日路线。"
+        ],
+        "researchNote": "地点尺度、历史沿革与人物活动的具体对应仍需按地方志、考古与传记资料继续核对。",
+        "timeLabel": "历史城市、山岳或区域语境",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Quzhou",
+        "subtitle": "Tang–Song Daoist local memory and regional entry",
+        "shortSummary": "Quzhou provides a city- or mountain-scale map entry for figures, events and transmission associated with this context.",
+        "curatorialDescription": [
+          "The map point uses an approximate city or mountain scale and is not a claim about one building, monastery or day-by-day route."
+        ],
+        "researchNote": "Scale, historical geography and figure-specific activity still require checking against gazetteers, archaeology and biographies.",
+        "timeLabel": "Historical city, mountain or regional cultural landscape",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "cultural_landscape",
+        "timeType": "atemporal",
+        "displayDate": {
+          "zh-CN": "历史城市、山岳或区域文化景观",
+          "en": "Historical city, mountain or regional cultural landscape"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "sourceIds": [
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "placeReality": "real_historical",
+      "geometryType": "point",
+      "coordinates": [
+        118.87,
+        28.94
+      ],
+      "coordinateConfidence": "approximate",
+      "geographicSourceId": "source:historical-geography-second-batch"
+    }
+  },
+  {
+    "kind": "place",
+    "slug": "longhushan",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "龙虎山",
+        "subtitle": "天师道制度与龙虎山山岳入口",
+        "shortSummary": "龙虎山作为天师道制度与龙虎山山岳入口，为人物、事件和传统传播提供城市或山岳尺度的地图入口。",
+        "curatorialDescription": [
+          "地图点位采用近似或城市/山岳尺度，不把区域锚点解释为具体建筑、寺院或逐日路线。"
+        ],
+        "researchNote": "地点尺度、历史沿革与人物活动的具体对应仍需按地方志、考古与传记资料继续核对。",
+        "timeLabel": "历史城市、山岳或区域语境",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Mount Longhu",
+        "subtitle": "Celestial Masters institutions and Mount Longhu",
+        "shortSummary": "Mount Longhu provides a city- or mountain-scale map entry for figures, events and transmission associated with this context.",
+        "curatorialDescription": [
+          "The map point uses an approximate city or mountain scale and is not a claim about one building, monastery or day-by-day route."
+        ],
+        "researchNote": "Scale, historical geography and figure-specific activity still require checking against gazetteers, archaeology and biographies.",
+        "timeLabel": "Historical city, mountain or regional cultural landscape",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "cultural_landscape",
+        "timeType": "atemporal",
+        "displayDate": {
+          "zh-CN": "历史城市、山岳或区域文化景观",
+          "en": "Historical city, mountain or regional cultural landscape"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "sourceIds": [
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "placeReality": "real_historical",
+      "geometryType": "point",
+      "coordinates": [
+        116.99,
+        28.27
+      ],
+      "coordinateConfidence": "approximate",
+      "geographicSourceId": "source:historical-geography-second-batch"
+    }
+  },
+  {
+    "kind": "place",
+    "slug": "qionghai",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "琼海（琼州区域）",
+        "subtitle": "南方道教传承的区域近似入口",
+        "shortSummary": "琼海（琼州区域）作为南方道教传承的区域近似入口，为人物、事件和传统传播提供城市或山岳尺度的地图入口。",
+        "curatorialDescription": [
+          "地图点位采用近似或城市/山岳尺度，不把区域锚点解释为具体建筑、寺院或逐日路线。"
+        ],
+        "researchNote": "地点尺度、历史沿革与人物活动的具体对应仍需按地方志、考古与传记资料继续核对。",
+        "timeLabel": "历史城市、山岳或区域语境",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Qionghai (Qiongzhou region)",
+        "subtitle": "Approximate regional entry for southern Daoist transmission",
+        "shortSummary": "Qionghai (Qiongzhou region) provides a city- or mountain-scale map entry for figures, events and transmission associated with this context.",
+        "curatorialDescription": [
+          "The map point uses an approximate city or mountain scale and is not a claim about one building, monastery or day-by-day route."
+        ],
+        "researchNote": "Scale, historical geography and figure-specific activity still require checking against gazetteers, archaeology and biographies.",
+        "timeLabel": "Historical city, mountain or regional cultural landscape",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "cultural_landscape",
+        "timeType": "atemporal",
+        "displayDate": {
+          "zh-CN": "历史城市、山岳或区域文化景观",
+          "en": "Historical city, mountain or regional cultural landscape"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "sourceIds": [
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "placeReality": "real_historical",
+      "geometryType": "point",
+      "coordinates": [
+        110.47,
+        19.25
+      ],
+      "coordinateConfidence": "approximate",
+      "geographicSourceId": "source:historical-geography-second-batch"
+    }
+  },
+  {
+    "kind": "place",
+    "slug": "jiujiang",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "九江",
+        "subtitle": "江西道教与山水文化区域入口",
+        "shortSummary": "九江作为江西道教与山水文化区域入口，为人物、事件和传统传播提供城市或山岳尺度的地图入口。",
+        "curatorialDescription": [
+          "地图点位采用近似或城市/山岳尺度，不把区域锚点解释为具体建筑、寺院或逐日路线。"
+        ],
+        "researchNote": "地点尺度、历史沿革与人物活动的具体对应仍需按地方志、考古与传记资料继续核对。",
+        "timeLabel": "历史城市、山岳或区域语境",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Jiujiang",
+        "subtitle": "Jiangxi Daoist and river–mountain cultural entry",
+        "shortSummary": "Jiujiang provides a city- or mountain-scale map entry for figures, events and transmission associated with this context.",
+        "curatorialDescription": [
+          "The map point uses an approximate city or mountain scale and is not a claim about one building, monastery or day-by-day route."
+        ],
+        "researchNote": "Scale, historical geography and figure-specific activity still require checking against gazetteers, archaeology and biographies.",
+        "timeLabel": "Historical city, mountain or regional cultural landscape",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "cultural_landscape",
+        "timeType": "atemporal",
+        "displayDate": {
+          "zh-CN": "历史城市、山岳或区域文化景观",
+          "en": "Historical city, mountain or regional cultural landscape"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "sourceIds": [
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "placeReality": "real_historical",
+      "geometryType": "point",
+      "coordinates": [
+        116,
+        29.7
+      ],
+      "coordinateConfidence": "approximate",
+      "geographicSourceId": "source:historical-geography-second-batch"
+    }
+  },
+  {
+    "kind": "place",
+    "slug": "sikongshan",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "司空山",
+        "subtitle": "早期禅宗传承与山岳记忆入口",
+        "shortSummary": "司空山作为早期禅宗传承与山岳记忆入口，为人物、事件和传统传播提供城市或山岳尺度的地图入口。",
+        "curatorialDescription": [
+          "地图点位采用近似或城市/山岳尺度，不把区域锚点解释为具体建筑、寺院或逐日路线。"
+        ],
+        "researchNote": "地点尺度、历史沿革与人物活动的具体对应仍需按地方志、考古与传记资料继续核对。",
+        "timeLabel": "历史城市、山岳或区域语境",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Mount Sikong",
+        "subtitle": "Early Chan transmission and mountain-memory entry",
+        "shortSummary": "Mount Sikong provides a city- or mountain-scale map entry for figures, events and transmission associated with this context.",
+        "curatorialDescription": [
+          "The map point uses an approximate city or mountain scale and is not a claim about one building, monastery or day-by-day route."
+        ],
+        "researchNote": "Scale, historical geography and figure-specific activity still require checking against gazetteers, archaeology and biographies.",
+        "timeLabel": "Historical city, mountain or regional cultural landscape",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "cultural_landscape",
+        "timeType": "atemporal",
+        "displayDate": {
+          "zh-CN": "历史城市、山岳或区域文化景观",
+          "en": "Historical city, mountain or regional cultural landscape"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "sourceIds": [
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "placeReality": "real_historical",
+      "geometryType": "point",
+      "coordinates": [
+        116.11,
+        31.05
+      ],
+      "coordinateConfidence": "approximate",
+      "geographicSourceId": "source:historical-geography-second-batch"
+    }
+  },
+  {
+    "kind": "place",
+    "slug": "ruzhou",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "汝州",
+        "subtitle": "唐末禅宗与洞山区域入口",
+        "shortSummary": "汝州作为唐末禅宗与洞山区域入口，为人物、事件和传统传播提供城市或山岳尺度的地图入口。",
+        "curatorialDescription": [
+          "地图点位采用近似或城市/山岳尺度，不把区域锚点解释为具体建筑、寺院或逐日路线。"
+        ],
+        "researchNote": "地点尺度、历史沿革与人物活动的具体对应仍需按地方志、考古与传记资料继续核对。",
+        "timeLabel": "历史城市、山岳或区域语境",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Ruzhou",
+        "subtitle": "Late Tang Chan and Dongshan regional entry",
+        "shortSummary": "Ruzhou provides a city- or mountain-scale map entry for figures, events and transmission associated with this context.",
+        "curatorialDescription": [
+          "The map point uses an approximate city or mountain scale and is not a claim about one building, monastery or day-by-day route."
+        ],
+        "researchNote": "Scale, historical geography and figure-specific activity still require checking against gazetteers, archaeology and biographies.",
+        "timeLabel": "Historical city, mountain or regional cultural landscape",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "cultural_landscape",
+        "timeType": "atemporal",
+        "displayDate": {
+          "zh-CN": "历史城市、山岳或区域文化景观",
+          "en": "Historical city, mountain or regional cultural landscape"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "sourceIds": [
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "placeReality": "real_historical",
+      "geometryType": "point",
+      "coordinates": [
+        112.85,
+        34.17
+      ],
+      "coordinateConfidence": "approximate",
+      "geographicSourceId": "source:historical-geography-second-batch"
+    }
+  },
+  {
+    "kind": "place",
+    "slug": "jinhua",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "金华",
+        "subtitle": "东莱学与南宋经史网络入口",
+        "shortSummary": "金华作为东莱学与南宋经史网络入口，为人物、事件和传统传播提供城市或山岳尺度的地图入口。",
+        "curatorialDescription": [
+          "地图点位采用近似或城市/山岳尺度，不把区域锚点解释为具体建筑、寺院或逐日路线。"
+        ],
+        "researchNote": "地点尺度、历史沿革与人物活动的具体对应仍需按地方志、考古与传记资料继续核对。",
+        "timeLabel": "历史城市、山岳或区域语境",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Jinhua",
+        "subtitle": "Donglai learning and Southern Song classical-history entry",
+        "shortSummary": "Jinhua provides a city- or mountain-scale map entry for figures, events and transmission associated with this context.",
+        "curatorialDescription": [
+          "The map point uses an approximate city or mountain scale and is not a claim about one building, monastery or day-by-day route."
+        ],
+        "researchNote": "Scale, historical geography and figure-specific activity still require checking against gazetteers, archaeology and biographies.",
+        "timeLabel": "Historical city, mountain or regional cultural landscape",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "cultural_landscape",
+        "timeType": "atemporal",
+        "displayDate": {
+          "zh-CN": "历史城市、山岳或区域文化景观",
+          "en": "Historical city, mountain or regional cultural landscape"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "sourceIds": [
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "placeReality": "real_historical",
+      "geometryType": "point",
+      "coordinates": [
+        119.65,
+        29.08
+      ],
+      "coordinateConfidence": "approximate",
+      "geographicSourceId": "source:historical-geography-second-batch"
+    }
+  },
+  {
+    "kind": "place",
+    "slug": "lianxi",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "濂溪（道州区域）",
+        "subtitle": "濂溪理学与宋代地方记忆入口",
+        "shortSummary": "濂溪（道州区域）作为濂溪理学与宋代地方记忆入口，为人物、事件和传统传播提供城市或山岳尺度的地图入口。",
+        "curatorialDescription": [
+          "地图点位采用近似或城市/山岳尺度，不把区域锚点解释为具体建筑、寺院或逐日路线。"
+        ],
+        "researchNote": "地点尺度、历史沿革与人物活动的具体对应仍需按地方志、考古与传记资料继续核对。",
+        "timeLabel": "历史城市、山岳或区域语境",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Lianxi (Daozhou region)",
+        "subtitle": "Lianxi learning and Song local-memory entry",
+        "shortSummary": "Lianxi (Daozhou region) provides a city- or mountain-scale map entry for figures, events and transmission associated with this context.",
+        "curatorialDescription": [
+          "The map point uses an approximate city or mountain scale and is not a claim about one building, monastery or day-by-day route."
+        ],
+        "researchNote": "Scale, historical geography and figure-specific activity still require checking against gazetteers, archaeology and biographies.",
+        "timeLabel": "Historical city, mountain or regional cultural landscape",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "cultural_landscape",
+        "timeType": "atemporal",
+        "displayDate": {
+          "zh-CN": "历史城市、山岳或区域文化景观",
+          "en": "Historical city, mountain or regional cultural landscape"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:historical-geography-second-batch"
+      }
+    ],
+    "sourceIds": [
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "placeReality": "real_historical",
+      "geometryType": "point",
+      "coordinates": [
+        111.59,
+        25.52
+      ],
+      "coordinateConfidence": "approximate",
+      "geographicSourceId": "source:historical-geography-second-batch"
+    }
+  }
+]

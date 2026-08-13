@@ -1,0 +1,3362 @@
+[
+  {
+    "kind": "figure",
+    "slug": "xu-shen",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "许慎",
+        "subtitle": "文字训诂与经典秩序",
+        "shortSummary": "许慎以文字训诂与经典秩序进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用汉代文字学与中原区域入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "许慎的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留medium置信度与明确证据层。",
+        "timeLabel": "约 58—147 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Xu Shen",
+        "subtitle": "philological exegesis and classical order",
+        "shortSummary": "Xu Shen enters this batch through philological exegesis and classical order, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses Han philology and Central Plains regional entry; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Xu Shen still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves medium confidence and an explicit evidence layer.",
+        "timeLabel": "c. 58–147 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:han-philology-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "circa",
+        "startYear": 58,
+        "endYear": 147,
+        "displayDate": {
+          "zh-CN": "约 58—147 年",
+          "en": "c. 58–147 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:han-philology-records"
+      }
+    ],
+    "sourceIds": [
+      "source:han-philology-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "luohe",
+        "title": {
+          "zh-CN": "漯河",
+          "en": "Luohe"
+        },
+        "relation": {
+          "zh-CN": "活动与传承区域入口",
+          "en": "Activity and transmission regional entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "许慎",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "zheng-xuan",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "郑玄",
+        "subtitle": "注经、礼学与师承网络",
+        "shortSummary": "郑玄以注经、礼学与师承网络进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用东汉经学与郑学地方入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "郑玄的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留medium置信度与明确证据层。",
+        "timeLabel": "约 127—200 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Zheng Xuan",
+        "subtitle": "commentary, ritual learning and teacher networks",
+        "shortSummary": "Zheng Xuan enters this batch through commentary, ritual learning and teacher networks, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses Eastern Han classical learning and Zheng-school local entry; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Zheng Xuan still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves medium confidence and an explicit evidence layer.",
+        "timeLabel": "c. 127–200 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:han-philology-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "circa",
+        "startYear": 127,
+        "endYear": 200,
+        "displayDate": {
+          "zh-CN": "约 127—200 年",
+          "en": "c. 127–200 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:han-philology-records"
+      }
+    ],
+    "sourceIds": [
+      "source:han-philology-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "gaomi",
+        "title": {
+          "zh-CN": "高密",
+          "en": "Gaomi"
+        },
+        "relation": {
+          "zh-CN": "出生地/地方入口",
+          "en": "Birthplace/local entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "郑玄",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "ma-rong",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "马融",
+        "subtitle": "经学传授与古文整理",
+        "shortSummary": "马融以经学传授与古文整理进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用关中经学与马融活动区域入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "马融的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留medium置信度与明确证据层。",
+        "timeLabel": "约 79—166 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Ma Rong",
+        "subtitle": "classical teaching and ancient-text study",
+        "shortSummary": "Ma Rong enters this batch through classical teaching and ancient-text study, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses Guanzhong classical learning and Ma Rong activity entry; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Ma Rong still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves medium confidence and an explicit evidence layer.",
+        "timeLabel": "c. 79–166 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:han-philology-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "circa",
+        "startYear": 79,
+        "endYear": 166,
+        "displayDate": {
+          "zh-CN": "约 79—166 年",
+          "en": "c. 79–166 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:han-philology-records"
+      }
+    ],
+    "sourceIds": [
+      "source:han-philology-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "xingping",
+        "title": {
+          "zh-CN": "兴平",
+          "en": "Xingping"
+        },
+        "relation": {
+          "zh-CN": "活动与传承区域入口",
+          "en": "Activity and transmission regional entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "马融",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "wang-chong",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "王充",
+        "subtitle": "经验论辩与知识批评",
+        "shortSummary": "王充以经验论辩与知识批评进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用东汉思想与会稽区域入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "王充的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留medium置信度与明确证据层。",
+        "timeLabel": "约 27—100 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Wang Chong",
+        "subtitle": "evidential argument and knowledge criticism",
+        "shortSummary": "Wang Chong enters this batch through evidential argument and knowledge criticism, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses Eastern Han thought and Kuaiji regional entry; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Wang Chong still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves medium confidence and an explicit evidence layer.",
+        "timeLabel": "c. 27–100 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:han-philology-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "circa",
+        "startYear": 27,
+        "endYear": 100,
+        "displayDate": {
+          "zh-CN": "约 27—100 年",
+          "en": "c. 27–100 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:han-philology-records"
+      }
+    ],
+    "sourceIds": [
+      "source:han-philology-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "huiji",
+        "title": {
+          "zh-CN": "会稽",
+          "en": "Kuaiji"
+        },
+        "relation": {
+          "zh-CN": "出生地/地方入口",
+          "en": "Birthplace/local entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "contested",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "王充",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "shao-yong",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "邵雍",
+        "subtitle": "象数易学与洛阳学术网络",
+        "shortSummary": "邵雍以象数易学与洛阳学术网络进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用洛阳城市与中古思想网络入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "邵雍的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留high置信度与明确证据层。",
+        "timeLabel": "1011—1077 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Shao Yong",
+        "subtitle": "image-number learning and the Luoyang network",
+        "shortSummary": "Shao Yong enters this batch through image-number learning and the Luoyang network, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses Luoyang city and medieval intellectual network entry; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Shao Yong still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves high confidence and an explicit evidence layer.",
+        "timeLabel": "1011–1077 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-neo-confucian-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "exact",
+        "startYear": 1011,
+        "endYear": 1077,
+        "displayDate": {
+          "zh-CN": "1011—1077 年",
+          "en": "1011–1077 CE"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-neo-confucian-records"
+      }
+    ],
+    "sourceIds": [
+      "source:song-neo-confucian-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "luoyang",
+        "title": {
+          "zh-CN": "洛阳",
+          "en": "Luoyang"
+        },
+        "relation": {
+          "zh-CN": "活动与传承区域入口",
+          "en": "Activity and transmission regional entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "邵雍",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "zhou-dunyi",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "周敦颐",
+        "subtitle": "濂溪学与理学早期语汇",
+        "shortSummary": "周敦颐以濂溪学与理学早期语汇进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用濂溪理学与宋代地方记忆入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "周敦颐的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留high置信度与明确证据层。",
+        "timeLabel": "1017—1073 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Zhou Dunyi",
+        "subtitle": "Lianxi learning and early Neo-Confucian vocabulary",
+        "shortSummary": "Zhou Dunyi enters this batch through Lianxi learning and early Neo-Confucian vocabulary, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses Lianxi learning and Song local-memory entry; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Zhou Dunyi still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves high confidence and an explicit evidence layer.",
+        "timeLabel": "1017–1073 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-neo-confucian-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "exact",
+        "startYear": 1017,
+        "endYear": 1073,
+        "displayDate": {
+          "zh-CN": "1017—1073 年",
+          "en": "1017–1073 CE"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-neo-confucian-records"
+      }
+    ],
+    "sourceIds": [
+      "source:song-neo-confucian-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "lianxi",
+        "title": {
+          "zh-CN": "濂溪（道州区域）",
+          "en": "Lianxi (Daozhou region)"
+        },
+        "relation": {
+          "zh-CN": "活动与传承区域入口",
+          "en": "Activity and transmission regional entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "周敦颐",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "yang-shi",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "杨时",
+        "subtitle": "程门师承与东南传播",
+        "shortSummary": "杨时以程门师承与东南传播进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用东南理学与杨时地方入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "杨时的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留medium置信度与明确证据层。",
+        "timeLabel": "1053—1135 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Yang Shi",
+        "subtitle": "Cheng-school transmission and southeastern circulation",
+        "shortSummary": "Yang Shi enters this batch through Cheng-school transmission and southeastern circulation, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses Southeastern learning and Yang Shi local entry; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Yang Shi still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves medium confidence and an explicit evidence layer.",
+        "timeLabel": "1053–1135 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-neo-confucian-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "exact",
+        "startYear": 1053,
+        "endYear": 1135,
+        "displayDate": {
+          "zh-CN": "1053—1135 年",
+          "en": "1053–1135 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-neo-confucian-records"
+      }
+    ],
+    "sourceIds": [
+      "source:song-neo-confucian-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "jiangle",
+        "title": {
+          "zh-CN": "将乐",
+          "en": "Jiangle"
+        },
+        "relation": {
+          "zh-CN": "活动与传承区域入口",
+          "en": "Activity and transmission regional entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "杨时",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "li-tong",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "李侗",
+        "subtitle": "延平学与朱子学前史",
+        "shortSummary": "李侗以延平学与朱子学前史进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用延平理学与闽北学术入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "李侗的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留high置信度与明确证据层。",
+        "timeLabel": "1093—1163 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Li Tong",
+        "subtitle": "Yanping learning and the prehistory of Zhu Xi",
+        "shortSummary": "Li Tong enters this batch through Yanping learning and the prehistory of Zhu Xi, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses Yanping learning and northern Fujian intellectual entry; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Li Tong still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves high confidence and an explicit evidence layer.",
+        "timeLabel": "1093–1163 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-neo-confucian-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "exact",
+        "startYear": 1093,
+        "endYear": 1163,
+        "displayDate": {
+          "zh-CN": "1093—1163 年",
+          "en": "1093–1163 CE"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-neo-confucian-records"
+      }
+    ],
+    "sourceIds": [
+      "source:song-neo-confucian-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "nanping",
+        "title": {
+          "zh-CN": "南平",
+          "en": "Nanping"
+        },
+        "relation": {
+          "zh-CN": "活动与传承区域入口",
+          "en": "Activity and transmission regional entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "李侗",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "chen-liang",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "陈亮",
+        "subtitle": "永康学与经世论辩",
+        "shortSummary": "陈亮以永康学与经世论辩进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用永康学与南宋经世论入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "陈亮的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留high置信度与明确证据层。",
+        "timeLabel": "1143—1194 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Chen Liang",
+        "subtitle": "Yongkang learning and statecraft debate",
+        "shortSummary": "Chen Liang enters this batch through Yongkang learning and statecraft debate, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses Yongkang learning and Southern Song statecraft entry; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Chen Liang still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves high confidence and an explicit evidence layer.",
+        "timeLabel": "1143–1194 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-yuan-confucian-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "exact",
+        "startYear": 1143,
+        "endYear": 1194,
+        "displayDate": {
+          "zh-CN": "1143—1194 年",
+          "en": "1143–1194 CE"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-yuan-confucian-records"
+      }
+    ],
+    "sourceIds": [
+      "source:song-yuan-confucian-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "yongkang",
+        "title": {
+          "zh-CN": "永康",
+          "en": "Yongkang"
+        },
+        "relation": {
+          "zh-CN": "出生地/地方入口",
+          "en": "Birthplace/local entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "陈亮",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "ye-shi",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "叶适",
+        "subtitle": "永嘉学派与经世致用",
+        "shortSummary": "叶适以永嘉学派与经世致用进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用永嘉学派与浙东学术入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "叶适的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留high置信度与明确证据层。",
+        "timeLabel": "1150—1223 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Ye Shi",
+        "subtitle": "Yongjia learning and practical statecraft",
+        "shortSummary": "Ye Shi enters this batch through Yongjia learning and practical statecraft, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses Yongjia learning and eastern Zhejiang intellectual entry; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Ye Shi still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves high confidence and an explicit evidence layer.",
+        "timeLabel": "1150–1223 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-yuan-confucian-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "exact",
+        "startYear": 1150,
+        "endYear": 1223,
+        "displayDate": {
+          "zh-CN": "1150—1223 年",
+          "en": "1150–1223 CE"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-yuan-confucian-records"
+      }
+    ],
+    "sourceIds": [
+      "source:song-yuan-confucian-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "wenzhou",
+        "title": {
+          "zh-CN": "温州",
+          "en": "Wenzhou"
+        },
+        "relation": {
+          "zh-CN": "活动与传承区域入口",
+          "en": "Activity and transmission regional entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "叶适",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "xue-xuan",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "薛瑄",
+        "subtitle": "河东理学与官学实践",
+        "shortSummary": "薛瑄以河东理学与官学实践进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用河东理学地方入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "薛瑄的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留high置信度与明确证据层。",
+        "timeLabel": "1389—1464 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Xue Xuan",
+        "subtitle": "Hedong learning and official practice",
+        "shortSummary": "Xue Xuan enters this batch through Hedong learning and official practice, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses Hedong Neo-Confucian local entry; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Xue Xuan still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves high confidence and an explicit evidence layer.",
+        "timeLabel": "1389–1464 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:ming-confucian-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "exact",
+        "startYear": 1389,
+        "endYear": 1464,
+        "displayDate": {
+          "zh-CN": "1389—1464 年",
+          "en": "1389–1464 CE"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:ming-confucian-records"
+      }
+    ],
+    "sourceIds": [
+      "source:ming-confucian-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "hejin",
+        "title": {
+          "zh-CN": "河津",
+          "en": "Hejin"
+        },
+        "relation": {
+          "zh-CN": "出生地/地方入口",
+          "en": "Birthplace/local entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "薛瑄",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "wang-gen",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "王艮",
+        "subtitle": "泰州学派与日用实践",
+        "shortSummary": "王艮以泰州学派与日用实践进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用泰州学派与心学地方传播入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "王艮的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留medium置信度与明确证据层。",
+        "timeLabel": "1483—1541 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Wang Gen",
+        "subtitle": "Taizhou learning and everyday practice",
+        "shortSummary": "Wang Gen enters this batch through Taizhou learning and everyday practice, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses Taizhou school and local Yangming learning entry; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Wang Gen still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves medium confidence and an explicit evidence layer.",
+        "timeLabel": "1483–1541 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:ming-confucian-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "exact",
+        "startYear": 1483,
+        "endYear": 1541,
+        "displayDate": {
+          "zh-CN": "1483—1541 年",
+          "en": "1483–1541 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:ming-confucian-records"
+      }
+    ],
+    "sourceIds": [
+      "source:ming-confucian-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "taizhou",
+        "title": {
+          "zh-CN": "泰州",
+          "en": "Taizhou"
+        },
+        "relation": {
+          "zh-CN": "活动与传承区域入口",
+          "en": "Activity and transmission regional entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "王艮",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "chen-que",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "陈确",
+        "subtitle": "明清之际经学与礼学批评",
+        "shortSummary": "陈确以明清之际经学与礼学批评进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用清初经学与浙北地方入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "陈确的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留medium置信度与明确证据层。",
+        "timeLabel": "1604—1677 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Chen Que",
+        "subtitle": "classical and ritual criticism across the Ming–Qing transition",
+        "shortSummary": "Chen Que enters this batch through classical and ritual criticism across the Ming–Qing transition, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses Early Qing classical learning and northern Zhejiang entry; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Chen Que still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves medium confidence and an explicit evidence layer.",
+        "timeLabel": "1604–1677 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:ming-confucian-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "exact",
+        "startYear": 1604,
+        "endYear": 1677,
+        "displayDate": {
+          "zh-CN": "1604—1677 年",
+          "en": "1604–1677 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:ming-confucian-records"
+      }
+    ],
+    "sourceIds": [
+      "source:ming-confucian-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "haining",
+        "title": {
+          "zh-CN": "海宁",
+          "en": "Haining"
+        },
+        "relation": {
+          "zh-CN": "出生地/地方入口",
+          "en": "Birthplace/local entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "陈确",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "liang-qichao",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "梁启超",
+        "subtitle": "经学现代转型与公共知识",
+        "shortSummary": "梁启超以经学现代转型与公共知识进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用近代思想人物的岭南地方入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "梁启超的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留high置信度与明确证据层。",
+        "timeLabel": "1873—1929 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Liang Qichao",
+        "subtitle": "modern transformation of classical learning and public knowledge",
+        "shortSummary": "Liang Qichao enters this batch through modern transformation of classical learning and public knowledge, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses Lingnan local entry for modern intellectual history; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Liang Qichao still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves high confidence and an explicit evidence layer.",
+        "timeLabel": "1873–1929 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:modern-reform-intellectual-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "exact",
+        "startYear": 1873,
+        "endYear": 1929,
+        "displayDate": {
+          "zh-CN": "1873—1929 年",
+          "en": "1873–1929 CE"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:modern-reform-intellectual-records"
+      }
+    ],
+    "sourceIds": [
+      "source:modern-reform-intellectual-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "xinhui",
+        "title": {
+          "zh-CN": "新会",
+          "en": "Xinhui"
+        },
+        "relation": {
+          "zh-CN": "出生地/地方入口",
+          "en": "Birthplace/local entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "梁启超",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "lu-zuqian",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "吕祖谦",
+        "subtitle": "东莱学与朱子学网络",
+        "shortSummary": "吕祖谦以东莱学与朱子学网络进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用东莱学与南宋经史网络入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "吕祖谦的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留high置信度与明确证据层。",
+        "timeLabel": "1137—1181 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Lü Zuqian",
+        "subtitle": "Donglai learning and the Zhu Xi network",
+        "shortSummary": "Lü Zuqian enters this batch through Donglai learning and the Zhu Xi network, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses Donglai learning and Southern Song classical-history entry; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Lü Zuqian still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves high confidence and an explicit evidence layer.",
+        "timeLabel": "1137–1181 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-neo-confucian-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "exact",
+        "startYear": 1137,
+        "endYear": 1181,
+        "displayDate": {
+          "zh-CN": "1137—1181 年",
+          "en": "1137–1181 CE"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-neo-confucian-records"
+      }
+    ],
+    "sourceIds": [
+      "source:song-neo-confucian-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "jinhua",
+        "title": {
+          "zh-CN": "金华",
+          "en": "Jinhua"
+        },
+        "relation": {
+          "zh-CN": "活动与传承区域入口",
+          "en": "Activity and transmission regional entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "吕祖谦",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "ye-fa-shan",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "叶法善",
+        "subtitle": "唐代道教仪式与宫廷语境",
+        "shortSummary": "叶法善以唐代道教仪式与宫廷语境进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用唐宋道教地方记忆与区域入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "叶法善的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留low置信度与明确证据层。",
+        "timeLabel": "约 631—720 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Ye Fashan",
+        "subtitle": "Tang Daoist ritual and court context",
+        "shortSummary": "Ye Fashan enters this batch through Tang Daoist ritual and court context, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses Tang–Song Daoist local memory and regional entry; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Ye Fashan still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves low confidence and an explicit evidence layer.",
+        "timeLabel": "c. 631–720 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-sui-song-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "circa",
+        "startYear": 631,
+        "endYear": 720,
+        "displayDate": {
+          "zh-CN": "约 631—720 年",
+          "en": "c. 631–720 CE"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-sui-song-records"
+      }
+    ],
+    "sourceIds": [
+      "source:daoist-sui-song-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "quzhou",
+        "title": {
+          "zh-CN": "衢州",
+          "en": "Quzhou"
+        },
+        "relation": {
+          "zh-CN": "活动与传承区域入口",
+          "en": "Activity and transmission regional entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "inferred",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "叶法善",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "wu-yun",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "吴筠",
+        "subtitle": "上清传统与唐代山林道教",
+        "shortSummary": "吴筠以上清传统与唐代山林道教进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用茅山上清传统与道教文化景观入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "吴筠的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留medium置信度与明确证据层。",
+        "timeLabel": "约 700—778 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Wu Yun",
+        "subtitle": "Shangqing traditions and Tang mountain Daoism",
+        "shortSummary": "Wu Yun enters this batch through Shangqing traditions and Tang mountain Daoism, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses Mount Mao Shangqing and Daoist cultural landscape entry; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Wu Yun still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves medium confidence and an explicit evidence layer.",
+        "timeLabel": "c. 700–778 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:daoist-sui-song-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "circa",
+        "startYear": 700,
+        "endYear": 778,
+        "displayDate": {
+          "zh-CN": "约 700—778 年",
+          "en": "c. 700–778 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:daoist-sui-song-records"
+      }
+    ],
+    "sourceIds": [
+      "source:daoist-sui-song-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "mount-mao",
+        "title": {
+          "zh-CN": "茅山",
+          "en": "Mount Mao"
+        },
+        "relation": {
+          "zh-CN": "活动与传承区域入口",
+          "en": "Activity and transmission regional entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "吴筠",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "lin-lingsu",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "林灵素",
+        "subtitle": "神霄道教与北宋宫廷",
+        "shortSummary": "林灵素以神霄道教与北宋宫廷进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用北宋都城与制度空间入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "林灵素的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留medium置信度与明确证据层。",
+        "timeLabel": "约 1076—1120 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Lin Lingsu",
+        "subtitle": "Shenxiao Daoism and the Northern Song court",
+        "shortSummary": "Lin Lingsu enters this batch through Shenxiao Daoism and the Northern Song court, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses Northern Song capital and institutional entry; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Lin Lingsu still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves medium confidence and an explicit evidence layer.",
+        "timeLabel": "c. 1076–1120 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:daoist-sui-song-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "circa",
+        "startYear": 1076,
+        "endYear": 1120,
+        "displayDate": {
+          "zh-CN": "约 1076—1120 年",
+          "en": "c. 1076–1120 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:daoist-sui-song-records"
+      }
+    ],
+    "sourceIds": [
+      "source:daoist-sui-song-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "kaifeng",
+        "title": {
+          "zh-CN": "开封",
+          "en": "Kaifeng"
+        },
+        "relation": {
+          "zh-CN": "活动与传承区域入口",
+          "en": "Activity and transmission regional entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "林灵素",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "wang-wenqing",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "王文卿",
+        "subtitle": "神霄传统与雷法传承",
+        "shortSummary": "王文卿以神霄传统与雷法传承进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用地方道教与学术网络入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "王文卿的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留medium置信度与明确证据层。",
+        "timeLabel": "约 1093—1153 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Wang Wenqing",
+        "subtitle": "Shenxiao traditions and thunder-rite transmission",
+        "shortSummary": "Wang Wenqing enters this batch through Shenxiao traditions and thunder-rite transmission, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses Local Daoist and intellectual network entry; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Wang Wenqing still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves medium confidence and an explicit evidence layer.",
+        "timeLabel": "c. 1093–1153 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-sui-song-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "circa",
+        "startYear": 1093,
+        "endYear": 1153,
+        "displayDate": {
+          "zh-CN": "约 1093—1153 年",
+          "en": "c. 1093–1153 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-sui-song-records"
+      }
+    ],
+    "sourceIds": [
+      "source:daoist-sui-song-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "linchuan",
+        "title": {
+          "zh-CN": "临川",
+          "en": "Linchuan"
+        },
+        "relation": {
+          "zh-CN": "活动与传承区域入口",
+          "en": "Activity and transmission regional entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "inferred",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "王文卿",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "zhang-jixian",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "张继先",
+        "subtitle": "龙虎山天师道与宋代制度",
+        "shortSummary": "张继先以龙虎山天师道与宋代制度进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用天师道制度与龙虎山山岳入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "张继先的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留medium置信度与明确证据层。",
+        "timeLabel": "约 1092—1127 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Zhang Jixian",
+        "subtitle": "Celestial Masters tradition and Song institutions",
+        "shortSummary": "Zhang Jixian enters this batch through Celestial Masters tradition and Song institutions, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses Celestial Masters institutions and Mount Longhu; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Zhang Jixian still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves medium confidence and an explicit evidence layer.",
+        "timeLabel": "c. 1092–1127 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:daoist-sui-song-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "circa",
+        "startYear": 1092,
+        "endYear": 1127,
+        "displayDate": {
+          "zh-CN": "约 1092—1127 年",
+          "en": "c. 1092–1127 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:daoist-sui-song-records"
+      }
+    ],
+    "sourceIds": [
+      "source:daoist-sui-song-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "longhushan",
+        "title": {
+          "zh-CN": "龙虎山",
+          "en": "Mount Longhu"
+        },
+        "relation": {
+          "zh-CN": "活动与传承区域入口",
+          "en": "Activity and transmission regional entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "张继先",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "bai-yuchan",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "白玉蟾",
+        "subtitle": "南宗内丹与琼州区域记忆",
+        "shortSummary": "白玉蟾以南宗内丹与琼州区域记忆进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用南方道教传承的区域近似入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "白玉蟾的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留low置信度与明确证据层。",
+        "timeLabel": "约 1194—1229 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Bai Yuchan",
+        "subtitle": "Southern School inner alchemy and Qiongzhou memory",
+        "shortSummary": "Bai Yuchan enters this batch through Southern School inner alchemy and Qiongzhou memory, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses Approximate regional entry for southern Daoist transmission; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Bai Yuchan still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves low confidence and an explicit evidence layer.",
+        "timeLabel": "c. 1194–1229 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-yuan-ming-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "circa",
+        "startYear": 1194,
+        "endYear": 1229,
+        "displayDate": {
+          "zh-CN": "约 1194—1229 年",
+          "en": "c. 1194–1229 CE"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-yuan-ming-records"
+      }
+    ],
+    "sourceIds": [
+      "source:daoist-yuan-ming-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "qionghai",
+        "title": {
+          "zh-CN": "琼海（琼州区域）",
+          "en": "Qionghai (Qiongzhou region)"
+        },
+        "relation": {
+          "zh-CN": "活动与传承区域入口",
+          "en": "Activity and transmission regional entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "inferred",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "白玉蟾",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "li-daochun",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "李道纯",
+        "subtitle": "内丹与三教会通",
+        "shortSummary": "李道纯以内丹与三教会通进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用江南城市与宗教流通入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "李道纯的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留low置信度与明确证据层。",
+        "timeLabel": "约 13 世纪",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Li Daochun",
+        "subtitle": "inner alchemy and convergence of the three teachings",
+        "shortSummary": "Li Daochun enters this batch through inner alchemy and convergence of the three teachings, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses Jiangnan urban and religious-circulation entry; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Li Daochun still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves low confidence and an explicit evidence layer.",
+        "timeLabel": "c. thirteenth century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-yuan-ming-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "century",
+        "startYear": 1200,
+        "endYear": 1299,
+        "displayDate": {
+          "zh-CN": "约 13 世纪",
+          "en": "c. thirteenth century CE"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-yuan-ming-records"
+      }
+    ],
+    "sourceIds": [
+      "source:daoist-yuan-ming-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "yangzhou",
+        "title": {
+          "zh-CN": "扬州",
+          "en": "Yangzhou"
+        },
+        "relation": {
+          "zh-CN": "活动与传承区域入口",
+          "en": "Activity and transmission regional entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "inferred",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "李道纯",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "du-daojian",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "杜道坚",
+        "subtitle": "道教经籍与宫观网络",
+        "shortSummary": "杜道坚以道教经籍与宫观网络进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用江南寺院、刻经与学术网络入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "杜道坚的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留low置信度与明确证据层。",
+        "timeLabel": "约 1237—1318 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Du Daojian",
+        "subtitle": "Daoist canons and monastery networks",
+        "shortSummary": "Du Daojian enters this batch through Daoist canons and monastery networks, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses Jiangnan monastery, printing and learning entry; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Du Daojian still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves low confidence and an explicit evidence layer.",
+        "timeLabel": "c. 1237–1318 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-yuan-ming-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "circa",
+        "startYear": 1237,
+        "endYear": 1318,
+        "displayDate": {
+          "zh-CN": "约 1237—1318 年",
+          "en": "c. 1237–1318 CE"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-yuan-ming-records"
+      }
+    ],
+    "sourceIds": [
+      "source:daoist-yuan-ming-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "hangzhou",
+        "title": {
+          "zh-CN": "杭州",
+          "en": "Hangzhou"
+        },
+        "relation": {
+          "zh-CN": "活动与传承区域入口",
+          "en": "Activity and transmission regional entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "inferred",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "杜道坚",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "zhang-yu-chu",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "张宇初",
+        "subtitle": "明代天师道与道教典籍",
+        "shortSummary": "张宇初以明代天师道与道教典籍进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用天师道制度与龙虎山山岳入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "张宇初的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留medium置信度与明确证据层。",
+        "timeLabel": "1359—1410 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Zhang Yuchu",
+        "subtitle": "Ming Celestial Masters traditions and Daoist texts",
+        "shortSummary": "Zhang Yuchu enters this batch through Ming Celestial Masters traditions and Daoist texts, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses Celestial Masters institutions and Mount Longhu; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Zhang Yuchu still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves medium confidence and an explicit evidence layer.",
+        "timeLabel": "1359–1410 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:daoist-yuan-ming-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "exact",
+        "startYear": 1359,
+        "endYear": 1410,
+        "displayDate": {
+          "zh-CN": "1359—1410 年",
+          "en": "1359–1410 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:daoist-yuan-ming-records"
+      }
+    ],
+    "sourceIds": [
+      "source:daoist-yuan-ming-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "longhushan",
+        "title": {
+          "zh-CN": "龙虎山",
+          "en": "Mount Longhu"
+        },
+        "relation": {
+          "zh-CN": "活动与传承区域入口",
+          "en": "Activity and transmission regional entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "张宇初",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "zhao-yi-zhen",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "赵宜真",
+        "subtitle": "元明内丹与江西传承",
+        "shortSummary": "赵宜真以元明内丹与江西传承进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用江西道教与山水文化区域入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "赵宜真的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留low置信度与明确证据层。",
+        "timeLabel": "约 14 世纪；生平年代待核",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Zhao Yizhen",
+        "subtitle": "late Yuan–early Ming alchemy and Jiangxi transmission",
+        "shortSummary": "Zhao Yizhen enters this batch through late Yuan–early Ming alchemy and Jiangxi transmission, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses Jiangxi Daoist and river–mountain cultural entry; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Zhao Yizhen still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves low confidence and an explicit evidence layer.",
+        "timeLabel": "c. fourteenth century; dates under review",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-yuan-ming-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "century",
+        "startYear": 1300,
+        "endYear": 1399,
+        "displayDate": {
+          "zh-CN": "约 14 世纪；生平年代待核",
+          "en": "c. fourteenth century; dates under review"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-yuan-ming-records"
+      }
+    ],
+    "sourceIds": [
+      "source:daoist-yuan-ming-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "jiujiang",
+        "title": {
+          "zh-CN": "九江",
+          "en": "Jiujiang"
+        },
+        "relation": {
+          "zh-CN": "活动与传承区域入口",
+          "en": "Activity and transmission regional entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "inferred",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "赵宜真",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "dharmaraksa",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "竺法护",
+        "subtitle": "西域译师与洛阳译经",
+        "shortSummary": "竺法护以西域译师与洛阳译经进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用洛阳城市与中古思想网络入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "竺法护的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留medium置信度与明确证据层。",
+        "timeLabel": "约 233—310 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Dharmaraksa",
+        "subtitle": "Central Asian translation and Luoyang Buddhist texts",
+        "shortSummary": "Dharmaraksa enters this batch through Central Asian translation and Luoyang Buddhist texts, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses Luoyang city and medieval intellectual network entry; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Dharmaraksa still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves medium confidence and an explicit evidence layer.",
+        "timeLabel": "c. 233–310 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-transmission-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "circa",
+        "startYear": 233,
+        "endYear": 310,
+        "displayDate": {
+          "zh-CN": "约 233—310 年",
+          "en": "c. 233–310 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-transmission-records"
+      }
+    ],
+    "sourceIds": [
+      "source:buddhist-transmission-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "luoyang",
+        "title": {
+          "zh-CN": "洛阳",
+          "en": "Luoyang"
+        },
+        "relation": {
+          "zh-CN": "活动与传承区域入口",
+          "en": "Activity and transmission regional entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "竺法护",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "sanghadeva",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "僧伽提婆",
+        "subtitle": "阿毗达磨译经与建康网络",
+        "shortSummary": "僧伽提婆以阿毗达磨译经与建康网络进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用六朝至五代佛教城市网络入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "僧伽提婆的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留low置信度与明确证据层。",
+        "timeLabel": "约 4 世纪后半叶—5 世纪初",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Sanghadeva",
+        "subtitle": "Abhidharma translation and Jiankang networks",
+        "shortSummary": "Sanghadeva enters this batch through Abhidharma translation and Jiankang networks, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses Six Dynasties–Five Dynasties Buddhist urban entry; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Sanghadeva still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves low confidence and an explicit evidence layer.",
+        "timeLabel": "c. late fourth–early fifth century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:buddhist-transmission-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "circa",
+        "startYear": 350,
+        "endYear": 410,
+        "displayDate": {
+          "zh-CN": "约 4 世纪后半叶—5 世纪初",
+          "en": "c. late fourth–early fifth century CE"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:buddhist-transmission-records"
+      }
+    ],
+    "sourceIds": [
+      "source:buddhist-transmission-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "jiankang",
+        "title": {
+          "zh-CN": "建康",
+          "en": "Jiankang"
+        },
+        "relation": {
+          "zh-CN": "活动与传承区域入口",
+          "en": "Activity and transmission regional entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "inferred",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "僧伽提婆",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "sengyou",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "僧祐",
+        "subtitle": "经录编纂与译经史记忆",
+        "shortSummary": "僧祐以经录编纂与译经史记忆进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用六朝至五代佛教城市网络入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "僧祐的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留high置信度与明确证据层。",
+        "timeLabel": "445—518 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Sengyou",
+        "subtitle": "catalogues and the memory of translation history",
+        "shortSummary": "Sengyou enters this batch through catalogues and the memory of translation history, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses Six Dynasties–Five Dynasties Buddhist urban entry; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Sengyou still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves high confidence and an explicit evidence layer.",
+        "timeLabel": "445–518 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-transmission-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "exact",
+        "startYear": 445,
+        "endYear": 518,
+        "displayDate": {
+          "zh-CN": "445—518 年",
+          "en": "445–518 CE"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-transmission-records"
+      }
+    ],
+    "sourceIds": [
+      "source:buddhist-transmission-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "jiankang",
+        "title": {
+          "zh-CN": "建康",
+          "en": "Jiankang"
+        },
+        "relation": {
+          "zh-CN": "活动与传承区域入口",
+          "en": "Activity and transmission regional entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "僧祐",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "daosheng",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "道生",
+        "subtitle": "佛性论争与译学网络",
+        "shortSummary": "道生以佛性论争与译学网络进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用六朝至五代佛教城市网络入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "道生的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留medium置信度与明确证据层。",
+        "timeLabel": "约 355—434 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Daosheng",
+        "subtitle": "Buddha-nature debate and translation networks",
+        "shortSummary": "Daosheng enters this batch through Buddha-nature debate and translation networks, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses Six Dynasties–Five Dynasties Buddhist urban entry; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Daosheng still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves medium confidence and an explicit evidence layer.",
+        "timeLabel": "c. 355–434 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-transmission-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "circa",
+        "startYear": 355,
+        "endYear": 434,
+        "displayDate": {
+          "zh-CN": "约 355—434 年",
+          "en": "c. 355–434 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-transmission-records"
+      }
+    ],
+    "sourceIds": [
+      "source:buddhist-transmission-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "jiankang",
+        "title": {
+          "zh-CN": "建康",
+          "en": "Jiankang"
+        },
+        "relation": {
+          "zh-CN": "活动与传承区域入口",
+          "en": "Activity and transmission regional entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "道生",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "daoxin",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "道信",
+        "subtitle": "黄梅东山法门与早期禅宗",
+        "shortSummary": "道信以黄梅东山法门与早期禅宗进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用东山法门与禅宗记忆入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "道信的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留medium置信度与明确证据层。",
+        "timeLabel": "580—651 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Daoxin",
+        "subtitle": "Huangmei East Mountain tradition and early Chan",
+        "shortSummary": "Daoxin enters this batch through Huangmei East Mountain tradition and early Chan, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses East Mountain and Chan-memory entry; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Daoxin still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves medium confidence and an explicit evidence layer.",
+        "timeLabel": "580–651 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "exact",
+        "startYear": 580,
+        "endYear": 651,
+        "displayDate": {
+          "zh-CN": "580—651 年",
+          "en": "580–651 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "sourceIds": [
+      "source:chan-huayan-institutional-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "huangmei",
+        "title": {
+          "zh-CN": "黄梅",
+          "en": "Huangmei"
+        },
+        "relation": {
+          "zh-CN": "活动与传承区域入口",
+          "en": "Activity and transmission regional entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "inferred",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "道信",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "hongren",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "弘忍",
+        "subtitle": "黄梅僧团与禅宗传承",
+        "shortSummary": "弘忍以黄梅僧团与禅宗传承进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用东山法门与禅宗记忆入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "弘忍的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留medium置信度与明确证据层。",
+        "timeLabel": "约 601—674 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Hongren",
+        "subtitle": "Huangmei community and Chan transmission",
+        "shortSummary": "Hongren enters this batch through Huangmei community and Chan transmission, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses East Mountain and Chan-memory entry; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Hongren still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves medium confidence and an explicit evidence layer.",
+        "timeLabel": "c. 601–674 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "circa",
+        "startYear": 601,
+        "endYear": 674,
+        "displayDate": {
+          "zh-CN": "约 601—674 年",
+          "en": "c. 601–674 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "sourceIds": [
+      "source:chan-huayan-institutional-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "huangmei",
+        "title": {
+          "zh-CN": "黄梅",
+          "en": "Huangmei"
+        },
+        "relation": {
+          "zh-CN": "活动与传承区域入口",
+          "en": "Activity and transmission regional entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "inferred",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "弘忍",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "sengcan",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "僧璨",
+        "subtitle": "早期禅宗传承与司空山",
+        "shortSummary": "僧璨以早期禅宗传承与司空山进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用早期禅宗传承与山岳记忆入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "僧璨的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留low置信度与明确证据层。",
+        "timeLabel": "约 510—606 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Sengcan",
+        "subtitle": "early Chan transmission and Mount Sikong",
+        "shortSummary": "Sengcan enters this batch through early Chan transmission and Mount Sikong, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses Early Chan transmission and mountain-memory entry; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Sengcan still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves low confidence and an explicit evidence layer.",
+        "timeLabel": "c. 510–606 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "circa",
+        "startYear": 510,
+        "endYear": 606,
+        "displayDate": {
+          "zh-CN": "约 510—606 年",
+          "en": "c. 510–606 CE"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "sourceIds": [
+      "source:chan-huayan-institutional-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "sikongshan",
+        "title": {
+          "zh-CN": "司空山",
+          "en": "Mount Sikong"
+        },
+        "relation": {
+          "zh-CN": "活动与传承区域入口",
+          "en": "Activity and transmission regional entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "inferred",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "僧璨",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "shitou-xiqian",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "石头希迁",
+        "subtitle": "南岳禅与唐代山地网络",
+        "shortSummary": "石头希迁以南岳禅与唐代山地网络进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用南岳山地与佛道文化景观入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "石头希迁的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留medium置信度与明确证据层。",
+        "timeLabel": "700—790 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Shitou Xiqian",
+        "subtitle": "Nanyue Chan and Tang mountain networks",
+        "shortSummary": "Shitou Xiqian enters this batch through Nanyue Chan and Tang mountain networks, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses Nanyue mountain and Buddhist–Daoist landscape entry; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Shitou Xiqian still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves medium confidence and an explicit evidence layer.",
+        "timeLabel": "700–790 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "exact",
+        "startYear": 700,
+        "endYear": 790,
+        "displayDate": {
+          "zh-CN": "700—790 年",
+          "en": "700–790 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "sourceIds": [
+      "source:chan-huayan-institutional-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "nanyue",
+        "title": {
+          "zh-CN": "南岳",
+          "en": "Nanyue"
+        },
+        "relation": {
+          "zh-CN": "活动与传承区域入口",
+          "en": "Activity and transmission regional entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "石头希迁",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "chengguan",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "澄观",
+        "subtitle": "华严经疏与五台山文化景观",
+        "shortSummary": "澄观以华严经疏与五台山文化景观进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用华严、朝圣与佛教文化景观入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "澄观的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留medium置信度与明确证据层。",
+        "timeLabel": "738—839 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Chengguan",
+        "subtitle": "Huayan commentary and Mount Wutai",
+        "shortSummary": "Chengguan enters this batch through Huayan commentary and Mount Wutai, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses Huayan, pilgrimage and Buddhist cultural landscape entry; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Chengguan still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves medium confidence and an explicit evidence layer.",
+        "timeLabel": "738–839 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "exact",
+        "startYear": 738,
+        "endYear": 839,
+        "displayDate": {
+          "zh-CN": "738—839 年",
+          "en": "738–839 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "sourceIds": [
+      "source:chan-huayan-institutional-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "mount-wutai",
+        "title": {
+          "zh-CN": "五台山",
+          "en": "Mount Wutai"
+        },
+        "relation": {
+          "zh-CN": "活动与传承区域入口",
+          "en": "Activity and transmission regional entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "澄观",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "yunmen-wenyan",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "云门文偃",
+        "subtitle": "云门禅与岭南寺院网络",
+        "shortSummary": "云门文偃以云门禅与岭南寺院网络进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用岭南禅宗与云门传统入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "云门文偃的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留medium置信度与明确证据层。",
+        "timeLabel": "约 864—949 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Yunmen Wenyan",
+        "subtitle": "Yunmen Chan and Lingnan monasteries",
+        "shortSummary": "Yunmen Wenyan enters this batch through Yunmen Chan and Lingnan monasteries, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses Lingnan Chan and Yunmen entry; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Yunmen Wenyan still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves medium confidence and an explicit evidence layer.",
+        "timeLabel": "c. 864–949 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "circa",
+        "startYear": 864,
+        "endYear": 949,
+        "displayDate": {
+          "zh-CN": "约 864—949 年",
+          "en": "c. 864–949 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "sourceIds": [
+      "source:chan-huayan-institutional-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "shaoguan",
+        "title": {
+          "zh-CN": "韶关",
+          "en": "Shaoguan"
+        },
+        "relation": {
+          "zh-CN": "活动与传承区域入口",
+          "en": "Activity and transmission regional entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "inferred",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "云门文偃",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "fayan-wenyi",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "法眼文益",
+        "subtitle": "法眼宗与建康禅宗网络",
+        "shortSummary": "法眼文益以法眼宗与建康禅宗网络进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用六朝至五代佛教城市网络入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "法眼文益的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留medium置信度与明确证据层。",
+        "timeLabel": "约 885—958 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Fayan Wenyi",
+        "subtitle": "Fayan school and Jiankang Chan networks",
+        "shortSummary": "Fayan Wenyi enters this batch through Fayan school and Jiankang Chan networks, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses Six Dynasties–Five Dynasties Buddhist urban entry; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Fayan Wenyi still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves medium confidence and an explicit evidence layer.",
+        "timeLabel": "c. 885–958 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "circa",
+        "startYear": 885,
+        "endYear": 958,
+        "displayDate": {
+          "zh-CN": "约 885—958 年",
+          "en": "c. 885–958 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "sourceIds": [
+      "source:chan-huayan-institutional-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "jiankang",
+        "title": {
+          "zh-CN": "建康",
+          "en": "Jiankang"
+        },
+        "relation": {
+          "zh-CN": "活动与传承区域入口",
+          "en": "Activity and transmission regional entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "法眼文益",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "dongshan-liangjie",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "洞山良价",
+        "subtitle": "曹洞禅源流与唐末山地网络",
+        "shortSummary": "洞山良价以曹洞禅源流与唐末山地网络进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用唐末禅宗与洞山区域入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "洞山良价的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留medium置信度与明确证据层。",
+        "timeLabel": "806—869 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Dongshan Liangjie",
+        "subtitle": "Caodong origins and late Tang mountain networks",
+        "shortSummary": "Dongshan Liangjie enters this batch through Caodong origins and late Tang mountain networks, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses Late Tang Chan and Dongshan regional entry; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Dongshan Liangjie still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves medium confidence and an explicit evidence layer.",
+        "timeLabel": "806–869 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "exact",
+        "startYear": 806,
+        "endYear": 869,
+        "displayDate": {
+          "zh-CN": "806—869 年",
+          "en": "806–869 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "sourceIds": [
+      "source:chan-huayan-institutional-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "ruzhou",
+        "title": {
+          "zh-CN": "汝州",
+          "en": "Ruzhou"
+        },
+        "relation": {
+          "zh-CN": "活动与传承区域入口",
+          "en": "Activity and transmission regional entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "洞山良价",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "zhongfeng-mingben",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "中峰明本",
+        "subtitle": "元代山林禅与江南传承",
+        "shortSummary": "中峰明本以元代山林禅与江南传承进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用江南寺院、刻经与学术网络入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "中峰明本的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留medium置信度与明确证据层。",
+        "timeLabel": "1263—1323 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Zhongfeng Mingben",
+        "subtitle": "Yuan mountain Chan and Jiangnan transmission",
+        "shortSummary": "Zhongfeng Mingben enters this batch through Yuan mountain Chan and Jiangnan transmission, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses Jiangnan monastery, printing and learning entry; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Zhongfeng Mingben still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves medium confidence and an explicit evidence layer.",
+        "timeLabel": "1263–1323 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "exact",
+        "startYear": 1263,
+        "endYear": 1323,
+        "displayDate": {
+          "zh-CN": "1263—1323 年",
+          "en": "1263–1323 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "sourceIds": [
+      "source:chan-huayan-institutional-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "hangzhou",
+        "title": {
+          "zh-CN": "杭州",
+          "en": "Hangzhou"
+        },
+        "relation": {
+          "zh-CN": "活动与传承区域入口",
+          "en": "Activity and transmission regional entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "中峰明本",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "zhenke",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "真可",
+        "subtitle": "晚明刻经与佛教复兴网络",
+        "shortSummary": "真可以晚明刻经与佛教复兴网络进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用江南寺院、刻经与学术网络入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "真可的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留medium置信度与明确证据层。",
+        "timeLabel": "1543—1603 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Zhenke",
+        "subtitle": "late Ming scripture printing and Buddhist renewal",
+        "shortSummary": "Zhenke enters this batch through late Ming scripture printing and Buddhist renewal, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses Jiangnan monastery, printing and learning entry; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Zhenke still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves medium confidence and an explicit evidence layer.",
+        "timeLabel": "1543–1603 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "exact",
+        "startYear": 1543,
+        "endYear": 1603,
+        "displayDate": {
+          "zh-CN": "1543—1603 年",
+          "en": "1543–1603 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "sourceIds": [
+      "source:chan-huayan-institutional-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "hangzhou",
+        "title": {
+          "zh-CN": "杭州",
+          "en": "Hangzhou"
+        },
+        "relation": {
+          "zh-CN": "活动与传承区域入口",
+          "en": "Activity and transmission regional entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "真可",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "lianchi-zhuhong",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "莲池袾宏",
+        "subtitle": "晚明净土、戒律与寺院网络",
+        "shortSummary": "莲池袾宏以晚明净土、戒律与寺院网络进入本批人物网络，连接人物、事件与地点三条数据链。",
+        "curatorialDescription": [
+          "地图点位采用江南寺院、刻经与学术网络入口表达，不把后世传播或传记叙事写回为精确生平路线。"
+        ],
+        "researchNote": "莲池袾宏的年代、活动范围、文本归属与人物关系仍需按传记、文集、经录或道藏版本继续核对；当前保留medium置信度与明确证据层。",
+        "timeLabel": "1535—1615 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Lianchi Zhuhong",
+        "subtitle": "late Ming Pure Land, vinaya and monastery networks",
+        "shortSummary": "Lianchi Zhuhong enters this batch through late Ming Pure Land, vinaya and monastery networks, linking figure, event and place data.",
+        "curatorialDescription": [
+          "The map point uses Jiangnan monastery, printing and learning entry; later transmission and biographical narratives are not rewritten as a precise itinerary."
+        ],
+        "researchNote": "Dates, activity range, textual attribution and relations for Lianchi Zhuhong still require checking across biographies, collected writings, catalogues or Daoist/Buddhist records; this release preserves medium confidence and an explicit evidence layer.",
+        "timeLabel": "1535–1615 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "exact",
+        "startYear": 1535,
+        "endYear": 1615,
+        "displayDate": {
+          "zh-CN": "1535—1615 年",
+          "en": "1535–1615 CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "sourceIds": [
+      "source:chan-huayan-institutional-records",
+      "source:historical-geography-second-batch",
+      "source:editorial-method"
+    ],
+    "related": [
+      {
+        "kind": "place",
+        "slug": "hangzhou",
+        "title": {
+          "zh-CN": "杭州",
+          "en": "Hangzhou"
+        },
+        "relation": {
+          "zh-CN": "活动与传承区域入口",
+          "en": "Activity and transmission regional entry"
+        }
+      }
+    ],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "莲池袾宏",
+      "nameLanguageCode": "lzh"
+    }
+  }
+]

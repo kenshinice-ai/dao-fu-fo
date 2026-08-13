@@ -1,16 +1,22 @@
 # 项目现状与实施路线图
 
-> 基线日期：2026-08-11
-> 当前判断：工程、全历史 map-first 入口与 A1+A2 内容批次已成立；production 继续作为线上唯一事实基准。当前停在“内容扩充后可复盘”的收口节点，Public RC 边界保持独立；Museum / Explore / Research 保留为深度层。
+> 基线日期：2026-08-13
+> 当前判断：工程、全历史 map-first 入口与第二批 100 条内容闭环已成立；production 继续作为线上唯一事实基准。当前正在执行提交前全量门禁，随后停在“第二批内容上线复盘”节点，Public RC 边界保持独立；Museum / Explore / Research 保留为深度层。
 
-## 2026-08-11 A1+A2 production 收口点
+## 2026-08-13 第二批 100 条内容发布前收口点
+
+- 本轮在首批 100 人物基线上新增 40 位人物、40 个事件、20 个地点；当前完整 Alpha 为 428 个编译实体（人物 140、事件 145、地点 80、路线 4、文本 16、文本版本 8、概念 6、机构 6、博物馆对象 9、段落 14）、647 条关系、91 个来源、3 条音频；数据库 bundle 预期为 431 个实体（含 3 个三传统字典实体）；
+- 新增人物按汉代经学/儒学 15、道教 10、佛教 15 分组；每人均有时间、来源、事件、地点和既有数据库人物连接；新增人物之间有 15 条互动关系，关系和地点投影遵守证据层与传统记忆边界；
+- `npm run verify:second-100` 已通过；完整 `npm run check`、Cloudflare Pages production 部署和线上 default/unique smoke 是本轮剩余发布动作。部署后不自动继续扩容，重新进入用户复盘与事实核验节点。
+
+## 2026-08-11 A1+A2 production 收口点（历史）
 
 - **产品方向已校正**：首页以互动现实地图为核心；人物是入口，时间、空间、事件、地点、路线、关系、经典、言论与后世影响共同组成网络；不再用隋唐 MVP 限制全历史范围；
 - **当前可用交互**：Leaflet 底图、缩放、拖动、双击、键盘、全境、popup、地点 dossier、路线 polyline、路线账本、人物关系 focus、可访问地点索引；首页与 Explore 共用 `CivilisationMap`；
 - **全历史读模型**：地图和时间轴优先读 `overview`；时间轴 `-600—1200 / 84 events`，`suitang` 保留为 `581—907 / 63 events` 兼容切片；已有地图点带时间范围，并与共享 URL 时间窗口联动；
 - **人物地图状态**：当前 26 位人物入口全部通过回归；A1 人物进入现实地图或明确位置状态，A2 神话/神圣人物进入 symbolic cosmos；没有把神话人物伪造为现实经纬度；
 - **共享语境入口**：人物选择器动态读取 search read model，首页提供 26 位人物的地图/Cosmos 或 dossier 入口；每位新增人物都连接时间、地点/空间、事件、文本/传承、关系与来源；
-- **当前内容规模**：140 个实体、26 位人物、21 个地点、31 个事件、3 条路线、159 条关系、54 个来源、3 条音频；现实地图索引显示 14 个地点，symbolic cosmos 显示 16 个节点与 12 条边；
+- **当前内容规模（历史快照）**：140 个实体、26 位人物、21 个地点、31 个事件、3 条路线、159 条关系、54 个来源、3 条音频；现实地图索引显示 14 个地点，symbolic cosmos 显示 16 个节点与 12 条边；
 - **内容审核状态**：Full Alpha quality report 为 352 blockers；review queue 为 302 subjects（227 blocking / 75 non-blocking）；这保持为 Research 中的透明审核队列，不等同于 Public RC 批准；
 - **线上基线**：默认 <https://dao-ru-fo-digital-museum.pages.dev>；最新 unique <https://23c99acc.dao-ru-fo-digital-museum.pages.dev>；deployment ID `23c99acc-a45d-48d3-92fd-8d7b4a69438a`；`main` / `cc734ca`；manifest `2026.08.alpha.1 / alpha / preview`；Cloudflare production-only；上一版 `c4ae1eb6-61a0-42cc-9e17-94323fa197cb` 可回滚；
 - **验收证据**：production 脚本内置 `npm run check` 全部通过；unit 17/17；Playwright + axe `48 passed / 1 skipped`（49 tests）；unique/default HTTP smoke 各 `25/25`；线上浏览器确认首页 26 人物、真实地图/缩放、Cosmos 3/7/5/12 结构、人物聚焦、庄子 dossier 与 0 控制台错误；
@@ -78,14 +84,14 @@ Cloudflare Pages static dist          不含数据库连接
 
 | 领域 | 当前状态 | 核验结果 |
 | --- | --- | --- |
-| Web 原型 | 可运行、可构建、可自动回归；production 已同步 A1+A2 Full Alpha | 中英文、Museum/Explore/Research、桌面与 390px 验收已完成；Full Alpha 浏览器套件 48 passed / 1 skipped（49 tests），含首页 26 人物入口、人物比较、文本对读、地图交互、Cosmos 和 axe WCAG A/AA 扫描；production manifest 为 `2026.08.alpha.1 / alpha / preview` |
-| Alpha 内容 | 最低数量完成并扩展跨时代与神话入口 | 140 个内容实体、159 条关系、3 条音频脚本、54 个来源；双语实体 artifact 共 280 个；人物 26、事件 31、地点 21、路线 3 |
+| Web 原型 | 可运行、可构建、可自动回归；第二批 100 条内容正在同步 production Full Alpha | 中英文、Museum/Explore/Research、桌面与 390px 验收保持既有覆盖；本轮增加批次级闭环校验，并在发布后补录最终浏览器与线上烟测证据 |
+| Alpha 内容 | 首批 100 人物后再扩充 100 条关联内容 | 428 个编译内容实体、647 条关系、3 条音频脚本、91 个来源；人物 140、事件 145、地点 80、路线 4 |
 | 数据库导入契约 | 已生成并验证 | 143 个 canonical entities（含 3 个顶级传统）、54 个来源、286 条翻译、319 条 entity-source、157 条 tradition assignment、140 条时间断言；1 个 Public RC2、56 个候选 subject、391 条 review records 和 1 个 promotion record |
-| Explore 派生模型 | 已生成、同步并验证 | Full Alpha 自动同步 compiler 的 280 个双语实体 artifact、26 位人物搜索入口、54 个来源、14 个现实地图地点索引、16 节点/12 边 symbolic-cosmos 模型、全历史 overview 时间轴、48 个图节点/159 条关系；比较页提供 3 人物 × 9 维度并排矩阵及桥接节点；文本对读提供跨文本与同一文本版本对读、译文措辞记录和 reviewer evidence；focus projection 会把关系时间断言加入聚焦时间轴并过滤空间节点；时间范围、路线廊道、人物 map/Cosmos 入口和来源跳转已接入；首页提供 26 位人物 spotlight，传统入口计数为 12/5/9 |
-| 内容治理 | 完整 Alpha 已进入 production；Public RC2 仍保留独立审核边界 | quality report、review queue、source index、route manifest、SHA-256 manifest 均由 compiler 生成；production 当前为 352 blockers、302 个 review subjects（227 个 blocking）；Public RC2 56 个 subject 的 checks 已 passed，Public artifact 为 0 blocker，Research 与文本阅读卡保留审核证据 |
+| Explore 派生模型 | 第二批编译前后保持单一 canonical read model | Full Alpha 将自动同步 compiler 的双语实体、140 位人物搜索入口、91 个来源、75 个现实地图地点索引、18 节点/14 边 symbolic-cosmos 模型、全历史 overview 时间轴和 647 条关系；点击人物/地点/事件继续只改变共享 focus，面板、地图和时间轴从同一关系集合反向派生 |
+| 内容治理 | 完整 Alpha 继续保持透明审核边界；第二批发布前复核中 | quality report、review queue、source index、route manifest、SHA-256 manifest 均由 compiler 生成；本批新增内容继续保留 `preview` publication 与证据等级，不把 Full Alpha 上线误称为 Public RC 批准 |
 | 数据库 schema | 真实集成通过 | 001–015 migration、checksum-aware runner、事务 importer、state verifier、PostGIS/pg_trgm、领域 profile、Public 只读视图和 release/promotion 留痕；fresh/repeat 结果一致 |
-| 发布隔离 | 已固化 | Public artifact 当前为 34 entities / 41 relations / 0 audio / 0 blocker；Full Alpha production 为 140 entities / 159 relations / 3 audio；compiler 与 Web staging 位于 iCloud 之外的本机临时目录；`verify:architecture` 阻止 Web/部署连接数据库或直读 Alpha 源内容；production 默认 public，只有显式 `CF_PAGES_PRODUCTION_VISIBILITY=preview` 才进入 Full Alpha 模式 |
-| 总门禁 | 通过 | `npm run check`、unit tests 17/17、Full Alpha 浏览器 48 passed / 1 skipped、migration/import plan、architecture、Preview/Public compiler、RC ready gate、bundle、content、quota、Vite build、static release、线上 default/unique HTTP smoke 各 25/25 和线上浏览器关键路径全通过 |
+| 发布隔离 | 已固化 | Public artifact 继续独立保持 34 entities / 41 relations / 0 audio / 0 blocker；本批 Full Alpha 目标为 428 entities / 647 relations / 3 audio；`verify:architecture` 阻止 Web/部署连接数据库或直读 Alpha 源内容；production 默认 public，只有显式 `CF_PAGES_PRODUCTION_VISIBILITY=preview` 才进入 Full Alpha 模式 |
+| 总门禁 | 发布前执行中 | 批次闭环已通过；待完成 `npm run check`、migration/import plan、compiler、database bundle、Vite build、static release、Cloudflare production 与线上 default/unique HTTP smoke |
 
 > 以下是此前更大 Preview 的历史快照，不是当前 production Alpha；当前线上基线以本文件顶部和 [最新 production handoff](./HANDOFF.md) 为准。
 

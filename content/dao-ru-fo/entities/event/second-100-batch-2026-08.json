@@ -1,0 +1,2682 @@
+[
+  {
+    "kind": "event",
+    "slug": "xu-shen-shuowen-compilation",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "许慎编纂《说文解字》的文字训诂工程",
+        "shortSummary": "许慎编纂《说文解字》的文字训诂工程把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "许慎的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持medium置信度。",
+        "timeLabel": "约 2 世纪初；成书阶段",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Xu Shen's Shuowen Jiezi philological project",
+        "shortSummary": "Xu Shen's Shuowen Jiezi philological project places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Xu Shen still requires separation across editions, biographies and local records; this release keeps medium confidence.",
+        "timeLabel": "early second century CE; compilation phase",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:han-philology-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "compilation",
+        "timeType": "range",
+        "startYear": 100,
+        "endYear": 121,
+        "displayDate": {
+          "zh-CN": "约 2 世纪初；成书阶段",
+          "en": "early second century CE; compilation phase"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:han-philology-records"
+      }
+    ],
+    "sourceIds": [
+      "source:han-philology-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "editorial_project",
+      "historicity": "documented",
+      "eventScope": "regional",
+      "sequenceOrder": 301
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "zheng-xuan-classical-commentary",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "郑玄注经与礼学传授网络",
+        "shortSummary": "郑玄注经与礼学传授网络把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "郑玄的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持medium置信度。",
+        "timeLabel": "约 2 世纪后半叶",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Zheng Xuan's classical commentary and ritual-learning network",
+        "shortSummary": "Zheng Xuan's classical commentary and ritual-learning network places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Zheng Xuan still requires separation across editions, biographies and local records; this release keeps medium confidence.",
+        "timeLabel": "later second century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:han-philology-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 160,
+        "endYear": 200,
+        "displayDate": {
+          "zh-CN": "约 2 世纪后半叶",
+          "en": "later second century CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:han-philology-records"
+      }
+    ],
+    "sourceIds": [
+      "source:han-philology-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "documented",
+      "eventScope": "regional",
+      "sequenceOrder": 302
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "ma-rong-classical-teaching",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "马融的经学讲授与古文整理",
+        "shortSummary": "马融的经学讲授与古文整理把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "马融的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持medium置信度。",
+        "timeLabel": "约 2 世纪中叶",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Ma Rong's classical teaching and ancient-text study",
+        "shortSummary": "Ma Rong's classical teaching and ancient-text study places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Ma Rong still requires separation across editions, biographies and local records; this release keeps medium confidence.",
+        "timeLabel": "mid-second century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:han-philology-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 120,
+        "endYear": 166,
+        "displayDate": {
+          "zh-CN": "约 2 世纪中叶",
+          "en": "mid-second century CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:han-philology-records"
+      }
+    ],
+    "sourceIds": [
+      "source:han-philology-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "documented",
+      "eventScope": "regional",
+      "sequenceOrder": 303
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "wang-chong-lunheng-critique",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "王充《论衡》的知识批评",
+        "shortSummary": "王充《论衡》的知识批评把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "王充的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持medium置信度。",
+        "timeLabel": "约 1 世纪后半叶",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Wang Chong's knowledge criticism in the Lunheng",
+        "shortSummary": "Wang Chong's knowledge criticism in the Lunheng places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Wang Chong still requires separation across editions, biographies and local records; this release keeps medium confidence.",
+        "timeLabel": "later first century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:han-philology-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "compilation",
+        "timeType": "range",
+        "startYear": 70,
+        "endYear": 100,
+        "displayDate": {
+          "zh-CN": "约 1 世纪后半叶",
+          "en": "later first century CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:han-philology-records"
+      }
+    ],
+    "sourceIds": [
+      "source:han-philology-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "editorial_project",
+      "historicity": "contested",
+      "eventScope": "regional",
+      "sequenceOrder": 304
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "shao-yong-luoyang-learning",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "邵雍与北宋洛阳学术网络",
+        "shortSummary": "邵雍与北宋洛阳学术网络把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "邵雍的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持high置信度。",
+        "timeLabel": "约 11 世纪中后期",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Shao Yong and the Northern Song Luoyang learning network",
+        "shortSummary": "Shao Yong and the Northern Song Luoyang learning network places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Shao Yong still requires separation across editions, biographies and local records; this release keeps high confidence.",
+        "timeLabel": "mid–late eleventh century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-neo-confucian-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 1049,
+        "endYear": 1077,
+        "displayDate": {
+          "zh-CN": "约 11 世纪中后期",
+          "en": "mid–late eleventh century CE"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-neo-confucian-records"
+      }
+    ],
+    "sourceIds": [
+      "source:song-neo-confucian-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "documented",
+      "eventScope": "regional",
+      "sequenceOrder": 305
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "zhou-dunyi-lianxi-learning",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "周敦颐的濂溪学与理学早期形成",
+        "shortSummary": "周敦颐的濂溪学与理学早期形成把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "周敦颐的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持high置信度。",
+        "timeLabel": "约 11 世纪中叶",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Zhou Dunyi's Lianxi learning and early Neo-Confucian formation",
+        "shortSummary": "Zhou Dunyi's Lianxi learning and early Neo-Confucian formation places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Zhou Dunyi still requires separation across editions, biographies and local records; this release keeps high confidence.",
+        "timeLabel": "mid-eleventh century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-neo-confucian-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 1040,
+        "endYear": 1073,
+        "displayDate": {
+          "zh-CN": "约 11 世纪中叶",
+          "en": "mid-eleventh century CE"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-neo-confucian-records"
+      }
+    ],
+    "sourceIds": [
+      "source:song-neo-confucian-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "documented",
+      "eventScope": "regional",
+      "sequenceOrder": 306
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "yang-shi-southeastern-learning",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "杨时传播程门理学的东南讲学网络",
+        "shortSummary": "杨时传播程门理学的东南讲学网络把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "杨时的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持medium置信度。",
+        "timeLabel": "约 11 世纪末至 12 世纪前期",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Yang Shi's southeastern teaching network for Cheng learning",
+        "shortSummary": "Yang Shi's southeastern teaching network for Cheng learning places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Yang Shi still requires separation across editions, biographies and local records; this release keeps medium confidence.",
+        "timeLabel": "late eleventh to early twelfth century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-neo-confucian-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 1085,
+        "endYear": 1135,
+        "displayDate": {
+          "zh-CN": "约 11 世纪末至 12 世纪前期",
+          "en": "late eleventh to early twelfth century CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-neo-confucian-records"
+      }
+    ],
+    "sourceIds": [
+      "source:song-neo-confucian-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "documented",
+      "eventScope": "regional",
+      "sequenceOrder": 307
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "li-tong-yanping-learning",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "李侗的延平理学与师承网络",
+        "shortSummary": "李侗的延平理学与师承网络把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "李侗的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持high置信度。",
+        "timeLabel": "约 12 世纪中叶",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Li Tong's Yanping learning and teacher network",
+        "shortSummary": "Li Tong's Yanping learning and teacher network places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Li Tong still requires separation across editions, biographies and local records; this release keeps high confidence.",
+        "timeLabel": "mid-twelfth century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-neo-confucian-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 1140,
+        "endYear": 1163,
+        "displayDate": {
+          "zh-CN": "约 12 世纪中叶",
+          "en": "mid-twelfth century CE"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-neo-confucian-records"
+      }
+    ],
+    "sourceIds": [
+      "source:song-neo-confucian-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "documented",
+      "eventScope": "regional",
+      "sequenceOrder": 308
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "chen-liang-statecraft-debate",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "陈亮的永康事功学与经世论辩",
+        "shortSummary": "陈亮的永康事功学与经世论辩把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "陈亮的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持high置信度。",
+        "timeLabel": "约 12 世纪后期",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Chen Liang's Yongkang learning and statecraft debate",
+        "shortSummary": "Chen Liang's Yongkang learning and statecraft debate places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Chen Liang still requires separation across editions, biographies and local records; this release keeps high confidence.",
+        "timeLabel": "late twelfth century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-yuan-confucian-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 1170,
+        "endYear": 1194,
+        "displayDate": {
+          "zh-CN": "约 12 世纪后期",
+          "en": "late twelfth century CE"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-yuan-confucian-records"
+      }
+    ],
+    "sourceIds": [
+      "source:song-yuan-confucian-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "documented",
+      "eventScope": "regional",
+      "sequenceOrder": 309
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "ye-shi-yongjia-learning",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "叶适与永嘉学派的经世论",
+        "shortSummary": "叶适与永嘉学派的经世论把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "叶适的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持high置信度。",
+        "timeLabel": "约 12 世纪后期至 13 世纪初",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Ye Shi and Yongjia practical learning",
+        "shortSummary": "Ye Shi and Yongjia practical learning places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Ye Shi still requires separation across editions, biographies and local records; this release keeps high confidence.",
+        "timeLabel": "late twelfth to early thirteenth century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-yuan-confucian-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 1180,
+        "endYear": 1223,
+        "displayDate": {
+          "zh-CN": "约 12 世纪后期至 13 世纪初",
+          "en": "late twelfth to early thirteenth century CE"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-yuan-confucian-records"
+      }
+    ],
+    "sourceIds": [
+      "source:song-yuan-confucian-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "documented",
+      "eventScope": "regional",
+      "sequenceOrder": 310
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "xue-xuan-hedong-learning",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "薛瑄的河东理学与明代经学实践",
+        "shortSummary": "薛瑄的河东理学与明代经学实践把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "薛瑄的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持high置信度。",
+        "timeLabel": "约 15 世纪前中期",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Xue Xuan's Hedong learning and Ming classical practice",
+        "shortSummary": "Xue Xuan's Hedong learning and Ming classical practice places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Xue Xuan still requires separation across editions, biographies and local records; this release keeps high confidence.",
+        "timeLabel": "early–mid fifteenth century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:ming-confucian-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 1420,
+        "endYear": 1464,
+        "displayDate": {
+          "zh-CN": "约 15 世纪前中期",
+          "en": "early–mid fifteenth century CE"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:ming-confucian-records"
+      }
+    ],
+    "sourceIds": [
+      "source:ming-confucian-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "documented",
+      "eventScope": "regional",
+      "sequenceOrder": 311
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "wang-gen-taizhou-learning",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "王艮与泰州学派的地方讲学",
+        "shortSummary": "王艮与泰州学派的地方讲学把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "王艮的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持medium置信度。",
+        "timeLabel": "约 16 世纪前期",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Wang Gen and the Taizhou school's local teaching",
+        "shortSummary": "Wang Gen and the Taizhou school's local teaching places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Wang Gen still requires separation across editions, biographies and local records; this release keeps medium confidence.",
+        "timeLabel": "early sixteenth century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:ming-confucian-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 1520,
+        "endYear": 1541,
+        "displayDate": {
+          "zh-CN": "约 16 世纪前期",
+          "en": "early sixteenth century CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:ming-confucian-records"
+      }
+    ],
+    "sourceIds": [
+      "source:ming-confucian-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "documented",
+      "eventScope": "regional",
+      "sequenceOrder": 312
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "chen-que-early-qing-classics",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "陈确与清初经学、礼学论辩",
+        "shortSummary": "陈确与清初经学、礼学论辩把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "陈确的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持medium置信度。",
+        "timeLabel": "约 17 世纪中叶",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Chen Que's early Qing debate on classics and ritual",
+        "shortSummary": "Chen Que's early Qing debate on classics and ritual places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Chen Que still requires separation across editions, biographies and local records; this release keeps medium confidence.",
+        "timeLabel": "mid-seventeenth century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:ming-confucian-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 1640,
+        "endYear": 1677,
+        "displayDate": {
+          "zh-CN": "约 17 世纪中叶",
+          "en": "mid-seventeenth century CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:ming-confucian-records"
+      }
+    ],
+    "sourceIds": [
+      "source:ming-confucian-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "documented",
+      "eventScope": "regional",
+      "sequenceOrder": 313
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "liang-qichao-modern-classics",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "梁启超的经学转型与公共思想史书写",
+        "shortSummary": "梁启超的经学转型与公共思想史书写把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "梁启超的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持high置信度。",
+        "timeLabel": "约 19 世纪末至 20 世纪前期",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Liang Qichao's modern transformation of classical learning",
+        "shortSummary": "Liang Qichao's modern transformation of classical learning places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Liang Qichao still requires separation across editions, biographies and local records; this release keeps high confidence.",
+        "timeLabel": "late nineteenth to early twentieth century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:modern-reform-intellectual-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 1898,
+        "endYear": 1929,
+        "displayDate": {
+          "zh-CN": "约 19 世纪末至 20 世纪前期",
+          "en": "late nineteenth to early twentieth century CE"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:modern-reform-intellectual-records"
+      }
+    ],
+    "sourceIds": [
+      "source:modern-reform-intellectual-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "documented",
+      "eventScope": "transregional",
+      "sequenceOrder": 314
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "lu-zuqian-donglai-learning",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "吕祖谦与东莱学的经史网络",
+        "shortSummary": "吕祖谦与东莱学的经史网络把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "吕祖谦的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持high置信度。",
+        "timeLabel": "约 12 世纪后期",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Lü Zuqian and the Donglai classical-historical network",
+        "shortSummary": "Lü Zuqian and the Donglai classical-historical network places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Lü Zuqian still requires separation across editions, biographies and local records; this release keeps high confidence.",
+        "timeLabel": "late twelfth century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-neo-confucian-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 1160,
+        "endYear": 1181,
+        "displayDate": {
+          "zh-CN": "约 12 世纪后期",
+          "en": "late twelfth century CE"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-neo-confucian-records"
+      }
+    ],
+    "sourceIds": [
+      "source:song-neo-confucian-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "documented",
+      "eventScope": "regional",
+      "sequenceOrder": 315
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "ye-fashan-tang-daoist-network",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "叶法善与唐代道教仪式网络",
+        "shortSummary": "叶法善与唐代道教仪式网络把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "叶法善的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持low置信度。",
+        "timeLabel": "约 7 世纪后期至 8 世纪初",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Ye Fashan and Tang Daoist ritual networks",
+        "shortSummary": "Ye Fashan and Tang Daoist ritual networks places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Ye Fashan still requires separation across editions, biographies and local records; this release keeps low confidence.",
+        "timeLabel": "late seventh to early eighth century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-sui-song-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 680,
+        "endYear": 720,
+        "displayDate": {
+          "zh-CN": "约 7 世纪后期至 8 世纪初",
+          "en": "late seventh to early eighth century CE"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-sui-song-records"
+      }
+    ],
+    "sourceIds": [
+      "source:daoist-sui-song-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "inferred",
+      "eventScope": "regional",
+      "sequenceOrder": 316
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "wu-yun-mount-mao-literature",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "吴筠与茅山道教文献网络",
+        "shortSummary": "吴筠与茅山道教文献网络把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "吴筠的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持medium置信度。",
+        "timeLabel": "约 8 世纪中叶",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Wu Yun and the Mount Mao Daoist literary network",
+        "shortSummary": "Wu Yun and the Mount Mao Daoist literary network places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Wu Yun still requires separation across editions, biographies and local records; this release keeps medium confidence.",
+        "timeLabel": "mid-eighth century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:daoist-sui-song-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 730,
+        "endYear": 778,
+        "displayDate": {
+          "zh-CN": "约 8 世纪中叶",
+          "en": "mid-eighth century CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:daoist-sui-song-records"
+      }
+    ],
+    "sourceIds": [
+      "source:daoist-sui-song-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "documented",
+      "eventScope": "regional",
+      "sequenceOrder": 317
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "lin-lingsu-shenxiao-court",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "林灵素与北宋神霄道教宫廷语境",
+        "shortSummary": "林灵素与北宋神霄道教宫廷语境把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "林灵素的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持medium置信度。",
+        "timeLabel": "约 12 世纪初",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Lin Lingsu and the Northern Song Shenxiao court context",
+        "shortSummary": "Lin Lingsu and the Northern Song Shenxiao court context places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Lin Lingsu still requires separation across editions, biographies and local records; this release keeps medium confidence.",
+        "timeLabel": "early twelfth century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:daoist-sui-song-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 1110,
+        "endYear": 1120,
+        "displayDate": {
+          "zh-CN": "约 12 世纪初",
+          "en": "early twelfth century CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:daoist-sui-song-records"
+      }
+    ],
+    "sourceIds": [
+      "source:daoist-sui-song-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "documented",
+      "eventScope": "imperial",
+      "sequenceOrder": 318
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "wang-wenqing-shenxiao-transmission",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "王文卿与神霄雷法传承",
+        "shortSummary": "王文卿与神霄雷法传承把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "王文卿的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持medium置信度。",
+        "timeLabel": "约 12 世纪前期",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Wang Wenqing and Shenxiao thunder-rite transmission",
+        "shortSummary": "Wang Wenqing and Shenxiao thunder-rite transmission places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Wang Wenqing still requires separation across editions, biographies and local records; this release keeps medium confidence.",
+        "timeLabel": "early twelfth century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-sui-song-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 1120,
+        "endYear": 1153,
+        "displayDate": {
+          "zh-CN": "约 12 世纪前期",
+          "en": "early twelfth century CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-sui-song-records"
+      }
+    ],
+    "sourceIds": [
+      "source:daoist-sui-song-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "inferred",
+      "eventScope": "regional",
+      "sequenceOrder": 319
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "zhang-jixian-longhu-lineage",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "张继先与龙虎山天师道传承",
+        "shortSummary": "张继先与龙虎山天师道传承把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "张继先的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持medium置信度。",
+        "timeLabel": "约 12 世纪前期",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Zhang Jixian and the Celestial Masters lineage at Mount Longhu",
+        "shortSummary": "Zhang Jixian and the Celestial Masters lineage at Mount Longhu places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Zhang Jixian still requires separation across editions, biographies and local records; this release keeps medium confidence.",
+        "timeLabel": "early twelfth century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:daoist-sui-song-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 1110,
+        "endYear": 1127,
+        "displayDate": {
+          "zh-CN": "约 12 世纪前期",
+          "en": "early twelfth century CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:daoist-sui-song-records"
+      }
+    ],
+    "sourceIds": [
+      "source:daoist-sui-song-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "documented",
+      "eventScope": "regional",
+      "sequenceOrder": 320
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "bai-yuchan-southern-alchemy",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "白玉蟾与南宗内丹、雷法传统",
+        "shortSummary": "白玉蟾与南宗内丹、雷法传统把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "白玉蟾的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持low置信度。",
+        "timeLabel": "约 13 世纪前期",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Bai Yuchan and Southern School alchemy and ritual traditions",
+        "shortSummary": "Bai Yuchan and Southern School alchemy and ritual traditions places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Bai Yuchan still requires separation across editions, biographies and local records; this release keeps low confidence.",
+        "timeLabel": "early thirteenth century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-yuan-ming-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 1210,
+        "endYear": 1229,
+        "displayDate": {
+          "zh-CN": "约 13 世纪前期",
+          "en": "early thirteenth century CE"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-yuan-ming-records"
+      }
+    ],
+    "sourceIds": [
+      "source:daoist-yuan-ming-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "inferred",
+      "eventScope": "regional",
+      "sequenceOrder": 321
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "li-daochun-three-teachings",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "李道纯的内丹与三教会通",
+        "shortSummary": "李道纯的内丹与三教会通把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "李道纯的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持low置信度。",
+        "timeLabel": "约 13 世纪后半叶",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Li Daochun's inner alchemy and convergence of the three teachings",
+        "shortSummary": "Li Daochun's inner alchemy and convergence of the three teachings places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Li Daochun still requires separation across editions, biographies and local records; this release keeps low confidence.",
+        "timeLabel": "later thirteenth century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-yuan-ming-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 1250,
+        "endYear": 1299,
+        "displayDate": {
+          "zh-CN": "约 13 世纪后半叶",
+          "en": "later thirteenth century CE"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-yuan-ming-records"
+      }
+    ],
+    "sourceIds": [
+      "source:daoist-yuan-ming-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "inferred",
+      "eventScope": "regional",
+      "sequenceOrder": 322
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "du-daojian-canon-network",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "杜道坚与宋元道教经籍网络",
+        "shortSummary": "杜道坚与宋元道教经籍网络把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "杜道坚的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持low置信度。",
+        "timeLabel": "约 13 世纪末至 14 世纪初",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Du Daojian and the Song–Yuan Daoist canonical network",
+        "shortSummary": "Du Daojian and the Song–Yuan Daoist canonical network places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Du Daojian still requires separation across editions, biographies and local records; this release keeps low confidence.",
+        "timeLabel": "late thirteenth to early fourteenth century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-yuan-ming-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "compilation",
+        "timeType": "range",
+        "startYear": 1280,
+        "endYear": 1318,
+        "displayDate": {
+          "zh-CN": "约 13 世纪末至 14 世纪初",
+          "en": "late thirteenth to early fourteenth century CE"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-yuan-ming-records"
+      }
+    ],
+    "sourceIds": [
+      "source:daoist-yuan-ming-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "editorial_project",
+      "historicity": "inferred",
+      "eventScope": "regional",
+      "sequenceOrder": 323
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "zhang-yu-chu-longhu-canons",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "张宇初与明代龙虎山道教典籍整理",
+        "shortSummary": "张宇初与明代龙虎山道教典籍整理把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "张宇初的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持medium置信度。",
+        "timeLabel": "约 14 世纪末至 15 世纪初",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Zhang Yuchu and Ming Daoist canonical work at Mount Longhu",
+        "shortSummary": "Zhang Yuchu and Ming Daoist canonical work at Mount Longhu places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Zhang Yuchu still requires separation across editions, biographies and local records; this release keeps medium confidence.",
+        "timeLabel": "late fourteenth to early fifteenth century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:daoist-yuan-ming-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "compilation",
+        "timeType": "range",
+        "startYear": 1380,
+        "endYear": 1410,
+        "displayDate": {
+          "zh-CN": "约 14 世纪末至 15 世纪初",
+          "en": "late fourteenth to early fifteenth century CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:daoist-yuan-ming-records"
+      }
+    ],
+    "sourceIds": [
+      "source:daoist-yuan-ming-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "editorial_project",
+      "historicity": "documented",
+      "eventScope": "regional",
+      "sequenceOrder": 324
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "zhao-yi-zhen-inner-alchemy",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "赵宜真与元明之际内丹传承",
+        "shortSummary": "赵宜真与元明之际内丹传承把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "赵宜真的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持low置信度。",
+        "timeLabel": "约 14 世纪后半叶；待核",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Zhao Yizhen and late Yuan–early Ming inner-alchemy transmission",
+        "shortSummary": "Zhao Yizhen and late Yuan–early Ming inner-alchemy transmission places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Zhao Yizhen still requires separation across editions, biographies and local records; this release keeps low confidence.",
+        "timeLabel": "later fourteenth century CE; under review",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-yuan-ming-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 1350,
+        "endYear": 1399,
+        "displayDate": {
+          "zh-CN": "约 14 世纪后半叶；待核",
+          "en": "later fourteenth century CE; under review"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:daoist-yuan-ming-records"
+      }
+    ],
+    "sourceIds": [
+      "source:daoist-yuan-ming-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "inferred",
+      "eventScope": "regional",
+      "sequenceOrder": 325
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "dharmaraksa-luoyang-translation",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "竺法护与西晋洛阳译经网络",
+        "shortSummary": "竺法护与西晋洛阳译经网络把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "竺法护的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持medium置信度。",
+        "timeLabel": "约 3 世纪后期至 4 世纪初",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Dharmaraksa and the Western Jin Luoyang translation network",
+        "shortSummary": "Dharmaraksa and the Western Jin Luoyang translation network places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Dharmaraksa still requires separation across editions, biographies and local records; this release keeps medium confidence.",
+        "timeLabel": "late third to early fourth century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-transmission-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 265,
+        "endYear": 310,
+        "displayDate": {
+          "zh-CN": "约 3 世纪后期至 4 世纪初",
+          "en": "late third to early fourth century CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-transmission-records"
+      }
+    ],
+    "sourceIds": [
+      "source:buddhist-transmission-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "other",
+      "historicity": "documented",
+      "eventScope": "transregional",
+      "sequenceOrder": 326
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "sanghadeva-jiankang-translation",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "僧伽提婆与建康阿毗达磨译经",
+        "shortSummary": "僧伽提婆与建康阿毗达磨译经把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "僧伽提婆的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持low置信度。",
+        "timeLabel": "约 383—398 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Sanghadeva's Abhidharma translation in Jiankang",
+        "shortSummary": "Sanghadeva's Abhidharma translation in Jiankang places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Sanghadeva still requires separation across editions, biographies and local records; this release keeps low confidence.",
+        "timeLabel": "c. 383–398 CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:buddhist-transmission-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 383,
+        "endYear": 398,
+        "displayDate": {
+          "zh-CN": "约 383—398 年",
+          "en": "c. 383–398 CE"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:buddhist-transmission-records"
+      }
+    ],
+    "sourceIds": [
+      "source:buddhist-transmission-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "other",
+      "historicity": "inferred",
+      "eventScope": "transregional",
+      "sequenceOrder": 327
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "sengyou-buddhist-catalogues",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "僧祐编纂佛教经录与高僧传记",
+        "shortSummary": "僧祐编纂佛教经录与高僧传记把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "僧祐的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持high置信度。",
+        "timeLabel": "约 6 世纪初",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Sengyou's Buddhist catalogues and eminent-monk biographies",
+        "shortSummary": "Sengyou's Buddhist catalogues and eminent-monk biographies places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Sengyou still requires separation across editions, biographies and local records; this release keeps high confidence.",
+        "timeLabel": "early sixth century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-transmission-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "compilation",
+        "timeType": "range",
+        "startYear": 500,
+        "endYear": 518,
+        "displayDate": {
+          "zh-CN": "约 6 世纪初",
+          "en": "early sixth century CE"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-transmission-records"
+      }
+    ],
+    "sourceIds": [
+      "source:buddhist-transmission-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "editorial_project",
+      "historicity": "documented",
+      "eventScope": "regional",
+      "sequenceOrder": 328
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "daosheng-buddha-nature-debate",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "道生与佛性论争及译学网络",
+        "shortSummary": "道生与佛性论争及译学网络把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "道生的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持medium置信度。",
+        "timeLabel": "约 5 世纪初",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Daosheng's Buddha-nature debate and translation network",
+        "shortSummary": "Daosheng's Buddha-nature debate and translation network places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Daosheng still requires separation across editions, biographies and local records; this release keeps medium confidence.",
+        "timeLabel": "early fifth century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-transmission-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 400,
+        "endYear": 434,
+        "displayDate": {
+          "zh-CN": "约 5 世纪初",
+          "en": "early fifth century CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:buddhist-transmission-records"
+      }
+    ],
+    "sourceIds": [
+      "source:buddhist-transmission-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "documented",
+      "eventScope": "regional",
+      "sequenceOrder": 329
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "daoxin-east-mountain-tradition",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "道信与黄梅东山法门",
+        "shortSummary": "道信与黄梅东山法门把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "道信的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持medium置信度。",
+        "timeLabel": "约 7 世纪前期",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Daoxin and the East Mountain tradition at Huangmei",
+        "shortSummary": "Daoxin and the East Mountain tradition at Huangmei places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Daoxin still requires separation across editions, biographies and local records; this release keeps medium confidence.",
+        "timeLabel": "early seventh century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 620,
+        "endYear": 651,
+        "displayDate": {
+          "zh-CN": "约 7 世纪前期",
+          "en": "early seventh century CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "sourceIds": [
+      "source:chan-huayan-institutional-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "inferred",
+      "eventScope": "regional",
+      "sequenceOrder": 330
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "hongren-east-mountain-community",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "弘忍与黄梅东山僧团",
+        "shortSummary": "弘忍与黄梅东山僧团把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "弘忍的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持medium置信度。",
+        "timeLabel": "约 7 世纪中叶",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Hongren and the East Mountain community at Huangmei",
+        "shortSummary": "Hongren and the East Mountain community at Huangmei places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Hongren still requires separation across editions, biographies and local records; this release keeps medium confidence.",
+        "timeLabel": "mid-seventh century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 638,
+        "endYear": 674,
+        "displayDate": {
+          "zh-CN": "约 7 世纪中叶",
+          "en": "mid-seventh century CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "sourceIds": [
+      "source:chan-huayan-institutional-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "inferred",
+      "eventScope": "regional",
+      "sequenceOrder": 331
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "sengcan-sikongshan-transmission",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "僧璨与司空山禅宗传承记忆",
+        "shortSummary": "僧璨与司空山禅宗传承记忆把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "僧璨的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持low置信度。",
+        "timeLabel": "约 6 世纪末至 7 世纪初",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Sengcan and Chan transmission memory at Mount Sikong",
+        "shortSummary": "Sengcan and Chan transmission memory at Mount Sikong places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Sengcan still requires separation across editions, biographies and local records; this release keeps low confidence.",
+        "timeLabel": "late sixth to early seventh century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 580,
+        "endYear": 606,
+        "displayDate": {
+          "zh-CN": "约 6 世纪末至 7 世纪初",
+          "en": "late sixth to early seventh century CE"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "sourceIds": [
+      "source:chan-huayan-institutional-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "inferred",
+      "eventScope": "regional",
+      "sequenceOrder": 332
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "shitou-nanyue-chan-network",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "石头希迁与南岳禅宗山地网络",
+        "shortSummary": "石头希迁与南岳禅宗山地网络把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "石头希迁的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持medium置信度。",
+        "timeLabel": "约 8 世纪后半叶",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Shitou Xiqian and Nanyue Chan mountain networks",
+        "shortSummary": "Shitou Xiqian and Nanyue Chan mountain networks places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Shitou Xiqian still requires separation across editions, biographies and local records; this release keeps medium confidence.",
+        "timeLabel": "later eighth century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 750,
+        "endYear": 790,
+        "displayDate": {
+          "zh-CN": "约 8 世纪后半叶",
+          "en": "later eighth century CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "sourceIds": [
+      "source:chan-huayan-institutional-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "documented",
+      "eventScope": "regional",
+      "sequenceOrder": 333
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "chengguan-huayan-commentary",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "澄观与唐代华严经疏传统",
+        "shortSummary": "澄观与唐代华严经疏传统把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "澄观的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持medium置信度。",
+        "timeLabel": "约 8 世纪后期至 9 世纪前期",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Chengguan and Tang Huayan commentary",
+        "shortSummary": "Chengguan and Tang Huayan commentary places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Chengguan still requires separation across editions, biographies and local records; this release keeps medium confidence.",
+        "timeLabel": "late eighth to early ninth century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 780,
+        "endYear": 839,
+        "displayDate": {
+          "zh-CN": "约 8 世纪后期至 9 世纪前期",
+          "en": "late eighth to early ninth century CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "sourceIds": [
+      "source:chan-huayan-institutional-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "documented",
+      "eventScope": "regional",
+      "sequenceOrder": 334
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "yunmen-lingnan-chan-network",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "云门文偃与岭南禅宗网络",
+        "shortSummary": "云门文偃与岭南禅宗网络把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "云门文偃的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持medium置信度。",
+        "timeLabel": "约 10 世纪前期",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Yunmen Wenyan and the Lingnan Chan network",
+        "shortSummary": "Yunmen Wenyan and the Lingnan Chan network places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Yunmen Wenyan still requires separation across editions, biographies and local records; this release keeps medium confidence.",
+        "timeLabel": "early tenth century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 900,
+        "endYear": 949,
+        "displayDate": {
+          "zh-CN": "约 10 世纪前期",
+          "en": "early tenth century CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "sourceIds": [
+      "source:chan-huayan-institutional-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "inferred",
+      "eventScope": "regional",
+      "sequenceOrder": 335
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "fayan-jiankang-chan-network",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "法眼文益与建康法眼宗网络",
+        "shortSummary": "法眼文益与建康法眼宗网络把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "法眼文益的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持medium置信度。",
+        "timeLabel": "约 10 世纪中叶",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Fayan Wenyi and the Jiankang Fayan network",
+        "shortSummary": "Fayan Wenyi and the Jiankang Fayan network places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Fayan Wenyi still requires separation across editions, biographies and local records; this release keeps medium confidence.",
+        "timeLabel": "mid-tenth century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 930,
+        "endYear": 958,
+        "displayDate": {
+          "zh-CN": "约 10 世纪中叶",
+          "en": "mid-tenth century CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "sourceIds": [
+      "source:chan-huayan-institutional-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "documented",
+      "eventScope": "regional",
+      "sequenceOrder": 336
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "dongshan-caodong-origins",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "洞山良价与曹洞禅源流",
+        "shortSummary": "洞山良价与曹洞禅源流把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "洞山良价的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持medium置信度。",
+        "timeLabel": "约 9 世纪中叶",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Dongshan Liangjie and the origins of Caodong Chan",
+        "shortSummary": "Dongshan Liangjie and the origins of Caodong Chan places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Dongshan Liangjie still requires separation across editions, biographies and local records; this release keeps medium confidence.",
+        "timeLabel": "mid-ninth century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 840,
+        "endYear": 869,
+        "displayDate": {
+          "zh-CN": "约 9 世纪中叶",
+          "en": "mid-ninth century CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "sourceIds": [
+      "source:chan-huayan-institutional-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "documented",
+      "eventScope": "regional",
+      "sequenceOrder": 337
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "zhongfeng-mingben-jiangnan-chan",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "中峰明本与元代江南禅宗网络",
+        "shortSummary": "中峰明本与元代江南禅宗网络把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "中峰明本的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持medium置信度。",
+        "timeLabel": "约 13 世纪末至 14 世纪初",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Zhongfeng Mingben and Yuan Jiangnan Chan networks",
+        "shortSummary": "Zhongfeng Mingben and Yuan Jiangnan Chan networks places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Zhongfeng Mingben still requires separation across editions, biographies and local records; this release keeps medium confidence.",
+        "timeLabel": "late thirteenth to early fourteenth century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 1290,
+        "endYear": 1323,
+        "displayDate": {
+          "zh-CN": "约 13 世纪末至 14 世纪初",
+          "en": "late thirteenth to early fourteenth century CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "sourceIds": [
+      "source:chan-huayan-institutional-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "documented",
+      "eventScope": "regional",
+      "sequenceOrder": 338
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "zhenke-late-ming-buddhist-renewal",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "真可与晚明刻经、禅学和佛教复兴",
+        "shortSummary": "真可与晚明刻经、禅学和佛教复兴把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "真可的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持medium置信度。",
+        "timeLabel": "约 16 世纪后期",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Zhenke, late Ming scripture printing and Buddhist renewal",
+        "shortSummary": "Zhenke, late Ming scripture printing and Buddhist renewal places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Zhenke still requires separation across editions, biographies and local records; this release keeps medium confidence.",
+        "timeLabel": "late sixteenth century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 1570,
+        "endYear": 1603,
+        "displayDate": {
+          "zh-CN": "约 16 世纪后期",
+          "en": "late sixteenth century CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "sourceIds": [
+      "source:chan-huayan-institutional-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "documented",
+      "eventScope": "regional",
+      "sequenceOrder": 339
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "lianchi-hangzhou-buddhist-network",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "莲池袾宏与晚明杭州佛教网络",
+        "shortSummary": "莲池袾宏与晚明杭州佛教网络把人物、时间与地点放入同一研究语境。",
+        "curatorialDescription": [
+          "事件按共同证据层呈现，不把分析性时段误读为单一可定位事件。"
+        ],
+        "researchNote": "莲池袾宏的相关事件仍需按文献版本、传记与地方资料继续拆分，当前保持medium置信度。",
+        "timeLabel": "约 16 世纪后期至 17 世纪初",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Lianchi Zhuhong and the late Ming Hangzhou Buddhist network",
+        "shortSummary": "Lianchi Zhuhong and the late Ming Hangzhou Buddhist network places figure, time and place within one research context.",
+        "curatorialDescription": [
+          "The event is presented through a shared evidence layer and is not read as one precisely located event when it is analytical."
+        ],
+        "researchNote": "The event associated with Lianchi Zhuhong still requires separation across editions, biographies and local records; this release keeps medium confidence.",
+        "timeLabel": "late sixteenth to early seventeenth century CE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 1570,
+        "endYear": 1615,
+        "displayDate": {
+          "zh-CN": "约 16 世纪后期至 17 世纪初",
+          "en": "late sixteenth to early seventeenth century CE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:chan-huayan-institutional-records"
+      }
+    ],
+    "sourceIds": [
+      "source:chan-huayan-institutional-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "documented",
+      "eventScope": "regional",
+      "sequenceOrder": 340
+    }
+  }
+]

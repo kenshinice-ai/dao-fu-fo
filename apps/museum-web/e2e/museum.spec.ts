@@ -115,7 +115,7 @@ test("atlas figure index keeps all major and mythic figures focusable", async ({
   await page.goto("/explore?lang=en&view=map");
   await waitForMuseum(page);
   await waitForAtlas(page);
-  await expect(page.locator(".atlas-tab-nav button").filter({ hasText: "Figures" })).toContainText("100");
+  await expect(page.locator(".atlas-tab-nav button").filter({ hasText: "Figures" })).toContainText("140");
 
   const figureTitles = ["Laozi (Li Er)", "Confucius (Kong Qiu)", "Śākyamuni Buddha (Gautama)", "Fu Xi", "Xuanzang"];
   const search = page.getByRole("searchbox", { name: "Search atlas entities" });
@@ -128,7 +128,7 @@ test("atlas figure index keeps all major and mythic figures focusable", async ({
     await page.getByRole("button", { name: "Clear focus", exact: true }).click();
     await expect(page).not.toHaveURL(/focus=/);
     await expect(page.getByRole("button", { name: "Clear focus", exact: true })).toHaveCount(0);
-    await expect(page.locator(".atlas-tab-nav button").filter({ hasText: "Figures" })).toContainText("100");
+    await expect(page.locator(".atlas-tab-nav button").filter({ hasText: "Figures" })).toContainText("140");
   }
 });
 
@@ -436,7 +436,7 @@ test("relation focus filters the map and adds relation-time context", async ({ p
   await page.goto("/explore?lang=en&view=map");
   await waitForAtlas(page);
   await page.locator(".atlas-tab-nav button").filter({ hasText: "Relations" }).click();
-  await expect(page.locator(".atlas-tab-nav button").filter({ hasText: "Relations" })).toContainText("471");
+  await expect(page.locator(".atlas-tab-nav button").filter({ hasText: "Relations" })).toContainText("647");
   await expect(page.locator(".atlas-relation-card")).toHaveCount(80);
   await expect(page.locator(".atlas-relation-card").first()).toContainText("→");
   await page.locator(".atlas-relation-card .atlas-object-card-main").first().click();
@@ -515,7 +515,7 @@ test("homepage exposes the expanded figure gateways", async ({ page }) => {
   await expect(page.locator(".figure-spotlight-card").filter({ hasText: "老子（李耳）" })).toBeVisible();
   await expect(page.locator(".figure-spotlight-card").filter({ hasText: "孔子（孔丘）" })).toBeVisible();
   await expect(page.locator(".figure-spotlight-card").filter({ hasText: "释迦牟尼佛" })).toBeVisible();
-  await expect(page.getByText("当前收录 100 位人物，三种传统；空间待核处明确保留证据边界。", { exact: true })).toBeVisible();
+  await expect(page.getByText("当前收录 140 位人物，三种传统；空间待核处明确保留证据边界。", { exact: true })).toBeVisible();
 });
 
 test("representative historical, traditional and mythic figures resolve through the map gateway", async ({ page }) => {
@@ -534,7 +534,7 @@ test("representative historical, traditional and mythic figures resolve through 
     await page.getByRole("button", { name: "Clear focus", exact: true }).click();
     await expect(page).not.toHaveURL(/focus=/);
     await expect(page.getByRole("button", { name: "Clear focus", exact: true })).toHaveCount(0);
-    await expect(page.locator(".atlas-tab-nav button").filter({ hasText: "Figures" })).toContainText("100");
+    await expect(page.locator(".atlas-tab-nav button").filter({ hasText: "Figures" })).toContainText("140");
   }
 });
 
@@ -634,17 +634,17 @@ test("Research exposes the quality audit and review queue filters", async ({ pag
   await waitForMuseum(page);
 
   await expect(page.getByRole("heading", { name: "See what still blocks publication" })).toBeVisible();
-  await expect(page.locator(".research-governance-status strong")).toHaveText("1009");
+  await expect(page.locator(".research-governance-status strong")).toHaveText("1393");
   await expect(page.getByRole("heading", { name: "Review queue" })).toBeVisible();
-  await expect(page.getByText("727 subjects shown; all statuses are read-only.", { exact: true })).toBeVisible();
-  await expect(page.locator(".research-review-queue li")).toHaveCount(727);
+  await expect(page.getByText("1003 subjects shown; all statuses are read-only.", { exact: true })).toBeVisible();
+  await expect(page.locator(".research-review-queue li")).toHaveCount(1003);
   await expect(page.getByRole("link", { name: "Historical reviewer (0)", exact: true })).toBeVisible();
   await expect(page.getByRole("link", { name: "Accessibility editor (0)", exact: true })).toBeVisible();
 
   await page.getByRole("link", { name: "Show all", exact: true }).click();
   await expect(page).toHaveURL(/audit=all/);
-  await expect(page.getByText("802 subjects shown; all statuses are read-only.", { exact: true })).toBeVisible();
-  await expect(page.locator(".research-review-queue li")).toHaveCount(802);
+  await expect(page.getByText("1078 subjects shown; all statuses are read-only.", { exact: true })).toBeVisible();
+  await expect(page.locator(".research-review-queue li")).toHaveCount(1078);
   await expect(page.getByText("figure:xuanzang", { exact: true })).toBeVisible();
 });
 
