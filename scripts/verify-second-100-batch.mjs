@@ -28,12 +28,31 @@ for (const kind of await readdir(join(contentRoot, "entities"))) {
 }
 
 const entityKeys = new Set(allEntities.map(keyOf));
+const entityByKey = new Map(allEntities.map((entity) => [keyOf(entity), entity]));
 const sourceIds = new Set(sources.map((source) => source.id));
+const sourceById = new Map(sources.map((source) => [source.id, source]));
 const newFigureSlugs = new Set(figures.map((figure) => figure.slug));
 const newEventSlugs = new Set(events.map((event) => event.slug));
 const newPlaceSlugs = new Set(places.map((place) => place.slug));
+const placeSlugs = allEntities.filter((entity) => entity.kind === "place").map((entity) => entity.slug);
 const relationIds = new Set();
 const relationByFigure = new Map();
+
+const historicalRange = (entity) => {
+  const assertion = entity?.temporalAssertions?.find((item) => ["life", "activity"].includes(item.predicate))
+    ?? entity?.temporalAssertions?.find((item) => item.startYear !== undefined);
+  return assertion?.startYear === undefined ? undefined : {
+    startYear: assertion.startYear,
+    ...(assertion.endYear !== undefined ? { endYear: assertion.endYear } : {}),
+  };
+};
+const assertionRange = (assertion) => assertion?.startYear === undefined ? undefined : {
+  startYear: assertion.startYear,
+  ...(assertion.endYear !== undefined ? { endYear: assertion.endYear } : {}),
+};
+const rangesOverlap = (left, right) => (left.endYear ?? left.startYear) >= right.startYear
+  && (right.endYear ?? right.startYear) >= left.startYear;
+const sameRange = (left, right) => left?.startYear === right?.startYear && (left?.endYear ?? left?.startYear) === (right?.endYear ?? right?.startYear);
 
 if (figures.length !== 40) fail(`second-100 figure batch expected 40, received ${figures.length}`);
 if (events.length !== 40) fail(`second-100 event batch expected 40, received ${events.length}`);
@@ -62,6 +81,39 @@ for (const relation of relations) {
   }
   for (const sourceId of [...(relation.sourceIds ?? []), ...(relation.temporalAssertions ?? []).map((item) => item.sourceId)]) {
     if (!sourceIds.has(sourceId)) fail(`${relation.id} references unknown source ${sourceId}`);
+  }
+  if (new Set(relation.sourceIds ?? []).size !== (relation.sourceIds ?? []).length) fail(`${relation.id} repeats a sourceId`);
+  const relationSourceIds = new Set(relation.sourceIds ?? []);
+  for (const assertion of relation.temporalAssertions ?? []) {
+    if (!relationSourceIds.has(assertion.sourceId)) fail(`${relation.id} temporal assertion source ${assertion.sourceId} is not included in relation.sourceIds`);
+  }
+  if (relation.label?.["zh-CN"] && placeSlugs.some((slug) => relation.label["zh-CN"].includes(slug))) {
+    fail(`${relation.id} leaks a place slug into its Chinese label`);
+  }
+  if (relation.relationType === "received_by" && relation.source.kind === "figure" && relation.target.kind === "figure") {
+    const sourceRange = historicalRange(entityByKey.get(keyOf(relation.source)));
+    const targetRange = historicalRange(entityByKey.get(keyOf(relation.target)));
+    if (sourceRange && targetRange && sourceRange.startYear > targetRange.startYear) {
+      fail(`${relation.id} received_by direction is later-to-earlier`);
+    }
+    if (targetRange) {
+      for (const assertion of relation.temporalAssertions ?? []) {
+        const range = assertionRange(assertion);
+        if (range && !rangesOverlap(range, targetRange)) fail(`${relation.id} reception time does not overlap receiving figure period`);
+      }
+    }
+  }
+  if (relation.relationType === "born_in" && relation.source.kind === "figure") {
+    const figureRange = historicalRange(entityByKey.get(keyOf(relation.source)));
+    const assertion = relation.temporalAssertions?.find((item) => item.startYear !== undefined);
+    const traditionalBirth = relation.temporalAssertions?.some((item) => item.predicate === "traditional_occurrence" && item.timeType === "traditional_date" && item.startYear === undefined);
+    if (traditionalBirth) continue;
+    if (figureRange && assertion) {
+      const range = assertionRange(assertion);
+      if (assertion.predicate !== "birth" || !sameRange(range, { startYear: figureRange.startYear, endYear: figureRange.startYear })) {
+        fail(`${relation.id} birth-place time must be a point at the figure's historical start`);
+      }
+    }
   }
 }
 const batchRelations = relations.filter((relation) =>
@@ -97,6 +149,18 @@ for (const figure of figures) {
       (!newFigureSlugs.has(relation.source.slug) && newFigureSlugs.has(relation.target.slug))),
   );
   if (!crossFigure) fail(`${figure.slug} is missing a figure relation to an existing database figure`);
+  const participation = connected.find((relation) =>
+    relation.relationType === "participated_in" &&
+    relation.source.kind === "figure" && relation.source.slug === figure.slug &&
+    relation.target.kind === "event" && newEventSlugs.has(relation.target.slug),
+  );
+  const event = participation ? entityByKey.get(keyOf(participation.target)) : undefined;
+  const eventRange = assertionRange(event?.temporalAssertions?.find((item) => item.startYear !== undefined));
+  const active = connected.find((relation) => relation.relationType === "active_in");
+  if (eventRange && active) {
+    const activeRange = assertionRange(active?.temporalAssertions?.find((item) => item.startYear !== undefined));
+    if (!sameRange(activeRange, eventRange)) fail(`${figure.slug} active_in time is not aligned with its participation event`);
+  }
 }
 for (const event of events) {
   const occurredAt = relations.find((relation) =>
@@ -109,6 +173,9 @@ for (const place of places) {
   if (!relations.some((relation) =>
     [relation.source, relation.target].some((endpoint) => endpoint.kind === "place" && endpoint.slug === place.slug),
   )) fail(`${place.slug} is not referenced by any relation`);
+}
+for (const sourceId of ["source:han-philology-records", "source:buddhist-transmission-records"]) {
+  if (sourceById.get(sourceId)?.locatorLevel === "precise") fail(`${sourceId} is too precise for its current locator text`);
 }
 
 if (failures.length) {

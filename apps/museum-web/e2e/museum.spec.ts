@@ -487,7 +487,9 @@ test("relations tab exposes the Bible Atlas-style interactive people graph", asy
   await expect(confuciusNode).toBeVisible();
   await confuciusNode.click();
   await expect(page).toHaveURL(/focus=figure%3Aconfucius/);
-  await expect(page.locator(".atlas-object-panel .atlas-tab-nav button.active")).toContainText("Figures");
+  await expect(page).toHaveURL(/tab=relations&focus=figure%3Aconfucius/);
+  await expect(page.locator(".atlas-object-panel .atlas-tab-nav button.active")).toContainText("Relations");
+  await expect(page.locator(".relationship-graph")).toBeVisible();
 });
 
 test("map shares the historical time window with the timeline", async ({ page }) => {
@@ -634,7 +636,7 @@ test("Research exposes the quality audit and review queue filters", async ({ pag
   await waitForMuseum(page);
 
   await expect(page.getByRole("heading", { name: "See what still blocks publication" })).toBeVisible();
-  await expect(page.locator(".research-governance-status strong")).toHaveText("1393");
+  await expect(page.locator(".research-governance-status strong")).toHaveText("1409");
   await expect(page.getByRole("heading", { name: "Review queue" })).toBeVisible();
   await expect(page.getByText("1003 subjects shown; all statuses are read-only.", { exact: true })).toBeVisible();
   await expect(page.locator(".research-review-queue li")).toHaveCount(1003);

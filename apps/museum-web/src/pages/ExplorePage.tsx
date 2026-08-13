@@ -5,16 +5,17 @@ import { AtlasWorkspace } from "../components/AtlasWorkspace";
 import { Icon } from "../components/Icon";
 import { ErrorState, LoadingState } from "../components/LoadingState";
 import { RelationNetwork } from "../components/RelationNetwork";
+import { InteractiveRelationshipGraph } from "../components/InteractiveRelationshipGraph";
 import { TraditionMark } from "../components/TraditionMark";
 import { useMuseumContext } from "../context";
 import { staticData } from "../data/staticData";
-import { connectedContextKeys, matchesContextFocus, projectTimelineEvents } from "../data/contextProjection";
-import { formatEvidence } from "../data/labels";
+import { connectedContextKeys, contextRelations, matchesContextFocus, projectTimelineEvents } from "../data/contextProjection";
+import { formatEntityKind, formatEventKind, formatEventScope, formatEvidence } from "../data/labels";
 import { useStaticData } from "../data/useStaticData";
 import { entityPath, parseRouteState, serializeRouteState } from "../routing";
 import type { ExploreView, RouteState, ViewMode, ZoomLevel } from "../routing";
 import type { ReadModelRelationIndex, ReadModelSacredCosmos } from "@drf-museum/domain-schema";
-import type { EntityData, GraphData, Locale, MuseumMapData, SearchItem, TimelineData, TimelineEvent, Tradition } from "../types";
+import type { EntityData, Locale, MuseumMapData, SearchItem, TimelineData, TimelineEvent, Tradition } from "../types";
 
 const MAP_VIEWBOX = { width: 980, height: 580 };
 const MAP_MIN_ZOOM = 1;
@@ -132,7 +133,7 @@ export function ExplorePage() {
       {routeState.view === "map" ? <AtlasWorkspace locale={locale} state={routeState} onChange={updateRouteState} /> : <ContextFocus locale={locale} focus={routeState.focus} data={contextState.data} error={contextState.error} onFocus={(focus) => updateRouteState({ focus })} />}
       {routeState.view === "cosmos" ? <CosmosView locale={locale} traditions={routeState.traditions} focus={routeState.focus} relations={contextState.data?.relations} /> : null}
       {routeState.view === "timeline" ? <TimelineView locale={locale} traditions={routeState.traditions} from={routeState.from} to={routeState.to} focus={routeState.focus} relations={contextState.data?.relations} searchItems={contextState.data?.search.items ?? []} zoomLevel={routeState.zoomLevel} onFocus={(nextFocus) => updateRouteState({ focus: nextFocus, view: "map", mapLayer: "real" })} /> : null}
-      {routeState.view === "graph" ? <GraphView locale={locale} traditions={routeState.traditions} focus={routeState.focus} relations={contextState.data?.relations} searchItems={contextState.data?.search.items ?? []} zoomLevel={routeState.zoomLevel} onFocus={(nextFocus) => updateRouteState({ focus: nextFocus })} /> : null}
+      {routeState.view === "graph" ? <GraphView locale={locale} traditions={routeState.traditions} focus={routeState.focus} relations={contextState.data?.relations} searchItems={contextState.data?.search.items ?? []} zoomLevel={routeState.zoomLevel} onFocus={(nextFocus) => updateRouteState({ focus: nextFocus })} onZoomLevel={(zoomLevel) => updateRouteState({ zoomLevel })} onOpenRelation={(relationId) => updateRouteState({ view: "map", mapLayer: "real", atlasTab: "relations", detail: relationId.startsWith("relation:") ? relationId : `relation:${relationId}` })} /> : null}
     </section>
   );
 }
@@ -903,6 +904,7 @@ function TimelinePlate({ data, locale, traditions, from, to, focus, relations, s
               <div>
                 <button className="timeline-event-select" type="button" onClick={() => onFocus(timelineEventFocus(event))}>{event.title}</button>
                 <Link className="timeline-dossier-link" to={entityPath(event.entity?.kind ?? event.kind, event.entity?.slug ?? event.slug, locale)}>{locale === "zh-CN" ? "打开档案" : "Open dossier"}</Link>
+                <small className="timeline-event-kind">{event.kind === "event" ? `${formatEventKind(event.eventKind, locale)}${event.eventScope ? ` · ${formatEventScope(event.eventScope, locale)}` : ""}` : formatEntityKind(event.kind, locale)}</small>
                 <p>{event.summary}</p>
               </div>
             </li>
@@ -913,80 +915,21 @@ function TimelinePlate({ data, locale, traditions, from, to, focus, relations, s
   );
 }
 
-function GraphView({ locale, traditions, focus, relations, searchItems, zoomLevel, onFocus }: { locale: Locale; traditions: Tradition[]; focus?: string; relations?: ReadModelRelationIndex; searchItems: SearchItem[]; zoomLevel: ZoomLevel; onFocus: (focus: string) => void }) {
-  const loader = useCallback((signal: AbortSignal) => staticData.graph(locale, signal), [locale]);
-  const { data, error } = useStaticData(loader);
-  if (error) return <ErrorState locale={locale} error={error} />;
-  if (!data) return <LoadingState locale={locale} />;
-  return <GraphPlate data={data} locale={locale} traditions={traditions} focus={focus} relations={relations} searchItems={searchItems} zoomLevel={zoomLevel} onFocus={onFocus} />;
-}
-
-function GraphPlate({ data, locale, traditions, focus, relations, searchItems, zoomLevel, onFocus }: { data: GraphData; locale: Locale; traditions: Tradition[]; focus?: string; relations?: ReadModelRelationIndex; searchItems: SearchItem[]; zoomLevel: ZoomLevel; onFocus: (focus: string) => void }) {
-  const connectedKeys = useMemo(() => connectedContextKeys(relations, focus), [focus, relations]);
-  const visibleNodes = data.nodes.filter((node) => {
-    if (node.tradition !== "convergence" && !traditions.includes(node.tradition)) return false;
-    if (zoomLevel === "era" && !["tradition", "concept", "school"].includes(node.kind)) return false;
-    if (!focus) return true;
-    return matchesContextFocus([node.id, `${node.kind}:${node.slug}`], focus, connectedKeys);
-  });
-  const visibleNodeIds = new Set(visibleNodes.map((node) => node.id));
-  const visibleEdges = data.edges.filter((edge) => visibleNodeIds.has(edge.source) && visibleNodeIds.has(edge.target));
-  const nodes = new Map(visibleNodes.map((node) => [node.id, node]));
+function GraphView({ locale, traditions, focus, relations, searchItems, zoomLevel, onFocus, onZoomLevel, onOpenRelation }: { locale: Locale; traditions: Tradition[]; focus?: string; relations?: ReadModelRelationIndex; searchItems: SearchItem[]; zoomLevel: ZoomLevel; onFocus: (focus: string) => void; onZoomLevel: (zoomLevel: ZoomLevel) => void; onOpenRelation: (relationId: string) => void }) {
+  if (!relations) return <LoadingState locale={locale} />;
   return (
-    <div className="explore-golden page-shell">
-      <div className="graph-canvas">
-        <div className="canvas-title"><span>{data.title}</span><strong>{locale === "zh-CN" ? `展开层级：${zoomLevel}` : `detail: ${zoomLevel}`}</strong></div>
-        <svg viewBox="0 0 980 580" role="group" aria-labelledby="graph-title graph-desc">
-          <title id="graph-title">{data.title}</title>
-          <desc id="graph-desc">
-            {locale === "zh-CN"
-              ? "可交互的一跳关系图。选择节点可打开对应条目。"
-              : "Interactive one-hop relationship graph. Select a node to open its entity page."}
-          </desc>
-          {visibleEdges.map((edge) => {
-            const source = nodes.get(edge.source);
-            const target = nodes.get(edge.target);
-            if (!source || !target) return null;
-            return <line key={edge.id} x1={source.x} y1={source.y} x2={target.x} y2={target.y} className="graph-edge" />;
-          })}
-          {visibleNodes.map((node) => (
-            <Link
-              key={node.id}
-              to={entityPath(node.kind, node.slug, locale)}
-              onClick={(event) => {
-                event.preventDefault();
-                onFocus(node.kind + ":" + node.slug);
-              }}
-              className={`graph-node tradition-${node.tradition} ${matchesContextFocus([`${node.kind}:${node.slug}`, node.id], focus, connectedKeys) ? "is-focused" : ""}`}
-            >
-              <circle cx={node.x} cy={node.y} r={node.kind === "concept" ? 34 : 28} />
-              <text x={node.x} y={node.y + 5} textAnchor="middle">{node.label}</text>
-            </Link>
-          ))}
-        </svg>
-      </div>
-      <aside
-        className="explore-evidence"
-        tabIndex={0}
-        aria-label={locale === "zh-CN" ? "问题图谱证据列表" : "Question graph evidence list"}
-      >
-        <p className="eyebrow">{locale === "zh-CN" ? "问题图谱" : "Question graph"}</p>
-        <h2>{data.question}</h2>
-          <p>{locale === "zh-CN" ? "图中只显示与当前问题有关的一跳关系；边的颜色不表示真假，证据说明在列表中展开。切换展开层级会同步影响地图、时间轴和此处的节点密度。" : "The graph shows only one-hop relations relevant to this question. Edge colour does not represent truth; evidence is listed below. The detail level is shared with the map and timeline."}</p>
-        <ul className="relation-list">
-          {visibleEdges.map((edge) => (
-            <li key={edge.id}>
-              <strong>{nodes.get(edge.source)?.label} → {nodes.get(edge.target)?.label}</strong>
-              <span>{edge.label}</span>
-              <small>{formatEvidence(edge.evidence, locale)}</small>
-            </li>
-          ))}
-        </ul>
-        {focus?.startsWith("figure:") ? (
-          <RelationNetwork locale={locale} focus={focus} relations={relations} searchItems={searchItems} onFocus={onFocus} compact peopleOnly zoomLevel={zoomLevel} />
-        ) : null}
-      </aside>
-    </div>
+    <InteractiveRelationshipGraph
+      locale={locale}
+      relations={relations}
+      scopeRelations={contextRelations(relations, focus)}
+      searchItems={searchItems}
+      focus={focus}
+      traditions={traditions}
+      zoomLevel={zoomLevel}
+      onZoomLevel={onZoomLevel}
+      onFocus={onFocus}
+      onOpenRelation={onOpenRelation}
+    />
   );
 }
 

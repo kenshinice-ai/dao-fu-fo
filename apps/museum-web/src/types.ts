@@ -193,6 +193,8 @@ export interface TimelineEvent {
   tradition: Tradition | "convergence";
   title: string;
   summary: string;
+  eventKind?: "dynastic_transition" | "journey" | "editorial_project" | "foundation" | "construction" | "policy" | "conflict" | "analytical_period" | "other";
+  eventScope?: "personal" | "local" | "regional" | "imperial" | "transregional" | "cosmological";
   predicate?: string;
   displayDate?: string;
   confidence?: string;
@@ -247,6 +249,9 @@ export interface SearchItem {
   title: string;
   context: string;
   tradition: Tradition | "convergence";
+  eventKind?: "dynastic_transition" | "journey" | "editorial_project" | "foundation" | "construction" | "policy" | "conflict" | "analytical_period" | "other";
+  eventScope?: "personal" | "local" | "regional" | "imperial" | "transregional" | "cosmological";
+  timeRange?: { startYear: number; endYear?: number };
 }
 
 export interface MuseumMapFeature {

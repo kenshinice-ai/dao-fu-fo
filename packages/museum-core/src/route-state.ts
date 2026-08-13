@@ -50,7 +50,6 @@ export const RouteStateSchema = z.object({
   evidence: z.array(EvidenceLayerSchema),
   certainty: z.array(ConfidenceSchema),
   focus: z.string().trim().min(1).optional(),
-  scope: z.string().trim().min(1).optional(),
   detail: z.string().trim().min(1).optional(),
   compare: z.array(z.string().trim().min(1)).max(3),
   graphType: GraphTypeSchema,
@@ -151,7 +150,6 @@ export function parseRouteState(search: string | URLSearchParams): RouteState {
     evidence: parseList(params.get("evidence"), EvidenceLayerSchema),
     certainty: parseList(params.get("certainty"), ConfidenceSchema),
     focus,
-    scope: params.get("scope")?.trim() || undefined,
     detail: params.get("detail")?.trim() || undefined,
     compare: params.get("compare") ? params.get("compare")!.split(",").map((item) => item.trim()).filter(Boolean).slice(0, 3) : [],
     graphType: firstEnum(params.get("graphType"), GraphTypeSchema, DEFAULT_ROUTE_STATE.graphType),
@@ -184,7 +182,6 @@ export function serializeRouteState(state: RouteState): string {
   if (parsed.evidence.length > 0) params.set("evidence", parsed.evidence.join(","));
   if (parsed.certainty.length > 0) params.set("certainty", parsed.certainty.join(","));
   if (parsed.focus) params.set("focus", parsed.focus);
-  if (parsed.scope) params.set("scope", parsed.scope);
   if (parsed.detail) params.set("detail", parsed.detail);
   if (parsed.compare.length > 0) params.set("compare", parsed.compare.join(","));
   if (parsed.graphType !== DEFAULT_ROUTE_STATE.graphType) params.set("graphType", parsed.graphType);

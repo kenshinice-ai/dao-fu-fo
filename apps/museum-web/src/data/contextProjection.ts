@@ -75,10 +75,42 @@ export function contextRelations(relations: ReadModelRelationIndex | undefined, 
       return (sourceKey === focus || targetKey === focus) || (keys.has(sourceKey) && keys.has(targetKey));
     })
     .sort((left, right) => {
-      const leftDirect = relationTouches(left, focus) ? 0 : 1;
-      const rightDirect = relationTouches(right, focus) ? 0 : 1;
-      return leftDirect - rightDirect;
+      const leftLevel = contextRelationLevel(left, focus, keys);
+      const rightLevel = contextRelationLevel(right, focus, keys);
+      const rank = { direct: 0, bridge: 1, ambient: 2 } as const;
+      return rank[leftLevel] - rank[rightLevel];
     });
+}
+
+export type ContextRelationLevel = "direct" | "bridge" | "ambient";
+
+/**
+ * Label the edge's role in the current focus context. A bounded neighbour
+ * edge is useful for the linked atlas, but it must never be presented as the
+ * focused entity's own direct fact.
+ */
+export function contextRelationLevel(
+  relation: ReadModelRelation,
+  focus: string | undefined,
+  keys?: Set<string>,
+): ContextRelationLevel {
+  if (!focus || relationTouches(relation, focus)) return "direct";
+  const contextKeys = keys ?? new Set<string>();
+  const bridgeKinds = new Set(["event", "institution"]);
+  const touchesBridge = [relation.source, relation.target].some((endpoint) =>
+    contextKeys.has(contextEndpointKey(endpoint)) && bridgeKinds.has(endpoint.kind),
+  );
+  return touchesBridge ? "bridge" : "ambient";
+}
+
+export function contextRelationCounts(
+  relations: ReadModelRelation[] | undefined,
+  focus: string | undefined,
+  keys?: Set<string>,
+): Record<ContextRelationLevel, number> {
+  const counts: Record<ContextRelationLevel, number> = { direct: 0, bridge: 0, ambient: 0 };
+  for (const relation of relations ?? []) counts[contextRelationLevel(relation, focus, keys)] += 1;
+  return counts;
 }
 
 export interface PlaceFigureContext {
@@ -123,6 +155,11 @@ export function isPersonToPersonRelation(relation: ReadModelRelation): boolean {
   return relation.source.kind === "figure"
     && relation.target.kind === "figure"
     && ["influenced", "contemporary_with", "received_by"].includes(relation.relationType);
+}
+
+export function isDirectPersonInteractionRelation(relation: ReadModelRelation): boolean {
+  return isPersonToPersonRelation(relation)
+    && ["influenced", "contemporary_with"].includes(relation.relationType);
 }
 
 /**
@@ -280,12 +317,7 @@ export function eventFigureContexts(
 ): EventFigureContext[] {
   if (!relations) return [];
   return relations.items
-    .filter((relation) => {
-      const sourceKey = contextEndpointKey(relation.source);
-      const targetKey = contextEndpointKey(relation.target);
-      return (sourceKey === eventKey && relation.target.kind === "figure")
-        || (targetKey === eventKey && relation.source.kind === "figure");
-    })
+    .filter((relation) => isFigureEventParticipationRelation(relation) && relationTouches(relation, eventKey))
     .map((relation) => ({
       figureKey: contextEndpointKey(relation.source.kind === "figure" ? relation.source : relation.target),
       relation,

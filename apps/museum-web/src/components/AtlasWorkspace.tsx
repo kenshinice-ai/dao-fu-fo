@@ -5,14 +5,14 @@ import type { AtlasTab, MapContentLayer, RouteState, TimelineMode, ZoomLevel } f
 import { entityPath, withLang } from "../routing";
 import { staticData } from "../data/staticData";
 import { useStaticData } from "../data/useStaticData";
-import { contextEndpointKey, contextEntityKeys, contextRelations, projectTimelineEvents, relationConnector } from "../data/contextProjection";
+import { contextEndpointKey, contextEntityKeys, contextRelationCounts, contextRelationLevel, contextRelations, projectTimelineEvents, relationConnector } from "../data/contextProjection";
 import { CivilisationMap } from "./CivilisationMap";
 import { ErrorState, LoadingState } from "./LoadingState";
 import { Icon } from "./Icon";
 import { RelationNetwork } from "./RelationNetwork";
 import { InteractiveRelationshipGraph } from "./InteractiveRelationshipGraph";
 import { ERA_CONTEXTS } from "../data/eraContexts";
-import { formatConfidence, formatEntityKind, formatEvidence, formatEvidenceLine, formatRelationType } from "../data/labels";
+import { formatConfidence, formatEntityKind, formatEventKind, formatEventScope, formatEvidence, formatEvidenceLine, formatInteractionMode, formatRelationType } from "../data/labels";
 import type { EntityData, EntityKind, Locale, MapContextData, SearchItem, TimelineData, TimelineEvent, Tradition } from "../types";
 
 interface AtlasData extends MapContextData {
@@ -189,10 +189,6 @@ export function AtlasWorkspace({ locale, state, onChange, className = "", headin
   onChangeRef.current = onChange;
   const query = state.query ?? "";
 
-  useEffect(() => {
-    if (state.scope) onChangeRef.current({ scope: undefined });
-  }, [state.scope]);
-
   const stopPlayback = useCallback(() => {
     setIsPlaying(false);
     setPlaybackYear(undefined);
@@ -257,6 +253,11 @@ export function AtlasWorkspace({ locale, state, onChange, className = "", headin
       .sort((a, b) => a.title.localeCompare(b.title, locale === "zh-CN" ? "zh-Hans" : "en"));
   }, [contextualItems, data, locale, query, state.atlasTab]);
 
+  const queryFilteredContextualItems = useMemo(() => {
+    const normalisedQuery = query.trim().toLocaleLowerCase();
+    return contextualItems.filter((item) => !normalisedQuery || `${item.title} ${item.context}`.toLocaleLowerCase().includes(normalisedQuery));
+  }, [contextualItems, query]);
+
   const contextualRelationItems = useMemo(() => {
     if (!data) return [];
     return contextRelations(data.relations, state.focus).filter((relation) => {
@@ -281,38 +282,43 @@ export function AtlasWorkspace({ locale, state, onChange, className = "", headin
       });
   }, [contextualRelationItems, data, query, searchMap, state.atlasTab]);
 
+  const relationContextCounts = useMemo(
+    () => contextRelationCounts(contextualRelationItems, state.focus, contextualKeys),
+    [contextualKeys, contextualRelationItems, state.focus],
+  );
+
   const tabCounts = useMemo(() => {
     const counts = {} as Record<AtlasTab, number>;
     for (const tab of TAB_ORDER) {
-      if (tab === "relations") counts[tab] = contextualRelationItems.length;
-      else counts[tab] = contextualItems.filter((item) => item.kind === TAB_DEFINITIONS[tab].kind).length;
+      if (tab === "relations") counts[tab] = relationItems.length;
+      else counts[tab] = queryFilteredContextualItems.filter((item) => item.kind === TAB_DEFINITIONS[tab].kind).length;
     }
     return counts;
-  }, [contextualItems, contextualRelationItems]);
+  }, [queryFilteredContextualItems, relationItems]);
 
-  const selectFocus = (focus: string, _explicitScope?: string | null) => updateState({
+  const selectFocus = (focus: string, preserveAtlasTab = false) => updateState({
     focus,
-    scope: undefined,
     detail: undefined,
-    atlasTab: tabForFocus(focus, state.atlasTab),
+    query: undefined,
+    atlasTab: preserveAtlasTab ? state.atlasTab : tabForFocus(focus, state.atlasTab),
     view: "map",
     mapLayer: "real",
   });
   const setFocus = (focus: string) => selectFocus(focus);
-  const setMapFocus = (focus: string, scope?: string | null) => selectFocus(focus, scope);
+  const setGraphFocus = (focus: string) => selectFocus(focus, true);
+  const setMapFocus = (focus: string) => selectFocus(focus);
   const openDetail = (detail: string) => {
     const relationDetail = detail.startsWith("relation:");
     const focus = relationDetail ? state.focus : detail;
     updateState({
       focus,
-      scope: undefined,
       detail,
       atlasTab: relationDetail ? state.atlasTab : tabForFocus(detail, state.atlasTab),
       view: "map",
       mapLayer: "real",
     });
   };
-  const clearFocus = () => updateState({ focus: undefined, scope: undefined, detail: undefined });
+  const clearFocus = () => updateState({ focus: undefined, detail: undefined, query: undefined });
 
   const detailCandidates = useMemo(
     () => state.atlasTab === "relations"
@@ -360,7 +366,7 @@ export function AtlasWorkspace({ locale, state, onChange, className = "", headin
           <span aria-hidden="true"> → </span>
           <strong>{focusTitle}</strong>
         </div>
-        {state.focus || state.scope ? <button className="atlas-clear-focus" type="button" onClick={clearFocus}>{locale === "zh-CN" ? "清除焦点" : "Clear focus"}</button> : null}
+        {state.focus ? <button className="atlas-clear-focus" type="button" onClick={clearFocus}>{locale === "zh-CN" ? "清除焦点" : "Clear focus"}</button> : null}
       </div>
 
       <div className="atlas-tradition-bar" aria-label={locale === "zh-CN" ? "传统筛选" : "Tradition filters"}>
@@ -466,9 +472,10 @@ export function AtlasWorkspace({ locale, state, onChange, className = "", headin
           onQuery={(value) => updateState({ query: value.trim() || undefined })}
           items={filteredItems}
           relationItems={relationItems}
+          relationContextCounts={relationContextCounts}
           tabCounts={tabCounts}
           onChange={updateState}
-          onFocus={setFocus}
+          onFocus={state.atlasTab === "relations" ? setGraphFocus : setFocus}
           onOpenDetail={openDetail}
         />
       </div>
@@ -483,7 +490,7 @@ export function AtlasWorkspace({ locale, state, onChange, className = "", headin
           traditions={state.traditions}
           zoomLevel={state.zoomLevel}
           onZoomLevel={(zoomLevel) => updateState({ zoomLevel })}
-          onFocus={setFocus}
+          onFocus={setGraphFocus}
           onOpenRelation={(relationId) => openDetail(relationDetailKey(relationId))}
         />
       ) : null}
@@ -515,6 +522,7 @@ function AtlasObjectPanel({
   onQuery,
   items,
   relationItems,
+  relationContextCounts,
   tabCounts,
   onChange,
   onFocus,
@@ -527,12 +535,14 @@ function AtlasObjectPanel({
   onQuery: (value: string) => void;
   items: SearchItem[];
   relationItems: ReadModelRelation[];
+  relationContextCounts: { direct: number; bridge: number; ambient: number };
   tabCounts: Record<AtlasTab, number>;
   onChange: (changes: Partial<RouteState>) => void;
   onFocus: (key: string) => void;
   onOpenDetail: (key: string) => void;
 }) {
   const titleMap = new Map(data.searchItems.map((item) => [keyFor(item.kind, item.slug), item.title]));
+  const focusContextKeys = useMemo(() => contextEntityKeys(data.relations, state.focus), [data.relations, state.focus]);
   const [visibleCount, setVisibleCount] = useState(80);
   useEffect(() => {
     setVisibleCount(80);
@@ -547,7 +557,7 @@ function AtlasObjectPanel({
     <aside className="atlas-object-panel" aria-label={locale === "zh-CN" ? "地图对象面板" : "Atlas entity panel"}>
       <nav className="atlas-tab-nav" aria-label={locale === "zh-CN" ? "对象类型" : "Entity types"}>
         {TAB_ORDER.map((tab) => (
-          <button className={state.atlasTab === tab ? "active" : ""} type="button" key={tab} aria-pressed={state.atlasTab === tab} onClick={() => onChange({ atlasTab: tab, scope: undefined, detail: undefined })}>
+          <button className={state.atlasTab === tab ? "active" : ""} type="button" key={tab} aria-pressed={state.atlasTab === tab} onClick={() => onChange({ atlasTab: tab, detail: undefined })}>
             <span>{locale === "zh-CN" ? TAB_DEFINITIONS[tab].zh : TAB_DEFINITIONS[tab].en}</span>
             <small>{tabCounts[tab]}</small>
           </button>
@@ -560,8 +570,11 @@ function AtlasObjectPanel({
       </div>
       {state.focus && contextTitle ? (
         <div className="atlas-panel-scope-note" data-atlas-context-note>
-          <span>{locale === "zh-CN" ? `${contextTitle} · 关联${contextTypeLabel}` : `${contextTitle} · Related ${contextTypeLabel.toLocaleLowerCase()}`} · {state.atlasTab === "relations" ? relationItems.length : items.length}</span>
-          <button type="button" onClick={() => onChange({ focus: undefined, scope: undefined, detail: undefined })}>
+          <span>
+            {locale === "zh-CN" ? `${contextTitle} · 关联${contextTypeLabel}` : `${contextTitle} · Related ${contextTypeLabel.toLocaleLowerCase()}`} · {state.atlasTab === "relations" ? relationItems.length : items.length}
+            {state.atlasTab === "relations" && state.focus ? ` · ${locale === "zh-CN" ? `直接 ${relationContextCounts.direct} · 桥接 ${relationContextCounts.bridge} · 背景 ${relationContextCounts.ambient}` : `${relationContextCounts.direct} direct · ${relationContextCounts.bridge} bridge · ${relationContextCounts.ambient} ambient`}` : ""}
+          </span>
+          <button type="button" onClick={() => onChange({ focus: undefined, detail: undefined, query: undefined })}>
             {locale === "zh-CN" ? "查看全部" : "Show all"}
           </button>
         </div>
@@ -571,11 +584,12 @@ function AtlasObjectPanel({
           const sourceKey = contextEndpointKey(relation.source);
           const targetKey = contextEndpointKey(relation.target);
           const detailKey = relationDetailKey(relation.id);
+          const contextLevel = contextRelationLevel(relation, state.focus, focusContextKeys);
           return (
             <article className={`atlas-relation-card ${state.detail === detailKey ? "is-selected" : ""}`} key={relation.id}>
               <button type="button" className="atlas-object-card-main" onClick={() => onOpenDetail(detailKey)} aria-pressed={state.detail === detailKey}>
                 <strong>{titleMap.get(sourceKey) ?? sourceKey} <span aria-hidden="true">{relationConnector(relation)}</span> {titleMap.get(targetKey) ?? targetKey}</strong>
-                <span>{relation.label}</span>
+                <span>{locale === "zh-CN" ? ({ direct: "直接关系", bridge: "桥接关系", ambient: "背景关系" } as const)[contextLevel] : ({ direct: "Direct", bridge: "Bridge", ambient: "Ambient" } as const)[contextLevel]} · {relation.label}</span>
                 <small>{relation.temporalAssertions.map((assertion) => assertion.displayDate).join(" · ") || formatEvidence(relation.evidenceLayer, locale)} · {formatConfidence(relation.confidence, locale)}</small>
               </button>
               <div className="atlas-relation-card-actions">
@@ -591,7 +605,7 @@ function AtlasObjectPanel({
               <button type="button" className="atlas-object-card-main" onClick={() => onFocus(key)} aria-pressed={state.focus === key}>
                 <strong>{item.title}</strong>
                 <span>{item.context}</span>
-                <small>{formatEntityKind(item.kind, locale)} · {item.tradition === "convergence" ? (locale === "zh-CN" ? "交汇" : "Convergence") : item.tradition}</small>
+                <small>{item.kind === "event" ? `${formatEventKind(item.eventKind, locale)}${item.eventScope ? ` · ${formatEventScope(item.eventScope, locale)}` : ""}` : formatEntityKind(item.kind, locale)} · {item.tradition === "convergence" ? (locale === "zh-CN" ? "交汇" : "Convergence") : item.tradition}</small>
               </button>
               <button className="atlas-object-card-detail" type="button" onClick={() => onOpenDetail(key)}>{locale === "zh-CN" ? "详情" : "Inspect"}</button>
             </article>
@@ -652,7 +666,7 @@ function AtlasTimelineRail({
   useEffect(() => setEventLimit(12), [state.atlasTab, state.focus, state.from, state.to, state.timelineMode, state.traditions.join(","), state.zoomLevel]);
   const focusTimelineEvent = (event: TimelineEvent) => {
     const focus = eventFocus(event);
-    onChange({ focus, scope: undefined, atlasTab: tabForFocus(focus, state.atlasTab), detail: undefined, view: "map", mapLayer: "real" });
+    onChange({ focus, atlasTab: tabForFocus(focus, state.atlasTab), detail: undefined, query: undefined, view: "map", mapLayer: "real" });
   };
   const rangeBoundary = (year: number): number => year === 0 ? (year < start ? -1 : 1) : Math.round(year);
   const selectDensityBin = (bin: TimelineDensityBin) => {
@@ -872,8 +886,19 @@ function RelationDrawerContent({ locale, relation, searchMap, onFocus }: { local
         <div><dt>{locale === "zh-CN" ? "关系类型" : "Relation"}</dt><dd>{formatRelationType(relation.relationType, locale)}</dd></div>
         <div><dt>{locale === "zh-CN" ? "时间" : "Time"}</dt><dd>{relation.temporalAssertions.map((assertion) => assertion.displayDate).join(" · ") || (locale === "zh-CN" ? "未标明" : "Not specified")}</dd></div>
         <div><dt>{locale === "zh-CN" ? "证据" : "Evidence"}</dt><dd>{formatEvidenceLine(relation.evidenceLayer, relation.confidence, locale)}</dd></div>
+        {relation.qualifiers.interactionMode ? <div><dt>{locale === "zh-CN" ? "互动方式" : "Interaction"}</dt><dd>{formatInteractionMode(relation.qualifiers.interactionMode, locale)}</dd></div> : null}
       </dl>
+      <p className="atlas-detail-prose">{relation.summary}</p>
+      {relation.qualifiers.note ? <p className="atlas-detail-note">{relation.qualifiers.note[locale]}</p> : null}
       <p className="atlas-detail-note">{locale === "zh-CN" ? "关系类型、方向与证据层按读模型原样展示；人物互动、空间活动、事件参与、文本归属与后世接受不会被混写成同一种关系。" : "Relation type, direction and evidence follow the read model; personal interaction, spatial activity, event participation, textual attribution and later reception remain distinct."}</p>
+      {relation.sourceIds.length > 0 ? (
+        <div className="atlas-drawer-sources">
+          <span className="eyebrow">{locale === "zh-CN" ? "来源" : "Sources"}</span>
+          <div className="atlas-drawer-actions">
+            {relation.sourceIds.map((sourceId) => <Link key={sourceId} className="button button-secondary" to={`/research?source=${encodeURIComponent(sourceId)}&lang=${encodeURIComponent(locale)}`}>{sourceId}</Link>)}
+          </div>
+        </div>
+      ) : null}
       <div className="atlas-drawer-actions">
         <button className="button button-secondary" type="button" onClick={() => onFocus(sourceKey)}>{locale === "zh-CN" ? `聚焦${searchMap.get(sourceKey) ?? sourceKind}` : `Focus ${searchMap.get(sourceKey) ?? sourceKind}`}</button>
         <button className="button button-secondary" type="button" onClick={() => onFocus(targetKey)}>{locale === "zh-CN" ? `聚焦${searchMap.get(targetKey) ?? targetKind}` : `Focus ${searchMap.get(targetKey) ?? targetKind}`}</button>
@@ -905,7 +930,8 @@ function EntityDrawerContent({ locale, entity, relations, searchItems, onFocus, 
         </figure>
       ) : null}
       <dl className="atlas-detail-facts">
-        <div><dt>{locale === "zh-CN" ? "时间" : "Time"}</dt><dd>{entity.timeLabel}</dd></div>
+        <div><dt>{entity.kind === "event" ? (locale === "zh-CN" ? "时间范围" : "Time range") : (locale === "zh-CN" ? "时间" : "Time")}</dt><dd>{entity.timeLabel}</dd></div>
+        {entity.kind === "event" && profileText(entity.profile, "eventKind") ? <div><dt>{locale === "zh-CN" ? "事件性质" : "Event nature"}</dt><dd>{formatEventKind(profileText(entity.profile, "eventKind"), locale)}{profileText(entity.profile, "eventScope") ? ` · ${formatEventScope(profileText(entity.profile, "eventScope"), locale)}` : ""}</dd></div> : null}
         {entity.keyFacts.map((fact) => <div key={fact.label}><dt>{fact.label}</dt><dd>{fact.value}</dd></div>)}
       </dl>
       {entity.curatorialDescription.length > 1 ? <div className="atlas-detail-prose">{entity.curatorialDescription.slice(1, 3).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div> : null}
@@ -935,4 +961,9 @@ function EntityDrawerContent({ locale, entity, relations, searchItems, onFocus, 
       ) : null}
     </div>
   );
+}
+
+function profileText(profile: Record<string, unknown> | undefined, key: string): string | undefined {
+  const value = profile?.[key];
+  return typeof value === "string" && value.length > 0 ? value : undefined;
 }

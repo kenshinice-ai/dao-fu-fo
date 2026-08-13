@@ -9,7 +9,7 @@ describe("route state", () => {
     expect(roundTrip.atlasTab).toBe("relations");
     expect(roundTrip.timelineMode).toBe("tradition");
     expect(roundTrip.detail).toBe("figure:xuanzang");
-    expect(roundTrip.scope).toBe("place:changan");
+    expect(roundTrip).not.toHaveProperty("scope");
     expect(roundTrip.query).toBe("xuanzang");
     expect(roundTrip.mapLayers).toEqual(["places", "trajectories"]);
     expect(roundTrip.zoomLevel).toBe("figure");

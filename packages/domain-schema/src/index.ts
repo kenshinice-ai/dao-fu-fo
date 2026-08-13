@@ -313,6 +313,15 @@ export const RelationQualifiersSchema = z.object({
   historicity: HistoricitySchema.optional(),
   attributionStatus: AttributionStatusSchema.optional(),
   receptionMode: ReceptionModeSchema.optional(),
+  interactionMode: z.enum([
+    "teacher_student",
+    "lineage_reception",
+    "correspondence",
+    "debate",
+    "collaboration",
+    "institutional_peer",
+    "shared_context",
+  ]).optional(),
   note: BilingualTextSchema.optional(),
 }).default({});
 export type RelationQualifiers = z.infer<typeof RelationQualifiersSchema>;
@@ -565,6 +574,7 @@ export const EventProfileSchema = z.object({
   sequenceOrder: z.number().int().positive(),
   eventScope: z.enum(["personal", "local", "regional", "imperial", "transregional", "cosmological"]),
 });
+export type EventProfile = z.infer<typeof EventProfileSchema>;
 
 const EntityContentBaseSchema = z.object({
   kind: EntityKindSchema,
@@ -788,6 +798,9 @@ export const ReadModelSearchItemSchema = z.object({
   title: z.string().trim().min(1),
   context: z.string().trim().min(1),
   tradition: z.union([TraditionSlugSchema, z.literal("convergence")]),
+  eventKind: EventProfileSchema.shape.eventKind.optional(),
+  eventScope: EventProfileSchema.shape.eventScope.optional(),
+  timeRange: z.object({ startYear: z.number().int(), endYear: z.number().int().optional() }).optional(),
 });
 export const ReadModelSearchIndexSchema = z.object({
   locale: LocaleSchema,
@@ -952,6 +965,7 @@ export const ReadModelTimelineSchema = z.object({
   locale: LocaleSchema, title: z.string(), startYear: z.number().int(), endYear: z.number().int(),
   events: z.array(z.object({
     id: z.string(), kind: EntityKindSchema, slug: z.string(), title: z.string(), summary: z.string(), tradition: z.union([TraditionSlugSchema, z.literal("convergence")]),
+    eventKind: EventProfileSchema.shape.eventKind.optional(), eventScope: EventProfileSchema.shape.eventScope.optional(),
     predicate: TemporalPredicateSchema, type: TemporalAssertionSchema.shape.timeType, year: z.number().int(), endYear: z.number().int().optional(),
     displayDate: z.string(), confidence: ConfidenceSchema, evidenceLayer: EvidenceLayerSchema, sourceId: z.string(),
   })),

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { ReadModelRelationIndex } from "@drf-museum/domain-schema";
-import { connectedContextKeys, contextEntityKeys, contextRelations, figurePlaceContexts, isPersonToPersonRelation, placeFigureContexts, projectTimelineEvents, relationConnector } from "./data/contextProjection";
+import { connectedContextKeys, contextEntityKeys, contextRelationCounts, contextRelationLevel, contextRelations, figurePlaceContexts, isPersonToPersonRelation, placeFigureContexts, projectTimelineEvents, relationConnector } from "./data/contextProjection";
 import type { SearchItem, TimelineData } from "./types";
 
 const timeline: TimelineData = {
@@ -155,6 +155,17 @@ describe("context projections", () => {
     expect(placeFigureContexts({ ...relations, items: [participatedEvent, eventPlace] }, "place:luoyang")).toMatchObject([
       { figureKey: "figure:laozi", connection: "event", bridge: { id: "relation:event-occurred-luoyang" } },
     ]);
+  });
+
+  it("classifies direct, event-bridge and ambient relation rows without upgrading a bridge to direct", () => {
+    const direct = { ...relations.items[0], id: "relation:direct", source: { kind: "figure", slug: "laozi" }, target: { kind: "place", slug: "luoyang" }, relationType: "active_in" } as (typeof relations.items)[number];
+    const bridge = { ...relations.items[0], id: "relation:bridge", source: { kind: "event", slug: "kaiyuan-institutional-expansion" }, target: { kind: "place", slug: "luoyang" }, relationType: "occurred_at" } as (typeof relations.items)[number];
+    const ambient = { ...relations.items[0], id: "relation:ambient", source: { kind: "figure", slug: "confucius" }, target: { kind: "figure", slug: "mengzi" }, relationType: "contemporary_with" } as (typeof relations.items)[number];
+    const keys = new Set(["figure:laozi", "place:luoyang", "event:kaiyuan-institutional-expansion", "figure:confucius", "figure:mengzi"]);
+    expect(contextRelationLevel(direct, "figure:laozi", keys)).toBe("direct");
+    expect(contextRelationLevel(bridge, "figure:laozi", keys)).toBe("bridge");
+    expect(contextRelationLevel(ambient, "figure:laozi", keys)).toBe("ambient");
+    expect(contextRelationCounts([direct, bridge, ambient], "figure:laozi", keys)).toEqual({ direct: 1, bridge: 1, ambient: 1 });
   });
 
   it("keeps figure relations together while excluding deification and comparison edges", () => {

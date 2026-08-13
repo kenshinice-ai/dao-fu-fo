@@ -286,7 +286,7 @@ export function InteractiveRelationshipGraph({
       <div className="relationship-graph-toolbar">
         <div className="relationship-graph-tiers" role="group" aria-label={locale === "zh-CN" ? "关系图展开层级" : "Relationship graph detail level"}>
           {TIER_ORDER.map((level) => (
-            <button key={level} type="button" className={level === tier ? "active" : ""} aria-pressed={level === tier} onClick={() => setTier(level)}>
+            <button key={level} type="button" className={level === laidOutModel.effectiveTier ? "active" : ""} aria-pressed={level === laidOutModel.effectiveTier} onClick={() => setTier(level)}>
               {tierLabel(level, locale)}
             </button>
           ))}
@@ -297,6 +297,11 @@ export function InteractiveRelationshipGraph({
           {!asTable ? <button type="button" onClick={fitView}>{locale === "zh-CN" ? "重置视图" : "Reset view"}</button> : null}
         </div>
       </div>
+      {model.effectiveTier !== tier ? (
+        <p className="relationship-graph-note" role="status">
+          {locale === "zh-CN" ? "当前聚合层级已自动展开焦点人物，人物节点、关系边和右侧语境保持联动。" : "The aggregate view is expanded to the focused person so its node, relation edges and contextual panel stay linked."}
+        </p>
+      ) : null}
 
       {asTable ? (
         <div className="relationship-graph-table-wrap">
@@ -334,7 +339,7 @@ export function InteractiveRelationshipGraph({
           <svg
             className="relationship-graph-canvas"
             viewBox={`0 0 ${VIEWBOX_WIDTH} ${VIEWBOX_HEIGHT}`}
-            role="img"
+            role="group"
             aria-label={`${laidOutModel.nodes.length} ${locale === "zh-CN" ? "个节点" : "nodes"}, ${laidOutModel.edges.length} ${locale === "zh-CN" ? "条边" : "edges"}`}
             onWheel={zoomAround}
             onPointerDown={(event) => {
@@ -391,7 +396,7 @@ export function InteractiveRelationshipGraph({
                 return (
                   <g
                     key={node.id}
-                    className={`relationship-graph-node node-${node.kind}`}
+                    className={`graph-node relationship-graph-node node-${node.kind}${selected ? " is-focused" : ""}`}
                     transform={`translate(${node.x} ${node.y})`}
                     style={{ opacity: active ? 1 : 0.18 }}
                     role="button"
@@ -431,7 +436,7 @@ export function InteractiveRelationshipGraph({
                   >
                     {selected ? <circle className="relationship-graph-node-halo" r={nodeRadius(node) + 7} /> : null}
                     <circle className="relationship-graph-node-disc" r={nodeRadius(node)} fill={TRADITION_COLORS[node.tradition]} filter={node.kind === "person" ? undefined : "url(#relationship-graph-shadow)"} />
-                    <text className="relationship-graph-node-label" textAnchor="middle" y="4">{node.kind === "person" ? shortLabel(node.label) : node.label}</text>
+                    <text className="relationship-graph-node-label" textAnchor="middle" y="4">{node.kind === "person" && !selected ? shortLabel(node.label) : node.label}</text>
                     <text className="relationship-graph-node-count" textAnchor="middle" y={nodeRadius(node) + 16}>{node.kind === "person" ? node.degree : node.weight}</text>
                   </g>
                 );

@@ -6,8 +6,8 @@ import { TraditionMark } from "../components/TraditionMark";
 import { useMuseumContext } from "../context";
 import { staticData } from "../data/staticData";
 import { useStaticData } from "../data/useStaticData";
-import { isPersonToPersonRelation } from "../data/contextProjection";
-import { formatConfidence, formatEntityKind, formatEvidence, formatEvidenceLine, formatFigureClass, formatHistoricity, formatRelationType } from "../data/labels";
+import { isPersonToPersonRelation, relationConnector } from "../data/contextProjection";
+import { formatConfidence, formatEntityKind, formatEventKind, formatEventScope, formatEvidence, formatEvidenceLine, formatFigureClass, formatHistoricity, formatInteractionMode, formatRelationType } from "../data/labels";
 import { entityPath, withLang } from "../routing";
 import type { EntityKind } from "../types";
 
@@ -34,6 +34,14 @@ export function EntityPage({ kind }: { kind: EntityKind }) {
     const targetKey = `${relation.target.kind}:${relation.target.slug}`;
     return sourceKey === currentKey || targetKey === currentKey;
   });
+  const relatedItems = data.related.filter((item) => {
+    const relatedKey = `${item.kind}:${item.slug}`;
+    return !connectedRelations.some((relation) => {
+      const sourceKey = `${relation.source.kind}:${relation.source.slug}`;
+      const targetKey = `${relation.target.kind}:${relation.target.slug}`;
+      return (sourceKey === relatedKey || targetKey === relatedKey) && relation.label === item.relation;
+    });
+  });
   const searchMap = new Map(contextData.search.items.map((item) => [`${item.kind}:${item.slug}`, item.title]));
   const birthplaceRelations = data.kind === "figure"
     ? connectedRelations.filter((relation) => {
@@ -57,6 +65,7 @@ export function EntityPage({ kind }: { kind: EntityKind }) {
         </div>
         <dl className="entity-facts">
           <div><dt>{locale === "zh-CN" ? "年代" : "Period"}</dt><dd>{data.timeLabel}</dd></div>
+          {data.kind === "event" && profileText(data.profile, "eventKind") ? <div><dt>{locale === "zh-CN" ? "事件性质" : "Event nature"}</dt><dd>{formatEventKind(profileText(data.profile, "eventKind"), locale)}{profileText(data.profile, "eventScope") ? ` · ${formatEventScope(profileText(data.profile, "eventScope"), locale)}` : ""}</dd></div> : null}
           {data.kind === "figure" && profileText(data.profile, "historicity") ? <div><dt>{locale === "zh-CN" ? "历史地位" : "Historicity"}</dt><dd>{formatHistoricity(profileText(data.profile, "historicity"), locale)}</dd></div> : null}
           {data.kind === "figure" && profileText(data.profile, "figureClass") ? <div><dt>{locale === "zh-CN" ? "人物类别" : "Figure class"}</dt><dd>{formatFigureClass(profileText(data.profile, "figureClass"), locale)}</dd></div> : null}
           {birthplaceRelations.length > 0 ? (
@@ -99,17 +108,19 @@ export function EntityPage({ kind }: { kind: EntityKind }) {
         </div>
 
         <aside className="entity-evidence">
-          <section>
-            <h2>{locale === "zh-CN" ? "继续探索" : "Continue exploring"}</h2>
-            <ul className="related-list">
-              {data.related.map((item) => (
-                <li key={`${item.kind}:${item.slug}`}>
-                  <span>{item.relation}</span>
-                  <Link to={entityPath(item.kind, item.slug, locale)}>{item.title}</Link>
-                </li>
-              ))}
-            </ul>
-          </section>
+          {relatedItems.length > 0 ? (
+            <section>
+              <h2>{locale === "zh-CN" ? "继续探索" : "Continue exploring"}</h2>
+              <ul className="related-list">
+                {relatedItems.map((item) => (
+                  <li key={`${item.kind}:${item.slug}`}>
+                    <span>{item.relation}</span>
+                    <Link to={entityPath(item.kind, item.slug, locale)}>{item.title}</Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ) : null}
           <section>
             <h2>{locale === "zh-CN" ? "来源与证据" : "Sources & evidence"}</h2>
             <ol className="source-list">
@@ -137,7 +148,7 @@ export function EntityPage({ kind }: { kind: EntityKind }) {
                 {locale === "zh-CN" ? "进入三传统原典对读" : "Open three-tradition passage reading"}
               </Link>
             ) : null}
-            <Link className="button button-secondary" to={withLang(`/explore?view=graph&focus=${encodeURIComponent(currentKey)}`, locale)}>
+            <Link className="button button-secondary" to={withLang(`/explore?view=map&tab=relations&focus=${encodeURIComponent(currentKey)}`, locale)}>
               {locale === "zh-CN" ? "在关系图中展开" : "Open relation context"}
             </Link>
             <Link className="button button-secondary" to={withLang("/explore", locale)}>
@@ -222,12 +233,15 @@ function RelationList({
           <li key={relation.id}>
             <div className="entity-network-card-heading">
               <span className="relation-type-label">{relation.label}</span>
-              <strong>{sourceKey === currentKey ? entity.title : otherTitle} → {sourceKey === currentKey ? otherTitle : entity.title}</strong>
+              <strong>{sourceKey === currentKey ? entity.title : otherTitle} <span aria-hidden="true">{relationConnector(relation)}</span> {sourceKey === currentKey ? otherTitle : entity.title}</strong>
               <span className="relation-confidence">{formatRelationType(relation.relationType, locale)} · {formatEvidenceLine(relation.evidenceLayer, relation.confidence, locale)}</span>
             </div>
             <p>{relation.summary}</p>
             {time ? <small className="relation-time">{time}</small> : null}
-            {qualifierLabels.length > 0 ? <div className="relation-qualifiers">{qualifierLabels.map((label) => <span key={label}>{label.replaceAll("_", " ")}</span>)}</div> : null}
+            {relation.qualifiers.interactionMode || qualifierLabels.length > 0 ? <div className="relation-qualifiers">
+              {relation.qualifiers.interactionMode ? <span>{formatInteractionMode(relation.qualifiers.interactionMode, locale)}</span> : null}
+              {qualifierLabels.map((label) => <span key={label}>{label.replaceAll("_", " ")}</span>)}
+            </div> : null}
             <div className="entity-network-actions">
               <Link to={entityPath(other.kind, other.slug, locale)}>{locale === "zh-CN" ? "打开对象" : "Open object"}</Link>
               {relation.sourceIds.map((sourceId) => <Link key={sourceId} to={`/research?source=${encodeURIComponent(sourceId)}&lang=${encodeURIComponent(locale)}`}>{sourceId}</Link>)}

@@ -31,17 +31,14 @@ export function RelationNetwork({ locale, focus, relations, searchItems, onFocus
   const [presentation, setPresentation] = useState<"map" | "list">("map");
   const neighbourLimit = zoomLevel === "era" ? 4 : zoomLevel === "region" ? 8 : zoomLevel === "figure" ? (compact ? 8 : 16) : 32;
   const neighbours = useMemo(() => {
-    const seen = new Set<string>();
     return relationNeighbors(relations, focus).filter((relation) => {
       if (peopleOnly && !isPersonToPersonRelation(relation)) return false;
-      const other = contextEndpointKey(relation.source) === focus
-        ? contextEndpointKey(relation.target)
-        : contextEndpointKey(relation.source);
-      if (seen.has(other)) return false;
-      seen.add(other);
       return true;
     }).slice(0, neighbourLimit);
   }, [focus, neighbourLimit, peopleOnly, relations]);
+  const neighbourKeys = useMemo(() => [...new Set(neighbours.map((relation) => contextEndpointKey(relation.source) === focus
+    ? contextEndpointKey(relation.target)
+    : contextEndpointKey(relation.source)))], [focus, neighbours]);
   const title = titleFor(focus, searchItems, locale);
   const networkTitleId = "relation-network-title-" + focus.replace(/[^a-z0-9]+/gi, "-");
   const scopeRelationItems = useMemo(() => {
@@ -54,16 +51,16 @@ export function RelationNetwork({ locale, focus, relations, searchItems, onFocus
       return scope.has(source) && scope.has(target);
     });
   }, [relations, scopeKeys]);
+  const visibleScopeRelations = useMemo(() => scopeRelationItems.slice(0, neighbourLimit), [neighbourLimit, scopeRelationItems]);
   const scopeNodeKeys = useMemo(() => {
     if (!scopeKeys) return [];
     const nodes = new Set<string>();
-    for (const relation of scopeRelationItems) {
+    for (const relation of visibleScopeRelations) {
       nodes.add(contextEndpointKey(relation.source));
       nodes.add(contextEndpointKey(relation.target));
     }
     return [...nodes];
-  }, [scopeKeys, scopeRelationItems]);
-  const visibleScopeRelations = useMemo(() => scopeRelationItems.slice(0, neighbourLimit), [neighbourLimit, scopeRelationItems]);
+  }, [scopeKeys, visibleScopeRelations]);
   const scopePositions = useMemo(() => {
     const center = { x: 360, y: compact ? 140 : 190 };
     const radius = compact ? 104 : 145;
@@ -74,13 +71,10 @@ export function RelationNetwork({ locale, focus, relations, searchItems, onFocus
   }, [compact, scopeNodeKeys]);
   const center = { x: 360, y: compact ? 135 : 190 };
   const radius = compact ? 92 : 145;
-  const positions = useMemo(() => new Map(neighbours.map((relation, index) => {
-    const angle = -Math.PI / 2 + (index / Math.max(1, neighbours.length)) * Math.PI * 2;
-    const other = contextEndpointKey(relation.source) === focus
-      ? contextEndpointKey(relation.target)
-      : contextEndpointKey(relation.source);
+  const positions = useMemo(() => new Map(neighbourKeys.map((other, index) => {
+    const angle = -Math.PI / 2 + (index / Math.max(1, neighbourKeys.length)) * Math.PI * 2;
     return [other, { x: center.x + Math.cos(angle) * radius, y: center.y + Math.sin(angle) * radius }];
-  })), [center.x, center.y, focus, neighbours, radius]);
+  })), [center.x, center.y, neighbourKeys, neighbours.length, radius]);
 
   if (scopeKeys) {
     if (scopeRelationItems.length === 0) {
@@ -107,7 +101,7 @@ export function RelationNetwork({ locale, focus, relations, searchItems, onFocus
             <p className="eyebrow">{locale === "zh-CN" ? "人物关系" : "Person-to-person"}</p>
             <h3>{title} · {locale === "zh-CN" ? "人物—人物关系" : "figure-to-figure relations"}</h3>
           </div>
-          <span>{scopeNodeKeys.length} {locale === "zh-CN" ? "位人物" : "figures"} · {scopeRelationItems.length} {locale === "zh-CN" ? "条关系" : "relations"}</span>
+        <span>{scopeNodeKeys.length} {locale === "zh-CN" ? "位人物" : "figures"} · {scopeRelationItems.length} {locale === "zh-CN" ? "条关系" : "relations"}{visibleScopeRelations.length < scopeRelationItems.length ? ` · ${locale === "zh-CN" ? `图中显示前 ${visibleScopeRelations.length} 条` : `graph shows first ${visibleScopeRelations.length}`}` : ""}</span>
         </div>
         <div className="relation-network-controls" role="group" aria-label={locale === "zh-CN" ? "关系图呈现方式" : "Relationship presentation"}>
           <span>{locale === "zh-CN" ? "展开层级" : "Detail"}: {zoomLevel}</span>
@@ -207,10 +201,7 @@ export function RelationNetwork({ locale, focus, relations, searchItems, onFocus
           <circle cx={center.x} cy={center.y} r={compact ? 35 : 46} />
           <text x={center.x} y={center.y + 5} textAnchor="middle">{shortLabel(title)}</text>
         </g>
-        {neighbours.map((relation) => {
-          const other = contextEndpointKey(relation.source) === focus
-            ? contextEndpointKey(relation.target)
-            : contextEndpointKey(relation.source);
+        {neighbourKeys.map((other) => {
           const position = positions.get(other);
           if (!position) return null;
           const otherItem = searchItems.find((item) => item.kind + ":" + item.slug === other);

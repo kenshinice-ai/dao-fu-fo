@@ -1,5 +1,5 @@
 import type { ReadModelRelation } from "@drf-museum/domain-schema";
-import { contextEndpointKey } from "./contextProjection";
+import { contextEndpointKey, isPersonToPersonRelation } from "./contextProjection";
 import type { SearchItem, Tradition } from "../types";
 
 export type RelationshipGraphTier = "era" | "group" | "major" | "all";
@@ -40,6 +40,7 @@ export interface RelationshipGraphModel {
   relationRows: ReadModelRelation[];
   hiddenPeople: number;
   scopedPeople: number;
+  effectiveTier: RelationshipGraphTier;
 }
 
 const ERA_BUCKETS = [
@@ -82,7 +83,9 @@ function eraForYear(year: number | undefined): (typeof ERA_BUCKETS)[number] | un
   return ERA_BUCKETS.find((bucket) => year >= bucket.from && year < bucket.to);
 }
 
-function yearForFigure(key: string, relations: ReadModelRelation[]): number | undefined {
+function yearForFigure(key: string, relations: ReadModelRelation[], searchMap: Map<string, SearchItem>): number | undefined {
+  const indexedYear = searchMap.get(key)?.timeRange?.startYear;
+  if (indexedYear !== undefined) return indexedYear;
   const years = relations
     .filter((relation) => endpointIsFigure(relation, key))
     .flatMap((relation) => relation.temporalAssertions.map((assertion) => assertion.startYear))
@@ -101,6 +104,7 @@ function traditionForKey(key: string, searchMap: Map<string, SearchItem>): Tradi
 }
 
 function edgeKey(source: string, target: string, relationType: string): string {
+  if (isDirected(relationType)) return `${source}|${target}|${relationType}`;
   const ordered = [source, target].sort();
   return `${ordered[0]}|${ordered[1]}|${relationType}`;
 }
@@ -179,7 +183,7 @@ export function buildRelationshipGraph({
   if (focus?.startsWith("figure:")) scopedKeys.add(focus);
   const visibleFigureKeys = focus ? new Set([...scopedKeys].filter((key) => figureKeys.has(key))) : figureKeys;
   const figureRelations = relations.filter((relation) => {
-    if (relation.source.kind !== "figure" || relation.target.kind !== "figure") return false;
+    if (!isPersonToPersonRelation(relation)) return false;
     const source = contextEndpointKey(relation.source);
     const target = contextEndpointKey(relation.target);
     return visibleFigureKeys.has(source) && visibleFigureKeys.has(target);
@@ -192,9 +196,17 @@ export function buildRelationshipGraph({
     degree.set(target, (degree.get(target) ?? 0) + 1);
   }
 
+  const groupingKey = (key: string, candidateTier: RelationshipGraphTier): string => {
+    if (candidateTier === "group") return `group:${searchMap.get(key)?.tradition ?? "convergence"}`;
+    return `era:${eraForYear(yearForFigure(key, relations, searchMap))?.id ?? "undated"}`;
+  };
+  const effectiveTier: RelationshipGraphTier = focus?.startsWith("figure:") && visibleFigureKeys.has(focus) && (tier === "group" || tier === "era")
+    ? "major"
+    : tier;
+
   let selectedPeople = [...visibleFigureKeys];
-  const hiddenPeople = tier === "major" ? Math.max(0, selectedPeople.length - 24) : 0;
-  if (tier === "major") {
+  const hiddenPeople = effectiveTier === "major" ? Math.max(0, selectedPeople.length - 24) : 0;
+  if (effectiveTier === "major") {
     selectedPeople = selectedPeople
       .sort((left, right) => {
         const focusWeight = (key: string) => key === focus ? 1000 : 0;
@@ -208,7 +220,7 @@ export function buildRelationshipGraph({
   const nodeMap = new Map<string, string>();
   const nodes: RelationshipGraphNode[] = [];
 
-  if (tier === "all" || tier === "major") {
+  if (effectiveTier === "all" || effectiveTier === "major") {
     selectedPeople.forEach((key, index) => {
       const item = searchMap.get(key);
       const tradition = item?.tradition ?? "convergence";
@@ -231,16 +243,13 @@ export function buildRelationshipGraph({
   } else {
     const groups = new Map<string, string[]>();
     for (const key of selectedPeople) {
-      const item = searchMap.get(key);
-      const groupId = tier === "group"
-        ? `group:${item?.tradition ?? "convergence"}`
-        : `era:${eraForYear(yearForFigure(key, relations))?.id ?? "undated"}`;
+      const groupId = groupingKey(key, effectiveTier);
       const members = groups.get(groupId) ?? [];
       members.push(key);
       groups.set(groupId, members);
     }
     [...groups.entries()].forEach(([groupId, members], index) => {
-      const isEra = tier === "era";
+      const isEra = effectiveTier === "era";
       const traditionCounts = new Map<Tradition | "convergence", number>();
       for (const key of members) {
         const tradition = traditionForKey(key, searchMap);
@@ -270,7 +279,7 @@ export function buildRelationshipGraph({
   }
 
   const edges = aggregateEdges(relationRows, nodeMap);
-  return { nodes, edges, relationRows, hiddenPeople, scopedPeople: visibleFigureKeys.size };
+  return { nodes, edges, relationRows, hiddenPeople, scopedPeople: visibleFigureKeys.size, effectiveTier };
 }
 
 export function graphTierForZoomLevel(zoomLevel: "era" | "region" | "figure" | "all"): RelationshipGraphTier {
@@ -288,7 +297,7 @@ export function zoomLevelForGraphTier(tier: RelationshipGraphTier): "era" | "reg
 export function relationToneLabel(tone: RelationshipGraphTone, locale: "zh-CN" | "en"): string {
   const labels: Record<RelationshipGraphTone, { zh: string; en: string }> = {
     influence: { zh: "思想影响", en: "Intellectual influence" },
-    contemporary: { zh: "同时代往来", en: "Contemporary" },
+    contemporary: { zh: "同时代语境", en: "Contemporary context" },
     reception: { zh: "后世接受", en: "Later reception" },
     comparison: { zh: "比较并置", en: "Comparison" },
     other: { zh: "其他人物关系", en: "Other person relation" },

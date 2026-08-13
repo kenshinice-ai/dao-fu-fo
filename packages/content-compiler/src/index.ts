@@ -10,6 +10,7 @@ import {
   ContentVisibilitySchema,
   DatabaseImportBundleSchema,
   EntityContentSchema,
+  EventProfileSchema,
   FigureProfileSchema,
   InstitutionProfileSchema,
   PassageProfileSchema,
@@ -147,6 +148,19 @@ function sourceIdsFor(entity: EntityContent): string[] {
   ])];
 }
 
+function historicalRange(entity: EntityContent | undefined): { startYear: number; endYear?: number } | undefined {
+  const assertion = entity?.temporalAssertions.find((item) => ["life", "activity"].includes(item.predicate))
+    ?? entity?.temporalAssertions.find((item) => item.startYear !== undefined);
+  return assertion?.startYear === undefined
+    ? undefined
+    : { startYear: assertion.startYear, ...(assertion.endYear !== undefined ? { endYear: assertion.endYear } : {}) };
+}
+
+function rangesOverlap(left: { startYear: number; endYear?: number }, right: { startYear: number; endYear?: number }): boolean {
+  return (left.endYear ?? left.startYear) >= right.startYear
+    && (right.endYear ?? right.startYear) >= left.startYear;
+}
+
 function entityKey(kind: string, slug: string): string {
   return `${kind}:${slug}`;
 }
@@ -177,7 +191,43 @@ function structuralDependencies(entity: EntityContent): string[] {
   return [];
 }
 
-function toArtifact(entity: EntityContent, locale: Locale, sourceMap: Map<string, SourceRecord>, entityMap: Map<string, EntityContent>, namespace: string): EntityArtifact {
+function relatedForArtifact(
+  entity: EntityContent,
+  locale: Locale,
+  relations: RelationRecord[],
+  entityMap: Map<string, EntityContent>,
+): EntityArtifact["related"] {
+  const currentKey = entityKey(entity.kind, entity.slug);
+  const related = new Map<string, EntityArtifact["related"][number]>();
+  for (const relation of relations) {
+    const sourceKey = entityKey(relation.source.kind, relation.source.slug);
+    const targetKey = entityKey(relation.target.kind, relation.target.slug);
+    if (sourceKey !== currentKey && targetKey !== currentKey) continue;
+    const otherKey = sourceKey === currentKey ? targetKey : sourceKey;
+    const other = entityMap.get(otherKey);
+    if (!other) continue;
+    const existing = related.get(otherKey);
+    const relationLabel = relation.label[locale];
+    related.set(otherKey, existing
+      ? { ...existing, relation: `${existing.relation} · ${relationLabel}` }
+      : {
+          kind: other.kind,
+          slug: other.slug,
+          title: other.translations[locale].title,
+          relation: relationLabel,
+        });
+  }
+  return [...related.values()];
+}
+
+function toArtifact(
+  entity: EntityContent,
+  locale: Locale,
+  sourceMap: Map<string, SourceRecord>,
+  entityMap: Map<string, EntityContent>,
+  relations: RelationRecord[],
+  namespace: string,
+): EntityArtifact {
   const translation = entity.translations[locale];
   const sources = sourceIdsFor(entity).map((id) => {
     const source = sourceMap.get(id);
@@ -192,16 +242,7 @@ function toArtifact(entity: EntityContent, locale: Locale, sourceMap: Map<string
     };
   });
 
-  const related = entity.related.flatMap((item) => {
-    const target = entityMap.get(`${item.kind}:${item.slug}`);
-    if (!target) return [];
-    return [{
-      kind: item.kind,
-      slug: item.slug,
-      title: item.title[locale],
-      relation: item.relation[locale],
-    }];
-  });
+  const related = relatedForArtifact(entity, locale, relations, entityMap);
 
   return ReadModelEntityArtifactSchema.parse({
     id: uuidV5(namespace, `${entity.kind}:${entity.slug}`),
@@ -515,6 +556,44 @@ export async function compileContent(options: CompileOptions = {}) {
     }
     for (const assertion of relation.temporalAssertions) {
       if (!sourceMap.has(assertion.sourceId)) errors.push(`${relation.id}: unknown temporal source ${assertion.sourceId}`);
+      if (!relation.sourceIds.includes(assertion.sourceId)) {
+        errors.push(`${relation.id}: temporal source ${assertion.sourceId} must also appear in sourceIds`);
+      }
+    }
+    if (relation.relationType === "received_by" && relation.source.kind === "figure" && relation.target.kind === "figure") {
+      const sourceEntity = entityMap.get(entityKey(relation.source.kind, relation.source.slug));
+      const targetEntity = entityMap.get(entityKey(relation.target.kind, relation.target.slug));
+      const sourceRange = historicalRange(sourceEntity);
+      const targetRange = historicalRange(targetEntity);
+      if (sourceRange && targetRange && sourceRange.startYear > targetRange.startYear) {
+        errors.push(`${relation.id}: received_by source must precede or be contemporaneous with target; reverse the endpoints`);
+      }
+      if (targetRange) {
+        for (const assertion of relation.temporalAssertions) {
+          if (assertion.startYear !== undefined && !rangesOverlap(targetRange, { startYear: assertion.startYear, ...(assertion.endYear !== undefined ? { endYear: assertion.endYear } : {}) })) {
+            errors.push(`${relation.id}: reception time ${assertion.displayDate["zh-CN"]} does not overlap target figure period`);
+          }
+        }
+      }
+    }
+    if (relation.relationType === "born_in") {
+      const figureEndpoint = relation.source.kind === "figure" ? relation.source : relation.target.kind === "figure" ? relation.target : undefined;
+      const figure = figureEndpoint ? entityMap.get(entityKey(figureEndpoint.kind, figureEndpoint.slug)) : undefined;
+      for (const assertion of relation.temporalAssertions) {
+        const traditionalBirth = assertion.predicate === "traditional_occurrence"
+          && assertion.timeType === "traditional_date"
+          && assertion.startYear === undefined;
+        if (assertion.predicate !== "birth" && !traditionalBirth) {
+          errors.push(`${relation.id}: born_in must use a birth temporal predicate`);
+        }
+        if (assertion.startYear !== undefined && assertion.endYear !== undefined && assertion.endYear - assertion.startYear > 1) {
+          errors.push(`${relation.id}: birthplace time must be a point or a narrow circa range, not a full lifespan`);
+        }
+        const figureRange = historicalRange(figure);
+        if (figureRange && assertion.startYear !== undefined && !rangesOverlap(figureRange, { startYear: assertion.startYear, ...(assertion.endYear !== undefined ? { endYear: assertion.endYear } : {}) })) {
+          errors.push(`${relation.id}: birthplace time falls outside the figure period`);
+        }
+      }
     }
   }
   for (const audioRecord of audio) {
@@ -784,15 +863,16 @@ export async function compileContent(options: CompileOptions = {}) {
     placeholderEntities, publicBlockers, warnings,
   });
 
-  const indexes: Record<Locale, Array<{ id: string; kind: string; slug: string; title: string; context: string; tradition: string }>> = {
+  const indexes: Record<Locale, Array<{ id: string; kind: string; slug: string; title: string; context: string; tradition: string; eventKind?: string; eventScope?: string }>> = {
     "zh-CN": [],
     en: [],
   };
   const entityCounts: Record<string, number> = {};
   for (const entity of [...visibleEntities].sort((a, b) => `${a.kind}:${a.slug}`.localeCompare(`${b.kind}:${b.slug}`))) {
     entityCounts[entity.kind] = (entityCounts[entity.kind] ?? 0) + 1;
+    const eventProfile = entity.kind === "event" ? EventProfileSchema.parse(entity.profile) : undefined;
     for (const locale of LOCALES) {
-      const artifact = toArtifact(entity, locale, sourceMap, visibleEntityMap, namespace);
+      const artifact = toArtifact(entity, locale, sourceMap, visibleEntityMap, visibleRelations, namespace);
       await writeJson(join(outputDirectory, "entities", entity.kind, `${entity.slug}.${locale}.json`), artifact);
       indexes[locale].push({
         id: artifact.id,
@@ -801,6 +881,14 @@ export async function compileContent(options: CompileOptions = {}) {
         title: artifact.title,
         context: artifact.shortSummary,
         tradition: artifact.tradition,
+        ...(eventProfile ? { eventKind: eventProfile.eventKind, eventScope: eventProfile.eventScope } : {}),
+        ...(() => {
+          const temporal = entity.temporalAssertions.find((assertion) => ["life", "activity"].includes(assertion.predicate))
+            ?? entity.temporalAssertions.find((assertion) => assertion.startYear !== undefined);
+          return temporal?.startYear !== undefined
+            ? { timeRange: { startYear: temporal.startYear, ...(temporal.endYear !== undefined ? { endYear: temporal.endYear } : {}) } }
+            : {};
+        })(),
       });
     }
   }
@@ -906,10 +994,12 @@ export async function compileContent(options: CompileOptions = {}) {
 
     const timelineEvents = visibleEntities.flatMap((entity) => entity.temporalAssertions.flatMap((assertion, index) => {
       if (assertion.startYear === undefined) return [];
+      const eventProfile = entity.kind === "event" ? EventProfileSchema.parse(entity.profile) : undefined;
       return [{
         id: uuidV5(namespace, `timeline:${entity.kind}:${entity.slug}:${index}`), kind: entity.kind, slug: entity.slug,
         title: entity.translations[locale].title, summary: entity.translations[locale].shortSummary,
         tradition: primaryTradition(entity), predicate: assertion.predicate, type: assertion.timeType,
+        ...(eventProfile ? { eventKind: eventProfile.eventKind, eventScope: eventProfile.eventScope } : {}),
         year: assertion.startYear, ...(assertion.endYear !== undefined ? { endYear: assertion.endYear } : {}),
         displayDate: assertion.displayDate[locale], confidence: assertion.confidence, evidenceLayer: assertion.evidenceLayer, sourceId: assertion.sourceId,
       }];

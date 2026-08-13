@@ -34,7 +34,7 @@ const FIGURE_CLASS_LABELS: Record<string, { zh: string; en: string }> = {
 
 const RELATION_LABELS: Record<string, { zh: string; en: string }> = {
   influenced: { zh: "影响", en: "Influenced" },
-  contemporary_with: { zh: "同时代往来", en: "Contemporary with" },
+  contemporary_with: { zh: "同时代语境", en: "Contemporary context" },
   located_in: { zh: "位于", en: "Located in" },
   active_in: { zh: "活动于", en: "Active in" },
   travelled_through: { zh: "经过", en: "Travelled through" },
@@ -61,6 +61,27 @@ const ENTITY_LABELS: Record<string, { zh: string; en: string }> = {
   practice: { zh: "实践", en: "Practice" },
   school: { zh: "学派", en: "School" },
   museum_object: { zh: "馆藏对象", en: "Museum object" },
+};
+
+const EVENT_KIND_LABELS: Record<string, { zh: string; en: string }> = {
+  dynastic_transition: { zh: "朝代转折", en: "Dynastic transition" },
+  journey: { zh: "行旅", en: "Journey" },
+  editorial_project: { zh: "编纂工程", en: "Editorial project" },
+  foundation: { zh: "创建", en: "Foundation" },
+  construction: { zh: "营造", en: "Construction" },
+  policy: { zh: "制度／政策", en: "Policy" },
+  conflict: { zh: "冲突", en: "Conflict" },
+  analytical_period: { zh: "研究时期", en: "Analytical period" },
+  other: { zh: "历史语境", en: "Historical context" },
+};
+
+const EVENT_SCOPE_LABELS: Record<string, { zh: string; en: string }> = {
+  personal: { zh: "个人", en: "Personal" },
+  local: { zh: "地方", en: "Local" },
+  regional: { zh: "区域", en: "Regional" },
+  imperial: { zh: "帝国／制度", en: "Imperial" },
+  transregional: { zh: "跨区域", en: "Transregional" },
+  cosmological: { zh: "宇宙象征", en: "Cosmological" },
 };
 
 function humanise(value: string | undefined): string {
@@ -99,6 +120,34 @@ export function formatRelationType(value: string | undefined, locale: Locale): s
 
 export function formatEntityKind(value: string, locale: Locale): string {
   const label = ENTITY_LABELS[value];
+  return label?.[locale === "zh-CN" ? "zh" : "en"] ?? humanise(value);
+}
+
+export function formatEventKind(value: string | undefined, locale: Locale): string {
+  if (!value) return formatEntityKind("event", locale);
+  const label = EVENT_KIND_LABELS[value];
+  return label?.[locale === "zh-CN" ? "zh" : "en"] ?? humanise(value);
+}
+
+export function formatEventScope(value: string | undefined, locale: Locale): string {
+  if (!value) return locale === "zh-CN" ? "范围待核" : "Scope unresolved";
+  const label = EVENT_SCOPE_LABELS[value];
+  return label?.[locale === "zh-CN" ? "zh" : "en"] ?? humanise(value);
+}
+
+const INTERACTION_MODE_LABELS: Record<string, { zh: string; en: string }> = {
+  teacher_student: { zh: "师承／授受", en: "Teacher–student" },
+  lineage_reception: { zh: "谱系／后世接受", en: "Lineage / reception" },
+  correspondence: { zh: "通信往来", en: "Correspondence" },
+  debate: { zh: "论辩", en: "Debate" },
+  collaboration: { zh: "共同协作", en: "Collaboration" },
+  institutional_peer: { zh: "制度同侪", en: "Institutional peers" },
+  shared_context: { zh: "共同语境", en: "Shared context" },
+};
+
+export function formatInteractionMode(value: string | undefined, locale: Locale): string {
+  if (!value) return locale === "zh-CN" ? "互动方式待核" : "Interaction unresolved";
+  const label = INTERACTION_MODE_LABELS[value];
   return label?.[locale === "zh-CN" ? "zh" : "en"] ?? humanise(value);
 }
 

@@ -46,7 +46,7 @@ describe("relationship graph projection", () => {
 
     expect(model.scopedPeople).toBe(4);
     expect(model.nodes.every((node) => node.kind === "person")).toBe(true);
-    expect(model.edges).toHaveLength(3);
+    expect(model.edges).toHaveLength(2);
     expect(model.relationRows.every((item) => item.source.kind === "figure" && item.target.kind === "figure")).toBe(true);
   });
 
@@ -77,6 +77,38 @@ describe("relationship graph projection", () => {
     });
 
     expect(model.edges[0]?.tone).toBe("reception");
+  });
+
+  it("preserves opposite directed relations instead of merging them", () => {
+    const reverse = relation("ba", { kind: "figure", slug: "b" }, { kind: "figure", slug: "a" }, "influenced");
+    const model = buildRelationshipGraph({
+      relations: [aa, reverse],
+      scopeRelations: [aa, reverse],
+      searchItems,
+      traditions: ["daoism", "confucianism", "buddhism"],
+      tier: "all",
+      locale: "zh-CN",
+    });
+
+    expect(model.edges).toHaveLength(2);
+    expect(new Set(model.edges.map((edge) => `${edge.source}->${edge.target}`))).toEqual(new Set(["figure:a->figure:b", "figure:b->figure:a"]));
+  });
+
+  it("auto-expands a focused aggregate that would otherwise have no cross-group edge", () => {
+    const sameTraditionRelation = relation("ad", { kind: "figure", slug: "a" }, { kind: "figure", slug: "d" }, "influenced");
+    const model = buildRelationshipGraph({
+      relations: [sameTraditionRelation],
+      scopeRelations: [sameTraditionRelation],
+      searchItems,
+      focus: "figure:a",
+      traditions: ["daoism", "confucianism", "buddhism"],
+      tier: "group",
+      locale: "zh-CN",
+    });
+
+    expect(model.effectiveTier).toBe("major");
+    expect(model.edges).toHaveLength(1);
+    expect(model.nodes.every((node) => node.kind === "person")).toBe(true);
   });
 
   it("maps the existing URL zoom state to graph tiers without adding a second route state", () => {
