@@ -1,13 +1,19 @@
 # 项目现状与实施路线图
 
 > 基线日期：2026-08-13
-> 当前判断：工程、全历史 map-first 入口与第二批 100 条内容闭环已成立；production 继续作为线上唯一事实基准。第二批已完成提交、同步、部署与线上烟测，当前停在“第二批内容上线复盘”节点，Public RC 边界保持独立；Museum / Explore / Research 保留为深度层。
+> 当前判断：工程、全历史 map-first 入口与第二批 100 条内容闭环已成立；production 继续作为线上唯一事实基准。第二批关系链路已完成 Bible Atlas / previous project 对照审计、修复、提交、同步、部署与线上烟测，当前停在“关系闭环上线复盘”节点，Public RC 边界保持独立；Museum / Explore / Research 保留为深度层。
 
 ## 2026-08-13 第二批 100 条内容 production 收口点
 
 - 本轮在首批 100 人物基线上新增 40 位人物、40 个事件、20 个地点；当前完整 Alpha 为 428 个编译实体（人物 140、事件 145、地点 80、路线 4、文本 16、文本版本 8、概念 6、机构 6、博物馆对象 9、段落 14）、647 条关系、91 个来源、3 条音频；数据库 bundle 预期为 431 个实体（含 3 个三传统字典实体）；
 - 新增人物按汉代经学/儒学 15、道教 10、佛教 15 分组；每人均有时间、来源、事件、地点和既有数据库人物连接；新增人物之间有 15 条互动关系，关系和地点投影遵守证据层与传统记忆边界；
 - `npm run verify:second-100`、完整 `npm run check`、Cloudflare Pages production 部署和线上 default/unique smoke 均已通过；应用 commit `81b9f5e` 已 push 到 `origin/main`，unique deployment 为 <https://78618945.dao-ru-fo-digital-museum.pages.dev>，当前不自动继续扩容，重新进入用户复盘与事实核验节点。
+
+## 2026-08-13 P0/P1 关系闭环修复收口点
+
+- 对照 Bible Atlas / previous project 后，关系数据统一回到 canonical relations：`entity.related` 只由 compiler 派生；`received_by` 方向、时间层、source closure、`born_in` 出生点和第二批地点时间均完成修复；地图、时间轴、人物网络和 URL 共享同一 focus，不再出现人物 URL 与 Relations 面板错位；
+- 图谱增加 direct/bridge/ambient 语义边界、焦点人物自动展开、有向边保留、完整焦点节点名和交互 SVG 无障碍修复；实体页移除 canonical relation 已覆盖的重复 related 项；
+- release commit `1c4519d` 已 push 到 `origin/main`；production unique deployment <https://e77d4c2c.dao-ru-fo-digital-museum.pages.dev>，default/unique smoke 均 25/25；当前 Full Alpha 仍为 140 人、145 事件、80 地点、647 关系、91 来源、`alpha / preview`，下一步等待用户复盘，不自动增加下一批人物。
 
 ## 2026-08-11 A1+A2 production 收口点（历史）
 

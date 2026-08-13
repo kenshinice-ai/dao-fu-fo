@@ -2,7 +2,18 @@
 
 > 维护纪律：每个可独立说明的实现、修复、验证或发布阶段完成后立即更新。
 > 最后更新：2026-08-13
-> 当前阶段：第二批 100 条人物—地点—事件内容已提交、同步并部署 Cloudflare Pages production，等待用户复盘
+> 当前阶段：第二批内容的 P0/P1 关系链路审计修复已提交、同步并部署 Cloudflare Pages production，等待用户复盘
+
+## 2026-08-13｜P0/P1 关系链路审计与 Bible Atlas 风格联动修复 production handoff（当前）
+
+- 本轮严格复核 Bible Atlas / previous project 的 canonical focus、URL 状态、关系图和地图—人物—地点联动：实体 `related` 不再作为独立事实源，compiler 从 canonical relations 派生；关系端点、关系时间和来源闭包在编译边界校验；路由移除旧 `scope` 漂移；地图地点只把真实参与/到访/出生关系投影为地理事实，事件地点只通过 `participated_in → occurred_at` 闭合；
+- 全量数据修复已完成：30 条 `received_by` 端点方向纠正，92 条后世接受关系保留 `lineage_reception` 交互语义；第二批 `active_in` 时间与参与事件对齐；8 条不合格 `born_in` 日期收窄为出生点；38 条中文关系标签去除原始 place slug；所有 temporal assertion source 都纳入 relation source closure；两条过度精确的主题来源降为 `topic` locator；迁移脚本 `scripts/repair-relation-alignment.mjs` 可重复执行且已验证幂等；
+- 交互实现已收口：人物/地点/事件点击共享同一 focus，Relations tab 的 graph/list/detail 保持 URL 与面板一致；焦点人物在聚合层级自动展开并保留完整节点名；有向关系不再被错误合并；直接/bridge/ambient 关系分层；实体页不再重复显示已由 canonical relation 提供的 related 项；事件性质/范围、交互模式、来源入口随关系详情展示；
+- 当前 Full Alpha 对齐为：人物 140、事件 145、地点 80、路线 4、关系 647、来源 91、音频 3；`visibility=preview`、`releaseStage=alpha` 和 1409 个 public blockers 继续表示研究审核状态，不等同 Public RC 或正式学术发布；本轮不新增人物，等待用户复盘后再确认下一批方向；
+- 本地门禁：完整 `npm run check` 通过；core 11/11、compiler 5/5、web 18/18；Full Alpha Playwright + axe **62 passed / 1 skipped**（唯一 skipped 为 Public RC 专用用例）；Full Alpha build、static verification、database import plan、alignment、matrix、batch closure 和 `git diff --check` 均通过；
+- 应用 release commit：`1c4519d fix: align atlas relation graph and context data`（`1c4519dcb78f174791c8ab5e446212559775802d`），已 push 到 `origin/main`；
+- Cloudflare production 已同步：默认地址 <https://dao-ru-fo-digital-museum.pages.dev>；本次 unique deployment <https://e77d4c2c.dao-ru-fo-digital-museum.pages.dev>；deployment ID `e77d4c2c-7b5c-4ac3-a1a7-76748da917d2`；Environment `Production`；branch `main`；source marker `1c4519d`；Wrangler `4.122.0`；manifest `2026.08.alpha.1 / alpha / preview`；dist 905 files；上传使用 clean worktree 与 `--commit-dirty=false`；上一成功 deployment `78618945-46fc-4906-b226-666e96358e9d` 保留为回滚定位；
+- post-deploy HTTP smoke：unique 地址与默认地址均 **25/25**；首页 HTML/CSP/安全响应头、SPA deep links、manifest、英文 profile、地图 GeoJSON、时间轴 JSON 和 immutable hashed asset 均通过；线上 manifest 确认为 Alpha / preview，production 默认域名已指向本次部署。
 
 ## 2026-08-13｜第二批 100 条人物—地点—事件—关系内容闭环 production handoff
 
