@@ -1,13 +1,13 @@
 # 项目现状与实施路线图
 
 > 基线日期：2026-08-13
-> 当前判断：工程、全历史 map-first 入口与第二批 100 条内容闭环已成立；production 继续作为线上唯一事实基准。当前正在执行提交前全量门禁，随后停在“第二批内容上线复盘”节点，Public RC 边界保持独立；Museum / Explore / Research 保留为深度层。
+> 当前判断：工程、全历史 map-first 入口与第二批 100 条内容闭环已成立；production 继续作为线上唯一事实基准。第二批已完成提交、同步、部署与线上烟测，当前停在“第二批内容上线复盘”节点，Public RC 边界保持独立；Museum / Explore / Research 保留为深度层。
 
-## 2026-08-13 第二批 100 条内容发布前收口点
+## 2026-08-13 第二批 100 条内容 production 收口点
 
 - 本轮在首批 100 人物基线上新增 40 位人物、40 个事件、20 个地点；当前完整 Alpha 为 428 个编译实体（人物 140、事件 145、地点 80、路线 4、文本 16、文本版本 8、概念 6、机构 6、博物馆对象 9、段落 14）、647 条关系、91 个来源、3 条音频；数据库 bundle 预期为 431 个实体（含 3 个三传统字典实体）；
 - 新增人物按汉代经学/儒学 15、道教 10、佛教 15 分组；每人均有时间、来源、事件、地点和既有数据库人物连接；新增人物之间有 15 条互动关系，关系和地点投影遵守证据层与传统记忆边界；
-- `npm run verify:second-100` 已通过；完整 `npm run check`、Cloudflare Pages production 部署和线上 default/unique smoke 是本轮剩余发布动作。部署后不自动继续扩容，重新进入用户复盘与事实核验节点。
+- `npm run verify:second-100`、完整 `npm run check`、Cloudflare Pages production 部署和线上 default/unique smoke 均已通过；应用 commit `81b9f5e` 已 push 到 `origin/main`，unique deployment 为 <https://78618945.dao-ru-fo-digital-museum.pages.dev>，当前不自动继续扩容，重新进入用户复盘与事实核验节点。
 
 ## 2026-08-11 A1+A2 production 收口点（历史）
 

@@ -2,15 +2,18 @@
 
 > 维护纪律：每个可独立说明的实现、修复、验证或发布阶段完成后立即更新。
 > 最后更新：2026-08-13
-> 当前阶段：第二批 100 条人物—地点—事件内容已完成 authoring 与关系闭环，正在执行提交前全量门禁
+> 当前阶段：第二批 100 条人物—地点—事件内容已提交、同步并部署 Cloudflare Pages production，等待用户复盘
 
-## 2026-08-13｜第二批 100 条人物—地点—事件—关系内容闭环（待发布）
+## 2026-08-13｜第二批 100 条人物—地点—事件—关系内容闭环 production handoff
 
 - 用户已确认可以在首批 100 人物基线上继续扩展；本轮新增 40 位人物、40 个事件、20 个地点，合计新增 100 条记录。当前完整 Alpha 对齐为：人物 140、事件 145、地点 80、路线 4、关系 647、来源 91、音频 3；Full Alpha 继续使用 `releaseStage=alpha` 与 `visibility=preview`，不等同 Public RC 或正式学术发布；
 - 新增人物分为汉代经学/儒学 15、道教 10、佛教 15；全部使用 `historical_person`，没有把神话人物或象征空间伪装成现实历史坐标。每位人物都有双语身份/摘要/研究说明、至少一条时间断言、来源和地点入口；地点使用城市尺度、区域尺度或传统记忆尺度，并保留证据层；
 - 本批新增人物均闭合 `figure → participated_in → event → occurred_at → place`，另有 `figure → active_in/born_in/remembered_in → place`，以及至少一条与既有数据库人物的 `received_by`/`influenced`/`contemporary_with` 关系；新增人物之间另有 15 条互动关系。关系时间断言不把后世接受误写成同时代直接会面，传统记忆也不进入现实到访投影；
 - 新增来源集中在汉代经学、宋元儒学、隋宋道教、元明道教、佛教传承、禅宗/华严制度史与历史地理记录；新增 `scripts/verify-second-100-batch.mjs` 与 `npm run verify:second-100`，硬性检查 40/40/20 数量、总量 140/145/80/647、关系端点、时间/来源闭合、人物—事件—地点链和新旧人物连接；
-- 当前已通过批次闭环校验：`Second-100 closure verified: 40 figures, 40 events, 20 places, 176 batch relations; new-figure interactions=15.` 完整 `npm run check`、生产构建、静态发布验证和线上烟测将在提交后继续执行；
+- 当前已通过批次闭环校验：`Second-100 closure verified: 40 figures, 40 events, 20 places, 176 batch relations; new-figure interactions=15.` 完整 `npm run check` 通过；包含 typecheck、unit 17/17、migration/import plan、compiler、domain、database bundle、source/read-model alignment、matrix、Public artifact、Vite build 和 static release；
+- Full Alpha Playwright + axe 已通过 **62 passed / 1 skipped**（唯一 skipped 为 Public RC 专用用例）；`git diff --check` 与 diff-check 审查通过；应用 release commit 为 `81b9f5e feat: expand full alpha atlas with second 100 records`，已 push 到 `origin/main`；
+- Cloudflare production 已同步：默认地址 <https://dao-ru-fo-digital-museum.pages.dev>；本次 unique deployment <https://78618945.dao-ru-fo-digital-museum.pages.dev>；deployment ID `78618945-46fc-4906-b226-666e96358e9d`；Environment `Production`；branch `main`；source marker `81b9f5e`（`81b9f5e354c8b93581ae0a01e2f0b1b0be648d24`）；Wrangler `4.120.1`；manifest `2026.08.alpha.1 / alpha / preview`；dist 905 files；上传使用 clean worktree 与 `--commit-dirty=false`；
+- post-deploy HTTP smoke：unique 地址与默认地址均 **25/25**；线上 manifest 核对为人物 140、事件 145、地点 80、关系 647、来源 91；搜索索引已包含 `xu-shen`、`zheng-xuan`、`ye-fa-shan`、`dharmaraksa`、`lianchi-zhuhong` 等新增人物，新增人物互动与后世接受关系已在线返回；
 - 本轮仍遵守用户确认纪律：先把这 100 条跑通并部署，暂不继续选择下一批人物；后续扩容必须重新确认人物方向、史实关系、地点尺度与时间证据。
 
 ## 2026-08-13｜首批 100 人物—地点—事件—关系内容闭环（当前）

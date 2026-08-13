@@ -10,7 +10,7 @@
 - 当前目标总量：人物 140、事件 145、地点 80、关系 647、来源 91；路线 4、音频 3、symbolic cosmos 仍保持独立层；
 - 每位新增人物必须闭合人物—事件—地点链、至少一条时间断言、至少一个来源、至少一条现实/记忆空间关系，以及至少一条与既有人物的关系；本批另外要求至少 15 条新增人物之间互动；
 - 现实地图只接受有证据的城市/区域/记忆尺度；`remembered_in`、后世 `received_by` 和传统叙事不被投影成确定到访；所有关系保留 `confidence`、`evidenceLayer`、`sourceIds` 和时间断言；
-- 本批 authoring 已完成，`npm run verify:second-100` 已通过；下一步必须通过完整 `npm run check`、构建、静态发布验证、提交同步、Cloudflare Pages production 部署与 default/unique smoke；部署完成后重新停在用户复盘点，不自动增加第三批。
+- 本批 authoring、`npm run verify:second-100`、完整 `npm run check`、提交同步、Cloudflare Pages production 部署与 default/unique smoke 均已完成；当前重新停在用户复盘点，不自动增加第三批。线上 unique deployment 为 <https://78618945.dao-ru-fo-digital-museum.pages.dev>，source marker 为 `81b9f5e`。
 
 ## 2026-08-13 首批 100 批次授权与暂停点（历史）
 
