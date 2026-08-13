@@ -2,7 +2,7 @@
 
 > 维护纪律：每个可独立说明的实现、修复、验证或发布阶段完成后立即更新。
 > 最后更新：2026-08-13
-> 当前阶段：首批 100 人物内容闭环已完成本地验证，等待用户复盘确认后再继续扩容；production 发布保持独立待明确授权
+> 当前阶段：首批 100 人物内容闭环已提交并同步 Cloudflare production，等待用户复盘确认后再继续扩容
 
 ## 2026-08-13｜首批 100 人物—地点—事件—关系内容闭环（当前）
 
@@ -12,7 +12,9 @@
 - 关系、地图、时间轴和对象面板继续沿用 Bible Atlas / previous project 的单一 canonical focus：实体点击只改变共享焦点，所有面板从同一关系集合反向派生；传统记忆关系不进入现实到访投影，事件地点通过 `participated_in → occurred_at` 生成；本轮修复时间轴事件节点优先写入 `focus=event:*`，不再被地点 context 抢占；首页人物/传统统计改为从当前 search read model 动态派生，不再显示旧的 60 人基线；
 - 新增 `scripts/verify-first-100-batch.mjs` 与 `npm run verify:first-100`，作为批次级 Handoff 门禁，检查批次数量、总量、时间、来源、关系端点、地点引用和新增人物—既有人物连接；
 - 本地已通过：`npm run check` 全量门禁；`npm run build:content`（328 entities / 471 relations / 81 sources）、`npm run verify:content`、`npm run verify:alignment`（source/read-model entities 328/328，database 331（三传统字典实体为额外 3 项）；relations 471/471/471，warnings 0）、`npm run verify:domain-architecture`、`npm run verify:database-bundle`、`npm run verify:preview-context`、`npm run verify:first-100`；完整 Playwright + axe 为 **62 passed / 1 skipped**（唯一 skipped 为 Public RC 专用用例）；
-- 当前不继续增加人物或地点，先等待用户对首批人物选择、史实关系、坐标尺度和页面联动复盘确认；下一次扩容必须沿用同一闭环和门禁。尚未在本轮执行 Git push 或 Cloudflare 部署。
+- 当前不继续增加人物或地点，先等待用户对首批人物选择、史实关系、坐标尺度和页面联动复盘确认；下一次扩容必须沿用同一闭环和门禁；`ee3d0cb feat: expand full alpha atlas to first 100 figures` 已 push 到 `origin/main`。
+- Cloudflare production 已同步 Full Alpha：默认地址 <https://dao-ru-fo-digital-museum.pages.dev>；本次 unique deployment <https://dbca74c2.dao-ru-fo-digital-museum.pages.dev>；deployment ID `dbca74c2-4791-439c-8c9f-594697b11495`；Environment `Production`；branch `main`；source marker `ee3d0cb`（`ee3d0cb41556dbfdc0081c3a82bfabd08d15312b`）；Wrangler `4.120.1`；manifest `2026.08.alpha.1 / alpha / preview`；dist 705 files；production 上传使用 clean worktree 与 `--commit-dirty=false`。
+- post-deploy HTTP smoke：unique 地址与默认地址均 **25/25**；首页 HTML/CSP/安全响应头、SPA deep links、manifest、英文 profile、地图 GeoJSON、时间轴 JSON 和 immutable hashed asset 均通过；线上浏览器确认 Qufu → Confucius 为单一 `focus=figure:confucius`、Figures 21 项，Relations URL 与面板同步为 46 条关系；本 handoff 更新为 docs-only follow-up，不重新上传应用。
 
 ## 2026-08-12｜Bible Atlas 单实体状态链与扩展研究图谱 production handoff（当前）
 
