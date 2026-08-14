@@ -1,8 +1,17 @@
 # 道·儒·佛文明数字博物馆｜项目交接文档
 
 > 维护纪律：每个可独立说明的实现、修复、验证或发布阶段完成后立即更新。
-> 最后更新：2026-08-13
-> 当前阶段：第二批内容的 P0/P1 关系链路审计修复已提交、同步并部署 Cloudflare Pages production，等待用户复盘
+> 最后更新：2026-08-14
+> 当前阶段：Web 路由拆包、发布产物防污染与 clean-environment 门禁修复已提交并推送；Full Alpha production 部署等待用户明确授权
+
+## 2026-08-14｜Web 路由拆包与发布产物门禁修复（当前）
+
+- Web 页面改为 React `lazy` + `Suspense` 按路由加载，地图依赖单独进入 `atlas-vendor` chunk；默认构建的原主 JS 从约 628 KiB 降至约 312 KiB，当前共 18 个 JavaScript chunks，最大单文件低于 500 KiB；
+- `verify:static` 新增两项 fail-closed 门禁：最终 `dist` 不得包含 `index 2.html`、`asset 2.js` 或 `(conflicted copy...)` 等 iCloud 冲突副本；任一 JavaScript chunk 超过 500 KiB 即阻断发布。`.gitignore` 同步覆盖 `test-results 2`、`playwright-report 2` 等生成目录副本；
+- 完整门禁在干净临时环境暴露出既有顺序缺陷：`verify:generated` 早于 Public artifact 构建，过去会依赖机器上残留的 Public 临时目录。根 `npm run check` 已调整为先生成 Preview 与 Public artifacts，再执行生成物卫生校验；全新临时目录下可重复通过；
+- 本地验证：完整 `npm run check` 通过；core 11/11、compiler 5/5、web 18/18；Playwright + axe **62 passed / 1 skipped**（唯一 skipped 为 Public RC 专用用例）；静态发布验证确认 `2026.08.prototype.1`、18 个 JS chunks、0 冲突副本；`git diff --check` 通过；
+- release commit：`9fb3a9a perf: split web routes and harden release artifacts`，已 push 到 `origin/main`；
+- 本轮尚未执行 Cloudflare production 上传。拟上传 artifact 仍是 `2026.08.alpha.1 / alpha / preview`，包含 1409 个公开审核 blocker；production 发布需用户明确确认，不以“继续开发”自动推定为公开发布授权。当前线上应用仍以上一份 production handoff 为准。
 
 ## 2026-08-13｜P0/P1 关系链路审计与 Bible Atlas 风格联动修复 production handoff（当前）
 

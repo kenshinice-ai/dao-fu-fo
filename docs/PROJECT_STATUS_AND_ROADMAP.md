@@ -1,7 +1,14 @@
 # 项目现状与实施路线图
 
-> 基线日期：2026-08-13
-> 当前判断：工程、全历史 map-first 入口与第二批 100 条内容闭环已成立；production 继续作为线上唯一事实基准。第二批关系链路已完成 Bible Atlas / previous project 对照审计、修复、提交、同步、部署与线上烟测，当前停在“关系闭环上线复盘”节点，Public RC 边界保持独立；Museum / Explore / Research 保留为深度层。
+> 基线日期：2026-08-14
+> 当前判断：工程、全历史 map-first 入口与第二批 100 条内容闭环已成立；Web 路由拆包、发布产物防污染和 clean-environment 门禁修复已提交并推送。由于拟上传 Full Alpha 仍是 `alpha / preview` 且包含 1409 个审核 blocker，本轮 production 部署等待用户明确授权；线上事实基准暂不改变。Public RC 边界保持独立；Museum / Explore / Research 保留为深度层。
+
+## 2026-08-14 Web 性能与发布卫生收口点
+
+- 页面入口改为按路由 lazy loading，Leaflet / React Leaflet / Supercluster 独立为地图 vendor chunk；默认构建主 JS 从约 628 KiB 降到约 312 KiB，18 个 JS chunks 均低于新增的 500 KiB 发布上限；
+- 静态门禁现在拒绝最终 `dist` 中的 iCloud 冲突副本，并忽略 Playwright 报告目录的数字副本；根 `npm run check` 先构建 Preview/Public artifacts 再执行生成物卫生校验，消除对残留临时目录的隐式依赖；
+- `npm run check`、Playwright + axe 62/1、静态发布与 diff check 已通过；release commit `9fb3a9a` 已 push 到 `origin/main`；
+- 下一动作分叉：若用户明确授权把含 1409 个审核 blocker 的 Full Alpha 继续公开部署，则执行 clean commit production upload、default/unique smoke 与线上浏览器复验；否则保持当前 production，不扩大公开内容范围，继续做本地事实/来源/权利/可访问性审核。
 
 ## 2026-08-13 第二批 100 条内容 production 收口点
 
