@@ -23,6 +23,7 @@ export default defineConfig({
       output: {
         manualChunks: {
           react: ["react", "react-dom", "react-router-dom"],
+          "atlas-vendor": ["leaflet", "react-leaflet", "supercluster"],
         },
       },
     },

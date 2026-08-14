@@ -1,4 +1,4 @@
-import { access, readFile, readdir } from "node:fs/promises";
+import { access, readFile, readdir, stat } from "node:fs/promises";
 import { resolve } from "node:path";
 
 const root = resolve("apps/museum-web");
@@ -78,4 +78,28 @@ if (distFiles.some((file) => String(file).endsWith(".map"))) {
   throw new Error("Production build unexpectedly contains public source maps");
 }
 
-console.log(`Static release verified: ${manifest.contentVersion}`);
+const normalizedDistFiles = distFiles.map(String);
+const distFileSet = new Set(normalizedDistFiles);
+const conflictCopies = normalizedDistFiles.filter((file) => {
+  const sibling = file.match(/^(.*)\s+(\d+)(\.[^/]+)$/)?.[1];
+  const extension = file.match(/(\.[^/]+)$/)?.[1];
+  return Boolean(
+    /\(conflicted copy(?:\s|\.)/i.test(file)
+    || (sibling && extension && distFileSet.has(`${sibling}${extension}`)),
+  );
+});
+if (conflictCopies.length > 0) {
+  throw new Error(`Production build contains ${conflictCopies.length} iCloud conflict copies:\n${conflictCopies.slice(0, 20).join("\n")}`);
+}
+
+const javascriptAssets = normalizedDistFiles.filter((file) => file.startsWith("assets/") && file.endsWith(".js"));
+const oversizedAssets = [];
+for (const file of javascriptAssets) {
+  const bytes = (await stat(resolve(root, "dist", file))).size;
+  if (bytes > 500 * 1024) oversizedAssets.push(`${file} (${Math.ceil(bytes / 1024)} KiB)`);
+}
+if (oversizedAssets.length > 0) {
+  throw new Error(`Production JavaScript chunks must stay at or below 500 KiB:\n${oversizedAssets.join("\n")}`);
+}
+
+console.log(`Static release verified: ${manifest.contentVersion}; ${javascriptAssets.length} JavaScript chunks, no conflict copies`);

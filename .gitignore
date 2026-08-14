@@ -9,5 +9,5 @@ dist/
 .wrangler/
 coverage/
 .artifacts/
-test-results/
-playwright-report/
+test-results*/
+playwright-report*/
