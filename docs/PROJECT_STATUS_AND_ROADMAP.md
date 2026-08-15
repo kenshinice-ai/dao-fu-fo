@@ -1,14 +1,21 @@
 # 项目现状与实施路线图
 
-> 基线日期：2026-08-14
-> 当前判断：工程、全历史 map-first 入口与第二批 100 条内容闭环已成立；Web 路由拆包、发布产物防污染和 clean-environment 门禁修复已提交并推送。由于拟上传 Full Alpha 仍是 `alpha / preview` 且包含 1409 个审核 blocker，本轮 production 部署等待用户明确授权；线上事实基准暂不改变。Public RC 边界保持独立；Museum / Explore / Research 保留为深度层。
+> 基线日期：2026-08-15
+> 当前判断：工程、全历史 map-first 入口、第二批 100 条内容闭环与 Web 路由拆包均已部署 production；线上基准为 `fb618c05 / 53e8b5d`。用户已明确授权进入下一批人物—事件—地点—关系—路线扩展；当前先冻结批次边界并建立来源/时间/空间/路线契约，不边写边扩大候选池。Public RC 边界保持独立；Museum / Explore / Research 保留为深度层。
+
+## 2026-08-15 production 与下一批启动点
+
+- Web 路由拆包版已部署：unique <https://fb618c05.dao-ru-fo-digital-museum.pages.dev>，deployment ID `fb618c05-c218-41be-aade-0994c792ba06`，source `53e8b5d`，default/unique smoke 均 25/25；
+- 线上浏览器确认人物 140、事件 145、地点 80、路线 4，Research 与玄奘 deep link 可用，应用 console error/warn 为 0；
+- Cloudflare 上传改为使用 iCloud 外 clean staging；当前受污染 dist 的验证样本为 922 canonical files / 21 conflict copies excluded。修复后完整 `npm run check` 与 Playwright + axe 62/1 通过；
+- 用户已授权新增人物、事件、地点、关系、路线等。下一步必须先输出并冻结第三批清单、目标数量、路线主题、地点尺度与来源组；每位人物继续满足人物—事件—地点/路线—时间—来源—既有人物关系闭环。
 
 ## 2026-08-14 Web 性能与发布卫生收口点
 
 - 页面入口改为按路由 lazy loading，Leaflet / React Leaflet / Supercluster 独立为地图 vendor chunk；默认构建主 JS 从约 628 KiB 降到约 312 KiB，18 个 JS chunks 均低于新增的 500 KiB 发布上限；
 - 静态门禁现在拒绝最终 `dist` 中的 iCloud 冲突副本，并忽略 Playwright 报告目录的数字副本；根 `npm run check` 先构建 Preview/Public artifacts 再执行生成物卫生校验，消除对残留临时目录的隐式依赖；
 - `npm run check`、Playwright + axe 62/1、静态发布与 diff check 已通过；release commit `9fb3a9a` 已 push 到 `origin/main`；
-- 下一动作分叉：若用户明确授权把含 1409 个审核 blocker 的 Full Alpha 继续公开部署，则执行 clean commit production upload、default/unique smoke 与线上浏览器复验；否则保持当前 production，不扩大公开内容范围，继续做本地事实/来源/权利/可访问性审核。
+- 该节点的 production 授权、部署与线上复验已完成，见上方 2026-08-15 收口点。
 
 ## 2026-08-13 第二批 100 条内容 production 收口点
 

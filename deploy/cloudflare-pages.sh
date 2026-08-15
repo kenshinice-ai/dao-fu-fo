@@ -124,7 +124,7 @@ preflight() {
 
 deploy_branch() {
   local branch="$1"
-  local commit dirty commit_message
+  local commit dirty commit_message upload_dir
   local args
 
   commit="$(git_commit)"
@@ -134,22 +134,30 @@ deploy_branch() {
     dirty="false"
   fi
 
-  args=(
-    pages deploy "${DIST_DIR}"
-    "--project-name=${PROJECT_NAME}"
-    "--branch=${branch}"
-    "--commit-dirty=${dirty}"
-  )
+  upload_dir="$(
+    mktemp -d "${TMPDIR:-/tmp}/drf-museum-pages-upload.XXXXXX"
+  )"
+  (
+    trap 'rm -rf "${upload_dir}"' EXIT
+    node "${REPO_ROOT}/scripts/stage-pages-deploy.mjs" "${DIST_DIR}" "${upload_dir}"
 
-  if [[ -n "${commit}" ]]; then
-    args+=("--commit-hash=${commit}")
-    commit_message="$(git -C "${REPO_ROOT}" log -1 --pretty=%s 2>/dev/null || true)"
-    if [[ -n "${commit_message}" ]]; then
-      args+=("--commit-message=${commit_message}")
+    args=(
+      pages deploy "${upload_dir}"
+      "--project-name=${PROJECT_NAME}"
+      "--branch=${branch}"
+      "--commit-dirty=${dirty}"
+    )
+
+    if [[ -n "${commit}" ]]; then
+      args+=("--commit-hash=${commit}")
+      commit_message="$(git -C "${REPO_ROOT}" log -1 --pretty=%s 2>/dev/null || true)"
+      if [[ -n "${commit_message}" ]]; then
+        args+=("--commit-message=${commit_message}")
+      fi
     fi
-  fi
 
-  wrangler "${args[@]}"
+    wrangler "${args[@]}"
+  )
 }
 
 command="${1:-help}"

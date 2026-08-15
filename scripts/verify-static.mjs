@@ -81,11 +81,11 @@ if (distFiles.some((file) => String(file).endsWith(".map"))) {
 const normalizedDistFiles = distFiles.map(String);
 const distFileSet = new Set(normalizedDistFiles);
 const conflictCopies = normalizedDistFiles.filter((file) => {
-  const sibling = file.match(/^(.*)\s+(\d+)(\.[^/]+)$/)?.[1];
-  const extension = file.match(/(\.[^/]+)$/)?.[1];
+  const match = file.match(/^(.*)\s+(\d+)(\.[^/]+)?$/);
+  const sibling = match ? `${match[1]}${match[3] ?? ""}` : null;
   return Boolean(
     /\(conflicted copy(?:\s|\.)/i.test(file)
-    || (sibling && extension && distFileSet.has(`${sibling}${extension}`)),
+    || (sibling && distFileSet.has(sibling)),
   );
 });
 if (conflictCopies.length > 0) {

@@ -1,8 +1,19 @@
 # 道·儒·佛文明数字博物馆｜项目交接文档
 
 > 维护纪律：每个可独立说明的实现、修复、验证或发布阶段完成后立即更新。
-> 最后更新：2026-08-14
-> 当前阶段：Web 路由拆包、发布产物防污染与 clean-environment 门禁修复已提交并推送；Full Alpha production 部署等待用户明确授权
+> 最后更新：2026-08-15
+> 当前阶段：Web 路由拆包版已部署 Cloudflare Pages production 并完成线上复验；用户已授权进入下一批人物—事件—地点—关系—路线扩展，正在冻结批次边界
+
+## 2026-08-15｜Web 路由拆包版 production handoff 与下一批授权（当前）
+
+- 用户已明确确认把当前 `2026.08.alpha.1 / alpha / preview` Full Alpha 部署到公开 Cloudflare Pages production，并知悉 Research 中继续透明展示 1409 个公开审核 blocker；
+- production 部署完成：默认地址 <https://dao-ru-fo-digital-museum.pages.dev>；unique deployment <https://fb618c05.dao-ru-fo-digital-museum.pages.dev>；deployment ID `fb618c05-c218-41be-aade-0994c792ba06`；Environment `Production`；branch `main`；source marker `53e8b5d`；Wrangler `4.122.0`；上一成功 deployment `e77d4c2c-7b5c-4ac3-a1a7-76748da917d2` 保留为回滚定位；
+- production preflight 重新执行完整 `npm run check`，Full Alpha 静态验证确认 18 个 JavaScript chunks、最大主包约 312 KiB、0 冲突副本；上传阶段共 920 个普通文件并单独上传 `_headers` / `_redirects`；
+- unique/default HTTP smoke 均 **25/25**：HTML、CSP、安全响应头、SPA deep links、manifest、英文 profile、地图 GeoJSON、时间轴 JSON 与 immutable hashed asset 全部通过；线上 manifest 确认为 `2026.08.alpha.1 / alpha / preview`；
+- 线上浏览器复验：首页显示人物 140、事件 145、地点 80、路线 4；Research 路由懒加载后标题正常；玄奘英文 deep link 正常；应用自身 console error/warn 为 0，唯一观察到的错误来自浏览器扩展脚本，不属于站点；
+- 上传完成后 iCloud 在本机 `dist` 恢复了 21 个数字副本。线上针对 `index…%202.js`、`react…%202.js` 与 `_redirects%202` 的核验均返回 HTML SPA fallback，不是 JS/配置文件，证明本次 deployment 未被污染；
+- 为消除后续竞态，新增 `scripts/stage-pages-deploy.mjs`，Cloudflare upload 改为先复制到 iCloud 外临时目录并排除所有具有 canonical sibling 的数字副本及 conflicted copy；使用当前受污染 `dist` 实测生成 922 个 canonical 文件并排除 21 个副本。修复后重新通过完整 `npm run check` 与 Playwright + axe **62 passed / 1 skipped**；
+- 用户已授权开始下一批人物、事件、地点、关系、路线等内容扩展，并要求持续维护纪律性 handoff。下一步先审计现有 140 人物与候选池，冻结一个有明确数量、来源、时间、空间、路线和既有图谱连接的批次，再进入 authoring；不得边写边无限扩大名单。
 
 ## 2026-08-14｜Web 路由拆包与发布产物门禁修复（当前）
 
@@ -11,7 +22,7 @@
 - 完整门禁在干净临时环境暴露出既有顺序缺陷：`verify:generated` 早于 Public artifact 构建，过去会依赖机器上残留的 Public 临时目录。根 `npm run check` 已调整为先生成 Preview 与 Public artifacts，再执行生成物卫生校验；全新临时目录下可重复通过；
 - 本地验证：完整 `npm run check` 通过；core 11/11、compiler 5/5、web 18/18；Playwright + axe **62 passed / 1 skipped**（唯一 skipped 为 Public RC 专用用例）；静态发布验证确认 `2026.08.prototype.1`、18 个 JS chunks、0 冲突副本；`git diff --check` 通过；
 - release commit：`9fb3a9a perf: split web routes and harden release artifacts`，已 push 到 `origin/main`；
-- 本轮尚未执行 Cloudflare production 上传。拟上传 artifact 仍是 `2026.08.alpha.1 / alpha / preview`，包含 1409 个公开审核 blocker；production 发布需用户明确确认，不以“继续开发”自动推定为公开发布授权。当前线上应用仍以上一份 production handoff 为准。
+- 本轮当时尚未执行 Cloudflare production 上传；该暂停点已由上方 2026-08-15 production handoff 取代。
 
 ## 2026-08-13｜P0/P1 关系链路审计与 Bible Atlas 风格联动修复 production handoff（当前）
 
