@@ -1,0 +1,715 @@
+[
+  {
+    "kind": "place",
+    "slug": "hengyang",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "衡阳",
+        "subtitle": "王夫之船山写作与明清易代区域入口",
+        "shortSummary": "衡阳作为第三批人物、事件或路线的城市、山岳或区域尺度地图锚点。",
+        "curatorialDescription": [
+          "坐标只表示地图尺度；传统关联、区域代理点与后世记忆不反推人物到访。"
+        ],
+        "researchNote": "具体遗址、历史边界、港口或寺院坐标仍需逐点升级来源定位。",
+        "timeLabel": "历史城市、山岳或区域文化景观",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Hengyang",
+        "subtitle": "Wang Fuzhi's Chuanshan writing and Ming–Qing transition regional entry",
+        "shortSummary": "Hengyang is a city-, mountain- or region-scale map anchor for a third-batch figure, event or route.",
+        "curatorialDescription": [
+          "Coordinates express map scale only; traditional association, regional proxies and later memory do not prove a figure's visit."
+        ],
+        "researchNote": "Specific sites, historical boundaries, ports and monastery coordinates still require point-level source upgrades.",
+        "timeLabel": "Historical city, mountain or regional cultural landscape",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:third-batch-geography"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "cultural_landscape",
+        "timeType": "atemporal",
+        "displayDate": {
+          "zh-CN": "历史城市、山岳或区域文化景观",
+          "en": "Historical city, mountain or regional cultural landscape"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:third-batch-geography"
+      }
+    ],
+    "sourceIds": [
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "placeReality": "real_historical",
+      "geometryType": "point",
+      "coordinates": [
+        112.57,
+        26.89
+      ],
+      "coordinateConfidence": "approximate",
+      "geographicSourceId": "source:third-batch-geography"
+    }
+  },
+  {
+    "kind": "place",
+    "slug": "jurong",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "句容",
+        "subtitle": "葛玄江南道教传承区域入口",
+        "shortSummary": "句容作为第三批人物、事件或路线的城市、山岳或区域尺度地图锚点。",
+        "curatorialDescription": [
+          "坐标只表示地图尺度；传统关联、区域代理点与后世记忆不反推人物到访。"
+        ],
+        "researchNote": "具体遗址、历史边界、港口或寺院坐标仍需逐点升级来源定位。",
+        "timeLabel": "历史城市、山岳或区域文化景观",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Jurong",
+        "subtitle": "Regional entry for Ge Xuan and Jiangnan Daoist transmission",
+        "shortSummary": "Jurong is a city-, mountain- or region-scale map anchor for a third-batch figure, event or route.",
+        "curatorialDescription": [
+          "Coordinates express map scale only; traditional association, regional proxies and later memory do not prove a figure's visit."
+        ],
+        "researchNote": "Specific sites, historical boundaries, ports and monastery coordinates still require point-level source upgrades.",
+        "timeLabel": "Historical city, mountain or regional cultural landscape",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:third-batch-geography"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "cultural_landscape",
+        "timeType": "atemporal",
+        "displayDate": {
+          "zh-CN": "历史城市、山岳或区域文化景观",
+          "en": "Historical city, mountain or regional cultural landscape"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:third-batch-geography"
+      }
+    ],
+    "sourceIds": [
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "placeReality": "real_historical",
+      "geometryType": "point",
+      "coordinates": [
+        119.17,
+        31.95
+      ],
+      "coordinateConfidence": "approximate",
+      "geographicSourceId": "source:third-batch-geography"
+    }
+  },
+  {
+    "kind": "place",
+    "slug": "ruicheng-yongle",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "芮城—永乐宫区域",
+        "subtitle": "吕洞宾后世宫观记忆与全真接受地",
+        "shortSummary": "芮城—永乐宫区域作为第三批人物、事件或路线的城市、山岳或区域尺度地图锚点。",
+        "curatorialDescription": [
+          "坐标只表示地图尺度；传统关联、区域代理点与后世记忆不反推人物到访。"
+        ],
+        "researchNote": "具体遗址、历史边界、港口或寺院坐标仍需逐点升级来源定位。",
+        "timeLabel": "历史城市、山岳或区域文化景观",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Ruicheng–Yongle Palace region",
+        "subtitle": "Later institutional memory and Quanzhen reception of Lü Dongbin",
+        "shortSummary": "Ruicheng–Yongle Palace region is a city-, mountain- or region-scale map anchor for a third-batch figure, event or route.",
+        "curatorialDescription": [
+          "Coordinates express map scale only; traditional association, regional proxies and later memory do not prove a figure's visit."
+        ],
+        "researchNote": "Specific sites, historical boundaries, ports and monastery coordinates still require point-level source upgrades.",
+        "timeLabel": "Historical city, mountain or regional cultural landscape",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:third-batch-geography"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "cultural_landscape",
+        "timeType": "atemporal",
+        "displayDate": {
+          "zh-CN": "历史城市、山岳或区域文化景观",
+          "en": "Historical city, mountain or regional cultural landscape"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:third-batch-geography"
+      }
+    ],
+    "sourceIds": [
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "placeReality": "real_historical",
+      "geometryType": "point",
+      "coordinates": [
+        110.69,
+        34.69
+      ],
+      "coordinateConfidence": "approximate",
+      "geographicSourceId": "source:third-batch-geography"
+    }
+  },
+  {
+    "kind": "place",
+    "slug": "wudang-mountains",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "武当山",
+        "subtitle": "道教山岳文化景观与张三丰传统关联地",
+        "shortSummary": "武当山作为第三批人物、事件或路线的城市、山岳或区域尺度地图锚点。",
+        "curatorialDescription": [
+          "坐标只表示地图尺度；传统关联、区域代理点与后世记忆不反推人物到访。"
+        ],
+        "researchNote": "具体遗址、历史边界、港口或寺院坐标仍需逐点升级来源定位。",
+        "timeLabel": "历史城市、山岳或区域文化景观",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Wudang Mountains",
+        "subtitle": "Daoist mountain landscape and traditional association with Zhang Sanfeng",
+        "shortSummary": "Wudang Mountains is a city-, mountain- or region-scale map anchor for a third-batch figure, event or route.",
+        "curatorialDescription": [
+          "Coordinates express map scale only; traditional association, regional proxies and later memory do not prove a figure's visit."
+        ],
+        "researchNote": "Specific sites, historical boundaries, ports and monastery coordinates still require point-level source upgrades.",
+        "timeLabel": "Historical city, mountain or regional cultural landscape",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:unesco-wudang"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "cultural_landscape",
+        "timeType": "atemporal",
+        "displayDate": {
+          "zh-CN": "历史城市、山岳或区域文化景观",
+          "en": "Historical city, mountain or regional cultural landscape"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:unesco-wudang"
+      }
+    ],
+    "sourceIds": [
+      "source:unesco-wudang",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "placeReality": "real_historical",
+      "geometryType": "point",
+      "coordinates": [
+        111,
+        32.4
+      ],
+      "coordinateConfidence": "approximate",
+      "geographicSourceId": "source:unesco-wudang"
+    }
+  },
+  {
+    "kind": "place",
+    "slug": "gandhara-peshawar",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "犍陀罗—白沙瓦区域",
+        "subtitle": "古代犍陀罗佛教学习与传播的区域代理锚点",
+        "shortSummary": "犍陀罗—白沙瓦区域作为第三批人物、事件或路线的城市、山岳或区域尺度地图锚点。",
+        "curatorialDescription": [
+          "坐标只表示地图尺度；传统关联、区域代理点与后世记忆不反推人物到访。"
+        ],
+        "researchNote": "具体遗址、历史边界、港口或寺院坐标仍需逐点升级来源定位。",
+        "timeLabel": "历史城市、山岳或区域文化景观",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Gandhara–Peshawar region",
+        "subtitle": "Regional proxy for ancient Gandharan Buddhist learning and transmission",
+        "shortSummary": "Gandhara–Peshawar region is a city-, mountain- or region-scale map anchor for a third-batch figure, event or route.",
+        "curatorialDescription": [
+          "Coordinates express map scale only; traditional association, regional proxies and later memory do not prove a figure's visit."
+        ],
+        "researchNote": "Specific sites, historical boundaries, ports and monastery coordinates still require point-level source upgrades.",
+        "timeLabel": "Historical city, mountain or regional cultural landscape",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:third-batch-geography"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "cultural_landscape",
+        "timeType": "atemporal",
+        "displayDate": {
+          "zh-CN": "历史城市、山岳或区域文化景观",
+          "en": "Historical city, mountain or regional cultural landscape"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:third-batch-geography"
+      }
+    ],
+    "sourceIds": [
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "placeReality": "approximate_region",
+      "geometryType": "point",
+      "coordinates": [
+        71.52,
+        34.01
+      ],
+      "coordinateConfidence": "inferred",
+      "geographicSourceId": "source:third-batch-geography"
+    }
+  },
+  {
+    "kind": "place",
+    "slug": "ayodhya",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "阿逾陀",
+        "subtitle": "北印度佛教思想与世亲活动的城市/区域入口",
+        "shortSummary": "阿逾陀作为第三批人物、事件或路线的城市、山岳或区域尺度地图锚点。",
+        "curatorialDescription": [
+          "坐标只表示地图尺度；传统关联、区域代理点与后世记忆不反推人物到访。"
+        ],
+        "researchNote": "具体遗址、历史边界、港口或寺院坐标仍需逐点升级来源定位。",
+        "timeLabel": "历史城市、山岳或区域文化景观",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Ayodhya",
+        "subtitle": "City- and region-scale entry for North Indian Buddhist thought and Vasubandhu",
+        "shortSummary": "Ayodhya is a city-, mountain- or region-scale map anchor for a third-batch figure, event or route.",
+        "curatorialDescription": [
+          "Coordinates express map scale only; traditional association, regional proxies and later memory do not prove a figure's visit."
+        ],
+        "researchNote": "Specific sites, historical boundaries, ports and monastery coordinates still require point-level source upgrades.",
+        "timeLabel": "Historical city, mountain or regional cultural landscape",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:third-batch-geography"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "cultural_landscape",
+        "timeType": "atemporal",
+        "displayDate": {
+          "zh-CN": "历史城市、山岳或区域文化景观",
+          "en": "Historical city, mountain or regional cultural landscape"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:third-batch-geography"
+      }
+    ],
+    "sourceIds": [
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "placeReality": "real_historical",
+      "geometryType": "point",
+      "coordinates": [
+        82.2,
+        26.8
+      ],
+      "coordinateConfidence": "approximate",
+      "geographicSourceId": "source:third-batch-geography"
+    }
+  },
+  {
+    "kind": "place",
+    "slug": "ningbo",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "宁波",
+        "subtitle": "宋代禅宗与鉴真东渡的江南港口区域入口",
+        "shortSummary": "宁波作为第三批人物、事件或路线的城市、山岳或区域尺度地图锚点。",
+        "curatorialDescription": [
+          "坐标只表示地图尺度；传统关联、区域代理点与后世记忆不反推人物到访。"
+        ],
+        "researchNote": "具体遗址、历史边界、港口或寺院坐标仍需逐点升级来源定位。",
+        "timeLabel": "历史城市、山岳或区域文化景观",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Ningbo",
+        "subtitle": "Jiangnan port-region entry for Song Chan and Jianzhen's eastward voyages",
+        "shortSummary": "Ningbo is a city-, mountain- or region-scale map anchor for a third-batch figure, event or route.",
+        "curatorialDescription": [
+          "Coordinates express map scale only; traditional association, regional proxies and later memory do not prove a figure's visit."
+        ],
+        "researchNote": "Specific sites, historical boundaries, ports and monastery coordinates still require point-level source upgrades.",
+        "timeLabel": "Historical city, mountain or regional cultural landscape",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:third-batch-geography"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "cultural_landscape",
+        "timeType": "atemporal",
+        "displayDate": {
+          "zh-CN": "历史城市、山岳或区域文化景观",
+          "en": "Historical city, mountain or regional cultural landscape"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:third-batch-geography"
+      }
+    ],
+    "sourceIds": [
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "placeReality": "real_historical",
+      "geometryType": "point",
+      "coordinates": [
+        121.55,
+        29.87
+      ],
+      "coordinateConfidence": "centroid",
+      "geographicSourceId": "source:third-batch-geography"
+    }
+  },
+  {
+    "kind": "place",
+    "slug": "tiantong-mountain",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "天童山",
+        "subtitle": "宏智正觉与宋代天童寺院文化景观",
+        "shortSummary": "天童山作为第三批人物、事件或路线的城市、山岳或区域尺度地图锚点。",
+        "curatorialDescription": [
+          "坐标只表示地图尺度；传统关联、区域代理点与后世记忆不反推人物到访。"
+        ],
+        "researchNote": "具体遗址、历史边界、港口或寺院坐标仍需逐点升级来源定位。",
+        "timeLabel": "历史城市、山岳或区域文化景观",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Tiantong Mountain",
+        "subtitle": "Monastic landscape associated with Hongzhi Zhengjue and Song Tiantong",
+        "shortSummary": "Tiantong Mountain is a city-, mountain- or region-scale map anchor for a third-batch figure, event or route.",
+        "curatorialDescription": [
+          "Coordinates express map scale only; traditional association, regional proxies and later memory do not prove a figure's visit."
+        ],
+        "researchNote": "Specific sites, historical boundaries, ports and monastery coordinates still require point-level source upgrades.",
+        "timeLabel": "Historical city, mountain or regional cultural landscape",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:third-batch-geography"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "cultural_landscape",
+        "timeType": "atemporal",
+        "displayDate": {
+          "zh-CN": "历史城市、山岳或区域文化景观",
+          "en": "Historical city, mountain or regional cultural landscape"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:third-batch-geography"
+      }
+    ],
+    "sourceIds": [
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "placeReality": "real_historical",
+      "geometryType": "point",
+      "coordinates": [
+        121.74,
+        29.8
+      ],
+      "coordinateConfidence": "approximate",
+      "geographicSourceId": "source:third-batch-geography"
+    }
+  },
+  {
+    "kind": "place",
+    "slug": "nara",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "奈良",
+        "subtitle": "鉴真日本戒律传播与古代寺院制度的城市入口",
+        "shortSummary": "奈良作为第三批人物、事件或路线的城市、山岳或区域尺度地图锚点。",
+        "curatorialDescription": [
+          "坐标只表示地图尺度；传统关联、区域代理点与后世记忆不反推人物到访。"
+        ],
+        "researchNote": "具体遗址、历史边界、港口或寺院坐标仍需逐点升级来源定位。",
+        "timeLabel": "历史城市、山岳或区域文化景观",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Nara",
+        "subtitle": "City entry for Jianzhen's vinaya transmission and ancient Japanese monastic institutions",
+        "shortSummary": "Nara is a city-, mountain- or region-scale map anchor for a third-batch figure, event or route.",
+        "curatorialDescription": [
+          "Coordinates express map scale only; traditional association, regional proxies and later memory do not prove a figure's visit."
+        ],
+        "researchNote": "Specific sites, historical boundaries, ports and monastery coordinates still require point-level source upgrades.",
+        "timeLabel": "Historical city, mountain or regional cultural landscape",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:unesco-nara"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "cultural_landscape",
+        "timeType": "atemporal",
+        "displayDate": {
+          "zh-CN": "历史城市、山岳或区域文化景观",
+          "en": "Historical city, mountain or regional cultural landscape"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:unesco-nara"
+      }
+    ],
+    "sourceIds": [
+      "source:unesco-nara",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "placeReality": "real_historical",
+      "geometryType": "point",
+      "coordinates": [
+        135.8,
+        34.68
+      ],
+      "coordinateConfidence": "centroid",
+      "geographicSourceId": "source:unesco-nara"
+    }
+  },
+  {
+    "kind": "place",
+    "slug": "samarkand",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 3,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "撒马尔罕",
+        "subtitle": "丘处机西行与中亚文化交流的区域锚点",
+        "shortSummary": "撒马尔罕作为第三批人物、事件或路线的城市、山岳或区域尺度地图锚点。",
+        "curatorialDescription": [
+          "坐标只表示地图尺度；传统关联、区域代理点与后世记忆不反推人物到访。"
+        ],
+        "researchNote": "具体遗址、历史边界、港口或寺院坐标仍需逐点升级来源定位。",
+        "timeLabel": "历史城市、山岳或区域文化景观",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Samarkand",
+        "subtitle": "Regional anchor for Qiu Chuji's western journey and Central Asian exchange",
+        "shortSummary": "Samarkand is a city-, mountain- or region-scale map anchor for a third-batch figure, event or route.",
+        "curatorialDescription": [
+          "Coordinates express map scale only; traditional association, regional proxies and later memory do not prove a figure's visit."
+        ],
+        "researchNote": "Specific sites, historical boundaries, ports and monastery coordinates still require point-level source upgrades.",
+        "timeLabel": "Historical city, mountain or regional cultural landscape",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:unesco-samarkand"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "cultural_landscape",
+        "timeType": "atemporal",
+        "displayDate": {
+          "zh-CN": "历史城市、山岳或区域文化景观",
+          "en": "Historical city, mountain or regional cultural landscape"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:unesco-samarkand"
+      }
+    ],
+    "sourceIds": [
+      "source:unesco-samarkand",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "placeReality": "real_historical",
+      "geometryType": "point",
+      "coordinates": [
+        66.96,
+        39.65
+      ],
+      "coordinateConfidence": "centroid",
+      "geographicSourceId": "source:unesco-samarkand"
+    }
+  }
+]

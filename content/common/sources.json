@@ -1338,5 +1338,252 @@
   {"id":"source:daoist-yuan-ming-records","sourceType":"primary_text","evidenceGrade":"B","title":{"zh-CN":"宋元明道教内丹、道藏与宫观资料","en":"Song–Ming Daoist inner-alchemy, canon and monastery records"},"locator":"白玉蟾、李道纯、杜道坚、张宇初、赵宜真的内丹、道藏、宫观与地方传承资料；年代有争议处明确保留","role":{"zh-CN":"宋元明道教文本、师承与区域传播的研究入口","en":"Research entry for Song–Ming Daoist texts, lineages and regional transmission"},"rightsStatus":"quotation_only","locatorLevel":"topic","citationStatus":"verified","url":"https://ctext.org/"},
   {"id":"source:buddhist-transmission-records","sourceType":"primary_text","evidenceGrade":"B","title":{"zh-CN":"汉魏六朝佛教译经、经录与高僧传记资料","en":"Han–Six Dynasties Buddhist translation, catalogues and eminent-monk records"},"locator":"竺法护、僧伽提婆、僧祐、道生及相关译经、经录与传记资料；译场、师承和思想关系按条目核对","role":{"zh-CN":"早期佛教译经、城市网络与文本记忆的研究入口","en":"Research entry for early Buddhist translation, urban networks and textual memory"},"rightsStatus":"public_domain","locatorLevel":"topic","citationStatus":"verified","url":"https://www.cbeta.org/"},
   {"id":"source:chan-huayan-institutional-records","sourceType":"primary_text","evidenceGrade":"B","title":{"zh-CN":"早期禅宗、华严与晚明佛教传承资料","en":"Early Chan, Huayan and late Ming Buddhist transmission records"},"locator":"道信、弘忍、僧璨、石头希迁、澄观、云门、法眼、洞山、中峰、真可、莲池等传记、灯录与寺院资料","role":{"zh-CN":"禅宗、华严、寺院制度与晚明佛教网络的研究入口","en":"Research entry for Chan, Huayan, monastery institutions and late Ming Buddhist networks"},"rightsStatus":"quotation_only","locatorLevel":"topic","citationStatus":"verified","url":"https://www.cbeta.org/"},
-  {"id":"source:historical-geography-second-batch","sourceType":"map_or_gazetteer","evidenceGrade":"B","title":{"zh-CN":"第二批城市、山岳与区域近似坐标资料","en":"Second-batch historical city, mountain and regional coordinate records"},"locator":"新增城市、山岳和区域节点的近似地图坐标；坐标表达城市/山地尺度，不替代遗址、寺院或宫观的精确考古定位","role":{"zh-CN":"第二批人物—事件—地点地图锚点与空间尺度说明","en":"Geographic basis and scale notes for second-batch figure–event–place map anchors"},"rightsStatus":"quotation_only","locatorLevel":"topic","citationStatus":"verified"}
+  {"id":"source:historical-geography-second-batch","sourceType":"map_or_gazetteer","evidenceGrade":"B","title":{"zh-CN":"第二批城市、山岳与区域近似坐标资料","en":"Second-batch historical city, mountain and regional coordinate records"},"locator":"新增城市、山岳和区域节点的近似地图坐标；坐标表达城市/山地尺度，不替代遗址、寺院或宫观的精确考古定位","role":{"zh-CN":"第二批人物—事件—地点地图锚点与空间尺度说明","en":"Geographic basis and scale notes for second-batch figure–event–place map anchors"},"rightsStatus":"quotation_only","locatorLevel":"topic","citationStatus":"verified"},
+  {
+    "id": "source:confucian-disciples-classics",
+    "sourceType": "primary_text",
+    "evidenceGrade": "A",
+    "title": {
+      "zh-CN": "《论语》《孟子》《礼记》孔门弟子与传承资料",
+      "en": "Confucian disciple and transmission records in the Analects, Mencius and Liji"
+    },
+    "locator": "《论语》颜渊、曾参相关章句，《孟子》与《礼记》中子思学派及《中庸》传承语境；人物年代和后世文本归属分层",
+    "role": {
+      "zh-CN": "颜回、曾子、子思的早期文本见证与后世传承入口",
+      "en": "Early textual and later-transmission entry for Yan Hui, Zengzi and Zisi"
+    },
+    "rightsStatus": "public_domain",
+    "locatorLevel": "edition",
+    "citationStatus": "verified",
+    "url": "https://ctext.org/analects"
+  },
+  {
+    "id": "source:wang-fuzhi-qing-philosophy",
+    "sourceType": "reference_work",
+    "evidenceGrade": "A",
+    "title": {
+      "zh-CN": "斯坦福哲学百科：清代哲学与王夫之",
+      "en": "Stanford Encyclopedia of Philosophy: Qing Philosophy and Wang Fuzhi"
+    },
+    "locator": "Qing Philosophy 条目中的王夫之生平年代、明清易代思想语境与气论讨论；地方活动地另由地理来源支持",
+    "role": {
+      "zh-CN": "王夫之年代与思想史定位的学术参考入口",
+      "en": "Scholarly reference for Wang Fuzhi's dates and intellectual context"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://plato.stanford.edu/entries/qing-philosophy/"
+  },
+  {
+    "id": "source:early-daoist-lineage-records",
+    "sourceType": "primary_text",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "早期道教传记、仙传与江南道派资料",
+      "en": "Early Daoist biographies, hagiographies and Jiangnan lineage records"
+    },
+    "locator": "葛玄、魏华存及后世道教传记、仙传、上清谱系材料；历史人物活动、传统降授和后世法系分层处理",
+    "role": {
+      "zh-CN": "葛玄与魏华存的历史/传统身份、年代和后世传承入口",
+      "en": "Historical and traditional identity, chronology and reception entry for Ge Xuan and Wei Huacun"
+    },
+    "rightsStatus": "public_domain",
+    "locatorLevel": "topic",
+    "citationStatus": "verified"
+  },
+  {
+    "id": "source:immortal-tradition-records",
+    "sourceType": "primary_text",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "吕洞宾、张三丰仙传与道教接受资料",
+      "en": "Hagiographic and Daoist reception records for Lü Dongbin and Zhang Sanfeng"
+    },
+    "locator": "吕洞宾、张三丰的仙传、宫观记忆、全真与内丹谱系材料；多时期传说不压缩为一套精确生平",
+    "role": {
+      "zh-CN": "吕洞宾、张三丰传统身份与后世接受的来源入口",
+      "en": "Source entry for the traditional identities and later reception of Lü Dongbin and Zhang Sanfeng"
+    },
+    "rightsStatus": "public_domain",
+    "locatorLevel": "topic",
+    "citationStatus": "verified"
+  },
+  {
+    "id": "source:asanga-britannica",
+    "sourceType": "reference_work",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "《大英百科全书》：无著",
+      "en": "Encyclopaedia Britannica: Asanga"
+    },
+    "locator": "Asanga 人物条目：约 4 世纪、瑜伽行派/唯识传统与世亲关系；具体活动地和年代仍保留学术区间",
+    "role": {
+      "zh-CN": "无著年代、学派与世亲关系的参考入口",
+      "en": "Reference entry for Asanga's dates, school and relationship with Vasubandhu"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://www.britannica.com/biography/Asanga"
+  },
+  {
+    "id": "source:vasubandhu-britannica",
+    "sourceType": "reference_work",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "《大英百科全书》：世亲",
+      "en": "Encyclopaedia Britannica: Vasubandhu"
+    },
+    "locator": "Vasubandhu 人物条目：约 4—5 世纪、阿毗达磨与唯识思想阶段、无著关系；年代争议保留",
+    "role": {
+      "zh-CN": "世亲年代、思想阶段与无著关系的参考入口",
+      "en": "Reference entry for Vasubandhu's dates, intellectual phases and relationship with Asanga"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "precise",
+    "citationStatus": "verified",
+    "url": "https://www.britannica.com/biography/Vasubandhu"
+  },
+  {
+    "id": "source:song-chan-cbeta",
+    "sourceType": "primary_text",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "CBETA：大慧宗杲、宏智正觉语录与宋代禅宗资料",
+      "en": "CBETA: records and sayings of Dahui Zonggao and Hongzhi Zhengjue"
+    },
+    "locator": "大慧普觉禅师语录、宏智禅师广录及宋代灯录相关材料；法系、思想标签与直接交往分层",
+    "role": {
+      "zh-CN": "大慧宗杲、宏智正觉年代、语录与禅宗接受网络入口",
+      "en": "Textual entry for the dates, sayings and Chan reception networks of Dahui and Hongzhi"
+    },
+    "rightsStatus": "public_domain",
+    "locatorLevel": "edition",
+    "citationStatus": "verified",
+    "url": "https://www.cbeta.org/"
+  },
+  {
+    "id": "source:third-batch-geography",
+    "sourceType": "map_or_gazetteer",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "第三批城市、山岳与跨区域地图锚点登记",
+      "en": "Third-batch city, mountain and transregional map-anchor register"
+    },
+    "locator": "衡阳、句容、芮城、白沙瓦、阿逾陀、宁波、天童山等城市或区域中心点；坐标只表达地图尺度，不替代遗址定位",
+    "role": {
+      "zh-CN": "第三批人物、事件与路线的城市级/区域级坐标依据",
+      "en": "City- and region-scale coordinate basis for the third batch"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "topic",
+    "citationStatus": "verified",
+    "url": "https://www.openstreetmap.org/"
+  },
+  {
+    "id": "source:unesco-wudang",
+    "sourceType": "institutional_record",
+    "evidenceGrade": "A",
+    "title": {
+      "zh-CN": "UNESCO：武当山古建筑群",
+      "en": "UNESCO: Ancient Building Complex in the Wudang Mountains"
+    },
+    "locator": "World Heritage List no. 705；武当山文化景观与道教建筑网络；遗产层不证明张三丰的精确历史行迹",
+    "role": {
+      "zh-CN": "武当山现实地理与后世道教文化景观入口",
+      "en": "Authoritative entry for the real geography and later Daoist landscape of Wudang"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "item",
+    "citationStatus": "verified",
+    "url": "https://whc.unesco.org/en/list/705/"
+  },
+  {
+    "id": "source:unesco-nara",
+    "sourceType": "institutional_record",
+    "evidenceGrade": "A",
+    "title": {
+      "zh-CN": "UNESCO：古奈良的历史遗迹",
+      "en": "UNESCO: Historic Monuments of Ancient Nara"
+    },
+    "locator": "World Heritage List no. 870；奈良城市与寺院遗产景观，用作鉴真日本制度接受的区域锚点",
+    "role": {
+      "zh-CN": "奈良现实地点与佛教制度遗产的权威入口",
+      "en": "Authoritative entry for Nara and its Buddhist institutional heritage"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "item",
+    "citationStatus": "verified",
+    "url": "https://whc.unesco.org/en/list/870/"
+  },
+  {
+    "id": "source:unesco-samarkand",
+    "sourceType": "institutional_record",
+    "evidenceGrade": "A",
+    "title": {
+      "zh-CN": "UNESCO：撒马尔罕—文化交汇之地",
+      "en": "UNESCO: Samarkand – Crossroad of Cultures"
+    },
+    "locator": "World Heritage List no. 603；撒马尔罕历史城市与中亚交流区域，用作丘处机西行的区域锚点",
+    "role": {
+      "zh-CN": "撒马尔罕现实地理与中亚交流史的权威入口",
+      "en": "Authoritative entry for Samarkand's geography and Central Asian exchange history"
+    },
+    "rightsStatus": "external_reference_only",
+    "locatorLevel": "item",
+    "citationStatus": "verified",
+    "url": "https://whc.unesco.org/en/list/603/"
+  },
+  {
+    "id": "source:jianzhen-transmission-records",
+    "sourceType": "primary_text",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "鉴真传记、东渡与日本戒律传播资料",
+      "en": "Biographical records of Jianzhen's voyages and vinaya transmission to Japan"
+    },
+    "locator": "鉴真多次东渡、扬州出发语境与 754 年抵达日本的传记材料；多次航行不合并为一次直线路线",
+    "role": {
+      "zh-CN": "鉴真东渡时间、传播目标与路线分段的史料入口",
+      "en": "Historical entry for the timing, purpose and segmented route of Jianzhen's voyages"
+    },
+    "rightsStatus": "public_domain",
+    "locatorLevel": "topic",
+    "citationStatus": "verified"
+  },
+  {
+    "id": "source:qiu-chuji-xiyouji",
+    "sourceType": "primary_text",
+    "evidenceGrade": "A",
+    "title": {
+      "zh-CN": "《长春真人西游记》",
+      "en": "Travels to the West of Qiu Changchun"
+    },
+    "locator": "丘处机约 1220—1224 年西行、燕京及中亚区域节点记录；路线以区域锚点重建，不补造逐日线位",
+    "role": {
+      "zh-CN": "丘处机西行时间、区域节点与政治会见语境的主要文本入口",
+      "en": "Primary textual entry for Qiu Chuji's western journey, regional nodes and political context"
+    },
+    "rightsStatus": "public_domain",
+    "locatorLevel": "edition",
+    "citationStatus": "verified"
+  },
+  {
+    "id": "source:kumarajiva-corridor-records",
+    "sourceType": "primary_text",
+    "evidenceGrade": "B",
+    "title": {
+      "zh-CN": "鸠摩罗什传记与龟兹—姑臧—长安译经路线资料",
+      "en": "Biographical records of Kumarajiva's Kucha–Guzang–Chang'an translation corridor"
+    },
+    "locator": "鸠摩罗什由龟兹进入姑臧、后至长安的传记与译经史语境；强制迁徙和知识传播同时保留",
+    "role": {
+      "zh-CN": "鸠摩罗什跨区域迁徙与译经走廊的来源入口",
+      "en": "Source entry for Kumarajiva's transregional movement and translation corridor"
+    },
+    "rightsStatus": "public_domain",
+    "locatorLevel": "topic",
+    "citationStatus": "verified"
+  }
 ]

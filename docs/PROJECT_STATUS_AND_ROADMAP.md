@@ -1,14 +1,24 @@
 # 项目现状与实施路线图
 
 > 基线日期：2026-08-15
-> 当前判断：工程、全历史 map-first 入口、第二批 100 条内容闭环与 Web 路由拆包均已部署 production；线上基准为 `fb618c05 / 53e8b5d`。用户已明确授权进入下一批人物—事件—地点—关系—路线扩展；当前先冻结批次边界并建立来源/时间/空间/路线契约，不边写边扩大候选池。Public RC 边界保持独立；Museum / Explore / Research 保留为深度层。
+> 当前判断：工程、全历史 map-first 入口、第二批 100 条内容闭环与 Web 路由拆包均已部署 production；线上基准仍为 `fb618c05 / 53e8b5d`。第三批 12 人物、12 事件、10 地点、3 路线、14 来源、69 关系已完成 authoring 和完整本地门禁，正在提交/推送；新增 Full Alpha payload 尚未获得单独 production 发布确认。Public RC 边界保持独立；Museum / Explore / Research 保留为深度层。
+
+## 2026-08-15 第三批历史网络完成点
+
+- 冻结批次已完整落地且未扩边：颜回、曾子、子思、王夫之；葛玄、魏华存、吕洞宾、张三丰；无著、世亲、大慧宗杲、宏智正觉；三条跨区域 reconstructed corridors；
+- 当前 Full Alpha 为 465 个编译实体：人物 152、事件 157、地点 90、路线 7；关系 716、来源 105、音频 3；数据库 bundle 为 468 entities / 716 relations；
+- 现实地图地点 85；symbolic cosmos 为 3 tradition / 11 figure / 5 place nodes 与 15 edges；
+- `verify:third-batch`、完整 `npm run check`、Core 11/11、Compiler 5/5、Web 18/18、alignment 465/465 与 716/716（warnings 0）全部通过；
+- Full Alpha Playwright + axe 为 **63 passed / 1 skipped**；Public artifact 继续保持 34 entities / 41 relations / 0 blocker；
+- Full Alpha Research 当前为 1535 public blockers、1184 review subjects、1109 blocking subjects，继续保持 `alpha / preview` 语义；
+- 本批先完成 commit/push。production 部署属于下一独立发布阶段，必须基于上述 blocker payload 取得明确确认，然后执行 clean staging upload、default/unique 25/25 smoke 与线上浏览器复验。
 
 ## 2026-08-15 production 与下一批启动点
 
 - Web 路由拆包版已部署：unique <https://fb618c05.dao-ru-fo-digital-museum.pages.dev>，deployment ID `fb618c05-c218-41be-aade-0994c792ba06`，source `53e8b5d`，default/unique smoke 均 25/25；
 - 线上浏览器确认人物 140、事件 145、地点 80、路线 4，Research 与玄奘 deep link 可用，应用 console error/warn 为 0；
 - Cloudflare 上传改为使用 iCloud 外 clean staging；当前受污染 dist 的验证样本为 922 canonical files / 21 conflict copies excluded。修复后完整 `npm run check` 与 Playwright + axe 62/1 通过；
-- 用户已授权新增人物、事件、地点、关系、路线等。下一步必须先输出并冻结第三批清单、目标数量、路线主题、地点尺度与来源组；每位人物继续满足人物—事件—地点/路线—时间—来源—既有人物关系闭环。
+- 用户已授权新增人物、事件、地点、关系、路线等；第三批冻结、authoring 和本地验证现已完成。下一步是提交/推送并停在明确 production 发布确认闸门，不自动扩大第四批候选池。
 
 ## 2026-08-14 Web 性能与发布卫生收口点
 
@@ -104,14 +114,14 @@ Cloudflare Pages static dist          不含数据库连接
 
 | 领域 | 当前状态 | 核验结果 |
 | --- | --- | --- |
-| Web 原型 | 可运行、可构建、可自动回归；第二批 100 条内容正在同步 production Full Alpha | 中英文、Museum/Explore/Research、桌面与 390px 验收保持既有覆盖；本轮增加批次级闭环校验，并在发布后补录最终浏览器与线上烟测证据 |
-| Alpha 内容 | 首批 100 人物后再扩充 100 条关联内容 | 428 个编译内容实体、647 条关系、3 条音频脚本、91 个来源；人物 140、事件 145、地点 80、路线 4 |
+| Web 原型 | 可运行、可构建、可自动回归；第三批 Full Alpha 本地门禁完成、尚未部署 | 中英文、Museum/Explore/Research、桌面与 390px 验收保持既有覆盖；Full Alpha Playwright + axe 63 passed / 1 skipped |
+| Alpha 内容 | 第三批历史网络 authoring 完成 | 465 个编译内容实体、716 条关系、3 条音频脚本、105 个来源；人物 152、事件 157、地点 90、路线 7 |
 | 数据库导入契约 | 已生成并验证 | 143 个 canonical entities（含 3 个顶级传统）、54 个来源、286 条翻译、319 条 entity-source、157 条 tradition assignment、140 条时间断言；1 个 Public RC2、56 个候选 subject、391 条 review records 和 1 个 promotion record |
-| Explore 派生模型 | 第二批编译前后保持单一 canonical read model | Full Alpha 将自动同步 compiler 的双语实体、140 位人物搜索入口、91 个来源、75 个现实地图地点索引、18 节点/14 边 symbolic-cosmos 模型、全历史 overview 时间轴和 647 条关系；点击人物/地点/事件继续只改变共享 focus，面板、地图和时间轴从同一关系集合反向派生 |
-| 内容治理 | 完整 Alpha 继续保持透明审核边界；第二批发布前复核中 | quality report、review queue、source index、route manifest、SHA-256 manifest 均由 compiler 生成；本批新增内容继续保留 `preview` publication 与证据等级，不把 Full Alpha 上线误称为 Public RC 批准 |
+| Explore 派生模型 | 第三批编译后保持单一 canonical read model | Full Alpha 已同步 152 位人物搜索入口、105 个来源、85 个现实地图地点索引、3/11/5 nodes 与 15 edges 的 symbolic-cosmos 模型、全历史 overview 时间轴和 716 条关系；点击人物/地点/事件继续只改变共享 focus |
+| 内容治理 | 完整 Alpha 继续保持透明审核边界；第三批发布确认前停留 | quality report、review queue、source index、route manifest、SHA-256 manifest 均由 compiler 生成；1535 public blockers、1184 review subjects（1109 blocking）继续保留 `preview` publication 与证据等级 |
 | 数据库 schema | 真实集成通过 | 001–015 migration、checksum-aware runner、事务 importer、state verifier、PostGIS/pg_trgm、领域 profile、Public 只读视图和 release/promotion 留痕；fresh/repeat 结果一致 |
-| 发布隔离 | 已固化 | Public artifact 继续独立保持 34 entities / 41 relations / 0 audio / 0 blocker；本批 Full Alpha 目标为 428 entities / 647 relations / 3 audio；`verify:architecture` 阻止 Web/部署连接数据库或直读 Alpha 源内容；production 默认 public，只有显式 `CF_PAGES_PRODUCTION_VISIBILITY=preview` 才进入 Full Alpha 模式 |
-| 总门禁 | 发布前执行中 | 批次闭环已通过；待完成 `npm run check`、migration/import plan、compiler、database bundle、Vite build、static release、Cloudflare production 与线上 default/unique HTTP smoke |
+| 发布隔离 | 已固化 | Public artifact 继续独立保持 34 entities / 41 relations / 0 audio / 0 blocker；本批 Full Alpha 为 465 entities / 716 relations / 3 audio；`verify:architecture` 阻止 Web/部署连接数据库或直读 Alpha 源内容；production 默认 public，只有显式 `CF_PAGES_PRODUCTION_VISIBILITY=preview` 才进入 Full Alpha 模式 |
+| 总门禁 | 本地门禁完成；production gate 待确认 | 批次闭环、`npm run check`、migration/import plan、compiler、database bundle、Vite build、static release与 Playwright/axe 已通过；待明确授权后再执行 Cloudflare production 与线上 default/unique HTTP/browser smoke |
 
 > 以下是此前更大 Preview 的历史快照，不是当前 production Alpha；当前线上基线以本文件顶部和 [最新 production handoff](./HANDOFF.md) 为准。
 

@@ -1,7 +1,30 @@
 # 第三批人物—事件—地点—关系—路线冻结计划
 
 日期：2026-08-15  
-状态：用户已授权；候选与数量边界冻结；进入来源与 authoring 阶段
+状态：authoring、批次 verifier、完整工程门禁与 Full Alpha Playwright/axe 已完成；待提交、推送；production 尚未获本批次单独发布确认
+
+## 0. 完成记录
+
+第三批已严格按本文件冻结边界完成，没有加入第 13 位人物或第 4 条路线：
+
+- 新增 12 人物、12 事件、10 地点、3 路线、14 来源、69 关系；
+- 当前 Full Alpha 为 465 个编译实体：人物 152、事件 157、地点 90、路线 7，另有既有文本、版本、概念、机构、对象与段落；
+- 当前总关系 716、来源 105、音频 3；数据库 bundle 为 468 entities / 716 relations（含 3 个传统字典实体）；
+- 现实地图地点 85；symbolic cosmos 为 3 tradition nodes / 11 figure nodes / 5 place nodes / 15 edges；
+- `verify:third-batch` 已确认：
+
+```text
+Third-batch closure verified:
+12 figures, 12 events, 10 places, 3 routes,
+69 relations; new-figure interactions=6.
+```
+
+- 完整 `npm run check` 通过；Core unit 11/11、Compiler unit 5/5、Web unit 18/18；
+- source/read-model alignment 为 465/465 entities、716/716 relations、warnings 0；
+- Full Alpha Playwright + axe 为 **63 passed / 1 skipped**，唯一 skipped 仍为 Public RC 专用用例；
+- Public artifact 未扩大，继续保持 34 entities / 41 relations / 0 blocker；
+- Full Alpha Research 当前透明展示 1535 public blockers；review queue 为 1184 subjects，其中 1109 blocking。这些是 Alpha 研究审核状态，不是程序失败，也不代表 Public RC；
+- production 当前仍是第三批之前的 `fb618c05 / 53e8b5d`。本批新增 payload 在 commit/push 后仍需单独、明确的 production 发布确认。
 
 ## 1. 批次目的
 

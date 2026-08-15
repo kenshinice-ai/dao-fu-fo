@@ -57,10 +57,10 @@ const sameRange = (left, right) => left?.startYear === right?.startYear && (left
 if (figures.length !== 40) fail(`second-100 figure batch expected 40, received ${figures.length}`);
 if (events.length !== 40) fail(`second-100 event batch expected 40, received ${events.length}`);
 if (places.length !== 20) fail(`second-100 place batch expected 20, received ${places.length}`);
-if (allEntities.filter((entity) => entity.kind === "figure").length !== 140) fail("total figure count is not 140");
-if (allEntities.filter((entity) => entity.kind === "event").length !== 145) fail("total event count is not 145");
-if (allEntities.filter((entity) => entity.kind === "place").length !== 80) fail("total place count is not 80");
-if (relations.length !== 647) fail(`total relation count is not 647: ${relations.length}`);
+if (allEntities.filter((entity) => entity.kind === "figure").length < 140) fail("total figure count fell below the second-100 baseline");
+if (allEntities.filter((entity) => entity.kind === "event").length < 145) fail("total event count fell below the second-100 baseline");
+if (allEntities.filter((entity) => entity.kind === "place").length < 80) fail("total place count fell below the second-100 baseline");
+if (relations.length < 647) fail(`total relation count fell below the second-100 baseline: ${relations.length}`);
 
 for (const entity of [...figures, ...events, ...places]) {
   if (!entity.temporalAssertions?.length) fail(`${keyOf(entity)} has no temporal assertion`);
@@ -123,7 +123,7 @@ const batchRelations = relations.filter((relation) =>
     (endpoint.kind === "place" && newPlaceSlugs.has(endpoint.slug)),
   ),
 );
-if (batchRelations.length !== 176) fail(`second-100 relation closure expected 176, received ${batchRelations.length}`);
+if (batchRelations.length < 176) fail(`second-100 relation closure fell below 176, received ${batchRelations.length}`);
 const newFigureInteractions = relations.filter((relation) =>
   relation.source.kind === "figure" && relation.target.kind === "figure" &&
   newFigureSlugs.has(relation.source.slug) && newFigureSlugs.has(relation.target.slug),

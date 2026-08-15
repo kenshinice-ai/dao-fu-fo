@@ -2,9 +2,23 @@
 
 > 维护纪律：每个可独立说明的实现、修复、验证或发布阶段完成后立即更新。
 > 最后更新：2026-08-15
-> 当前阶段：Web 路由拆包版已部署 Cloudflare Pages production 并完成线上复验；用户已授权进入下一批人物—事件—地点—关系—路线扩展，正在冻结批次边界
+> 当前阶段：第三批人物—事件—地点—关系—路线 authoring 与完整本地门禁已完成，正在提交/推送；production 仍停留在第三批之前的 `fb618c05 / 53e8b5d`，新增 Full Alpha payload 尚未获得单独公开发布确认
 
-## 2026-08-15｜Web 路由拆包版 production handoff 与下一批授权（当前）
+## 2026-08-15｜第三批历史网络 authoring 与验证 handoff（当前）
+
+- 第三批严格保持冻结边界：新增 12 人物、12 事件、10 地点、3 路线、14 来源、69 关系，没有顺手加入第 13 位人物或第 4 条路线；
+- 新增人物为颜回、曾子、子思、王夫之；葛玄、魏华存、吕洞宾、张三丰；无著、世亲、大慧宗杲、宏智正觉。吕洞宾与张三丰保持 `traditional_sage`，未伪造历史生卒年或现实旅行线；魏华存上清降授使用传统时间；
+- 新增路线为鸠摩罗什龟兹—姑臧—长安、鉴真扬州—宁波—奈良、丘处机宁海—燕京—撒马尔罕；全部保持 reconstructed corridor 语义，不解释为逐日精确线位；
+- 当前 Full Alpha 精确规模：465 个编译实体，人物 152、事件 157、地点 90、路线 7、关系 716、来源 105、音频 3；数据库 bundle 为 468 entities / 716 relations（含 3 个传统字典实体）；现实地图地点 85；
+- symbolic cosmos 当前为 3 tradition nodes / 11 figure nodes / 5 place nodes / 15 edges；搜索 `xuanzang` 返回 9 项；
+- 批次 closure 已通过：`12 figures, 12 events, 10 places, 3 routes, 69 relations; new-figure interactions=6`；生成器支持 dry run 与幂等 `--apply`，批次 verifier 已接入根 `npm run check`；
+- 完整 `npm run check` 通过；Core unit 11/11、Compiler unit 5/5、Web unit 18/18；source/read-model alignment 为 465/465 entities、716/716 relations、warnings 0；database import plan 为 6894 statements；
+- Full Alpha Playwright + axe **63 passed / 1 skipped**，唯一 skipped 仍为 Public RC 专用用例；新增 E2E 覆盖颜回、吕洞宾、无著、大慧宗杲和三条跨区域路线，既有基线已同步到 152/157/90/7/716；
+- Full Alpha 当前有 1535 public blockers；review queue 为 1184 subjects，其中 1109 blocking。这是 `alpha / preview` 的透明研究审核队列，不是程序缺陷，不得误称 Public RC 或正式学术发布；
+- Public artifact 仍保持 34 entities / 41 relations / 0 blocker，没有被第三批扩大；
+- 当前 production 仍为第三批之前的默认地址 <https://dao-ru-fo-digital-museum.pages.dev> 与 unique <https://fb618c05.dao-ru-fo-digital-museum.pages.dev>，source `53e8b5d`。本批先完成 commit/push；部署新增 Full Alpha payload 前必须再次取得明确 production 发布确认。
+
+## 2026-08-15｜Web 路由拆包版 production handoff 与下一批授权
 
 - 用户已明确确认把当前 `2026.08.alpha.1 / alpha / preview` Full Alpha 部署到公开 Cloudflare Pages production，并知悉 Research 中继续透明展示 1409 个公开审核 blocker；
 - production 部署完成：默认地址 <https://dao-ru-fo-digital-museum.pages.dev>；unique deployment <https://fb618c05.dao-ru-fo-digital-museum.pages.dev>；deployment ID `fb618c05-c218-41be-aade-0994c792ba06`；Environment `Production`；branch `main`；source marker `53e8b5d`；Wrangler `4.122.0`；上一成功 deployment `e77d4c2c-7b5c-4ac3-a1a7-76748da917d2` 保留为回滚定位；
@@ -15,13 +29,13 @@
 - 为消除后续竞态，新增 `scripts/stage-pages-deploy.mjs`，Cloudflare upload 改为先复制到 iCloud 外临时目录并排除所有具有 canonical sibling 的数字副本及 conflicted copy；使用当前受污染 `dist` 实测生成 922 个 canonical 文件并排除 21 个副本。修复后重新通过完整 `npm run check` 与 Playwright + axe **62 passed / 1 skipped**；
 - 用户已授权开始下一批人物、事件、地点、关系、路线等内容扩展，并要求持续维护纪律性 handoff。下一步先审计现有 140 人物与候选池，冻结一个有明确数量、来源、时间、空间、路线和既有图谱连接的批次，再进入 authoring；不得边写边无限扩大名单。
 
-## 2026-08-15｜第三批内容边界冻结 handoff（当前）
+## 2026-08-15｜第三批内容边界冻结 handoff
 
 - 现有 140 人物、145 事件、80 地点、4 路线已完成 inventory；第三批冻结为 12 人物、12 事件、10 地点、3 路线和至少 69 条新增关系，完成后最低总量为人物 152、事件 157、地点 90、路线 7、关系 716、编译实体 465；
 - 人物固定为：颜回、曾子、子思、王夫之；葛玄、魏华存、吕洞宾、张三丰；无著、世亲、大慧宗杲、宏智正觉。吕洞宾与张三丰使用传统圣贤/争议身份边界，不生成伪历史路线；魏华存的上清降授进入传统时间；
 - 路线固定为：鸠摩罗什龟兹—姑臧—长安译经走廊、鉴真扬州—宁波—奈良东渡传播路线、丘处机宁海—燕京—撒马尔罕西行路线；路线均为 reconstructed corridor，不表示逐日精确线位；
 - 10 个地点固定为衡阳、句容、芮城—永乐宫区域、武当山、犍陀罗—白沙瓦区域、阿逾陀、宁波、天童山、奈良、撒马尔罕；传统关联、区域代理点和后世记忆地不得反推本人现实到访；
-- 完整冻结契约见 `docs/THIRD_CONTENT_BATCH_PLAN_2026-08-15.md`；下一步从来源记录与地点尺度开始 authoring，不在本批中顺手扩大候选池。
+- 完整冻结契约见 `docs/THIRD_CONTENT_BATCH_PLAN_2026-08-15.md`；该 authoring 阶段现已完成，结果与验证证据记录在本文件顶部。
 
 ## 2026-08-14｜Web 路由拆包与发布产物门禁修复（当前）
 

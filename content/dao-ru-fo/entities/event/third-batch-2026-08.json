@@ -1,0 +1,800 @@
+[
+  {
+    "kind": "event",
+    "slug": "yan-hui-qufu-disciple-circle",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "颜回与曲阜孔门弟子语境",
+        "shortSummary": "颜回与曲阜孔门弟子语境把人物、时间与地点组织为一条可审计的研究语境。",
+        "curatorialDescription": [
+          "分析性、传统性或制度性事件不会被误画为单一精确发生点。"
+        ],
+        "researchNote": "颜回相关事件仍需继续拆分篇章、传记与地点层；当前保持明确证据等级。",
+        "timeLabel": "约公元前 500—481 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Yan Hui in the Qufu disciple circle",
+        "shortSummary": "Yan Hui in the Qufu disciple circle organises figure, time and place as an auditable research context.",
+        "curatorialDescription": [
+          "Analytical, traditional or institutional events are not misdrawn as one precisely located occurrence."
+        ],
+        "researchNote": "The event associated with Yan Hui still requires passage-, biography- and place-level refinement; the current evidence layer remains explicit.",
+        "timeLabel": "c. 500–481 BCE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:confucian-disciples-classics"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": -500,
+        "endYear": -481,
+        "displayDate": {
+          "zh-CN": "约公元前 500—481 年",
+          "en": "c. 500–481 BCE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:confucian-disciples-classics"
+      }
+    ],
+    "sourceIds": [
+      "source:confucian-disciples-classics",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "inferred",
+      "sequenceOrder": 401,
+      "eventScope": "local"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "zengzi-classical-transmission",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "曾子与孔门经典传述",
+        "shortSummary": "曾子与孔门经典传述把人物、时间与地点组织为一条可审计的研究语境。",
+        "curatorialDescription": [
+          "分析性、传统性或制度性事件不会被误画为单一精确发生点。"
+        ],
+        "researchNote": "曾子相关事件仍需继续拆分篇章、传记与地点层；当前保持明确证据等级。",
+        "timeLabel": "约公元前 490—435 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Zengzi and Confucian textual transmission",
+        "shortSummary": "Zengzi and Confucian textual transmission organises figure, time and place as an auditable research context.",
+        "curatorialDescription": [
+          "Analytical, traditional or institutional events are not misdrawn as one precisely located occurrence."
+        ],
+        "researchNote": "The event associated with Zengzi still requires passage-, biography- and place-level refinement; the current evidence layer remains explicit.",
+        "timeLabel": "c. 490–435 BCE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:confucian-disciples-classics"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": -490,
+        "endYear": -435,
+        "displayDate": {
+          "zh-CN": "约公元前 490—435 年",
+          "en": "c. 490–435 BCE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:confucian-disciples-classics"
+      }
+    ],
+    "sourceIds": [
+      "source:confucian-disciples-classics",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "inferred",
+      "sequenceOrder": 402,
+      "eventScope": "local"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "zisi-zhongyong-transmission",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "子思与《中庸》传承语境",
+        "shortSummary": "子思与《中庸》传承语境把人物、时间与地点组织为一条可审计的研究语境。",
+        "curatorialDescription": [
+          "分析性、传统性或制度性事件不会被误画为单一精确发生点。"
+        ],
+        "researchNote": "子思相关事件仍需继续拆分篇章、传记与地点层；当前保持明确证据等级。",
+        "timeLabel": "约公元前 450—402 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Zisi and the Zhongyong transmission context",
+        "shortSummary": "Zisi and the Zhongyong transmission context organises figure, time and place as an auditable research context.",
+        "curatorialDescription": [
+          "Analytical, traditional or institutional events are not misdrawn as one precisely located occurrence."
+        ],
+        "researchNote": "The event associated with Zisi still requires passage-, biography- and place-level refinement; the current evidence layer remains explicit.",
+        "timeLabel": "c. 450–402 BCE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:confucian-disciples-classics"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "composition_context",
+        "timeType": "range",
+        "startYear": -450,
+        "endYear": -402,
+        "displayDate": {
+          "zh-CN": "约公元前 450—402 年",
+          "en": "c. 450–402 BCE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:confucian-disciples-classics"
+      }
+    ],
+    "sourceIds": [
+      "source:confucian-disciples-classics",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "contested",
+      "sequenceOrder": 403,
+      "eventScope": "regional"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "wang-fuzhi-chuanshan-writing",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "王夫之船山著述与明清易代反思",
+        "shortSummary": "王夫之船山著述与明清易代反思把人物、时间与地点组织为一条可审计的研究语境。",
+        "curatorialDescription": [
+          "分析性、传统性或制度性事件不会被误画为单一精确发生点。"
+        ],
+        "researchNote": "王夫之相关事件仍需继续拆分篇章、传记与地点层；当前保持明确证据等级。",
+        "timeLabel": "1644—1692 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Wang Fuzhi's Chuanshan writings and reflection on dynastic transition",
+        "shortSummary": "Wang Fuzhi's Chuanshan writings and reflection on dynastic transition organises figure, time and place as an auditable research context.",
+        "curatorialDescription": [
+          "Analytical, traditional or institutional events are not misdrawn as one precisely located occurrence."
+        ],
+        "researchNote": "The event associated with Wang Fuzhi still requires passage-, biography- and place-level refinement; the current evidence layer remains explicit.",
+        "timeLabel": "1644–1692",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:wang-fuzhi-qing-philosophy"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "composition",
+        "timeType": "range",
+        "startYear": 1644,
+        "endYear": 1692,
+        "displayDate": {
+          "zh-CN": "1644—1692 年",
+          "en": "1644–1692"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:wang-fuzhi-qing-philosophy"
+      }
+    ],
+    "sourceIds": [
+      "source:wang-fuzhi-qing-philosophy",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "editorial_project",
+      "historicity": "documented",
+      "sequenceOrder": 404,
+      "eventScope": "local"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "ge-xuan-jiangnan-daoist-memory",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "葛玄与江南道教传承记忆",
+        "shortSummary": "葛玄与江南道教传承记忆把人物、时间与地点组织为一条可审计的研究语境。",
+        "curatorialDescription": [
+          "分析性、传统性或制度性事件不会被误画为单一精确发生点。"
+        ],
+        "researchNote": "葛玄相关事件仍需继续拆分篇章、传记与地点层；当前保持明确证据等级。",
+        "timeLabel": "190—244 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Ge Xuan and Jiangnan Daoist transmission memory",
+        "shortSummary": "Ge Xuan and Jiangnan Daoist transmission memory organises figure, time and place as an auditable research context.",
+        "curatorialDescription": [
+          "Analytical, traditional or institutional events are not misdrawn as one precisely located occurrence."
+        ],
+        "researchNote": "The event associated with Ge Xuan still requires passage-, biography- and place-level refinement; the current evidence layer remains explicit.",
+        "timeLabel": "190–244",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:early-daoist-lineage-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 190,
+        "endYear": 244,
+        "displayDate": {
+          "zh-CN": "190—244 年",
+          "en": "190–244"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:early-daoist-lineage-records"
+      }
+    ],
+    "sourceIds": [
+      "source:early-daoist-lineage-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "contested",
+      "sequenceOrder": 405,
+      "eventScope": "regional"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "wei-huacun-shangqing-transmission",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "traditional_account",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "魏华存与上清降授传统",
+        "shortSummary": "魏华存与上清降授传统把人物、时间与地点组织为一条可审计的研究语境。",
+        "curatorialDescription": [
+          "分析性、传统性或制度性事件不会被误画为单一精确发生点。"
+        ],
+        "researchNote": "魏华存相关事件仍需继续拆分篇章、传记与地点层；当前保持明确证据等级。",
+        "timeLabel": "约 252—334 年；上清传统另计",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Wei Huacun and Shangqing revelation traditions",
+        "shortSummary": "Wei Huacun and Shangqing revelation traditions organises figure, time and place as an auditable research context.",
+        "curatorialDescription": [
+          "Analytical, traditional or institutional events are not misdrawn as one precisely located occurrence."
+        ],
+        "researchNote": "The event associated with Wei Huacun still requires passage-, biography- and place-level refinement; the current evidence layer remains explicit.",
+        "timeLabel": "c. 252–334; Shangqing tradition separately dated",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "traditional_account",
+        "sourceId": "source:early-daoist-lineage-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "traditional_occurrence",
+        "timeType": "traditional_date",
+        "displayDate": {
+          "zh-CN": "约 252—334 年；上清传统另计",
+          "en": "c. 252–334; Shangqing tradition separately dated"
+        },
+        "confidence": "low",
+        "evidenceLayer": "traditional_account",
+        "sourceId": "source:early-daoist-lineage-records"
+      }
+    ],
+    "sourceIds": [
+      "source:early-daoist-lineage-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "other",
+      "historicity": "traditional",
+      "sequenceOrder": 406,
+      "eventScope": "regional"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "lu-dongbin-yongle-quanzhen-reception",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "traditional_account",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "吕洞宾仙传与永乐宫—全真接受",
+        "shortSummary": "吕洞宾仙传与永乐宫—全真接受把人物、时间与地点组织为一条可审计的研究语境。",
+        "curatorialDescription": [
+          "分析性、传统性或制度性事件不会被误画为单一精确发生点。"
+        ],
+        "researchNote": "吕洞宾相关事件仍需继续拆分篇章、传记与地点层；当前保持明确证据等级。",
+        "timeLabel": "唐末宋初传统；年代不确",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Lü Dongbin hagiography and Yongle–Quanzhen reception",
+        "shortSummary": "Lü Dongbin hagiography and Yongle–Quanzhen reception organises figure, time and place as an auditable research context.",
+        "curatorialDescription": [
+          "Analytical, traditional or institutional events are not misdrawn as one precisely located occurrence."
+        ],
+        "researchNote": "The event associated with Lü Dongbin still requires passage-, biography- and place-level refinement; the current evidence layer remains explicit.",
+        "timeLabel": "late Tang–early Song tradition; dates uncertain",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "traditional_account",
+        "sourceId": "source:immortal-tradition-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "traditional_occurrence",
+        "timeType": "traditional_date",
+        "displayDate": {
+          "zh-CN": "唐末宋初传统；年代不确",
+          "en": "late Tang–early Song tradition; dates uncertain"
+        },
+        "confidence": "low",
+        "evidenceLayer": "traditional_account",
+        "sourceId": "source:immortal-tradition-records"
+      }
+    ],
+    "sourceIds": [
+      "source:immortal-tradition-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "other",
+      "historicity": "traditional",
+      "sequenceOrder": 407,
+      "eventScope": "regional"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "zhang-sanfeng-wudang-tradition",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "traditional_account",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "张三丰与武当山传统",
+        "shortSummary": "张三丰与武当山传统把人物、时间与地点组织为一条可审计的研究语境。",
+        "curatorialDescription": [
+          "分析性、传统性或制度性事件不会被误画为单一精确发生点。"
+        ],
+        "researchNote": "张三丰相关事件仍需继续拆分篇章、传记与地点层；当前保持明确证据等级。",
+        "timeLabel": "宋元明之间多层传统；年代不确",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Zhang Sanfeng and the Wudang tradition",
+        "shortSummary": "Zhang Sanfeng and the Wudang tradition organises figure, time and place as an auditable research context.",
+        "curatorialDescription": [
+          "Analytical, traditional or institutional events are not misdrawn as one precisely located occurrence."
+        ],
+        "researchNote": "The event associated with Zhang Sanfeng still requires passage-, biography- and place-level refinement; the current evidence layer remains explicit.",
+        "timeLabel": "layered Song–Yuan–Ming traditions; dates uncertain",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "traditional_account",
+        "sourceId": "source:immortal-tradition-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "traditional_occurrence",
+        "timeType": "traditional_date",
+        "displayDate": {
+          "zh-CN": "宋元明之间多层传统；年代不确",
+          "en": "layered Song–Yuan–Ming traditions; dates uncertain"
+        },
+        "confidence": "low",
+        "evidenceLayer": "traditional_account",
+        "sourceId": "source:immortal-tradition-records"
+      }
+    ],
+    "sourceIds": [
+      "source:immortal-tradition-records",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "other",
+      "historicity": "traditional",
+      "sequenceOrder": 408,
+      "eventScope": "regional"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "asanga-yogacara-formation",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "无著与瑜伽行派形成语境",
+        "shortSummary": "无著与瑜伽行派形成语境把人物、时间与地点组织为一条可审计的研究语境。",
+        "curatorialDescription": [
+          "分析性、传统性或制度性事件不会被误画为单一精确发生点。"
+        ],
+        "researchNote": "无著相关事件仍需继续拆分篇章、传记与地点层；当前保持明确证据等级。",
+        "timeLabel": "350—399 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Asanga and the formation context of Yogacara",
+        "shortSummary": "Asanga and the formation context of Yogacara organises figure, time and place as an auditable research context.",
+        "curatorialDescription": [
+          "Analytical, traditional or institutional events are not misdrawn as one precisely located occurrence."
+        ],
+        "researchNote": "The event associated with Asanga still requires passage-, biography- and place-level refinement; the current evidence layer remains explicit.",
+        "timeLabel": "350–399",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:asanga-britannica"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "composition_context",
+        "timeType": "range",
+        "startYear": 350,
+        "endYear": 399,
+        "displayDate": {
+          "zh-CN": "350—399 年",
+          "en": "350–399"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:asanga-britannica"
+      }
+    ],
+    "sourceIds": [
+      "source:asanga-britannica",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "inferred",
+      "sequenceOrder": 409,
+      "eventScope": "transregional"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "vasubandhu-abhidharma-yogacara",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "世亲的阿毗达磨—唯识思想阶段",
+        "shortSummary": "世亲的阿毗达磨—唯识思想阶段把人物、时间与地点组织为一条可审计的研究语境。",
+        "curatorialDescription": [
+          "分析性、传统性或制度性事件不会被误画为单一精确发生点。"
+        ],
+        "researchNote": "世亲相关事件仍需继续拆分篇章、传记与地点层；当前保持明确证据等级。",
+        "timeLabel": "380—430 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Vasubandhu's Abhidharma–Yogacara intellectual phases",
+        "shortSummary": "Vasubandhu's Abhidharma–Yogacara intellectual phases organises figure, time and place as an auditable research context.",
+        "curatorialDescription": [
+          "Analytical, traditional or institutional events are not misdrawn as one precisely located occurrence."
+        ],
+        "researchNote": "The event associated with Vasubandhu still requires passage-, biography- and place-level refinement; the current evidence layer remains explicit.",
+        "timeLabel": "380–430",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:vasubandhu-britannica"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "composition_context",
+        "timeType": "range",
+        "startYear": 380,
+        "endYear": 430,
+        "displayDate": {
+          "zh-CN": "380—430 年",
+          "en": "380–430"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:vasubandhu-britannica"
+      }
+    ],
+    "sourceIds": [
+      "source:vasubandhu-britannica",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "contested",
+      "sequenceOrder": 410,
+      "eventScope": "transregional"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "dahui-kanhua-chan",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "大慧宗杲与看话禅传播",
+        "shortSummary": "大慧宗杲与看话禅传播把人物、时间与地点组织为一条可审计的研究语境。",
+        "curatorialDescription": [
+          "分析性、传统性或制度性事件不会被误画为单一精确发生点。"
+        ],
+        "researchNote": "大慧宗杲相关事件仍需继续拆分篇章、传记与地点层；当前保持明确证据等级。",
+        "timeLabel": "1130—1163 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Dahui Zonggao and the transmission of kanhua Chan",
+        "shortSummary": "Dahui Zonggao and the transmission of kanhua Chan organises figure, time and place as an auditable research context.",
+        "curatorialDescription": [
+          "Analytical, traditional or institutional events are not misdrawn as one precisely located occurrence."
+        ],
+        "researchNote": "The event associated with Dahui Zonggao still requires passage-, biography- and place-level refinement; the current evidence layer remains explicit.",
+        "timeLabel": "1130–1163",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-chan-cbeta"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_activity",
+        "timeType": "range",
+        "startYear": 1130,
+        "endYear": 1163,
+        "displayDate": {
+          "zh-CN": "1130—1163 年",
+          "en": "1130–1163"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-chan-cbeta"
+      }
+    ],
+    "sourceIds": [
+      "source:song-chan-cbeta",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "documented",
+      "sequenceOrder": 411,
+      "eventScope": "regional"
+    }
+  },
+  {
+    "kind": "event",
+    "slug": "hongzhi-silent-illumination",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "宏智正觉、天童山与默照禅",
+        "shortSummary": "宏智正觉、天童山与默照禅把人物、时间与地点组织为一条可审计的研究语境。",
+        "curatorialDescription": [
+          "分析性、传统性或制度性事件不会被误画为单一精确发生点。"
+        ],
+        "researchNote": "宏智正觉相关事件仍需继续拆分篇章、传记与地点层；当前保持明确证据等级。",
+        "timeLabel": "1129—1157 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Hongzhi Zhengjue, Tiantong and silent illumination",
+        "shortSummary": "Hongzhi Zhengjue, Tiantong and silent illumination organises figure, time and place as an auditable research context.",
+        "curatorialDescription": [
+          "Analytical, traditional or institutional events are not misdrawn as one precisely located occurrence."
+        ],
+        "researchNote": "The event associated with Hongzhi Zhengjue still requires passage-, biography- and place-level refinement; the current evidence layer remains explicit.",
+        "timeLabel": "1129–1157",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-chan-cbeta"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_activity",
+        "timeType": "range",
+        "startYear": 1129,
+        "endYear": 1157,
+        "displayDate": {
+          "zh-CN": "1129—1157 年",
+          "en": "1129–1157"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-chan-cbeta"
+      }
+    ],
+    "sourceIds": [
+      "source:song-chan-cbeta",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "eventKind": "analytical_period",
+      "historicity": "documented",
+      "sequenceOrder": 412,
+      "eventScope": "local"
+    }
+  }
+]

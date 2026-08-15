@@ -1,0 +1,850 @@
+[
+  {
+    "kind": "figure",
+    "slug": "yan-hui",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "颜回",
+        "subtitle": "孔门弟子与德行典范",
+        "shortSummary": "颜回通过曲阜孔门学习语境进入人物网络；早期文本见证与后世德行典范形象分层呈现。",
+        "curatorialDescription": [
+          "人物通过时间、地点、事件和关系进入同一 canonical 读模型；传统、接受和历史活动保持分层。"
+        ],
+        "researchNote": "生卒年多依传统与后世整理，当前使用约数并保持历史推定证据层。",
+        "timeLabel": "约前 521—前 481 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Yan Hui",
+        "subtitle": "Confucian disciple and model of cultivated virtue",
+        "shortSummary": "Yan Hui enters the network through the Qufu disciple context, with early textual witness separated from his later exemplary image.",
+        "curatorialDescription": [
+          "The figure enters one canonical read model through time, place, event and relation records, with historical activity, tradition and reception kept separate."
+        ],
+        "researchNote": "Dates rely on traditional and later compilations; this batch uses approximate years and an inferred historical layer.",
+        "timeLabel": "c. 521–481 BCE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:confucian-disciples-classics"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "circa",
+        "startYear": -521,
+        "endYear": -481,
+        "displayDate": {
+          "zh-CN": "约前 521—前 481 年",
+          "en": "c. 521–481 BCE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:confucian-disciples-classics"
+      }
+    ],
+    "sourceIds": [
+      "source:confucian-disciples-classics",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "inferred",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "颜回",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "zengzi",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "曾子",
+        "subtitle": "孔门传述与修身传统",
+        "shortSummary": "曾子连接孔门师承、修身论述与后世经典归属；本批不把《孝经》完整文本直接等同本人定稿。",
+        "curatorialDescription": [
+          "人物通过时间、地点、事件和关系进入同一 canonical 读模型；传统、接受和历史活动保持分层。"
+        ],
+        "researchNote": "人物年代与文本归属继续按早期章句和后世编纂层拆分。",
+        "timeLabel": "约前 505—前 435 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Zengzi",
+        "subtitle": "Confucian transmission and self-cultivation",
+        "shortSummary": "Zengzi connects Confucian discipleship, self-cultivation and later textual attribution without treating the received Xiaojing as his direct final text.",
+        "curatorialDescription": [
+          "The figure enters one canonical read model through time, place, event and relation records, with historical activity, tradition and reception kept separate."
+        ],
+        "researchNote": "Dates and textual attribution remain separated across early sayings and later compilation layers.",
+        "timeLabel": "c. 505–435 BCE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:confucian-disciples-classics"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "circa",
+        "startYear": -505,
+        "endYear": -435,
+        "displayDate": {
+          "zh-CN": "约前 505—前 435 年",
+          "en": "c. 505–435 BCE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:confucian-disciples-classics"
+      }
+    ],
+    "sourceIds": [
+      "source:confucian-disciples-classics",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "inferred",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "曾子",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "zisi",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "子思",
+        "subtitle": "孔门后学与《中庸》传承",
+        "shortSummary": "子思连接曾子、孟子与《中庸》传承，但人物活动、文本归属和后世学派谱系保持分层。",
+        "curatorialDescription": [
+          "人物通过时间、地点、事件和关系进入同一 canonical 读模型；传统、接受和历史活动保持分层。"
+        ],
+        "researchNote": "年代与《中庸》归属存在文献层差异，当前使用争议身份和约数。",
+        "timeLabel": "约前 483—前 402 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Zisi",
+        "subtitle": "Later Confucian transmission and the Zhongyong tradition",
+        "shortSummary": "Zisi connects Zengzi, Mencius and the Zhongyong tradition while keeping biography, textual attribution and later lineage construction separate.",
+        "curatorialDescription": [
+          "The figure enters one canonical read model through time, place, event and relation records, with historical activity, tradition and reception kept separate."
+        ],
+        "researchNote": "Chronology and Zhongyong attribution vary across textual layers; this batch preserves contested status and approximate dates.",
+        "timeLabel": "c. 483–402 BCE",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:confucian-disciples-classics"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "circa",
+        "startYear": -483,
+        "endYear": -402,
+        "displayDate": {
+          "zh-CN": "约前 483—前 402 年",
+          "en": "c. 483–402 BCE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:confucian-disciples-classics"
+      }
+    ],
+    "sourceIds": [
+      "source:confucian-disciples-classics",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "contested",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "子思",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "wang-fuzhi",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "王夫之",
+        "subtitle": "明清易代、气论与船山著述",
+        "shortSummary": "王夫之把明清易代经验、气论、经史解释与衡阳船山写作空间连接起来。",
+        "curatorialDescription": [
+          "人物通过时间、地点、事件和关系进入同一 canonical 读模型；传统、接受和历史活动保持分层。"
+        ],
+        "researchNote": "思想影响关系只表示后世接受与论述关联，不推断与早期人物直接交往。",
+        "timeLabel": "1619—1692 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Wang Fuzhi",
+        "subtitle": "Dynastic transition, qi philosophy and Chuanshan writings",
+        "shortSummary": "Wang Fuzhi connects the Ming–Qing transition, qi philosophy, classical-historical interpretation and the Chuanshan writing landscape near Hengyang.",
+        "curatorialDescription": [
+          "The figure enters one canonical read model through time, place, event and relation records, with historical activity, tradition and reception kept separate."
+        ],
+        "researchNote": "Intellectual relations express later reception and conceptual connection, not direct contact with earlier figures.",
+        "timeLabel": "1619–1692",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "confucianism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:wang-fuzhi-qing-philosophy"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "exact",
+        "startYear": 1619,
+        "endYear": 1692,
+        "displayDate": {
+          "zh-CN": "1619—1692 年",
+          "en": "1619–1692"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:wang-fuzhi-qing-philosophy"
+      }
+    ],
+    "sourceIds": [
+      "source:wang-fuzhi-qing-philosophy",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "王夫之",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "ge-xuan",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "葛玄",
+        "subtitle": "江南道教传承与仙传分层",
+        "shortSummary": "葛玄连接江南早期道教、葛氏传承与后世仙传；历史人物活动和神仙叙事不合并。",
+        "curatorialDescription": [
+          "人物通过时间、地点、事件和关系进入同一 canonical 读模型；传统、接受和历史活动保持分层。"
+        ],
+        "researchNote": "生卒年与具体活动地存在传记差异，当前使用争议身份和城市/区域尺度。",
+        "timeLabel": "传统约 164—244 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Ge Xuan",
+        "subtitle": "Jiangnan Daoist transmission and layered hagiography",
+        "shortSummary": "Ge Xuan connects early Jiangnan Daoism, Ge-family transmission and later hagiography without merging historical activity and immortal narratives.",
+        "curatorialDescription": [
+          "The figure enters one canonical read model through time, place, event and relation records, with historical activity, tradition and reception kept separate."
+        ],
+        "researchNote": "Dates and specific activity sites vary across biographies; this batch uses contested status and city/region-scale geography.",
+        "timeLabel": "traditionally c. 164–244",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:early-daoist-lineage-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "circa",
+        "startYear": 164,
+        "endYear": 244,
+        "displayDate": {
+          "zh-CN": "传统约 164—244 年",
+          "en": "traditionally c. 164–244"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:early-daoist-lineage-records"
+      }
+    ],
+    "sourceIds": [
+      "source:early-daoist-lineage-records",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "contested",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "葛玄",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "wei-huacun",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "魏华存",
+        "subtitle": "上清传统与女性道教谱系",
+        "shortSummary": "魏华存连接历史人物层、上清降授传统和茅山后世整理；传统事件不回写为可证实的现实会面。",
+        "curatorialDescription": [
+          "人物通过时间、地点、事件和关系进入同一 canonical 读模型；传统、接受和历史活动保持分层。"
+        ],
+        "researchNote": "人物年代与上清降授叙事使用不同时间层；茅山是后世接受地。",
+        "timeLabel": "约 252—334 年；上清传统另计",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Wei Huacun",
+        "subtitle": "Shangqing tradition and female Daoist lineage",
+        "shortSummary": "Wei Huacun connects a historical-person layer, Shangqing revelation traditions and later Mount Mao systematisation without rewriting traditional episodes as documented meetings.",
+        "curatorialDescription": [
+          "The figure enters one canonical read model through time, place, event and relation records, with historical activity, tradition and reception kept separate."
+        ],
+        "researchNote": "Biographical chronology and Shangqing revelation narratives use separate time layers; Mount Mao is a later reception site.",
+        "timeLabel": "c. 252–334; Shangqing tradition separately dated",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:early-daoist-lineage-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "circa",
+        "startYear": 252,
+        "endYear": 334,
+        "displayDate": {
+          "zh-CN": "约 252—334 年；上清传统另计",
+          "en": "c. 252–334; Shangqing tradition separately dated"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:early-daoist-lineage-records"
+      }
+    ],
+    "sourceIds": [
+      "source:early-daoist-lineage-records",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "contested",
+      "figureClass": "historical_person",
+      "gender": "female",
+      "canonicalNameOriginal": "魏华存",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "lu-dongbin",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "traditional_account",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "吕洞宾",
+        "subtitle": "仙传人物与全真接受",
+        "shortSummary": "吕洞宾作为传统圣贤进入仙传、内丹与全真接受网络；永乐宫表达后世记忆，不是生平到访证明。",
+        "curatorialDescription": [
+          "人物通过时间、地点、事件和关系进入同一 canonical 读模型；传统、接受和历史活动保持分层。"
+        ],
+        "researchNote": "不为多层仙传强行设置历史生卒年或现实旅行路线。",
+        "timeLabel": "唐末宋初传统；年代不确",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Lü Dongbin",
+        "subtitle": "Hagiographic figure and Quanzhen reception",
+        "shortSummary": "Lü Dongbin enters as a traditional sage within hagiographic, inner-alchemical and Quanzhen reception networks; Yongle Palace marks later memory, not verified travel.",
+        "curatorialDescription": [
+          "The figure enters one canonical read model through time, place, event and relation records, with historical activity, tradition and reception kept separate."
+        ],
+        "researchNote": "No historical birth/death years or real itinerary are fabricated from layered hagiography.",
+        "timeLabel": "late Tang–early Song tradition; dates uncertain",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "traditional_account",
+        "sourceId": "source:immortal-tradition-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "traditional_occurrence",
+        "timeType": "traditional_date",
+        "displayDate": {
+          "zh-CN": "唐末宋初传统；年代不确",
+          "en": "late Tang–early Song tradition; dates uncertain"
+        },
+        "confidence": "low",
+        "evidenceLayer": "traditional_account",
+        "sourceId": "source:immortal-tradition-records"
+      }
+    ],
+    "sourceIds": [
+      "source:immortal-tradition-records",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "traditional",
+      "figureClass": "traditional_sage",
+      "gender": "male",
+      "canonicalNameOriginal": "吕洞宾",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "zhang-sanfeng",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "traditional_account",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "张三丰",
+        "subtitle": "武当传统与内丹接受",
+        "shortSummary": "张三丰作为多时期传统人物连接武当山、内丹谱系与后世文化记忆，不压缩成单一精确生平。",
+        "curatorialDescription": [
+          "人物通过时间、地点、事件和关系进入同一 canonical 读模型；传统、接受和历史活动保持分层。"
+        ],
+        "researchNote": "不同文献把张三丰置于宋元明多种年代；本批不选择伪确定年份。",
+        "timeLabel": "宋元明之间多层传统；年代不确",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Zhang Sanfeng",
+        "subtitle": "Wudang tradition and inner-alchemical reception",
+        "shortSummary": "Zhang Sanfeng is treated as a multi-period traditional figure linking Wudang, inner-alchemical lineages and later cultural memory rather than one precise biography.",
+        "curatorialDescription": [
+          "The figure enters one canonical read model through time, place, event and relation records, with historical activity, tradition and reception kept separate."
+        ],
+        "researchNote": "Sources place Zhang Sanfeng in several Song–Yuan–Ming chronologies; this batch does not choose a falsely certain date.",
+        "timeLabel": "layered Song–Yuan–Ming traditions; dates uncertain",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "traditional_account",
+        "sourceId": "source:immortal-tradition-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "traditional_occurrence",
+        "timeType": "traditional_date",
+        "displayDate": {
+          "zh-CN": "宋元明之间多层传统；年代不确",
+          "en": "layered Song–Yuan–Ming traditions; dates uncertain"
+        },
+        "confidence": "low",
+        "evidenceLayer": "traditional_account",
+        "sourceId": "source:immortal-tradition-records"
+      }
+    ],
+    "sourceIds": [
+      "source:immortal-tradition-records",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "traditional",
+      "figureClass": "traditional_sage",
+      "gender": "male",
+      "canonicalNameOriginal": "张三丰",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "asanga",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "无著",
+        "subtitle": "瑜伽行派与唯识论述",
+        "shortSummary": "无著连接犍陀罗—北印度佛教学习、世亲思想转向和后世玄奘译学接受。",
+        "curatorialDescription": [
+          "人物通过时间、地点、事件和关系进入同一 canonical 读模型；传统、接受和历史活动保持分层。"
+        ],
+        "researchNote": "年代和活动中心使用 4 世纪学术区间，不把区域传统等同精确驻锡地。",
+        "timeLabel": "约 4 世纪",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Asanga",
+        "subtitle": "Yogacara and consciousness-only thought",
+        "shortSummary": "Asanga connects Gandharan and North Indian Buddhist learning, Vasubandhu's intellectual transition and later reception in Xuanzang's translation network.",
+        "curatorialDescription": [
+          "The figure enters one canonical read model through time, place, event and relation records, with historical activity, tradition and reception kept separate."
+        ],
+        "researchNote": "Chronology and activity centres use a fourth-century scholarly range rather than one exact residence.",
+        "timeLabel": "c. fourth century",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:asanga-britannica"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "century",
+        "startYear": 300,
+        "endYear": 399,
+        "displayDate": {
+          "zh-CN": "约 4 世纪",
+          "en": "c. fourth century"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:asanga-britannica"
+      }
+    ],
+    "sourceIds": [
+      "source:asanga-britannica",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "contested",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "无著",
+      "nameLanguageCode": "sa"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "vasubandhu",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "世亲",
+        "subtitle": "阿毗达磨、唯识与跨阶段思想",
+        "shortSummary": "世亲连接阿毗达磨论书、唯识转向、无著关系与玄奘—义净后世译学接受。",
+        "curatorialDescription": [
+          "人物通过时间、地点、事件和关系进入同一 canonical 读模型；传统、接受和历史活动保持分层。"
+        ],
+        "researchNote": "不同传记体系对年代和思想阶段排序不一，当前保留争议状态。",
+        "timeLabel": "约 4—5 世纪",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Vasubandhu",
+        "subtitle": "Abhidharma, Yogacara and intellectual transition",
+        "shortSummary": "Vasubandhu connects Abhidharma treatises, a Yogacara turn, his relationship with Asanga and later reception through Xuanzang and Yijing.",
+        "curatorialDescription": [
+          "The figure enters one canonical read model through time, place, event and relation records, with historical activity, tradition and reception kept separate."
+        ],
+        "researchNote": "Biographical traditions differ on dates and the order of intellectual phases; contested status is retained.",
+        "timeLabel": "c. fourth–fifth century",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:vasubandhu-britannica"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "century",
+        "startYear": 350,
+        "endYear": 450,
+        "displayDate": {
+          "zh-CN": "约 4—5 世纪",
+          "en": "c. fourth–fifth century"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:vasubandhu-britannica"
+      }
+    ],
+    "sourceIds": [
+      "source:vasubandhu-britannica",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "contested",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "世亲",
+      "nameLanguageCode": "sa"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "dahui-zonggao",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "大慧宗杲",
+        "subtitle": "看话禅与宋代临济接受",
+        "shortSummary": "大慧宗杲把看话禅、临济法系接受与宋代江南寺院网络连接起来。",
+        "curatorialDescription": [
+          "人物通过时间、地点、事件和关系进入同一 canonical 读模型；传统、接受和历史活动保持分层。"
+        ],
+        "researchNote": "法系关系按后世传承与制度语境表达，不自动推断每一代直接师承。",
+        "timeLabel": "1089—1163 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Dahui Zonggao",
+        "subtitle": "Kanhua Chan and Song Linji reception",
+        "shortSummary": "Dahui Zonggao connects kanhua Chan, reception of Linji lineages and Southern Song Jiangnan monastery networks.",
+        "curatorialDescription": [
+          "The figure enters one canonical read model through time, place, event and relation records, with historical activity, tradition and reception kept separate."
+        ],
+        "researchNote": "Lineage relations express later transmission and institutional context rather than assuming direct teacher links at every generation.",
+        "timeLabel": "1089–1163",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-chan-cbeta"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "exact",
+        "startYear": 1089,
+        "endYear": 1163,
+        "displayDate": {
+          "zh-CN": "1089—1163 年",
+          "en": "1089–1163"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-chan-cbeta"
+      }
+    ],
+    "sourceIds": [
+      "source:song-chan-cbeta",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "大慧宗杲",
+      "nameLanguageCode": "lzh"
+    }
+  },
+  {
+    "kind": "figure",
+    "slug": "hongzhi-zhengjue",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_documented",
+    "importance": 4,
+    "isFeatured": false,
+    "translations": {
+      "zh-CN": {
+        "title": "宏智正觉",
+        "subtitle": "天童山、默照禅与曹洞接受",
+        "shortSummary": "宏智正觉连接天童山寺院网络、默照禅语汇与曹洞传统的宋代接受。",
+        "curatorialDescription": [
+          "人物通过时间、地点、事件和关系进入同一 canonical 读模型；传统、接受和历史活动保持分层。"
+        ],
+        "researchNote": "“默照”作为思想标签保留语录与后世宗派解释语境。",
+        "timeLabel": "1091—1157 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Hongzhi Zhengjue",
+        "subtitle": "Tiantong, silent illumination and Caodong reception",
+        "shortSummary": "Hongzhi Zhengjue connects the Tiantong monastery landscape, silent-illumination vocabulary and Song reception of Caodong traditions.",
+        "curatorialDescription": [
+          "The figure enters one canonical read model through time, place, event and relation records, with historical activity, tradition and reception kept separate."
+        ],
+        "researchNote": "Silent illumination is retained as a source-contextualised term in recorded sayings and later school interpretation.",
+        "timeLabel": "1091–1157",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-chan-cbeta"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "exact",
+        "startYear": 1091,
+        "endYear": 1157,
+        "displayDate": {
+          "zh-CN": "1091—1157 年",
+          "en": "1091–1157"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-chan-cbeta"
+      }
+    ],
+    "sourceIds": [
+      "source:song-chan-cbeta",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "historicity": "documented",
+      "figureClass": "historical_person",
+      "gender": "male",
+      "canonicalNameOriginal": "宏智正觉",
+      "nameLanguageCode": "lzh"
+    }
+  }
+]

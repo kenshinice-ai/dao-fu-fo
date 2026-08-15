@@ -1,0 +1,239 @@
+[
+  {
+    "kind": "route",
+    "slug": "kumarajiva-kucha-changan-corridor",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "鸠摩罗什龟兹—姑臧—长安译经走廊",
+        "subtitle": "跨区域人物行动与知识传播走廊",
+        "shortSummary": "路线把鸠摩罗什由龟兹进入姑臧、后至长安的强制迁徙与译经知识流动放入同一走廊模型。",
+        "curatorialDescription": [
+          "路线只连接有来源支持的区域锚点，不绘制伪精确逐日线位。"
+        ],
+        "researchNote": "中间路段、停留时长、失败航行或政治条件仍需按路线版本继续拆分。",
+        "timeLabel": "约 384—401 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Kumarajiva's Kucha–Guzang–Chang'an translation corridor",
+        "subtitle": "A corridor of transregional movement and knowledge transmission",
+        "shortSummary": "The route models Kumarajiva's coerced movement from Kucha through Guzang to Chang'an alongside the transmission of translation knowledge.",
+        "curatorialDescription": [
+          "The route links sourced regional anchors without drawing a falsely precise day-by-day alignment."
+        ],
+        "researchNote": "Intermediate segments, stop durations, failed voyages and political conditions still require route-version separation.",
+        "timeLabel": "c. 384–401",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:kumarajiva-corridor-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "route_activity",
+        "timeType": "range",
+        "startYear": 384,
+        "endYear": 401,
+        "displayDate": {
+          "zh-CN": "约 384—401 年",
+          "en": "c. 384–401"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:kumarajiva-corridor-records"
+      }
+    ],
+    "sourceIds": [
+      "source:kumarajiva-corridor-records",
+      "source:kumarajiva-biography",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "routeKind": "translation",
+      "certainty": "reconstructed",
+      "waypointSlugs": [
+        "qiuci",
+        "guzang",
+        "changan"
+      ],
+      "corridorNote": {
+        "zh-CN": "区域锚点走廊，不是逐日精确路线。",
+        "en": "A regional-anchor corridor, not a precise day-by-day route."
+      },
+      "animationAllowed": false
+    }
+  },
+  {
+    "kind": "route",
+    "slug": "jianzhen-eastward-transmission-route",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "鉴真扬州—宁波—奈良东渡传播路线",
+        "subtitle": "跨区域人物行动与知识传播走廊",
+        "shortSummary": "路线把鉴真多次东渡尝试、江南港口区域与最终抵达奈良的戒律传播组织为重建走廊。",
+        "curatorialDescription": [
+          "路线只连接有来源支持的区域锚点，不绘制伪精确逐日线位。"
+        ],
+        "researchNote": "中间路段、停留时长、失败航行或政治条件仍需按路线版本继续拆分。",
+        "timeLabel": "约 742—754 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Jianzhen's Yangzhou–Ningbo–Nara eastward transmission route",
+        "subtitle": "A corridor of transregional movement and knowledge transmission",
+        "shortSummary": "The route organises Jianzhen's repeated voyage attempts, Jiangnan port regions and eventual arrival in Nara as a reconstructed vinaya-transmission corridor.",
+        "curatorialDescription": [
+          "The route links sourced regional anchors without drawing a falsely precise day-by-day alignment."
+        ],
+        "researchNote": "Intermediate segments, stop durations, failed voyages and political conditions still require route-version separation.",
+        "timeLabel": "c. 742–754",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "buddhism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:jianzhen-transmission-records"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "route_activity",
+        "timeType": "range",
+        "startYear": 742,
+        "endYear": 754,
+        "displayDate": {
+          "zh-CN": "约 742—754 年",
+          "en": "c. 742–754"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:jianzhen-transmission-records"
+      }
+    ],
+    "sourceIds": [
+      "source:jianzhen-transmission-records",
+      "source:unesco-nara",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "routeKind": "transmission",
+      "certainty": "reconstructed",
+      "waypointSlugs": [
+        "yangzhou",
+        "ningbo",
+        "nara"
+      ],
+      "corridorNote": {
+        "zh-CN": "区域锚点走廊，不是逐日精确路线。",
+        "en": "A regional-anchor corridor, not a precise day-by-day route."
+      },
+      "animationAllowed": false
+    }
+  },
+  {
+    "kind": "route",
+    "slug": "qiu-chuji-western-journey-route",
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed",
+    "primaryEvidenceLayer": "historical_inferred",
+    "importance": 5,
+    "isFeatured": true,
+    "translations": {
+      "zh-CN": {
+        "title": "丘处机宁海—燕京—撒马尔罕西行路线",
+        "subtitle": "跨区域人物行动与知识传播走廊",
+        "shortSummary": "路线以宁海、燕京区域和撒马尔罕为锚点，表达丘处机西行及政治会见语境，不补造中间逐日线位。",
+        "curatorialDescription": [
+          "路线只连接有来源支持的区域锚点，不绘制伪精确逐日线位。"
+        ],
+        "researchNote": "中间路段、停留时长、失败航行或政治条件仍需按路线版本继续拆分。",
+        "timeLabel": "约 1220—1224 年",
+        "keyFacts": []
+      },
+      "en": {
+        "title": "Qiu Chuji's Ninghai–Yanjing–Samarkand western journey",
+        "subtitle": "A corridor of transregional movement and knowledge transmission",
+        "shortSummary": "Using Ninghai, the Yanjing region and Samarkand as anchors, the route expresses Qiu Chuji's western journey and political context without inventing intermediate day-by-day alignments.",
+        "curatorialDescription": [
+          "The route links sourced regional anchors without drawing a falsely precise day-by-day alignment."
+        ],
+        "researchNote": "Intermediate segments, stop durations, failed voyages and political conditions still require route-version separation.",
+        "timeLabel": "c. 1220–1224",
+        "keyFacts": []
+      }
+    },
+    "traditions": [
+      {
+        "tradition": "daoism",
+        "role": "primary",
+        "isPrimary": true,
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:qiu-chuji-xiyouji"
+      }
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "route_activity",
+        "timeType": "range",
+        "startYear": 1220,
+        "endYear": 1224,
+        "displayDate": {
+          "zh-CN": "约 1220—1224 年",
+          "en": "c. 1220–1224"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:qiu-chuji-xiyouji"
+      }
+    ],
+    "sourceIds": [
+      "source:qiu-chuji-xiyouji",
+      "source:unesco-samarkand",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "related": [],
+    "profile": {
+      "routeKind": "official_travel",
+      "certainty": "reconstructed",
+      "waypointSlugs": [
+        "ninghai",
+        "beijing",
+        "samarkand"
+      ],
+      "corridorNote": {
+        "zh-CN": "区域锚点走廊，不是逐日精确路线。",
+        "en": "A regional-anchor corridor, not a precise day-by-day route."
+      },
+      "animationAllowed": false
+    }
+  }
+]

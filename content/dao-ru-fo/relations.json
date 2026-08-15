@@ -10292,5 +10292,3283 @@
 {"id":"relation:daoxin-influenced-hongren","source":{"kind":"figure","slug":"daoxin"},"target":{"kind":"figure","slug":"hongren"},"relationType":"influenced","label":{"zh-CN":"道信传统进入弘忍的黄梅僧团语境","en":"Daoxin's tradition enters Hongren's Huangmei community"},"summary":{"zh-CN":"新增人物之间保留关系方向、时间层和证据边界，不把思想影响自动解释为直接会面.","en":"The relation preserves direction, time layer and evidentiary limits; intellectual influence is not turned into direct meeting."},"confidence":"medium","evidenceLayer":"historical_inferred","sourceIds":["source:chan-huayan-institutional-records","source:editorial-method"],"temporalAssertions":[{"predicate":"regional_exchange","timeType":"range","startYear":601,"endYear":651,"displayDate":{"zh-CN":"601—651 年的关系语境","en":"Relation context, 601–651 CE"},"confidence":"medium","evidenceLayer":"historical_inferred","sourceId":"source:chan-huayan-institutional-records"}],"qualifiers":{},"publicationState":"preview","reviewStatus":"bilingual_reviewed"},
 {"id":"relation:shitou-influenced-dongshan","source":{"kind":"figure","slug":"shitou-xiqian"},"target":{"kind":"figure","slug":"dongshan-liangjie"},"relationType":"influenced","label":{"zh-CN":"石头希迁传统进入洞山良价的禅宗语境","en":"Shitou Xiqian's tradition enters Dongshan Liangjie's Chan context"},"summary":{"zh-CN":"新增人物之间保留关系方向、时间层和证据边界，不把思想影响自动解释为直接会面.","en":"The relation preserves direction, time layer and evidentiary limits; intellectual influence is not turned into direct meeting."},"confidence":"low","evidenceLayer":"scholarly_interpretation","sourceIds":["source:chan-huayan-institutional-records","source:editorial-method"],"temporalAssertions":[{"predicate":"institutional_and_memory_scope","timeType":"range","startYear":840,"endYear":869,"displayDate":{"zh-CN":"约 9 世纪中叶的后世承接语境","en":"Later reception context, c. 840–869 CE"},"confidence":"low","evidenceLayer":"historical_inferred","sourceId":"source:chan-huayan-institutional-records"}],"qualifiers":{},"publicationState":"preview","reviewStatus":"bilingual_reviewed"},
 {"id":"relation:zhenke-contemporary-lianchi","source":{"kind":"figure","slug":"zhenke"},"target":{"kind":"figure","slug":"lianchi-zhuhong"},"relationType":"contemporary_with","label":{"zh-CN":"真可与莲池袾宏同处晚明佛教网络","en":"Zhenke and Lianchi Zhuhong in the late Ming Buddhist network"},"summary":{"zh-CN":"新增人物之间保留关系方向、时间层和证据边界，不把思想影响自动解释为直接会面.","en":"The relation preserves direction, time layer and evidentiary limits; intellectual influence is not turned into direct meeting."},"confidence":"medium","evidenceLayer":"historical_inferred","sourceIds":["source:chan-huayan-institutional-records","source:editorial-method"],"temporalAssertions":[{"predicate":"regional_exchange","timeType":"range","startYear":1543,"endYear":1603,"displayDate":{"zh-CN":"1543—1603 年的关系语境","en":"Relation context, 1543–1603 CE"},"confidence":"medium","evidenceLayer":"historical_inferred","sourceId":"source:chan-huayan-institutional-records"}],"qualifiers":{},"publicationState":"preview","reviewStatus":"bilingual_reviewed"}
-,{"id":"relation:xu-shen-contemporary-zheng-xuan","source":{"kind":"figure","slug":"xu-shen"},"target":{"kind":"figure","slug":"zheng-xuan"},"relationType":"contemporary_with","label":{"zh-CN":"许慎与郑玄同处东汉经学与文字训诂语境","en":"Xu Shen and Zheng Xuan in the Eastern Han classical and philological context"},"summary":{"zh-CN":"两人存在时代交集与经学训诂语境关联；关系表达学术网络，不等同于已证实的直接交往。","en":"The relation reflects a shared period and philological context; it expresses a scholarly network, not proven direct contact."},"confidence":"low","evidenceLayer":"historical_inferred","sourceIds":["source:han-philology-records","source:editorial-method"],"temporalAssertions":[{"predicate":"regional_exchange","timeType":"range","startYear":127,"endYear":147,"displayDate":{"zh-CN":"127—147 年的东汉经学语境","en":"Eastern Han classical context, 127–147 CE"},"confidence":"low","evidenceLayer":"historical_inferred","sourceId":"source:han-philology-records"}],"qualifiers":{"historicity":"inferred","note":{"zh-CN":"时代交集与学术语境关系，不表示直接会面。","en":"A shared period and scholarly context, not direct contact."}},"publicationState":"preview","reviewStatus":"bilingual_reviewed"}
+,{"id":"relation:xu-shen-contemporary-zheng-xuan","source":{"kind":"figure","slug":"xu-shen"},"target":{"kind":"figure","slug":"zheng-xuan"},"relationType":"contemporary_with","label":{"zh-CN":"许慎与郑玄同处东汉经学与文字训诂语境","en":"Xu Shen and Zheng Xuan in the Eastern Han classical and philological context"},"summary":{"zh-CN":"两人存在时代交集与经学训诂语境关联；关系表达学术网络，不等同于已证实的直接交往。","en":"The relation reflects a shared period and philological context; it expresses a scholarly network, not proven direct contact."},"confidence":"low","evidenceLayer":"historical_inferred","sourceIds":["source:han-philology-records","source:editorial-method"],"temporalAssertions":[{"predicate":"regional_exchange","timeType":"range","startYear":127,"endYear":147,"displayDate":{"zh-CN":"127—147 年的东汉经学语境","en":"Eastern Han classical context, 127–147 CE"},"confidence":"low","evidenceLayer":"historical_inferred","sourceId":"source:han-philology-records"}],"qualifiers":{"historicity":"inferred","note":{"zh-CN":"时代交集与学术语境关系，不表示直接会面。","en":"A shared period and scholarly context, not direct contact."}},"publicationState":"preview","reviewStatus":"bilingual_reviewed"},
+  {
+    "id": "relation:yan-hui-participated-yan-hui-qufu-disciple-circle",
+    "source": {
+      "kind": "figure",
+      "slug": "yan-hui"
+    },
+    "target": {
+      "kind": "event",
+      "slug": "yan-hui-qufu-disciple-circle"
+    },
+    "relationType": "participated_in",
+    "label": {
+      "zh-CN": "颜回参与颜回与曲阜孔门弟子语境",
+      "en": "Yan Hui participates in Yan Hui in the Qufu disciple circle"
+    },
+    "summary": {
+      "zh-CN": "人物与事件共享同一时间和证据层；传统事件表示叙事参与，不自动等同现实发生。",
+      "en": "The figure and event share one time and evidence layer; participation in a traditional event does not automatically mean a documented occurrence."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:confucian-disciples-classics",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": -500,
+        "endYear": -481,
+        "displayDate": {
+          "zh-CN": "约公元前 500—481 年",
+          "en": "c. 500–481 BCE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:confucian-disciples-classics"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "inferred"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:yan-hui-qufu-disciple-circle-occurred-qufu",
+    "source": {
+      "kind": "event",
+      "slug": "yan-hui-qufu-disciple-circle"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "qufu"
+    },
+    "relationType": "occurred_at",
+    "label": {
+      "zh-CN": "颜回与曲阜孔门弟子语境的地点锚点",
+      "en": "Place anchor for Yan Hui in the Qufu disciple circle"
+    },
+    "summary": {
+      "zh-CN": "地点只表达城市、山岳、区域或后世记忆尺度，不补造具体建筑和逐日行迹。",
+      "en": "The place expresses a city, mountain, region or later-memory scale without inventing a building or day-by-day itinerary."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:confucian-disciples-classics",
+      "source:editorial-method",
+      "source:third-batch-geography"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": -500,
+        "endYear": -481,
+        "displayDate": {
+          "zh-CN": "约公元前 500—481 年",
+          "en": "c. 500–481 BCE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:confucian-disciples-classics"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "activity_site",
+      "historicity": "inferred"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:yan-hui-active-in-qufu",
+    "source": {
+      "kind": "figure",
+      "slug": "yan-hui"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "qufu"
+    },
+    "relationType": "active_in",
+    "label": {
+      "zh-CN": "颜回与此地活动语境相连",
+      "en": "Yan Hui is linked to activity in this place"
+    },
+    "summary": {
+      "zh-CN": "该地点使用城市或区域尺度，具体活动范围仍按来源等级表达。",
+      "en": "The place uses a city or regional scale, with specific activity limits retained in the evidence layer."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:confucian-disciples-classics",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "circa",
+        "startYear": -521,
+        "endYear": -481,
+        "displayDate": {
+          "zh-CN": "约前 521—前 481 年",
+          "en": "c. 521–481 BCE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:confucian-disciples-classics"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "activity_site",
+      "historicity": "inferred"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:zengzi-participated-zengzi-classical-transmission",
+    "source": {
+      "kind": "figure",
+      "slug": "zengzi"
+    },
+    "target": {
+      "kind": "event",
+      "slug": "zengzi-classical-transmission"
+    },
+    "relationType": "participated_in",
+    "label": {
+      "zh-CN": "曾子参与曾子与孔门经典传述",
+      "en": "Zengzi participates in Zengzi and Confucian textual transmission"
+    },
+    "summary": {
+      "zh-CN": "人物与事件共享同一时间和证据层；传统事件表示叙事参与，不自动等同现实发生。",
+      "en": "The figure and event share one time and evidence layer; participation in a traditional event does not automatically mean a documented occurrence."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:confucian-disciples-classics",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": -490,
+        "endYear": -435,
+        "displayDate": {
+          "zh-CN": "约公元前 490—435 年",
+          "en": "c. 490–435 BCE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:confucian-disciples-classics"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "inferred"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:zengzi-classical-transmission-occurred-qufu",
+    "source": {
+      "kind": "event",
+      "slug": "zengzi-classical-transmission"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "qufu"
+    },
+    "relationType": "occurred_at",
+    "label": {
+      "zh-CN": "曾子与孔门经典传述的地点锚点",
+      "en": "Place anchor for Zengzi and Confucian textual transmission"
+    },
+    "summary": {
+      "zh-CN": "地点只表达城市、山岳、区域或后世记忆尺度，不补造具体建筑和逐日行迹。",
+      "en": "The place expresses a city, mountain, region or later-memory scale without inventing a building or day-by-day itinerary."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:confucian-disciples-classics",
+      "source:editorial-method",
+      "source:third-batch-geography"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": -490,
+        "endYear": -435,
+        "displayDate": {
+          "zh-CN": "约公元前 490—435 年",
+          "en": "c. 490–435 BCE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:confucian-disciples-classics"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "activity_site",
+      "historicity": "inferred"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:zengzi-active-in-qufu",
+    "source": {
+      "kind": "figure",
+      "slug": "zengzi"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "qufu"
+    },
+    "relationType": "active_in",
+    "label": {
+      "zh-CN": "曾子与此地活动语境相连",
+      "en": "Zengzi is linked to activity in this place"
+    },
+    "summary": {
+      "zh-CN": "该地点使用城市或区域尺度，具体活动范围仍按来源等级表达。",
+      "en": "The place uses a city or regional scale, with specific activity limits retained in the evidence layer."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:confucian-disciples-classics",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "circa",
+        "startYear": -505,
+        "endYear": -435,
+        "displayDate": {
+          "zh-CN": "约前 505—前 435 年",
+          "en": "c. 505–435 BCE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:confucian-disciples-classics"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "activity_site",
+      "historicity": "inferred"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:zisi-participated-zisi-zhongyong-transmission",
+    "source": {
+      "kind": "figure",
+      "slug": "zisi"
+    },
+    "target": {
+      "kind": "event",
+      "slug": "zisi-zhongyong-transmission"
+    },
+    "relationType": "participated_in",
+    "label": {
+      "zh-CN": "子思参与子思与《中庸》传承语境",
+      "en": "Zisi participates in Zisi and the Zhongyong transmission context"
+    },
+    "summary": {
+      "zh-CN": "人物与事件共享同一时间和证据层；传统事件表示叙事参与，不自动等同现实发生。",
+      "en": "The figure and event share one time and evidence layer; participation in a traditional event does not automatically mean a documented occurrence."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:confucian-disciples-classics",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "composition_context",
+        "timeType": "range",
+        "startYear": -450,
+        "endYear": -402,
+        "displayDate": {
+          "zh-CN": "约公元前 450—402 年",
+          "en": "c. 450–402 BCE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:confucian-disciples-classics"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "contested"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:zisi-zhongyong-transmission-occurred-qufu",
+    "source": {
+      "kind": "event",
+      "slug": "zisi-zhongyong-transmission"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "qufu"
+    },
+    "relationType": "occurred_at",
+    "label": {
+      "zh-CN": "子思与《中庸》传承语境的地点锚点",
+      "en": "Place anchor for Zisi and the Zhongyong transmission context"
+    },
+    "summary": {
+      "zh-CN": "地点只表达城市、山岳、区域或后世记忆尺度，不补造具体建筑和逐日行迹。",
+      "en": "The place expresses a city, mountain, region or later-memory scale without inventing a building or day-by-day itinerary."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:confucian-disciples-classics",
+      "source:editorial-method",
+      "source:third-batch-geography"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "composition_context",
+        "timeType": "range",
+        "startYear": -450,
+        "endYear": -402,
+        "displayDate": {
+          "zh-CN": "约公元前 450—402 年",
+          "en": "c. 450–402 BCE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:confucian-disciples-classics"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "activity_site",
+      "historicity": "contested"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:zisi-remembered-in-qufu",
+    "source": {
+      "kind": "figure",
+      "slug": "zisi"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "qufu"
+    },
+    "relationType": "remembered_in",
+    "label": {
+      "zh-CN": "子思在此后世记忆中被接受",
+      "en": "Zisi is remembered in this later landscape"
+    },
+    "summary": {
+      "zh-CN": "该地点属于传统或后世接受层，不反推人物历史到访。",
+      "en": "This place belongs to traditional or later reception and does not prove a historical visit."
+    },
+    "confidence": "low",
+    "evidenceLayer": "traditional_account",
+    "sourceIds": [
+      "source:confucian-disciples-classics",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "circa",
+        "startYear": -483,
+        "endYear": -402,
+        "displayDate": {
+          "zh-CN": "约前 483—前 402 年",
+          "en": "c. 483–402 BCE"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:confucian-disciples-classics"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "memory_site",
+      "historicity": "contested"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:wang-fuzhi-participated-wang-fuzhi-chuanshan-writing",
+    "source": {
+      "kind": "figure",
+      "slug": "wang-fuzhi"
+    },
+    "target": {
+      "kind": "event",
+      "slug": "wang-fuzhi-chuanshan-writing"
+    },
+    "relationType": "participated_in",
+    "label": {
+      "zh-CN": "王夫之参与王夫之船山著述与明清易代反思",
+      "en": "Wang Fuzhi participates in Wang Fuzhi's Chuanshan writings and reflection on dynastic transition"
+    },
+    "summary": {
+      "zh-CN": "人物与事件共享同一时间和证据层；传统事件表示叙事参与，不自动等同现实发生。",
+      "en": "The figure and event share one time and evidence layer; participation in a traditional event does not automatically mean a documented occurrence."
+    },
+    "confidence": "high",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:wang-fuzhi-qing-philosophy",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "composition",
+        "timeType": "range",
+        "startYear": 1644,
+        "endYear": 1692,
+        "displayDate": {
+          "zh-CN": "1644—1692 年",
+          "en": "1644–1692"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:wang-fuzhi-qing-philosophy"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "documented"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:wang-fuzhi-chuanshan-writing-occurred-hengyang",
+    "source": {
+      "kind": "event",
+      "slug": "wang-fuzhi-chuanshan-writing"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "hengyang"
+    },
+    "relationType": "occurred_at",
+    "label": {
+      "zh-CN": "王夫之船山著述与明清易代反思的地点锚点",
+      "en": "Place anchor for Wang Fuzhi's Chuanshan writings and reflection on dynastic transition"
+    },
+    "summary": {
+      "zh-CN": "地点只表达城市、山岳、区域或后世记忆尺度，不补造具体建筑和逐日行迹。",
+      "en": "The place expresses a city, mountain, region or later-memory scale without inventing a building or day-by-day itinerary."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:wang-fuzhi-qing-philosophy",
+      "source:editorial-method",
+      "source:third-batch-geography"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "composition",
+        "timeType": "range",
+        "startYear": 1644,
+        "endYear": 1692,
+        "displayDate": {
+          "zh-CN": "1644—1692 年",
+          "en": "1644–1692"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:wang-fuzhi-qing-philosophy"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "activity_site",
+      "historicity": "documented"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:wang-fuzhi-active-in-hengyang",
+    "source": {
+      "kind": "figure",
+      "slug": "wang-fuzhi"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "hengyang"
+    },
+    "relationType": "active_in",
+    "label": {
+      "zh-CN": "王夫之与此地活动语境相连",
+      "en": "Wang Fuzhi is linked to activity in this place"
+    },
+    "summary": {
+      "zh-CN": "该地点使用城市或区域尺度，具体活动范围仍按来源等级表达。",
+      "en": "The place uses a city or regional scale, with specific activity limits retained in the evidence layer."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:wang-fuzhi-qing-philosophy",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "exact",
+        "startYear": 1619,
+        "endYear": 1692,
+        "displayDate": {
+          "zh-CN": "1619—1692 年",
+          "en": "1619–1692"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:wang-fuzhi-qing-philosophy"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "activity_site",
+      "historicity": "documented"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:ge-xuan-participated-ge-xuan-jiangnan-daoist-memory",
+    "source": {
+      "kind": "figure",
+      "slug": "ge-xuan"
+    },
+    "target": {
+      "kind": "event",
+      "slug": "ge-xuan-jiangnan-daoist-memory"
+    },
+    "relationType": "participated_in",
+    "label": {
+      "zh-CN": "葛玄参与葛玄与江南道教传承记忆",
+      "en": "Ge Xuan participates in Ge Xuan and Jiangnan Daoist transmission memory"
+    },
+    "summary": {
+      "zh-CN": "人物与事件共享同一时间和证据层；传统事件表示叙事参与，不自动等同现实发生。",
+      "en": "The figure and event share one time and evidence layer; participation in a traditional event does not automatically mean a documented occurrence."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:early-daoist-lineage-records",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 190,
+        "endYear": 244,
+        "displayDate": {
+          "zh-CN": "190—244 年",
+          "en": "190–244"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:early-daoist-lineage-records"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "contested"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:ge-xuan-jiangnan-daoist-memory-occurred-jurong",
+    "source": {
+      "kind": "event",
+      "slug": "ge-xuan-jiangnan-daoist-memory"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "jurong"
+    },
+    "relationType": "occurred_at",
+    "label": {
+      "zh-CN": "葛玄与江南道教传承记忆的地点锚点",
+      "en": "Place anchor for Ge Xuan and Jiangnan Daoist transmission memory"
+    },
+    "summary": {
+      "zh-CN": "地点只表达城市、山岳、区域或后世记忆尺度，不补造具体建筑和逐日行迹。",
+      "en": "The place expresses a city, mountain, region or later-memory scale without inventing a building or day-by-day itinerary."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:early-daoist-lineage-records",
+      "source:editorial-method",
+      "source:third-batch-geography"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "activity",
+        "timeType": "range",
+        "startYear": 190,
+        "endYear": 244,
+        "displayDate": {
+          "zh-CN": "190—244 年",
+          "en": "190–244"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:early-daoist-lineage-records"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "activity_site",
+      "historicity": "contested"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:ge-xuan-active-in-jurong",
+    "source": {
+      "kind": "figure",
+      "slug": "ge-xuan"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "jurong"
+    },
+    "relationType": "active_in",
+    "label": {
+      "zh-CN": "葛玄与此地活动语境相连",
+      "en": "Ge Xuan is linked to activity in this place"
+    },
+    "summary": {
+      "zh-CN": "该地点使用城市或区域尺度，具体活动范围仍按来源等级表达。",
+      "en": "The place uses a city or regional scale, with specific activity limits retained in the evidence layer."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:early-daoist-lineage-records",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "circa",
+        "startYear": 164,
+        "endYear": 244,
+        "displayDate": {
+          "zh-CN": "传统约 164—244 年",
+          "en": "traditionally c. 164–244"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:early-daoist-lineage-records"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "activity_site",
+      "historicity": "contested"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:wei-huacun-participated-wei-huacun-shangqing-transmission",
+    "source": {
+      "kind": "figure",
+      "slug": "wei-huacun"
+    },
+    "target": {
+      "kind": "event",
+      "slug": "wei-huacun-shangqing-transmission"
+    },
+    "relationType": "participated_in",
+    "label": {
+      "zh-CN": "魏华存参与魏华存与上清降授传统",
+      "en": "Wei Huacun participates in Wei Huacun and Shangqing revelation traditions"
+    },
+    "summary": {
+      "zh-CN": "人物与事件共享同一时间和证据层；传统事件表示叙事参与，不自动等同现实发生。",
+      "en": "The figure and event share one time and evidence layer; participation in a traditional event does not automatically mean a documented occurrence."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "traditional_account",
+    "sourceIds": [
+      "source:early-daoist-lineage-records",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "traditional_occurrence",
+        "timeType": "traditional_date",
+        "displayDate": {
+          "zh-CN": "约 252—334 年；上清传统另计",
+          "en": "c. 252–334; Shangqing tradition separately dated"
+        },
+        "confidence": "low",
+        "evidenceLayer": "traditional_account",
+        "sourceId": "source:early-daoist-lineage-records"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "traditional"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:wei-huacun-shangqing-transmission-occurred-mount-mao",
+    "source": {
+      "kind": "event",
+      "slug": "wei-huacun-shangqing-transmission"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "mount-mao"
+    },
+    "relationType": "occurred_at",
+    "label": {
+      "zh-CN": "魏华存与上清降授传统的地点锚点",
+      "en": "Place anchor for Wei Huacun and Shangqing revelation traditions"
+    },
+    "summary": {
+      "zh-CN": "地点只表达城市、山岳、区域或后世记忆尺度，不补造具体建筑和逐日行迹。",
+      "en": "The place expresses a city, mountain, region or later-memory scale without inventing a building or day-by-day itinerary."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "traditional_account",
+    "sourceIds": [
+      "source:early-daoist-lineage-records",
+      "source:editorial-method",
+      "source:third-batch-geography"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "traditional_occurrence",
+        "timeType": "traditional_date",
+        "displayDate": {
+          "zh-CN": "约 252—334 年；上清传统另计",
+          "en": "c. 252–334; Shangqing tradition separately dated"
+        },
+        "confidence": "low",
+        "evidenceLayer": "traditional_account",
+        "sourceId": "source:early-daoist-lineage-records"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "memory_site",
+      "historicity": "traditional"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:wei-huacun-remembered-in-mount-mao",
+    "source": {
+      "kind": "figure",
+      "slug": "wei-huacun"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "mount-mao"
+    },
+    "relationType": "remembered_in",
+    "label": {
+      "zh-CN": "魏华存在此后世记忆中被接受",
+      "en": "Wei Huacun is remembered in this later landscape"
+    },
+    "summary": {
+      "zh-CN": "该地点属于传统或后世接受层，不反推人物历史到访。",
+      "en": "This place belongs to traditional or later reception and does not prove a historical visit."
+    },
+    "confidence": "low",
+    "evidenceLayer": "traditional_account",
+    "sourceIds": [
+      "source:early-daoist-lineage-records",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "circa",
+        "startYear": 252,
+        "endYear": 334,
+        "displayDate": {
+          "zh-CN": "约 252—334 年；上清传统另计",
+          "en": "c. 252–334; Shangqing tradition separately dated"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:early-daoist-lineage-records"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "memory_site",
+      "historicity": "contested"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:lu-dongbin-participated-lu-dongbin-yongle-quanzhen-reception",
+    "source": {
+      "kind": "figure",
+      "slug": "lu-dongbin"
+    },
+    "target": {
+      "kind": "event",
+      "slug": "lu-dongbin-yongle-quanzhen-reception"
+    },
+    "relationType": "participated_in",
+    "label": {
+      "zh-CN": "吕洞宾参与吕洞宾仙传与永乐宫—全真接受",
+      "en": "Lü Dongbin participates in Lü Dongbin hagiography and Yongle–Quanzhen reception"
+    },
+    "summary": {
+      "zh-CN": "人物与事件共享同一时间和证据层；传统事件表示叙事参与，不自动等同现实发生。",
+      "en": "The figure and event share one time and evidence layer; participation in a traditional event does not automatically mean a documented occurrence."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "traditional_account",
+    "sourceIds": [
+      "source:immortal-tradition-records",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "traditional_occurrence",
+        "timeType": "traditional_date",
+        "displayDate": {
+          "zh-CN": "唐末宋初传统；年代不确",
+          "en": "late Tang–early Song tradition; dates uncertain"
+        },
+        "confidence": "low",
+        "evidenceLayer": "traditional_account",
+        "sourceId": "source:immortal-tradition-records"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "traditional"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:lu-dongbin-yongle-quanzhen-reception-occurred-ruicheng-yongle",
+    "source": {
+      "kind": "event",
+      "slug": "lu-dongbin-yongle-quanzhen-reception"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "ruicheng-yongle"
+    },
+    "relationType": "occurred_at",
+    "label": {
+      "zh-CN": "吕洞宾仙传与永乐宫—全真接受的地点锚点",
+      "en": "Place anchor for Lü Dongbin hagiography and Yongle–Quanzhen reception"
+    },
+    "summary": {
+      "zh-CN": "地点只表达城市、山岳、区域或后世记忆尺度，不补造具体建筑和逐日行迹。",
+      "en": "The place expresses a city, mountain, region or later-memory scale without inventing a building or day-by-day itinerary."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "traditional_account",
+    "sourceIds": [
+      "source:immortal-tradition-records",
+      "source:editorial-method",
+      "source:third-batch-geography"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "traditional_occurrence",
+        "timeType": "traditional_date",
+        "displayDate": {
+          "zh-CN": "唐末宋初传统；年代不确",
+          "en": "late Tang–early Song tradition; dates uncertain"
+        },
+        "confidence": "low",
+        "evidenceLayer": "traditional_account",
+        "sourceId": "source:immortal-tradition-records"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "memory_site",
+      "historicity": "traditional"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:lu-dongbin-remembered-in-ruicheng-yongle",
+    "source": {
+      "kind": "figure",
+      "slug": "lu-dongbin"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "ruicheng-yongle"
+    },
+    "relationType": "remembered_in",
+    "label": {
+      "zh-CN": "吕洞宾在此后世记忆中被接受",
+      "en": "Lü Dongbin is remembered in this later landscape"
+    },
+    "summary": {
+      "zh-CN": "该地点属于传统或后世接受层，不反推人物历史到访。",
+      "en": "This place belongs to traditional or later reception and does not prove a historical visit."
+    },
+    "confidence": "low",
+    "evidenceLayer": "traditional_account",
+    "sourceIds": [
+      "source:immortal-tradition-records",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "traditional_occurrence",
+        "timeType": "traditional_date",
+        "displayDate": {
+          "zh-CN": "唐末宋初传统；年代不确",
+          "en": "late Tang–early Song tradition; dates uncertain"
+        },
+        "confidence": "low",
+        "evidenceLayer": "traditional_account",
+        "sourceId": "source:immortal-tradition-records"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "memory_site",
+      "historicity": "traditional"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:zhang-sanfeng-participated-zhang-sanfeng-wudang-tradition",
+    "source": {
+      "kind": "figure",
+      "slug": "zhang-sanfeng"
+    },
+    "target": {
+      "kind": "event",
+      "slug": "zhang-sanfeng-wudang-tradition"
+    },
+    "relationType": "participated_in",
+    "label": {
+      "zh-CN": "张三丰参与张三丰与武当山传统",
+      "en": "Zhang Sanfeng participates in Zhang Sanfeng and the Wudang tradition"
+    },
+    "summary": {
+      "zh-CN": "人物与事件共享同一时间和证据层；传统事件表示叙事参与，不自动等同现实发生。",
+      "en": "The figure and event share one time and evidence layer; participation in a traditional event does not automatically mean a documented occurrence."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "traditional_account",
+    "sourceIds": [
+      "source:immortal-tradition-records",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "traditional_occurrence",
+        "timeType": "traditional_date",
+        "displayDate": {
+          "zh-CN": "宋元明之间多层传统；年代不确",
+          "en": "layered Song–Yuan–Ming traditions; dates uncertain"
+        },
+        "confidence": "low",
+        "evidenceLayer": "traditional_account",
+        "sourceId": "source:immortal-tradition-records"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "traditional"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:zhang-sanfeng-wudang-tradition-occurred-wudang-mountains",
+    "source": {
+      "kind": "event",
+      "slug": "zhang-sanfeng-wudang-tradition"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "wudang-mountains"
+    },
+    "relationType": "occurred_at",
+    "label": {
+      "zh-CN": "张三丰与武当山传统的地点锚点",
+      "en": "Place anchor for Zhang Sanfeng and the Wudang tradition"
+    },
+    "summary": {
+      "zh-CN": "地点只表达城市、山岳、区域或后世记忆尺度，不补造具体建筑和逐日行迹。",
+      "en": "The place expresses a city, mountain, region or later-memory scale without inventing a building or day-by-day itinerary."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "traditional_account",
+    "sourceIds": [
+      "source:immortal-tradition-records",
+      "source:editorial-method",
+      "source:unesco-wudang"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "traditional_occurrence",
+        "timeType": "traditional_date",
+        "displayDate": {
+          "zh-CN": "宋元明之间多层传统；年代不确",
+          "en": "layered Song–Yuan–Ming traditions; dates uncertain"
+        },
+        "confidence": "low",
+        "evidenceLayer": "traditional_account",
+        "sourceId": "source:immortal-tradition-records"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "memory_site",
+      "historicity": "traditional"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:zhang-sanfeng-remembered-in-wudang-mountains",
+    "source": {
+      "kind": "figure",
+      "slug": "zhang-sanfeng"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "wudang-mountains"
+    },
+    "relationType": "remembered_in",
+    "label": {
+      "zh-CN": "张三丰在此后世记忆中被接受",
+      "en": "Zhang Sanfeng is remembered in this later landscape"
+    },
+    "summary": {
+      "zh-CN": "该地点属于传统或后世接受层，不反推人物历史到访。",
+      "en": "This place belongs to traditional or later reception and does not prove a historical visit."
+    },
+    "confidence": "low",
+    "evidenceLayer": "traditional_account",
+    "sourceIds": [
+      "source:immortal-tradition-records",
+      "source:unesco-wudang",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "traditional_occurrence",
+        "timeType": "traditional_date",
+        "displayDate": {
+          "zh-CN": "宋元明之间多层传统；年代不确",
+          "en": "layered Song–Yuan–Ming traditions; dates uncertain"
+        },
+        "confidence": "low",
+        "evidenceLayer": "traditional_account",
+        "sourceId": "source:immortal-tradition-records"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "memory_site",
+      "historicity": "traditional"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:asanga-participated-asanga-yogacara-formation",
+    "source": {
+      "kind": "figure",
+      "slug": "asanga"
+    },
+    "target": {
+      "kind": "event",
+      "slug": "asanga-yogacara-formation"
+    },
+    "relationType": "participated_in",
+    "label": {
+      "zh-CN": "无著参与无著与瑜伽行派形成语境",
+      "en": "Asanga participates in Asanga and the formation context of Yogacara"
+    },
+    "summary": {
+      "zh-CN": "人物与事件共享同一时间和证据层；传统事件表示叙事参与，不自动等同现实发生。",
+      "en": "The figure and event share one time and evidence layer; participation in a traditional event does not automatically mean a documented occurrence."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:asanga-britannica",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "composition_context",
+        "timeType": "range",
+        "startYear": 350,
+        "endYear": 399,
+        "displayDate": {
+          "zh-CN": "350—399 年",
+          "en": "350–399"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:asanga-britannica"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "inferred"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:asanga-yogacara-formation-occurred-gandhara-peshawar",
+    "source": {
+      "kind": "event",
+      "slug": "asanga-yogacara-formation"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "gandhara-peshawar"
+    },
+    "relationType": "occurred_at",
+    "label": {
+      "zh-CN": "无著与瑜伽行派形成语境的地点锚点",
+      "en": "Place anchor for Asanga and the formation context of Yogacara"
+    },
+    "summary": {
+      "zh-CN": "地点只表达城市、山岳、区域或后世记忆尺度，不补造具体建筑和逐日行迹。",
+      "en": "The place expresses a city, mountain, region or later-memory scale without inventing a building or day-by-day itinerary."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:asanga-britannica",
+      "source:editorial-method",
+      "source:third-batch-geography"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "composition_context",
+        "timeType": "range",
+        "startYear": 350,
+        "endYear": 399,
+        "displayDate": {
+          "zh-CN": "350—399 年",
+          "en": "350–399"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:asanga-britannica"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "activity_site",
+      "historicity": "inferred"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:asanga-active-in-gandhara-peshawar",
+    "source": {
+      "kind": "figure",
+      "slug": "asanga"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "gandhara-peshawar"
+    },
+    "relationType": "active_in",
+    "label": {
+      "zh-CN": "无著与此地活动语境相连",
+      "en": "Asanga is linked to activity in this place"
+    },
+    "summary": {
+      "zh-CN": "该地点使用城市或区域尺度，具体活动范围仍按来源等级表达。",
+      "en": "The place uses a city or regional scale, with specific activity limits retained in the evidence layer."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:asanga-britannica",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "century",
+        "startYear": 300,
+        "endYear": 399,
+        "displayDate": {
+          "zh-CN": "约 4 世纪",
+          "en": "c. fourth century"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:asanga-britannica"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "activity_site",
+      "historicity": "contested"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:vasubandhu-participated-vasubandhu-abhidharma-yogacara",
+    "source": {
+      "kind": "figure",
+      "slug": "vasubandhu"
+    },
+    "target": {
+      "kind": "event",
+      "slug": "vasubandhu-abhidharma-yogacara"
+    },
+    "relationType": "participated_in",
+    "label": {
+      "zh-CN": "世亲参与世亲的阿毗达磨—唯识思想阶段",
+      "en": "Vasubandhu participates in Vasubandhu's Abhidharma–Yogacara intellectual phases"
+    },
+    "summary": {
+      "zh-CN": "人物与事件共享同一时间和证据层；传统事件表示叙事参与，不自动等同现实发生。",
+      "en": "The figure and event share one time and evidence layer; participation in a traditional event does not automatically mean a documented occurrence."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:vasubandhu-britannica",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "composition_context",
+        "timeType": "range",
+        "startYear": 380,
+        "endYear": 430,
+        "displayDate": {
+          "zh-CN": "380—430 年",
+          "en": "380–430"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:vasubandhu-britannica"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "contested"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:vasubandhu-abhidharma-yogacara-occurred-ayodhya",
+    "source": {
+      "kind": "event",
+      "slug": "vasubandhu-abhidharma-yogacara"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "ayodhya"
+    },
+    "relationType": "occurred_at",
+    "label": {
+      "zh-CN": "世亲的阿毗达磨—唯识思想阶段的地点锚点",
+      "en": "Place anchor for Vasubandhu's Abhidharma–Yogacara intellectual phases"
+    },
+    "summary": {
+      "zh-CN": "地点只表达城市、山岳、区域或后世记忆尺度，不补造具体建筑和逐日行迹。",
+      "en": "The place expresses a city, mountain, region or later-memory scale without inventing a building or day-by-day itinerary."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:vasubandhu-britannica",
+      "source:editorial-method",
+      "source:third-batch-geography"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "composition_context",
+        "timeType": "range",
+        "startYear": 380,
+        "endYear": 430,
+        "displayDate": {
+          "zh-CN": "380—430 年",
+          "en": "380–430"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:vasubandhu-britannica"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "activity_site",
+      "historicity": "contested"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:vasubandhu-active-in-ayodhya",
+    "source": {
+      "kind": "figure",
+      "slug": "vasubandhu"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "ayodhya"
+    },
+    "relationType": "active_in",
+    "label": {
+      "zh-CN": "世亲与此地活动语境相连",
+      "en": "Vasubandhu is linked to activity in this place"
+    },
+    "summary": {
+      "zh-CN": "该地点使用城市或区域尺度，具体活动范围仍按来源等级表达。",
+      "en": "The place uses a city or regional scale, with specific activity limits retained in the evidence layer."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:vasubandhu-britannica",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "century",
+        "startYear": 350,
+        "endYear": 450,
+        "displayDate": {
+          "zh-CN": "约 4—5 世纪",
+          "en": "c. fourth–fifth century"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:vasubandhu-britannica"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "activity_site",
+      "historicity": "contested"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:dahui-zonggao-participated-dahui-kanhua-chan",
+    "source": {
+      "kind": "figure",
+      "slug": "dahui-zonggao"
+    },
+    "target": {
+      "kind": "event",
+      "slug": "dahui-kanhua-chan"
+    },
+    "relationType": "participated_in",
+    "label": {
+      "zh-CN": "大慧宗杲参与大慧宗杲与看话禅传播",
+      "en": "Dahui Zonggao participates in Dahui Zonggao and the transmission of kanhua Chan"
+    },
+    "summary": {
+      "zh-CN": "人物与事件共享同一时间和证据层；传统事件表示叙事参与，不自动等同现实发生。",
+      "en": "The figure and event share one time and evidence layer; participation in a traditional event does not automatically mean a documented occurrence."
+    },
+    "confidence": "high",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:song-chan-cbeta",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_activity",
+        "timeType": "range",
+        "startYear": 1130,
+        "endYear": 1163,
+        "displayDate": {
+          "zh-CN": "1130—1163 年",
+          "en": "1130–1163"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-chan-cbeta"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "documented"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:dahui-kanhua-chan-occurred-ningbo",
+    "source": {
+      "kind": "event",
+      "slug": "dahui-kanhua-chan"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "ningbo"
+    },
+    "relationType": "occurred_at",
+    "label": {
+      "zh-CN": "大慧宗杲与看话禅传播的地点锚点",
+      "en": "Place anchor for Dahui Zonggao and the transmission of kanhua Chan"
+    },
+    "summary": {
+      "zh-CN": "地点只表达城市、山岳、区域或后世记忆尺度，不补造具体建筑和逐日行迹。",
+      "en": "The place expresses a city, mountain, region or later-memory scale without inventing a building or day-by-day itinerary."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:song-chan-cbeta",
+      "source:editorial-method",
+      "source:third-batch-geography"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_activity",
+        "timeType": "range",
+        "startYear": 1130,
+        "endYear": 1163,
+        "displayDate": {
+          "zh-CN": "1130—1163 年",
+          "en": "1130–1163"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-chan-cbeta"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "activity_site",
+      "historicity": "documented"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:dahui-zonggao-active-in-ningbo",
+    "source": {
+      "kind": "figure",
+      "slug": "dahui-zonggao"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "ningbo"
+    },
+    "relationType": "active_in",
+    "label": {
+      "zh-CN": "大慧宗杲与此地活动语境相连",
+      "en": "Dahui Zonggao is linked to activity in this place"
+    },
+    "summary": {
+      "zh-CN": "该地点使用城市或区域尺度，具体活动范围仍按来源等级表达。",
+      "en": "The place uses a city or regional scale, with specific activity limits retained in the evidence layer."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:song-chan-cbeta",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "exact",
+        "startYear": 1089,
+        "endYear": 1163,
+        "displayDate": {
+          "zh-CN": "1089—1163 年",
+          "en": "1089–1163"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-chan-cbeta"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "activity_site",
+      "historicity": "documented"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:hongzhi-zhengjue-participated-hongzhi-silent-illumination",
+    "source": {
+      "kind": "figure",
+      "slug": "hongzhi-zhengjue"
+    },
+    "target": {
+      "kind": "event",
+      "slug": "hongzhi-silent-illumination"
+    },
+    "relationType": "participated_in",
+    "label": {
+      "zh-CN": "宏智正觉参与宏智正觉、天童山与默照禅",
+      "en": "Hongzhi Zhengjue participates in Hongzhi Zhengjue, Tiantong and silent illumination"
+    },
+    "summary": {
+      "zh-CN": "人物与事件共享同一时间和证据层；传统事件表示叙事参与，不自动等同现实发生。",
+      "en": "The figure and event share one time and evidence layer; participation in a traditional event does not automatically mean a documented occurrence."
+    },
+    "confidence": "high",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:song-chan-cbeta",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_activity",
+        "timeType": "range",
+        "startYear": 1129,
+        "endYear": 1157,
+        "displayDate": {
+          "zh-CN": "1129—1157 年",
+          "en": "1129–1157"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-chan-cbeta"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "documented"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:hongzhi-silent-illumination-occurred-tiantong-mountain",
+    "source": {
+      "kind": "event",
+      "slug": "hongzhi-silent-illumination"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "tiantong-mountain"
+    },
+    "relationType": "occurred_at",
+    "label": {
+      "zh-CN": "宏智正觉、天童山与默照禅的地点锚点",
+      "en": "Place anchor for Hongzhi Zhengjue, Tiantong and silent illumination"
+    },
+    "summary": {
+      "zh-CN": "地点只表达城市、山岳、区域或后世记忆尺度，不补造具体建筑和逐日行迹。",
+      "en": "The place expresses a city, mountain, region or later-memory scale without inventing a building or day-by-day itinerary."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:song-chan-cbeta",
+      "source:editorial-method",
+      "source:third-batch-geography"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_activity",
+        "timeType": "range",
+        "startYear": 1129,
+        "endYear": 1157,
+        "displayDate": {
+          "zh-CN": "1129—1157 年",
+          "en": "1129–1157"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-chan-cbeta"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "activity_site",
+      "historicity": "documented"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:hongzhi-zhengjue-active-in-tiantong-mountain",
+    "source": {
+      "kind": "figure",
+      "slug": "hongzhi-zhengjue"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "tiantong-mountain"
+    },
+    "relationType": "active_in",
+    "label": {
+      "zh-CN": "宏智正觉与此地活动语境相连",
+      "en": "Hongzhi Zhengjue is linked to activity in this place"
+    },
+    "summary": {
+      "zh-CN": "该地点使用城市或区域尺度，具体活动范围仍按来源等级表达。",
+      "en": "The place uses a city or regional scale, with specific activity limits retained in the evidence layer."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_documented",
+    "sourceIds": [
+      "source:song-chan-cbeta",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "life",
+        "timeType": "exact",
+        "startYear": 1091,
+        "endYear": 1157,
+        "displayDate": {
+          "zh-CN": "1091—1157 年",
+          "en": "1091–1157"
+        },
+        "confidence": "high",
+        "evidenceLayer": "historical_documented",
+        "sourceId": "source:song-chan-cbeta"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "activity_site",
+      "historicity": "documented"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:confucius-influenced-yan-hui",
+    "source": {
+      "kind": "figure",
+      "slug": "confucius"
+    },
+    "target": {
+      "kind": "figure",
+      "slug": "yan-hui"
+    },
+    "relationType": "influenced",
+    "label": {
+      "zh-CN": "孔子教导影响颜回",
+      "en": "Confucius's teaching influenced Yan Hui"
+    },
+    "summary": {
+      "zh-CN": "关系保留时间、方向与后世接受边界；不把影响或谱系自动解释为直接会面。",
+      "en": "The relation preserves chronology, direction and later-reception boundaries; influence or lineage does not imply direct contact."
+    },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:confucian-disciples-classics",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_and_memory_scope",
+        "timeType": "range",
+        "startYear": -521,
+        "endYear": -481,
+        "displayDate": {
+          "zh-CN": "-521—-481 年接受语境",
+          "en": "Reception context, -521–-481"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:confucian-disciples-classics"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "inferred",
+      "interactionMode": "teacher_student"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:confucius-influenced-zengzi",
+    "source": {
+      "kind": "figure",
+      "slug": "confucius"
+    },
+    "target": {
+      "kind": "figure",
+      "slug": "zengzi"
+    },
+    "relationType": "influenced",
+    "label": {
+      "zh-CN": "孔子教导进入曾子的传述语境",
+      "en": "Confucius's teaching enters Zengzi's transmission context"
+    },
+    "summary": {
+      "zh-CN": "关系保留时间、方向与后世接受边界；不把影响或谱系自动解释为直接会面。",
+      "en": "The relation preserves chronology, direction and later-reception boundaries; influence or lineage does not imply direct contact."
+    },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:confucian-disciples-classics",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_and_memory_scope",
+        "timeType": "range",
+        "startYear": -505,
+        "endYear": -435,
+        "displayDate": {
+          "zh-CN": "-505—-435 年接受语境",
+          "en": "Reception context, -505–-435"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:confucian-disciples-classics"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "inferred",
+      "interactionMode": "teacher_student"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:zisi-received-by-mengzi",
+    "source": {
+      "kind": "figure",
+      "slug": "zisi"
+    },
+    "target": {
+      "kind": "figure",
+      "slug": "mengzi"
+    },
+    "relationType": "received_by",
+    "label": {
+      "zh-CN": "子思传统进入孟子后世传承谱系",
+      "en": "Zisi's tradition enters the later lineage associated with Mencius"
+    },
+    "summary": {
+      "zh-CN": "关系保留时间、方向与后世接受边界；不把影响或谱系自动解释为直接会面。",
+      "en": "The relation preserves chronology, direction and later-reception boundaries; influence or lineage does not imply direct contact."
+    },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:confucian-disciples-classics",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_and_memory_scope",
+        "timeType": "range",
+        "startYear": -390,
+        "endYear": -305,
+        "displayDate": {
+          "zh-CN": "-390—-305 年接受语境",
+          "en": "Reception context, -390–-305"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:confucian-disciples-classics"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "inferred",
+      "receptionMode": "transmitted",
+      "interactionMode": "lineage_reception"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:zhang-zai-received-by-wang-fuzhi",
+    "source": {
+      "kind": "figure",
+      "slug": "zhang-zai"
+    },
+    "target": {
+      "kind": "figure",
+      "slug": "wang-fuzhi"
+    },
+    "relationType": "received_by",
+    "label": {
+      "zh-CN": "张载气论进入王夫之的后世解释语境",
+      "en": "Zhang Zai's qi discourse enters Wang Fuzhi's later interpretation"
+    },
+    "summary": {
+      "zh-CN": "关系保留时间、方向与后世接受边界；不把影响或谱系自动解释为直接会面。",
+      "en": "The relation preserves chronology, direction and later-reception boundaries; influence or lineage does not imply direct contact."
+    },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:wang-fuzhi-qing-philosophy",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_and_memory_scope",
+        "timeType": "range",
+        "startYear": 1619,
+        "endYear": 1692,
+        "displayDate": {
+          "zh-CN": "1619—1692 年接受语境",
+          "en": "Reception context, 1619–1692"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:wang-fuzhi-qing-philosophy"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "inferred",
+      "receptionMode": "transmitted",
+      "interactionMode": "lineage_reception"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:ge-xuan-received-by-ge-hong",
+    "source": {
+      "kind": "figure",
+      "slug": "ge-xuan"
+    },
+    "target": {
+      "kind": "figure",
+      "slug": "ge-hong"
+    },
+    "relationType": "received_by",
+    "label": {
+      "zh-CN": "葛玄传统进入葛洪相关道教谱系",
+      "en": "Ge Xuan's tradition enters the Daoist lineage associated with Ge Hong"
+    },
+    "summary": {
+      "zh-CN": "关系保留时间、方向与后世接受边界；不把影响或谱系自动解释为直接会面。",
+      "en": "The relation preserves chronology, direction and later-reception boundaries; influence or lineage does not imply direct contact."
+    },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:early-daoist-lineage-records",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_and_memory_scope",
+        "timeType": "range",
+        "startYear": 283,
+        "endYear": 343,
+        "displayDate": {
+          "zh-CN": "283—343 年接受语境",
+          "en": "Reception context, 283–343"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:early-daoist-lineage-records"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "inferred",
+      "receptionMode": "transmitted",
+      "interactionMode": "lineage_reception"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:wei-huacun-received-by-tao-hongjing",
+    "source": {
+      "kind": "figure",
+      "slug": "wei-huacun"
+    },
+    "target": {
+      "kind": "figure",
+      "slug": "tao-hongjing"
+    },
+    "relationType": "received_by",
+    "label": {
+      "zh-CN": "魏华存上清传统进入陶弘景的后世整理",
+      "en": "Wei Huacun's Shangqing tradition enters Tao Hongjing's later systematisation"
+    },
+    "summary": {
+      "zh-CN": "关系保留时间、方向与后世接受边界；不把影响或谱系自动解释为直接会面。",
+      "en": "The relation preserves chronology, direction and later-reception boundaries; influence or lineage does not imply direct contact."
+    },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:early-daoist-lineage-records",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_and_memory_scope",
+        "timeType": "range",
+        "startYear": 456,
+        "endYear": 536,
+        "displayDate": {
+          "zh-CN": "456—536 年接受语境",
+          "en": "Reception context, 456–536"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:early-daoist-lineage-records"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "inferred",
+      "receptionMode": "transmitted",
+      "interactionMode": "lineage_reception"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:lu-dongbin-received-by-wang-chongyang",
+    "source": {
+      "kind": "figure",
+      "slug": "lu-dongbin"
+    },
+    "target": {
+      "kind": "figure",
+      "slug": "wang-chongyang"
+    },
+    "relationType": "received_by",
+    "label": {
+      "zh-CN": "吕洞宾仙传进入王重阳与全真接受谱系",
+      "en": "Lü Dongbin's hagiographic tradition enters Wang Chongyang's Quanzhen reception lineage"
+    },
+    "summary": {
+      "zh-CN": "关系保留时间、方向与后世接受边界；不把影响或谱系自动解释为直接会面。",
+      "en": "The relation preserves chronology, direction and later-reception boundaries; influence or lineage does not imply direct contact."
+    },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:immortal-tradition-records",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_and_memory_scope",
+        "timeType": "range",
+        "startYear": 1113,
+        "endYear": 1170,
+        "displayDate": {
+          "zh-CN": "1113—1170 年接受语境",
+          "en": "Reception context, 1113–1170"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:immortal-tradition-records"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "inferred",
+      "receptionMode": "transmitted",
+      "interactionMode": "lineage_reception"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:zhang-sanfeng-received-by-liu-yiming",
+    "source": {
+      "kind": "figure",
+      "slug": "zhang-sanfeng"
+    },
+    "target": {
+      "kind": "figure",
+      "slug": "liu-yiming"
+    },
+    "relationType": "received_by",
+    "label": {
+      "zh-CN": "张三丰传统进入刘一明时代的内丹接受语境",
+      "en": "Zhang Sanfeng's tradition enters the inner-alchemical reception context of Liu Yiming's era"
+    },
+    "summary": {
+      "zh-CN": "关系保留时间、方向与后世接受边界；不把影响或谱系自动解释为直接会面。",
+      "en": "The relation preserves chronology, direction and later-reception boundaries; influence or lineage does not imply direct contact."
+    },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:immortal-tradition-records",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_and_memory_scope",
+        "timeType": "range",
+        "startYear": 1734,
+        "endYear": 1821,
+        "displayDate": {
+          "zh-CN": "1734—1821 年接受语境",
+          "en": "Reception context, 1734–1821"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:immortal-tradition-records"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "inferred",
+      "receptionMode": "transmitted",
+      "interactionMode": "lineage_reception"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:asanga-received-by-xuanzang",
+    "source": {
+      "kind": "figure",
+      "slug": "asanga"
+    },
+    "target": {
+      "kind": "figure",
+      "slug": "xuanzang"
+    },
+    "relationType": "received_by",
+    "label": {
+      "zh-CN": "无著唯识传统进入玄奘译学网络",
+      "en": "Asanga's Yogacara tradition enters Xuanzang's translation network"
+    },
+    "summary": {
+      "zh-CN": "关系保留时间、方向与后世接受边界；不把影响或谱系自动解释为直接会面。",
+      "en": "The relation preserves chronology, direction and later-reception boundaries; influence or lineage does not imply direct contact."
+    },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:asanga-britannica",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_and_memory_scope",
+        "timeType": "range",
+        "startYear": 600,
+        "endYear": 664,
+        "displayDate": {
+          "zh-CN": "600—664 年接受语境",
+          "en": "Reception context, 600–664"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:asanga-britannica"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "inferred",
+      "receptionMode": "transmitted",
+      "interactionMode": "lineage_reception"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:vasubandhu-received-by-xuanzang",
+    "source": {
+      "kind": "figure",
+      "slug": "vasubandhu"
+    },
+    "target": {
+      "kind": "figure",
+      "slug": "xuanzang"
+    },
+    "relationType": "received_by",
+    "label": {
+      "zh-CN": "世亲论书进入玄奘译学网络",
+      "en": "Vasubandhu's treatises enter Xuanzang's translation network"
+    },
+    "summary": {
+      "zh-CN": "关系保留时间、方向与后世接受边界；不把影响或谱系自动解释为直接会面。",
+      "en": "The relation preserves chronology, direction and later-reception boundaries; influence or lineage does not imply direct contact."
+    },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:vasubandhu-britannica",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_and_memory_scope",
+        "timeType": "range",
+        "startYear": 600,
+        "endYear": 664,
+        "displayDate": {
+          "zh-CN": "600—664 年接受语境",
+          "en": "Reception context, 600–664"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:vasubandhu-britannica"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "inferred",
+      "receptionMode": "transmitted",
+      "interactionMode": "lineage_reception"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:linji-received-by-dahui",
+    "source": {
+      "kind": "figure",
+      "slug": "linji-yixuan"
+    },
+    "target": {
+      "kind": "figure",
+      "slug": "dahui-zonggao"
+    },
+    "relationType": "received_by",
+    "label": {
+      "zh-CN": "临济传统进入大慧宗杲的宋代接受语境",
+      "en": "Linji tradition enters Dahui Zonggao's Song reception context"
+    },
+    "summary": {
+      "zh-CN": "关系保留时间、方向与后世接受边界；不把影响或谱系自动解释为直接会面。",
+      "en": "The relation preserves chronology, direction and later-reception boundaries; influence or lineage does not imply direct contact."
+    },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:song-chan-cbeta",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_and_memory_scope",
+        "timeType": "range",
+        "startYear": 1089,
+        "endYear": 1163,
+        "displayDate": {
+          "zh-CN": "1089—1163 年接受语境",
+          "en": "Reception context, 1089–1163"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:song-chan-cbeta"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "inferred",
+      "receptionMode": "transmitted",
+      "interactionMode": "lineage_reception"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:dongshan-received-by-hongzhi",
+    "source": {
+      "kind": "figure",
+      "slug": "dongshan-liangjie"
+    },
+    "target": {
+      "kind": "figure",
+      "slug": "hongzhi-zhengjue"
+    },
+    "relationType": "received_by",
+    "label": {
+      "zh-CN": "洞山传统进入宏智正觉的曹洞接受语境",
+      "en": "Dongshan tradition enters Hongzhi Zhengjue's Caodong reception context"
+    },
+    "summary": {
+      "zh-CN": "关系保留时间、方向与后世接受边界；不把影响或谱系自动解释为直接会面。",
+      "en": "The relation preserves chronology, direction and later-reception boundaries; influence or lineage does not imply direct contact."
+    },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:song-chan-cbeta",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_and_memory_scope",
+        "timeType": "range",
+        "startYear": 1091,
+        "endYear": 1157,
+        "displayDate": {
+          "zh-CN": "1091—1157 年接受语境",
+          "en": "Reception context, 1091–1157"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:song-chan-cbeta"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "inferred",
+      "receptionMode": "transmitted",
+      "interactionMode": "lineage_reception"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:yan-hui-contemporary-zengzi",
+    "source": {
+      "kind": "figure",
+      "slug": "yan-hui"
+    },
+    "target": {
+      "kind": "figure",
+      "slug": "zengzi"
+    },
+    "relationType": "contemporary_with",
+    "label": {
+      "zh-CN": "颜回与曾子共享孔门弟子语境",
+      "en": "Yan Hui and Zengzi share the Confucian disciple context"
+    },
+    "summary": {
+      "zh-CN": "新增人物之间的关系只表达有来源支持的同时代、思想或后世传承语境。",
+      "en": "The relation between new figures expresses only sourced contemporaneity, intellectual influence or later transmission."
+    },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:confucian-disciples-classics",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_and_memory_scope",
+        "timeType": "range",
+        "startYear": -505,
+        "endYear": -481,
+        "displayDate": {
+          "zh-CN": "-505—-481 年关系语境",
+          "en": "Relation context, -505–-481"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:confucian-disciples-classics"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "inferred",
+      "interactionMode": "shared_context"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:zengzi-influenced-zisi",
+    "source": {
+      "kind": "figure",
+      "slug": "zengzi"
+    },
+    "target": {
+      "kind": "figure",
+      "slug": "zisi"
+    },
+    "relationType": "influenced",
+    "label": {
+      "zh-CN": "曾子传述进入子思后学语境",
+      "en": "Zengzi's transmission enters Zisi's later Confucian context"
+    },
+    "summary": {
+      "zh-CN": "新增人物之间的关系只表达有来源支持的同时代、思想或后世传承语境。",
+      "en": "The relation between new figures expresses only sourced contemporaneity, intellectual influence or later transmission."
+    },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:confucian-disciples-classics",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_and_memory_scope",
+        "timeType": "range",
+        "startYear": -483,
+        "endYear": -435,
+        "displayDate": {
+          "zh-CN": "-483—-435 年关系语境",
+          "en": "Relation context, -483–-435"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:confucian-disciples-classics"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "inferred",
+      "receptionMode": "transmitted",
+      "interactionMode": "lineage_reception"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:ge-xuan-received-by-wei-huacun",
+    "source": {
+      "kind": "figure",
+      "slug": "ge-xuan"
+    },
+    "target": {
+      "kind": "figure",
+      "slug": "wei-huacun"
+    },
+    "relationType": "received_by",
+    "label": {
+      "zh-CN": "葛玄传统进入魏华存相关早期道教谱系",
+      "en": "Ge Xuan's tradition enters the early Daoist lineage associated with Wei Huacun"
+    },
+    "summary": {
+      "zh-CN": "新增人物之间的关系只表达有来源支持的同时代、思想或后世传承语境。",
+      "en": "The relation between new figures expresses only sourced contemporaneity, intellectual influence or later transmission."
+    },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:early-daoist-lineage-records",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_and_memory_scope",
+        "timeType": "range",
+        "startYear": 252,
+        "endYear": 334,
+        "displayDate": {
+          "zh-CN": "252—334 年关系语境",
+          "en": "Relation context, 252–334"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:early-daoist-lineage-records"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "inferred",
+      "receptionMode": "transmitted",
+      "interactionMode": "lineage_reception"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:lu-dongbin-received-by-zhang-sanfeng",
+    "source": {
+      "kind": "figure",
+      "slug": "lu-dongbin"
+    },
+    "target": {
+      "kind": "figure",
+      "slug": "zhang-sanfeng"
+    },
+    "relationType": "received_by",
+    "label": {
+      "zh-CN": "吕洞宾仙传进入张三丰后世内丹谱系",
+      "en": "Lü Dongbin's hagiographic tradition enters Zhang Sanfeng's later inner-alchemical lineage"
+    },
+    "summary": {
+      "zh-CN": "新增人物之间的关系只表达有来源支持的同时代、思想或后世传承语境。",
+      "en": "The relation between new figures expresses only sourced contemporaneity, intellectual influence or later transmission."
+    },
+    "confidence": "low",
+    "evidenceLayer": "traditional_account",
+    "sourceIds": [
+      "source:immortal-tradition-records",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_and_memory_scope",
+        "timeType": "traditional_date",
+        "displayDate": {
+          "zh-CN": "传统谱系；年代不确",
+          "en": "Traditional lineage; dates uncertain"
+        },
+        "confidence": "low",
+        "evidenceLayer": "traditional_account",
+        "sourceId": "source:immortal-tradition-records"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "traditional",
+      "receptionMode": "transmitted",
+      "interactionMode": "lineage_reception"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:asanga-influenced-vasubandhu",
+    "source": {
+      "kind": "figure",
+      "slug": "asanga"
+    },
+    "target": {
+      "kind": "figure",
+      "slug": "vasubandhu"
+    },
+    "relationType": "influenced",
+    "label": {
+      "zh-CN": "无著思想影响世亲的唯识转向",
+      "en": "Asanga's thought influenced Vasubandhu's Yogacara turn"
+    },
+    "summary": {
+      "zh-CN": "新增人物之间的关系只表达有来源支持的同时代、思想或后世传承语境。",
+      "en": "The relation between new figures expresses only sourced contemporaneity, intellectual influence or later transmission."
+    },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:asanga-britannica",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_and_memory_scope",
+        "timeType": "range",
+        "startYear": 350,
+        "endYear": 399,
+        "displayDate": {
+          "zh-CN": "350—399 年关系语境",
+          "en": "Relation context, 350–399"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:asanga-britannica"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "inferred",
+      "receptionMode": "transmitted",
+      "interactionMode": "lineage_reception"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:dahui-contemporary-hongzhi",
+    "source": {
+      "kind": "figure",
+      "slug": "dahui-zonggao"
+    },
+    "target": {
+      "kind": "figure",
+      "slug": "hongzhi-zhengjue"
+    },
+    "relationType": "contemporary_with",
+    "label": {
+      "zh-CN": "大慧宗杲与宏智正觉同处宋代禅宗论辩语境",
+      "en": "Dahui Zonggao and Hongzhi Zhengjue share the Song Chan debate context"
+    },
+    "summary": {
+      "zh-CN": "新增人物之间的关系只表达有来源支持的同时代、思想或后世传承语境。",
+      "en": "The relation between new figures expresses only sourced contemporaneity, intellectual influence or later transmission."
+    },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:song-chan-cbeta",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_and_memory_scope",
+        "timeType": "range",
+        "startYear": 1091,
+        "endYear": 1157,
+        "displayDate": {
+          "zh-CN": "1091—1157 年关系语境",
+          "en": "Relation context, 1091–1157"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:song-chan-cbeta"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "inferred",
+      "interactionMode": "shared_context"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:zisi-received-by-zhu-xi",
+    "source": {
+      "kind": "figure",
+      "slug": "zisi"
+    },
+    "target": {
+      "kind": "figure",
+      "slug": "zhu-xi"
+    },
+    "relationType": "received_by",
+    "label": {
+      "zh-CN": "子思与《中庸》传统进入朱熹的后世经典解释",
+      "en": "Zisi and the Zhongyong tradition enter Zhu Xi's later classical interpretation"
+    },
+    "summary": {
+      "zh-CN": "后世接受关系按接收人物时期计时，不表示直接会面。",
+      "en": "The later-reception relation is dated to the receiving figure's period and does not imply direct contact."
+    },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:confucian-disciples-classics",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_and_memory_scope",
+        "timeType": "range",
+        "startYear": 1130,
+        "endYear": 1200,
+        "displayDate": {
+          "zh-CN": "1130—1200 年接受语境",
+          "en": "Reception context, 1130–1200"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:confucian-disciples-classics"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "inferred",
+      "receptionMode": "reinterpreted",
+      "interactionMode": "lineage_reception"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:wei-huacun-received-by-sima-chengzhen",
+    "source": {
+      "kind": "figure",
+      "slug": "wei-huacun"
+    },
+    "target": {
+      "kind": "figure",
+      "slug": "sima-chengzhen"
+    },
+    "relationType": "received_by",
+    "label": {
+      "zh-CN": "魏华存上清传统进入唐代道教后世接受",
+      "en": "Wei Huacun's Shangqing tradition enters later Tang Daoist reception"
+    },
+    "summary": {
+      "zh-CN": "后世接受关系按接收人物时期计时，不表示直接会面。",
+      "en": "The later-reception relation is dated to the receiving figure's period and does not imply direct contact."
+    },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:early-daoist-lineage-records",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_and_memory_scope",
+        "timeType": "range",
+        "startYear": 647,
+        "endYear": 735,
+        "displayDate": {
+          "zh-CN": "647—735 年接受语境",
+          "en": "Reception context, 647–735"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:early-daoist-lineage-records"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "inferred",
+      "receptionMode": "reinterpreted",
+      "interactionMode": "lineage_reception"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:vasubandhu-received-by-yijing",
+    "source": {
+      "kind": "figure",
+      "slug": "vasubandhu"
+    },
+    "target": {
+      "kind": "figure",
+      "slug": "yijing"
+    },
+    "relationType": "received_by",
+    "label": {
+      "zh-CN": "世亲论书进入义净时代的译学接受",
+      "en": "Vasubandhu's treatises enter the translation reception context of Yijing's era"
+    },
+    "summary": {
+      "zh-CN": "后世接受关系按接收人物时期计时，不表示直接会面。",
+      "en": "The later-reception relation is dated to the receiving figure's period and does not imply direct contact."
+    },
+    "confidence": "low",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:vasubandhu-britannica",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "institutional_and_memory_scope",
+        "timeType": "range",
+        "startYear": 635,
+        "endYear": 713,
+        "displayDate": {
+          "zh-CN": "635—713 年接受语境",
+          "en": "Reception context, 635–713"
+        },
+        "confidence": "low",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:vasubandhu-britannica"
+      }
+    ],
+    "qualifiers": {
+      "historicity": "inferred",
+      "receptionMode": "reinterpreted",
+      "interactionMode": "lineage_reception"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:kumarajiva-travelled-kumarajiva-kucha-changan-corridor",
+    "source": {
+      "kind": "figure",
+      "slug": "kumarajiva"
+    },
+    "target": {
+      "kind": "route",
+      "slug": "kumarajiva-kucha-changan-corridor"
+    },
+    "relationType": "travelled_through",
+    "label": {
+      "zh-CN": "鸠摩罗什行经该重建路线",
+      "en": "Kumarajiva travelled through this reconstructed route"
+    },
+    "summary": {
+      "zh-CN": "人物—路线关系连接有据区域锚点，不把折线解释为逐日精确行程。",
+      "en": "The figure–route relation connects sourced regional anchors without treating the polyline as a precise day-by-day itinerary."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:kumarajiva-corridor-records",
+      "source:kumarajiva-biography",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "route_activity",
+        "timeType": "range",
+        "startYear": 384,
+        "endYear": 401,
+        "displayDate": {
+          "zh-CN": "约 384—401 年",
+          "en": "c. 384–401"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:kumarajiva-corridor-records"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "route_segment",
+      "historicity": "inferred"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:kumarajiva-kucha-changan-corridor-connects-qiuci",
+    "source": {
+      "kind": "route",
+      "slug": "kumarajiva-kucha-changan-corridor"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "qiuci"
+    },
+    "relationType": "route_connects",
+    "label": {
+      "zh-CN": "路线连接龟兹",
+      "en": "Route connects Kucha"
+    },
+    "summary": {
+      "zh-CN": "节点是城市、港口或区域尺度锚点；中间线段保持 reconstructed corridor 语义。",
+      "en": "The node is a city-, port- or region-scale anchor; intermediate segments remain a reconstructed corridor."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:kumarajiva-corridor-records",
+      "source:kumarajiva-biography",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "route_activity",
+        "timeType": "range",
+        "startYear": 384,
+        "endYear": 401,
+        "displayDate": {
+          "zh-CN": "约 384—401 年",
+          "en": "c. 384–401"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:kumarajiva-corridor-records"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "departure_site",
+      "historicity": "inferred"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:kumarajiva-kucha-changan-corridor-connects-guzang",
+    "source": {
+      "kind": "route",
+      "slug": "kumarajiva-kucha-changan-corridor"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "guzang"
+    },
+    "relationType": "route_connects",
+    "label": {
+      "zh-CN": "路线连接姑臧",
+      "en": "Route connects Guzang"
+    },
+    "summary": {
+      "zh-CN": "节点是城市、港口或区域尺度锚点；中间线段保持 reconstructed corridor 语义。",
+      "en": "The node is a city-, port- or region-scale anchor; intermediate segments remain a reconstructed corridor."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:kumarajiva-corridor-records",
+      "source:kumarajiva-biography",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "route_activity",
+        "timeType": "range",
+        "startYear": 384,
+        "endYear": 401,
+        "displayDate": {
+          "zh-CN": "约 384—401 年",
+          "en": "c. 384–401"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:kumarajiva-corridor-records"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "route_segment",
+      "historicity": "inferred"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:kumarajiva-kucha-changan-corridor-connects-changan",
+    "source": {
+      "kind": "route",
+      "slug": "kumarajiva-kucha-changan-corridor"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "changan"
+    },
+    "relationType": "route_connects",
+    "label": {
+      "zh-CN": "路线连接长安",
+      "en": "Route connects Chang'an"
+    },
+    "summary": {
+      "zh-CN": "节点是城市、港口或区域尺度锚点；中间线段保持 reconstructed corridor 语义。",
+      "en": "The node is a city-, port- or region-scale anchor; intermediate segments remain a reconstructed corridor."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:kumarajiva-corridor-records",
+      "source:kumarajiva-biography",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "route_activity",
+        "timeType": "range",
+        "startYear": 384,
+        "endYear": 401,
+        "displayDate": {
+          "zh-CN": "约 384—401 年",
+          "en": "c. 384–401"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:kumarajiva-corridor-records"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "arrival_site",
+      "historicity": "inferred"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:jian-zhen-travelled-jianzhen-eastward-transmission-route",
+    "source": {
+      "kind": "figure",
+      "slug": "jian-zhen"
+    },
+    "target": {
+      "kind": "route",
+      "slug": "jianzhen-eastward-transmission-route"
+    },
+    "relationType": "travelled_through",
+    "label": {
+      "zh-CN": "鉴真行经该重建路线",
+      "en": "Jianzhen travelled through this reconstructed route"
+    },
+    "summary": {
+      "zh-CN": "人物—路线关系连接有据区域锚点，不把折线解释为逐日精确行程。",
+      "en": "The figure–route relation connects sourced regional anchors without treating the polyline as a precise day-by-day itinerary."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:jianzhen-transmission-records",
+      "source:unesco-nara",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "route_activity",
+        "timeType": "range",
+        "startYear": 742,
+        "endYear": 754,
+        "displayDate": {
+          "zh-CN": "约 742—754 年",
+          "en": "c. 742–754"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:jianzhen-transmission-records"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "route_segment",
+      "historicity": "inferred"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:jianzhen-eastward-transmission-route-connects-yangzhou",
+    "source": {
+      "kind": "route",
+      "slug": "jianzhen-eastward-transmission-route"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "yangzhou"
+    },
+    "relationType": "route_connects",
+    "label": {
+      "zh-CN": "路线连接扬州",
+      "en": "Route connects Yangzhou"
+    },
+    "summary": {
+      "zh-CN": "节点是城市、港口或区域尺度锚点；中间线段保持 reconstructed corridor 语义。",
+      "en": "The node is a city-, port- or region-scale anchor; intermediate segments remain a reconstructed corridor."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:jianzhen-transmission-records",
+      "source:unesco-nara",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "route_activity",
+        "timeType": "range",
+        "startYear": 742,
+        "endYear": 754,
+        "displayDate": {
+          "zh-CN": "约 742—754 年",
+          "en": "c. 742–754"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:jianzhen-transmission-records"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "departure_site",
+      "historicity": "inferred"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:jianzhen-eastward-transmission-route-connects-ningbo",
+    "source": {
+      "kind": "route",
+      "slug": "jianzhen-eastward-transmission-route"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "ningbo"
+    },
+    "relationType": "route_connects",
+    "label": {
+      "zh-CN": "路线连接宁波",
+      "en": "Route connects Ningbo"
+    },
+    "summary": {
+      "zh-CN": "节点是城市、港口或区域尺度锚点；中间线段保持 reconstructed corridor 语义。",
+      "en": "The node is a city-, port- or region-scale anchor; intermediate segments remain a reconstructed corridor."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:jianzhen-transmission-records",
+      "source:unesco-nara",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "route_activity",
+        "timeType": "range",
+        "startYear": 742,
+        "endYear": 754,
+        "displayDate": {
+          "zh-CN": "约 742—754 年",
+          "en": "c. 742–754"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:jianzhen-transmission-records"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "route_segment",
+      "historicity": "inferred"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:jianzhen-eastward-transmission-route-connects-nara",
+    "source": {
+      "kind": "route",
+      "slug": "jianzhen-eastward-transmission-route"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "nara"
+    },
+    "relationType": "route_connects",
+    "label": {
+      "zh-CN": "路线连接奈良",
+      "en": "Route connects Nara"
+    },
+    "summary": {
+      "zh-CN": "节点是城市、港口或区域尺度锚点；中间线段保持 reconstructed corridor 语义。",
+      "en": "The node is a city-, port- or region-scale anchor; intermediate segments remain a reconstructed corridor."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:jianzhen-transmission-records",
+      "source:unesco-nara",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "route_activity",
+        "timeType": "range",
+        "startYear": 742,
+        "endYear": 754,
+        "displayDate": {
+          "zh-CN": "约 742—754 年",
+          "en": "c. 742–754"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:jianzhen-transmission-records"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "arrival_site",
+      "historicity": "inferred"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:qiu-chuji-travelled-qiu-chuji-western-journey-route",
+    "source": {
+      "kind": "figure",
+      "slug": "qiu-chuji"
+    },
+    "target": {
+      "kind": "route",
+      "slug": "qiu-chuji-western-journey-route"
+    },
+    "relationType": "travelled_through",
+    "label": {
+      "zh-CN": "丘处机行经该重建路线",
+      "en": "Qiu Chuji travelled through this reconstructed route"
+    },
+    "summary": {
+      "zh-CN": "人物—路线关系连接有据区域锚点，不把折线解释为逐日精确行程。",
+      "en": "The figure–route relation connects sourced regional anchors without treating the polyline as a precise day-by-day itinerary."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:qiu-chuji-xiyouji",
+      "source:unesco-samarkand",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "route_activity",
+        "timeType": "range",
+        "startYear": 1220,
+        "endYear": 1224,
+        "displayDate": {
+          "zh-CN": "约 1220—1224 年",
+          "en": "c. 1220–1224"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:qiu-chuji-xiyouji"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "route_segment",
+      "historicity": "inferred"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:qiu-chuji-western-journey-route-connects-ninghai",
+    "source": {
+      "kind": "route",
+      "slug": "qiu-chuji-western-journey-route"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "ninghai"
+    },
+    "relationType": "route_connects",
+    "label": {
+      "zh-CN": "路线连接宁海",
+      "en": "Route connects Ninghai"
+    },
+    "summary": {
+      "zh-CN": "节点是城市、港口或区域尺度锚点；中间线段保持 reconstructed corridor 语义。",
+      "en": "The node is a city-, port- or region-scale anchor; intermediate segments remain a reconstructed corridor."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:qiu-chuji-xiyouji",
+      "source:unesco-samarkand",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "route_activity",
+        "timeType": "range",
+        "startYear": 1220,
+        "endYear": 1224,
+        "displayDate": {
+          "zh-CN": "约 1220—1224 年",
+          "en": "c. 1220–1224"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:qiu-chuji-xiyouji"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "departure_site",
+      "historicity": "inferred"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:qiu-chuji-western-journey-route-connects-beijing",
+    "source": {
+      "kind": "route",
+      "slug": "qiu-chuji-western-journey-route"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "beijing"
+    },
+    "relationType": "route_connects",
+    "label": {
+      "zh-CN": "路线连接北京（燕京区域锚点）",
+      "en": "Route connects Beijing (Yanjing regional anchor)"
+    },
+    "summary": {
+      "zh-CN": "节点是城市、港口或区域尺度锚点；中间线段保持 reconstructed corridor 语义。",
+      "en": "The node is a city-, port- or region-scale anchor; intermediate segments remain a reconstructed corridor."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:qiu-chuji-xiyouji",
+      "source:unesco-samarkand",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "route_activity",
+        "timeType": "range",
+        "startYear": 1220,
+        "endYear": 1224,
+        "displayDate": {
+          "zh-CN": "约 1220—1224 年",
+          "en": "c. 1220–1224"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:qiu-chuji-xiyouji"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "route_segment",
+      "historicity": "inferred"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  },
+  {
+    "id": "relation:qiu-chuji-western-journey-route-connects-samarkand",
+    "source": {
+      "kind": "route",
+      "slug": "qiu-chuji-western-journey-route"
+    },
+    "target": {
+      "kind": "place",
+      "slug": "samarkand"
+    },
+    "relationType": "route_connects",
+    "label": {
+      "zh-CN": "路线连接撒马尔罕",
+      "en": "Route connects Samarkand"
+    },
+    "summary": {
+      "zh-CN": "节点是城市、港口或区域尺度锚点；中间线段保持 reconstructed corridor 语义。",
+      "en": "The node is a city-, port- or region-scale anchor; intermediate segments remain a reconstructed corridor."
+    },
+    "confidence": "medium",
+    "evidenceLayer": "historical_inferred",
+    "sourceIds": [
+      "source:qiu-chuji-xiyouji",
+      "source:unesco-samarkand",
+      "source:third-batch-geography",
+      "source:editorial-method"
+    ],
+    "temporalAssertions": [
+      {
+        "predicate": "route_activity",
+        "timeType": "range",
+        "startYear": 1220,
+        "endYear": 1224,
+        "displayDate": {
+          "zh-CN": "约 1220—1224 年",
+          "en": "c. 1220–1224"
+        },
+        "confidence": "medium",
+        "evidenceLayer": "historical_inferred",
+        "sourceId": "source:qiu-chuji-xiyouji"
+      }
+    ],
+    "qualifiers": {
+      "spatialRole": "arrival_site",
+      "historicity": "inferred"
+    },
+    "publicationState": "preview",
+    "reviewStatus": "bilingual_reviewed"
+  }
 ]

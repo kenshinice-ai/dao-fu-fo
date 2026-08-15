@@ -17,6 +17,7 @@
     "verify:content": "node scripts/verify-content.mjs",
     "verify:first-100": "node scripts/verify-first-100-batch.mjs",
     "verify:second-100": "node scripts/verify-second-100-batch.mjs",
+    "verify:third-batch": "node scripts/verify-third-content-batch.mjs",
     "verify:alignment": "node scripts/verify-content-alignment.mjs",
     "verify:content:public": "node scripts/verify-public-content.mjs",
     "verify:matrix": "node scripts/verify-alpha-matrix.mjs",
@@ -38,11 +39,12 @@
     "verify:public-rc:ready": "node scripts/verify-public-rc.mjs --ready",
     "review:record": "node scripts/record-review.mjs",
     "content:promote": "node scripts/promote-public-rc.mjs",
+    "content:apply-third-batch": "node scripts/apply-third-content-batch.mjs --apply",
     "typecheck": "npm run typecheck -w @drf-museum/domain-schema && npm run typecheck -w @drf-museum/core && npm run typecheck -w @drf-museum/content-compiler && npm run typecheck -w @drf-museum/web",
     "test": "npm run build:packages && npm run test -w @drf-museum/core && npm run test -w @drf-museum/content-compiler && npm run test -w @drf-museum/web",
     "test:e2e": "npm run build:content && npm run test:e2e -w @drf-museum/web",
     "verify:static": "node scripts/verify-static.mjs",
-    "check": "npm run typecheck && npm run test && npm run verify:migrations && npm run db:migrate:plan && npm run build:content && npm run build:content:public && npm run sync:preview-read-models && npm run verify:generated && npm run verify:architecture && npm run verify:preview-context && npm run verify:domain-architecture && npm run verify:first-100 && npm run verify:second-100 && npm run verify:public-rc && npm run verify:database-bundle && npm run db:import:plan && npm run verify:content && npm run verify:alignment && npm run verify:matrix && npm run verify:alpha-ready && npm run verify:content:public && npm run build && npm run verify:static",
+    "check": "npm run typecheck && npm run test && npm run verify:migrations && npm run db:migrate:plan && npm run build:content && npm run build:content:public && npm run sync:preview-read-models && npm run verify:generated && npm run verify:architecture && npm run verify:preview-context && npm run verify:domain-architecture && npm run verify:first-100 && npm run verify:second-100 && npm run verify:third-batch && npm run verify:public-rc && npm run verify:database-bundle && npm run db:import:plan && npm run verify:content && npm run verify:alignment && npm run verify:matrix && npm run verify:alpha-ready && npm run verify:content:public && npm run build && npm run verify:static",
     "check:release": "npm run check && npm run test:e2e && npm run verify:database:integration"
   },
   "engines": {
