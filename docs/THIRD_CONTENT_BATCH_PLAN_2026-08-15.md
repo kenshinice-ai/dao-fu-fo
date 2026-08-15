@@ -1,7 +1,7 @@
 # 第三批人物—事件—地点—关系—路线冻结计划
 
 日期：2026-08-15  
-状态：authoring、批次 verifier、完整工程门禁与 Full Alpha Playwright/axe 已完成；待提交、推送；production 尚未获本批次单独发布确认
+状态：authoring、批次 verifier、完整工程门禁、Full Alpha Playwright/axe 与 feature commit `6e937da` 已完成；待推送；production 尚未获本批次单独发布确认
 
 ## 0. 完成记录
 
@@ -24,6 +24,7 @@ Third-batch closure verified:
 - Full Alpha Playwright + axe 为 **63 passed / 1 skipped**，唯一 skipped 仍为 Public RC 专用用例；
 - Public artifact 未扩大，继续保持 34 entities / 41 relations / 0 blocker；
 - Full Alpha Research 当前透明展示 1535 public blockers；review queue 为 1184 subjects，其中 1109 blocking。这些是 Alpha 研究审核状态，不是程序失败，也不代表 Public RC；
+- feature commit：`6e937da feat: add third historical network content batch`；
 - production 当前仍是第三批之前的 `fb618c05 / 53e8b5d`。本批新增 payload 在 commit/push 后仍需单独、明确的 production 发布确认。
 
 ## 1. 批次目的

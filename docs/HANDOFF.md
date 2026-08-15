@@ -2,7 +2,7 @@
 
 > 维护纪律：每个可独立说明的实现、修复、验证或发布阶段完成后立即更新。
 > 最后更新：2026-08-15
-> 当前阶段：第三批人物—事件—地点—关系—路线 authoring 与完整本地门禁已完成，正在提交/推送；production 仍停留在第三批之前的 `fb618c05 / 53e8b5d`，新增 Full Alpha payload 尚未获得单独公开发布确认
+> 当前阶段：第三批人物—事件—地点—关系—路线 authoring、完整本地门禁与 feature commit `6e937da` 已完成，正在推送；production 仍停留在第三批之前的 `fb618c05 / 53e8b5d`，新增 Full Alpha payload 尚未获得单独公开发布确认
 
 ## 2026-08-15｜第三批历史网络 authoring 与验证 handoff（当前）
 
@@ -12,10 +12,12 @@
 - 当前 Full Alpha 精确规模：465 个编译实体，人物 152、事件 157、地点 90、路线 7、关系 716、来源 105、音频 3；数据库 bundle 为 468 entities / 716 relations（含 3 个传统字典实体）；现实地图地点 85；
 - symbolic cosmos 当前为 3 tradition nodes / 11 figure nodes / 5 place nodes / 15 edges；搜索 `xuanzang` 返回 9 项；
 - 批次 closure 已通过：`12 figures, 12 events, 10 places, 3 routes, 69 relations; new-figure interactions=6`；生成器支持 dry run 与幂等 `--apply`，批次 verifier 已接入根 `npm run check`；
+- 生成器已改为对既有 source/relation 数组做 append-preserving 写入，避免重排历史 JSON 造成约 2.9 万行无意义 diff；连续两次 `content:apply-third-batch` 已验证幂等；
 - 完整 `npm run check` 通过；Core unit 11/11、Compiler unit 5/5、Web unit 18/18；source/read-model alignment 为 465/465 entities、716/716 relations、warnings 0；database import plan 为 6894 statements；
 - Full Alpha Playwright + axe **63 passed / 1 skipped**，唯一 skipped 仍为 Public RC 专用用例；新增 E2E 覆盖颜回、吕洞宾、无著、大慧宗杲和三条跨区域路线，既有基线已同步到 152/157/90/7/716；
 - Full Alpha 当前有 1535 public blockers；review queue 为 1184 subjects，其中 1109 blocking。这是 `alpha / preview` 的透明研究审核队列，不是程序缺陷，不得误称 Public RC 或正式学术发布；
 - Public artifact 仍保持 34 entities / 41 relations / 0 blocker，没有被第三批扩大；
+- feature commit：`6e937da feat: add third historical network content batch`；
 - 当前 production 仍为第三批之前的默认地址 <https://dao-ru-fo-digital-museum.pages.dev> 与 unique <https://fb618c05.dao-ru-fo-digital-museum.pages.dev>，source `53e8b5d`。本批先完成 commit/push；部署新增 Full Alpha payload 前必须再次取得明确 production 发布确认。
 
 ## 2026-08-15｜Web 路由拆包版 production handoff 与下一批授权

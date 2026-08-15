@@ -1,7 +1,7 @@
 # 项目现状与实施路线图
 
 > 基线日期：2026-08-15
-> 当前判断：工程、全历史 map-first 入口、第二批 100 条内容闭环与 Web 路由拆包均已部署 production；线上基准仍为 `fb618c05 / 53e8b5d`。第三批 12 人物、12 事件、10 地点、3 路线、14 来源、69 关系已完成 authoring 和完整本地门禁，正在提交/推送；新增 Full Alpha payload 尚未获得单独 production 发布确认。Public RC 边界保持独立；Museum / Explore / Research 保留为深度层。
+> 当前判断：工程、全历史 map-first 入口、第二批 100 条内容闭环与 Web 路由拆包均已部署 production；线上基准仍为 `fb618c05 / 53e8b5d`。第三批 12 人物、12 事件、10 地点、3 路线、14 来源、69 关系已完成 authoring、完整本地门禁与 feature commit `6e937da`，正在推送；新增 Full Alpha payload 尚未获得单独 production 发布确认。Public RC 边界保持独立；Museum / Explore / Research 保留为深度层。
 
 ## 2026-08-15 第三批历史网络完成点
 
@@ -11,6 +11,7 @@
 - `verify:third-batch`、完整 `npm run check`、Core 11/11、Compiler 5/5、Web 18/18、alignment 465/465 与 716/716（warnings 0）全部通过；
 - Full Alpha Playwright + axe 为 **63 passed / 1 skipped**；Public artifact 继续保持 34 entities / 41 relations / 0 blocker；
 - Full Alpha Research 当前为 1535 public blockers、1184 review subjects、1109 blocking subjects，继续保持 `alpha / preview` 语义；
+- feature commit 为 `6e937da feat: add third historical network content batch`；生成器连续两次 apply 验证幂等，并避免重排既有 source/relation JSON；
 - 本批先完成 commit/push。production 部署属于下一独立发布阶段，必须基于上述 blocker payload 取得明确确认，然后执行 clean staging upload、default/unique 25/25 smoke 与线上浏览器复验。
 
 ## 2026-08-15 production 与下一批启动点
