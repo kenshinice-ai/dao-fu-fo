@@ -2,7 +2,22 @@
 
 > 维护纪律：每个可独立说明的实现、修复、验证或发布阶段完成后立即更新。
 > 最后更新：2026-08-16
-> 当前阶段：Atlas 全宽工作区、Canvas 关系图、五层时间轴、人物空间—时间档案与 152 人物目录重构已完成；clean commit 已 push 并部署到 production，最终线上 smoke 已通过
+> 当前阶段：Atlas 结构级 UX 重构已完成；`cab0adb` 已 push 并部署到 Cloudflare Pages production，唯一部署与默认域名线上 smoke、浏览器关键路径均已通过
+
+## 2026-08-16｜Atlas 结构级 UX 重构与 clean production handoff（final）
+
+- 本轮先完成 390×844、768×1024、1440×900、1920×1080、2560×1440 的 before 基线审计，再按 brief 收口结构：Atlas 现在是 mode-driven workbench；地图、关系图、时间轴只渲染当前主模式，地图模式把地图与对象浏览器并置，时间轴使用 ribbon/full 两种变体，图谱使用完整画布与 inspector；URL view/focus/tier/time range/playback 状态继续保持可恢复；
+- 地图语义保持 historical / reconstructed / memory / pending / unresolved 分层，移除地图语境中的 mini RelationNetwork；对象浏览器使用搜索、8 个快捷入口、计数与内部滚动；地图/对象面板等高；桌面 Atlas 宽度按 viewport 自适应，最大 2400px；移动端为单主舞台和 44px 以上操作目标，不产生横向溢出；
+- 关系图按 brief 实现 `era / group / major / all`：`all` 保持当前完整人物群体和人物—人物关系，当前线上 graph-all 为 152 nodes / 148 edges；`major` 使用 focus 1–2 跳或无 focus 的高连接度上限 24；map/timeline 模式不再携带大图谱或大对象舞台；
+- 时间轴收口为五轨 full timeline 与 200–300px ribbon，不再重复渲染三份事件长列表；人物 FigureSpacetime 改为全宽；首页保留全部 152 人物卡，加入标题搜索与传统/时代筛选，390px 单列、768px 双列、桌面多列；
+- 本轮只改视图组合、图谱投影与前端交互/样式，没有新增 migration、没有改 content schema/read model、没有修改 `previous project`；Full Alpha 内容状态仍为 `2026.08.alpha.1 / alpha / preview`，1535 个 public blockers 继续作为研究审核状态透明展示，不等同 Public RC 或正式学术发布；
+- before/after 证据与指标存于 [`artifacts/ux-audit/`](../artifacts/ux-audit/)；关键结果：1440px 首个主画布约 `top=330–351px`；1920px Atlas 宽 `1862px`；2560px Atlas 宽 `2400px`；2560px full timeline 约 `2300px`；30 个 route/viewport 组合均无横向溢出；首页搜索 `Xuanzang` 显示 `3 / 152 figures`；
+- 关键 before → after：390px map `2897→2373px`、map+focus `4476→2843px`、graph `10263→2878px`、timeline `5443→3000px`；1440px map `24353→1819px`、graph `11664→1917px`、timeline `25178→2182px`；完整表格见 [`artifacts/ux-audit/after/summary.md`](../artifacts/ux-audit/after/summary.md)；
+- 发布前门禁已通过：`npm run check:release` exit 0；Core 14/14、Compiler 5/5、Web 24/24；database integration 为 16 migrations、468 entities、716 relations、152 figures、90 places、157 events、7 routes、21 route waypoints，fingerprint repeat 一致；Playwright + axe 为 **69 passed / 1 skipped**，唯一 skipped 为既有 Public RC 条件用例；build/static 产物为 18 JS chunks、996 files、0 conflict copies；
+- 应用 release commit `cab0adb1a1537e3a0d0724c5460aedc0bd5c14ce`（`feat: restructure atlas workbench UX`）已 push 至 [`kenshinice-ai/dao-fu-fo`](https://github.com/kenshinice-ai/dao-fu-fo) 的 `main`；
+- Cloudflare Pages production 已完成：默认地址 <https://dao-ru-fo-digital-museum.pages.dev>；unique 地址 <https://ffa1d3aa.dao-ru-fo-digital-museum.pages.dev>；deployment ID `ffa1d3aa-1860-4d80-b8ec-8ea85bf5c978`；Environment `Production`；branch `main`；source marker `cab0adb`；Wrangler `4.122.0`；线上 manifest 确认为 `2026.08.alpha.1 / alpha / preview`；
+- unique 与默认域名的项目 smoke 均 **25/25**；线上浏览器复核确认 1440px graph route 为 152 节点 / 148 边且不含 map，timeline 为 full 变体且单一事件列表，390px map + object browser 的 `document.scrollWidth` 等于 `390px`，人物档案与首页搜索路由正常；
+- 回滚定位保留为上一稳定 production deployment `67a635c9-84a3-44cc-bc3e-189974ee5865`（<https://67a635c9.dao-ru-fo-digital-museum.pages.dev>）；本段 docs handoff 后续 commit 不改变已上传应用的 source marker `cab0adb`。
 
 ## 2026-08-16｜Atlas 全宽工作区与人物空间—时间重构 release handoff（final clean deployment）
 
