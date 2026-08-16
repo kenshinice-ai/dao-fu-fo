@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { AtlasWorkspace } from "../components/AtlasWorkspace";
 import { ErrorState, LoadingState } from "../components/LoadingState";
@@ -42,6 +42,8 @@ export function HomePage() {
     ]);
     return { overview, search };
   }, [locale]);
+  const [figureTradition, setFigureTradition] = useState<"all" | "daoism" | "confucianism" | "buddhism">("all");
+  const [figureEra, setFigureEra] = useState("all");
   const { data, error } = useStaticData(loader);
 
   if (error) return <ErrorState locale={locale} error={error} />;
@@ -60,6 +62,11 @@ export function HomePage() {
     counts: { ...tradition.counts, ...(countsByTradition.get(tradition.slug) ?? {}) },
   }));
   const totalFigureCount = search.items.filter((item) => item.kind === "figure").length;
+  const allFigures = search.items.filter((item) => item.kind === "figure");
+  const figureEntries = allFigures
+    .filter((figure) => figureTradition === "all" || figure.tradition === figureTradition)
+    .filter((figure) => figureEra === "all" || figureEraForYear(figure.timeRange?.startYear) === figureEra)
+    .sort((left, right) => left.title.localeCompare(right.title, locale === "zh-CN" ? "zh-Hans" : "en"));
 
   return (
     <>
@@ -136,6 +143,34 @@ export function HomePage() {
         </div>
       </section>
 
+      <section className="figure-gateway-section section-shell" aria-labelledby="figure-gateway-heading" data-home-figure-directory data-home-figure-count={allFigures.length}>
+        <div className="section-heading">
+          <p className="eyebrow">05 / {locale === "zh-CN" ? "人物总览" : "Figure directory"}</p>
+          <h2 id="figure-gateway-heading">{locale === "zh-CN" ? "从全部人物进入具体语境" : "Every figure, with a way in"}</h2>
+          <p>{locale === "zh-CN" ? "这里列出当前公开搜索索引中的全部人物条目；筛选只改变浏览顺序，不改变人物档案中的证据与时间边界。" : "This directory lists every figure in the public search index; filters change browsing, not the evidence or time boundaries in each dossier."}</p>
+        </div>
+        <div className="figure-gateway-controls" role="group" aria-label={locale === "zh-CN" ? "人物目录筛选" : "Figure directory filters"}>
+          <div className="figure-gateway-filter-group">
+            <span className="control-label">{locale === "zh-CN" ? "传统" : "Tradition"}</span>
+            {(["all", "daoism", "confucianism", "buddhism"] as const).map((tradition) => <button key={tradition} type="button" className={figureTradition === tradition ? "active" : ""} aria-pressed={figureTradition === tradition} onClick={() => setFigureTradition(tradition)}>{tradition === "all" ? (locale === "zh-CN" ? "全部" : "All") : tradition === "daoism" ? (locale === "zh-CN" ? "道" : "Dao") : tradition === "confucianism" ? (locale === "zh-CN" ? "儒" : "Ru") : (locale === "zh-CN" ? "佛" : "Fo")}</button>)}
+          </div>
+          <div className="figure-gateway-filter-group">
+            <span className="control-label">{locale === "zh-CN" ? "时代" : "Era"}</span>
+            {(["all", "origins", "qin-han", "wei-jin", "sui-tang", "song-yuan", "ming-qing", "modern"] as const).map((era) => <button key={era} type="button" className={figureEra === era ? "active" : ""} aria-pressed={figureEra === era} onClick={() => setFigureEra(era)}>{eraLabel(era, locale)}</button>)}
+          </div>
+        </div>
+        <p className="figure-gateway-count" aria-live="polite">{figureEntries.length} / {allFigures.length} {locale === "zh-CN" ? "位人物" : "figures"}</p>
+        <div className="figure-gateway-grid">
+          {figureEntries.map((figure, index) => <Link className={`figure-gateway-card tradition-card-${figure.tradition}`} key={figure.slug} to={entityPath("figure", figure.slug, locale)}>
+            <div className="figure-gateway-card-topline"><span>{String(index + 1).padStart(3, "0")}</span><span>{figure.tradition === "daoism" ? (locale === "zh-CN" ? "道" : "Dao") : figure.tradition === "confucianism" ? (locale === "zh-CN" ? "儒" : "Ru") : figure.tradition === "buddhism" ? (locale === "zh-CN" ? "佛" : "Fo") : (locale === "zh-CN" ? "交汇" : "Convergence")}</span></div>
+            <h3>{figure.title}</h3>
+            <p>{figure.context}</p>
+            <dl><div><dt>{locale === "zh-CN" ? "年代" : "Period"}</dt><dd>{formatSearchTime(figure.timeRange, locale)}</dd></div><div><dt>{locale === "zh-CN" ? "传统" : "Tradition"}</dt><dd>{figure.tradition}</dd></div></dl>
+            <span className="figure-gateway-card-link">{locale === "zh-CN" ? "打开人物档案" : "Open figure dossier"} <Icon name="arrow" /></span>
+          </Link>)}
+        </div>
+      </section>
+
       <section className="featured-exhibition section-shell">
         <div className="exhibition-number" aria-hidden="true">01</div>
         <div className="featured-copy">
@@ -165,4 +200,39 @@ export function HomePage() {
       </section>
     </>
   );
+}
+
+function eraForYear(year: number | undefined): string {
+  if (year === undefined) return "undated";
+  if (year < -221) return "origins";
+  if (year < 220) return "qin-han";
+  if (year < 581) return "wei-jin";
+  if (year < 907) return "sui-tang";
+  if (year < 1368) return "song-yuan";
+  if (year < 1911) return "ming-qing";
+  return "modern";
+}
+
+function figureEraForYear(year: number | undefined): string {
+  return eraForYear(year);
+}
+
+function eraLabel(era: string, locale: Locale): string {
+  const labels: Record<string, { zh: string; en: string }> = {
+    all: { zh: "全部", en: "All" },
+    origins: { zh: "神话与先秦", en: "Origins / Pre-Qin" },
+    "qin-han": { zh: "秦汉", en: "Qin–Han" },
+    "wei-jin": { zh: "魏晋南北朝", en: "Wei–Jin" },
+    "sui-tang": { zh: "隋唐", en: "Sui–Tang" },
+    "song-yuan": { zh: "宋元", en: "Song–Yuan" },
+    "ming-qing": { zh: "明清", en: "Ming–Qing" },
+    modern: { zh: "近现代", en: "Modern" },
+  };
+  return labels[era]?.[locale === "zh-CN" ? "zh" : "en"] ?? era;
+}
+
+function formatSearchTime(timeRange: { startYear: number; endYear?: number } | undefined, locale: Locale): string {
+  if (!timeRange) return locale === "zh-CN" ? "年代待定" : "Date unresolved";
+  const format = (year: number) => locale === "zh-CN" ? (year < 0 ? `前${Math.abs(year)}年` : `${year}年`) : (year < 0 ? `${Math.abs(year)} BCE` : `${year} CE`);
+  return `${format(timeRange.startYear)}${timeRange.endYear !== undefined ? `–${format(timeRange.endYear)}` : ""}`;
 }

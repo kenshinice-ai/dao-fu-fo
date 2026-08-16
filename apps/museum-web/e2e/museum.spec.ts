@@ -519,6 +519,90 @@ test("relations tab exposes the Bible Atlas-style interactive people graph", asy
   await expect(page.locator(".relationship-graph")).toBeVisible();
 });
 
+test("graph tier is shareable and independent from map zoom", async ({ page }) => {
+  await page.goto("/explore?lang=en&view=map&graphTier=group");
+  await waitForMuseum(page);
+  await waitForAtlas(page);
+
+  const graph = page.locator('[data-graph-renderer="canvas"]').first();
+  const map = page.locator("#historical-map");
+  await expect(graph).toHaveAttribute("data-graph-tier", "group");
+  await graph.getByRole("button", { name: "Key people", exact: true }).click();
+  await expect(page).toHaveURL(/graphTier=major/);
+  await expect(graph).toHaveAttribute("data-graph-tier", "major");
+
+  const beforeZoom = await map.getAttribute("data-map-zoom");
+  await page.getByRole("button", { name: "Zoom in", exact: true }).click();
+  await expect.poll(() => map.getAttribute("data-map-zoom")).not.toBe(beforeZoom);
+  await expect(graph).toHaveAttribute("data-graph-tier", "major");
+  await expect(page).toHaveURL(/graphTier=major/);
+});
+
+test("full-width timeline brush keeps historical and traditional modes shareable", async ({ page }) => {
+  await page.goto("/explore?lang=en&view=timeline");
+  await waitForMuseum(page);
+  const timeline = page.locator(".full-width-timeline");
+  await expect(timeline).toBeVisible();
+  await timeline.getByRole("button", { name: "Traditional", exact: true }).click();
+  await expect(page).toHaveURL(/timeline=tradition/);
+
+  const brushStart = timeline.getByLabel("Brush start");
+  await brushStart.evaluate((input) => {
+    const element = input as HTMLInputElement;
+    const setter = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, "value")?.set;
+    setter?.call(element, "620");
+    element.dispatchEvent(new Event("input", { bubbles: true }));
+    element.dispatchEvent(new Event("change", { bubbles: true }));
+  });
+  await expect(page).toHaveURL(/from=620/);
+  await expect(timeline.locator(".full-width-timeline-summary")).toContainText("620 CE");
+  await expect(page.getByText("0 CE", { exact: true })).toHaveCount(0);
+});
+
+test("figure dossier exposes the full figure space-time section", async ({ page }) => {
+  await page.goto("/figures/xuanzang?lang=en");
+  await waitForMuseum(page);
+  const spacetime = page.locator("[data-figure-spacetime]");
+  await expect(spacetime).toBeVisible();
+  await expect(spacetime.getByRole("heading", { name: "Figure, place, relationships and time" })).toBeVisible();
+  await expect(spacetime.getByRole("button", { name: "Map", exact: true })).toHaveAttribute("aria-pressed", "true");
+  await spacetime.getByRole("button", { name: "Graph", exact: true }).click();
+  await expect(spacetime.locator(".entity-spacetime-stage.is-active")).toContainText("Figure relationship force graph");
+  await expect(spacetime.locator('[data-graph-renderer="canvas"]')).toBeVisible();
+  await spacetime.getByRole("button", { name: "Evidence", exact: true }).click();
+  await expect(spacetime.locator(".entity-spacetime-evidence.is-active")).toBeVisible();
+});
+
+test("home figure directory keeps every indexed figure and supports filtering", async ({ page }) => {
+  await page.goto("/?lang=en");
+  await waitForMuseum(page);
+  const directory = page.locator("[data-home-figure-directory]");
+  await expect(directory).toHaveAttribute("data-home-figure-count", "152");
+  await expect(directory.locator(".figure-gateway-card")).toHaveCount(152);
+  await directory.getByRole("button", { name: "Dao", exact: true }).click();
+  await expect(directory.locator(".figure-gateway-count")).toContainText("/ 152 figures");
+  expect(await directory.locator(".figure-gateway-card").count()).toBeGreaterThan(0);
+  expect(await directory.locator(".figure-gateway-card").count()).toBeLessThan(152);
+});
+
+test("atlas stages stay full width at desktop and switch cleanly on mobile", async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto("/explore?lang=en&view=map");
+  await waitForMuseum(page);
+  await waitForAtlas(page);
+  const widths = await page.locator(".atlas-main-stack > .atlas-stage").evaluateAll((elements) => elements.map((element) => ({ width: element.getBoundingClientRect().width, parent: element.parentElement?.getBoundingClientRect().width ?? 0 })));
+  expect(widths.length).toBe(4);
+  for (const item of widths) expect(item.width).toBeGreaterThan(item.parent * 0.9);
+
+  await page.setViewportSize({ width: 390, height: 844 });
+  await expect(page.locator(".atlas-mobile-view-controls")).toBeVisible();
+  await page.getByRole("button", { name: "Relations", exact: true }).last().click();
+  await expect(page.locator(".atlas-workspace")).toHaveAttribute("data-mobile-panel", "relations");
+  await page.getByRole("button", { name: "Details", exact: true }).last().click();
+  await expect(page.locator(".atlas-workspace")).toHaveAttribute("data-mobile-panel", "details");
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+});
+
 test("map shares the historical time window with the timeline", async ({ page }) => {
   await page.goto("/explore?lang=en&view=map&from=-600&to=-500");
   await waitForMuseum(page);
@@ -665,16 +749,21 @@ test("Research exposes the quality audit and review queue filters", async ({ pag
   await expect(page.getByRole("heading", { name: "See what still blocks publication" })).toBeVisible();
   await expect(page.locator(".research-governance-status strong")).toHaveText("1535");
   await expect(page.getByRole("heading", { name: "Review queue" })).toBeVisible();
-  await expect(page.getByText("1109 subjects shown; all statuses are read-only.", { exact: true })).toBeVisible();
-  await expect(page.locator(".research-review-queue li")).toHaveCount(1109);
+  await expect(page.getByText("1109 subjects in scope · 60 on this page; all statuses are read-only.", { exact: true })).toBeVisible();
+  await expect(page.locator(".research-review-queue li")).toHaveCount(60);
   await expect(page.getByRole("link", { name: "Historical reviewer (0)", exact: true })).toBeVisible();
   await expect(page.getByRole("link", { name: "Accessibility editor (0)", exact: true })).toBeVisible();
 
   await page.getByRole("link", { name: "Show all", exact: true }).click();
   await expect(page).toHaveURL(/audit=all/);
-  await expect(page.getByText("1184 subjects shown; all statuses are read-only.", { exact: true })).toBeVisible();
-  await expect(page.locator(".research-review-queue li")).toHaveCount(1184);
+  await expect(page.getByText("1184 subjects in scope · 60 on this page; all statuses are read-only.", { exact: true })).toBeVisible();
+  await expect(page.locator(".research-review-queue li")).toHaveCount(60);
+  await page.getByLabel("Search review subjects").fill("figure:xuanzang");
+  await expect(page.locator(".research-review-queue li")).toHaveCount(1);
   await expect(page.getByText("figure:xuanzang", { exact: true })).toBeVisible();
+
+  await page.getByLabel("Search research entries").fill("Xuanzang");
+  await expect(page.locator("[data-research-result-count]")).toContainText(/\d+/);
 });
 
 test("search and entity deep links remain functional", async ({ page }) => {

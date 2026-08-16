@@ -31,11 +31,14 @@ export type GraphType = z.infer<typeof GraphTypeSchema>;
 export const MapLayerSchema = z.enum(["real", "cosmos"]);
 export type MapLayer = z.infer<typeof MapLayerSchema>;
 
-export const MapContentLayerSchema = z.enum(["places", "routes", "trajectories"]);
+export const MapContentLayerSchema = z.enum(["places", "routes", "trajectories", "memory"]);
 export type MapContentLayer = z.infer<typeof MapContentLayerSchema>;
 
 export const ZoomLevelSchema = z.enum(["era", "region", "figure", "all"]);
 export type ZoomLevel = z.infer<typeof ZoomLevelSchema>;
+
+export const GraphTierSchema = z.enum(["era", "group", "major", "all"]);
+export type GraphTier = z.infer<typeof GraphTierSchema>;
 
 export const RouteStateSchema = z.object({
   lang: LocaleSchema,
@@ -55,8 +58,9 @@ export const RouteStateSchema = z.object({
   graphType: GraphTypeSchema,
   depth: z.number().int().min(1).max(2),
   query: z.string().trim().max(120).optional(),
-  mapLayers: z.array(MapContentLayerSchema).max(3),
+  mapLayers: z.array(MapContentLayerSchema).max(4),
   zoomLevel: ZoomLevelSchema,
+  graphTier: GraphTierSchema,
   hall: z.string().trim().min(1).optional(),
   section: z.string().trim().min(1).optional(),
   mapLayer: MapLayerSchema,
@@ -87,8 +91,9 @@ export const DEFAULT_ROUTE_STATE: RouteState = {
   compare: [],
   graphType: "three-traditions",
   depth: 1,
-  mapLayers: ["places", "routes", "trajectories"],
+  mapLayers: ["places", "routes", "trajectories", "memory"],
   zoomLevel: "region",
+  graphTier: "group",
   mapLayer: "real",
 };
 
@@ -157,6 +162,7 @@ export function parseRouteState(search: string | URLSearchParams): RouteState {
     query: requestedQuery,
     mapLayers: hasExplicitMapLayers ? requestedMapLayers : DEFAULT_ROUTE_STATE.mapLayers,
     zoomLevel: firstEnum(params.get("zoom"), ZoomLevelSchema, DEFAULT_ROUTE_STATE.zoomLevel),
+    graphTier: firstEnum(params.get("graphTier"), GraphTierSchema, DEFAULT_ROUTE_STATE.graphTier),
     hall: params.get("hall")?.trim() || undefined,
     section: params.get("section")?.trim() || undefined,
     mapLayer,
@@ -189,6 +195,7 @@ export function serializeRouteState(state: RouteState): string {
   if (parsed.query) params.set("q", parsed.query);
   if (parsed.mapLayers.join(",") !== DEFAULT_ROUTE_STATE.mapLayers.join(",")) params.set("layers", parsed.mapLayers.join(","));
   if (parsed.zoomLevel !== DEFAULT_ROUTE_STATE.zoomLevel) params.set("zoom", parsed.zoomLevel);
+  if (parsed.graphTier !== DEFAULT_ROUTE_STATE.graphTier) params.set("graphTier", parsed.graphTier);
   if (parsed.hall) params.set("hall", parsed.hall);
   if (parsed.section) params.set("section", parsed.section);
   if (parsed.mapLayer !== DEFAULT_ROUTE_STATE.mapLayer) params.set("mapLayer", parsed.mapLayer);

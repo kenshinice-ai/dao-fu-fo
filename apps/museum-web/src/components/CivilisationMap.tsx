@@ -23,6 +23,8 @@ import {
   placeFigureContexts,
   relationStartYear,
 } from "../data/contextProjection";
+import { deriveFigureTrajectory } from "../data/figureTrajectory";
+import type { FigureTrajectoryWaypoint } from "../data/figureTrajectory";
 import { RelationNetwork } from "./RelationNetwork";
 import { entityPath } from "../routing";
 import { staticData } from "../data/staticData";
@@ -60,7 +62,7 @@ const TRADITION_COLORS: Record<Tradition | "convergence", string> = {
 
 const INITIAL_CENTER: LatLngExpression = [32.2, 99.8];
 const INITIAL_ZOOM = 3.8;
-const DEFAULT_MAP_LAYERS: MapContentLayer[] = ["places", "routes", "trajectories"];
+const DEFAULT_MAP_LAYERS: MapContentLayer[] = ["places", "routes", "trajectories", "memory"];
 
 function featureKey(feature: MuseumMapData["features"][number]): string {
   return `place:${feature.properties.slug}`;
@@ -116,6 +118,7 @@ function isUncertainCoordinate(value: string): boolean {
 function mapLayerLabel(layer: MapContentLayer, locale: Locale): string {
   if (layer === "places") return locale === "zh-CN" ? "地点" : "Places";
   if (layer === "routes") return locale === "zh-CN" ? "路线" : "Routes";
+  if (layer === "memory") return locale === "zh-CN" ? "后世记忆" : "Later memory";
   return locale === "zh-CN" ? "人物轨迹" : "Figure trajectories";
 }
 
@@ -201,7 +204,7 @@ function MapStatus({ locale }: { locale: Locale }) {
 }
 
 function MapLayerControl({ locale, layers, onChange }: { locale: Locale; layers: MapContentLayer[]; onChange?: (layers: MapContentLayer[]) => void }) {
-  const available: MapContentLayer[] = ["places", "routes", "trajectories"];
+  const available: MapContentLayer[] = ["places", "routes", "trajectories", "memory"];
   return (
     <fieldset className="civilisation-map-layers">
       <legend>{locale === "zh-CN" ? "地图图层" : "Map layers"}</legend>
@@ -253,6 +256,18 @@ export function CivilisationMap({
     () => focus?.startsWith("figure:") ? figurePlaceContexts(relations, focus).sort((a, b) => (relationStartYear(a.relation) ?? Number.MAX_SAFE_INTEGER) - (relationStartYear(b.relation) ?? Number.MAX_SAFE_INTEGER)) : [],
     [focus, relations],
   );
+  const figureTrajectory = useMemo(
+    () => focus?.startsWith("figure:")
+      ? deriveFigureTrajectory({
+        figureKey: focus,
+        relations: relations?.items ?? [],
+        places: data.features,
+        routes,
+        searchItems,
+      })
+      : undefined,
+    [data.features, focus, relations?.items, routes, searchItems],
+  );
   const focusEventPlaces = useMemo(
     () => focus?.startsWith("event:") ? eventPlaceContexts(relations, focus) : [],
     [focus, relations],
@@ -270,6 +285,7 @@ export function CivilisationMap({
           return endpoint ? ["route:" + endpoint.slug] : [];
         }) ?? [],
     );
+    for (const routeKey of figureTrajectory?.routeKeys ?? []) keys.add(routeKey);
     if (focus?.startsWith("figure:")) {
       const figureSlug = focus.slice("figure:".length);
       for (const route of routes) {
@@ -277,7 +293,7 @@ export function CivilisationMap({
       }
     }
     return keys;
-  }, [focus, relations, routes]);
+  }, [figureTrajectory?.routeKeys, focus, relations, routes]);
   const routeEntries = useMemo(() => routes.map((route) => ({
     route,
     points: routeWaypoints(route, featuresBySlug),
@@ -307,8 +323,8 @@ export function CivilisationMap({
   }, [traditionFeatures, zoomLevel]);
   const visibleFeatures = mapLayers.includes("places") ? visiblePlaceFeatures : [];
   const figurePlaceSlugs = useMemo(
-    () => figurePlaces.map((place) => place.placeKey.slice("place:".length)),
-    [figurePlaces],
+    () => figureTrajectory?.mapped.map((waypoint) => waypoint.placeSlug) ?? figurePlaces.map((place) => place.placeKey.slice("place:".length)),
+    [figurePlaces, figureTrajectory?.mapped],
   );
   const focusMapState = focus?.startsWith("figure:")
     ? figurePlaceSlugs.some((slug) => featuresBySlug.has(slug)) ? "mapped" : figurePlaceSlugs.length > 0 ? "position-pending" : undefined
@@ -318,17 +334,17 @@ export function CivilisationMap({
       const [latitude, longitude] = point as [number, number];
       return visibleFeatures.some((feature) => feature.geometry.coordinates[0] === longitude && feature.geometry.coordinates[1] === latitude);
     })) : [], [mapLayers, routeEntries, visibleFeatures]);
-  const trajectoryStops = useMemo(() => {
+  const trajectoryStops = useMemo<FigureTrajectoryWaypoint[]>(() => {
     if (!mapLayers.includes("trajectories")) return [];
-    const selectedRoute = visibleRoutes.find(({ route }) => selectedRouteKeys.has("route:" + route.slug));
-    if (selectedRoute) return selectedRoute.waypointFeatures;
-    return figurePlaces
-      .map((place) => featuresBySlug.get(place.placeKey.slice("place:".length)))
-      .filter((feature): feature is MuseumMapData["features"][number] => Boolean(feature));
-  }, [featuresBySlug, figurePlaces, mapLayers, selectedRouteKeys, visibleRoutes]);
+    return figureTrajectory?.mapped ?? [];
+  }, [figureTrajectory?.mapped, mapLayers]);
+  const memoryStops = useMemo(
+    () => figureTrajectory?.memory.filter((waypoint) => mapLayers.includes("memory") && waypoint.coordinates) ?? [],
+    [figureTrajectory?.memory, mapLayers],
+  );
   const pendingFigurePlaces = useMemo(
-    () => figurePlaces.filter((place) => !featuresBySlug.has(place.placeKey.slice("place:".length))),
-    [featuresBySlug, figurePlaces],
+    () => figureTrajectory?.unresolved ?? [],
+    [figureTrajectory?.unresolved],
   );
   useEffect(() => {
     setTrajectoryIndex((index) => Math.min(index, Math.max(0, trajectoryStops.length - 1)));
@@ -351,7 +367,16 @@ export function CivilisationMap({
   );
   const contextTitle = (key: string) => searchItems.find((item) => item.kind + ":" + item.slug === key)?.title
     ?? key.split(":").slice(1).join(":").replaceAll("-", " ");
-  const bounds = useMemo(() => mapBounds(visibleFeatures), [visibleFeatures]);
+  const trajectoryFeatures = useMemo(
+    () => trajectoryStops
+      .map((waypoint) => featuresBySlug.get(waypoint.placeSlug))
+      .filter((feature): feature is MuseumMapData["features"][number] => Boolean(feature)),
+    [featuresBySlug, trajectoryStops],
+  );
+  const bounds = useMemo(
+    () => focus?.startsWith("figure:") && trajectoryFeatures.length > 0 ? mapBounds(trajectoryFeatures) : mapBounds(visibleFeatures),
+    [focus, trajectoryFeatures, visibleFeatures],
+  );
   const target = useMemo(() => {
     if (focus?.startsWith("place:")) return featuresBySlug.get(focus.slice("place:".length));
     if (focus?.startsWith("event:")) {
@@ -369,6 +394,8 @@ export function CivilisationMap({
       data-map-zoom-level={zoomLevel}
       data-map-visible-places={visibleFeatures.length}
       data-map-visible-routes={visibleRoutes.length}
+      data-map-visible-trajectories={trajectoryStops.length}
+      data-map-visible-memory={memoryStops.length}
     >
       <MapContainer
         className="civilisation-map-leaflet"
@@ -408,10 +435,13 @@ export function CivilisationMap({
           );
         })}
 
-        {focus?.startsWith("figure:") ? trajectoryStops.map((feature, index) => (
+        {focus?.startsWith("figure:") ? trajectoryStops.map((waypoint, index) => {
+          if (!waypoint.coordinates) return null;
+          const [longitude, latitude] = waypoint.coordinates;
+          return (
           <CircleMarker
-            key={"trajectory-" + feature.id}
-            center={[feature.geometry.coordinates[1], feature.geometry.coordinates[0]]}
+            key={"trajectory-" + waypoint.id}
+            center={[latitude, longitude]}
             radius={7}
             pathOptions={{
               color: "#b17f2d",
@@ -419,13 +449,32 @@ export function CivilisationMap({
               fillOpacity: 1,
               weight: 3,
             }}
-            eventHandlers={{ click: () => onFocus?.(featureKey(feature), null) }}
+            eventHandlers={{ click: () => onFocus?.(waypoint.placeKey, null) }}
           >
             <Tooltip direction="top" offset={[0, -7]} opacity={0.98}>
-              {(index + 1) + ". " + feature.properties.title}
+              {(index + 1) + ". " + waypoint.placeTitle + (waypoint.reconstructed ? (locale === "zh-CN" ? " · 路线重建" : " · reconstructed route") : "")}
             </Tooltip>
           </CircleMarker>
-        )) : null}
+          );
+        }) : null}
+
+        {focus?.startsWith("figure:") ? memoryStops.map((waypoint) => {
+          if (!waypoint.coordinates) return null;
+          const [longitude, latitude] = waypoint.coordinates;
+          return (
+            <CircleMarker
+              key={"memory-" + waypoint.id}
+              center={[latitude, longitude]}
+              radius={8}
+              pathOptions={{ color: "#745b82", fillColor: "#f8f1fb", fillOpacity: 0.9, weight: 2, dashArray: "3 4" }}
+              eventHandlers={{ click: () => onFocus?.(waypoint.placeKey, null) }}
+            >
+              <Tooltip direction="top" offset={[0, -8]} opacity={0.98}>
+                {waypoint.placeTitle + (locale === "zh-CN" ? " · 后世记忆" : " · later memory")}
+              </Tooltip>
+            </CircleMarker>
+          );
+        }) : null}
 
         {visibleFeatures.map((feature) => {
           const key = featureKey(feature);
@@ -473,6 +522,7 @@ export function CivilisationMap({
           <li><span className="map-legend-swatch map-legend-place" aria-hidden="true" />{locale === "zh-CN" ? "现实地点" : "Real place"}</li>
           <li><span className="map-legend-swatch map-legend-route" aria-hidden="true" />{locale === "zh-CN" ? "路线或空间连接" : "Route or spatial connection"}</li>
           <li><span className="map-legend-swatch map-legend-trajectory" aria-hidden="true" />{locale === "zh-CN" ? "人物轨迹节点" : "Figure trajectory stop"}</li>
+          <li><span className="map-legend-swatch map-legend-memory" aria-hidden="true" />{locale === "zh-CN" ? "后世记忆地点（不等于历史行迹）" : "Later memory site (not a historical stop)"}</li>
           <li><span className="map-legend-swatch map-legend-uncertain" aria-hidden="true" />{locale === "zh-CN" ? "虚线／半透明：位置或路线待核" : "Dashed or translucent: unresolved position or route"}</li>
         </ul>
       </details>
@@ -594,6 +644,7 @@ export function CivilisationMap({
             <span>
               {trajectoryStops.length} {locale === "zh-CN" ? "个可定位节点" : "mapped stops"}
               {pendingFigurePlaces.length > 0 ? ` · ${pendingFigurePlaces.length} ${locale === "zh-CN" ? "个地点待核" : "pending places"}` : ""}
+              {figureTrajectory?.routeKeys.length ? ` · ${figureTrajectory.routeKeys.length} ${locale === "zh-CN" ? "条路线证据" : "route evidence"}` : ""}
             </span>
           </div>
           {focusedFigure ? (
@@ -624,32 +675,48 @@ export function CivilisationMap({
             <div className="map-trajectory-controls" aria-label={locale === "zh-CN" ? "按顺序查看人物轨迹" : "Step through figure trajectory"}>
               <span>{locale === "zh-CN" ? `第 ${trajectoryIndex + 1} / ${trajectoryStops.length} 个节点` : `Stop ${trajectoryIndex + 1} of ${trajectoryStops.length}`}</span>
               <div>
-                <button type="button" disabled={trajectoryIndex <= 0} onClick={() => { const next = Math.max(0, trajectoryIndex - 1); setTrajectoryIndex(next); onFocus?.(featureKey(trajectoryStops[next]), null); }}>{locale === "zh-CN" ? "上一步" : "Previous stop"}</button>
-                <button type="button" disabled={trajectoryIndex >= trajectoryStops.length - 1} onClick={() => { const next = Math.min(trajectoryStops.length - 1, trajectoryIndex + 1); setTrajectoryIndex(next); onFocus?.(featureKey(trajectoryStops[next]), null); }}>{locale === "zh-CN" ? "下一步" : "Next stop"}</button>
+                <button type="button" disabled={trajectoryIndex <= 0} onClick={() => { const next = Math.max(0, trajectoryIndex - 1); setTrajectoryIndex(next); onFocus?.(trajectoryStops[next].placeKey, null); }}>{locale === "zh-CN" ? "上一步" : "Previous stop"}</button>
+                <button type="button" disabled={trajectoryIndex >= trajectoryStops.length - 1} onClick={() => { const next = Math.min(trajectoryStops.length - 1, trajectoryIndex + 1); setTrajectoryIndex(next); onFocus?.(trajectoryStops[next].placeKey, null); }}>{locale === "zh-CN" ? "下一步" : "Next stop"}</button>
               </div>
             </div>
           ) : null}
           <ol className="map-trajectory-list">
             {trajectoryStops.map((feature, index) => (
-              <li key={feature.id}>
-                <button type="button" onClick={() => onFocus?.(featureKey(feature), null)}>{index + 1}. {feature.properties.title}</button>
-                <span>{feature.properties.placeReality} · {feature.properties.coordinateConfidence}</span>
+              <li key={feature.id} data-trajectory-role={feature.role} data-trajectory-reconstructed={feature.reconstructed ? "true" : "false"}>
+                <button type="button" onClick={() => onFocus?.(feature.placeKey, null)}>{index + 1}. {feature.placeTitle}</button>
+                <span>{feature.role === "route" ? (locale === "zh-CN" ? "路线区域锚点" : "Route anchor") : feature.role === "event" ? (locale === "zh-CN" ? "事件地点" : "Event place") : feature.role === "birth" ? (locale === "zh-CN" ? "出生地" : "Birthplace") : (locale === "zh-CN" ? "活动／经过" : "Activity / travel")} · {feature.reconstructed ? (locale === "zh-CN" ? "重建" : "Reconstructed") : (locale === "zh-CN" ? "关系投影" : "Relational projection")}</span>
+                <small>{feature.time?.displayDate ?? (locale === "zh-CN" ? "年代未定" : "Date unresolved")} · {formatEvidenceLine(feature.evidenceLayer, feature.confidence, locale)}</small>
               </li>
             ))}
           </ol>
+          {figureTrajectory?.memory.length ? (
+            <section className="map-context-subsection figure-memory-panel" data-figure-memory aria-labelledby="figure-memory-title">
+              <p className="eyebrow">{locale === "zh-CN" ? "后世记忆层" : "Later memory layer"}</p>
+              <h3 id="figure-memory-title">{locale === "zh-CN" ? "记忆地点不等于人物行迹" : "Memory sites are not historical stops"}</h3>
+              <ul className="map-trajectory-list">
+                {figureTrajectory.memory.map((waypoint) => (
+                  <li key={waypoint.id} data-memory-place={waypoint.placeSlug}>
+                    <button type="button" onClick={() => onFocus?.(waypoint.placeKey, null)}>{waypoint.placeTitle}</button>
+                    <span>{waypoint.label}</span>
+                    <small>{waypoint.time?.displayDate ?? (locale === "zh-CN" ? "后世记忆；年代未定" : "Later memory; date unresolved")} · {formatEvidenceLine(waypoint.evidenceLayer, waypoint.confidence, locale)}</small>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ) : null}
           {pendingFigurePlaces.length > 0 ? (
             <section className="map-context-subsection map-pending-place-list" data-map-pending-places aria-labelledby="map-pending-place-title">
               <p className="eyebrow">{locale === "zh-CN" ? "未落到现实坐标的关联地点" : "Related places without a map coordinate"}</p>
               <h3 id="map-pending-place-title">{locale === "zh-CN" ? "保留关系，不伪造位置" : "Keep the relation, do not fabricate a point"}</h3>
               <ul className="map-trajectory-list">
                 {pendingFigurePlaces.map((place) => (
-                  <li key={place.placeKey}>
+                  <li key={place.id}>
                     <div>
-                      <strong>{contextTitle(place.placeKey)}</strong>
-                      <span>{place.relation.label}</span>
-                      <small>{locale === "zh-CN" ? "地点实体存在，但当前没有可绘制的现实坐标" : "The place entity exists, but no drawable real-world coordinate is published yet"}{" · "}{formatEvidenceLine(place.relation.evidenceLayer, place.relation.confidence, locale)}</small>
+                      <strong>{place.placeTitle}</strong>
+                      <span>{place.label}</span>
+                      <small>{locale === "zh-CN" ? "地点实体存在，但当前没有可绘制的现实坐标" : "The place entity exists, but no drawable real-world coordinate is published yet"}{" · "}{formatEvidenceLine(place.evidenceLayer, place.confidence, locale)}</small>
                     </div>
-                    <Link to={entityPath("place", place.placeKey.slice("place:".length), locale)}>{locale === "zh-CN" ? "地点档案" : "Dossier"}</Link>
+                    <Link to={entityPath("place", place.placeSlug, locale)}>{locale === "zh-CN" ? "地点档案" : "Dossier"}</Link>
                   </li>
                 ))}
               </ul>

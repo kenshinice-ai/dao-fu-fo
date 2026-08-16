@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { ErrorState, LoadingState } from "../components/LoadingState";
 import { TraditionMark } from "../components/TraditionMark";
@@ -7,10 +7,19 @@ import { formatEntityKind } from "../data/labels";
 import { staticData } from "../data/staticData";
 import { useStaticData } from "../data/useStaticData";
 import { entityPath } from "../routing";
-import type { ContentQualityReport, ReadModelReviewQueue } from "@drf-museum/domain-schema";
-import type { EntityKind, SearchItem, SourceIndexData } from "../types";
+import type { ContentQualityReport, ReadModelReviewQueue, ReviewCheckKind } from "@drf-museum/domain-schema";
+import type { EntityKind, SearchItem, SourceIndexData, Tradition } from "../types";
 
-type AuditMode = "blocking" | "all";
+type AuditMode = "blocking" | "warning" | "all";
+type ReviewSubjectFilter = "all" | "entity" | "relation" | "audio";
+type ReviewCheckFilter = "all" | ReviewCheckKind;
+
+const RESEARCH_PAGE_SIZE = 60;
+const reviewCheckKinds: ReviewCheckKind[] = ["schema", "fact", "tradition", "bilingual", "rights", "accessibility", "editorial"];
+const researchEntityKinds: EntityKind[] = [
+  "tradition", "figure", "text", "text_version", "passage", "concept", "school", "institution", "practice", "place", "event", "route", "museum_object",
+];
+const researchTraditions: Array<SearchItem["tradition"]> = ["daoism", "confucianism", "buddhism", "convergence"];
 const reviewerRoles = [
   { id: "role:historical-reviewer", zh: "历史审核", en: "Historical reviewer" },
   { id: "role:tradition-reviewer", zh: "传统审核", en: "Tradition reviewer" },
@@ -37,9 +46,20 @@ export function ResearchPage() {
   const { locale } = useMuseumContext();
   const [params] = useSearchParams();
   const sourceFocus = params.get("source")?.trim() || undefined;
-  const auditMode: AuditMode = params.get("audit") === "all" ? "all" : "blocking";
+  const auditParam = params.get("audit");
+  const auditMode: AuditMode = auditParam === "all" ? "all" : auditParam === "warning" ? "warning" : "blocking";
   const reviewerParam = params.get("reviewer")?.trim() || undefined;
   const reviewerFocus = isReviewerRole(reviewerParam) ? reviewerParam : undefined;
+  const [entryQuery, setEntryQuery] = useState(() => params.get("q")?.trim() ?? "");
+  const [entryKind, setEntryKind] = useState<EntityKind | "all">(() => {
+    const value = params.get("entity")?.trim();
+    return value && researchEntityKinds.includes(value as EntityKind) ? value as EntityKind : "all";
+  });
+  const [entryTradition, setEntryTradition] = useState<SearchItem["tradition"] | "all">(() => {
+    const value = params.get("tradition")?.trim();
+    return value && researchTraditions.includes(value as SearchItem["tradition"]) ? value as SearchItem["tradition"] : "all";
+  });
+  const [entryPage, setEntryPage] = useState(1);
   const loader = useCallback(async (signal: AbortSignal): Promise<ResearchData> => {
     const [search, sources, quality, reviewQueue] = await Promise.all([
       staticData.searchIndex(locale, signal),
@@ -50,14 +70,33 @@ export function ResearchPage() {
     return { search, sources, quality, reviewQueue };
   }, [locale]);
   const { data, error } = useStaticData(loader);
-  const grouped = useMemo(() => {
+  const filteredEntries = useMemo(() => {
+    const query = entryQuery.trim().toLocaleLowerCase();
+    return (data?.search.items ?? []).filter((item) => {
+      if (entryKind !== "all" && item.kind !== entryKind) return false;
+      if (entryTradition !== "all" && item.tradition !== entryTradition) return false;
+      if (!query) return true;
+      return [item.title, item.context, item.slug, item.kind, item.tradition].some((value) => value.toLocaleLowerCase().includes(query));
+    });
+  }, [data, entryKind, entryQuery, entryTradition]);
+  const entryPageCount = Math.max(1, Math.ceil(filteredEntries.length / RESEARCH_PAGE_SIZE));
+  const visibleEntryItems = filteredEntries.slice((entryPage - 1) * RESEARCH_PAGE_SIZE, entryPage * RESEARCH_PAGE_SIZE);
+  const filteredGrouped = useMemo(() => {
     const result = new Map<keyof typeof evidenceCopy, SearchItem[]>();
-    for (const item of data?.search.items ?? []) {
+    for (const item of filteredEntries) {
       const key = evidenceBucket(item);
       result.set(key, [...(result.get(key) ?? []), item]);
     }
     return result;
-  }, [data]);
+  }, [filteredEntries]);
+  const grouped = useMemo(() => {
+    const result = new Map<keyof typeof evidenceCopy, SearchItem[]>();
+    for (const item of visibleEntryItems) {
+      const key = evidenceBucket(item);
+      result.set(key, [...(result.get(key) ?? []), item]);
+    }
+    return result;
+  }, [visibleEntryItems]);
   const visibleSources = useMemo(() => {
     if (!data) return [];
     if (!sourceFocus) return data.sources.items;
@@ -68,6 +107,10 @@ export function ResearchPage() {
     if (!sourceFocus || !data) return;
     document.getElementById(sourceAnchor(sourceFocus))?.scrollIntoView({ block: "start", behavior: "smooth" });
   }, [data, sourceFocus]);
+
+  useEffect(() => {
+    if (entryPage > entryPageCount) setEntryPage(entryPageCount);
+  }, [entryPage, entryPageCount]);
 
   if (error) return <ErrorState locale={locale} error={error} />;
   if (!data) return <LoadingState locale={locale} />;
@@ -82,9 +125,52 @@ export function ResearchPage() {
 
       <div className="research-layout">
         <div className="research-ledger">
+          <section className="research-directory-controls" aria-labelledby="research-directory-title">
+            <div className="research-directory-heading">
+              <div>
+                <p className="eyebrow">{locale === "zh-CN" ? "可检索目录" : "Searchable directory"}</p>
+                <h2 id="research-directory-title">{locale === "zh-CN" ? "按证据层缩小研究范围" : "Narrow the research surface"}</h2>
+              </div>
+              <strong data-research-result-count>{filteredEntries.length}</strong>
+            </div>
+            <div className="research-directory-filter-grid">
+              <label>
+                {locale === "zh-CN" ? "搜索条目" : "Search entries"}
+                <input
+                  aria-label={locale === "zh-CN" ? "搜索研究条目" : "Search research entries"}
+                  value={entryQuery}
+                  onChange={(event) => { setEntryQuery(event.target.value); setEntryPage(1); }}
+                  placeholder={locale === "zh-CN" ? "标题、上下文或 slug" : "Title, context or slug"}
+                />
+              </label>
+              <label>
+                {locale === "zh-CN" ? "实体类型" : "Entity type"}
+                <select aria-label={locale === "zh-CN" ? "研究实体类型" : "Research entity type"} value={entryKind} onChange={(event) => { setEntryKind(event.target.value as EntityKind | "all"); setEntryPage(1); }}>
+                  <option value="all">{locale === "zh-CN" ? "全部类型" : "All entity types"}</option>
+                  {researchEntityKinds.map((kind) => <option key={kind} value={kind}>{formatEntityKind(kind, locale)}</option>)}
+                </select>
+              </label>
+              <label>
+                {locale === "zh-CN" ? "传统" : "Tradition"}
+                <select aria-label={locale === "zh-CN" ? "研究传统" : "Research tradition"} value={entryTradition} onChange={(event) => { setEntryTradition(event.target.value as SearchItem["tradition"] | "all"); setEntryPage(1); }}>
+                  <option value="all">{locale === "zh-CN" ? "全部传统" : "All traditions"}</option>
+                  {researchTraditions.map((tradition) => <option key={tradition} value={tradition}>{formatTraditionLabel(tradition, locale)}</option>)}
+                </select>
+              </label>
+              <button className="button button-secondary research-filter-reset" type="button" onClick={() => { setEntryQuery(""); setEntryKind("all"); setEntryTradition("all"); setEntryPage(1); }}>
+                {locale === "zh-CN" ? "重置目录" : "Reset directory"}
+              </button>
+            </div>
+            <p className="research-directory-summary" aria-live="polite">
+              {locale === "zh-CN"
+                ? `当前范围 ${filteredEntries.length} 项 · 显示第 ${filteredEntries.length === 0 ? 0 : (entryPage - 1) * RESEARCH_PAGE_SIZE + 1}–${Math.min(entryPage * RESEARCH_PAGE_SIZE, filteredEntries.length)} 项`
+                : `${filteredEntries.length} entries in scope · showing ${filteredEntries.length === 0 ? 0 : (entryPage - 1) * RESEARCH_PAGE_SIZE + 1}–${Math.min(entryPage * RESEARCH_PAGE_SIZE, filteredEntries.length)}`}
+            </p>
+          </section>
           {Object.entries(evidenceCopy).map(([key, copy]) => {
             const bucket = key as keyof typeof evidenceCopy;
             const items = grouped.get(bucket) ?? [];
+            const totalItems = filteredGrouped.get(bucket)?.length ?? 0;
             return (
               <section className="research-bucket" key={bucket}>
                 <div className="research-bucket-heading">
@@ -93,7 +179,7 @@ export function ResearchPage() {
                     <p className="eyebrow">{locale === "zh-CN" ? copy.zh : copy.en}</p>
                     <p>{locale === "zh-CN" ? copy.detailZh : copy.detailEn}</p>
                   </div>
-                  <strong>{items.length}</strong>
+                  <strong>{totalItems}</strong>
                 </div>
                 <ul>
                   {items.map((item) => (
@@ -110,6 +196,10 @@ export function ResearchPage() {
               </section>
             );
           })}
+
+          {entryPageCount > 1 ? (
+            <ResearchPagination currentPage={entryPage} pageCount={entryPageCount} locale={locale} onPage={setEntryPage} label={locale === "zh-CN" ? "研究条目分页" : "Research entry pages"} />
+          ) : null}
 
           <section className="research-sources" aria-labelledby="source-ledger-title">
             <div className="research-sources-heading">
@@ -193,10 +283,28 @@ function ResearchGovernance({
   reviewerFocus?: ReviewerRole;
   reviewQueue: ReadModelReviewQueue;
 }) {
+  const [reviewQuery, setReviewQuery] = useState("");
+  const [reviewSubject, setReviewSubject] = useState<ReviewSubjectFilter>("all");
+  const [reviewCheck, setReviewCheck] = useState<ReviewCheckFilter>("all");
+  const [reviewPage, setReviewPage] = useState(1);
   const reviewerReviews = reviewerFocus
     ? reviewQueue.items.filter((item) => item.checks.some((check) => check.reviewer === reviewerFocus))
     : reviewQueue.items;
-  const visibleReviews = auditMode === "all" ? reviewerReviews : reviewerReviews.filter((item) => item.blocking);
+  const statusReviews = auditMode === "all"
+    ? reviewerReviews
+    : auditMode === "warning"
+      ? reviewerReviews.filter((item) => !item.blocking)
+      : reviewerReviews.filter((item) => item.blocking);
+  const filteredReviews = statusReviews.filter((item) => {
+    if (reviewSubject !== "all" && item.subjectKind !== reviewSubject) return false;
+    if (reviewCheck !== "all" && ![...item.missingChecks, ...item.failedChecks].includes(reviewCheck)) return false;
+    const query = reviewQuery.trim().toLocaleLowerCase();
+    if (!query) return true;
+    return [item.subjectKey, item.subjectKind, item.publicationState, item.reviewStatus, ...item.missingChecks, ...item.failedChecks]
+      .some((value) => value.toLocaleLowerCase().includes(query));
+  });
+  const reviewPageCount = Math.max(1, Math.ceil(filteredReviews.length / RESEARCH_PAGE_SIZE));
+  const visibleReviews = filteredReviews.slice((reviewPage - 1) * RESEARCH_PAGE_SIZE, reviewPage * RESEARCH_PAGE_SIZE);
   const blockingReviews = reviewQueue.items.filter((item) => item.blocking).length;
   const blockerBreakdown = countLabels(quality.publicBlockers.map((item) => item.code));
   const checkBreakdown = countLabels(reviewQueue.items.flatMap((item) => item.missingChecks));
@@ -206,6 +314,11 @@ function ResearchGovernance({
     return `/research?${query.toString()}`;
   };
   const copy = locale === "zh-CN";
+
+  useEffect(() => setReviewPage(1), [auditMode, reviewerFocus, reviewCheck, reviewQuery, reviewSubject]);
+  useEffect(() => {
+    if (reviewPage > reviewPageCount) setReviewPage(reviewPageCount);
+  }, [reviewPage, reviewPageCount]);
 
   return (
     <section className="research-governance" aria-labelledby="research-quality-title">
@@ -263,11 +376,12 @@ function ResearchGovernance({
         <div>
           <p className="eyebrow">{copy ? "逐项审核" : "Review subjects"}</p>
           <h3>{copy ? "审核队列" : "Review queue"}</h3>
-          <p>{copy ? `当前显示 ${visibleReviews.length} 项${reviewerFocus ? ` · ${reviewerLabel(reviewerFocus, locale)}` : ""}；所有状态保持只读。` : `${visibleReviews.length} subjects shown${reviewerFocus ? ` · ${reviewerLabel(reviewerFocus, locale)}` : ""}; all statuses are read-only.`}</p>
+          <p data-research-review-range>{copy ? `当前范围 ${filteredReviews.length} 项 · 本页显示 ${visibleReviews.length} 项${reviewerFocus ? ` · ${reviewerLabel(reviewerFocus, locale)}` : ""}；所有状态保持只读。` : `${filteredReviews.length} subjects in scope · ${visibleReviews.length} on this page${reviewerFocus ? ` · ${reviewerLabel(reviewerFocus, locale)}` : ""}; all statuses are read-only.`}</p>
         </div>
         <div className="research-review-filter-stack">
           <nav className="research-audit-filters" aria-label={copy ? "审核状态筛选" : "Review status filters"}>
             <Link className={auditMode === "blocking" ? "is-active" : ""} to={path("blocking")}>{copy ? "只看阻塞项" : "Blocking only"}</Link>
+            <Link className={auditMode === "warning" ? "is-active" : ""} to={path("warning")}>{copy ? "只看警告" : "Warnings"}</Link>
             <Link className={auditMode === "all" ? "is-active" : ""} to={path("all")}>{copy ? "显示全部" : "Show all"}</Link>
           </nav>
           <nav className="research-audit-filters" aria-label={copy ? "审核角色筛选" : "Reviewer role filters"}>
@@ -279,6 +393,29 @@ function ResearchGovernance({
             ))}
           </nav>
         </div>
+      </div>
+
+      <div className="research-review-controls">
+        <label>
+          {copy ? "搜索审核 subject" : "Search review subjects"}
+          <input aria-label={copy ? "搜索审核 subject" : "Search review subjects"} value={reviewQuery} onChange={(event) => setReviewQuery(event.target.value)} placeholder={copy ? "subject key、状态或审核项" : "Subject key, status or check"} />
+        </label>
+        <label>
+          {copy ? "审核类型" : "Blocker type"}
+          <select aria-label={copy ? "审核类型" : "Blocker type"} value={reviewCheck} onChange={(event) => setReviewCheck(event.target.value as ReviewCheckFilter)}>
+            <option value="all">{copy ? "全部审核项" : "All checks"}</option>
+            {reviewCheckKinds.map((kind) => <option key={kind} value={kind}>{formatAuditLabel(kind, locale)}</option>)}
+          </select>
+        </label>
+        <label>
+          {copy ? "subject 类型" : "Subject type"}
+          <select aria-label={copy ? "审核 subject 类型" : "Review subject type"} value={reviewSubject} onChange={(event) => setReviewSubject(event.target.value as ReviewSubjectFilter)}>
+            <option value="all">{copy ? "全部类型" : "All subject types"}</option>
+            <option value="entity">{formatAuditLabel("entity", locale)}</option>
+            <option value="relation">{formatAuditLabel("relation", locale)}</option>
+            <option value="audio">{formatAuditLabel("audio", locale)}</option>
+          </select>
+        </label>
       </div>
 
       <ul className="research-review-queue">
@@ -309,7 +446,32 @@ function ResearchGovernance({
           );
         })}
       </ul>
+      {reviewPageCount > 1 ? (
+        <ResearchPagination currentPage={reviewPage} pageCount={reviewPageCount} locale={locale} onPage={setReviewPage} label={copy ? "审核队列分页" : "Review queue pages"} />
+      ) : null}
     </section>
+  );
+}
+
+function ResearchPagination({
+  currentPage,
+  pageCount,
+  locale,
+  onPage,
+  label,
+}: {
+  currentPage: number;
+  pageCount: number;
+  locale: "zh-CN" | "en";
+  onPage: (page: number) => void;
+  label: string;
+}) {
+  return (
+    <nav className="research-pagination" aria-label={label}>
+      <button type="button" disabled={currentPage <= 1} onClick={() => onPage(Math.max(1, currentPage - 1))}>{locale === "zh-CN" ? "上一页" : "Previous"}</button>
+      <span>{locale === "zh-CN" ? `第 ${currentPage} / ${pageCount} 页` : `Page ${currentPage} of ${pageCount}`}</span>
+      <button type="button" disabled={currentPage >= pageCount} onClick={() => onPage(Math.min(pageCount, currentPage + 1))}>{locale === "zh-CN" ? "下一页" : "Next"}</button>
+    </nav>
   );
 }
 
@@ -340,6 +502,16 @@ function reviewerLabel(value: ReviewerRole, locale: "zh-CN" | "en"): string {
 
 function reviewerCount(reviewQueue: ReadModelReviewQueue, reviewer: ReviewerRole): number {
   return reviewQueue.items.filter((item) => item.checks.some((check) => check.reviewer === reviewer)).length;
+}
+
+function formatTraditionLabel(value: Tradition | "convergence", locale: "zh-CN" | "en"): string {
+  const labels: Record<Tradition | "convergence", { zh: string; en: string }> = {
+    daoism: { zh: "道家 / 道教", en: "Daoism" },
+    confucianism: { zh: "儒家", en: "Confucianism" },
+    buddhism: { zh: "佛教", en: "Buddhism" },
+    convergence: { zh: "交汇", en: "Convergence" },
+  };
+  return labels[value][locale === "zh-CN" ? "zh" : "en"];
 }
 
 function formatAuditLabel(value: string, locale: "zh-CN" | "en"): string {

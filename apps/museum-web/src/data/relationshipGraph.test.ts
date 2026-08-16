@@ -4,9 +4,9 @@ import { buildRelationshipGraph, graphTierForZoomLevel, zoomLevelForGraphTier } 
 import type { SearchItem } from "../types";
 
 const searchItems: SearchItem[] = [
-  { kind: "figure", slug: "a", title: "甲", context: "A", tradition: "daoism" },
-  { kind: "figure", slug: "b", title: "乙", context: "B", tradition: "confucianism" },
-  { kind: "figure", slug: "c", title: "丙", context: "C", tradition: "buddhism" },
+  { kind: "figure", slug: "a", title: "甲", context: "A", tradition: "daoism", timeRange: { startYear: 600, endYear: 650 } },
+  { kind: "figure", slug: "b", title: "乙", context: "B", tradition: "confucianism", timeRange: { startYear: 700, endYear: 750 } },
+  { kind: "figure", slug: "c", title: "丙", context: "C", tradition: "buddhism", timeRange: { startYear: 800, endYear: 850 } },
   { kind: "figure", slug: "d", title: "丁", context: "D", tradition: "daoism" },
   { kind: "place", slug: "luoyang", title: "洛阳", context: "Place", tradition: "convergence" },
 ];
@@ -32,6 +32,8 @@ const cd = relation("cd", { kind: "figure", slug: "c" }, { kind: "figure", slug:
 const received = relation("received", { kind: "figure", slug: "a" }, { kind: "figure", slug: "c" }, "received_by");
 const aPlace = relation("a-place", { kind: "figure", slug: "a" }, { kind: "place", slug: "luoyang" }, "active_in");
 const cPlace = relation("c-place", { kind: "figure", slug: "c" }, { kind: "place", slug: "luoyang" }, "active_in");
+const dated = { ...aa, id: "relation:dated", temporalAssertions: [{ predicate: "activity", timeType: "exact", startYear: 620, endYear: 620, displayDate: "620", confidence: "high", evidenceLayer: "historical_documented", sourceId: "source:test" }] } as typeof aa;
+const undated = { ...bc, id: "relation:undated" } as typeof bc;
 
 describe("relationship graph projection", () => {
   it("keeps person edges separate from location edges", () => {
@@ -111,11 +113,45 @@ describe("relationship graph projection", () => {
     expect(model.nodes.every((node) => node.kind === "person")).toBe(true);
   });
 
-  it("maps the existing URL zoom state to graph tiers without adding a second route state", () => {
+  it("maps the existing URL zoom state to graph tiers for legacy callers", () => {
     expect(graphTierForZoomLevel("era")).toBe("era");
     expect(graphTierForZoomLevel("region")).toBe("group");
     expect(graphTierForZoomLevel("figure")).toBe("major");
     expect(zoomLevelForGraphTier("all")).toBe("all");
     expect(zoomLevelForGraphTier("group")).toBe("region");
+  });
+
+  it("marks time-window edges without removing an out-of-window focus", () => {
+    const model = buildRelationshipGraph({
+      relations: [dated, undated],
+      scopeRelations: [dated, undated],
+      searchItems,
+      focus: "figure:a",
+      traditions: ["daoism", "confucianism", "buddhism"],
+      tier: "all",
+      locale: "zh-CN",
+      from: 700,
+      to: 720,
+    });
+
+    expect(model.nodes.some((node) => node.id === "figure:a" && node.outsideTimeRange)).toBe(true);
+    expect(model.edges.find((edge) => edge.relationIds.includes("relation:dated"))?.timeStatus).toBe("outside");
+    expect(model.edges.find((edge) => edge.relationIds.includes("relation:undated"))?.timeStatus).toBe("undated");
+    expect(model.relationRows).toHaveLength(2);
+  });
+
+  it("keeps a stable node and edge order for the same read model", () => {
+    const input: Parameters<typeof buildRelationshipGraph>[0] = {
+      relations: [cd, aa, bc],
+      scopeRelations: [cd, aa, bc],
+      searchItems,
+      traditions: ["daoism", "confucianism", "buddhism"],
+      tier: "all",
+      locale: "zh-CN",
+    };
+    const first = buildRelationshipGraph(input);
+    const second = buildRelationshipGraph(input);
+    expect(first.nodes.map((node) => node.id)).toEqual(second.nodes.map((node) => node.id));
+    expect(first.edges.map((edge) => edge.id)).toEqual(second.edges.map((edge) => edge.id));
   });
 });

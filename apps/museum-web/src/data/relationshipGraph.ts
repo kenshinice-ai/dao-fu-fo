@@ -5,6 +5,7 @@ import type { SearchItem, Tradition } from "../types";
 export type RelationshipGraphTier = "era" | "group" | "major" | "all";
 export type RelationshipGraphNodeKind = "era" | "group" | "person";
 export type RelationshipGraphTone = "influence" | "contemporary" | "reception" | "comparison" | "other";
+export type RelationshipGraphTimeStatus = "overlap" | "outside" | "undated";
 
 export interface RelationshipGraphNode {
   id: string;
@@ -19,6 +20,7 @@ export interface RelationshipGraphNode {
   importance: number;
   x: number;
   y: number;
+  outsideTimeRange: boolean;
 }
 
 export interface RelationshipGraphEdge {
@@ -32,6 +34,7 @@ export interface RelationshipGraphEdge {
   summary: string;
   tone: RelationshipGraphTone;
   directed: boolean;
+  timeStatus: RelationshipGraphTimeStatus;
 }
 
 export interface RelationshipGraphModel {
@@ -109,9 +112,29 @@ function edgeKey(source: string, target: string, relationType: string): string {
   return `${ordered[0]}|${ordered[1]}|${relationType}`;
 }
 
+function relationTimeStatus(relation: ReadModelRelation, from?: number, to?: number): RelationshipGraphTimeStatus {
+  if (relation.temporalAssertions.length === 0) return "undated";
+  if (from === undefined && to === undefined) return "overlap";
+  const windowStart = from ?? Number.NEGATIVE_INFINITY;
+  const windowEnd = to ?? Number.POSITIVE_INFINITY;
+  return relation.temporalAssertions.some((assertion) => {
+    if (assertion.startYear === undefined) return false;
+    const assertionEnd = assertion.endYear ?? assertion.startYear;
+    return assertionEnd >= windowStart && assertion.startYear <= windowEnd;
+  }) ? "overlap" : "outside";
+}
+
+function mergeTimeStatus(statuses: RelationshipGraphTimeStatus[]): RelationshipGraphTimeStatus {
+  if (statuses.includes("overlap")) return "overlap";
+  if (statuses.includes("undated")) return "undated";
+  return "outside";
+}
+
 function aggregateEdges(
   relations: ReadModelRelation[],
   nodeMap: Map<string, string>,
+  from?: number,
+  to?: number,
 ): RelationshipGraphEdge[] {
   const buckets = new Map<string, { source: string; target: string; relations: ReadModelRelation[] }>();
   for (const relation of relations) {
@@ -138,6 +161,7 @@ function aggregateEdges(
       summary: first.summary,
       tone: relationTone(first.relationType),
       directed: isDirected(first.relationType),
+      timeStatus: mergeTimeStatus(bucket.relations.map((relation) => relationTimeStatus(relation, from, to))),
     } satisfies RelationshipGraphEdge;
   });
 }
@@ -163,6 +187,8 @@ export function buildRelationshipGraph({
   traditions,
   tier,
   locale,
+  from,
+  to,
 }: {
   relations: ReadModelRelation[];
   scopeRelations: ReadModelRelation[];
@@ -171,6 +197,8 @@ export function buildRelationshipGraph({
   traditions: Tradition[];
   tier: RelationshipGraphTier;
   locale: "zh-CN" | "en";
+  from?: number;
+  to?: number;
 }): RelationshipGraphModel {
   const searchMap = new Map(searchItems.map((item) => [contextEndpointKey(item), item]));
   const figureItems = searchItems.filter((item) => item.kind === "figure" && (item.tradition === "convergence" || traditions.includes(item.tradition)));
@@ -204,7 +232,10 @@ export function buildRelationshipGraph({
     ? "major"
     : tier;
 
-  let selectedPeople = [...visibleFigureKeys];
+  let selectedPeople = [...visibleFigureKeys].sort((left, right) =>
+    titleForKey(left, searchItems).localeCompare(titleForKey(right, searchItems), locale === "zh-CN" ? "zh-Hans" : "en")
+      || left.localeCompare(right),
+  );
   const hiddenPeople = effectiveTier === "major" ? Math.max(0, selectedPeople.length - 24) : 0;
   if (effectiveTier === "major") {
     selectedPeople = selectedPeople
@@ -237,6 +268,10 @@ export function buildRelationshipGraph({
         weight: 1,
         degree: degree.get(key) ?? 0,
         importance: (degree.get(key) ?? 0) + (key === focus ? 10 : 0),
+        outsideTimeRange: Boolean((from !== undefined || to !== undefined) && item?.timeRange && (
+          (item.timeRange.endYear ?? item.timeRange.startYear) < (from ?? Number.NEGATIVE_INFINITY)
+          || item.timeRange.startYear > (to ?? Number.POSITIVE_INFINITY)
+        )),
         ...position,
       });
     });
@@ -273,12 +308,19 @@ export function buildRelationshipGraph({
         weight: members.length,
         degree: members.reduce((sum, key) => sum + (degree.get(key) ?? 0), 0),
         importance: members.length,
+        outsideTimeRange: members.every((key) => {
+          const timeRange = searchMap.get(key)?.timeRange;
+          return Boolean((from !== undefined || to !== undefined) && timeRange && (
+            (timeRange.endYear ?? timeRange.startYear) < (from ?? Number.NEGATIVE_INFINITY)
+            || timeRange.startYear > (to ?? Number.POSITIVE_INFINITY)
+          ));
+        }),
         ...position,
       });
     });
   }
 
-  const edges = aggregateEdges(relationRows, nodeMap);
+  const edges = aggregateEdges(relationRows, nodeMap, from, to);
   return { nodes, edges, relationRows, hiddenPeople, scopedPeople: visibleFigureKeys.size, effectiveTier };
 }
 

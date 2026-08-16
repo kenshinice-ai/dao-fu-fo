@@ -8,6 +8,7 @@ export type {
   AtlasTab,
   ExploreView,
   GraphType,
+  GraphTier,
   MapLayer,
   MapContentLayer,
   RouteState,

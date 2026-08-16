@@ -1,26 +1,32 @@
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import type { ReadModelRelationIndex } from "@drf-museum/domain-schema";
 import { ErrorState, LoadingState } from "../components/LoadingState";
+import { CivilisationMap } from "../components/CivilisationMap";
+import { FullWidthTimeline } from "../components/FullWidthTimeline";
+import { InteractiveRelationshipGraph } from "../components/InteractiveRelationshipGraph";
 import { TraditionMark } from "../components/TraditionMark";
 import { useMuseumContext } from "../context";
 import { staticData } from "../data/staticData";
 import { useStaticData } from "../data/useStaticData";
-import { isPersonToPersonRelation, relationConnector } from "../data/contextProjection";
+import { contextRelations, isPersonToPersonRelation, relationConnector } from "../data/contextProjection";
 import { formatConfidence, formatEntityKind, formatEventKind, formatEventScope, formatEvidence, formatEvidenceLine, formatFigureClass, formatHistoricity, formatInteractionMode, formatRelationType } from "../data/labels";
 import { entityPath, withLang } from "../routing";
-import type { EntityKind } from "../types";
+import type { GraphTier, RouteState } from "../routing";
+import type { EntityKind, Locale, MapContextData, TimelineData } from "../types";
 
 export function EntityPage({ kind }: { kind: EntityKind }) {
   const { slug = "" } = useParams();
   const { locale } = useMuseumContext();
-  const loader = useCallback(async (signal: AbortSignal): Promise<{ entity: Awaited<ReturnType<typeof staticData.entity>>; relations: ReadModelRelationIndex; search: Awaited<ReturnType<typeof staticData.searchIndex>> }> => {
-    const [entity, relations, search] = await Promise.all([
+  const loader = useCallback(async (signal: AbortSignal): Promise<{ entity: Awaited<ReturnType<typeof staticData.entity>>; relations: ReadModelRelationIndex; search: Awaited<ReturnType<typeof staticData.searchIndex>>; map: MapContextData; timeline: TimelineData }> => {
+    const [entity, relations, search, map, timeline] = await Promise.all([
       staticData.entity(kind, slug, locale, signal),
       staticData.relations(locale, signal),
       staticData.searchIndex(locale, signal),
+      staticData.mapContext(locale, signal),
+      staticData.timeline(locale, signal),
     ]);
-    return { entity, relations, search };
+    return { entity, relations, search, map, timeline };
   }, [kind, slug, locale]);
   const { data: contextData, error } = useStaticData(loader);
 
@@ -157,7 +163,73 @@ export function EntityPage({ kind }: { kind: EntityKind }) {
           </div>
         </aside>
       </div>
+
+      {data.kind === "figure" ? <FigureSpacetimeSection locale={locale} figureKey={currentKey} map={contextData.map} timeline={contextData.timeline} relations={contextData.relations} searchItems={contextData.search.items} /> : null}
     </article>
+  );
+}
+
+function FigureSpacetimeSection({
+  locale,
+  figureKey,
+  map,
+  timeline,
+  relations,
+  searchItems,
+}: {
+  locale: Locale;
+  figureKey: string;
+  map: MapContextData;
+  timeline: TimelineData;
+  relations: ReadModelRelationIndex;
+  searchItems: Awaited<ReturnType<typeof staticData.searchIndex>>["items"];
+}) {
+  const [panel, setPanel] = useState<"map" | "graph" | "timeline" | "evidence">("map");
+  const [focus, setFocus] = useState(figureKey);
+  const [graphTier, setGraphTier] = useState<GraphTier>("major");
+  const [range, setRange] = useState<{ from?: number; to?: number; timelineMode: "history" | "tradition" }>({ timelineMode: "history" });
+  const [selectedRelationId, setSelectedRelationId] = useState<string | undefined>();
+  const applyChanges = (changes: Partial<RouteState>) => setRange((current) => ({ ...current, ...changes }));
+  const scopedRelations = contextRelations(relations, focus);
+  const selectedRelation = selectedRelationId ? relations.items.find((relation) => relation.id === selectedRelationId) : undefined;
+
+  return (
+    <section className="entity-spacetime-section page-shell" data-figure-spacetime aria-labelledby="figure-spacetime-title">
+      <header className="entity-spacetime-heading">
+        <div>
+          <p className="eyebrow">Figure / {locale === "zh-CN" ? "人物时空" : "Figure space-time"}</p>
+          <h2 id="figure-spacetime-title">{locale === "zh-CN" ? "人物、地点、关系与时间轴" : "Figure, place, relationships and time"}</h2>
+          <p>{locale === "zh-CN" ? "地图只绘制有现实坐标的地点；路线重建、待核地点与后世记忆分别保留，不互相替代。" : "Only real coordinates are drawn on the map; reconstructed routes, unresolved places and later memory stay separate rather than substituting for one another."}</p>
+        </div>
+        <div className="entity-spacetime-summary"><span>{locale === "zh-CN" ? "当前焦点" : "Focus"}: {focus}</span><span>{locale === "zh-CN" ? "图谱层级" : "Graph tier"}: {graphTier}</span></div>
+      </header>
+      <nav className="entity-spacetime-switcher" aria-label={locale === "zh-CN" ? "人物时空视图" : "Figure space-time views"}>
+        {(["map", "graph", "timeline", "evidence"] as const).map((nextPanel) => <button key={nextPanel} type="button" className={panel === nextPanel ? "active" : ""} aria-pressed={panel === nextPanel} onClick={() => setPanel(nextPanel)}>{nextPanel === "map" ? (locale === "zh-CN" ? "地图" : "Map") : nextPanel === "graph" ? (locale === "zh-CN" ? "关系图" : "Graph") : nextPanel === "timeline" ? (locale === "zh-CN" ? "时间轴" : "Timeline") : (locale === "zh-CN" ? "证据" : "Evidence")}</button>)}
+      </nav>
+      <div className="entity-spacetime-stage-stack">
+        <section className={`entity-spacetime-stage ${panel === "map" ? "is-active" : ""}`} aria-labelledby="figure-spacetime-map-heading">
+          <h3 id="figure-spacetime-map-heading">{locale === "zh-CN" ? "现实地理与路线证据" : "Real geography and route evidence"}</h3>
+          <CivilisationMap data={map.map} routes={map.routes} locale={locale} traditions={["daoism", "confucianism", "buddhism"]} focus={focus} relations={relations} searchItems={searchItems} mapLayers={["places", "routes", "trajectories", "memory"]} zoomLevel="figure" onFocus={setFocus} showContext={false} showIndex={false} showRouteLedger />
+        </section>
+        <section className={`entity-spacetime-stage ${panel === "graph" ? "is-active" : ""}`} aria-labelledby="figure-spacetime-graph-heading">
+          <h3 id="figure-spacetime-graph-heading">{locale === "zh-CN" ? "人物关系力导图" : "Figure relationship force graph"}</h3>
+          <InteractiveRelationshipGraph locale={locale} relations={relations} scopeRelations={scopedRelations} searchItems={searchItems} focus={focus} traditions={["daoism", "confucianism", "buddhism"]} graphTier={graphTier} from={range.from} to={range.to} onGraphTier={setGraphTier} onFocus={setFocus} onOpenRelation={setSelectedRelationId} />
+        </section>
+        <section className={`entity-spacetime-stage ${panel === "timeline" ? "is-active" : ""}`} aria-labelledby="figure-spacetime-timeline-heading">
+          <h3 id="figure-spacetime-timeline-heading">{locale === "zh-CN" ? "人物关联时间轴" : "Figure-linked chronology"}</h3>
+          <FullWidthTimeline locale={locale} data={timeline} relations={relations} searchItems={searchItems} focus={focus} traditions={["daoism", "confucianism", "buddhism"]} from={range.from} to={range.to} timelineMode={range.timelineMode} onChange={applyChanges} onFocus={setFocus} />
+        </section>
+        <section className={`entity-spacetime-stage entity-spacetime-evidence ${panel === "evidence" ? "is-active" : ""}`} aria-labelledby="figure-spacetime-evidence-heading">
+          <h3 id="figure-spacetime-evidence-heading">{locale === "zh-CN" ? "空间与关系证据" : "Spatial and relational evidence"}</h3>
+          {panel === "evidence" ? <>
+            {selectedRelation ? <article className="entity-spacetime-selected-relation"><p className="eyebrow">{selectedRelation.label}</p><h4>{selectedRelation.summary}</h4><p>{formatEvidenceLine(selectedRelation.evidenceLayer, selectedRelation.confidence, locale)} · {selectedRelation.sourceIds.join(", ")}</p></article> : null}
+            <ul className="entity-spacetime-evidence-list">
+              {scopedRelations.slice(0, 80).map((relation) => <li key={relation.id}><button type="button" onClick={() => setSelectedRelationId(relation.id)}>{locale === "zh-CN" ? "查看证据：" : "Inspect evidence: "}{relation.label}</button><span>{relation.summary}</span><small>{relation.temporalAssertions.map((assertion) => assertion.displayDate).join(" · ") || formatEvidenceLine(relation.evidenceLayer, relation.confidence, locale)}</small></li>)}
+            </ul>
+          </> : null}
+        </section>
+      </div>
+    </section>
   );
 }
 

@@ -13,7 +13,7 @@ import { connectedContextKeys, contextRelations, matchesContextFocus, projectTim
 import { formatEntityKind, formatEventKind, formatEventScope, formatEvidence } from "../data/labels";
 import { useStaticData } from "../data/useStaticData";
 import { entityPath, parseRouteState, serializeRouteState } from "../routing";
-import type { ExploreView, RouteState, ViewMode, ZoomLevel } from "../routing";
+import type { ExploreView, GraphTier, RouteState, ViewMode, ZoomLevel } from "../routing";
 import type { ReadModelRelationIndex, ReadModelSacredCosmos } from "@drf-museum/domain-schema";
 import type { EntityData, Locale, MuseumMapData, SearchItem, TimelineData, TimelineEvent, Tradition } from "../types";
 
@@ -129,11 +129,18 @@ export function ExplorePage() {
           </button>
         </div>
       </header>
-      {routeState.view !== "map" ? <ExploreControls locale={locale} state={routeState} onChange={updateRouteState} /> : null}
-      {routeState.view === "map" ? <AtlasWorkspace locale={locale} state={routeState} onChange={updateRouteState} /> : <ContextFocus locale={locale} focus={routeState.focus} data={contextState.data} error={contextState.error} onFocus={(focus) => updateRouteState({ focus })} />}
-      {routeState.view === "cosmos" ? <CosmosView locale={locale} traditions={routeState.traditions} focus={routeState.focus} relations={contextState.data?.relations} /> : null}
-      {routeState.view === "timeline" ? <TimelineView locale={locale} traditions={routeState.traditions} from={routeState.from} to={routeState.to} focus={routeState.focus} relations={contextState.data?.relations} searchItems={contextState.data?.search.items ?? []} zoomLevel={routeState.zoomLevel} onFocus={(nextFocus) => updateRouteState({ focus: nextFocus, view: "map", mapLayer: "real" })} /> : null}
-      {routeState.view === "graph" ? <GraphView locale={locale} traditions={routeState.traditions} focus={routeState.focus} relations={contextState.data?.relations} searchItems={contextState.data?.search.items ?? []} zoomLevel={routeState.zoomLevel} onFocus={(nextFocus) => updateRouteState({ focus: nextFocus })} onZoomLevel={(zoomLevel) => updateRouteState({ zoomLevel })} onOpenRelation={(relationId) => updateRouteState({ view: "map", mapLayer: "real", atlasTab: "relations", detail: relationId.startsWith("relation:") ? relationId : `relation:${relationId}` })} /> : null}
+      {routeState.view === "cosmos" ? <ExploreControls locale={locale} state={routeState} onChange={updateRouteState} /> : null}
+      {routeState.view === "cosmos" ? (
+        <>
+          <ContextFocus locale={locale} focus={routeState.focus} data={contextState.data} error={contextState.error} onFocus={(focus) => updateRouteState({ focus })} />
+          <CosmosView locale={locale} traditions={routeState.traditions} focus={routeState.focus} relations={contextState.data?.relations} />
+        </>
+      ) : (
+        <>
+          {routeState.view !== "map" ? <ContextFocus locale={locale} focus={routeState.focus} data={contextState.data} error={contextState.error} onFocus={(focus) => updateRouteState({ focus })} /> : null}
+          <AtlasWorkspace locale={locale} state={routeState} onChange={updateRouteState} />
+        </>
+      )}
     </section>
   );
 }
@@ -915,7 +922,7 @@ function TimelinePlate({ data, locale, traditions, from, to, focus, relations, s
   );
 }
 
-function GraphView({ locale, traditions, focus, relations, searchItems, zoomLevel, onFocus, onZoomLevel, onOpenRelation }: { locale: Locale; traditions: Tradition[]; focus?: string; relations?: ReadModelRelationIndex; searchItems: SearchItem[]; zoomLevel: ZoomLevel; onFocus: (focus: string) => void; onZoomLevel: (zoomLevel: ZoomLevel) => void; onOpenRelation: (relationId: string) => void }) {
+function GraphView({ locale, traditions, focus, relations, searchItems, graphTier, from, to, onFocus, onGraphTier, onOpenRelation }: { locale: Locale; traditions: Tradition[]; focus?: string; relations?: ReadModelRelationIndex; searchItems: SearchItem[]; graphTier: GraphTier; from?: number; to?: number; onFocus: (focus: string) => void; onGraphTier: (graphTier: GraphTier) => void; onOpenRelation: (relationId: string) => void }) {
   if (!relations) return <LoadingState locale={locale} />;
   return (
     <InteractiveRelationshipGraph
@@ -925,8 +932,10 @@ function GraphView({ locale, traditions, focus, relations, searchItems, zoomLeve
       searchItems={searchItems}
       focus={focus}
       traditions={traditions}
-      zoomLevel={zoomLevel}
-      onZoomLevel={onZoomLevel}
+      graphTier={graphTier}
+      from={from}
+      to={to}
+      onGraphTier={onGraphTier}
       onFocus={onFocus}
       onOpenRelation={onOpenRelation}
     />

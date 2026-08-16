@@ -1,13 +1,15 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import type { KeyboardEvent as ReactKeyboardEvent, PointerEvent as ReactPointerEvent } from "react";
 import type { ReadModelRelation, ReadModelRelationIndex } from "@drf-museum/domain-schema";
+import { forceCenter, forceCollide, forceLink, forceManyBody, forceSimulation, forceX, forceY } from "d3-force";
+import { select } from "d3-selection";
+import { zoom, zoomIdentity, type ZoomBehavior, type ZoomTransform } from "d3-zoom";
+import type { GraphTier } from "../routing";
 import type { Locale, SearchItem, Tradition } from "../types";
-import type { ZoomLevel } from "../routing";
 import { contextEndpointKey, relationConnector } from "../data/contextProjection";
 import {
   buildRelationshipGraph,
-  graphTierForZoomLevel,
   relationToneLabel,
-  zoomLevelForGraphTier,
   type RelationshipGraphEdge,
   type RelationshipGraphModel,
   type RelationshipGraphNode,
@@ -22,31 +24,48 @@ interface InteractiveRelationshipGraphProps {
   searchItems: SearchItem[];
   focus?: string;
   traditions: Tradition[];
-  zoomLevel: ZoomLevel;
-  onZoomLevel: (zoomLevel: ZoomLevel) => void;
+  graphTier: GraphTier;
+  from?: number;
+  to?: number;
+  onGraphTier: (graphTier: GraphTier) => void;
   onFocus: (focus: string) => void;
   onOpenRelation: (relationId: string) => void;
 }
 
-interface Point {
-  x: number;
-  y: number;
+interface Point { x: number; y: number }
+
+interface SimulationNode extends RelationshipGraphNode {
+  vx?: number;
+  vy?: number;
+  fx?: number | null;
+  fy?: number | null;
+  index?: number;
 }
 
-interface ViewTransform {
-  x: number;
-  y: number;
-  k: number;
+interface SimulationLink extends Omit<RelationshipGraphEdge, "source" | "target"> {
+  source: string | SimulationNode;
+  target: string | SimulationNode;
 }
 
 interface HoverState {
-  node: RelationshipGraphNode;
+  kind: "node" | "edge";
+  id: string;
   x: number;
   y: number;
 }
 
-const VIEWBOX_WIDTH = 900;
-const VIEWBOX_HEIGHT = 470;
+interface DragState {
+  id: string;
+  pointerId: number;
+  start: Point;
+  moved: boolean;
+}
+
+interface CanvasClickState {
+  pointerId: number;
+  start: Point;
+}
+
 const TIER_ORDER: RelationshipGraphTier[] = ["era", "group", "major", "all"];
 const TRADITION_COLORS: Record<Tradition | "convergence", string> = {
   daoism: "#2f6e68",
@@ -61,6 +80,8 @@ const EDGE_COLORS: Record<RelationshipGraphEdge["tone"], string> = {
   comparison: "#2f6e68",
   other: "#747b73",
 };
+const BASELINE_ZOOM_IN = 1.8;
+const BASELINE_ZOOM_OUT = 0.56;
 
 function titleForKey(key: string, searchItems: SearchItem[], locale: Locale): string {
   const item = searchItems.find((candidate) => contextEndpointKey(candidate) === key);
@@ -68,98 +89,13 @@ function titleForKey(key: string, searchItems: SearchItem[], locale: Locale): st
 }
 
 function shortLabel(label: string): string {
-  return label.length <= 8 ? label : `${label.slice(0, 7)}…`;
+  return label.length <= 9 ? label : `${label.slice(0, 8)}…`;
 }
 
 function nodeRadius(node: RelationshipGraphNode): number {
   if (node.kind === "era") return 24 + Math.min(16, Math.sqrt(node.weight) * 4);
   if (node.kind === "group") return 23 + Math.min(14, Math.sqrt(node.weight) * 3.5);
   return 12 + Math.min(12, node.degree * 1.8);
-}
-
-function layoutModel(model: RelationshipGraphModel, manualPositions: Map<string, Point>): RelationshipGraphModel {
-  const nodes = model.nodes.map((node) => ({ ...node, ...(manualPositions.get(node.id) ?? {}) }));
-  if (nodes.length <= 1) return { ...model, nodes };
-  const byId = new Map(nodes.map((node) => [node.id, node]));
-  const velocity = new Map(nodes.map((node) => [node.id, { x: 0, y: 0 }]));
-  const pinned = new Set(manualPositions.keys());
-  for (let iteration = 0; iteration < 86; iteration += 1) {
-    for (let i = 0; i < nodes.length; i += 1) {
-      const left = nodes[i]!;
-      if (pinned.has(left.id)) continue;
-      const leftVelocity = velocity.get(left.id)!;
-      for (let j = i + 1; j < nodes.length; j += 1) {
-        const right = nodes[j]!;
-        const rightVelocity = velocity.get(right.id)!;
-        const dx = left.x - right.x;
-        const dy = left.y - right.y;
-        const distance = Math.max(16, Math.hypot(dx, dy));
-        const force = 1750 / (distance * distance);
-        leftVelocity.x += (dx / distance) * force;
-        leftVelocity.y += (dy / distance) * force;
-        if (!pinned.has(right.id)) {
-          rightVelocity.x -= (dx / distance) * force;
-          rightVelocity.y -= (dy / distance) * force;
-        }
-      }
-    }
-    for (const edge of model.edges) {
-      const source = byId.get(edge.source);
-      const target = byId.get(edge.target);
-      if (!source || !target) continue;
-      const dx = target.x - source.x;
-      const dy = target.y - source.y;
-      const distance = Math.max(1, Math.hypot(dx, dy));
-      const desired = source.kind === "person" && target.kind === "person" ? 105 : 150;
-      const force = (distance - desired) * 0.0028;
-      const sourceVelocity = velocity.get(source.id)!;
-      const targetVelocity = velocity.get(target.id)!;
-      if (!pinned.has(source.id)) {
-        sourceVelocity.x += (dx / distance) * force;
-        sourceVelocity.y += (dy / distance) * force;
-      }
-      if (!pinned.has(target.id)) {
-        targetVelocity.x -= (dx / distance) * force;
-        targetVelocity.y -= (dy / distance) * force;
-      }
-    }
-    for (const node of nodes) {
-      if (pinned.has(node.id)) continue;
-      const motion = velocity.get(node.id)!;
-      motion.x += (VIEWBOX_WIDTH / 2 - node.x) * 0.0013;
-      motion.y += (VIEWBOX_HEIGHT / 2 - node.y) * 0.0013;
-      node.x = Math.max(32, Math.min(VIEWBOX_WIDTH - 32, node.x + motion.x));
-      node.y = Math.max(32, Math.min(VIEWBOX_HEIGHT - 32, node.y + motion.y));
-      motion.x *= 0.84;
-      motion.y *= 0.84;
-    }
-  }
-  return { ...model, nodes };
-}
-
-function edgePath(edge: RelationshipGraphEdge, nodes: Map<string, RelationshipGraphNode>, edgeIndex: number, edgeCount: number): string | null {
-  const source = nodes.get(edge.source);
-  const target = nodes.get(edge.target);
-  if (!source || !target) return null;
-  const dx = target.x - source.x;
-  const dy = target.y - source.y;
-  const length = Math.max(1, Math.hypot(dx, dy));
-  const offset = (edgeIndex - (edgeCount - 1) / 2) * 14;
-  const controlX = (source.x + target.x) / 2 - (dy / length) * offset;
-  const controlY = (source.y + target.y) / 2 + (dx / length) * offset;
-  return `M ${source.x} ${source.y} Q ${controlX} ${controlY} ${target.x} ${target.y}`;
-}
-
-function graphPoint(event: React.PointerEvent<SVGElement>, transform: ViewTransform): Point {
-  const rect = event.currentTarget.getBoundingClientRect();
-  const x = ((event.clientX - rect.left) / Math.max(1, rect.width)) * VIEWBOX_WIDTH;
-  const y = ((event.clientY - rect.top) / Math.max(1, rect.height)) * VIEWBOX_HEIGHT;
-  return { x: (x - transform.x) / transform.k, y: (y - transform.y) / transform.k };
-}
-
-function relationDate(relation: ReadModelRelation): string | undefined {
-  const date = relation.temporalAssertions.map((assertion) => assertion.displayDate).filter(Boolean).join(" · ");
-  return date || undefined;
 }
 
 function tierLabel(tier: RelationshipGraphTier, locale: Locale): string {
@@ -172,6 +108,96 @@ function tierLabel(tier: RelationshipGraphTier, locale: Locale): string {
   return labels[tier][locale === "zh-CN" ? "zh" : "en"];
 }
 
+function relationDate(relation: ReadModelRelation): string | undefined {
+  const date = relation.temporalAssertions.map((assertion) => assertion.displayDate).filter(Boolean).join(" · ");
+  return date || undefined;
+}
+
+function resolveNode(value: string | SimulationNode): SimulationNode | undefined {
+  return typeof value === "string" ? undefined : value;
+}
+
+function edgeEndpoints(edge: SimulationLink): { source: SimulationNode; target: SimulationNode } | undefined {
+  const source = resolveNode(edge.source);
+  const target = resolveNode(edge.target);
+  return source && target ? { source, target } : undefined;
+}
+
+function pointFromClient(event: { clientX: number; clientY: number }, canvas: HTMLCanvasElement): Point {
+  const rect = canvas.getBoundingClientRect();
+  return { x: event.clientX - rect.left, y: event.clientY - rect.top };
+}
+
+function graphPoint(point: Point, transform: ZoomTransform): Point {
+  const [x, y] = transform.invert([point.x, point.y]);
+  return { x, y };
+}
+
+function distanceToSegment(point: Point, left: Point, right: Point): number {
+  const dx = right.x - left.x;
+  const dy = right.y - left.y;
+  const lengthSquared = dx * dx + dy * dy;
+  if (lengthSquared === 0) return Math.hypot(point.x - left.x, point.y - left.y);
+  const projection = Math.max(0, Math.min(1, ((point.x - left.x) * dx + (point.y - left.y) * dy) / lengthSquared));
+  return Math.hypot(point.x - (left.x + projection * dx), point.y - (left.y + projection * dy));
+}
+
+function distanceToEdge(point: Point, source: Point, target: Point, offset: number): number {
+  const dx = target.x - source.x;
+  const dy = target.y - source.y;
+  const length = Math.max(1, Math.hypot(dx, dy));
+  const control = { x: (source.x + target.x) / 2 - (dy / length) * offset, y: (source.y + target.y) / 2 + (dx / length) * offset };
+  let previous = source;
+  let closest = Number.POSITIVE_INFINITY;
+  for (let index = 1; index <= 18; index += 1) {
+    const t = index / 18;
+    const next = {
+      x: (1 - t) * (1 - t) * source.x + 2 * (1 - t) * t * control.x + t * t * target.x,
+      y: (1 - t) * (1 - t) * source.y + 2 * (1 - t) * t * control.y + t * t * target.y,
+    };
+    closest = Math.min(closest, distanceToSegment(point, previous, next));
+    previous = next;
+  }
+  return closest;
+}
+
+function drawArrow(ctx: CanvasRenderingContext2D, source: Point, target: Point, color: string, transform: ZoomTransform): void {
+  const dx = target.x - source.x;
+  const dy = target.y - source.y;
+  const length = Math.max(1, Math.hypot(dx, dy));
+  const unitX = dx / length;
+  const unitY = dy / length;
+  const point = { x: target.x - unitX * 13, y: target.y - unitY * 13 };
+  const size = 6 / transform.k;
+  ctx.save();
+  ctx.fillStyle = color;
+  ctx.beginPath();
+  ctx.moveTo(point.x + unitX * size * 1.6, point.y + unitY * size * 1.6);
+  ctx.lineTo(point.x - unitY * size, point.y + unitX * size);
+  ctx.lineTo(point.x + unitY * size, point.y - unitX * size);
+  ctx.closePath();
+  ctx.fill();
+  ctx.restore();
+}
+
+function fitTransform(nodes: SimulationNode[], width: number, height: number): ZoomTransform {
+  if (nodes.length === 0) return zoomIdentity;
+  const minX = Math.min(...nodes.map((node) => node.x));
+  const maxX = Math.max(...nodes.map((node) => node.x));
+  const minY = Math.min(...nodes.map((node) => node.y));
+  const maxY = Math.max(...nodes.map((node) => node.y));
+  const graphWidth = Math.max(180, maxX - minX + 100);
+  const graphHeight = Math.max(140, maxY - minY + 100);
+  const scale = Math.max(0.56, Math.min(1.28, (width - 48) / graphWidth, (height - 48) / graphHeight));
+  return zoomIdentity.translate(width / 2 - ((minX + maxX) / 2) * scale, height / 2 - ((minY + maxY) / 2) * scale).scale(scale);
+}
+
+function timeStatusLabel(status: RelationshipGraphEdge["timeStatus"], locale: Locale): string {
+  if (status === "outside") return locale === "zh-CN" ? "时间窗外" : "Outside time window";
+  if (status === "undated") return locale === "zh-CN" ? "年代未定" : "Undated";
+  return locale === "zh-CN" ? "时间窗内" : "Overlaps time window";
+}
+
 export function InteractiveRelationshipGraph({
   locale,
   relations,
@@ -179,63 +205,334 @@ export function InteractiveRelationshipGraph({
   searchItems,
   focus,
   traditions,
-  zoomLevel,
-  onZoomLevel,
+  graphTier,
+  from,
+  to,
+  onGraphTier,
   onFocus,
   onOpenRelation,
 }: InteractiveRelationshipGraphProps) {
-  const tier = graphTierForZoomLevel(zoomLevel);
   const [asTable, setAsTable] = useState(false);
-  const [transform, setTransform] = useState<ViewTransform>({ x: 0, y: 0, k: 1 });
-  const [manualPositions, setManualPositions] = useState<Map<string, Point>>(new Map());
+  const [dimensions, setDimensions] = useState({ width: 0, height: 520 });
   const [hover, setHover] = useState<HoverState | null>(null);
-  const canvasWrapRef = useRef<HTMLDivElement | null>(null);
-  const dragRef = useRef<{ id: string; start: Point; moved: boolean; pointerId: number } | null>(null);
-  const panRef = useRef<{ start: Point; transform: ViewTransform; pointerId: number } | null>(null);
+  const [selectedEdgeId, setSelectedEdgeId] = useState<string | null>(null);
+  const [reducedMotion, setReducedMotion] = useState(false);
+  const wrapRef = useRef<HTMLDivElement | null>(null);
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const simulationRef = useRef<ReturnType<typeof forceSimulation<SimulationNode>> | null>(null);
+  const zoomBehaviorRef = useRef<ZoomBehavior<HTMLCanvasElement, unknown> | null>(null);
+  const nodesRef = useRef<SimulationNode[]>([]);
+  const linksRef = useRef<SimulationLink[]>([]);
+  const positionMemoryRef = useRef(new Map<string, Point>());
+  const pinnedRef = useRef(new Set<string>());
+  const dragRef = useRef<DragState | null>(null);
+  const clickRef = useRef<CanvasClickState | null>(null);
+  const transformRef = useRef<ZoomTransform>(zoomIdentity);
+  const baselineTransformRef = useRef<ZoomTransform>(zoomIdentity);
+  const thresholdLockRef = useRef(false);
+  const frameRef = useRef<number | null>(null);
+  const modelRef = useRef<RelationshipGraphModel | null>(null);
+
   const model = useMemo(() => buildRelationshipGraph({
     relations: relations.items,
     scopeRelations,
     searchItems,
     focus,
     traditions,
-    tier,
-    locale,
-  }), [focus, locale, relations.items, scopeRelations, searchItems, tier, traditions]);
-  const laidOutModel = useMemo(() => layoutModel(model, manualPositions), [manualPositions, model]);
-  const nodeMap = useMemo(() => new Map(laidOutModel.nodes.map((node) => [node.id, node])), [laidOutModel.nodes]);
-  const modelSignature = `${tier}|${focus ?? ""}|${laidOutModel.nodes.map((node) => node.id).join(",")}|${laidOutModel.edges.map((edge) => edge.id).join(",")}`;
-  const activeNodeIds = useMemo(() => {
-    const ids = new Set<string>();
-    if (hover) {
-      for (const edge of laidOutModel.edges) {
-        if (edge.source === hover.node.id || edge.target === hover.node.id) {
-          ids.add(edge.source);
-          ids.add(edge.target);
+    tier: graphTier,
+    locale: locale === "zh-CN" ? "zh-CN" : "en",
+    from,
+    to,
+  }), [focus, from, graphTier, locale, relations.items, scopeRelations, searchItems, to, traditions]);
+  const modelSignature = `${model.effectiveTier}|${focus ?? ""}|${from ?? ""}|${to ?? ""}|${model.nodes.map((node) => node.id).join(",")}|${model.edges.map((edge) => edge.id).join(",")}`;
+  const drawRef = useRef<() => void>(() => undefined);
+  const scheduleDraw = useCallback(() => {
+    if (frameRef.current !== null) return;
+    frameRef.current = window.requestAnimationFrame(() => {
+      frameRef.current = null;
+      drawRef.current();
+    });
+  }, []);
+
+  drawRef.current = () => {
+    const canvas = canvasRef.current;
+    if (!canvas || dimensions.width <= 0) return;
+    const context = canvas.getContext("2d");
+    if (!context) return;
+    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    context.setTransform(dpr, 0, 0, dpr, 0, 0);
+    context.clearRect(0, 0, dimensions.width, dimensions.height);
+    context.fillStyle = "#fcfaf3";
+    context.fillRect(0, 0, dimensions.width, dimensions.height);
+    const transform = transformRef.current;
+    const nodes = nodesRef.current;
+    const links = linksRef.current;
+    const hoveredNodeId = hover?.kind === "node" ? hover.id : undefined;
+    const hoveredEdgeId = hover?.kind === "edge" ? hover.id : undefined;
+    const activeIds = new Set<string>();
+    if (focus) activeIds.add(focus);
+    if (hoveredNodeId) {
+      activeIds.add(hoveredNodeId);
+      for (const link of links) {
+        const endpoints = edgeEndpoints(link);
+        if (!endpoints) continue;
+        if (endpoints.source.id === hoveredNodeId || endpoints.target.id === hoveredNodeId) {
+          activeIds.add(endpoints.source.id);
+          activeIds.add(endpoints.target.id);
         }
       }
     }
-    if (focus && nodeMap.has(focus)) ids.add(focus);
-    return ids;
-  }, [focus, hover, laidOutModel.edges, nodeMap]);
+    const hasActive = activeIds.size > 0;
+    context.save();
+    context.translate(transform.x, transform.y);
+    context.scale(transform.k, transform.k);
+    const pairCounts = new Map<string, number>();
+    for (const link of links) {
+      const endpoints = edgeEndpoints(link);
+      if (!endpoints) continue;
+      const pair = [endpoints.source.id, endpoints.target.id].sort().join("|");
+      pairCounts.set(pair, (pairCounts.get(pair) ?? 0) + 1);
+    }
+    const pairIndexes = new Map<string, number>();
+    for (const link of links) {
+      const endpoints = edgeEndpoints(link);
+      if (!endpoints) continue;
+      const { source, target } = endpoints;
+      const pair = [source.id, target.id].sort().join("|");
+      const index = pairIndexes.get(pair) ?? 0;
+      pairIndexes.set(pair, index + 1);
+      const count = pairCounts.get(pair) ?? 1;
+      const offset = (index - (count - 1) / 2) * 16;
+      const dx = target.x - source.x;
+      const dy = target.y - source.y;
+      const length = Math.max(1, Math.hypot(dx, dy));
+      const controlX = (source.x + target.x) / 2 - (dy / length) * offset;
+      const controlY = (source.y + target.y) / 2 + (dx / length) * offset;
+      const edgeActive = !hasActive || activeIds.has(source.id) || activeIds.has(target.id) || hoveredEdgeId === link.id || selectedEdgeId === link.id;
+      const color = EDGE_COLORS[link.tone];
+      context.save();
+      context.globalAlpha = edgeActive ? (link.timeStatus === "outside" ? 0.34 : 0.78) : 0.12;
+      context.strokeStyle = color;
+      context.lineWidth = selectedEdgeId === link.id || hoveredEdgeId === link.id ? 3.2 : 1.6;
+      if (link.timeStatus === "outside") context.setLineDash([7, 6]);
+      else if (link.timeStatus === "undated") context.setLineDash([2, 5]);
+      context.beginPath();
+      context.moveTo(source.x, source.y);
+      context.quadraticCurveTo(controlX, controlY, target.x, target.y);
+      context.stroke();
+      context.setLineDash([]);
+      if (link.directed) drawArrow(context, { x: controlX, y: controlY }, target, color, transform);
+      context.restore();
+    }
+    for (const node of nodes) {
+      const active = !hasActive || activeIds.has(node.id);
+      const selected = node.id === focus;
+      const radius = nodeRadius(node);
+      context.save();
+      context.globalAlpha = active ? 1 : 0.2;
+      if (selected) {
+        context.strokeStyle = "#202522";
+        context.lineWidth = 2;
+        context.setLineDash([3, 4]);
+        context.beginPath();
+        context.arc(node.x, node.y, radius + 8, 0, Math.PI * 2);
+        context.stroke();
+        context.setLineDash([]);
+      }
+      context.fillStyle = node.outsideTimeRange ? "#eee9dd" : TRADITION_COLORS[node.tradition];
+      context.strokeStyle = node.outsideTimeRange ? "#8f897b" : "#fcfaf3";
+      context.lineWidth = node.outsideTimeRange ? 2 : 1.5;
+      context.beginPath();
+      context.arc(node.x, node.y, radius, 0, Math.PI * 2);
+      context.fill();
+      context.stroke();
+      context.fillStyle = node.outsideTimeRange ? "#5d5a52" : "#fffdf6";
+      context.font = `${node.kind === "person" ? 12 : 13}px ui-sans-serif, system-ui, sans-serif`;
+      context.textAlign = "center";
+      context.textBaseline = "middle";
+      context.fillText(node.kind === "person" ? shortLabel(node.label) : node.label, node.x, node.y);
+      context.fillStyle = "#4d514b";
+      context.font = "11px ui-sans-serif, system-ui, sans-serif";
+      context.fillText(String(node.kind === "person" ? node.degree : node.weight), node.x, node.y + radius + 15);
+      context.restore();
+    }
+    context.restore();
+  };
 
   useEffect(() => {
-    setTransform({ x: 0, y: 0, k: 1 });
-    setHover(null);
-    setManualPositions((current) => {
-      const visible = new Set(laidOutModel.nodes.map((node) => node.id));
-      const next = new Map([...current].filter(([id]) => visible.has(id)));
-      return next.size === current.size ? current : next;
-    });
-  }, [modelSignature]);
+    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const update = () => setReducedMotion(media.matches);
+    update();
+    media.addEventListener("change", update);
+    return () => media.removeEventListener("change", update);
+  }, []);
 
-  const fitView = () => setTransform({ x: 0, y: 0, k: 1 });
+  useEffect(() => {
+    const element = wrapRef.current;
+    if (!element) return;
+    const update = () => setDimensions({ width: Math.max(320, element.clientWidth), height: Math.max(420, Math.min(640, element.clientWidth * 0.58)) });
+    update();
+    const observer = new ResizeObserver(update);
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas || dimensions.width <= 0) return;
+    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    canvas.width = Math.round(dimensions.width * dpr);
+    canvas.height = Math.round(dimensions.height * dpr);
+    canvas.style.width = `${dimensions.width}px`;
+    canvas.style.height = `${dimensions.height}px`;
+    scheduleDraw();
+  }, [dimensions, scheduleDraw]);
+
+  const hitNode = useCallback((point: Point, transform = transformRef.current): SimulationNode | undefined => {
+    const local = graphPoint(point, transform);
+    return [...nodesRef.current].reverse().find((node) => Math.hypot(local.x - node.x, local.y - node.y) <= nodeRadius(node) + 7 / transform.k);
+  }, []);
+
+  const hitEdge = useCallback((point: Point, transform = transformRef.current): SimulationLink | undefined => {
+    const local = graphPoint(point, transform);
+    const pairCounts = new Map<string, number>();
+    for (const link of linksRef.current) {
+      const endpoints = edgeEndpoints(link);
+      if (!endpoints) continue;
+      const pair = [endpoints.source.id, endpoints.target.id].sort().join("|");
+      pairCounts.set(pair, (pairCounts.get(pair) ?? 0) + 1);
+    }
+    const pairIndexes = new Map<string, number>();
+    return linksRef.current.find((link) => {
+      const endpoints = edgeEndpoints(link);
+      if (!endpoints) return false;
+      const pair = [endpoints.source.id, endpoints.target.id].sort().join("|");
+      const index = pairIndexes.get(pair) ?? 0;
+      pairIndexes.set(pair, index + 1);
+      const offset = (index - ((pairCounts.get(pair) ?? 1) - 1) / 2) * 16;
+      return distanceToEdge(local, endpoints.source, endpoints.target, offset) <= 9 / transform.k;
+    });
+  }, []);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas || dimensions.width <= 0) return;
+    const behavior = zoom<HTMLCanvasElement, unknown>()
+      .scaleExtent([0.45, 4])
+      .filter((event) => {
+        if (event.type === "wheel") return true;
+        if (event.type === "mousedown") {
+          if ("button" in event && event.button !== 0) return false;
+          const mouse = event as MouseEvent;
+          return !hitNode({ x: mouse.offsetX, y: mouse.offsetY });
+        }
+        return !dragRef.current;
+      })
+      .on("zoom", (event) => {
+        transformRef.current = event.transform;
+        scheduleDraw();
+        const ratio = event.transform.k / Math.max(0.01, baselineTransformRef.current.k);
+        if (thresholdLockRef.current) return;
+        const currentIndex = TIER_ORDER.indexOf(graphTier);
+        if (ratio >= BASELINE_ZOOM_IN && currentIndex < TIER_ORDER.length - 1) {
+          thresholdLockRef.current = true;
+          onGraphTier(TIER_ORDER[currentIndex + 1]!);
+        } else if (ratio <= BASELINE_ZOOM_OUT && currentIndex > 0) {
+          thresholdLockRef.current = true;
+          onGraphTier(TIER_ORDER[currentIndex - 1]!);
+        }
+      });
+    zoomBehaviorRef.current = behavior;
+    select(canvas).call(behavior);
+    select(canvas).call(behavior.transform, transformRef.current);
+    return () => {
+      select(canvas).on(".zoom", null);
+      zoomBehaviorRef.current = null;
+    };
+  }, [dimensions.width, graphTier, hitNode, modelSignature, onGraphTier, scheduleDraw]);
+
+  useEffect(() => {
+    const width = dimensions.width;
+    const height = dimensions.height;
+    if (width <= 0) return;
+    const previousPositions = positionMemoryRef.current;
+    const nodes: SimulationNode[] = model.nodes.map((node) => {
+      const memberPosition = node.members.map((member) => previousPositions.get(member)).find((position): position is Point => Boolean(position));
+      const previous = previousPositions.get(node.id) ?? memberPosition;
+      return {
+        ...node,
+        x: previous?.x ?? node.x * width / 900,
+        y: previous?.y ?? node.y * height / 470,
+        ...(pinnedRef.current.has(node.id) && previous ? { fx: previous.x, fy: previous.y } : {}),
+      };
+    });
+    const links: SimulationLink[] = model.edges.map((edge) => ({ ...edge, source: edge.source, target: edge.target }));
+    nodesRef.current = nodes;
+    linksRef.current = links;
+    modelRef.current = model;
+    thresholdLockRef.current = false;
+    const baseline = fitTransform(nodes, width, height);
+    baselineTransformRef.current = baseline;
+    transformRef.current = baseline;
+    const simulation = forceSimulation(nodes)
+      .force("link", forceLink<SimulationNode, SimulationLink>(links).id((node) => node.id).distance((link) => link.timeStatus === "outside" ? 180 : link.timeStatus === "undated" ? 155 : 125).strength(0.7))
+      .force("charge", forceManyBody<SimulationNode>().strength((node) => node.kind === "person" ? -230 : -320).distanceMax(520))
+      .force("collide", forceCollide<SimulationNode>().radius((node) => nodeRadius(node) + 14).iterations(2))
+      .force("center", forceCenter(width / 2, height / 2))
+      .force("x", forceX<SimulationNode>(width / 2).strength(0.025))
+      .force("y", forceY<SimulationNode>(height / 2).strength(0.025));
+    simulationRef.current = simulation;
+    simulation.on("tick", () => {
+      for (const node of nodes) positionMemoryRef.current.set(node.id, { x: node.x, y: node.y });
+      scheduleDraw();
+    });
+    if (reducedMotion) {
+      simulation.tick(180);
+      for (const node of nodes) positionMemoryRef.current.set(node.id, { x: node.x, y: node.y });
+      simulation.stop();
+      scheduleDraw();
+    } else {
+      simulation.alpha(0.9).restart();
+    }
+    return () => {
+      simulation.stop();
+      if (simulationRef.current === simulation) simulationRef.current = null;
+    };
+  }, [dimensions.height, dimensions.width, model, modelSignature, reducedMotion, scheduleDraw]);
+
+  useEffect(() => {
+    const node = nodesRef.current.find((candidate) => candidate.id === focus);
+    const canvas = canvasRef.current;
+    if (!node || !canvas || dimensions.width <= 0) return;
+    const current = transformRef.current;
+    const screen = current.apply([node.x, node.y]);
+    const margin = 72;
+    if (screen[0] > margin && screen[0] < dimensions.width - margin && screen[1] > margin && screen[1] < dimensions.height - margin) return;
+    const next = zoomIdentity.translate(current.x + dimensions.width / 2 - screen[0], current.y + dimensions.height / 2 - screen[1]).scale(current.k);
+    transformRef.current = next;
+    if (zoomBehaviorRef.current) select(canvas).call(zoomBehaviorRef.current.transform, next);
+    scheduleDraw();
+  }, [dimensions.height, dimensions.width, focus, modelSignature, scheduleDraw]);
+
+  useEffect(() => () => {
+    if (frameRef.current !== null) window.cancelAnimationFrame(frameRef.current);
+  }, []);
+
+  const fitView = () => {
+    const canvas = canvasRef.current;
+    const baseline = baselineTransformRef.current;
+    transformRef.current = baseline;
+    if (canvas && zoomBehaviorRef.current) select(canvas).call(zoomBehaviorRef.current.transform, baseline);
+    scheduleDraw();
+  };
+
   const setTier = (nextTier: RelationshipGraphTier) => {
-    if (nextTier === tier) {
+    if (nextTier === graphTier) {
       fitView();
       return;
     }
-    setTransform({ x: 0, y: 0, k: 1 });
-    onZoomLevel(zoomLevelForGraphTier(nextTier));
+    thresholdLockRef.current = true;
+    onGraphTier(nextTier);
   };
 
   const activateNode = (node: RelationshipGraphNode) => {
@@ -243,53 +540,108 @@ export function InteractiveRelationshipGraph({
       onFocus(node.id);
       return;
     }
-    const index = TIER_ORDER.indexOf(tier);
+    const index = TIER_ORDER.indexOf(graphTier);
     const nextTier = TIER_ORDER[Math.min(TIER_ORDER.length - 1, index + 1)];
-    if (nextTier && nextTier !== tier) setTier(nextTier);
+    if (nextTier && nextTier !== graphTier) setTier(nextTier);
   };
 
-  const zoomAround = (event: React.WheelEvent<SVGSVGElement>) => {
+  const handlePointerMove = (event: ReactPointerEvent<HTMLCanvasElement>) => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const point = pointFromClient(event, canvas);
+    const drag = dragRef.current;
+    if (drag && drag.pointerId === event.pointerId) {
+      const node = nodesRef.current.find((candidate) => candidate.id === drag.id);
+      if (!node) return;
+      if (!drag.moved && Math.hypot(point.x - drag.start.x, point.y - drag.start.y) > 3) drag.moved = true;
+      if (!drag.moved) return;
+      const next = graphPoint(point, transformRef.current);
+      node.x = next.x;
+      node.y = next.y;
+      node.fx = next.x;
+      node.fy = next.y;
+      pinnedRef.current.add(node.id);
+      simulationRef.current?.alphaTarget(0.18).restart();
+      scheduleDraw();
+      return;
+    }
+    const node = hitNode(point);
+    const edge = node ? undefined : hitEdge(point);
+    const nextHover = node
+      ? { kind: "node" as const, id: node.id, x: point.x, y: point.y }
+      : edge ? { kind: "edge" as const, id: edge.id, x: point.x, y: point.y } : null;
+    if (nextHover?.kind !== hover?.kind || nextHover?.id !== hover?.id) setHover(nextHover);
+  };
+
+  const handlePointerDown = (event: ReactPointerEvent<HTMLCanvasElement>) => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const point = pointFromClient(event, canvas);
+    clickRef.current = { pointerId: event.pointerId, start: point };
+    const node = hitNode(point);
+    if (!node) return;
     event.preventDefault();
-    const rect = event.currentTarget.getBoundingClientRect();
-    const point = {
-      x: ((event.clientX - rect.left) / Math.max(1, rect.width)) * VIEWBOX_WIDTH,
-      y: ((event.clientY - rect.top) / Math.max(1, rect.height)) * VIEWBOX_HEIGHT,
-    };
-    const factor = event.deltaY < 0 ? 1.14 : 0.88;
-    setTransform((current) => {
-      const k = Math.max(0.62, Math.min(3.4, current.k * factor));
-      return {
-        k,
-        x: point.x - (point.x - current.x) * (k / current.k),
-        y: point.y - (point.y - current.y) * (k / current.k),
-      };
-    });
+    event.stopPropagation();
+    canvas.setPointerCapture(event.pointerId);
+    dragRef.current = { id: node.id, pointerId: event.pointerId, start: point, moved: false };
   };
 
+  const handlePointerUp = (event: ReactPointerEvent<HTMLCanvasElement>) => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const point = pointFromClient(event, canvas);
+    const drag = dragRef.current;
+    if (drag && drag.pointerId === event.pointerId) {
+      const node = nodesRef.current.find((candidate) => candidate.id === drag.id);
+      dragRef.current = null;
+      simulationRef.current?.alphaTarget(0);
+      if (!drag.moved && node) activateNode(node);
+      return;
+    }
+    const click = clickRef.current;
+    clickRef.current = null;
+    if (click && click.pointerId === event.pointerId && Math.hypot(point.x - click.start.x, point.y - click.start.y) < 4) {
+      const edge = hitEdge(point);
+      if (edge) {
+        setSelectedEdgeId(edge.id);
+        onOpenRelation(edge.relationIds[0]!);
+      }
+    }
+  };
+
+  const handleDoubleClick = (event: ReactPointerEvent<HTMLCanvasElement>) => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const node = hitNode(pointFromClient(event, canvas));
+    if (!node) return;
+    event.preventDefault();
+    node.fx = null;
+    node.fy = null;
+    pinnedRef.current.delete(node.id);
+    simulationRef.current?.alpha(0.25).restart();
+    scheduleDraw();
+  };
+
+  const canvasLabel = `${model.nodes.length} ${locale === "zh-CN" ? "个节点" : "nodes"}, ${model.edges.length} ${locale === "zh-CN" ? "条关系边" : "relationship edges"}`;
   const graphHeading = focus
     ? (locale === "zh-CN" ? "当前焦点的人物关系图" : "People around the current focus")
     : (locale === "zh-CN" ? "交错的人物关系" : "Interwoven people");
 
   return (
-    <section className="relationship-graph" aria-labelledby="relationship-graph-title">
+    <section className="relationship-graph" aria-labelledby="relationship-graph-title" data-graph-renderer="canvas" data-graph-tier={graphTier} data-graph-effective-tier={model.effectiveTier}>
       <div className="relationship-graph-heading">
         <div>
           <p className="eyebrow">{locale === "zh-CN" ? "人物关系图" : "Relationship graph"}</p>
           <h3 id="relationship-graph-title">{graphHeading}</h3>
-          <p>{locale === "zh-CN" ? "图中只取人物—人物读模型关系，并把思想影响、同时代往来与后世接受分开标注；地点、事件和文本仍沿用右侧关系清单与地图上下文。" : "The graph uses only figure-to-figure read-model relations and separates intellectual influence, contemporaneity and later reception; places, events and texts remain in the contextual list and map."}</p>
+          <p>{locale === "zh-CN" ? "Canvas 力导图只取人物—人物读模型关系；地点、事件、文本和后世记忆保留在地图、时间轴与证据清单中。" : "The Canvas force graph uses only figure-to-figure read-model relations; places, events, texts and later memory remain in the map, timeline and evidence lists."}</p>
         </div>
         <div className="relationship-graph-count" aria-live="polite">
-          <strong>{laidOutModel.nodes.length}</strong> {locale === "zh-CN" ? "节点" : "nodes"} · <strong>{laidOutModel.edges.length}</strong> {locale === "zh-CN" ? "条人物边" : "people edges"}
+          <strong>{model.nodes.length}</strong> {locale === "zh-CN" ? "节点" : "nodes"} · <strong>{model.edges.length}</strong> {locale === "zh-CN" ? "条人物边" : "people edges"}
         </div>
       </div>
-
       <div className="relationship-graph-toolbar">
         <div className="relationship-graph-tiers" role="group" aria-label={locale === "zh-CN" ? "关系图展开层级" : "Relationship graph detail level"}>
-          {TIER_ORDER.map((level) => (
-            <button key={level} type="button" className={level === laidOutModel.effectiveTier ? "active" : ""} aria-pressed={level === laidOutModel.effectiveTier} onClick={() => setTier(level)}>
-              {tierLabel(level, locale)}
-            </button>
-          ))}
+          {TIER_ORDER.map((level) => <button key={level} type="button" className={level === graphTier ? "active" : ""} aria-pressed={level === graphTier} onClick={() => setTier(level)}>{tierLabel(level, locale)}</button>)}
         </div>
         <div className="relationship-graph-actions">
           <span>{model.scopedPeople} {locale === "zh-CN" ? "位关联人物" : "scoped people"}{model.hiddenPeople > 0 ? ` · ${locale === "zh-CN" ? `隐藏 ${model.hiddenPeople}` : `${model.hiddenPeople} hidden`}` : ""}</span>
@@ -297,159 +649,44 @@ export function InteractiveRelationshipGraph({
           {!asTable ? <button type="button" onClick={fitView}>{locale === "zh-CN" ? "重置视图" : "Reset view"}</button> : null}
         </div>
       </div>
-      {model.effectiveTier !== tier ? (
-        <p className="relationship-graph-note" role="status">
-          {locale === "zh-CN" ? "当前聚合层级已自动展开焦点人物，人物节点、关系边和右侧语境保持联动。" : "The aggregate view is expanded to the focused person so its node, relation edges and contextual panel stay linked."}
-        </p>
-      ) : null}
+      {model.effectiveTier !== graphTier ? <p className="relationship-graph-note" role="status">{locale === "zh-CN" ? "当前聚合层级已自动展开焦点人物；图谱层级与地图缩放独立保存。" : "The aggregate view is expanded to the focused person; graph detail and map zoom are saved independently."}</p> : null}
+      {from !== undefined || to !== undefined ? <p className="relationship-graph-time-note" role="status">{locale === "zh-CN" ? `时间窗：${from ?? "…"} 至 ${to ?? "…"}；虚线边为窗外关系，点线边为年代未定。` : `Time window: ${from ?? "…"} to ${to ?? "…"}; dashed edges are outside it and dotted edges are undated.`}</p> : null}
 
       {asTable ? (
         <div className="relationship-graph-table-wrap">
           <table className="relationship-graph-table">
             <caption>{locale === "zh-CN" ? `当前人物关系 · ${model.relationRows.length} 条` : `Current people relations · ${model.relationRows.length}`}</caption>
-            <thead>
-              <tr>
-                <th scope="col">{locale === "zh-CN" ? "人物 A" : "Person A"}</th>
-                <th scope="col">{locale === "zh-CN" ? "关系" : "Relation"}</th>
-                <th scope="col">{locale === "zh-CN" ? "人物 B" : "Person B"}</th>
-                <th scope="col">{locale === "zh-CN" ? "时间／证据" : "Time / evidence"}</th>
-                <th scope="col">{locale === "zh-CN" ? "详情" : "Open"}</th>
-              </tr>
-            </thead>
+            <thead><tr><th scope="col">{locale === "zh-CN" ? "人物 A" : "Person A"}</th><th scope="col">{locale === "zh-CN" ? "关系" : "Relation"}</th><th scope="col">{locale === "zh-CN" ? "人物 B" : "Person B"}</th><th scope="col">{locale === "zh-CN" ? "时间／证据" : "Time / evidence"}</th><th scope="col">{locale === "zh-CN" ? "详情" : "Open"}</th></tr></thead>
             <tbody>
               {model.relationRows.map((relation) => {
                 const source = contextEndpointKey(relation.source);
                 const target = contextEndpointKey(relation.target);
-                return (
-                  <tr key={relation.id}>
-                    <td><button type="button" onClick={() => onFocus(source)}>{titleForKey(source, searchItems, locale)}</button></td>
-                    <td><button type="button" onClick={() => onOpenRelation(relation.id)}>{titleForRelation(relation, locale)} <span aria-hidden="true">{relationConnector(relation)}</span></button></td>
-                    <td><button type="button" onClick={() => onFocus(target)}>{titleForKey(target, searchItems, locale)}</button></td>
-                    <td>{relationDate(relation) ?? formatEvidence(relation.evidenceLayer, locale)} · {formatConfidence(relation.confidence, locale)}</td>
-                    <td><button type="button" onClick={() => onOpenRelation(relation.id)}>{locale === "zh-CN" ? "查看" : "Open"}</button></td>
-                  </tr>
-                );
+                return <tr key={relation.id}><td><button type="button" onClick={() => onFocus(source)}>{titleForKey(source, searchItems, locale)}</button></td><td><button type="button" onClick={() => onOpenRelation(relation.id)}>{titleForRelation(relation, locale)} <span aria-hidden="true">{relationConnector(relation)}</span></button></td><td><button type="button" onClick={() => onFocus(target)}>{titleForKey(target, searchItems, locale)}</button></td><td>{relationDate(relation) ?? formatEvidence(relation.evidenceLayer, locale)} · {formatConfidence(relation.confidence, locale)}</td><td><button type="button" onClick={() => onOpenRelation(relation.id)}>{locale === "zh-CN" ? "查看" : "Open"}</button></td></tr>;
               })}
             </tbody>
           </table>
-          {model.relationRows.length === 0 ? <p className="relationship-graph-empty">{locale === "zh-CN" ? "当前上下文暂时没有可核实的人物—人物关系；地点、事件、文本和后世接受仍可从右侧清单进入。" : "No verified figure-to-figure relation is available in this context yet; use the right-hand list for places, events, texts and later reception."}</p> : null}
+          {model.relationRows.length === 0 ? <p className="relationship-graph-empty">{locale === "zh-CN" ? "当前上下文暂时没有可核实的人物—人物关系；地点、事件、文本和后世接受仍可从关联清单进入。" : "No verified figure-to-figure relation is available in this context yet; use the related lists for places, events, texts and later reception."}</p> : null}
         </div>
       ) : (
-        <div className="relationship-graph-canvas-wrap" ref={canvasWrapRef}>
-          <svg
-            className="relationship-graph-canvas"
-            viewBox={`0 0 ${VIEWBOX_WIDTH} ${VIEWBOX_HEIGHT}`}
-            role="group"
-            aria-label={`${laidOutModel.nodes.length} ${locale === "zh-CN" ? "个节点" : "nodes"}, ${laidOutModel.edges.length} ${locale === "zh-CN" ? "条边" : "edges"}`}
-            onWheel={zoomAround}
-            onPointerDown={(event) => {
-              const target = event.target as Element;
-              if (event.target !== event.currentTarget && !target.classList.contains("relationship-graph-backdrop")) return;
-              const point = { x: event.clientX, y: event.clientY };
-              event.currentTarget.setPointerCapture(event.pointerId);
-              panRef.current = { start: point, transform, pointerId: event.pointerId };
-            }}
-            onPointerMove={(event) => {
-              const drag = dragRef.current;
-              if (drag && drag.pointerId === event.pointerId) {
-                const current = graphPoint(event, transform);
-                if (!drag.moved && Math.hypot(event.clientX - drag.start.x, event.clientY - drag.start.y) > 3) drag.moved = true;
-                if (drag.moved) setManualPositions((positions) => new Map(positions).set(drag.id, current));
-                return;
-              }
-              const pan = panRef.current;
-              if (pan && pan.pointerId === event.pointerId) {
-                setTransform({ ...pan.transform, x: pan.transform.x + event.clientX - pan.start.x, y: pan.transform.y + event.clientY - pan.start.y });
-              }
-            }}
-            onPointerUp={(event) => {
-              const drag = dragRef.current;
-              if (drag && drag.pointerId === event.pointerId) {
-                dragRef.current = null;
-                if (!drag.moved) {
-                  const node = nodeMap.get(drag.id);
-                  if (node) activateNode(node);
-                }
-                return;
-              }
-              if (panRef.current?.pointerId === event.pointerId) panRef.current = null;
-            }}
-            onPointerCancel={() => { dragRef.current = null; panRef.current = null; }}
-          >
-            <defs>
-              <filter id="relationship-graph-shadow" x="-25%" y="-25%" width="150%" height="150%"><feDropShadow dx="0" dy="4" stdDeviation="5" floodColor="#202522" floodOpacity="0.16" /></filter>
-              {(Object.entries(EDGE_COLORS) as [RelationshipGraphEdge["tone"], string][]).map(([tone, color]) => <marker key={tone} id={`relationship-graph-arrow-${tone}`} markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M 0 0 L 8 4 L 0 8 z" fill={color} /></marker>)}
-            </defs>
-            <rect className="relationship-graph-backdrop" x="0" y="0" width={VIEWBOX_WIDTH} height={VIEWBOX_HEIGHT} rx="16" />
-            <g transform={`translate(${transform.x} ${transform.y}) scale(${transform.k})`}>
-              {laidOutModel.edges.map((edge, index) => {
-                const relatedCount = laidOutModel.edges.filter((candidate) => candidate.source === edge.source && candidate.target === edge.target || candidate.source === edge.target && candidate.target === edge.source).length;
-                const relatedIndex = laidOutModel.edges.filter((candidate) => candidate.source === edge.source && candidate.target === edge.target || candidate.source === edge.target && candidate.target === edge.source).indexOf(edge);
-                const path = edgePath(edge, nodeMap, relatedIndex, relatedCount);
-                if (!path) return null;
-                const active = activeNodeIds.size === 0 || activeNodeIds.has(edge.source) || activeNodeIds.has(edge.target);
-                return <path key={edge.id} className={`relationship-graph-edge tone-${edge.tone}`} d={path} style={{ opacity: active ? 0.78 : 0.12, stroke: EDGE_COLORS[edge.tone] }} markerEnd={edge.directed ? `url(#relationship-graph-arrow-${edge.tone})` : undefined} role="button" tabIndex={0} aria-label={`${edge.label}: ${titleForKey(edge.source, searchItems, locale)} ${titleForKey(edge.target, searchItems, locale)}`} onClick={() => onOpenRelation(edge.relationIds[0]!)} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); onOpenRelation(edge.relationIds[0]!); } }}><title>{edge.label} · {edge.summary}</title></path>;
-              })}
-              {laidOutModel.nodes.map((node) => {
-                const active = activeNodeIds.size === 0 || activeNodeIds.has(node.id);
-                const selected = node.id === focus;
-                return (
-                  <g
-                    key={node.id}
-                    className={`graph-node relationship-graph-node node-${node.kind}${selected ? " is-focused" : ""}`}
-                    transform={`translate(${node.x} ${node.y})`}
-                    style={{ opacity: active ? 1 : 0.18 }}
-                    role="button"
-                    tabIndex={0}
-                    aria-label={`${node.label} · ${node.sublabel}`}
-                    onPointerDown={(event) => {
-                      event.stopPropagation();
-                      event.currentTarget.setPointerCapture(event.pointerId);
-                      dragRef.current = { id: node.id, start: { x: event.clientX, y: event.clientY }, moved: false, pointerId: event.pointerId };
-                    }}
-                    onPointerMove={(event) => {
-                      const drag = dragRef.current;
-                      if (!drag || drag.id !== node.id || drag.pointerId !== event.pointerId) return;
-                      const current = graphPoint(event, transform);
-                      if (!drag.moved && Math.hypot(event.clientX - drag.start.x, event.clientY - drag.start.y) > 3) drag.moved = true;
-                      if (drag.moved) setManualPositions((positions) => new Map(positions).set(node.id, current));
-                    }}
-                    onPointerUp={(event) => {
-                      event.stopPropagation();
-                      const drag = dragRef.current;
-                      if (!drag || drag.id !== node.id || drag.pointerId !== event.pointerId) return;
-                      dragRef.current = null;
-                      if (!drag.moved) activateNode(node);
-                    }}
-                    onDoubleClick={(event) => {
-                      event.stopPropagation();
-                      setManualPositions((positions) => {
-                        const next = new Map(positions);
-                        next.delete(node.id);
-                        return next;
-                      });
-                    }}
-                    onPointerEnter={(event) => { const rect = canvasWrapRef.current?.getBoundingClientRect(); setHover({ node, x: event.clientX - (rect?.left ?? 0), y: event.clientY - (rect?.top ?? 0) }); }}
-                    onPointerMoveCapture={(event) => { if (!dragRef.current) { const rect = canvasWrapRef.current?.getBoundingClientRect(); setHover({ node, x: event.clientX - (rect?.left ?? 0), y: event.clientY - (rect?.top ?? 0) }); } }}
-                    onPointerLeave={() => setHover(null)}
-                    onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); activateNode(node); } }}
-                  >
-                    {selected ? <circle className="relationship-graph-node-halo" r={nodeRadius(node) + 7} /> : null}
-                    <circle className="relationship-graph-node-disc" r={nodeRadius(node)} fill={TRADITION_COLORS[node.tradition]} filter={node.kind === "person" ? undefined : "url(#relationship-graph-shadow)"} />
-                    <text className="relationship-graph-node-label" textAnchor="middle" y="4">{node.kind === "person" && !selected ? shortLabel(node.label) : node.label}</text>
-                    <text className="relationship-graph-node-count" textAnchor="middle" y={nodeRadius(node) + 16}>{node.kind === "person" ? node.degree : node.weight}</text>
-                  </g>
-                );
-              })}
-            </g>
-          </svg>
-          {hover ? <div className="relationship-graph-tooltip" style={{ left: `${Math.min(Math.max(8, hover.x + 12), Math.max(8, (canvasWrapRef.current?.clientWidth ?? 320) - 220))}px`, top: `${Math.min(Math.max(8, hover.y + 12), Math.max(8, (canvasWrapRef.current?.clientHeight ?? 320) - 100))}px` }}><strong>{hover.node.label}</strong><span>{hover.node.sublabel}</span><small>{hover.node.kind === "person" ? `${hover.node.degree} ${locale === "zh-CN" ? "条相连人物关系" : "connected people relations"}` : `${hover.node.weight} ${locale === "zh-CN" ? "位人物" : "people"}`}</small></div> : null}
-          <p className="relationship-graph-hint">{locale === "zh-CN" ? "滚轮缩放，拖动空白区域平移；拖动节点固定位置，双击节点释放。点击人物进入 canonical 人物 URL，点击边打开关系详情。" : "Scroll to zoom and drag the background to pan; drag a node to pin it and double-click to release. Click a person for its canonical URL, or an edge for relation detail."}</p>
+        <div className="relationship-graph-canvas-wrap" ref={wrapRef}>
+          <canvas ref={canvasRef} className="relationship-graph-canvas" role="img" aria-label={canvasLabel} onPointerDown={handlePointerDown} onPointerMove={handlePointerMove} onPointerUp={handlePointerUp} onPointerCancel={() => { dragRef.current = null; clickRef.current = null; simulationRef.current?.alphaTarget(0); }} onPointerLeave={() => setHover(null)} onDoubleClick={handleDoubleClick} />
+          {hover ? (() => {
+            const node = hover.kind === "node" ? nodesRef.current.find((candidate) => candidate.id === hover.id) : undefined;
+            const edge = hover.kind === "edge" ? linksRef.current.find((candidate) => candidate.id === hover.id) : undefined;
+            return <div className="relationship-graph-tooltip" style={{ left: `${Math.min(Math.max(8, hover.x + 12), Math.max(8, dimensions.width - 230))}px`, top: `${Math.min(Math.max(8, hover.y + 12), Math.max(8, dimensions.height - 104))}px` }} role="status"><strong>{node?.label ?? edge?.label}</strong><span>{node?.sublabel ?? edge?.summary}</span><small>{node ? `${node.degree || node.weight} ${locale === "zh-CN" ? (node.kind === "person" ? "条相连人物关系" : "位人物") : (node.kind === "person" ? "connected people relations" : "people")}` : edge ? `${timeStatusLabel(edge.timeStatus, locale)} · ${edge.relationTypes.join(" / ")}` : ""}</small></div>;
+          })() : null}
+          <p className="relationship-graph-hint">{locale === "zh-CN" ? "滚轮缩放（相对当前图谱基线）；拖动空白区域平移；拖动节点固定位置，双击节点释放。点击边打开关系详情。" : "Scroll to zoom relative to this graph's baseline; drag the background to pan; drag a node to pin it and double-click to release. Click an edge for relation detail."}</p>
+          <nav className="relationship-graph-roster" aria-label={locale === "zh-CN" ? "关系图节点目录" : "Graph node roster"}>
+            <p className="eyebrow">{locale === "zh-CN" ? "节点目录（键盘可操作）" : "Node roster (keyboard accessible)"}</p>
+            <ul>
+              {model.nodes.map((node) => <li key={node.id}><button type="button" className={`graph-node relationship-graph-node node-${node.kind}${node.id === focus ? " is-focused" : ""}`} aria-pressed={node.id === focus} onClick={() => activateNode(node)} onKeyDown={(event: ReactKeyboardEvent<HTMLButtonElement>) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); activateNode(node); } }}><span className="relationship-graph-roster-swatch" style={{ background: TRADITION_COLORS[node.tradition] }} aria-hidden="true" /><span>{node.label}</span><small>{node.outsideTimeRange ? `${locale === "zh-CN" ? "时间窗外 · " : "Outside window · "}` : ""}{node.kind === "person" ? `${node.degree} ${locale === "zh-CN" ? "边" : "edges"}` : `${node.weight} ${locale === "zh-CN" ? "人" : "people"}`}</small></button></li>)}
+            </ul>
+          </nav>
         </div>
       )}
-
       <ul className="relationship-graph-legend" aria-label={locale === "zh-CN" ? "关系语义图例" : "Relation semantics legend"}>
         {(Object.keys(EDGE_COLORS) as RelationshipGraphEdge["tone"][]).map((tone) => <li key={tone}><i style={{ background: EDGE_COLORS[tone] }} />{relationToneLabel(tone, locale)}</li>)}
+        <li><i className="is-dashed" />{locale === "zh-CN" ? "窗外／年代未定边" : "Outside-window / undated edge"}</li>
       </ul>
     </section>
   );

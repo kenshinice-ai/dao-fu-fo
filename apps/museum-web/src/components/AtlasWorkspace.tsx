@@ -11,6 +11,7 @@ import { ErrorState, LoadingState } from "./LoadingState";
 import { Icon } from "./Icon";
 import { RelationNetwork } from "./RelationNetwork";
 import { InteractiveRelationshipGraph } from "./InteractiveRelationshipGraph";
+import { FullWidthTimeline } from "./FullWidthTimeline";
 import { ERA_CONTEXTS } from "../data/eraContexts";
 import { formatConfidence, formatEntityKind, formatEventKind, formatEventScope, formatEvidence, formatEvidenceLine, formatInteractionMode, formatRelationType } from "../data/labels";
 import type { EntityData, EntityKind, Locale, MapContextData, SearchItem, TimelineData, TimelineEvent, Tradition } from "../types";
@@ -55,7 +56,7 @@ const ZOOM_LEVELS: { id: ZoomLevel; zh: string; en: string; noteZh: string; note
   { id: "all", zh: "全部", en: "All", noteZh: "展开对象", noteEn: "Expanded" },
 ];
 
-type MobileAtlasPanel = "map" | "timeline" | "objects";
+type MobileAtlasPanel = "map" | "relations" | "timeline" | "details";
 
 const TRADITIONS: { slug: Tradition; zh: string; en: string }[] = [
   { slug: "daoism", zh: "道", en: "Dao" },
@@ -182,7 +183,7 @@ function useAtlasData(locale: Locale) {
 export function AtlasWorkspace({ locale, state, onChange, className = "", heading, description, compact = false }: AtlasWorkspaceProps) {
   const { data, error } = useAtlasData(locale);
   const [shareStatus, setShareStatus] = useState<"idle" | "copied" | "failed">("idle");
-  const [mobilePanel, setMobilePanel] = useState<MobileAtlasPanel>("map");
+  const [mobilePanel, setMobilePanel] = useState<MobileAtlasPanel>(state.atlasTab === "relations" ? "relations" : "map");
   const [isPlaying, setIsPlaying] = useState(false);
   const [playbackYear, setPlaybackYear] = useState<number | undefined>(undefined);
   const onChangeRef = useRef(onChange);
@@ -420,10 +421,18 @@ export function AtlasWorkspace({ locale, state, onChange, className = "", headin
         </div>
       </div>
 
+      <div className="atlas-context-summary" aria-label={locale === "zh-CN" ? "当前探索状态" : "Current exploration state"} data-atlas-context-summary>
+        <span><strong>{locale === "zh-CN" ? "焦点" : "Focus"}</strong> {focusTitle}</span>
+        <span><strong>{locale === "zh-CN" ? "时间" : "Time"}</strong> {formatYear(effectiveState.from ?? data.timeline.startYear, locale)} — {formatYear(effectiveState.to ?? data.timeline.endYear, locale)}</span>
+        <span><strong>{locale === "zh-CN" ? "图谱" : "Graph"}</strong> {state.graphTier}</span>
+        <span><strong>{locale === "zh-CN" ? "地图层" : "Map layers"}</strong> {state.mapLayers.join(locale === "zh-CN" ? "、" : ", ")}</span>
+      </div>
+
       <nav className="atlas-mobile-view-controls" aria-label={locale === "zh-CN" ? "移动端探索面板" : "Mobile atlas panels"}>
         <button type="button" className={mobilePanel === "map" ? "active" : ""} aria-pressed={mobilePanel === "map"} onClick={() => setMobilePanel("map")}>{locale === "zh-CN" ? "地图" : "Map"}</button>
+        <button type="button" className={mobilePanel === "relations" ? "active" : ""} aria-pressed={mobilePanel === "relations"} onClick={() => setMobilePanel("relations")}>{locale === "zh-CN" ? "关系" : "Relations"}</button>
         <button type="button" className={mobilePanel === "timeline" ? "active" : ""} aria-pressed={mobilePanel === "timeline"} onClick={() => setMobilePanel("timeline")}>{locale === "zh-CN" ? "时间" : "Time"}</button>
-        <button type="button" className={mobilePanel === "objects" ? "active" : ""} aria-pressed={mobilePanel === "objects"} onClick={() => setMobilePanel("objects")}>{locale === "zh-CN" ? "对象" : "Objects"}</button>
+        <button type="button" className={mobilePanel === "details" ? "active" : ""} aria-pressed={mobilePanel === "details"} onClick={() => setMobilePanel("details")}>{locale === "zh-CN" ? "对象" : "Details"}</button>
       </nav>
 
       <section className={`atlas-era-context atlas-era-context-${eraContext.tone}`} data-era-context data-era-context-id={eraIdForState(state)} aria-live="polite">
@@ -441,8 +450,9 @@ export function AtlasWorkspace({ locale, state, onChange, className = "", headin
         </div>
       </section>
 
-      <div className="atlas-main-grid">
-        <div className="atlas-map-column">
+      <div className="atlas-main-grid atlas-main-stack">
+        <section className="atlas-stage atlas-map-stage-shell" aria-labelledby="atlas-map-stage-title">
+          <div className="atlas-stage-heading"><p className="eyebrow">Atlas / {locale === "zh-CN" ? "空间层" : "Spatial layer"}</p><h3 id="atlas-map-stage-title">{locale === "zh-CN" ? "现实地点与人物轨迹" : "Real places and figure trajectories"}</h3></div>
           <CivilisationMap
             className="atlas-map-stage"
             data={data.map}
@@ -462,38 +472,36 @@ export function AtlasWorkspace({ locale, state, onChange, className = "", headin
             showIndex={false}
             showRouteLedger={false}
           />
-          <AtlasTimelineRail locale={locale} data={data.timeline} relations={data.relations} searchItems={data.searchItems} state={effectiveState} onChange={updateState} isPlaying={isPlaying} playbackYear={playbackYear} onTogglePlayback={() => setIsPlaying((playing) => !playing)} />
-        </div>
-        <AtlasObjectPanel
-          locale={locale}
-          state={state}
-          data={data}
-          query={query}
-          onQuery={(value) => updateState({ query: value.trim() || undefined })}
-          items={filteredItems}
-          relationItems={relationItems}
-          relationContextCounts={relationContextCounts}
-          tabCounts={tabCounts}
-          onChange={updateState}
-          onFocus={state.atlasTab === "relations" ? setGraphFocus : setFocus}
-          onOpenDetail={openDetail}
-        />
-      </div>
+        </section>
 
-      {state.atlasTab === "relations" ? (
-        <InteractiveRelationshipGraph
+        {(!compact || state.atlasTab === "relations") ? <section className="atlas-stage atlas-graph-stage" aria-labelledby="atlas-graph-stage-title">
+          <div className="atlas-stage-heading"><p className="eyebrow">Atlas / {locale === "zh-CN" ? "关系层" : "Relational layer"}</p><h3 id="atlas-graph-stage-title">{locale === "zh-CN" ? "人物关系力导图" : "Force-directed figure graph"}</h3></div>
+          <InteractiveRelationshipGraph
           locale={locale}
           relations={data.relations}
           scopeRelations={contextualRelationItems}
           searchItems={data.searchItems}
           focus={state.focus}
           traditions={state.traditions}
-          zoomLevel={state.zoomLevel}
-          onZoomLevel={(zoomLevel) => updateState({ zoomLevel })}
+          graphTier={state.graphTier}
+          from={state.from}
+          to={state.to}
+          onGraphTier={(graphTier) => updateState({ graphTier })}
           onFocus={setGraphFocus}
           onOpenRelation={(relationId) => openDetail(relationDetailKey(relationId))}
-        />
-      ) : null}
+          />
+        </section> : null}
+
+        {!compact ? <section className="atlas-stage atlas-timeline-stage" aria-labelledby="atlas-timeline-stage-title">
+          <div className="atlas-stage-heading"><p className="eyebrow">Atlas / {locale === "zh-CN" ? "时间层" : "Temporal layer"}</p><h3 id="atlas-timeline-stage-title">{locale === "zh-CN" ? "五层历史时间轴" : "Five-lane historical timeline"}</h3></div>
+          <FullWidthTimeline locale={locale} data={data.timeline} relations={data.relations} searchItems={data.searchItems} focus={effectiveState.focus} traditions={effectiveState.traditions} from={effectiveState.from} to={effectiveState.to} timelineMode={effectiveState.timelineMode} onChange={updateState} onFocus={setFocus} isPlaying={isPlaying} playbackYear={playbackYear} onTogglePlayback={() => setIsPlaying((playing) => !playing)} />
+        </section> : null}
+
+        <section className="atlas-stage atlas-browser-stage" aria-labelledby="atlas-browser-stage-title">
+          <div className="atlas-stage-heading"><p className="eyebrow">Atlas / {locale === "zh-CN" ? "对象层" : "Object layer"}</p><h3 id="atlas-browser-stage-title">{locale === "zh-CN" ? "人物、地点、事件与证据" : "Figures, places, events and evidence"}</h3></div>
+          <AtlasObjectPanel locale={locale} state={state} data={data} query={query} onQuery={(value) => updateState({ query: value.trim() || undefined })} items={filteredItems} relationItems={relationItems} relationContextCounts={relationContextCounts} tabCounts={tabCounts} onChange={(changes) => { if (changes.atlasTab === "relations") setMobilePanel("relations"); onChange(changes); }} onFocus={state.atlasTab === "relations" ? setGraphFocus : setFocus} onOpenDetail={openDetail} />
+        </section>
+      </div>
 
       <AtlasDataNotes locale={locale} data={data} state={state} />
 

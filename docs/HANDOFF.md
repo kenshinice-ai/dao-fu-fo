@@ -1,8 +1,19 @@
 # 道·儒·佛文明数字博物馆｜项目交接文档
 
 > 维护纪律：每个可独立说明的实现、修复、验证或发布阶段完成后立即更新。
-> 最后更新：2026-08-15
-> 当前阶段：第三批人物—事件—地点—关系—路线 authoring、完整本地门禁与 feature commit `6e937da` 已完成，正在推送；production 仍停留在第三批之前的 `fb618c05 / 53e8b5d`，新增 Full Alpha payload 尚未获得单独公开发布确认
+> 最后更新：2026-08-16
+> 当前阶段：Atlas 全宽工作区、Canvas 关系图、五层时间轴、人物空间—时间档案与 152 人物目录重构已完成；本地门禁和临时 production smoke 已通过，正在提交、push 并以 clean commit 重新部署
+
+## 2026-08-16｜Atlas 全宽工作区与人物空间—时间重构 release checkpoint（待 clean commit deployment）
+
+- 本轮完成统一的全宽 Atlas 工作区：地图、关系图、五层时间轴和对象浏览器共用同一焦点、时间范围与 URL 状态；桌面端取消地图/关系图/时间轴的窄栏分割，移动端改为地图、关系、时间、对象四面板切换；新增 152 人物目录和传统/时代筛选；Research 目录与治理队列支持搜索、类型筛选和分页；
+- 关系图已改为真正的 D3 Canvas force graph，支持时代/区域/人物/全部四级展开、拖拽固定、缩放平移、hover 详情、edge detail、表格/语义 roster fallback、reduced-motion；时间轴改为 space/history/events/transmission/memory 五层，支持 brush、历史/传统顺序、播放和无 year-zero 表达；
+- 人物档案新增 Figure space-time：现实地点、事件桥接、显式路线和后世记忆分层展示，无法确定的地点保持 unresolved，不伪造坐标；地图新增人物轨迹、reconstructed corridor 与 memory layer，并保留证据来源和置信度；
+- Full Alpha 内容规模保持：465 个编译实体、152 人物、157 事件、90 地点、7 路线、716 关系、105 来源、音频 3；当前仍为 `releaseStage=alpha` / `visibility=preview`，1535 个 public blockers 继续在 Research 透明展示，不等同 Public RC 或正式学术发布；
+- 本地验证已通过：`npm run typecheck`；unit **42/42**；`npm run check`；`npm run check:release`；Full Alpha build/static preflight（18 JS chunks、996 files、0 conflict copies）；`npm audit` 与 `npm audit --omit=dev` 均为 0 vulnerabilities；Full Alpha Playwright + axe **68 passed / 1 skipped**（42 个 axe 审计全部通过，唯一 skipped 为既有 Public RC 专用用例）；database integration 为 468 entities / 716 relations / 152 figures / 90 places / 157 events / 7 routes / 21 routeWaypoints，fingerprint 可重复；
+- 提交前临时 production deployment 已完成：unique <https://d622c5b7.dao-ru-fo-digital-museum.pages.dev>；deployment ID `d622c5b7-1905-435d-863a-274d5a9b2ca4`；source marker `d0ee4fe`；Wrangler `4.122.0`；default 与 unique HTTP smoke 均 **25/25**；线上 manifest 为 `2026.08.alpha.1 / alpha / preview`；
+- 浏览器关键路径已在 unique deployment 验收：首页与全宽 Atlas、玄奘焦点同步、时间轴 `timeline=tradition&from=-300&to=900`、关系图 `zoom=figure` 与地图缩放独立、玄奘人物档案、390px 移动面板和无横向溢出均通过；应用自身 console error 为 0；
+- 下一步：将本轮变更提交并 push 到 `https://github.com/kenshinice-ai/dao-fu-fo`，以 clean commit 重新执行 Full Alpha production deploy、default/unique HTTP smoke 与浏览器 smoke，然后追加最终 deployment ID、source marker 和回滚定位。
 
 ## 2026-08-15｜第三批历史网络 authoring 与验证 handoff（当前）
 
