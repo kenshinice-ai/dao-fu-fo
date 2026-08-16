@@ -136,10 +136,7 @@ export function ExplorePage() {
           <CosmosView locale={locale} traditions={routeState.traditions} focus={routeState.focus} relations={contextState.data?.relations} />
         </>
       ) : (
-        <>
-          {routeState.view !== "map" ? <ContextFocus locale={locale} focus={routeState.focus} data={contextState.data} error={contextState.error} onFocus={(focus) => updateRouteState({ focus })} /> : null}
-          <AtlasWorkspace locale={locale} state={routeState} onChange={updateRouteState} />
-        </>
+        <AtlasWorkspace locale={locale} state={routeState} onChange={updateRouteState} />
       )}
     </section>
   );

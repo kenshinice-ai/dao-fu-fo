@@ -1,0 +1,111 @@
+{
+  "atlas": {
+    "bottom": 2431.1796875,
+    "height": 2164.296875,
+    "left": 10,
+    "right": 380,
+    "top": 266.8828125,
+    "width": 370
+  },
+  "atlasView": "map",
+  "bodyScrollWidth": 390,
+  "browser": {
+    "panels": 1,
+    "shortcuts": 5,
+    "visiblePanels": 0
+  },
+  "contextFocus": {
+    "total": 0,
+    "visible": 0
+  },
+  "controls": {
+    "buttons": 64,
+    "mobileButtonMinHeights": [
+      44,
+      44
+    ]
+  },
+  "directory": {
+    "cards": 0
+  },
+  "documentScrollWidth": 390,
+  "figureSpacetime": {
+    "stageCount": 0,
+    "visibleStageCount": 0
+  },
+  "graph": {
+    "canvas": null,
+    "roster": 0,
+    "total": 0,
+    "visible": 0
+  },
+  "maps": {
+    "contextVisible": 1,
+    "rect": {
+      "bottom": 1295.25,
+      "height": 520,
+      "left": 11,
+      "right": 379,
+      "top": 775.25,
+      "width": 368
+    },
+    "relationNetworks": 0,
+    "total": 1,
+    "visible": 1
+  },
+  "mobilePanel": "map",
+  "overflowX": false,
+  "primary": {
+    "rect": {
+      "bottom": 1295.25,
+      "height": 520,
+      "left": 11,
+      "right": 379,
+      "top": 775.25,
+      "width": 368
+    },
+    "selector": ".civilisation-map-leaflet",
+    "visible": true
+  },
+  "scrollHeight": 2843,
+  "stages": {
+    "total": 1,
+    "visible": 1,
+    "visibleRects": [
+      {
+        "bottom": 2044.25,
+        "height": 1334.8984375,
+        "left": 10,
+        "right": 380,
+        "top": 709.3515625,
+        "width": 370
+      }
+    ]
+  },
+  "timeline": {
+    "full": 0,
+    "fullRect": null,
+    "indexes": 0,
+    "lists": 0,
+    "records": "27",
+    "ribbon": 1,
+    "ribbonRect": {
+      "bottom": 2044.25,
+      "height": 278,
+      "left": 10,
+      "right": 380,
+      "top": 1766.25,
+      "width": 370
+    },
+    "variant": "ribbon"
+  },
+  "url": "/explore?view=map&focus=figure%3Axuanzang&lang=zh-CN",
+  "viewport": {
+    "height": 844,
+    "width": 390
+  },
+  "slug": "explore-map-xuanzang-390x844",
+  "path": "/explore?view=map&focus=figure%3Axuanzang&lang=zh-CN",
+  "screenshotMode": "viewport",
+  "screenshotError": null
+}

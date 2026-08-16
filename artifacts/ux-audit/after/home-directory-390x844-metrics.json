@@ -1,0 +1,114 @@
+{
+  "atlas": {
+    "bottom": 2192.1796875,
+    "height": 2090.1796875,
+    "left": 0,
+    "right": 390,
+    "top": 102,
+    "width": 390
+  },
+  "atlasView": "map",
+  "bodyScrollWidth": 390,
+  "browser": {
+    "panels": 1,
+    "shortcuts": 8,
+    "visiblePanels": 0
+  },
+  "contextFocus": {
+    "total": 0,
+    "visible": 0
+  },
+  "controls": {
+    "buttons": 173,
+    "mobileButtonMinHeights": [
+      44,
+      44
+    ]
+  },
+  "directory": {
+    "cards": 152,
+    "count": "152 / 152 位人物",
+    "search": "搜索人物",
+    "total": "152"
+  },
+  "documentScrollWidth": 390,
+  "figureSpacetime": {
+    "stageCount": 0,
+    "visibleStageCount": 0
+  },
+  "graph": {
+    "canvas": null,
+    "roster": 0,
+    "total": 0,
+    "visible": 0
+  },
+  "maps": {
+    "contextVisible": 0,
+    "rect": {
+      "bottom": 1486.765625,
+      "height": 489.515625,
+      "left": 22,
+      "right": 368,
+      "top": 997.25,
+      "width": 346
+    },
+    "relationNetworks": 0,
+    "total": 1,
+    "visible": 1
+  },
+  "mobilePanel": "map",
+  "overflowX": false,
+  "primary": {
+    "rect": {
+      "bottom": 1486.765625,
+      "height": 489.515625,
+      "left": 22,
+      "right": 368,
+      "top": 997.25,
+      "width": 346
+    },
+    "selector": ".civilisation-map-leaflet",
+    "visible": true
+  },
+  "scrollHeight": 59870,
+  "stages": {
+    "total": 1,
+    "visible": 1,
+    "visibleRects": [
+      {
+        "bottom": 1804.25,
+        "height": 872.8984375,
+        "left": 21,
+        "right": 369,
+        "top": 931.3515625,
+        "width": 348
+      }
+    ]
+  },
+  "timeline": {
+    "full": 0,
+    "fullRect": null,
+    "indexes": 0,
+    "lists": 0,
+    "records": "369",
+    "ribbon": 1,
+    "ribbonRect": {
+      "bottom": 1804.25,
+      "height": 278,
+      "left": 21,
+      "right": 369,
+      "top": 1526.25,
+      "width": 348
+    },
+    "variant": "ribbon"
+  },
+  "url": "/?lang=zh-CN",
+  "viewport": {
+    "height": 844,
+    "width": 390
+  },
+  "slug": "home-directory-390x844",
+  "path": "/?lang=zh-CN",
+  "screenshotMode": "viewport",
+  "screenshotError": null
+}

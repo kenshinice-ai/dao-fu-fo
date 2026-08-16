@@ -1,0 +1,34 @@
+{
+  "bodyScrollWidth": 2560,
+  "canvasCount": 0,
+  "documentScrollWidth": 2560,
+  "graphEdges": 0,
+  "graphEffectiveTier": null,
+  "graphNodes": 0,
+  "graphTier": null,
+  "graphs": 0,
+  "heading": "三条道路，交错的历史时空",
+  "maps": 1,
+  "objectPanels": 242,
+  "overflowX": false,
+  "path": "/?lang=zh-CN",
+  "primary": {
+    "bottom": 1463.7421875,
+    "height": 760,
+    "left": 561,
+    "selector": ".civilisation-map-leaflet",
+    "top": 703.7421875,
+    "width": 1438
+  },
+  "scrollHeight": 30334,
+  "slug": "home-directory-2560x1440",
+  "stages": 2,
+  "timelines": 0,
+  "viewport": {
+    "height": 1440,
+    "width": 2560
+  },
+  "visibleButtons": 202,
+  "screenshotMode": "segmented",
+  "screenshotError": "Error: Timed out after 5000ms waiting for CDP command Page.captureScreenshot."
+}

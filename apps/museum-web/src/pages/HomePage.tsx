@@ -44,6 +44,7 @@ export function HomePage() {
   }, [locale]);
   const [figureTradition, setFigureTradition] = useState<"all" | "daoism" | "confucianism" | "buddhism">("all");
   const [figureEra, setFigureEra] = useState("all");
+  const [figureQuery, setFigureQuery] = useState("");
   const { data, error } = useStaticData(loader);
 
   if (error) return <ErrorState locale={locale} error={error} />;
@@ -66,6 +67,10 @@ export function HomePage() {
   const figureEntries = allFigures
     .filter((figure) => figureTradition === "all" || figure.tradition === figureTradition)
     .filter((figure) => figureEra === "all" || figureEraForYear(figure.timeRange?.startYear) === figureEra)
+    .filter((figure) => {
+      const query = figureQuery.trim().toLocaleLowerCase();
+      return !query || `${figure.title} ${figure.context} ${figure.tradition}`.toLocaleLowerCase().includes(query);
+    })
     .sort((left, right) => left.title.localeCompare(right.title, locale === "zh-CN" ? "zh-Hans" : "en"));
 
   return (
@@ -158,6 +163,10 @@ export function HomePage() {
             <span className="control-label">{locale === "zh-CN" ? "时代" : "Era"}</span>
             {(["all", "origins", "qin-han", "wei-jin", "sui-tang", "song-yuan", "ming-qing", "modern"] as const).map((era) => <button key={era} type="button" className={figureEra === era ? "active" : ""} aria-pressed={figureEra === era} onClick={() => setFigureEra(era)}>{eraLabel(era, locale)}</button>)}
           </div>
+          <label className="figure-gateway-search">
+            <span className="control-label">{locale === "zh-CN" ? "搜索人物" : "Search figures"}</span>
+            <input type="search" value={figureQuery} onChange={(event) => setFigureQuery(event.target.value)} placeholder={locale === "zh-CN" ? "按姓名或语境搜索" : "Search by name or context"} aria-label={locale === "zh-CN" ? "搜索人物" : "Search figures"} />
+          </label>
         </div>
         <p className="figure-gateway-count" aria-live="polite">{figureEntries.length} / {allFigures.length} {locale === "zh-CN" ? "位人物" : "figures"}</p>
         <div className="figure-gateway-grid">

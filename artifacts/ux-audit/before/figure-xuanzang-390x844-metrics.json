@@ -1,0 +1,34 @@
+{
+  "bodyScrollWidth": 390,
+  "canvasCount": 1,
+  "documentScrollWidth": 390,
+  "graphEdges": 0,
+  "graphEffectiveTier": "major",
+  "graphNodes": 5,
+  "graphTier": "major",
+  "graphs": 1,
+  "heading": "玄奘",
+  "maps": 1,
+  "objectPanels": 0,
+  "overflowX": false,
+  "path": "/figures/xuanzang?lang=zh-CN",
+  "primary": {
+    "bottom": 11424.7421875,
+    "height": 560,
+    "left": 1,
+    "selector": ".civilisation-map-leaflet",
+    "top": 10864.7421875,
+    "width": 388
+  },
+  "scrollHeight": 12958,
+  "slug": "figure-xuanzang-390x844",
+  "stages": 0,
+  "timelines": 1,
+  "viewport": {
+    "height": 844,
+    "width": 390
+  },
+  "visibleButtons": 9,
+  "screenshotMode": "full",
+  "screenshotError": null
+}

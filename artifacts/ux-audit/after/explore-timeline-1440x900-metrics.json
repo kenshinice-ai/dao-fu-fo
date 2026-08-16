@@ -1,0 +1,101 @@
+{
+  "atlas": {
+    "bottom": 1873.359375,
+    "height": 1715.359375,
+    "left": 21.6015625,
+    "right": 1418.3984375,
+    "top": 158,
+    "width": 1396.796875
+  },
+  "atlasView": "timeline",
+  "bodyScrollWidth": 1440,
+  "browser": {
+    "panels": 0,
+    "shortcuts": 0,
+    "visiblePanels": 0
+  },
+  "contextFocus": {
+    "total": 0,
+    "visible": 0
+  },
+  "controls": {
+    "buttons": 184,
+    "mobileButtonMinHeights": []
+  },
+  "directory": {
+    "cards": 0
+  },
+  "documentScrollWidth": 1440,
+  "figureSpacetime": {
+    "stageCount": 0,
+    "visibleStageCount": 0
+  },
+  "graph": {
+    "canvas": null,
+    "roster": 0,
+    "total": 0,
+    "visible": 0
+  },
+  "maps": {
+    "contextVisible": 0,
+    "rect": null,
+    "relationNetworks": 0,
+    "total": 0,
+    "visible": 0
+  },
+  "mobilePanel": "timeline",
+  "overflowX": false,
+  "primary": {
+    "rect": {
+      "bottom": 1637.4921875,
+      "height": 1308.5859375,
+      "left": 21.6015625,
+      "right": 1418.3984375,
+      "top": 328.90625,
+      "width": 1396.796875
+    },
+    "selector": ".full-width-timeline.is-full",
+    "visible": true
+  },
+  "scrollHeight": 2182,
+  "stages": {
+    "total": 1,
+    "visible": 1,
+    "visibleRects": [
+      {
+        "bottom": 1637.4921875,
+        "height": 1308.5859375,
+        "left": 21.6015625,
+        "right": 1418.3984375,
+        "top": 328.90625,
+        "width": 1396.796875
+      }
+    ]
+  },
+  "timeline": {
+    "full": 1,
+    "fullRect": {
+      "bottom": 1637.4921875,
+      "height": 1308.5859375,
+      "left": 21.6015625,
+      "right": 1418.3984375,
+      "top": 328.90625,
+      "width": 1396.796875
+    },
+    "indexes": 0,
+    "lists": 1,
+    "records": "369",
+    "ribbon": 0,
+    "ribbonRect": null,
+    "variant": "full"
+  },
+  "url": "/explore?view=timeline&lang=zh-CN",
+  "viewport": {
+    "height": 900,
+    "width": 1440
+  },
+  "slug": "explore-timeline-1440x900",
+  "path": "/explore?view=timeline&lang=zh-CN",
+  "screenshotMode": "viewport",
+  "screenshotError": null
+}

@@ -1,0 +1,34 @@
+{
+  "atlasView": "graph",
+  "canvas": {
+    "bottom": 1520.421875,
+    "height": 420,
+    "left": 25,
+    "top": 1100.421875,
+    "width": 340
+  },
+  "contextChips": 1,
+  "edges": 148,
+  "effectiveTier": "all",
+  "focusVisible": 1,
+  "graph": {
+    "bottom": 2214.609375,
+    "height": 1443.953125,
+    "left": 10,
+    "top": 770.65625,
+    "width": 370
+  },
+  "maps": 0,
+  "nodes": 152,
+  "objectPanels": 0,
+  "scrollHeight": 3090,
+  "scrollWidth": 390,
+  "tier": "all",
+  "url": "/explore?view=graph&graphTier=all&focus=figure%3Axuanzang&lang=en",
+  "viewport": {
+    "height": 844,
+    "width": 390
+  },
+  "slug": "graph-all-390x844",
+  "screenshot": "/Users/leeliu/Library/Mobile Documents/com~apple~CloudDocs/Dao_Ru_Fo_Digital_Museum/digital-museum/artifacts/ux-audit/after/graph-all-390x844-viewport.png"
+}

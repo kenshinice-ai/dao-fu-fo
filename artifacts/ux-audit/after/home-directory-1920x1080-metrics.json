@@ -1,0 +1,111 @@
+{
+  "atlas": {
+    "bottom": 1909.734375,
+    "height": 1831.734375,
+    "left": 0,
+    "right": 1920,
+    "top": 78,
+    "width": 1920
+  },
+  "atlasView": "map",
+  "bodyScrollWidth": 1920,
+  "browser": {
+    "panels": 1,
+    "shortcuts": 8,
+    "visiblePanels": 1
+  },
+  "contextFocus": {
+    "total": 0,
+    "visible": 0
+  },
+  "controls": {
+    "buttons": 347,
+    "mobileButtonMinHeights": []
+  },
+  "directory": {
+    "cards": 152,
+    "count": "152 / 152 位人物",
+    "search": "搜索人物",
+    "total": "152"
+  },
+  "documentScrollWidth": 1920,
+  "figureSpacetime": {
+    "stageCount": 0,
+    "visibleStageCount": 0
+  },
+  "graph": {
+    "canvas": null,
+    "roster": 0,
+    "total": 0,
+    "visible": 0
+  },
+  "maps": {
+    "contextVisible": 0,
+    "rect": {
+      "bottom": 1317.8671875,
+      "height": 760,
+      "left": 241,
+      "right": 1237.1953125,
+      "top": 557.8671875,
+      "width": 996.1953125
+    },
+    "relationNetworks": 0,
+    "total": 1,
+    "visible": 1
+  },
+  "mobilePanel": "map",
+  "overflowX": false,
+  "primary": {
+    "rect": {
+      "bottom": 1317.8671875,
+      "height": 760,
+      "left": 241,
+      "right": 1237.1953125,
+      "top": 557.8671875,
+      "width": 996.1953125
+    },
+    "selector": ".civilisation-map-leaflet",
+    "visible": true
+  },
+  "scrollHeight": 19259,
+  "stages": {
+    "total": 1,
+    "visible": 1,
+    "visibleRects": [
+      {
+        "bottom": 1672.8671875,
+        "height": 1162,
+        "left": 240,
+        "right": 1680,
+        "top": 510.8671875,
+        "width": 1440
+      }
+    ]
+  },
+  "timeline": {
+    "full": 0,
+    "fullRect": null,
+    "indexes": 0,
+    "lists": 0,
+    "records": "369",
+    "ribbon": 1,
+    "ribbonRect": {
+      "bottom": 1672.8671875,
+      "height": 286,
+      "left": 240,
+      "right": 1680,
+      "top": 1386.8671875,
+      "width": 1440
+    },
+    "variant": "ribbon"
+  },
+  "url": "/?lang=zh-CN",
+  "viewport": {
+    "height": 1080,
+    "width": 1920
+  },
+  "slug": "home-directory-1920x1080",
+  "path": "/?lang=zh-CN",
+  "screenshotMode": "viewport",
+  "screenshotError": null
+}

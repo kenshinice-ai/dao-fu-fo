@@ -215,6 +215,7 @@ export function InteractiveRelationshipGraph({
   const [asTable, setAsTable] = useState(false);
   const [dimensions, setDimensions] = useState({ width: 0, height: 520 });
   const [hover, setHover] = useState<HoverState | null>(null);
+  const [selectedNodeId, setSelectedNodeId] = useState<string | null>(null);
   const [selectedEdgeId, setSelectedEdgeId] = useState<string | null>(null);
   const [reducedMotion, setReducedMotion] = useState(false);
   const wrapRef = useRef<HTMLDivElement | null>(null);
@@ -245,6 +246,9 @@ export function InteractiveRelationshipGraph({
     to,
   }), [focus, from, graphTier, locale, relations.items, scopeRelations, searchItems, to, traditions]);
   const modelSignature = `${model.effectiveTier}|${focus ?? ""}|${from ?? ""}|${to ?? ""}|${model.nodes.map((node) => node.id).join(",")}|${model.edges.map((edge) => edge.id).join(",")}`;
+  const selectedNode = selectedNodeId ? model.nodes.find((node) => node.id === selectedNodeId) : undefined;
+  const selectedEdge = selectedEdgeId ? model.edges.find((edge) => edge.id === selectedEdgeId) : undefined;
+  const selectedRelations = selectedEdge ? model.relationRows.filter((relation) => selectedEdge.relationIds.includes(relation.id)) : [];
   const drawRef = useRef<() => void>(() => undefined);
   const scheduleDraw = useCallback(() => {
     if (frameRef.current !== null) return;
@@ -370,7 +374,14 @@ export function InteractiveRelationshipGraph({
   useEffect(() => {
     const element = wrapRef.current;
     if (!element) return;
-    const update = () => setDimensions({ width: Math.max(320, element.clientWidth), height: Math.max(420, Math.min(640, element.clientWidth * 0.58)) });
+    const update = () => {
+      const width = Math.max(320, element.clientWidth);
+      const compact = window.matchMedia("(max-width: 760px)").matches;
+      const height = compact
+        ? Math.max(420, Math.min(560, width * 0.72))
+        : Math.max(620, Math.min(760, width * 0.48));
+      setDimensions({ width, height });
+    };
     update();
     const observer = new ResizeObserver(update);
     observer.observe(element);
@@ -536,6 +547,8 @@ export function InteractiveRelationshipGraph({
   };
 
   const activateNode = (node: RelationshipGraphNode) => {
+    setSelectedNodeId(node.id);
+    setSelectedEdgeId(null);
     if (node.kind === "person") {
       onFocus(node.id);
       return;
@@ -603,6 +616,7 @@ export function InteractiveRelationshipGraph({
     if (click && click.pointerId === event.pointerId && Math.hypot(point.x - click.start.x, point.y - click.start.y) < 4) {
       const edge = hitEdge(point);
       if (edge) {
+        setSelectedNodeId(null);
         setSelectedEdgeId(edge.id);
         onOpenRelation(edge.relationIds[0]!);
       }
@@ -628,7 +642,7 @@ export function InteractiveRelationshipGraph({
     : (locale === "zh-CN" ? "交错的人物关系" : "Interwoven people");
 
   return (
-    <section className="relationship-graph" aria-labelledby="relationship-graph-title" data-graph-renderer="canvas" data-graph-tier={graphTier} data-graph-effective-tier={model.effectiveTier}>
+    <section className="relationship-graph" aria-labelledby="relationship-graph-title" data-graph-renderer="canvas" data-graph-tier={graphTier} data-graph-effective-tier={model.effectiveTier} data-graph-node-count={model.nodes.length} data-graph-edge-count={model.edges.length}>
       <div className="relationship-graph-heading">
         <div>
           <p className="eyebrow">{locale === "zh-CN" ? "人物关系图" : "Relationship graph"}</p>
@@ -652,6 +666,7 @@ export function InteractiveRelationshipGraph({
       {model.effectiveTier !== graphTier ? <p className="relationship-graph-note" role="status">{locale === "zh-CN" ? "当前聚合层级已自动展开焦点人物；图谱层级与地图缩放独立保存。" : "The aggregate view is expanded to the focused person; graph detail and map zoom are saved independently."}</p> : null}
       {from !== undefined || to !== undefined ? <p className="relationship-graph-time-note" role="status">{locale === "zh-CN" ? `时间窗：${from ?? "…"} 至 ${to ?? "…"}；虚线边为窗外关系，点线边为年代未定。` : `Time window: ${from ?? "…"} to ${to ?? "…"}; dashed edges are outside it and dotted edges are undated.`}</p> : null}
 
+      <div className="relationship-graph-content">
       {asTable ? (
         <div className="relationship-graph-table-wrap">
           <table className="relationship-graph-table">
@@ -684,6 +699,40 @@ export function InteractiveRelationshipGraph({
           </nav>
         </div>
       )}
+      <aside className="relationship-graph-inspector" aria-live="polite" aria-label={locale === "zh-CN" ? "关系图检查器" : "Graph inspector"}>
+        {selectedEdge ? (
+          <>
+            <p className="eyebrow">{locale === "zh-CN" ? "关系检查器" : "Relation inspector"}</p>
+            <h3>{selectedEdge.label}</h3>
+            <p>{selectedEdge.summary}</p>
+            <dl>
+              <div><dt>{locale === "zh-CN" ? "语义" : "Semantic"}</dt><dd>{relationToneLabel(selectedEdge.tone, locale === "zh-CN" ? "zh-CN" : "en")}</dd></div>
+              <div><dt>{locale === "zh-CN" ? "时间" : "Time"}</dt><dd>{timeStatusLabel(selectedEdge.timeStatus, locale)}</dd></div>
+              <div><dt>{locale === "zh-CN" ? "证据条目" : "Evidence rows"}</dt><dd>{selectedRelations.length}</dd></div>
+            </dl>
+            {selectedRelations.slice(0, 3).map((relation) => <button key={relation.id} type="button" className="relationship-graph-inspector-link" onClick={() => onOpenRelation(relation.id)}>{locale === "zh-CN" ? "打开关系详情" : "Open relation detail"} · {formatConfidence(relation.confidence, locale)}</button>)}
+          </>
+        ) : selectedNode ? (
+          <>
+            <p className="eyebrow">{locale === "zh-CN" ? "节点检查器" : "Node inspector"}</p>
+            <h3>{selectedNode.label}</h3>
+            <p>{selectedNode.sublabel}</p>
+            <dl>
+              <div><dt>{locale === "zh-CN" ? "类型" : "Type"}</dt><dd>{selectedNode.kind === "person" ? (locale === "zh-CN" ? "人物" : "Figure") : selectedNode.kind === "era" ? (locale === "zh-CN" ? "时代聚合" : "Era group") : (locale === "zh-CN" ? "传统聚合" : "Tradition group")}</dd></div>
+              <div><dt>{locale === "zh-CN" ? "人物数" : "People"}</dt><dd>{selectedNode.members.length}</dd></div>
+              <div><dt>{locale === "zh-CN" ? "关系数" : "Relations"}</dt><dd>{selectedNode.degree}</dd></div>
+            </dl>
+            {selectedNode.kind !== "person" ? <button type="button" className="relationship-graph-inspector-link" onClick={() => setTier(graphTier === "era" || graphTier === "group" ? "major" : "all")}>{locale === "zh-CN" ? "展开此聚合" : "Expand this aggregate"}</button> : null}
+          </>
+        ) : (
+          <>
+            <p className="eyebrow">{locale === "zh-CN" ? "关系图检查器" : "Graph inspector"}</p>
+            <h3>{locale === "zh-CN" ? "选择一个节点或关系" : "Select a node or relation"}</h3>
+            <p>{locale === "zh-CN" ? "点击节点查看人物或聚合信息；点击边打开可追溯关系详情。" : "Select a node for its figure or aggregate details, or select an edge for traceable relation evidence."}</p>
+          </>
+        )}
+      </aside>
+      </div>
       <ul className="relationship-graph-legend" aria-label={locale === "zh-CN" ? "关系语义图例" : "Relation semantics legend"}>
         {(Object.keys(EDGE_COLORS) as RelationshipGraphEdge["tone"][]).map((tone) => <li key={tone}><i style={{ background: EDGE_COLORS[tone] }} />{relationToneLabel(tone, locale)}</li>)}
         <li><i className="is-dashed" />{locale === "zh-CN" ? "窗外／年代未定边" : "Outside-window / undated edge"}</li>

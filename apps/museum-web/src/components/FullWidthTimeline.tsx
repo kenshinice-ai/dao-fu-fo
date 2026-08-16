@@ -6,6 +6,7 @@ import { formatConfidence, formatEvidence } from "../data/labels";
 import type { Locale, SearchItem, TimelineData, TimelineEvent, Tradition } from "../types";
 
 interface FullWidthTimelineProps {
+  variant?: "full" | "ribbon";
   locale: Locale;
   data: TimelineData;
   relations: ReadModelRelationIndex;
@@ -87,6 +88,7 @@ function density(events: TimelineEvent[], start: number, end: number, count = 16
 }
 
 export function FullWidthTimeline({
+  variant = "full",
   locale,
   data,
   relations,
@@ -102,7 +104,9 @@ export function FullWidthTimeline({
   playbackYear,
   onTogglePlayback,
 }: FullWidthTimelineProps) {
-  const [eventLimit, setEventLimit] = useState(48);
+  const [eventLimit, setEventLimit] = useState(24);
+  const [selectedEvent, setSelectedEvent] = useState<TimelineEvent | undefined>();
+  const isRibbon = variant === "ribbon";
   const start = from ?? data.startYear;
   const end = to ?? data.endYear;
   const projected = useMemo(() => projectTimelineEvents(data, relations, searchItems, focus), [data, focus, relations, searchItems]);
@@ -117,7 +121,9 @@ export function FullWidthTimeline({
   const laneEvents = useMemo(() => new Map(LANES.map((lane) => [lane.id, keepFocused(events.filter((event) => laneForEvent(event) === lane.id), 34, focus)])), [events, focus]);
   const undated = projected.filter((event) => !Number.isSafeInteger(event.year));
 
-  useEffect(() => setEventLimit(48), [focus, from, timelineMode, to, traditions.join(",")]);
+  useEffect(() => {
+    setEventLimit(24);
+  }, [focus, from, timelineMode, to, traditions.join(",")]);
 
   const updateStart = (value: number) => {
     const next = validBoundary(value, start);
@@ -127,10 +133,13 @@ export function FullWidthTimeline({
     const next = validBoundary(value, end);
     onChange({ from: start, to: Math.max(start, next) });
   };
-  const focusEvent = (event: TimelineEvent) => onFocus(eventFocus(event));
+  const focusEvent = (event: TimelineEvent) => {
+    setSelectedEvent(event);
+    onFocus(eventFocus(event));
+  };
 
   return (
-    <section className="full-width-timeline timeline-canvas" aria-labelledby="full-width-timeline-title" data-atlas-timeline data-timeline-range={`${start}:${end}`}>
+    <section className={`full-width-timeline timeline-canvas ${isRibbon ? "is-ribbon" : "is-full"}`} aria-labelledby="full-width-timeline-title" data-atlas-timeline data-timeline-variant={variant} data-timeline-range={`${start}:${end}`} data-timeline-record-count={events.length}>
       <header className="full-width-timeline-heading">
         <div>
           <p className="eyebrow">{locale === "zh-CN" ? "全宽时间轴" : "Full-width chronology"}</p>
@@ -174,14 +183,27 @@ export function FullWidthTimeline({
 
       <div className="full-width-timeline-summary" aria-live="polite"><strong>{locale === "zh-CN" ? "当前刷选" : "Current brush"}</strong><span>{formatYear(start, locale)} — {formatYear(end, locale)}</span><span>{events.length} {locale === "zh-CN" ? "条有年代记录" : "dated records"}</span>{undated.length > 0 ? <span>{undated.length} {locale === "zh-CN" ? "条年代待定" : "undated records"}</span> : null}</div>
 
-      <div className="atlas-timeline-events full-width-timeline-event-index" aria-label={locale === "zh-CN" ? "时间轴记录索引" : "Timeline record index"}>
-        {keepFocused(events, events.length, focus).map((event) => <button key={`${event.id}-index`} className={`timeline-event-select ${isEventFocused(event, focus) ? "is-focused" : ""}`} data-timeline-focus={eventFocus(event)} type="button" onClick={() => focusEvent(event)}><span>{event.displayDate ?? formatYear(event.year, locale)}</span>{event.title}</button>)}
-      </div>
+      {selectedEvent && !isRibbon ? (
+        <aside className="timeline-event-inspector" aria-live="polite" aria-label={locale === "zh-CN" ? "当前时间事件检查器" : "Selected timeline event inspector"}>
+          <div>
+            <p className="eyebrow">{locale === "zh-CN" ? "当前事件" : "Selected event"}</p>
+            <h3>{selectedEvent.title}</h3>
+            <p>{selectedEvent.summary}</p>
+          </div>
+          <dl>
+            <div><dt>{locale === "zh-CN" ? "时间" : "Time"}</dt><dd>{selectedEvent.displayDate ?? formatYear(selectedEvent.year, locale)}</dd></div>
+            <div><dt>{locale === "zh-CN" ? "证据" : "Evidence"}</dt><dd>{selectedEvent.confidence ? formatConfidence(selectedEvent.confidence, locale) : formatEvidence(selectedEvent.evidenceLayer, locale)}</dd></div>
+            <div><dt>{locale === "zh-CN" ? "轨道" : "Lane"}</dt><dd>{locale === "zh-CN" ? LANES.find((lane) => lane.id === laneForEvent(selectedEvent))?.zh : LANES.find((lane) => lane.id === laneForEvent(selectedEvent))?.en}</dd></div>
+          </dl>
+        </aside>
+      ) : null}
 
-      <ol className="timeline-list full-width-timeline-list">
-        {keepFocused(events, eventLimit, focus).map((event) => <li className={`timeline-event-list-item ${isEventFocused(event, focus) ? "is-focused" : ""}`} key={event.id}><span className="timeline-year">{event.displayDate ?? formatYear(event.year, locale)}</span><div><button className="timeline-event-select" type="button" data-timeline-focus={eventFocus(event)} onClick={() => focusEvent(event)}>{event.title}</button><small>{locale === "zh-CN" ? LANES.find((lane) => lane.id === laneForEvent(event))?.zh : LANES.find((lane) => lane.id === laneForEvent(event))?.en} · {event.kind}</small><p>{event.summary}</p><small>{event.confidence ? formatConfidence(event.confidence, locale) : formatEvidence(event.evidenceLayer, locale)}{event.evidenceLayer ? ` · ${formatEvidence(event.evidenceLayer, locale)}` : ""}</small></div></li>)}
-      </ol>
-      {events.length > eventLimit ? <button className="button button-secondary full-width-timeline-more" type="button" onClick={() => setEventLimit((limit) => Math.min(events.length, limit + 48))}>{locale === "zh-CN" ? "加载更多时间记录" : "Load more timeline records"}</button> : null}
+      {!isRibbon ? <>
+        <ol className="timeline-list full-width-timeline-list">
+          {keepFocused(events, eventLimit, focus).map((event) => <li className={`timeline-event-list-item ${isEventFocused(event, focus) ? "is-focused" : ""}`} key={event.id}><span className="timeline-year">{event.displayDate ?? formatYear(event.year, locale)}</span><div><button className="timeline-event-select" type="button" data-timeline-focus={eventFocus(event)} onClick={() => focusEvent(event)}>{event.title}</button><small>{locale === "zh-CN" ? LANES.find((lane) => lane.id === laneForEvent(event))?.zh : LANES.find((lane) => lane.id === laneForEvent(event))?.en} · {event.kind}</small><p>{event.summary}</p><small>{event.confidence ? formatConfidence(event.confidence, locale) : formatEvidence(event.evidenceLayer, locale)}{event.evidenceLayer ? ` · ${formatEvidence(event.evidenceLayer, locale)}` : ""}</small></div></li>)}
+        </ol>
+        {events.length > eventLimit ? <button className="button button-secondary full-width-timeline-more" type="button" onClick={() => setEventLimit((limit) => Math.min(events.length, limit + 24))}>{locale === "zh-CN" ? "加载更多时间记录" : "Load more timeline records"}</button> : null}
+      </> : null}
       {events.length === 0 ? <p className="timeline-empty-state">{locale === "zh-CN" ? "当前时间窗没有可展示的有据记录；可以扩大刷选范围。" : "No dated records are available in this window; expand the brush to continue."}</p> : null}
     </section>
   );

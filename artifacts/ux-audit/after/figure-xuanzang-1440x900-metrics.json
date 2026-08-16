@@ -1,0 +1,82 @@
+{
+  "atlas": null,
+  "bodyScrollWidth": 1440,
+  "browser": {
+    "panels": 0,
+    "shortcuts": 0,
+    "visiblePanels": 0
+  },
+  "contextFocus": {
+    "total": 0,
+    "visible": 0
+  },
+  "controls": {
+    "buttons": 9,
+    "mobileButtonMinHeights": []
+  },
+  "directory": {
+    "cards": 0
+  },
+  "documentScrollWidth": 1440,
+  "figureSpacetime": {
+    "panel": "map",
+    "stageCount": 1,
+    "visibleStageCount": 1
+  },
+  "graph": {
+    "canvas": null,
+    "roster": 0,
+    "total": 0,
+    "visible": 0
+  },
+  "maps": {
+    "contextVisible": 0,
+    "rect": {
+      "bottom": 5811.03125,
+      "height": 630,
+      "left": 22.6015625,
+      "right": 1417.3984375,
+      "top": 5181.03125,
+      "width": 1394.796875
+    },
+    "relationNetworks": 0,
+    "total": 1,
+    "visible": 1
+  },
+  "overflowX": false,
+  "primary": {
+    "rect": {
+      "bottom": 5811.03125,
+      "height": 630,
+      "left": 22.6015625,
+      "right": 1417.3984375,
+      "top": 5181.03125,
+      "width": 1394.796875
+    },
+    "selector": ".civilisation-map-leaflet",
+    "visible": true
+  },
+  "scrollHeight": 7081,
+  "stages": {
+    "total": 0,
+    "visible": 0,
+    "visibleRects": []
+  },
+  "timeline": {
+    "full": 0,
+    "fullRect": null,
+    "indexes": 0,
+    "lists": 0,
+    "ribbon": 0,
+    "ribbonRect": null
+  },
+  "url": "/figures/xuanzang?lang=zh-CN",
+  "viewport": {
+    "height": 900,
+    "width": 1440
+  },
+  "slug": "figure-xuanzang-1440x900",
+  "path": "/figures/xuanzang?lang=zh-CN",
+  "screenshotMode": "viewport",
+  "screenshotError": null
+}

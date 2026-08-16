@@ -25,7 +25,6 @@ import {
 } from "../data/contextProjection";
 import { deriveFigureTrajectory } from "../data/figureTrajectory";
 import type { FigureTrajectoryWaypoint } from "../data/figureTrajectory";
-import { RelationNetwork } from "./RelationNetwork";
 import { entityPath } from "../routing";
 import { staticData } from "../data/staticData";
 import { useStaticData } from "../data/useStaticData";
@@ -360,7 +359,6 @@ export function CivilisationMap({
     () => focusPlace ? placeEventContexts(relations, featureKey(focusPlace)) : [],
     [focusPlace, relations],
   );
-  const placeFigureKeys = useMemo(() => placePeople.map((person) => person.figureKey), [placePeople]);
   const focusEventFigures = useMemo(
     () => focus?.startsWith("event:") ? eventFigureContexts(relations, focus) : [],
     [focus, relations],
@@ -389,7 +387,7 @@ export function CivilisationMap({
   return (
     <div
       id="historical-map"
-      className={`civilisation-map ${className}`.trim()}
+      className={`civilisation-map ${showContext && focus ? "has-context" : ""} ${className}`.trim()}
       data-map-focus-state={focusMapState}
       data-map-zoom-level={zoomLevel}
       data-map-visible-places={visibleFeatures.length}
@@ -397,6 +395,7 @@ export function CivilisationMap({
       data-map-visible-trajectories={trajectoryStops.length}
       data-map-visible-memory={memoryStops.length}
     >
+      <div className="civilisation-map-visual">
       <MapContainer
         className="civilisation-map-leaflet"
         center={INITIAL_CENTER}
@@ -527,6 +526,7 @@ export function CivilisationMap({
         </ul>
       </details>
       {mapLayers.length === 0 ? <p className="civilisation-map-layer-empty">{locale === "zh-CN" ? "已隐藏全部地图图层；请从图层控制中重新打开。" : "All map layers are hidden; reopen one in the layer control."}</p> : null}
+      </div>
       {showContext ? (focusPlace ? (
         <section className="map-context-panel" data-city-people aria-labelledby="map-context-title">
           <div className="map-context-heading">
@@ -579,17 +579,6 @@ export function CivilisationMap({
               </ul>
             </section>
           ) : null}
-          <RelationNetwork
-            locale={locale}
-            focus={featureKey(focusPlace)}
-            relations={relations}
-            searchItems={searchItems}
-            onFocus={(key) => onFocus?.(key, null)}
-            compact
-            peopleOnly
-            scopeKeys={placeFigureKeys}
-            zoomLevel={zoomLevel}
-          />
         </section>
       ) : focus?.startsWith("event:") ? (
         <section className="map-context-panel" data-event-context aria-labelledby="event-map-context-title">
@@ -632,7 +621,6 @@ export function CivilisationMap({
               ) : <p className="map-context-empty">{locale === "zh-CN" ? "当前事件还没有人物关系。" : "No figure relations are available for this event yet."}</p>}
             </section>
           </div>
-          <RelationNetwork locale={locale} focus={focus} relations={relations} searchItems={searchItems} onFocus={(key) => onFocus?.(key)} compact zoomLevel={zoomLevel} />
         </section>
       ) : focus?.startsWith("figure:") ? (
         <section className="map-context-panel" data-figure-trajectory aria-labelledby="figure-map-context-title">
@@ -722,7 +710,6 @@ export function CivilisationMap({
               </ul>
             </section>
           ) : null}
-          <RelationNetwork locale={locale} focus={focus} relations={relations} searchItems={searchItems} onFocus={(key) => onFocus?.(key)} compact peopleOnly zoomLevel={zoomLevel} />
         </section>
       ) : (
         <p className="map-context-hint">

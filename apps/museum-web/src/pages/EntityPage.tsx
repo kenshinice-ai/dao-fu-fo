@@ -194,7 +194,7 @@ function FigureSpacetimeSection({
   const selectedRelation = selectedRelationId ? relations.items.find((relation) => relation.id === selectedRelationId) : undefined;
 
   return (
-    <section className="entity-spacetime-section page-shell" data-figure-spacetime aria-labelledby="figure-spacetime-title">
+    <section className="entity-spacetime-section" data-figure-spacetime data-spacetime-panel={panel} aria-labelledby="figure-spacetime-title">
       <header className="entity-spacetime-heading">
         <div>
           <p className="eyebrow">Figure / {locale === "zh-CN" ? "人物时空" : "Figure space-time"}</p>
@@ -207,27 +207,25 @@ function FigureSpacetimeSection({
         {(["map", "graph", "timeline", "evidence"] as const).map((nextPanel) => <button key={nextPanel} type="button" className={panel === nextPanel ? "active" : ""} aria-pressed={panel === nextPanel} onClick={() => setPanel(nextPanel)}>{nextPanel === "map" ? (locale === "zh-CN" ? "地图" : "Map") : nextPanel === "graph" ? (locale === "zh-CN" ? "关系图" : "Graph") : nextPanel === "timeline" ? (locale === "zh-CN" ? "时间轴" : "Timeline") : (locale === "zh-CN" ? "证据" : "Evidence")}</button>)}
       </nav>
       <div className="entity-spacetime-stage-stack">
-        <section className={`entity-spacetime-stage ${panel === "map" ? "is-active" : ""}`} aria-labelledby="figure-spacetime-map-heading">
+        {panel === "map" ? <section className="entity-spacetime-stage is-active" aria-labelledby="figure-spacetime-map-heading">
           <h3 id="figure-spacetime-map-heading">{locale === "zh-CN" ? "现实地理与路线证据" : "Real geography and route evidence"}</h3>
           <CivilisationMap data={map.map} routes={map.routes} locale={locale} traditions={["daoism", "confucianism", "buddhism"]} focus={focus} relations={relations} searchItems={searchItems} mapLayers={["places", "routes", "trajectories", "memory"]} zoomLevel="figure" onFocus={setFocus} showContext={false} showIndex={false} showRouteLedger />
-        </section>
-        <section className={`entity-spacetime-stage ${panel === "graph" ? "is-active" : ""}`} aria-labelledby="figure-spacetime-graph-heading">
+        </section> : null}
+        {panel === "graph" ? <section className="entity-spacetime-stage is-active" aria-labelledby="figure-spacetime-graph-heading">
           <h3 id="figure-spacetime-graph-heading">{locale === "zh-CN" ? "人物关系力导图" : "Figure relationship force graph"}</h3>
           <InteractiveRelationshipGraph locale={locale} relations={relations} scopeRelations={scopedRelations} searchItems={searchItems} focus={focus} traditions={["daoism", "confucianism", "buddhism"]} graphTier={graphTier} from={range.from} to={range.to} onGraphTier={setGraphTier} onFocus={setFocus} onOpenRelation={setSelectedRelationId} />
-        </section>
-        <section className={`entity-spacetime-stage ${panel === "timeline" ? "is-active" : ""}`} aria-labelledby="figure-spacetime-timeline-heading">
+        </section> : null}
+        {panel === "timeline" ? <section className="entity-spacetime-stage is-active" aria-labelledby="figure-spacetime-timeline-heading">
           <h3 id="figure-spacetime-timeline-heading">{locale === "zh-CN" ? "人物关联时间轴" : "Figure-linked chronology"}</h3>
-          <FullWidthTimeline locale={locale} data={timeline} relations={relations} searchItems={searchItems} focus={focus} traditions={["daoism", "confucianism", "buddhism"]} from={range.from} to={range.to} timelineMode={range.timelineMode} onChange={applyChanges} onFocus={setFocus} />
-        </section>
-        <section className={`entity-spacetime-stage entity-spacetime-evidence ${panel === "evidence" ? "is-active" : ""}`} aria-labelledby="figure-spacetime-evidence-heading">
+          <FullWidthTimeline variant="full" locale={locale} data={timeline} relations={relations} searchItems={searchItems} focus={focus} traditions={["daoism", "confucianism", "buddhism"]} from={range.from} to={range.to} timelineMode={range.timelineMode} onChange={applyChanges} onFocus={setFocus} />
+        </section> : null}
+        {panel === "evidence" ? <section className="entity-spacetime-stage entity-spacetime-evidence is-active" aria-labelledby="figure-spacetime-evidence-heading">
           <h3 id="figure-spacetime-evidence-heading">{locale === "zh-CN" ? "空间与关系证据" : "Spatial and relational evidence"}</h3>
-          {panel === "evidence" ? <>
-            {selectedRelation ? <article className="entity-spacetime-selected-relation"><p className="eyebrow">{selectedRelation.label}</p><h4>{selectedRelation.summary}</h4><p>{formatEvidenceLine(selectedRelation.evidenceLayer, selectedRelation.confidence, locale)} · {selectedRelation.sourceIds.join(", ")}</p></article> : null}
-            <ul className="entity-spacetime-evidence-list">
-              {scopedRelations.slice(0, 80).map((relation) => <li key={relation.id}><button type="button" onClick={() => setSelectedRelationId(relation.id)}>{locale === "zh-CN" ? "查看证据：" : "Inspect evidence: "}{relation.label}</button><span>{relation.summary}</span><small>{relation.temporalAssertions.map((assertion) => assertion.displayDate).join(" · ") || formatEvidenceLine(relation.evidenceLayer, relation.confidence, locale)}</small></li>)}
-            </ul>
-          </> : null}
-        </section>
+          {selectedRelation ? <article className="entity-spacetime-selected-relation"><p className="eyebrow">{selectedRelation.label}</p><h4>{selectedRelation.summary}</h4><p>{formatEvidenceLine(selectedRelation.evidenceLayer, selectedRelation.confidence, locale)} · {selectedRelation.sourceIds.join(", ")}</p></article> : null}
+          <ul className="entity-spacetime-evidence-list">
+            {scopedRelations.slice(0, 80).map((relation) => <li key={relation.id}><button type="button" onClick={() => setSelectedRelationId(relation.id)}>{locale === "zh-CN" ? "查看证据：" : "Inspect evidence: "}{relation.label}</button><span>{relation.summary}</span><small>{relation.temporalAssertions.map((assertion) => assertion.displayDate).join(" · ") || formatEvidenceLine(relation.evidenceLayer, relation.confidence, locale)}</small></li>)}
+          </ul>
+        </section> : null}
       </div>
     </section>
   );

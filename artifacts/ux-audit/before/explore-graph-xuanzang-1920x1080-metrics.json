@@ -1,0 +1,34 @@
+{
+  "bodyScrollWidth": 1920,
+  "canvasCount": 1,
+  "documentScrollWidth": 1920,
+  "graphEdges": 0,
+  "graphEffectiveTier": "major",
+  "graphNodes": 5,
+  "graphTier": "group",
+  "graphs": 1,
+  "heading": "在同一张地图，看见三条传统的交错",
+  "maps": 1,
+  "objectPanels": 17,
+  "overflowX": false,
+  "path": "/explore?view=graph&focus=figure%3Axuanzang&lang=zh-CN",
+  "primary": {
+    "bottom": 5166.5546875,
+    "height": 667.4375,
+    "left": 241,
+    "selector": ".civilisation-map-leaflet",
+    "top": 4499.1171875,
+    "width": 1438
+  },
+  "scrollHeight": 11833,
+  "slug": "explore-graph-xuanzang-1920x1080",
+  "stages": 4,
+  "timelines": 1,
+  "viewport": {
+    "height": 1080,
+    "width": 1920
+  },
+  "visibleButtons": 342,
+  "screenshotMode": "full",
+  "screenshotError": null
+}

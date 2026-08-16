@@ -1,0 +1,108 @@
+{
+  "atlas": {
+    "bottom": 1530.7734375,
+    "height": 1372.7734375,
+    "left": 21.6015625,
+    "right": 1418.3984375,
+    "top": 158,
+    "width": 1396.796875
+  },
+  "atlasView": "map",
+  "bodyScrollWidth": 1440,
+  "browser": {
+    "panels": 1,
+    "shortcuts": 5,
+    "visiblePanels": 1
+  },
+  "contextFocus": {
+    "total": 0,
+    "visible": 0
+  },
+  "controls": {
+    "buttons": 85,
+    "mobileButtonMinHeights": []
+  },
+  "directory": {
+    "cards": 0
+  },
+  "documentScrollWidth": 1440,
+  "figureSpacetime": {
+    "stageCount": 0,
+    "visibleStageCount": 0
+  },
+  "graph": {
+    "canvas": null,
+    "roster": 0,
+    "total": 0,
+    "visible": 0
+  },
+  "maps": {
+    "contextVisible": 1,
+    "rect": {
+      "bottom": 997.90625,
+      "height": 648,
+      "left": 22.6015625,
+      "right": 674.6171875,
+      "top": 349.90625,
+      "width": 652.015625
+    },
+    "relationNetworks": 0,
+    "total": 1,
+    "visible": 1
+  },
+  "mobilePanel": "map",
+  "overflowX": false,
+  "primary": {
+    "rect": {
+      "bottom": 997.90625,
+      "height": 648,
+      "left": 22.6015625,
+      "right": 674.6171875,
+      "top": 349.90625,
+      "width": 652.015625
+    },
+    "selector": ".civilisation-map-leaflet",
+    "visible": true
+  },
+  "scrollHeight": 1839,
+  "stages": {
+    "total": 1,
+    "visible": 1,
+    "visibleRects": [
+      {
+        "bottom": 1294.90625,
+        "height": 946,
+        "left": 21.6015625,
+        "right": 1418.3984375,
+        "top": 348.90625,
+        "width": 1396.796875
+      }
+    ]
+  },
+  "timeline": {
+    "full": 0,
+    "fullRect": null,
+    "indexes": 0,
+    "lists": 0,
+    "records": "27",
+    "ribbon": 1,
+    "ribbonRect": {
+      "bottom": 1294.90625,
+      "height": 286,
+      "left": 21.6015625,
+      "right": 1418.3984375,
+      "top": 1008.90625,
+      "width": 1396.796875
+    },
+    "variant": "ribbon"
+  },
+  "url": "/explore?view=map&focus=figure%3Axuanzang&lang=zh-CN",
+  "viewport": {
+    "height": 900,
+    "width": 1440
+  },
+  "slug": "explore-map-xuanzang-1440x900",
+  "path": "/explore?view=map&focus=figure%3Axuanzang&lang=zh-CN",
+  "screenshotMode": "viewport",
+  "screenshotError": null
+}

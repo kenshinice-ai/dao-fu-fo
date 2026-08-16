@@ -1,0 +1,103 @@
+{
+  "atlas": {
+    "bottom": 2214.8984375,
+    "height": 2001.7109375,
+    "left": 12,
+    "right": 756,
+    "top": 213.1875,
+    "width": 744
+  },
+  "atlasView": "graph",
+  "bodyScrollWidth": 768,
+  "browser": {
+    "panels": 0,
+    "shortcuts": 0,
+    "visiblePanels": 0
+  },
+  "contextFocus": {
+    "total": 0,
+    "visible": 0
+  },
+  "controls": {
+    "buttons": 33,
+    "mobileButtonMinHeights": []
+  },
+  "directory": {
+    "cards": 0
+  },
+  "documentScrollWidth": 768,
+  "figureSpacetime": {
+    "stageCount": 0,
+    "visibleStageCount": 0
+  },
+  "graph": {
+    "canvas": {
+      "bottom": 1521.015625,
+      "height": 620,
+      "left": 35,
+      "right": 733,
+      "top": 901.015625,
+      "width": 698
+    },
+    "edges": "3",
+    "effectiveTier": "group",
+    "nodes": "3",
+    "roster": 3,
+    "tier": "group",
+    "total": 1,
+    "visible": 1
+  },
+  "maps": {
+    "contextVisible": 0,
+    "rect": null,
+    "relationNetworks": 0,
+    "total": 0,
+    "visible": 0
+  },
+  "mobilePanel": "relations",
+  "overflowX": false,
+  "primary": {
+    "rect": {
+      "bottom": 1918.90625,
+      "height": 1227.46875,
+      "left": 12,
+      "right": 756,
+      "top": 691.4375,
+      "width": 744
+    },
+    "selector": ".relationship-graph",
+    "visible": true
+  },
+  "scrollHeight": 2627,
+  "stages": {
+    "total": 1,
+    "visible": 1,
+    "visibleRects": [
+      {
+        "bottom": 1918.90625,
+        "height": 1273.46875,
+        "left": 12,
+        "right": 756,
+        "top": 645.4375,
+        "width": 744
+      }
+    ]
+  },
+  "timeline": {
+    "full": 0,
+    "fullRect": null,
+    "indexes": 0,
+    "lists": 0,
+    "ribbon": 0,
+    "ribbonRect": null
+  },
+  "url": "/explore?view=graph&focus=figure%3Axuanzang&lang=zh-CN",
+  "viewport": {
+    "height": 1024,
+    "width": 768
+  },
+  "slug": "explore-graph-xuanzang-768x1024",
+  "path": "/explore?view=graph&focus=figure%3Axuanzang&lang=zh-CN",
+  "screenshotMode": "viewport",
+  "screenshotError": null
+}

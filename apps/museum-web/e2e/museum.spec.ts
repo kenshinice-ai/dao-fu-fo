@@ -78,37 +78,39 @@ test("timeline defaults to the full historical read model", async ({ page }) => 
 
   await expect(page.locator(".timeline-canvas .canvas-title")).toContainText("Dao–Ru–Fo historical space-time");
   await expect(page.getByText("600 BCE", { exact: true })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "One space-time, different rhythms" })).toBeVisible();
+  await expect(page.locator(".full-width-timeline.is-full")).toBeVisible();
+  await expect(page.locator(".full-width-timeline-event-index")).toHaveCount(0);
+  await expect(page.locator(".full-width-timeline-list")).toHaveCount(1);
 });
 
 test("shared context focus connects a figure to events and updates the URL", async ({ page }) => {
   await page.goto("/explore?lang=en&view=timeline&focus=figure%3Axuanzang");
   await waitForMuseum(page);
 
-  await expect(page.getByRole("heading", { name: "Focused on: Xuanzang" })).toBeVisible();
-  await expect(page.locator(".context-relation-list").getByText("Participated in the departure west", { exact: true })).toBeVisible();
+  await expect(page.locator(".context-focus")).toHaveCount(0);
+  await expect(page.locator(".atlas-focus-bar")).toContainText("Xuanzang");
   expect(await page.locator(".timeline-event.is-focused").count()).toBeGreaterThan(2);
 
-  const departureRelation = page.locator(".context-relation-list li").filter({ hasText: "Participated in the departure west" });
-  await departureRelation.getByRole("button", { name: "Focus", exact: true }).click();
+  await page.getByRole("button", { name: "Xuanzang departs Chang'an", exact: true }).click();
   await expect(page).toHaveURL(/focus=event%3Axuanzang-departs-changan/);
-  await expect(page.getByRole("heading", { name: "Focused on: Xuanzang departs Chang'an" })).toBeVisible();
+  await expect(page.locator(".atlas-focus-bar")).toContainText("Xuanzang departs Chang'an");
   expect(await page.locator(".timeline-event.is-focused").count()).toBeGreaterThan(0);
 });
 
-test("shared context offers the second and third featured figure dossiers", async ({ page }) => {
-  await page.goto("/explore?lang=zh-CN&view=graph&focus=figure%3Asima-chengzhen");
+test("focused graph keeps the selected figure and adjacent person nodes available", async ({ page }) => {
+  await page.goto("/explore?lang=zh-CN&view=graph&graphTier=major&focus=figure%3Asima-chengzhen");
   await waitForMuseum(page);
 
-  await expect(page.getByRole("heading", { name: "正在聚焦：司马承祯" })).toBeVisible();
-  await expect(page.getByRole("region", { name: "正在聚焦：司马承祯" }).locator(".context-relation-list").getByText("处于开元制度扩展语境", { exact: true })).toBeVisible();
-  await expect(page.locator(".graph-node.is-focused").filter({ hasText: "司马承祯" })).toHaveCount(1);
-  await expect(page.getByRole("button", { name: "孔颖达", exact: true })).toBeVisible();
+  await expect(page.locator(".context-focus")).toHaveCount(0);
+  await expect(page.locator(".atlas-focus-bar")).toContainText("司马承祯");
+  await expect(page.locator(".relationship-graph-node.is-focused").filter({ hasText: "司马承祯" })).toHaveCount(1);
+  const adjacentSimaNode = page.locator(".relationship-graph-roster button").filter({ hasText: "林灵素" }).first();
+  await expect(adjacentSimaNode).toBeVisible();
 
-  await page.getByRole("button", { name: "孔颖达", exact: true }).click();
-  await expect(page).toHaveURL(/focus=figure%3Akong-yingda/);
-  await expect(page.getByRole("heading", { name: "正在聚焦：孔颖达" })).toBeVisible();
-  await expect(page.getByRole("region", { name: "正在聚焦：孔颖达" }).locator(".context-relation-list").getByText("参与《五经正义》编纂工程", { exact: true })).toBeVisible();
+  await adjacentSimaNode.click();
+  await expect(page).toHaveURL(/focus=figure%3A/);
+  await expect(page.locator(".atlas-focus-bar")).toContainText("林灵素");
+  await expect(page.locator(".relationship-graph-node.is-focused").filter({ hasText: "林灵素" })).toHaveCount(1);
 });
 
 test("atlas figure index keeps all major and mythic figures focusable", async ({ page }) => {
@@ -160,19 +162,19 @@ test("third-batch figures and transregional routes remain discoverable", async (
 });
 
 test("cross-era figure entries keep traditional, speech and reception layers visible", async ({ page }) => {
-  await page.goto("/explore?lang=en&view=graph&focus=figure%3Alaozi");
+  await page.goto("/explore?lang=en&view=graph&graphTier=major&focus=figure%3Alaozi");
   await waitForMuseum(page);
 
-  await expect(page.getByRole("heading", { name: "Focused on: Laozi (Li Er)" })).toBeVisible();
-  const laoziContext = page.getByRole("region", { name: "Focused on: Laozi (Li Er)" });
-  await expect(laoziContext.locator(".context-relation-list").getByText("Traditionally attributed to Laozi", { exact: true })).toBeVisible();
-  await expect(laoziContext.locator(".context-relation-list").getByText("Remembered through Tang Daoist institutions", { exact: true })).toBeVisible();
-  await expect(page.locator(".graph-node.is-focused").filter({ hasText: "Laozi (Li Er)" })).toHaveCount(1);
+  await expect(page.locator(".context-focus")).toHaveCount(0);
+  await expect(page.locator(".atlas-focus-bar")).toContainText("Laozi (Li Er)");
+  await expect(page.locator(".relationship-graph-node.is-focused").filter({ hasText: "Laozi (Li Er)" })).toHaveCount(1);
 
-  await page.getByRole("button", { name: "Śākyamuni Buddha (Gautama)", exact: true }).click();
-  await expect(page).toHaveURL(/focus=figure%3Asakyamuni/);
-  await expect(page.getByRole("heading", { name: "Focused on: Śākyamuni Buddha" })).toBeVisible();
-  await expect(page.getByRole("region", { name: "Focused on: Śākyamuni Buddha" }).locator(".context-relation-list").getByText("Preserved as Śākyamuni's teaching through transmission", { exact: true })).toBeVisible();
+  const adjacentLaoziNode = page.locator(".relationship-graph-roster button").filter({ hasText: "Wang Bi" }).first();
+  await expect(adjacentLaoziNode).toBeVisible();
+  await adjacentLaoziNode.click();
+  await expect(page).toHaveURL(/focus=figure%3A/);
+  await expect(page.locator(".atlas-focus-bar")).toContainText("Wang Bi");
+  await expect(page.locator(".relationship-graph-node.is-focused").filter({ hasText: "Wang Bi" })).toHaveCount(1);
 });
 
 test("real map supports zoom, pan and place-node navigation", async ({ page }) => {
@@ -239,7 +241,6 @@ test("map timeline rail, city people and scoped relations stay linked", async ({
 
   const rail = page.locator("[data-atlas-timeline]");
   await expect(rail.locator("[data-timeline-track]")).toBeVisible();
-  await expect(rail.locator(".atlas-timeline-events > button").first()).toBeVisible();
   expect(await rail.locator("[data-timeline-track-focus]").count()).toBeGreaterThan(10);
 
   await rail.locator("[data-timeline-track-focus]").first().click();
@@ -251,10 +252,10 @@ test("map timeline rail, city people and scoped relations stay linked", async ({
   await waitForAtlas(page);
   await expect(page.locator("[data-city-people] .map-context-figure-list li")).toHaveCount(24);
   const cityRelations = page.locator('[data-relation-scope="true"]');
-  await expect(cityRelations).toBeVisible();
-  expect(await cityRelations.locator(".relation-network-edge").count()).toBeGreaterThan(0);
-  await expect(cityRelations).toContainText("Yixing");
-  await expect(cityRelations).toContainText("Sima Chengzhen");
+  await expect(cityRelations).toHaveCount(0);
+  await expect(page.locator(".civilisation-map .relation-network")).toHaveCount(0);
+  await expect(page.locator("[data-city-people]")).toContainText("Yixing");
+  await expect(page.locator("[data-city-people]")).toContainText("Sima Chengzhen");
 
   const firstCityPerson = page.locator("[data-city-people] .map-context-figure-list li").first().getByRole("button").first();
   await firstCityPerson.click();
@@ -267,8 +268,7 @@ test("map timeline rail, city people and scoped relations stay linked", async ({
 
   await page.goto("/explore?lang=en&view=map&focus=place%3Achangan");
   await waitForAtlas(page);
-  const cityRelationsAfterReturn = page.locator('[data-relation-scope="true"]');
-  await cityRelationsAfterReturn.locator(".relation-network-node").first().click();
+  await page.locator("[data-city-people] .map-context-figure-list li").first().getByRole("button").first().click();
   await expect(page).toHaveURL(/focus=figure%3A/);
   await expect(page).not.toHaveURL(/scope=/);
   await expect(page.locator("[data-atlas-context-note]")).toBeVisible();
@@ -422,17 +422,24 @@ test("map keeps city switching and event selection available after a selection",
   await expect(page).toHaveURL(/focus=place%3Achangan/);
 });
 
-test("timeline event nodes reverse-focus the map and preserve the target in the URL", async ({ page }) => {
+test("timeline event nodes preserve the active timeline stage and focus in the URL", async ({ page }) => {
   await page.goto("/explore?lang=en&view=timeline&zoom=all");
   await waitForMuseum(page);
 
-  await page.locator('[data-timeline-focus="event:xuanzang-departs-changan"]').click();
-  await expect(page).toHaveURL(/focus=event%3Axuanzang-departs-changan/);
-  await expect(page.locator("#historical-map")).toBeVisible();
+  const firstTimelineFocus = page.locator("[data-timeline-track-focus]").first();
+  const firstTimelineFocusKey = await firstTimelineFocus.getAttribute("data-timeline-track-focus");
+  if (!firstTimelineFocusKey) throw new Error("Timeline did not expose a focusable track marker");
+  await firstTimelineFocus.click();
+  await expect(page).toHaveURL(new RegExp(`focus=${firstTimelineFocusKey.replace(":", "%3A")}`));
+  await expect(page.locator(".full-width-timeline.is-full")).toBeVisible();
+  await expect(page.locator("#historical-map")).toHaveCount(0);
 
   await page.goto("/explore?lang=en&view=timeline&zoom=all");
-  await page.locator(".timeline-event-select").filter({ hasText: "Xuanzang departs Chang'an" }).click();
-  await expect(page).toHaveURL(/focus=event%3Axuanzang-departs-changan/);
+  const firstTimelineListEvent = page.locator(".timeline-event-select").first();
+  const firstTimelineListFocus = await firstTimelineListEvent.getAttribute("data-timeline-focus");
+  if (!firstTimelineListFocus) throw new Error("Timeline did not expose a focusable list event");
+  await firstTimelineListEvent.click();
+  await expect(page).toHaveURL(new RegExp(`focus=${firstTimelineListFocus.replace(":", "%3A")}`));
 });
 
 test("sacred cosmos is loaded from the compiler read model", async ({ page }) => {
@@ -489,12 +496,11 @@ test("direct figure relation URL never falls back to the global relation list", 
   await expect(page.locator(".atlas-relation-card").first()).toContainText("Confucius (Kong Qiu)");
 });
 
-test("relations tab exposes the Bible Atlas-style interactive people graph", async ({ page }) => {
-  await page.goto("/explore?lang=en&view=map");
+test("graph mode exposes the Bible Atlas-style interactive people graph", async ({ page }) => {
+  await page.goto("/explore?lang=en&view=graph");
   await waitForMuseum(page);
-  await waitForAtlas(page);
 
-  await page.locator(".atlas-tab-nav button").filter({ hasText: "Relations" }).click();
+  await expect(page.locator(".atlas-workspace")).toHaveAttribute("data-atlas-view", "graph");
   const graph = page.locator(".relationship-graph");
   await expect(graph).toBeVisible();
   await expect(graph.locator(".relationship-graph-canvas")).toBeVisible();
@@ -507,35 +513,43 @@ test("relations tab exposes the Bible Atlas-style interactive people graph", asy
   await graph.locator(".relationship-graph-table tbody tr").first().getByRole("button").nth(1).click();
   await expect(page).toHaveURL(/detail=relation%3A(?!relation%3A)/);
 
-  await page.goto("/explore?lang=en&view=map&tab=relations&focus=figure%3Aconfucius");
-  await waitForAtlas(page);
+  await page.goto("/explore?lang=en&view=graph&graphTier=major&focus=figure%3Aconfucius");
   await expect(page.locator(".relationship-graph")).toBeVisible();
-  const confuciusNode = page.getByRole("button", { name: /Confucius \(Kong Qiu\)/ }).last();
+  const confuciusNode = page.locator(".relationship-graph-roster").getByRole("button", { name: /Confucius \(Kong Qiu\)/ });
   await expect(confuciusNode).toBeVisible();
   await confuciusNode.click();
   await expect(page).toHaveURL(/focus=figure%3Aconfucius/);
-  await expect(page).toHaveURL(/tab=relations&focus=figure%3Aconfucius/);
-  await expect(page.locator(".atlas-object-panel .atlas-tab-nav button.active")).toContainText("Relations");
+  await expect(page).toHaveURL(/view=graph/);
   await expect(page.locator(".relationship-graph")).toBeVisible();
 });
 
 test("graph tier is shareable and independent from map zoom", async ({ page }) => {
-  await page.goto("/explore?lang=en&view=map&graphTier=group");
+  await page.goto("/explore?lang=en&view=graph&graphTier=group");
   await waitForMuseum(page);
-  await waitForAtlas(page);
 
   const graph = page.locator('[data-graph-renderer="canvas"]').first();
-  const map = page.locator("#historical-map");
   await expect(graph).toHaveAttribute("data-graph-tier", "group");
   await graph.getByRole("button", { name: "Key people", exact: true }).click();
   await expect(page).toHaveURL(/graphTier=major/);
   await expect(graph).toHaveAttribute("data-graph-tier", "major");
 
-  const beforeZoom = await map.getAttribute("data-map-zoom");
-  await page.getByRole("button", { name: "Zoom in", exact: true }).click();
-  await expect.poll(() => map.getAttribute("data-map-zoom")).not.toBe(beforeZoom);
+  await expect(page.locator("#historical-map")).toHaveCount(0);
   await expect(graph).toHaveAttribute("data-graph-tier", "major");
   await expect(page).toHaveURL(/graphTier=major/);
+});
+
+test("graph all keeps the full current population and focused figure visible", async ({ page }) => {
+  await page.goto("/explore?lang=en&view=graph&graphTier=all&focus=figure%3Axuanzang");
+  await waitForMuseum(page);
+
+  const graph = page.locator('[data-graph-renderer="canvas"]');
+  await expect(graph).toHaveAttribute("data-graph-tier", "all");
+  await expect(graph).toHaveAttribute("data-graph-effective-tier", "all");
+  expect(Number(await graph.getAttribute("data-graph-node-count"))).toBeGreaterThan(5);
+  await expect(graph.locator(".relationship-graph-node.is-focused").filter({ hasText: "Xuanzang" })).toHaveCount(1);
+  await expect(page.locator("#historical-map")).toHaveCount(0);
+  await expect(page.locator(".atlas-object-panel")).toHaveCount(0);
+  await expect(page.locator(".context-focus")).toHaveCount(0);
 });
 
 test("full-width timeline brush keeps historical and traditional modes shareable", async ({ page }) => {
@@ -591,15 +605,16 @@ test("atlas stages stay full width at desktop and switch cleanly on mobile", asy
   await waitForMuseum(page);
   await waitForAtlas(page);
   const widths = await page.locator(".atlas-main-stack > .atlas-stage").evaluateAll((elements) => elements.map((element) => ({ width: element.getBoundingClientRect().width, parent: element.parentElement?.getBoundingClientRect().width ?? 0 })));
-  expect(widths.length).toBe(4);
+  expect(widths.length).toBe(1);
   for (const item of widths) expect(item.width).toBeGreaterThan(item.parent * 0.9);
 
   await page.setViewportSize({ width: 390, height: 844 });
   await expect(page.locator(".atlas-mobile-view-controls")).toBeVisible();
-  await page.getByRole("button", { name: "Relations", exact: true }).last().click();
-  await expect(page.locator(".atlas-workspace")).toHaveAttribute("data-mobile-panel", "relations");
-  await page.getByRole("button", { name: "Details", exact: true }).last().click();
+  await page.getByRole("button", { name: "Objects", exact: true }).last().click();
   await expect(page.locator(".atlas-workspace")).toHaveAttribute("data-mobile-panel", "details");
+  await expect(page.locator(".atlas-object-panel")).toBeVisible();
+  await page.getByRole("button", { name: "Map", exact: true }).last().click();
+  await expect(page.locator(".atlas-workspace")).toHaveAttribute("data-mobile-panel", "map");
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
 });
 
@@ -739,7 +754,8 @@ test("Research exposes the source ledger and timeline range is shareable", async
   await page.getByLabel("Timeline end year").fill("760");
   await expect(page).toHaveURL(/from=620/);
   await expect(page).toHaveURL(/to=760/);
-  await expect(page.getByText(/620–760/)).toBeVisible();
+  await expect(page.locator(".full-width-timeline-summary")).toContainText("620 CE");
+  await expect(page.locator(".full-width-timeline-summary")).toContainText("760 CE");
 });
 
 test("Research exposes the quality audit and review queue filters", async ({ page }) => {

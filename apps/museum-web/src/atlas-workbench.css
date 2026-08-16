@@ -1,0 +1,946 @@
+/* Atlas workbench structure. Keep this layer scoped to the workbench and its
+   two related directory surfaces so legacy exhibition layouts stay intact. */
+
+.explore-header.page-shell,
+.atlas-workspace:not(.is-compact),
+.entity-spacetime-section {
+  width: min(calc(100vw - clamp(24px, 3vw, 72px)), 2400px);
+  max-width: 2400px;
+  margin-inline: auto;
+}
+
+.explore-header.page-shell {
+  padding-top: clamp(18px, 2.2vw, 34px);
+  padding-bottom: clamp(12px, 1.5vw, 22px);
+}
+
+.explore-header h1 {
+  max-width: 22ch;
+  font-size: clamp(2rem, 3.6vw, 4rem);
+}
+
+.atlas-workspace:not(.is-compact) {
+  padding-top: clamp(10px, 1.1vw, 18px);
+}
+
+.atlas-workspace:not(.is-compact) .atlas-workspace-heading {
+  gap: clamp(12px, 2vw, 28px);
+  margin-bottom: 8px;
+}
+
+.atlas-workspace:not(.is-compact) .atlas-workspace-heading h2 {
+  margin-block: 4px;
+  font-size: clamp(1.7rem, 2.6vw, 3rem);
+}
+
+.atlas-workspace:not(.is-compact) .atlas-workspace-heading > div > p:last-child {
+  max-width: 68ch;
+  font-size: var(--text-sm);
+}
+
+.atlas-focus-bar,
+.atlas-tradition-bar,
+.atlas-era-bar,
+.atlas-zoom-bar {
+  min-height: 40px;
+  margin-block: 0;
+  padding-block: 3px;
+}
+
+.atlas-focus-bar {
+  padding-inline: 8px;
+}
+
+.atlas-tradition-bar,
+.atlas-era-bar,
+.atlas-zoom-bar {
+  border-bottom: 1px solid var(--line);
+}
+
+.atlas-zoom-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow-x: auto;
+}
+
+.atlas-zoom-levels {
+  display: flex;
+  min-width: max-content;
+  gap: 5px;
+}
+
+.atlas-zoom-levels button {
+  min-height: 36px;
+  padding: 4px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink-soft);
+  font-size: var(--text-xs);
+}
+
+.atlas-context-summary {
+  min-height: 34px;
+  margin-block: 4px;
+  padding: 4px 8px;
+  gap: 5px 18px;
+}
+
+.atlas-control-rail {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.8fr) minmax(420px, 1.75fr) minmax(300px, 1.15fr);
+  min-height: 58px;
+  align-items: center;
+  gap: 8px;
+  border-block: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.atlas-control-rail > .atlas-tradition-bar,
+.atlas-control-rail > .atlas-era-bar,
+.atlas-control-rail > .atlas-zoom-bar {
+  min-width: 0;
+  min-height: 48px;
+  overflow-x: auto;
+  border: 0;
+}
+
+.atlas-control-rail > .atlas-zoom-bar {
+  padding-inline: 4px 0;
+}
+
+.atlas-era-context {
+  min-height: 106px;
+  max-height: 156px;
+  margin-top: 8px;
+  padding: 10px 14px;
+  gap: 12px 20px;
+}
+
+.atlas-era-context blockquote {
+  font-size: clamp(1rem, 1.45vw, 1.25rem);
+  line-height: 1.4;
+}
+
+.atlas-era-context-link {
+  min-height: 40px;
+}
+
+.atlas-main-grid.atlas-main-stack {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.atlas-main-grid[data-atlas-view="graph"],
+.atlas-main-grid[data-atlas-view="timeline"] {
+  min-width: 0;
+}
+
+.atlas-map-browser-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(320px, 3fr);
+  gap: 14px;
+  align-items: start;
+}
+
+.atlas-map-browser-grid > * {
+  min-width: 0;
+}
+
+.atlas-map-stage-shell > .atlas-stage-heading,
+.atlas-graph-stage > .atlas-stage-heading,
+.atlas-timeline-stage > .atlas-stage-heading {
+  min-height: 40px;
+  margin-bottom: 6px;
+}
+
+.atlas-map-stage-shell > .atlas-stage-heading h3,
+.atlas-graph-stage > .atlas-stage-heading h3,
+.atlas-timeline-stage > .atlas-stage-heading h3 {
+  font-size: clamp(1.2rem, 1.8vw, 1.65rem);
+}
+
+.atlas-map-stage .civilisation-map-leaflet {
+  height: clamp(620px, calc(100dvh - 250px), 820px);
+  min-height: 560px;
+}
+
+.atlas-map-stage {
+  position: relative;
+  height: clamp(620px, calc(100dvh - 250px), 820px);
+  min-height: 0;
+}
+
+.atlas-map-stage .map-context-hint {
+  display: none;
+}
+
+.atlas-map-stage .civilisation-map-caption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background: rgba(251, 248, 240, 0.92);
+}
+
+.atlas-object-panel {
+  height: clamp(620px, calc(100dvh - 250px), 820px);
+  max-height: none;
+  overflow: hidden;
+}
+
+.atlas-object-list {
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.atlas-object-shortcuts {
+  display: grid;
+  gap: 5px;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+.atlas-object-shortcuts > div {
+  display: flex;
+  gap: 5px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+  scrollbar-width: thin;
+}
+
+.atlas-object-shortcuts button {
+  min-height: 34px;
+  flex: 0 0 auto;
+  max-width: 180px;
+  overflow: hidden;
+  padding: 4px 9px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink-soft);
+  font-size: 0.7rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.atlas-object-shortcuts button:hover,
+.atlas-object-shortcuts button:focus-visible,
+.atlas-object-shortcuts button.active {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--canvas-elevated);
+}
+
+.civilisation-map.has-context {
+  display: grid;
+  grid-template-columns: minmax(0, 1.62fr) minmax(280px, 0.78fr);
+  align-items: stretch;
+  height: clamp(620px, calc(100dvh - 250px), 820px);
+  min-height: 0;
+}
+
+.civilisation-map.has-context .civilisation-map-visual {
+  position: relative;
+  min-width: 0;
+  height: 100%;
+  min-height: 0;
+}
+
+.civilisation-map.has-context .civilisation-map-visual .civilisation-map-leaflet {
+  height: 100%;
+  min-height: 0;
+}
+
+.civilisation-map.has-context .map-context-panel {
+  grid-column: 2;
+  grid-row: 1;
+  min-width: 0;
+  height: 100%;
+  max-height: none;
+  min-height: 0;
+  overflow-y: auto;
+  border-top: 0;
+  border-left: 1px solid var(--line-strong);
+}
+
+.civilisation-map.has-context .civilisation-map-caption,
+.civilisation-map.has-context .civilisation-map-position-note,
+.civilisation-map.has-context .civilisation-map-node-index {
+  grid-column: 1 / -1;
+}
+
+.civilisation-map.has-context .map-context-panel .figure-context-card {
+  margin-top: 10px;
+  padding: 12px;
+}
+
+.civilisation-map.has-context .map-context-heading > span {
+  max-width: 15ch;
+  text-align: right;
+}
+
+.civilisation-map.has-context .map-trajectory-list li {
+  min-height: 64px;
+  padding-block: 9px;
+}
+
+.civilisation-map.has-context .map-context-subsection {
+  margin-top: 10px;
+  padding-top: 9px;
+}
+
+.full-width-timeline.is-ribbon {
+  height: 286px;
+  max-height: 286px;
+  margin-top: 10px;
+  overflow: hidden;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  box-shadow: none;
+}
+
+.full-width-timeline.is-ribbon .full-width-timeline-heading {
+  align-items: center;
+  gap: 8px;
+}
+
+.full-width-timeline.is-ribbon .full-width-timeline-tagline,
+.full-width-timeline.is-ribbon .full-width-timeline-heading p:last-child,
+.full-width-timeline.is-ribbon .full-width-timeline-brush {
+  display: none;
+}
+
+.full-width-timeline.is-ribbon .full-width-timeline-heading h3 {
+  margin-top: 0;
+  font-size: var(--text-sm);
+}
+
+.full-width-timeline.is-ribbon .full-width-timeline-controls {
+  margin-top: 4px;
+  padding-block: 4px;
+}
+
+.full-width-timeline.is-ribbon .full-width-timeline-track-wrap {
+  margin-top: 4px;
+}
+
+.full-width-timeline.is-ribbon .full-width-timeline-track {
+  min-width: 680px;
+  min-height: 174px;
+  padding-top: 30px;
+}
+
+.full-width-timeline.is-ribbon .full-width-timeline-lane {
+  grid-template-columns: 104px minmax(0, 1fr);
+  min-height: 28px;
+}
+
+.full-width-timeline.is-ribbon .full-width-timeline-lane > strong {
+  padding-top: 7px;
+  font-size: 0.66rem;
+}
+
+.full-width-timeline.is-ribbon .full-width-timeline-marker {
+  top: 7px;
+}
+
+.full-width-timeline.is-ribbon .full-width-timeline-summary {
+  margin-top: 4px;
+  padding-block: 4px;
+}
+
+.full-width-timeline.is-full {
+  min-height: 620px;
+}
+
+.full-width-timeline.is-full .full-width-timeline-tagline {
+  display: none;
+}
+
+.full-width-timeline.is-full .full-width-timeline-track {
+  min-height: clamp(500px, 58vh, 680px);
+}
+
+.full-width-timeline.is-full .full-width-timeline-list {
+  max-height: 220px;
+}
+
+.timeline-event-inspector {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(220px, 0.8fr);
+  gap: 14px;
+  margin-top: 10px;
+  padding: 12px 14px;
+  border: 1px solid var(--line-strong);
+  border-left: 3px solid var(--gold);
+  background: rgba(241, 234, 216, 0.46);
+}
+
+.timeline-event-inspector h3 {
+  margin-top: 3px;
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+}
+
+.timeline-event-inspector p:not(.eyebrow) {
+  margin-top: 5px;
+  color: var(--ink-soft);
+  font-size: var(--text-xs);
+  line-height: 1.5;
+}
+
+.timeline-event-inspector dl,
+.relationship-graph-inspector dl {
+  display: grid;
+  gap: 5px;
+  margin: 0;
+}
+
+.timeline-event-inspector dl div,
+.relationship-graph-inspector dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 5px;
+  border-top: 1px solid var(--line);
+  font-size: var(--text-xs);
+}
+
+.timeline-event-inspector dt,
+.relationship-graph-inspector dt {
+  color: var(--ink-muted);
+}
+
+.timeline-event-inspector dd,
+.relationship-graph-inspector dd {
+  color: var(--ink);
+  text-align: right;
+}
+
+.relationship-graph {
+  min-height: 0;
+  margin-top: 0;
+}
+
+.atlas-graph-stage .relationship-graph-canvas-wrap {
+  min-height: 620px;
+}
+
+.relationship-graph-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.3fr);
+  gap: 14px;
+  align-items: start;
+}
+
+.relationship-graph-content > .relationship-graph-canvas-wrap,
+.relationship-graph-content > .relationship-graph-table-wrap {
+  min-width: 0;
+}
+
+.relationship-graph-inspector {
+  position: sticky;
+  top: 96px;
+  min-height: 190px;
+  padding: 14px;
+  border: 1px solid var(--line-strong);
+  border-left: 3px solid var(--convergence);
+  border-radius: var(--radius-md);
+  background: rgba(251, 248, 240, 0.82);
+}
+
+.relationship-graph-inspector h3 {
+  margin-top: 4px;
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+}
+
+.relationship-graph-inspector > p:not(.eyebrow) {
+  margin-top: 6px;
+  color: var(--ink-soft);
+  font-size: var(--text-xs);
+  line-height: 1.5;
+}
+
+.relationship-graph-inspector dl {
+  margin-top: 12px;
+}
+
+.relationship-graph-inspector-link {
+  display: block;
+  min-height: 40px;
+  margin-top: 8px;
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--ink);
+  font-size: var(--text-xs);
+  text-align: left;
+}
+
+.relationship-graph-inspector-link:hover,
+.relationship-graph-inspector-link:focus-visible {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--canvas-elevated);
+}
+
+.relationship-graph-roster ul {
+  max-height: 180px;
+}
+
+.relationship-graph-tiers button,
+.relationship-graph-actions button,
+.full-width-timeline .timeline-mode-switch button,
+.full-width-timeline .full-width-timeline-inputs button,
+.full-width-timeline .full-width-timeline-inputs input {
+  min-height: 44px;
+}
+
+.entity-spacetime-section {
+  margin-top: var(--s-6);
+  padding-top: var(--s-5);
+}
+
+.entity-spacetime-section .entity-spacetime-stage-stack {
+  min-width: 0;
+}
+
+.entity-spacetime-stage .civilisation-map {
+  width: 100%;
+}
+
+.figure-gateway-controls {
+  position: sticky;
+  top: 78px;
+  z-index: 4;
+  align-items: end;
+  padding: 10px;
+  border: 1px solid var(--line);
+  background: rgba(243, 239, 229, 0.96);
+}
+
+.figure-gateway-search {
+  display: grid;
+  min-width: min(280px, 100%);
+  gap: 5px;
+  margin-left: auto;
+}
+
+.figure-gateway-search input {
+  min-height: 44px;
+  padding: 0 11px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  background: var(--canvas-elevated);
+  color: var(--ink);
+}
+
+.figure-gateway-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(10px, 1.2vw, 18px);
+}
+
+.figure-gateway-card {
+  min-height: 240px;
+  padding: clamp(12px, 1.2vw, 18px);
+}
+
+.atlas-workspace,
+.figure-gateway-grid,
+.figure-gateway-card {
+  min-width: 0;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+@media (min-width: 1800px) {
+  .figure-gateway-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1101px) {
+  .explore-header.page-shell {
+    grid-template-columns: minmax(0, 1fr) auto;
+    height: 80px;
+    min-height: 80px;
+    padding-block: 6px;
+  }
+
+  .explore-header h1 {
+    max-width: 34ch;
+    margin-top: 4px;
+    font-size: clamp(1.7rem, 2.4vw, 2.6rem);
+    line-height: 1.05;
+  }
+
+  .explore-header .view-switch button {
+    min-height: 40px;
+  }
+
+  .explore-page > .atlas-workspace:not(.is-compact) .atlas-workspace-heading {
+    display: none;
+  }
+
+  .explore-page > .atlas-workspace:not(.is-compact) .atlas-stage-heading {
+    display: none;
+  }
+
+  .explore-page > .atlas-workspace:not(.is-compact) .atlas-context-summary {
+    display: none;
+  }
+
+  .explore-page > .atlas-workspace:not(.is-compact) .atlas-focus-bar {
+    min-height: 32px;
+    font-size: var(--text-xs);
+  }
+
+  .explore-page > .atlas-workspace:not(.is-compact) .atlas-control-rail {
+    min-height: 48px;
+  }
+
+  .explore-page > .atlas-workspace:not(.is-compact) .atlas-era-context {
+    min-height: 40px;
+    max-height: 50px;
+    margin-top: 6px;
+    padding-block: 6px;
+    overflow: hidden;
+    grid-template-columns: minmax(150px, 0.75fr) minmax(250px, 1.4fr) minmax(310px, 1fr);
+  }
+
+  .explore-page > .atlas-workspace:not(.is-compact) .atlas-era-context-heading {
+    min-width: 0;
+  }
+
+  .explore-page > .atlas-workspace:not(.is-compact) .atlas-era-context-heading .eyebrow {
+    display: none;
+  }
+
+  .explore-page > .atlas-workspace:not(.is-compact) .atlas-era-context-heading h3 {
+    margin: 0;
+    overflow: hidden;
+    font-size: var(--text-sm);
+    line-height: 1.25;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .explore-page > .atlas-workspace:not(.is-compact) .atlas-map-stage-shell > .atlas-stage-heading,
+  .explore-page > .atlas-workspace:not(.is-compact) .atlas-graph-stage > .atlas-stage-heading,
+  .explore-page > .atlas-workspace:not(.is-compact) .atlas-timeline-stage > .atlas-stage-heading {
+    min-height: 16px;
+    margin-bottom: 0;
+  }
+
+  .explore-page > .atlas-workspace:not(.is-compact) .atlas-era-context blockquote {
+    font-size: 1rem;
+    line-height: 1.28;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .explore-page > .atlas-workspace:not(.is-compact) .atlas-era-context-heading h3 {
+    font-size: var(--text-sm);
+  }
+
+  .explore-page > .atlas-workspace:not(.is-compact) .atlas-era-context-meta {
+    min-width: 0;
+    grid-template-columns: minmax(90px, 0.6fr) minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.68rem;
+  }
+
+  .explore-page > .atlas-workspace:not(.is-compact) .atlas-era-context-meta cite,
+  .explore-page > .atlas-workspace:not(.is-compact) .atlas-era-context-meta > span {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .explore-page > .atlas-workspace:not(.is-compact) .atlas-era-context-link {
+    min-height: 32px;
+    margin-top: 0;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 2400px) {
+  .figure-gateway-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+
+  .full-width-timeline.is-full .full-width-timeline-track {
+    min-height: 638px;
+  }
+
+  .full-width-timeline.is-full .full-width-timeline-lane {
+    min-height: 116px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .atlas-map-browser-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .atlas-object-panel {
+    height: 520px;
+  }
+
+  .civilisation-map.has-context {
+    display: block;
+    height: auto;
+  }
+
+  .civilisation-map.has-context .civilisation-map-visual {
+    height: clamp(560px, calc(100dvh - 280px), 720px);
+  }
+
+  .civilisation-map.has-context .map-context-panel {
+    height: auto;
+    max-height: 460px;
+    border-top: 1px solid var(--line-strong);
+    border-left: 0;
+  }
+
+  .relationship-graph-content {
+    grid-template-columns: 1fr;
+  }
+
+  .relationship-graph-inspector {
+    position: static;
+  }
+
+  .figure-gateway-search {
+    flex: 1 1 260px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .explore-header.page-shell,
+  .atlas-workspace:not(.is-compact),
+  .entity-spacetime-section {
+    width: min(calc(100vw - 24px), 680px);
+  }
+
+  .explore-header.page-shell {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding-top: 14px;
+  }
+
+  .explore-header h1 {
+    font-size: clamp(1.8rem, 8vw, 2.8rem);
+  }
+
+  .explore-page > .atlas-workspace:not(.is-compact) .atlas-workspace-heading,
+  .explore-page > .atlas-workspace:not(.is-compact) .atlas-context-summary {
+    display: none;
+  }
+
+  .atlas-workspace:not(.is-compact) {
+    padding-top: 8px;
+  }
+
+  .atlas-workspace-heading {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .atlas-control-rail {
+    display: flex;
+    min-height: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .atlas-control-rail > .atlas-tradition-bar,
+  .atlas-control-rail > .atlas-era-bar,
+  .atlas-control-rail > .atlas-zoom-bar {
+    min-height: 38px;
+    padding-block: 3px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .atlas-focus-bar {
+    min-height: 44px;
+    align-items: center;
+    flex-direction: row;
+    padding-block: 3px;
+  }
+
+  .explore-page > .atlas-workspace:not(.is-compact) .atlas-era-context {
+    height: 120px;
+    min-height: 120px;
+    max-height: 120px;
+    overflow: hidden;
+    padding: 8px 10px;
+  }
+
+  .explore-page > .atlas-workspace:not(.is-compact) .atlas-era-context blockquote {
+    font-size: 1rem;
+    line-height: 1.35;
+  }
+
+  .explore-page > .atlas-workspace:not(.is-compact) .atlas-era-context-meta {
+    grid-template-columns: 1fr auto;
+    font-size: 0.68rem;
+  }
+
+  .atlas-workspace-actions {
+    justify-content: flex-start;
+  }
+
+  .atlas-era-context {
+    max-height: none;
+    min-height: 0;
+    grid-template-columns: 1fr;
+  }
+
+  .atlas-mobile-view-controls {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+    margin: 6px 0;
+  }
+
+  .atlas-mobile-view-controls button {
+    min-height: 44px;
+  }
+
+  .atlas-map-stage .civilisation-map-leaflet {
+    height: clamp(520px, calc(100svh - 190px), 620px);
+    min-height: 500px;
+  }
+
+  .atlas-map-stage {
+    height: 520px;
+  }
+
+  .atlas-workspace[data-mobile-panel="map"] .atlas-map-browser-grid .atlas-object-panel,
+  .atlas-workspace[data-mobile-panel="map"] .atlas-map-browser-grid .atlas-map-stage + .atlas-object-panel {
+    display: none;
+  }
+
+  .atlas-workspace[data-mobile-panel="details"] .atlas-map-stage-shell {
+    display: block;
+  }
+
+  .atlas-workspace[data-mobile-panel="details"] .atlas-map-browser-grid .atlas-map-stage {
+    display: none;
+  }
+
+  .atlas-object-panel {
+    height: 480px;
+  }
+
+  .civilisation-map.has-context .civilisation-map-visual {
+    height: 570px;
+  }
+
+  .full-width-timeline.is-ribbon {
+    height: 278px;
+    max-height: 278px;
+    padding-inline: 8px;
+    overflow: hidden;
+  }
+
+  .full-width-timeline.is-ribbon .full-width-timeline-controls {
+    overflow-x: auto;
+  }
+
+  .full-width-timeline.is-ribbon .full-width-timeline-inputs {
+    flex-wrap: nowrap;
+  }
+
+  .full-width-timeline.is-full .full-width-timeline-track {
+    min-height: 430px;
+  }
+
+  .timeline-event-inspector {
+    grid-template-columns: 1fr;
+  }
+
+  .atlas-graph-stage .relationship-graph-canvas-wrap {
+    min-height: 0;
+  }
+
+  .relationship-graph-content {
+    grid-template-columns: 1fr;
+  }
+
+  .relationship-graph-roster ul {
+    max-height: 240px;
+    grid-template-columns: 1fr;
+  }
+
+  .entity-spacetime-switcher {
+    position: sticky;
+    top: 8px;
+    z-index: 4;
+  }
+
+  .figure-gateway-controls {
+    top: 8px;
+  }
+
+  .figure-gateway-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 430px) {
+  .atlas-workspace:not(.is-compact),
+  .entity-spacetime-section {
+    width: calc(100vw - 20px);
+  }
+
+  .atlas-context-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .atlas-context-summary span {
+    min-height: 28px;
+  }
+
+  .atlas-map-stage .civilisation-map-leaflet,
+  .civilisation-map.has-context .civilisation-map-visual {
+    height: 520px;
+    min-height: 500px;
+  }
+
+  .full-width-timeline.is-ribbon .full-width-timeline-track {
+    min-width: 620px;
+  }
+
+  .figure-gateway-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .figure-gateway-card,
+  .relationship-graph-edge,
+  .relationship-graph-node,
+  .full-width-timeline-marker b {
+    transition: none;
+    animation: none;
+  }
+}

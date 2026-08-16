@@ -1,0 +1,108 @@
+{
+  "atlas": {
+    "bottom": 1510.7734375,
+    "height": 1352.7734375,
+    "left": 21.6015625,
+    "right": 1418.3984375,
+    "top": 158,
+    "width": 1396.796875
+  },
+  "atlasView": "map",
+  "bodyScrollWidth": 1440,
+  "browser": {
+    "panels": 1,
+    "shortcuts": 8,
+    "visiblePanels": 1
+  },
+  "contextFocus": {
+    "total": 0,
+    "visible": 0
+  },
+  "controls": {
+    "buttons": 338,
+    "mobileButtonMinHeights": []
+  },
+  "directory": {
+    "cards": 0
+  },
+  "documentScrollWidth": 1440,
+  "figureSpacetime": {
+    "stageCount": 0,
+    "visibleStageCount": 0
+  },
+  "graph": {
+    "canvas": null,
+    "roster": 0,
+    "total": 0,
+    "visible": 0
+  },
+  "maps": {
+    "contextVisible": 0,
+    "rect": {
+      "bottom": 979.90625,
+      "height": 650,
+      "left": 22.6015625,
+      "right": 988.5546875,
+      "top": 329.90625,
+      "width": 965.953125
+    },
+    "relationNetworks": 0,
+    "total": 1,
+    "visible": 1
+  },
+  "mobilePanel": "map",
+  "overflowX": false,
+  "primary": {
+    "rect": {
+      "bottom": 979.90625,
+      "height": 650,
+      "left": 22.6015625,
+      "right": 988.5546875,
+      "top": 329.90625,
+      "width": 965.953125
+    },
+    "selector": ".civilisation-map-leaflet",
+    "visible": true
+  },
+  "scrollHeight": 1819,
+  "stages": {
+    "total": 1,
+    "visible": 1,
+    "visibleRects": [
+      {
+        "bottom": 1274.90625,
+        "height": 946,
+        "left": 21.6015625,
+        "right": 1418.3984375,
+        "top": 328.90625,
+        "width": 1396.796875
+      }
+    ]
+  },
+  "timeline": {
+    "full": 0,
+    "fullRect": null,
+    "indexes": 0,
+    "lists": 0,
+    "records": "369",
+    "ribbon": 1,
+    "ribbonRect": {
+      "bottom": 1274.90625,
+      "height": 286,
+      "left": 21.6015625,
+      "right": 1418.3984375,
+      "top": 988.90625,
+      "width": 1396.796875
+    },
+    "variant": "ribbon"
+  },
+  "url": "/explore?view=map&lang=zh-CN",
+  "viewport": {
+    "height": 900,
+    "width": 1440
+  },
+  "slug": "explore-map-none-1440x900",
+  "path": "/explore?view=map&lang=zh-CN",
+  "screenshotMode": "viewport",
+  "screenshotError": null
+}

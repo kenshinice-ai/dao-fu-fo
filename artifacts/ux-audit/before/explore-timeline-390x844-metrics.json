@@ -1,0 +1,34 @@
+{
+  "bodyScrollWidth": 390,
+  "canvasCount": 1,
+  "documentScrollWidth": 390,
+  "graphEdges": 0,
+  "graphEffectiveTier": "group",
+  "graphNodes": 3,
+  "graphTier": "group",
+  "graphs": 1,
+  "heading": "在同一张地图，看见三条传统的交错",
+  "maps": 1,
+  "objectPanels": 242,
+  "overflowX": false,
+  "path": "/explore?view=timeline&lang=zh-CN",
+  "primary": {
+    "bottom": 4506.7109375,
+    "height": 472.6328125,
+    "left": 22,
+    "selector": ".civilisation-map-leaflet",
+    "top": 4034.078125,
+    "width": 346
+  },
+  "scrollHeight": 5443,
+  "slug": "explore-timeline-390x844",
+  "stages": 4,
+  "timelines": 1,
+  "viewport": {
+    "height": 844,
+    "width": 390
+  },
+  "visibleButtons": 197,
+  "screenshotMode": "full",
+  "screenshotError": null
+}

@@ -208,8 +208,16 @@ export function buildRelationshipGraph({
     if (relation.source.kind === "figure") scopedKeys.add(contextEndpointKey(relation.source));
     if (relation.target.kind === "figure") scopedKeys.add(contextEndpointKey(relation.target));
   }
-  if (focus?.startsWith("figure:")) scopedKeys.add(focus);
-  const visibleFigureKeys = focus ? new Set([...scopedKeys].filter((key) => figureKeys.has(key))) : figureKeys;
+  const focusIsFigure = focus?.startsWith("figure:") ?? false;
+  // A figure focus is a navigation state, not a permission to replace the
+  // graph's read model with the one-hop context projection. Aggregate and
+  // all-person views therefore keep the current tradition/time population;
+  // non-figure contexts can still use their explicit relation scope.
+  const useContextScope = Boolean(focus && !focusIsFigure && scopedKeys.size > 0);
+  const visibleFigureKeys = new Set(
+    (useContextScope ? [...scopedKeys] : [...figureKeys]).filter((key) => figureKeys.has(key)),
+  );
+  if (focusIsFigure && focus && figureKeys.has(focus)) visibleFigureKeys.add(focus);
   const figureRelations = relations.filter((relation) => {
     if (!isPersonToPersonRelation(relation)) return false;
     const source = contextEndpointKey(relation.source);
@@ -223,35 +231,55 @@ export function buildRelationshipGraph({
     degree.set(source, (degree.get(source) ?? 0) + 1);
     degree.set(target, (degree.get(target) ?? 0) + 1);
   }
+  const adjacency = new Map<string, Set<string>>();
+  for (const relation of figureRelations) {
+    const source = contextEndpointKey(relation.source);
+    const target = contextEndpointKey(relation.target);
+    const sourceNeighbours = adjacency.get(source) ?? new Set<string>();
+    const targetNeighbours = adjacency.get(target) ?? new Set<string>();
+    sourceNeighbours.add(target);
+    targetNeighbours.add(source);
+    adjacency.set(source, sourceNeighbours);
+    adjacency.set(target, targetNeighbours);
+  }
 
   const groupingKey = (key: string, candidateTier: RelationshipGraphTier): string => {
     if (candidateTier === "group") return `group:${searchMap.get(key)?.tradition ?? "convergence"}`;
     return `era:${eraForYear(yearForFigure(key, relations, searchMap))?.id ?? "undated"}`;
   };
-  const effectiveTier: RelationshipGraphTier = focus?.startsWith("figure:") && visibleFigureKeys.has(focus) && (tier === "group" || tier === "era")
-    ? "major"
-    : tier;
-
   let selectedPeople = [...visibleFigureKeys].sort((left, right) =>
     titleForKey(left, searchItems).localeCompare(titleForKey(right, searchItems), locale === "zh-CN" ? "zh-Hans" : "en")
       || left.localeCompare(right),
   );
-  const hiddenPeople = effectiveTier === "major" ? Math.max(0, selectedPeople.length - 24) : 0;
-  if (effectiveTier === "major") {
-    selectedPeople = selectedPeople
+  if (tier === "major") {
+    const candidateKeys = focusIsFigure && focus && visibleFigureKeys.has(focus)
+      ? (() => {
+        const candidates = new Set<string>([focus]);
+        const firstHop = adjacency.get(focus) ?? new Set<string>();
+        for (const neighbour of firstHop) {
+          candidates.add(neighbour);
+          for (const secondHop of adjacency.get(neighbour) ?? []) candidates.add(secondHop);
+        }
+        return candidates;
+      })()
+      : visibleFigureKeys;
+    selectedPeople = [...candidateKeys]
+      .filter((key) => visibleFigureKeys.has(key))
       .sort((left, right) => {
         const focusWeight = (key: string) => key === focus ? 1000 : 0;
         return focusWeight(right) + (degree.get(right) ?? 0) * 10 - focusWeight(left) - (degree.get(left) ?? 0) * 10
-          || titleForKey(left, searchItems).localeCompare(titleForKey(right, searchItems), locale === "zh-CN" ? "zh-Hans" : "en");
+          || titleForKey(left, searchItems).localeCompare(titleForKey(right, searchItems), locale === "zh-CN" ? "zh-Hans" : "en")
+          || left.localeCompare(right);
       })
       .slice(0, 24);
   }
+  const hiddenPeople = tier === "major" ? Math.max(0, visibleFigureKeys.size - selectedPeople.length) : 0;
   const selectedSet = new Set(selectedPeople);
   const relationRows = figureRelations.filter((relation) => selectedSet.has(contextEndpointKey(relation.source)) && selectedSet.has(contextEndpointKey(relation.target)));
   const nodeMap = new Map<string, string>();
   const nodes: RelationshipGraphNode[] = [];
 
-  if (effectiveTier === "all" || effectiveTier === "major") {
+  if (tier === "all" || tier === "major") {
     selectedPeople.forEach((key, index) => {
       const item = searchMap.get(key);
       const tradition = item?.tradition ?? "convergence";
@@ -278,13 +306,13 @@ export function buildRelationshipGraph({
   } else {
     const groups = new Map<string, string[]>();
     for (const key of selectedPeople) {
-      const groupId = groupingKey(key, effectiveTier);
+      const groupId = groupingKey(key, tier);
       const members = groups.get(groupId) ?? [];
       members.push(key);
       groups.set(groupId, members);
     }
     [...groups.entries()].forEach(([groupId, members], index) => {
-      const isEra = effectiveTier === "era";
+      const isEra = tier === "era";
       const traditionCounts = new Map<Tradition | "convergence", number>();
       for (const key of members) {
         const tradition = traditionForKey(key, searchMap);
@@ -321,7 +349,7 @@ export function buildRelationshipGraph({
   }
 
   const edges = aggregateEdges(relationRows, nodeMap, from, to);
-  return { nodes, edges, relationRows, hiddenPeople, scopedPeople: visibleFigureKeys.size, effectiveTier };
+  return { nodes, edges, relationRows, hiddenPeople, scopedPeople: visibleFigureKeys.size, effectiveTier: tier };
 }
 
 export function graphTierForZoomLevel(zoomLevel: "era" | "region" | "figure" | "all"): RelationshipGraphTier {

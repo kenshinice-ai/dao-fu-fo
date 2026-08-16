@@ -1,0 +1,111 @@
+{
+  "atlas": {
+    "bottom": 2525.2265625,
+    "height": 2447.2265625,
+    "left": 0,
+    "right": 768,
+    "top": 78,
+    "width": 768
+  },
+  "atlasView": "map",
+  "bodyScrollWidth": 768,
+  "browser": {
+    "panels": 1,
+    "shortcuts": 8,
+    "visiblePanels": 1
+  },
+  "contextFocus": {
+    "total": 0,
+    "visible": 0
+  },
+  "controls": {
+    "buttons": 347,
+    "mobileButtonMinHeights": []
+  },
+  "directory": {
+    "cards": 152,
+    "count": "152 / 152 位人物",
+    "search": "搜索人物",
+    "total": "152"
+  },
+  "documentScrollWidth": 768,
+  "figureSpacetime": {
+    "stageCount": 0,
+    "visibleStageCount": 0
+  },
+  "graph": {
+    "canvas": null,
+    "roster": 0,
+    "total": 0,
+    "visible": 0
+  },
+  "maps": {
+    "contextVisible": 0,
+    "rect": {
+      "bottom": 1326.8359375,
+      "height": 724,
+      "left": 35.5546875,
+      "right": 732.4453125,
+      "top": 602.8359375,
+      "width": 696.890625
+    },
+    "relationNetworks": 0,
+    "total": 1,
+    "visible": 1
+  },
+  "mobilePanel": "map",
+  "overflowX": false,
+  "primary": {
+    "rect": {
+      "bottom": 1326.8359375,
+      "height": 724,
+      "left": 35.5546875,
+      "right": 732.4453125,
+      "top": 602.8359375,
+      "width": 696.890625
+    },
+    "selector": ".civilisation-map-leaflet",
+    "visible": true
+  },
+  "scrollHeight": 25288,
+  "stages": {
+    "total": 1,
+    "visible": 1,
+    "visibleRects": [
+      {
+        "bottom": 2205.8359375,
+        "height": 1650,
+        "left": 34.5546875,
+        "right": 733.4453125,
+        "top": 555.8359375,
+        "width": 698.890625
+      }
+    ]
+  },
+  "timeline": {
+    "full": 0,
+    "fullRect": null,
+    "indexes": 0,
+    "lists": 0,
+    "records": "369",
+    "ribbon": 1,
+    "ribbonRect": {
+      "bottom": 2205.8359375,
+      "height": 286,
+      "left": 34.5546875,
+      "right": 733.4453125,
+      "top": 1919.8359375,
+      "width": 698.890625
+    },
+    "variant": "ribbon"
+  },
+  "url": "/?lang=zh-CN",
+  "viewport": {
+    "height": 1024,
+    "width": 768
+  },
+  "slug": "home-directory-768x1024",
+  "path": "/?lang=zh-CN",
+  "screenshotMode": "viewport",
+  "screenshotError": null
+}

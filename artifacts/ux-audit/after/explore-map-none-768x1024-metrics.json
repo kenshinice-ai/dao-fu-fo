@@ -1,0 +1,108 @@
+{
+  "atlas": {
+    "bottom": 2579.4296875,
+    "height": 2366.2421875,
+    "left": 12,
+    "right": 756,
+    "top": 213.1875,
+    "width": 744
+  },
+  "atlasView": "map",
+  "bodyScrollWidth": 768,
+  "browser": {
+    "panels": 1,
+    "shortcuts": 8,
+    "visiblePanels": 1
+  },
+  "contextFocus": {
+    "total": 0,
+    "visible": 0
+  },
+  "controls": {
+    "buttons": 339,
+    "mobileButtonMinHeights": []
+  },
+  "directory": {
+    "cards": 0
+  },
+  "documentScrollWidth": 768,
+  "figureSpacetime": {
+    "stageCount": 0,
+    "visibleStageCount": 0
+  },
+  "graph": {
+    "canvas": null,
+    "roster": 0,
+    "total": 0,
+    "visible": 0
+  },
+  "maps": {
+    "contextVisible": 0,
+    "rect": {
+      "bottom": 1454.4375,
+      "height": 774,
+      "left": 13,
+      "right": 755,
+      "top": 680.4375,
+      "width": 742
+    },
+    "relationNetworks": 0,
+    "total": 1,
+    "visible": 1
+  },
+  "mobilePanel": "map",
+  "overflowX": false,
+  "primary": {
+    "rect": {
+      "bottom": 1454.4375,
+      "height": 774,
+      "left": 13,
+      "right": 755,
+      "top": 680.4375,
+      "width": 742
+    },
+    "selector": ".civilisation-map-leaflet",
+    "visible": true
+  },
+  "scrollHeight": 2991,
+  "stages": {
+    "total": 1,
+    "visible": 1,
+    "visibleRects": [
+      {
+        "bottom": 2283.4375,
+        "height": 1650,
+        "left": 12,
+        "right": 756,
+        "top": 633.4375,
+        "width": 744
+      }
+    ]
+  },
+  "timeline": {
+    "full": 0,
+    "fullRect": null,
+    "indexes": 0,
+    "lists": 0,
+    "records": "369",
+    "ribbon": 1,
+    "ribbonRect": {
+      "bottom": 2283.4375,
+      "height": 286,
+      "left": 12,
+      "right": 756,
+      "top": 1997.4375,
+      "width": 744
+    },
+    "variant": "ribbon"
+  },
+  "url": "/explore?view=map&lang=zh-CN",
+  "viewport": {
+    "height": 1024,
+    "width": 768
+  },
+  "slug": "explore-map-none-768x1024",
+  "path": "/explore?view=map&lang=zh-CN",
+  "screenshotMode": "viewport",
+  "screenshotError": null
+}

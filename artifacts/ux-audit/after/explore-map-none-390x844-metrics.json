@@ -1,0 +1,111 @@
+{
+  "atlas": {
+    "bottom": 1961.1796875,
+    "height": 1694.296875,
+    "left": 10,
+    "right": 380,
+    "top": 266.8828125,
+    "width": 370
+  },
+  "atlasView": "map",
+  "bodyScrollWidth": 390,
+  "browser": {
+    "panels": 1,
+    "shortcuts": 8,
+    "visiblePanels": 0
+  },
+  "contextFocus": {
+    "total": 0,
+    "visible": 0
+  },
+  "controls": {
+    "buttons": 164,
+    "mobileButtonMinHeights": [
+      44,
+      44
+    ]
+  },
+  "directory": {
+    "cards": 0
+  },
+  "documentScrollWidth": 390,
+  "figureSpacetime": {
+    "stageCount": 0,
+    "visibleStageCount": 0
+  },
+  "graph": {
+    "canvas": null,
+    "roster": 0,
+    "total": 0,
+    "visible": 0
+  },
+  "maps": {
+    "contextVisible": 0,
+    "rect": {
+      "bottom": 1287.25,
+      "height": 520,
+      "left": 11,
+      "right": 379,
+      "top": 767.25,
+      "width": 368
+    },
+    "relationNetworks": 0,
+    "total": 1,
+    "visible": 1
+  },
+  "mobilePanel": "map",
+  "overflowX": false,
+  "primary": {
+    "rect": {
+      "bottom": 1287.25,
+      "height": 520,
+      "left": 11,
+      "right": 379,
+      "top": 767.25,
+      "width": 368
+    },
+    "selector": ".civilisation-map-leaflet",
+    "visible": true
+  },
+  "scrollHeight": 2373,
+  "stages": {
+    "total": 1,
+    "visible": 1,
+    "visibleRects": [
+      {
+        "bottom": 1574.25,
+        "height": 872.8984375,
+        "left": 10,
+        "right": 380,
+        "top": 701.3515625,
+        "width": 370
+      }
+    ]
+  },
+  "timeline": {
+    "full": 0,
+    "fullRect": null,
+    "indexes": 0,
+    "lists": 0,
+    "records": "369",
+    "ribbon": 1,
+    "ribbonRect": {
+      "bottom": 1574.25,
+      "height": 278,
+      "left": 10,
+      "right": 380,
+      "top": 1296.25,
+      "width": 370
+    },
+    "variant": "ribbon"
+  },
+  "url": "/explore?view=map&lang=zh-CN",
+  "viewport": {
+    "height": 844,
+    "width": 390
+  },
+  "slug": "explore-map-none-390x844",
+  "path": "/explore?view=map&lang=zh-CN",
+  "screenshotMode": "viewport",
+  "screenshotError": null
+}

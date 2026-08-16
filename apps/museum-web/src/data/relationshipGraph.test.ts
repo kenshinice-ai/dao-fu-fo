@@ -96,7 +96,7 @@ describe("relationship graph projection", () => {
     expect(new Set(model.edges.map((edge) => `${edge.source}->${edge.target}`))).toEqual(new Set(["figure:a->figure:b", "figure:b->figure:a"]));
   });
 
-  it("auto-expands a focused aggregate that would otherwise have no cross-group edge", () => {
+  it("keeps the requested aggregate tier while preserving its cross-group edge", () => {
     const sameTraditionRelation = relation("ad", { kind: "figure", slug: "a" }, { kind: "figure", slug: "d" }, "influenced");
     const model = buildRelationshipGraph({
       relations: [sameTraditionRelation],
@@ -108,9 +108,37 @@ describe("relationship graph projection", () => {
       locale: "zh-CN",
     });
 
-    expect(model.effectiveTier).toBe("major");
-    expect(model.edges).toHaveLength(1);
-    expect(model.nodes.every((node) => node.kind === "person")).toBe(true);
+    expect(model.effectiveTier).toBe("group");
+    expect(model.edges).toHaveLength(0);
+    expect(model.nodes.every((node) => node.kind === "group")).toBe(true);
+  });
+
+  it("uses the full person graph for all while keeping focused major within two hops", () => {
+    const major = buildRelationshipGraph({
+      relations: [aa, bc, cd, received],
+      scopeRelations: [aa],
+      searchItems,
+      focus: "figure:a",
+      traditions: ["daoism", "confucianism", "buddhism"],
+      tier: "major",
+      locale: "zh-CN",
+    });
+    const all = buildRelationshipGraph({
+      relations: [aa, bc, cd, received],
+      scopeRelations: [aa],
+      searchItems,
+      focus: "figure:a",
+      traditions: ["daoism", "confucianism", "buddhism"],
+      tier: "all",
+      locale: "zh-CN",
+    });
+
+    expect(major.effectiveTier).toBe("major");
+    expect(all.effectiveTier).toBe("all");
+    expect(major.nodes.some((node) => node.id === "figure:a")).toBe(true);
+    expect(all.nodes.some((node) => node.id === "figure:a")).toBe(true);
+    expect(all.nodes.length).toBeGreaterThan(major.nodes.length);
+    expect(all.scopedPeople).toBe(4);
   });
 
   it("maps the existing URL zoom state to graph tiers for legacy callers", () => {

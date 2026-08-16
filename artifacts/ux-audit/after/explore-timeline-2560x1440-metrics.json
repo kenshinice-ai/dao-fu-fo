@@ -1,0 +1,101 @@
+{
+  "atlas": {
+    "bottom": 1991.5234375,
+    "height": 1833.5234375,
+    "left": 80,
+    "right": 2480,
+    "top": 158,
+    "width": 2400
+  },
+  "atlasView": "timeline",
+  "bodyScrollWidth": 2560,
+  "browser": {
+    "panels": 0,
+    "shortcuts": 0,
+    "visiblePanels": 0
+  },
+  "contextFocus": {
+    "total": 0,
+    "visible": 0
+  },
+  "controls": {
+    "buttons": 184,
+    "mobileButtonMinHeights": []
+  },
+  "directory": {
+    "cards": 0
+  },
+  "documentScrollWidth": 2560,
+  "figureSpacetime": {
+    "stageCount": 0,
+    "visibleStageCount": 0
+  },
+  "graph": {
+    "canvas": null,
+    "roster": 0,
+    "total": 0,
+    "visible": 0
+  },
+  "maps": {
+    "contextVisible": 0,
+    "rect": null,
+    "relationNetworks": 0,
+    "total": 0,
+    "visible": 0
+  },
+  "mobilePanel": "timeline",
+  "overflowX": false,
+  "primary": {
+    "rect": {
+      "bottom": 1755.65625,
+      "height": 1424.5859375,
+      "left": 80,
+      "right": 2480,
+      "top": 331.0703125,
+      "width": 2400
+    },
+    "selector": ".full-width-timeline.is-full",
+    "visible": true
+  },
+  "scrollHeight": 2300,
+  "stages": {
+    "total": 1,
+    "visible": 1,
+    "visibleRects": [
+      {
+        "bottom": 1755.65625,
+        "height": 1424.5859375,
+        "left": 80,
+        "right": 2480,
+        "top": 331.0703125,
+        "width": 2400
+      }
+    ]
+  },
+  "timeline": {
+    "full": 1,
+    "fullRect": {
+      "bottom": 1755.65625,
+      "height": 1424.5859375,
+      "left": 80,
+      "right": 2480,
+      "top": 331.0703125,
+      "width": 2400
+    },
+    "indexes": 0,
+    "lists": 1,
+    "records": "369",
+    "ribbon": 0,
+    "ribbonRect": null,
+    "variant": "full"
+  },
+  "url": "/explore?view=timeline&lang=zh-CN",
+  "viewport": {
+    "height": 1440,
+    "width": 2560
+  },
+  "slug": "explore-timeline-2560x1440",
+  "path": "/explore?view=timeline&lang=zh-CN",
+  "screenshotMode": "viewport",
+  "screenshotError": null
+}
