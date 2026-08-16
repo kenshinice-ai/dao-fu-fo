@@ -2,9 +2,9 @@
 
 > 维护纪律：每个可独立说明的实现、修复、验证或发布阶段完成后立即更新。
 > 最后更新：2026-08-16
-> 当前阶段：Atlas 全宽工作区、Canvas 关系图、五层时间轴、人物空间—时间档案与 152 人物目录重构已完成；本地门禁和临时 production smoke 已通过，正在提交、push 并以 clean commit 重新部署
+> 当前阶段：Atlas 全宽工作区、Canvas 关系图、五层时间轴、人物空间—时间档案与 152 人物目录重构已完成；clean commit 已 push 并部署到 production，最终线上 smoke 已通过
 
-## 2026-08-16｜Atlas 全宽工作区与人物空间—时间重构 release checkpoint（待 clean commit deployment）
+## 2026-08-16｜Atlas 全宽工作区与人物空间—时间重构 release handoff（final clean deployment）
 
 - 本轮完成统一的全宽 Atlas 工作区：地图、关系图、五层时间轴和对象浏览器共用同一焦点、时间范围与 URL 状态；桌面端取消地图/关系图/时间轴的窄栏分割，移动端改为地图、关系、时间、对象四面板切换；新增 152 人物目录和传统/时代筛选；Research 目录与治理队列支持搜索、类型筛选和分页；
 - 关系图已改为真正的 D3 Canvas force graph，支持时代/区域/人物/全部四级展开、拖拽固定、缩放平移、hover 详情、edge detail、表格/语义 roster fallback、reduced-motion；时间轴改为 space/history/events/transmission/memory 五层，支持 brush、历史/传统顺序、播放和无 year-zero 表达；
@@ -13,7 +13,10 @@
 - 本地验证已通过：`npm run typecheck`；unit **42/42**；`npm run check`；`npm run check:release`；Full Alpha build/static preflight（18 JS chunks、996 files、0 conflict copies）；`npm audit` 与 `npm audit --omit=dev` 均为 0 vulnerabilities；Full Alpha Playwright + axe **68 passed / 1 skipped**（42 个 axe 审计全部通过，唯一 skipped 为既有 Public RC 专用用例）；database integration 为 468 entities / 716 relations / 152 figures / 90 places / 157 events / 7 routes / 21 routeWaypoints，fingerprint 可重复；
 - 提交前临时 production deployment 已完成：unique <https://d622c5b7.dao-ru-fo-digital-museum.pages.dev>；deployment ID `d622c5b7-1905-435d-863a-274d5a9b2ca4`；source marker `d0ee4fe`；Wrangler `4.122.0`；default 与 unique HTTP smoke 均 **25/25**；线上 manifest 为 `2026.08.alpha.1 / alpha / preview`；
 - 浏览器关键路径已在 unique deployment 验收：首页与全宽 Atlas、玄奘焦点同步、时间轴 `timeline=tradition&from=-300&to=900`、关系图 `zoom=figure` 与地图缩放独立、玄奘人物档案、390px 移动面板和无横向溢出均通过；应用自身 console error 为 0；
-- 下一步：将本轮变更提交并 push 到 `https://github.com/kenshinice-ai/dao-fu-fo`，以 clean commit 重新执行 Full Alpha production deploy、default/unique HTTP smoke 与浏览器 smoke，然后追加最终 deployment ID、source marker 和回滚定位。
+- 功能 commit `e9b35d1c5e3e2696a480a7c158142b0a570e9460` 已 push 到 <https://github.com/kenshinice-ai/dao-fu-fo> 的 `main`；worktree 在应用部署时 clean；
+- 最终 clean production deployment 已完成：unique <https://67a635c9.dao-ru-fo-digital-museum.pages.dev>；deployment ID `67a635c9-84a3-44cc-bc3e-189974ee5865`；Environment `Production`；branch `main`；source marker `e9b35d1`；Wrangler `4.122.0`；default 与 unique HTTP smoke 均 **25/25**；线上 manifest 为 `2026.08.alpha.1 / alpha / preview`；
+- 最终浏览器 smoke 已在 unique deployment 完成：首页、`focus=figure:xuanzang&from=-300&to=900&timeline=tradition&zoom=figure` 深链接、Canvas 图谱、人物档案、390px 移动 Atlas 和无横向溢出均通过；最终 deployment 的应用自身 console error 为 0；
+- 回滚定位保留为上一稳定 production deployment `e77d4c2c-7b5c-4ac3-a1a7-76748da917d2`（<https://e77d4c2c.dao-ru-fo-digital-museum.pages.dev>）；本段后续仅需 docs-only handoff commit，不重新上传应用。
 
 ## 2026-08-15｜第三批历史网络 authoring 与验证 handoff（当前）
 
