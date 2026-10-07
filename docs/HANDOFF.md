@@ -7,7 +7,6 @@
 ## 等 Lee
 
 - **[决定] 「可见性」字段要不要改名(单独开任务)** — `CF_PAGES_PRODUCTION_VISIBILITY` 名字像部署通道,实际控制内容可见性(deploy/cloudflare-pages.sh:33、:203);推荐改成 `CF_PAGES_PRODUCTION_CONTENT_VISIBILITY`,manifest 的 `visibility`(packages/museum-core/src/read-model.ts:53)改成 `contentVisibility`、`DRF_WEB_VISIBILITY` 改成 `DRF_WEB_CONTENT_VISIBILITY`;manifest 字段是已部署的数据契约,要同时改 compiler、read model、smoke、E2E 并重新部署 · 不定则 docs/DEPLOYMENT.md:38 要一直靠一段说明解释 preview 不是 Preview 部署 · 自 2026-10-07
-- **[决定] 生产部署固定用哪个 Wrangler 版本** — docs/DEPLOYMENT.md:34 的命令写 `WRANGLER_VERSION=4.120.1`,但本文件 :27、:38、:41、:64、:97 记录的最近五次部署都用 4.122.0;推荐把 DEPLOYMENT.md:34 改成 4.122.0 · 不定则照文档部署会用一个最近没验证过的版本 · 自 2026-10-07
 
 ## 2026-10-07｜STE-lite v1 写作规则与术语表（docs-only）
 

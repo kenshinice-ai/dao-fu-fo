@@ -25,13 +25,13 @@ Cloudflare Pages 当前只承担在线测试和阶段复盘，未来站点会迁
 | 首页、地图、时间轴、普通 UI | typecheck + unit + targeted E2E/axe + Web build | production 浏览器关键路径 smoke |
 | schema、compiler、路由、部署脚本 | 完整 `npm run check` + full E2E + build | 完整 HTTP/JSON/browser smoke |
 
-当前 Full Alpha production 上传命令继续使用：
+当前 Full Alpha production 上传命令继续使用（Wrangler 4.122.0 是最近五次 production 部署实际所用的版本，2026-08-13 至 08-16，记录见 HANDOFF.md；2026-10-07 核对）：
 
 ```bash
 CONFIRM_PRODUCTION=dao-ru-fo-digital-museum \
 ALLOW_DIRTY_DEPLOY=1 \
 CF_PAGES_PRODUCTION_VISIBILITY=preview \
-WRANGLER_VERSION=4.120.1 \
+WRANGLER_VERSION=4.122.0 \
 ./deploy/cloudflare-pages.sh production
 ```
 
