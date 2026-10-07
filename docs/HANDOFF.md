@@ -1,8 +1,12 @@
 # 道·儒·佛文明数字博物馆｜项目交接文档
 
 > 维护纪律：每个可独立说明的实现、修复、验证或发布阶段完成后立即更新。
-> 最后更新：2026-08-16
+> 最后更新：2026-10-07
 > 当前阶段：Atlas 结构级 UX 重构已完成；`cab0adb` 已 push 并部署到 Cloudflare Pages production，唯一部署与默认域名线上 smoke、浏览器关键路径均已通过
+
+## 2026-10-07｜STE-lite v1 写作规则与术语表（docs-only）
+
+- 新增根目录 `CLAUDE.md`：写作规则 STE-lite v1、本仓库适用范围和术语表（把 preview 拆成「Preview 部署」和 `visibility=preview`）；不改应用、不重新部署。
 
 ## 2026-08-16｜Atlas 结构级 UX 重构与 clean production handoff（final）
 
